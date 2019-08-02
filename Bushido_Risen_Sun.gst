@@ -36,7 +36,15 @@
     <categoryEntry id="bbd2-e0c8-797a-3f03" name="Terrain Cards" hidden="false"/>
     <categoryEntry id="17cf-d9a9-c7c1-bcb6" name="Enhancement Cards" hidden="false"/>
     <categoryEntry id="5bcd-fe93-a8ea-0164" name="Equipment Cards" hidden="false"/>
-    <categoryEntry id="0ca8-2040-37f2-a1e0" name="Profile Cards" hidden="false"/>
+    <categoryEntry id="0ca8-2040-37f2-a1e0" name="Profile Cards" hidden="false">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6eac-b6fc-ac09-4d64" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </categoryEntry>
     <categoryEntry id="477a-e693-0888-08f7" name="Theme Cards" hidden="false">
       <modifierGroups>
         <modifierGroup>
@@ -88,7 +96,6 @@
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="30b7-3982-6471-e6ca" type="max"/>
       </constraints>
     </categoryEntry>
-    <categoryEntry id="7ad5-75e1-6134-ca44" name="Faction: Minimoto Clan" hidden="false"/>
     <categoryEntry id="3aa4-cadb-b4be-0dc6" name="Faction: Kage Kaze Zoku" hidden="false"/>
     <categoryEntry id="76df-04fb-ea1f-77ab" name="Faction: Jung Pirates" hidden="false"/>
     <categoryEntry id="53b4-db5e-0527-0759" name="Faction: Shiho Clan" hidden="false"/>
@@ -98,6 +105,8 @@
     <categoryEntry id="daaa-d0d2-e66e-0672" name="Faction: The Descension" hidden="false"/>
     <categoryEntry id="957c-dfd0-81d7-38ce" name="Faction: Ito Clan" hidden="false"/>
     <categoryEntry id="0d0a-4c02-8dce-676b" name="Faction: Cult of Yurei" hidden="false"/>
+    <categoryEntry id="7ad5-75e1-6134-ca44" name="Faction: Minimoto Clan" hidden="false"/>
+    <categoryEntry id="6eac-b6fc-ac09-4d64" name="The Imperial March" hidden="false"/>
   </categoryEntries>
   <forceEntries>
     <forceEntry id="2150-40b1-52f8-4a8a" name="Risen Sun" hidden="true">
