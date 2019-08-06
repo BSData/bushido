@@ -107,6 +107,7 @@
     <categoryEntry id="0d0a-4c02-8dce-676b" name="Faction: Cult of Yurei" hidden="false"/>
     <categoryEntry id="7ad5-75e1-6134-ca44" name="Faction: Minimoto Clan" hidden="false"/>
     <categoryEntry id="6eac-b6fc-ac09-4d64" name="The Imperial March" hidden="false"/>
+    <categoryEntry id="69a2-397e-9d7b-a47d" name="Communal" hidden="false"/>
   </categoryEntries>
   <forceEntries>
     <forceEntry id="2150-40b1-52f8-4a8a" name="Risen Sun" hidden="true">
@@ -117,6 +118,7 @@
         <categoryLink id="c8ef-4997-14c3-a834" name="A-Theme Cards" hidden="false" targetId="477a-e693-0888-08f7" primary="false"/>
         <categoryLink id="24e1-914a-6b91-3f09" name="Profile Cards: Ronin" hidden="false" targetId="9fba-f50b-c8f7-8396" primary="false"/>
         <categoryLink id="5877-1a83-38ae-468e" name="Theme Cards: Ronin" hidden="false" targetId="ff27-a550-2dd1-e2e3" primary="false"/>
+        <categoryLink id="849c-cf11-e943-d370" name="Communal" hidden="false" targetId="69a2-397e-9d7b-a47d" primary="false"/>
       </categoryLinks>
     </forceEntry>
   </forceEntries>
