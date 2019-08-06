@@ -1333,7 +1333,7 @@
           <modifiers>
             <modifier type="append" field="name" value="A">
               <conditions>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="18b4-f66e-14fe-d1a7" type="greaterThan"/>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="greaterThan"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -1343,65 +1343,71 @@
         </entryLink>
         <entryLink id="4239-8fac-4c24-ed00" name="Kaihei" hidden="false" collective="false" targetId="e952-63ec-527b-d407" type="selectionEntry">
           <modifiers>
-            <modifier type="append" field="name" value="B">
-              <conditions>
-                <condition field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="18b4-f66e-14fe-d1a7" type="equalTo"/>
-              </conditions>
-            </modifier>
-            <modifier type="append" field="name" value="D">
-              <conditions>
-                <condition field="selections" scope="parent" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="18b4-f66e-14fe-d1a7" type="equalTo"/>
-              </conditions>
-            </modifier>
-            <modifier type="append" field="name" value="C">
-              <conditions>
-                <condition field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="18b4-f66e-14fe-d1a7" type="equalTo"/>
-              </conditions>
-            </modifier>
+            <modifier type="set" field="name" value="Kaihei B"/>
           </modifiers>
         </entryLink>
         <entryLink id="5bf2-c37b-faf1-b69f" name="Kaihei" hidden="false" collective="false" targetId="e952-63ec-527b-d407" type="selectionEntry">
           <modifiers>
-            <modifier type="append" field="name" value="C">
-              <conditions>
-                <condition field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="18b4-f66e-14fe-d1a7" type="equalTo"/>
-              </conditions>
+            <modifier type="set" field="name" value="Kaihei B">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="atLeast"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4239-8fac-4c24-ed00" type="equalTo"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
-            <modifier type="append" field="name" value="D">
-              <conditions>
-                <condition field="selections" scope="parent" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="18b4-f66e-14fe-d1a7" type="equalTo"/>
-              </conditions>
+            <modifier type="set" field="name" value="Kaihei C">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="equalTo"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c2b9-fa8b-e305-9542" type="equalTo"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
-            <modifier type="append" field="name" value="B">
-              <conditions>
-                <condition field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="18b4-f66e-14fe-d1a7" type="equalTo"/>
-              </conditions>
+            <modifier type="set" field="name" value="Kaihei C">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="equalTo"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
         </entryLink>
         <entryLink id="c2b9-fa8b-e305-9542" name="Kaihei" hidden="false" collective="false" targetId="e952-63ec-527b-d407" type="selectionEntry">
           <modifiers>
-            <modifier type="append" field="name" value="D">
-              <conditions>
-                <condition field="selections" scope="parent" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="18b4-f66e-14fe-d1a7" type="equalTo"/>
-              </conditions>
+            <modifier type="set" field="name" value="Kaihei B">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="equalTo"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4239-8fac-4c24-ed00" type="equalTo"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
-            <modifier type="append" field="name" value="B">
-              <conditions>
-                <condition field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="18b4-f66e-14fe-d1a7" type="equalTo"/>
-              </conditions>
+            <modifier type="set" field="name" value="Kaihei C">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="equalTo"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
-            <modifier type="append" field="name" value="C">
+            <modifier type="set" field="name" value="Kaihei D">
               <conditions>
-                <condition field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="18b4-f66e-14fe-d1a7" type="equalTo"/>
+                <condition field="selections" scope="parent" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="equalTo"/>
               </conditions>
             </modifier>
           </modifiers>
         </entryLink>
       </entryLinks>
-      <costs>
-        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="7.0"/>
-      </costs>
     </selectionEntry>
     <selectionEntry id="4cb6-d647-87ed-6ce2" name="Deep Mushrooms" hidden="true" collective="false" type="upgrade">
       <modifiers>
@@ -1762,7 +1768,7 @@
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="8b92-cbd7-678f-a82c" type="max"/>
       </constraints>
       <costs>
-        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0.0"/>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="7.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="9d1d-34ce-2f1e-37ae" name="Tribal Brute" hidden="false" collective="false" type="model">

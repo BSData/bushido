@@ -738,12 +738,25 @@
         </entryLink>
         <entryLink id="681a-6452-f07c-d7d2" name="Monkey" hidden="false" collective="false" targetId="2d4b-c276-7066-fc26" type="selectionEntry">
           <modifiers>
-            <modifier type="append" field="name" value="B"/>
+            <modifier type="append" field="name" value="B">
+              <conditions>
+                <condition field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2d4b-c276-7066-fc26" type="atLeast"/>
+              </conditions>
+            </modifier>
           </modifiers>
         </entryLink>
         <entryLink id="39af-b95c-917f-40df" name="Monkey" hidden="false" collective="false" targetId="2d4b-c276-7066-fc26" type="selectionEntry">
           <modifiers>
-            <modifier type="append" field="name" value="C"/>
+            <modifier type="append" field="name" value="C">
+              <conditions>
+                <condition field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2d4b-c276-7066-fc26" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="append" field="name" value="B">
+              <conditions>
+                <condition field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2d4b-c276-7066-fc26" type="equalTo"/>
+              </conditions>
+            </modifier>
           </modifiers>
         </entryLink>
       </entryLinks>
@@ -1332,6 +1345,13 @@
       </categoryLinks>
     </entryLink>
     <entryLink id="3233-5576-e3ac-43bd" name="Hirota, Drunken Master" hidden="true" collective="false" targetId="f616-46d8-5907-fafd" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="294d-a0fa-f437-2fca" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <categoryLinks>
         <categoryLink id="d3e9-0c77-35bb-9b77" name="New CategoryLink" hidden="false" targetId="9fba-f50b-c8f7-8396" primary="true"/>
       </categoryLinks>
