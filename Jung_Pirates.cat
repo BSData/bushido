@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="d615-aef7-31d5-367d" name="Jung Pirates" revision="1" battleScribeVersion="2.02" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="d615-aef7-31d5-367d" name="Jung Pirates" revision="2" battleScribeVersion="2.02" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="258a-e1a8-8db1-9635" name="Ki&lt;2" hidden="true"/>
     <categoryEntry id="f6c9-50fa-a9d3-e9f3" name="Ranged Weapon" hidden="true"/>
@@ -169,33 +169,6 @@
       </entryLinks>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="9.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="1bfd-c47c-6cb3-488e" name="Lua" hidden="false" collective="false" type="model">
-      <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1b47-eda0-6ebd-dc1a" type="equalTo"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
-      <constraints>
-        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3adf-f60d-af3f-1087" type="max"/>
-      </constraints>
-      <categoryLinks>
-        <categoryLink id="6699-ebd6-5b71-64b6" name="Buto" hidden="false" targetId="48d9-12ca-aeef-7295" primary="false"/>
-        <categoryLink id="8f00-3fa3-e1a8-25be" name="Faction: Jung Pirates" hidden="false" targetId="76df-04fb-ea1f-77ab" primary="false"/>
-        <categoryLink id="23c5-3a7b-0afd-e2f0" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
-      </categoryLinks>
-      <entryLinks>
-        <entryLink id="f9b1-229f-9220-5b2f" name="Enhancements" hidden="false" collective="false" targetId="2327-1257-a4b4-df32" type="selectionEntryGroup"/>
-      </entryLinks>
-      <costs>
-        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="19.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="e971-aeb0-1011-58cc" name="Miyakomo Asami" hidden="false" collective="false" type="model">
@@ -892,6 +865,26 @@
       <categoryLinks>
         <categoryLink id="1e8c-afcb-255d-ef22" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
       </categoryLinks>
+    </entryLink>
+    <entryLink id="3c1e-af2f-bc60-6c9d" name="Lua" hidden="false" collective="false" targetId="f8cf-8680-1f4a-2deb" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1b47-eda0-6ebd-dc1a" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="eab7-859a-1de6-2b0a" name="Faction: Jung Pirates" hidden="false" targetId="76df-04fb-ea1f-77ab" primary="false"/>
+        <categoryLink id="6d0c-f0ae-d844-be0b" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="6987-63f5-652a-8c82" name="Enhancements" hidden="false" collective="false" targetId="2327-1257-a4b4-df32" type="selectionEntryGroup"/>
+      </entryLinks>
     </entryLink>
   </entryLinks>
   <sharedSelectionEntries>

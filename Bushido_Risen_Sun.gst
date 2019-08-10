@@ -108,6 +108,7 @@
     <categoryEntry id="7ad5-75e1-6134-ca44" name="Faction: Minimoto Clan" hidden="false"/>
     <categoryEntry id="6eac-b6fc-ac09-4d64" name="The Imperial March" hidden="false"/>
     <categoryEntry id="69a2-397e-9d7b-a47d" name="Communal" hidden="false"/>
+    <categoryEntry id="875a-48b1-3c9f-0a14" name="Faction: Silvermoon Trade Syndicate" hidden="false"/>
   </categoryEntries>
   <forceEntries>
     <forceEntry id="2150-40b1-52f8-4a8a" name="Risen Sun" hidden="true">
