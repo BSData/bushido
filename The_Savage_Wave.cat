@@ -260,6 +260,10 @@
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="a491-a6c4-f9d8-ea1d" name="Zoo" hidden="false" collective="false" type="model">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9c30-0862-f0f8-6145" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c118-feac-f5fd-5f3c" type="max"/>
+          </constraints>
           <categoryLinks>
             <categoryLink id="c155-baff-e91d-b09e" name="Bakemono" hidden="false" targetId="9b14-5558-cfeb-ee1c" primary="false"/>
             <categoryLink id="7fad-f7ff-aa96-ff33" name="Faction: The Savage Wave" hidden="false" targetId="c920-0951-5d96-5693" primary="false"/>
@@ -267,7 +271,7 @@
             <categoryLink id="2caa-6e18-0fae-f261" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
           </categoryLinks>
           <costs>
-            <cost name=" Rice" typeId="a111-8656-5c05-7415" value="15.0"/>
+            <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -542,12 +546,12 @@
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f337-ba6a-e764-7b59" type="max"/>
       </constraints>
       <categoryLinks>
-        <categoryLink id="e159-fc5b-bbb6-aaa2" name="Animal" hidden="false" targetId="c382-9ab3-9924-e30a" primary="false"/>
         <categoryLink id="361e-6b35-d03b-d70e" name="Bakemono" hidden="false" targetId="9b14-5558-cfeb-ee1c" primary="false"/>
         <categoryLink id="c2ec-afdf-9cbf-33aa" name="Yokai" hidden="false" targetId="8a19-8c2b-46a8-4086" primary="false"/>
         <categoryLink id="ddea-4e3d-0803-92e9" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
         <categoryLink id="3d0a-e84a-f4f7-957c" name="Non-Unique" hidden="false" targetId="d181-219d-3add-d47b" primary="false"/>
         <categoryLink id="2e22-9140-3dea-f20a" name="Faction: The Savage Wave" hidden="false" targetId="c920-0951-5d96-5693" primary="false"/>
+        <categoryLink id="47b2-c2d5-e60a-f3be" name="Animal (ridden)" hidden="false" targetId="ee85-6e6f-01a0-cc94" primary="false"/>
       </categoryLinks>
       <entryLinks>
         <entryLink id="90a6-98f2-0fa6-bb82" name="Enhancements" hidden="false" collective="false" targetId="74e6-2485-1c0a-4227" type="selectionEntryGroup"/>
@@ -784,12 +788,12 @@
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2c53-24b4-3c40-e575" type="max"/>
       </constraints>
       <categoryLinks>
-        <categoryLink id="7b08-0a97-a239-8f83" name="Animal" hidden="false" targetId="c382-9ab3-9924-e30a" primary="false"/>
         <categoryLink id="5c9c-ea26-df5e-8798" name="Bakemono" hidden="false" targetId="9b14-5558-cfeb-ee1c" primary="false"/>
         <categoryLink id="d7b3-5fbe-a547-f576" name="Bat" hidden="false" targetId="9e88-f51c-7ee1-71f0" primary="false"/>
         <categoryLink id="845c-79df-1eda-f61c" name="Faction: The Savage Wave" hidden="false" targetId="c920-0951-5d96-5693" primary="false"/>
         <categoryLink id="d0d0-0e36-9ffc-acac" name="Non-Unique" hidden="false" targetId="d181-219d-3add-d47b" primary="false"/>
         <categoryLink id="0f92-7e83-5bb6-f338" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
+        <categoryLink id="ba57-78f7-86d8-9346" name="Animal (ridden)" hidden="false" targetId="ee85-6e6f-01a0-cc94" primary="false"/>
       </categoryLinks>
       <entryLinks>
         <entryLink id="3500-74f4-677f-ec42" name="Enhancements" hidden="false" collective="false" targetId="74e6-2485-1c0a-4227" type="selectionEntryGroup"/>
@@ -890,17 +894,11 @@
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="87c6-e109-dea6-8582" type="min"/>
           </constraints>
-          <entryLinks>
-            <entryLink id="8730-a842-67eb-cc0e" name="Enhancements" hidden="false" collective="false" targetId="74e6-2485-1c0a-4227" type="selectionEntryGroup"/>
-          </entryLinks>
         </entryLink>
         <entryLink id="37a0-45f8-0865-00b5" name="Bakemono Archer" hidden="false" collective="false" targetId="1798-6533-32b0-0f26" type="selectionEntry">
           <modifiers>
             <modifier type="append" field="name" value="B"/>
           </modifiers>
-          <entryLinks>
-            <entryLink id="abc1-f7c0-bc38-b2b6" name="Enhancements" hidden="false" collective="false" targetId="74e6-2485-1c0a-4227" type="selectionEntryGroup"/>
-          </entryLinks>
         </entryLink>
       </entryLinks>
       <costs>
@@ -933,9 +931,6 @@
           <modifiers>
             <modifier type="append" field="name" value="B"/>
           </modifiers>
-          <entryLinks>
-            <entryLink id="202f-10ee-a33b-edb4" name="Enhancements" hidden="false" collective="false" targetId="74e6-2485-1c0a-4227" type="selectionEntryGroup"/>
-          </entryLinks>
         </entryLink>
         <entryLink id="8ecb-0fef-e603-f037" name="Bakemono Beater" hidden="false" collective="false" targetId="9932-6942-c8a3-7d72" type="selectionEntry">
           <modifiers>
@@ -948,9 +943,6 @@
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f400-4c9d-b199-4cdc" type="min"/>
           </constraints>
-          <entryLinks>
-            <entryLink id="6878-865c-6f90-88ec" name="Enhancements" hidden="false" collective="false" targetId="74e6-2485-1c0a-4227" type="selectionEntryGroup"/>
-          </entryLinks>
         </entryLink>
       </entryLinks>
       <costs>
@@ -983,9 +975,6 @@
           <modifiers>
             <modifier type="append" field="name" value="B"/>
           </modifiers>
-          <entryLinks>
-            <entryLink id="6c4d-d738-a42a-40c0" name="Enhancements" hidden="false" collective="false" targetId="74e6-2485-1c0a-4227" type="selectionEntryGroup"/>
-          </entryLinks>
         </entryLink>
         <entryLink id="1562-bd8c-e1d2-c557" name="Bakemono Boomers" hidden="false" collective="false" targetId="11b7-f913-1160-ee25" type="selectionEntry">
           <modifiers>
@@ -998,9 +987,6 @@
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a5c6-c55a-46cd-06b8" type="min"/>
           </constraints>
-          <entryLinks>
-            <entryLink id="afb4-cc41-5609-a252" name="Enhancements" hidden="false" collective="false" targetId="74e6-2485-1c0a-4227" type="selectionEntryGroup"/>
-          </entryLinks>
         </entryLink>
       </entryLinks>
       <costs>
@@ -1033,9 +1019,6 @@
           <modifiers>
             <modifier type="append" field="name" value="B"/>
           </modifiers>
-          <entryLinks>
-            <entryLink id="3b5f-a74d-a56d-7e4e" name="Enhancements" hidden="false" collective="false" targetId="74e6-2485-1c0a-4227" type="selectionEntryGroup"/>
-          </entryLinks>
         </entryLink>
         <entryLink id="aa9d-c206-8e19-28e6" name="Bakemono Bushi" hidden="false" collective="false" targetId="7e77-1608-8841-c507" type="selectionEntry">
           <modifiers>
@@ -1048,9 +1031,6 @@
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f864-c7fe-c165-24c7" type="min"/>
           </constraints>
-          <entryLinks>
-            <entryLink id="5e70-8cb0-3321-dcf7" name="Enhancements" hidden="false" collective="false" targetId="74e6-2485-1c0a-4227" type="selectionEntryGroup"/>
-          </entryLinks>
         </entryLink>
       </entryLinks>
       <costs>
@@ -1083,9 +1063,6 @@
           <modifiers>
             <modifier type="append" field="name" value="B"/>
           </modifiers>
-          <entryLinks>
-            <entryLink id="c6c1-a233-8d1c-4932" name="Enhancements" hidden="false" collective="false" targetId="74e6-2485-1c0a-4227" type="selectionEntryGroup"/>
-          </entryLinks>
         </entryLink>
         <entryLink id="26b3-68b4-2296-0c9b" name="Bakemono Raider" hidden="false" collective="false" targetId="373c-333e-9a1f-f881" type="selectionEntry">
           <modifiers>
@@ -1098,9 +1075,6 @@
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6a02-d32c-2dc5-21c1" type="min"/>
           </constraints>
-          <entryLinks>
-            <entryLink id="74d3-0d56-2132-93a9" name="Enhancements" hidden="false" collective="false" targetId="74e6-2485-1c0a-4227" type="selectionEntryGroup"/>
-          </entryLinks>
         </entryLink>
       </entryLinks>
       <costs>
@@ -1133,9 +1107,6 @@
           <modifiers>
             <modifier type="append" field="name" value="B"/>
           </modifiers>
-          <entryLinks>
-            <entryLink id="69d5-234c-f4a5-dd12" name="Enhancements" hidden="false" collective="false" targetId="74e6-2485-1c0a-4227" type="selectionEntryGroup"/>
-          </entryLinks>
         </entryLink>
         <entryLink id="8196-9ef3-3243-d5f8" name="Bakemono Spearman" hidden="false" collective="false" targetId="d985-3a04-866a-57a9" type="selectionEntry">
           <modifiers>
@@ -1148,9 +1119,6 @@
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9928-cda7-4aed-1520" type="min"/>
           </constraints>
-          <entryLinks>
-            <entryLink id="ffb2-fb4e-e236-69a4" name="Enhancements" hidden="false" collective="false" targetId="74e6-2485-1c0a-4227" type="selectionEntryGroup"/>
-          </entryLinks>
         </entryLink>
       </entryLinks>
       <costs>
@@ -1183,9 +1151,6 @@
           <modifiers>
             <modifier type="append" field="name" value="B"/>
           </modifiers>
-          <entryLinks>
-            <entryLink id="5161-4987-dbdc-a467" name="Enhancements" hidden="false" collective="false" targetId="74e6-2485-1c0a-4227" type="selectionEntryGroup"/>
-          </entryLinks>
         </entryLink>
         <entryLink id="67e3-1fc6-c4fe-d830" name="Rinsho" hidden="false" collective="false" targetId="db76-ea05-1047-4ccd" type="selectionEntry">
           <modifiers>
@@ -1198,9 +1163,6 @@
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="af64-c610-f59f-fec4" type="min"/>
           </constraints>
-          <entryLinks>
-            <entryLink id="7fb2-d8f4-2d76-7827" name="Enhancements" hidden="false" collective="false" targetId="74e6-2485-1c0a-4227" type="selectionEntryGroup"/>
-          </entryLinks>
         </entryLink>
       </entryLinks>
       <costs>
@@ -1240,17 +1202,11 @@
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1c9e-4b5c-88a8-a6ee" type="min"/>
           </constraints>
-          <entryLinks>
-            <entryLink id="1101-f5b4-0140-da7d" name="Enhancements" hidden="false" collective="false" targetId="74e6-2485-1c0a-4227" type="selectionEntryGroup"/>
-          </entryLinks>
         </entryLink>
         <entryLink id="b96b-b4f3-0951-3cad" name="Oni Slave" hidden="false" collective="false" targetId="e299-8234-b5b5-c8e9" type="selectionEntry">
           <modifiers>
             <modifier type="append" field="name" value="B"/>
           </modifiers>
-          <entryLinks>
-            <entryLink id="3c2a-a497-af09-1393" name="Enhancements" hidden="false" collective="false" targetId="74e6-2485-1c0a-4227" type="selectionEntryGroup"/>
-          </entryLinks>
         </entryLink>
       </entryLinks>
       <costs>
@@ -1290,17 +1246,11 @@
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8582-2380-6652-51da" type="min"/>
           </constraints>
-          <entryLinks>
-            <entryLink id="7e98-943a-10c8-1404" name="Enhancements" hidden="false" collective="false" targetId="74e6-2485-1c0a-4227" type="selectionEntryGroup"/>
-          </entryLinks>
         </entryLink>
         <entryLink id="6179-ab85-94da-8850" name="Tribal Brute" hidden="false" collective="false" targetId="9d1d-34ce-2f1e-37ae" type="selectionEntry">
           <modifiers>
             <modifier type="append" field="name" value="B"/>
           </modifiers>
-          <entryLinks>
-            <entryLink id="e90b-fadc-9c4d-9b3e" name="Enhancements" hidden="false" collective="false" targetId="74e6-2485-1c0a-4227" type="selectionEntryGroup"/>
-          </entryLinks>
         </entryLink>
       </entryLinks>
       <costs>
@@ -1577,142 +1527,26 @@
     </rule>
   </rules>
   <sharedSelectionEntries>
-    <selectionEntry id="22dd-374f-6655-2766" name="Nightblood Mushrooms" hidden="true" collective="false" type="upgrade">
-      <modifiers>
-        <modifier type="set" field="8b58-6205-b2fe-5927" value="0">
-          <conditions>
-            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0c22-e9ca-a3de-e706" type="equalTo"/>
-          </conditions>
-        </modifier>
-        <modifier type="set" field="hidden" value="false">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9b14-5558-cfeb-ee1c" type="instanceOf"/>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0c22-e9ca-a3de-e706" type="atLeast"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
-      <constraints>
-        <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8b58-6205-b2fe-5927" type="max"/>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="73e0-ba98-827e-3a75" type="max"/>
-      </constraints>
-      <categoryLinks>
-        <categoryLink id="d49c-f52f-5339-459d" name="New CategoryLink" hidden="false" targetId="5bcd-fe93-a8ea-0164" primary="true"/>
-        <categoryLink id="75aa-f1cd-900a-92e1" name="Enhancement Cards" hidden="false" targetId="17cf-d9a9-c7c1-bcb6" primary="false"/>
-      </categoryLinks>
-      <costs>
-        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="b3ed-e797-6592-2fea" name="Summon Rage" hidden="false" collective="false" type="upgrade">
-      <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ff08-6c2f-0bdb-12ba" type="max"/>
-      </constraints>
-      <categoryLinks>
-        <categoryLink id="19a8-18ae-c217-c78a" name="New CategoryLink" hidden="false" targetId="17cf-d9a9-c7c1-bcb6" primary="true"/>
-      </categoryLinks>
-      <costs>
-        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="6329-e95e-873c-1297" name="Unearthly Rage" hidden="true" collective="false" type="upgrade">
-      <modifiers>
-        <modifier type="set" field="hidden" value="false">
-          <conditions>
-            <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4864-a322-cefd-fbfb" type="instanceOf"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-      <constraints>
-        <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4ab6-63bc-29a8-4a5b" type="max"/>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="99c6-28cd-0552-70f5" type="max"/>
-      </constraints>
-      <categoryLinks>
-        <categoryLink id="7da3-d6a6-87ad-7b83" name="New CategoryLink" hidden="false" targetId="17cf-d9a9-c7c1-bcb6" primary="true"/>
-      </categoryLinks>
-      <costs>
-        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="2d97-c4c1-601c-1d19" name="Spirit of the Consumed" hidden="true" collective="false" type="upgrade">
-      <modifiers>
-        <modifier type="set" field="hidden" value="false">
-          <conditions>
-            <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4864-a322-cefd-fbfb" type="instanceOf"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-      <constraints>
-        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="692f-47ee-46b4-cc14" type="max"/>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="40b7-22b8-4a89-71e8" type="max"/>
-      </constraints>
-      <categoryLinks>
-        <categoryLink id="43b6-e867-0e49-2a68" name="New CategoryLink" hidden="false" targetId="17cf-d9a9-c7c1-bcb6" primary="true"/>
-      </categoryLinks>
-      <costs>
-        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="8c86-599e-8f2a-e211" name="Youthful Aggression" hidden="false" collective="false" type="upgrade">
-      <modifiers>
-        <modifier type="set" field="hidden" value="false">
-          <conditions>
-            <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3507-42ea-bf26-b23d" type="instanceOf"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-      <constraints>
-        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f7ac-7fbf-b396-b561" type="max"/>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e401-4409-12a3-8957" type="max"/>
-      </constraints>
-      <categoryLinks>
-        <categoryLink id="8fa0-99c3-d93a-6819" name="New CategoryLink" hidden="false" targetId="17cf-d9a9-c7c1-bcb6" primary="true"/>
-      </categoryLinks>
-      <costs>
-        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="3.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="223f-c71d-5d43-5772" name="Ghost Heart Mushroom" hidden="false" collective="false" type="upgrade">
-      <constraints>
-        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a931-dbaf-d18f-1347" type="max"/>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2348-1b92-4ea1-2d60" type="max"/>
-      </constraints>
-      <categoryLinks>
-        <categoryLink id="b254-b2d0-fa6a-c38d" name="New CategoryLink" hidden="false" targetId="5bcd-fe93-a8ea-0164" primary="true"/>
-      </categoryLinks>
-      <costs>
-        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="bf6e-f953-7653-abef" name="Poisoned Weapons" hidden="false" collective="false" type="upgrade">
-      <constraints>
-        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="e00b-e0b0-5178-87c8" type="max"/>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e315-8bce-e9e8-a456" type="max"/>
-      </constraints>
-      <categoryLinks>
-        <categoryLink id="4ca8-e915-d691-9b21" name="New CategoryLink" hidden="false" targetId="5bcd-fe93-a8ea-0164" primary="true"/>
-      </categoryLinks>
-      <costs>
-        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2.0"/>
-      </costs>
-    </selectionEntry>
     <selectionEntry id="db76-ea05-1047-4ccd" name="Rinsho" hidden="false" collective="false" type="model">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="32c7-a793-4108-ecb6" type="max"/>
       </constraints>
+      <entryLinks>
+        <entryLink id="d307-5cf1-dc61-4aac" name="Enhancements" hidden="false" collective="false" targetId="74e6-2485-1c0a-4227" type="selectionEntryGroup"/>
+      </entryLinks>
       <costs>
-        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0.0"/>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="16.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="11b7-f913-1160-ee25" name="Bakemono Boomer" hidden="false" collective="false" type="model">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="9963-a93a-35d8-90c8" type="max"/>
       </constraints>
+      <entryLinks>
+        <entryLink id="806d-7ece-c177-9cce" name="Enhancements" hidden="false" collective="false" targetId="74e6-2485-1c0a-4227" type="selectionEntryGroup"/>
+      </entryLinks>
       <costs>
-        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0.0"/>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="10.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="e952-63ec-527b-d407" name="Kaihei" hidden="false" collective="false" type="model">
@@ -1727,14 +1561,20 @@
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="e8eb-dcab-a6c4-b657" type="max"/>
       </constraints>
+      <entryLinks>
+        <entryLink id="3137-5546-ed49-79c0" name="Enhancements" hidden="false" collective="false" targetId="74e6-2485-1c0a-4227" type="selectionEntryGroup"/>
+      </entryLinks>
       <costs>
-        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0.0"/>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="10.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="1798-6533-32b0-0f26" name="Bakemono Archer" hidden="false" collective="false" type="model">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="6710-ac98-f3f4-1f8e" type="max"/>
       </constraints>
+      <entryLinks>
+        <entryLink id="9843-918e-35a4-a73d" name="Enhancements" hidden="false" collective="false" targetId="74e6-2485-1c0a-4227" type="selectionEntryGroup"/>
+      </entryLinks>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="7.0"/>
       </costs>
@@ -1743,6 +1583,9 @@
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="c1a9-adb5-12d9-b2b8" type="max"/>
       </constraints>
+      <entryLinks>
+        <entryLink id="b4ac-ce98-5680-659c" name="Enhancements" hidden="false" collective="false" targetId="74e6-2485-1c0a-4227" type="selectionEntryGroup"/>
+      </entryLinks>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="10.0"/>
       </costs>
@@ -1751,6 +1594,9 @@
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="c726-4d88-6618-ffef" type="max"/>
       </constraints>
+      <entryLinks>
+        <entryLink id="b9d4-fd5a-aaca-bcd1" name="Enhancements" hidden="false" collective="false" targetId="74e6-2485-1c0a-4227" type="selectionEntryGroup"/>
+      </entryLinks>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="9.0"/>
       </costs>
@@ -1759,6 +1605,9 @@
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b205-27f7-e316-3bc0" type="max"/>
       </constraints>
+      <entryLinks>
+        <entryLink id="df79-b8b7-8cd5-512f" name="Enhancements" hidden="false" collective="false" targetId="74e6-2485-1c0a-4227" type="selectionEntryGroup"/>
+      </entryLinks>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="8.0"/>
       </costs>
@@ -1767,6 +1616,9 @@
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d8bc-7ac4-a958-e63e" type="max"/>
       </constraints>
+      <entryLinks>
+        <entryLink id="7541-936a-c72f-e6df" name="Enhancements" hidden="false" collective="false" targetId="74e6-2485-1c0a-4227" type="selectionEntryGroup"/>
+      </entryLinks>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="8.0"/>
       </costs>
@@ -1775,78 +1627,196 @@
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d743-ce13-bcb3-3c2b" type="max"/>
       </constraints>
+      <entryLinks>
+        <entryLink id="6cb6-cea5-cefd-1fae" name="Enhancements" hidden="false" collective="false" targetId="74e6-2485-1c0a-4227" type="selectionEntryGroup"/>
+      </entryLinks>
       <costs>
-        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="63e0-20a8-fc7e-98d7" name="The Horns of Power" hidden="true" collective="false" type="upgrade">
-      <modifiers>
-        <modifier type="set" field="hidden" value="false">
-          <conditions>
-            <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4864-a322-cefd-fbfb" type="instanceOf"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-      <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b525-0451-7747-ce77" type="max"/>
-      </constraints>
-      <categoryLinks>
-        <categoryLink id="5659-84e9-1c12-a4ec" name="New CategoryLink" hidden="false" targetId="17cf-d9a9-c7c1-bcb6" primary="false"/>
-        <categoryLink id="2c7f-e34b-6988-5f32" name="New CategoryLink" hidden="false" targetId="5bcd-fe93-a8ea-0164" primary="true"/>
-      </categoryLinks>
-      <costs>
-        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="2229-1282-2f6f-888e" name="Red Spot Mushrooms" hidden="true" collective="false" type="upgrade">
-      <modifiers>
-        <modifier type="set" field="hidden" value="false">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9b14-5558-cfeb-ee1c" type="instanceOf"/>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1afa-b4a3-cd57-56c8" type="instanceOf"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
-      <constraints>
-        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c2d1-cc0a-0954-51b6" type="max"/>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="732d-2209-486a-89fe" type="max"/>
-      </constraints>
-      <categoryLinks>
-        <categoryLink id="0fe7-5e25-6720-4efa" name="New CategoryLink" hidden="false" targetId="17cf-d9a9-c7c1-bcb6" primary="true"/>
-      </categoryLinks>
-      <costs>
-        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="35e5-0004-803f-29b5" name="Soul Medallion" hidden="true" collective="false" type="upgrade">
-      <modifiers>
-        <modifier type="set" field="hidden" value="false">
-          <conditions>
-            <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9b14-5558-cfeb-ee1c" type="instanceOf"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-      <constraints>
-        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="dbdf-716f-8bf9-c030" type="max"/>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d049-b0f8-78e7-866c" type="max"/>
-      </constraints>
-      <categoryLinks>
-        <categoryLink id="2c57-3dcc-d52d-018f" name="New CategoryLink" hidden="false" targetId="5bcd-fe93-a8ea-0164" primary="true"/>
-        <categoryLink id="dd7b-499a-a53f-858e" name="Enhancement Cards" hidden="false" targetId="17cf-d9a9-c7c1-bcb6" primary="false"/>
-      </categoryLinks>
-      <costs>
-        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1.0"/>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="6.0"/>
       </costs>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup id="74e6-2485-1c0a-4227" name="Enhancements" hidden="false" collective="false">
+      <selectionEntries>
+        <selectionEntry id="d6fe-ae72-01f6-ef8b" name="Spirit of the Consumed" hidden="true" collective="false" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4864-a322-cefd-fbfb" type="instanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f2b7-678c-8e1b-ca9d" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="51f7-2286-1348-87c9" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="5ce0-ac7f-1d4c-14fd" name="New CategoryLink" hidden="false" targetId="17cf-d9a9-c7c1-bcb6" primary="true"/>
+          </categoryLinks>
+          <costs>
+            <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="77fa-78df-bb07-72e5" name="Unearthly Rage" hidden="true" collective="false" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4864-a322-cefd-fbfb" type="instanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5c63-238f-3fa3-1db3" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="063a-65b9-5387-7d19" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="97a2-5bcc-2b24-5105" name="New CategoryLink" hidden="false" targetId="17cf-d9a9-c7c1-bcb6" primary="true"/>
+          </categoryLinks>
+          <costs>
+            <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="9137-acac-9e37-cf90" name="Youthful Aggression" hidden="true" collective="false" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3507-42ea-bf26-b23d" type="instanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="6e50-8561-d2ba-9815" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4b3a-86a6-1500-b424" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="53f2-d654-fab2-b57d" name="New CategoryLink" hidden="false" targetId="17cf-d9a9-c7c1-bcb6" primary="true"/>
+          </categoryLinks>
+          <costs>
+            <cost name=" Rice" typeId="a111-8656-5c05-7415" value="3.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="f659-cf05-d1ea-cbaf" name="Red Spot Mushrooms" hidden="true" collective="false" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9b14-5558-cfeb-ee1c" type="instanceOf"/>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1afa-b4a3-cd57-56c8" type="instanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="e494-5d4d-08d9-9bbc" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5c92-8409-3045-1a94" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="3deb-8ca4-f2d6-eea8" name="New CategoryLink" hidden="false" targetId="17cf-d9a9-c7c1-bcb6" primary="true"/>
+          </categoryLinks>
+          <costs>
+            <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="5966-5fdb-3efa-d8d2" name="Equipment" hidden="false" collective="false">
+          <selectionEntries>
+            <selectionEntry id="9b41-66fe-a3cd-81ac" name="Ghost Heart Mushroom" hidden="false" collective="false" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="bdb4-7f78-8b7a-a325" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="490f-e4f9-53c1-6061" type="max"/>
+              </constraints>
+              <categoryLinks>
+                <categoryLink id="f6c9-f3a1-fc0f-87ae" name="New CategoryLink" hidden="false" targetId="5bcd-fe93-a8ea-0164" primary="true"/>
+              </categoryLinks>
+              <costs>
+                <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="0a20-c225-251e-12d3" name="Nightblood Mushrooms" hidden="true" collective="false" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="335e-a721-9680-50ce" value="0">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0c22-e9ca-a3de-e706" type="equalTo"/>
+                  </conditions>
+                </modifier>
+                <modifier type="set" field="hidden" value="false">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9b14-5558-cfeb-ee1c" type="instanceOf"/>
+                        <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0c22-e9ca-a3de-e706" type="atLeast"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="335e-a721-9680-50ce" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="acfb-0f23-0194-685d" type="max"/>
+              </constraints>
+              <categoryLinks>
+                <categoryLink id="dd89-a10c-d87c-0030" name="New CategoryLink" hidden="false" targetId="5bcd-fe93-a8ea-0164" primary="true"/>
+                <categoryLink id="0ab5-b032-896b-84bd" name="Enhancement Cards" hidden="false" targetId="17cf-d9a9-c7c1-bcb6" primary="false"/>
+              </categoryLinks>
+              <costs>
+                <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="b1de-b966-57e2-3fb2" name="Poisoned Weapons" hidden="false" collective="false" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c792-d50c-a4db-b07c" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e16a-5de4-b046-6298" type="max"/>
+              </constraints>
+              <categoryLinks>
+                <categoryLink id="6ae6-85a1-a064-d34a" name="New CategoryLink" hidden="false" targetId="5bcd-fe93-a8ea-0164" primary="true"/>
+              </categoryLinks>
+              <costs>
+                <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="f1d2-38a3-d00f-6a28" name="The Horns of Power" hidden="true" collective="false" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="false">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4864-a322-cefd-fbfb" type="instanceOf"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5c9c-2e12-38eb-18d6" type="max"/>
+              </constraints>
+              <categoryLinks>
+                <categoryLink id="9f2a-c984-b65d-42d6" name="New CategoryLink" hidden="false" targetId="17cf-d9a9-c7c1-bcb6" primary="false"/>
+                <categoryLink id="98ce-17b2-84a7-a3c9" name="New CategoryLink" hidden="false" targetId="5bcd-fe93-a8ea-0164" primary="true"/>
+              </categoryLinks>
+              <costs>
+                <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="a07d-6501-803d-5725" name="Soul Medallion" hidden="true" collective="false" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="false">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9b14-5558-cfeb-ee1c" type="instanceOf"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="99a7-af72-9ca9-176b" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fd43-29c1-9616-dcd1" type="max"/>
+              </constraints>
+              <categoryLinks>
+                <categoryLink id="4f57-ab3c-9924-5a0a" name="New CategoryLink" hidden="false" targetId="5bcd-fe93-a8ea-0164" primary="true"/>
+                <categoryLink id="059d-ef2d-3976-6140" name="Enhancement Cards" hidden="false" targetId="17cf-d9a9-c7c1-bcb6" primary="false"/>
+              </categoryLinks>
+              <costs>
+                <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
           <entryLinks>
             <entryLink id="09a8-b487-83cb-2617" name="Vial of Raijin&apos;s Breath" hidden="false" collective="false" targetId="9b29-1f89-46d2-0329" type="selectionEntry"/>
             <entryLink id="0b75-d05a-792e-d4f5" name="Takero&apos;s Tanto" hidden="false" collective="false" targetId="50f4-7511-f889-9f40" type="selectionEntry"/>
