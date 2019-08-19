@@ -481,50 +481,6 @@
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="14.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="e8a3-9980-2d3e-20d2" name="House Retainers" hidden="false" collective="false" type="unit">
-      <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d5a3-42bc-c296-969a" type="equalTo"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
-      <constraints>
-        <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c32b-e9a6-db30-b0cd" type="max"/>
-      </constraints>
-      <categoryLinks>
-        <categoryLink id="6cac-6f08-5964-4291" name="Faction: Prefecture of Ryu" hidden="false" targetId="7532-4f60-381d-2941" primary="false"/>
-        <categoryLink id="46f8-579f-c215-481b" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
-        <categoryLink id="8119-4ef6-12b3-0f05" name="Non-Unique" hidden="false" targetId="d181-219d-3add-d47b" primary="false"/>
-        <categoryLink id="9d30-a1b7-d2c9-a0cb" name="Samurai" hidden="false" targetId="e12a-f782-3281-7444" primary="false"/>
-      </categoryLinks>
-      <entryLinks>
-        <entryLink id="d32d-b243-d01f-e2c4" name="House Retainer" hidden="false" collective="false" targetId="34bb-955d-7c7d-399f" type="selectionEntry">
-          <modifiers>
-            <modifier type="append" field="name" value="A">
-              <conditions>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="greaterThan"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e72f-70cf-8ec0-6319" type="min"/>
-          </constraints>
-        </entryLink>
-        <entryLink id="99aa-063e-1de0-7d6b" name="House Retainer" hidden="false" collective="false" targetId="34bb-955d-7c7d-399f" type="selectionEntry">
-          <modifiers>
-            <modifier type="append" field="name" value="B"/>
-          </modifiers>
-        </entryLink>
-      </entryLinks>
-      <costs>
-        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0.0"/>
-      </costs>
-    </selectionEntry>
     <selectionEntry id="5230-f631-4961-d20e" name="Isamu" hidden="false" collective="false" type="model">
       <modifiers>
         <modifier type="set" field="hidden" value="true">
@@ -1299,6 +1255,34 @@
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="6.0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="e126-27e3-32ba-5df9" name="Takashi Kazuo" hidden="false" collective="false" type="model">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d5a3-42bc-c296-969a" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="4da3-7b81-caca-ac22" type="max"/>
+      </constraints>
+      <categoryLinks>
+        <categoryLink id="dec6-f93f-61e9-4240" name="Faction: Prefecture of Ryu" hidden="false" targetId="7532-4f60-381d-2941" primary="false"/>
+        <categoryLink id="8be1-977e-c1f9-3e98" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
+        <categoryLink id="5232-717c-2381-7c7e" name="Samurai" hidden="false" targetId="e12a-f782-3281-7444" primary="false"/>
+        <categoryLink id="a4b4-5e65-9f6f-8102" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="e6e6-0fbd-d976-47c3" name="Enhancements" hidden="false" collective="false" targetId="3dad-1423-9b3c-86a7" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="14.0"/>
+      </costs>
+    </selectionEntry>
   </selectionEntries>
   <entryLinks>
     <entryLink id="d149-3ea0-90df-a450" name="Ancestor Spirit" hidden="false" collective="false" targetId="a8a8-fc30-a7e2-2913" type="selectionEntry">
@@ -1427,17 +1411,6 @@
       </entryLinks>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="10.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="34bb-955d-7c7d-399f" name="House Retainer" hidden="false" collective="false" type="model">
-      <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="de8e-625c-ed8a-974d" type="max"/>
-      </constraints>
-      <entryLinks>
-        <entryLink id="8ea3-7d29-368a-4993" name="Enhancements" hidden="false" collective="false" targetId="3dad-1423-9b3c-86a7" type="selectionEntryGroup"/>
-      </entryLinks>
-      <costs>
-        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="14.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="339d-b7e6-d0dc-b022" name="Ryu Houseguard" hidden="false" collective="false" type="model">
