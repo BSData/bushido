@@ -155,6 +155,13 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="49fb-d207-3a25-9327" name="Golden Sentinel" hidden="false" collective="false" type="model">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0f84-8e23-429c-d5c4" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="195f-50fc-bdd2-24ea" type="max"/>
       </constraints>
@@ -164,7 +171,7 @@
         <categoryLink id="0582-efc2-02e2-db19" name="Non-Unique" hidden="false" targetId="d181-219d-3add-d47b" primary="false"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="a218-b749-8176-e97c" name="Model A" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="a218-b749-8176-e97c" name="Golden Sentinel A" hidden="false" collective="false" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5074-0d90-f751-1fa3" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="79f3-6b8b-69c4-3648" type="min"/>
@@ -176,7 +183,7 @@
             <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="38c9-5ef9-915a-a58b" name="Model B" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="38c9-5ef9-915a-a58b" name="Golden Sentinel B" hidden="false" collective="false" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e91b-bea6-0d93-4d77" type="max"/>
           </constraints>
@@ -694,6 +701,13 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="de1e-de2d-1044-bf56" name="Koshimori Yukio" hidden="false" collective="false" type="model">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0f84-8e23-429c-d5c4" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="66b3-9bab-33a2-286d" type="max"/>
       </constraints>
@@ -731,7 +745,7 @@
         <categoryLink id="fd75-95e0-deae-05da" name="Non-Unique" hidden="false" targetId="d181-219d-3add-d47b" primary="false"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="6218-aa9e-3651-b930" name="Model A" hidden="false" collective="false" type="model">
+        <selectionEntry id="6218-aa9e-3651-b930" name="Swarm A" hidden="false" collective="false" type="model">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d425-b90d-481b-1858" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="277d-7afe-d045-d5d4" type="min"/>
@@ -740,7 +754,7 @@
             <cost name=" Rice" typeId="a111-8656-5c05-7415" value="12.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="bb7b-a078-e86d-1568" name="Model B" hidden="false" collective="false" type="model">
+        <selectionEntry id="bb7b-a078-e86d-1568" name="Swarm B" hidden="false" collective="false" type="model">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e76b-c9d8-0d26-1445" type="max"/>
           </constraints>
@@ -785,10 +799,8 @@
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b001-2a9b-ef61-6d68" type="atLeast"/>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="27e0-cd04-df15-eeee" type="atLeast"/>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="63be-6949-c902-f788" type="atLeast"/>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b94d-f7cb-a84c-4077" type="equalTo"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b94d-f7cb-a84c-4077" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1a5c-7165-4266-4fbc" type="atLeast"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -815,10 +827,8 @@
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b001-2a9b-ef61-6d68" type="atLeast"/>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="27e0-cd04-df15-eeee" type="atLeast"/>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="63be-6949-c902-f788" type="atLeast"/>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b94d-f7cb-a84c-4077" type="equalTo"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b94d-f7cb-a84c-4077" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1a5c-7165-4266-4fbc" type="atLeast"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -860,7 +870,7 @@
         <categoryLink id="6e12-6bd9-a17e-0fc1" name="Non-Unique" hidden="false" targetId="d181-219d-3add-d47b" primary="false"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="f2d6-8699-3511-98b0" name="Model A" hidden="false" collective="false" type="model">
+        <selectionEntry id="f2d6-8699-3511-98b0" name="Silverback A" hidden="false" collective="false" type="model">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8cea-2ab7-dc9d-e946" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ebe6-9e95-6370-2f37" type="min"/>
@@ -869,12 +879,12 @@
             <cost name=" Rice" typeId="a111-8656-5c05-7415" value="10.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="b28b-d7cb-a681-6052" name="Model B" hidden="false" collective="false" type="model">
+        <selectionEntry id="b28b-d7cb-a681-6052" name="Silverback B" hidden="false" collective="false" type="model">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c67e-2b73-f50e-2392" type="max"/>
           </constraints>
           <costs>
-            <cost name=" Rice" typeId="a111-8656-5c05-7415" value="8.0"/>
+            <cost name=" Rice" typeId="a111-8656-5c05-7415" value="10.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -1108,15 +1118,9 @@
     <selectionEntry id="b001-2a9b-ef61-6d68" name="Xi" hidden="false" collective="false" type="model">
       <modifiers>
         <modifier type="set" field="hidden" value="true">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7603-352e-f85b-f2d4" type="equalTo"/>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="56df-f15b-64ba-8429" type="equalTo"/>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6d5c-257b-027b-289f" type="equalTo"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0f84-8e23-429c-d5c4" type="atLeast"/>
+          </conditions>
         </modifier>
       </modifiers>
       <constraints>
@@ -1137,15 +1141,9 @@
     <selectionEntry id="63be-6949-c902-f788" name="Yanjing" hidden="false" collective="false" type="model">
       <modifiers>
         <modifier type="set" field="hidden" value="true">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7603-352e-f85b-f2d4" type="equalTo"/>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="56df-f15b-64ba-8429" type="equalTo"/>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6d5c-257b-027b-289f" type="equalTo"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0f84-8e23-429c-d5c4" type="atLeast"/>
+          </conditions>
         </modifier>
       </modifiers>
       <constraints>
@@ -1169,10 +1167,8 @@
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b001-2a9b-ef61-6d68" type="atLeast"/>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="27e0-cd04-df15-eeee" type="atLeast"/>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="63be-6949-c902-f788" type="atLeast"/>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b94d-f7cb-a84c-4077" type="equalTo"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b94d-f7cb-a84c-4077" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1a5c-7165-4266-4fbc" type="atLeast"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -1196,15 +1192,9 @@
     <selectionEntry id="27e0-cd04-df15-eeee" name="Yizhi" hidden="false" collective="false" type="model">
       <modifiers>
         <modifier type="set" field="hidden" value="true">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7603-352e-f85b-f2d4" type="equalTo"/>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="56df-f15b-64ba-8429" type="equalTo"/>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6d5c-257b-027b-289f" type="equalTo"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0f84-8e23-429c-d5c4" type="atLeast"/>
+          </conditions>
         </modifier>
       </modifiers>
       <constraints>
