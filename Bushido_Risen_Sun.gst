@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="62e4-ab79-1c4c-9ffe" name="Bushido: Risen Sun" revision="1" battleScribeVersion="2.02" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="62e4-ab79-1c4c-9ffe" name="Bushido: Risen Sun" revision="1" battleScribeVersion="2.03" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <costTypes>
     <costType id="a111-8656-5c05-7415" name=" Rice" defaultCostLimit="-1.0"/>
   </costTypes>
@@ -66,15 +66,7 @@
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3945-4c1b-a97b-3e4e" type="max"/>
       </constraints>
     </categoryEntry>
-    <categoryEntry id="9fba-f50b-c8f7-8396" name="Ronin Profile Cards" hidden="false">
-      <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="477a-e693-0888-08f7" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-    </categoryEntry>
+    <categoryEntry id="9fba-f50b-c8f7-8396" name="Ronin Profile Cards" hidden="false"/>
     <categoryEntry id="ff27-a550-2dd1-e2e3" name="Ronin Theme Cards" hidden="false">
       <modifierGroups>
         <modifierGroup>
