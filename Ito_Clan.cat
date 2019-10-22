@@ -1481,6 +1481,25 @@ This model gains Fear (6) and Terror until the end of the current activation.</d
             <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2.0"/>
           </costs>
         </selectionEntry>
+        <selectionEntry id="e388-db96-2ced-4e96" name="Inducted into the Priesthood" hidden="true" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4be7-a84f-507f-de4b" type="instanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="554d-aa1b-4358-ef6f" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e03c-1b78-61d5-adc2" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="a509-95a3-6698-e2ef" name="New CategoryLink" hidden="false" targetId="17cf-d9a9-c7c1-bcb6" primary="true"/>
+          </categoryLinks>
+          <costs>
+            <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2.0"/>
+          </costs>
+        </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="4893-c90a-1908-6c52" name="Equipment" hidden="false" collective="false" import="true">
