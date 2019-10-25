@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <catalogue id="302b-66f1-a875-3b63" name="Ito Clan" revision="1" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+  <categoryEntries>
+    <categoryEntry id="46b2-47c2-4c55-2e3a" name="Kinu" hidden="false"/>
+    <categoryEntry id="273a-b61b-c7f8-76fd" name="Itsunagi" hidden="false"/>
+  </categoryEntries>
   <selectionEntries>
     <selectionEntry id="6a04-d72e-1970-f1bd" name="Dark Secrets" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -263,6 +267,7 @@
         <categoryLink id="455b-dac2-a697-9b4c" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
         <categoryLink id="e08c-5d01-cb35-53c6" name="Samurai" hidden="false" targetId="e12a-f782-3281-7444" primary="false"/>
         <categoryLink id="0d32-9267-a9cb-c932" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
+        <categoryLink id="7993-eb25-6b3a-962f" name="Itsunagi" hidden="false" targetId="273a-b61b-c7f8-76fd" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="c5cd-9bd0-dde5-be6f" name="Twin Katanas" hidden="true" collective="false" import="true" type="upgrade">
@@ -1200,6 +1205,7 @@
         <categoryLink id="7405-851b-2321-d664" name="Blood of Orochi" hidden="false" targetId="a678-8869-7918-cb24" primary="false"/>
         <categoryLink id="f39d-2e5f-79fb-e95c" name="Shisai" hidden="false" targetId="a485-b6b0-b58e-a3a1" primary="false"/>
         <categoryLink id="f152-1ecf-96d0-257a" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
+        <categoryLink id="d287-2a67-92ad-5cc2" name="Kinu" hidden="false" targetId="46b2-47c2-4c55-2e3a" primary="false"/>
       </categoryLinks>
       <entryLinks>
         <entryLink id="89c3-403c-5d94-60ee" name="Enhancements" hidden="false" collective="false" import="true" targetId="c1b7-60f5-a313-5345" type="selectionEntryGroup"/>
@@ -1383,8 +1389,8 @@
               <conditionGroups>
                 <conditionGroup type="and">
                   <conditions>
-                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8114-a97d-b204-5df1" type="notInstanceOf"/>
                     <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e12a-f782-3281-7444" type="instanceOf"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="273a-b61b-c7f8-76fd" type="notInstanceOf"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -1485,7 +1491,7 @@ This model gains Fear (6) and Terror until the end of the current activation.</d
           <modifiers>
             <modifier type="set" field="hidden" value="false">
               <conditions>
-                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4be7-a84f-507f-de4b" type="instanceOf"/>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="46b2-47c2-4c55-2e3a" type="instanceOf"/>
               </conditions>
             </modifier>
           </modifiers>
