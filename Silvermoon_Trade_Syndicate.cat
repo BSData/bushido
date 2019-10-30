@@ -1331,17 +1331,17 @@
       <modifiers>
         <modifier type="set" field="hidden" value="false">
           <conditions>
-            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1fac-c568-ba02-6828" type="equalTo"/>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1fac-c568-ba02-6828" type="atLeast"/>
           </conditions>
         </modifier>
       </modifiers>
       <categoryLinks>
-        <categoryLink id="d184-3dcb-e1e5-32e7" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
+        <categoryLink id="771e-a08f-ef44-5cca" name="New CategoryLink" hidden="false" targetId="9fba-f50b-c8f7-8396" primary="true"/>
       </categoryLinks>
     </entryLink>
     <entryLink id="6368-82b0-f4e7-0ebd" name="Lua" hidden="true" collective="false" import="true" targetId="f8cf-8680-1f4a-2deb" type="selectionEntry">
-      <modifiers>
-        <modifier type="set" field="hidden" value="false">
+      <modifierGroups>
+        <modifierGroup>
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
@@ -1349,8 +1349,12 @@
               </conditions>
             </conditionGroup>
           </conditionGroups>
-        </modifier>
-      </modifiers>
+          <modifiers>
+            <modifier type="set" field="hidden" value="false"/>
+            <modifier type="set-primary" field="category" value="9fba-f50b-c8f7-8396"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
       <entryLinks>
         <entryLink id="1fe3-ae54-4f03-dc30" name="Enhancements" hidden="false" collective="false" import="true" targetId="f486-4498-03e3-c397" type="selectionEntryGroup"/>
       </entryLinks>
