@@ -17,17 +17,22 @@
         <characteristicType id="2e88-c65e-4e45-d4c4" name="Ki Cap"/>
         <characteristicType id="a1dc-c2c1-e2d2-ca98" name="Wounds"/>
         <characteristicType id="6af2-e777-20ce-e060" name="Base Size"/>
+        <characteristicType id="e742-1b02-09cf-fd97" name="Traits"/>
       </characteristicTypes>
     </profileType>
     <profileType id="2b50-015d-0ea9-d9aa" name="Melee Weapon">
       <characteristicTypes>
         <characteristicType id="98e7-55ef-7ced-d4ba" name="Melee Weapon Strength"/>
+        <characteristicType id="39e3-f945-7956-ad4e" name="Traits"/>
+        <characteristicType id="85a9-0a2b-f966-0c8d" name="Specials"/>
       </characteristicTypes>
     </profileType>
     <profileType id="7e20-258e-bf92-18f9" name="Ranged Weapon">
       <characteristicTypes>
         <characteristicType id="15aa-b6bd-6923-271f" name="Ranged Weapon Strength"/>
         <characteristicType id="be6a-50c6-d691-e2e9" name="Range Bands"/>
+        <characteristicType id="3410-4428-ef91-eb61" name="Traits"/>
+        <characteristicType id="cdaf-b6ac-89d4-39ef" name="Specials"/>
       </characteristicTypes>
     </profileType>
   </profileTypes>
