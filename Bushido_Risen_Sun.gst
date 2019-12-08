@@ -4,7 +4,7 @@
     <costType id="a111-8656-5c05-7415" name=" Rice" defaultCostLimit="-1.0"/>
   </costTypes>
   <profileTypes>
-    <profileType id="6ea2-0f74-4852-4a98" name="Profile">
+    <profileType id="6ea2-0f74-4852-4a98" name="Character Profile">
       <characteristicTypes>
         <characteristicType id="8409-8d55-ce45-a33b" name="Melee Pool"/>
         <characteristicType id="6a36-e826-18f3-0b25" name="Melee Boost"/>
@@ -33,6 +33,20 @@
         <characteristicType id="be6a-50c6-d691-e2e9" name="Range Bands"/>
         <characteristicType id="3410-4428-ef91-eb61" name="Traits"/>
         <characteristicType id="cdaf-b6ac-89d4-39ef" name="Specials"/>
+      </characteristicTypes>
+    </profileType>
+    <profileType id="993a-e62a-7922-0ccb" name="Ki Feat">
+      <characteristicTypes>
+        <characteristicType id="a126-54d9-0a27-f4b6" name="Cost"/>
+        <characteristicType id="f8a8-8a3e-ef58-4c61" name="Timing"/>
+        <characteristicType id="4ac8-2bb1-0c84-f088" name="Subject"/>
+        <characteristicType id="6fc9-5d13-2687-b2a5" name="Limitation"/>
+        <characteristicType id="f804-b969-00da-2123" name="Description"/>
+      </characteristicTypes>
+    </profileType>
+    <profileType id="2f00-4eb0-a8cb-7022" name="Unique Effects">
+      <characteristicTypes>
+        <characteristicType id="6de4-d067-c2aa-0dc2" name="Description"/>
       </characteristicTypes>
     </profileType>
   </profileTypes>

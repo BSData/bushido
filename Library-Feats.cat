@@ -1,38 +1,249 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <catalogue id="b586-d588-5153-3d1d" name="Library-Feats" revision="1" battleScribeVersion="2.03" library="true" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
-  <sharedRules>
-    <rule id="effb-187b-270e-25a5" name="Cobra Strike" hidden="false">
-      <description>I P - **
-This model gains Lightning Reflexes until the End Phase.</description>
-    </rule>
-    <rule id="2058-cc5c-47d8-70e2" name="Umbrella Block" hidden="false">
-      <description>I P – **
-This model gains Parry (1) until the end of the current Melee Exchange</description>
-    </rule>
-    <rule id="3f13-73e2-9ff8-53e9" name="Do-Kote" hidden="false">
-      <description>A P – **
-This model gains Feint (1) until the end of the current Melee Exchange.</description>
-    </rule>
-    <rule id="b4f9-0209-3bbf-0c71" name="Mob Mentality" hidden="false">
-      <description>X I Pe
-When a Bakemono model passes a Fear Test, it does not need to re-roll that test due to Cowardly. This Ki Feat may be used after the dice are rolled, as if it were granting a re-roll. X is equal to the number of times this feat has been used previously this turn.</description>
-    </rule>
-    <rule id="ceb9-11cb-fad9-a49f" name="Shadow Walk" hidden="false">
-      <description>1 A Pe
-If this model is out of LoS of all enemy models, place it within 3” of it&apos;s current location.
-This feat can only be used once per activation.</description>
-    </rule>
-    <rule id="4ba6-3df9-79d7-f2ab" name="Darkness" hidden="false">
-      <description>5 A Sp OPT
-Until the End Phase all Non-Soulless, Non-Sixth Sense, Non-Bakemono models may only draw LoS up to 4”.</description>
-    </rule>
-    <rule id="88d0-2068-d62d-3810" name="Summon from the Shadows" hidden="false">
-      <description>6 A Sp OPT
-Deploy a Horde Bakemono anywhere within 2” of this model.  If there are no Bakemono cards available with a free wound track this feat cannot be used.</description>
-    </rule>
-    <rule id="3fcc-7224-2b63-3226" name="Asp Strike" hidden="false">
-      <description>Ki2 Instant Personal
-This model gains Lightning Reflexes until the current action is resolved.</description>
-    </rule>
-  </sharedRules>
+  <sharedInfoGroups>
+    <infoGroup id="172c-d546-50a5-c020" name="Cobra Strike" hidden="false">
+      <profiles>
+        <profile id="9fd5-ec91-9e6f-24d7" name="Cobra Strike" hidden="false" typeId="993a-e62a-7922-0ccb" typeName="Ki Feat">
+          <characteristics>
+            <characteristic name="Cost" typeId="a126-54d9-0a27-f4b6">2</characteristic>
+            <characteristic name="Timing" typeId="f8a8-8a3e-ef58-4c61">Instant</characteristic>
+            <characteristic name="Subject" typeId="4ac8-2bb1-0c84-f088">Personal</characteristic>
+            <characteristic name="Limitation" typeId="6fc9-5d13-2687-b2a5"/>
+            <characteristic name="Description" typeId="f804-b969-00da-2123">This model gains Lightning Reflexes until the End Phase.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="a6a5-0fe4-b751-0d1f" name="Lightning Reflexes" hidden="false" targetId="efd4-dc31-6523-9c79" type="rule"/>
+      </infoLinks>
+    </infoGroup>
+    <infoGroup id="4d47-155e-0ec4-a7fe" name="Asp Strike" hidden="false">
+      <profiles>
+        <profile id="ec9e-6c12-37de-cc7b" name="Asp Strike" hidden="false" typeId="993a-e62a-7922-0ccb" typeName="Ki Feat">
+          <characteristics>
+            <characteristic name="Cost" typeId="a126-54d9-0a27-f4b6">2</characteristic>
+            <characteristic name="Timing" typeId="f8a8-8a3e-ef58-4c61">Instant</characteristic>
+            <characteristic name="Subject" typeId="4ac8-2bb1-0c84-f088">Personal</characteristic>
+            <characteristic name="Limitation" typeId="6fc9-5d13-2687-b2a5"/>
+            <characteristic name="Description" typeId="f804-b969-00da-2123">This model gains Lightning Reflexes until the current action is resolved.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="32cf-9916-c2f7-8fd9" name="Lightning Reflexes" hidden="false" targetId="efd4-dc31-6523-9c79" type="rule"/>
+      </infoLinks>
+    </infoGroup>
+    <infoGroup id="043d-73fe-cc06-b294" name="Darkness" hidden="false">
+      <profiles>
+        <profile id="4c90-9b03-c8f7-f254" name="Darkness" hidden="false" typeId="993a-e62a-7922-0ccb" typeName="Ki Feat">
+          <characteristics>
+            <characteristic name="Cost" typeId="a126-54d9-0a27-f4b6">5</characteristic>
+            <characteristic name="Timing" typeId="f8a8-8a3e-ef58-4c61">Active</characteristic>
+            <characteristic name="Subject" typeId="4ac8-2bb1-0c84-f088">Special</characteristic>
+            <characteristic name="Limitation" typeId="6fc9-5d13-2687-b2a5">Once Per Turn</characteristic>
+            <characteristic name="Description" typeId="f804-b969-00da-2123">Until the End Phase all Non-Soulless, Non-Sixth Sense, Non-Bakemono models may only draw LoS up to 4”.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </infoGroup>
+    <infoGroup id="308c-6600-0817-c51e" name="Military Training" hidden="false">
+      <profiles>
+        <profile id="80b8-b799-d64a-b1f7" name="Military Training" hidden="false" typeId="993a-e62a-7922-0ccb" typeName="Ki Feat">
+          <characteristics>
+            <characteristic name="Cost" typeId="a126-54d9-0a27-f4b6">1</characteristic>
+            <characteristic name="Timing" typeId="f8a8-8a3e-ef58-4c61">Instant</characteristic>
+            <characteristic name="Subject" typeId="4ac8-2bb1-0c84-f088">Special</characteristic>
+            <characteristic name="Limitation" typeId="6fc9-5d13-2687-b2a5">Once Per Turn</characteristic>
+            <characteristic name="Description" typeId="f804-b969-00da-2123">This model&apos;s Controller gains a Pass Token.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </infoGroup>
+    <infoGroup id="7c80-7e85-fc45-381a" name="Do-Kote" hidden="false">
+      <profiles>
+        <profile id="62d2-f446-74e3-18de" name="Do-Kote" hidden="false" typeId="993a-e62a-7922-0ccb" typeName="Ki Feat">
+          <characteristics>
+            <characteristic name="Cost" typeId="a126-54d9-0a27-f4b6">2</characteristic>
+            <characteristic name="Timing" typeId="f8a8-8a3e-ef58-4c61">Active</characteristic>
+            <characteristic name="Subject" typeId="4ac8-2bb1-0c84-f088">Personal</characteristic>
+            <characteristic name="Limitation" typeId="6fc9-5d13-2687-b2a5"/>
+            <characteristic name="Description" typeId="f804-b969-00da-2123">This model gains Feint (1) until the end of the current Melee Exchange.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="b3a7-1dbc-79eb-04c5" name="Feint" hidden="false" targetId="38b0-4d97-3c4c-8d96" type="rule"/>
+      </infoLinks>
+    </infoGroup>
+    <infoGroup id="b3b7-f4cb-44c1-96c4" name="Mob Mentality" hidden="false">
+      <profiles>
+        <profile id="862f-7c59-5ebb-99bd" name="Mob Mentality" hidden="false" typeId="993a-e62a-7922-0ccb" typeName="Ki Feat">
+          <characteristics>
+            <characteristic name="Cost" typeId="a126-54d9-0a27-f4b6">X</characteristic>
+            <characteristic name="Timing" typeId="f8a8-8a3e-ef58-4c61">Instant</characteristic>
+            <characteristic name="Subject" typeId="4ac8-2bb1-0c84-f088">Personal</characteristic>
+            <characteristic name="Limitation" typeId="6fc9-5d13-2687-b2a5"/>
+            <characteristic name="Description" typeId="f804-b969-00da-2123">When a Bakemono model passes a Fear Test, it does not need to re-roll that test due to Cowardly. This Ki Feat may be used after the dice are rolled, as if it were granting a re-roll.
+X is equal to the number of times this feat has been used previously this turn.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </infoGroup>
+    <infoGroup id="d324-83dc-936d-cb9b" name="Precision Strike" hidden="false">
+      <profiles>
+        <profile id="09cd-4169-7d10-95c1" name="Precision Strike" hidden="false" typeId="993a-e62a-7922-0ccb" typeName="Ki Feat">
+          <characteristics>
+            <characteristic name="Cost" typeId="a126-54d9-0a27-f4b6">1</characteristic>
+            <characteristic name="Timing" typeId="f8a8-8a3e-ef58-4c61">Active</characteristic>
+            <characteristic name="Subject" typeId="4ac8-2bb1-0c84-f088">Personal</characteristic>
+            <characteristic name="Limitation" typeId="6fc9-5d13-2687-b2a5"/>
+            <characteristic name="Description" typeId="f804-b969-00da-2123">This model&apos;s weapons gain Pierce (1) until the current action is resolved.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="7fc0-f963-e17a-0d7d" name="Pierce " hidden="false" targetId="39e4-14d7-5533-6e67" type="rule"/>
+      </infoLinks>
+    </infoGroup>
+    <infoGroup id="26dc-6aae-4be0-6e22" name="Shadow Walk" hidden="false">
+      <profiles>
+        <profile id="2ed9-ca35-df4d-25b2" name="Shadow Walk" hidden="false" typeId="993a-e62a-7922-0ccb" typeName="Ki Feat">
+          <characteristics>
+            <characteristic name="Cost" typeId="a126-54d9-0a27-f4b6">1</characteristic>
+            <characteristic name="Timing" typeId="f8a8-8a3e-ef58-4c61">Active</characteristic>
+            <characteristic name="Subject" typeId="4ac8-2bb1-0c84-f088">Personal</characteristic>
+            <characteristic name="Limitation" typeId="6fc9-5d13-2687-b2a5"/>
+            <characteristic name="Description" typeId="f804-b969-00da-2123">If this model is out of LoS of all enemy models, place it within 3” of it&apos;s current location.
+This feat can only be used once per activation.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </infoGroup>
+    <infoGroup id="443a-eb7b-fe65-ae7d" name="Summon from the Shadows" hidden="false">
+      <profiles>
+        <profile id="f889-8360-b8bb-a0c3" name="Summon From the Shadows" hidden="false" typeId="993a-e62a-7922-0ccb" typeName="Ki Feat">
+          <characteristics>
+            <characteristic name="Cost" typeId="a126-54d9-0a27-f4b6">6</characteristic>
+            <characteristic name="Timing" typeId="f8a8-8a3e-ef58-4c61">Active</characteristic>
+            <characteristic name="Subject" typeId="4ac8-2bb1-0c84-f088">Special</characteristic>
+            <characteristic name="Limitation" typeId="6fc9-5d13-2687-b2a5">Once Per Turn</characteristic>
+            <characteristic name="Description" typeId="f804-b969-00da-2123">Deploy a Horde Bakemono anywhere within 2” of this model.  If there are no Bakemono cards available with a free wound track this feat cannot be used.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </infoGroup>
+    <infoGroup id="acb4-d601-61d6-539f" name="Sweep" hidden="false">
+      <profiles>
+        <profile id="0ef8-e703-9ff3-03ca" name="Sweep" hidden="false" typeId="993a-e62a-7922-0ccb" typeName="Ki Feat">
+          <characteristics>
+            <characteristic name="Cost" typeId="a126-54d9-0a27-f4b6">2</characteristic>
+            <characteristic name="Timing" typeId="f8a8-8a3e-ef58-4c61">Active</characteristic>
+            <characteristic name="Subject" typeId="4ac8-2bb1-0c84-f088">Personal</characteristic>
+            <characteristic name="Limitation" typeId="6fc9-5d13-2687-b2a5"/>
+            <characteristic name="Description" typeId="f804-b969-00da-2123">This model gains Sweep Attack (0) until the end of the current activation.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="7ec2-d9c9-517f-7e7b" name="Sweep Attack" hidden="false" targetId="bcbd-fab2-c8e2-6ff7" type="rule"/>
+      </infoLinks>
+    </infoGroup>
+    <infoGroup id="0005-2a79-5638-daa2" name="Umbrella Block" hidden="false">
+      <profiles>
+        <profile id="b8c6-bedd-6049-9f33" name="Umbrella Block" hidden="false" typeId="993a-e62a-7922-0ccb" typeName="Ki Feat">
+          <characteristics>
+            <characteristic name="Cost" typeId="a126-54d9-0a27-f4b6">2</characteristic>
+            <characteristic name="Timing" typeId="f8a8-8a3e-ef58-4c61">Instant</characteristic>
+            <characteristic name="Subject" typeId="4ac8-2bb1-0c84-f088">Personal</characteristic>
+            <characteristic name="Limitation" typeId="6fc9-5d13-2687-b2a5"/>
+            <characteristic name="Description" typeId="f804-b969-00da-2123">This model gains Parry (1) until the end of the current Melee Exchange</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="98e6-2f4f-1781-16d4" name="Parry" hidden="false" targetId="c7c2-b36e-7952-c79b" type="rule"/>
+      </infoLinks>
+    </infoGroup>
+    <infoGroup id="3ace-c140-e71e-edb2" name="Lurker" hidden="false">
+      <profiles>
+        <profile id="0307-0252-1627-2fe1" name="Lurker" hidden="false" typeId="993a-e62a-7922-0ccb" typeName="Ki Feat">
+          <characteristics>
+            <characteristic name="Cost" typeId="a126-54d9-0a27-f4b6">2</characteristic>
+            <characteristic name="Timing" typeId="f8a8-8a3e-ef58-4c61">Active</characteristic>
+            <characteristic name="Subject" typeId="4ac8-2bb1-0c84-f088">Personal</characteristic>
+            <characteristic name="Limitation" typeId="6fc9-5d13-2687-b2a5">Not in BtB</characteristic>
+            <characteristic name="Description" typeId="f804-b969-00da-2123">This model gains Camouflage (2) until the End Phase.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="4232-d71c-d7e5-01d2" name="Camouflage" hidden="false" targetId="9010-4983-c98c-1751" type="rule"/>
+      </infoLinks>
+    </infoGroup>
+    <infoGroup id="3bd6-b4a8-04a6-cba8" name="Death Sentence" hidden="false">
+      <profiles>
+        <profile id="26cd-e40c-7f39-3e37" name="Death Sentence" hidden="false" typeId="993a-e62a-7922-0ccb" typeName="Ki Feat">
+          <characteristics>
+            <characteristic name="Cost" typeId="a126-54d9-0a27-f4b6">4</characteristic>
+            <characteristic name="Timing" typeId="f8a8-8a3e-ef58-4c61">Simple</characteristic>
+            <characteristic name="Subject" typeId="4ac8-2bb1-0c84-f088">Target 9&quot;, Opposed Ki Test</characteristic>
+            <characteristic name="Limitation" typeId="6fc9-5d13-2687-b2a5">Not in BtB, Once Per Turn</characteristic>
+            <characteristic name="Description" typeId="f804-b969-00da-2123">Target Enemy model gains a Death Sentence Marker.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="c2c7-86e6-8fc5-e1f5" name="Lightning Reflexes" hidden="false" targetId="efd4-dc31-6523-9c79" type="rule"/>
+      </infoLinks>
+    </infoGroup>
+    <infoGroup id="8ffa-126c-60ed-f63f" name="Quick Reload" hidden="false">
+      <profiles>
+        <profile id="444a-6ce9-74c5-7df9" name="Quick Reload" hidden="false" typeId="993a-e62a-7922-0ccb" typeName="Ki Feat">
+          <characteristics>
+            <characteristic name="Cost" typeId="a126-54d9-0a27-f4b6">3</characteristic>
+            <characteristic name="Timing" typeId="f8a8-8a3e-ef58-4c61">Active</characteristic>
+            <characteristic name="Subject" typeId="4ac8-2bb1-0c84-f088">Personal</characteristic>
+            <characteristic name="Limitation" typeId="6fc9-5d13-2687-b2a5">Not in BtB</characteristic>
+            <characteristic name="Description" typeId="f804-b969-00da-2123">Remove any Reload Markers from this model.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </infoGroup>
+    <infoGroup id="1318-27dd-bda2-861b" name="Grapple" hidden="false">
+      <profiles>
+        <profile id="25d8-9110-e71e-526e" name="Grapple" hidden="false" typeId="993a-e62a-7922-0ccb" typeName="Ki Feat">
+          <characteristics>
+            <characteristic name="Cost" typeId="a126-54d9-0a27-f4b6">2</characteristic>
+            <characteristic name="Timing" typeId="f8a8-8a3e-ef58-4c61">Active</characteristic>
+            <characteristic name="Subject" typeId="4ac8-2bb1-0c84-f088">Personal</characteristic>
+            <characteristic name="Limitation" typeId="6fc9-5d13-2687-b2a5"/>
+            <characteristic name="Description" typeId="f804-b969-00da-2123">This model gains Grapple Attack (0) until the end of the current activation.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="8bc7-ca1a-95c3-cf0e" name="Grapple Attack" hidden="false" targetId="1b9a-c71d-0a30-8d0d" type="rule"/>
+      </infoLinks>
+    </infoGroup>
+    <infoGroup id="7641-b66f-5fc4-0add" name="Cleave" hidden="false">
+      <profiles>
+        <profile id="69c2-32bd-cbc4-2c5f" name="Cleave" hidden="false" typeId="993a-e62a-7922-0ccb" typeName="Ki Feat">
+          <characteristics>
+            <characteristic name="Cost" typeId="a126-54d9-0a27-f4b6">2</characteristic>
+            <characteristic name="Timing" typeId="f8a8-8a3e-ef58-4c61">Active</characteristic>
+            <characteristic name="Subject" typeId="4ac8-2bb1-0c84-f088">Personal</characteristic>
+            <characteristic name="Limitation" typeId="6fc9-5d13-2687-b2a5"/>
+            <characteristic name="Description" typeId="f804-b969-00da-2123">This model gains Brutal (2) until the current action is resolved.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="e0b4-2153-403d-f5cd" name="Brutal" hidden="false" targetId="5d95-975e-a72c-25f3" type="rule"/>
+      </infoLinks>
+    </infoGroup>
+  </sharedInfoGroups>
+  <catalogueLinks>
+    <catalogueLink id="66fe-29c4-5307-bad4" name="Library-Traits" targetId="8335-cda4-b21f-cef1" type="catalogue" importRootEntries="true"/>
+    <catalogueLink id="4d67-cd01-2f57-711f" name="Library-SpecialAbilities" targetId="2ca6-d249-0ab5-53c7" type="catalogue" importRootEntries="true"/>
+  </catalogueLinks>
 </catalogue>

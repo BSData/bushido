@@ -180,7 +180,7 @@
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d5fb-75e3-ad08-8a9a" type="max"/>
       </constraints>
       <profiles>
-        <profile id="0c3f-633c-33d9-bd8c" name="Akimoto" hidden="false" typeId="6ea2-0f74-4852-4a98" typeName="Profile">
+        <profile id="0c3f-633c-33d9-bd8c" name="Akimoto" hidden="false" typeId="6ea2-0f74-4852-4a98" typeName="Character Profile">
           <characteristics>
             <characteristic name="Melee Pool" typeId="8409-8d55-ce45-a33b">2</characteristic>
             <characteristic name="Melee Boost" typeId="6a36-e826-18f3-0b25">3</characteristic>
@@ -191,19 +191,50 @@
             <characteristic name="Ki" typeId="8b76-2b4b-066e-a0c5">1</characteristic>
             <characteristic name="Ki Boost" typeId="c34e-f8ae-0984-37ac"/>
             <characteristic name="Ki Cap" typeId="2e88-c65e-4e45-d4c4">6</characteristic>
-            <characteristic name="Wounds" typeId="a1dc-c2c1-e2d2-ca98">5</characteristic>
+            <characteristic name="Wounds" typeId="a1dc-c2c1-e2d2-ca98">OOOOO</characteristic>
             <characteristic name="Base Size" typeId="6af2-e777-20ce-e060">S 30mm</characteristic>
             <characteristic name="Traits" typeId="e742-1b02-09cf-fd97">Blood of Orochi (2), Immune [Poison], Impetuous (1)</characteristic>
           </characteristics>
         </profile>
+        <profile id="5987-295d-3821-8692" name="Akimoto" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+          <characteristics>
+            <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">When this model makes a successful Ranged Attack, instead of making a Damage Roll, the Target gains a number of Poison (1) Markers equal to the Success Level of the Ranged Attack.</characteristic>
+          </characteristics>
+        </profile>
       </profiles>
-      <rules>
-        <rule id="ed61-9179-61a6-2748" name="Akimoto: Unique Effects" hidden="false">
-          <description>When this model makes a successful Ranged Attack, instead of making a Damage Roll, the Target gains a number of Poison (1) Markers equal to the Success Level of the Ranged Attack.</description>
-        </rule>
-      </rules>
+      <infoGroups>
+        <infoGroup id="ad40-5f97-7a6b-b595" name="Ranged Weapon" hidden="false">
+          <profiles>
+            <profile id="c94b-6375-04b4-1603" name="Poison Spit" hidden="false" typeId="7e20-258e-bf92-18f9" typeName="Ranged Weapon">
+              <characteristics>
+                <characteristic name="Ranged Weapon Strength" typeId="15aa-b6bd-6923-271f">Sp</characteristic>
+                <characteristic name="Range Bands" typeId="be6a-50c6-d691-e2e9">3/6/9</characteristic>
+                <characteristic name="Traits" typeId="3410-4428-ef91-eb61">Lightweight</characteristic>
+                <characteristic name="Specials" typeId="cdaf-b6ac-89d4-39ef"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="11b8-3b1e-4dd7-a073" name="Lightweight" hidden="false" targetId="c75c-7124-2b1f-a4d9" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="2720-e243-c26c-663e" name="Melee Weapon" hidden="false">
+          <profiles>
+            <profile id="2d7f-5e8e-1803-3e63" name="Bite" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">-1</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Poison (1/1)</characteristic>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="0e3f-4768-3b02-f861" name="Poison " hidden="false" targetId="7290-85f4-42cf-0b75" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+      </infoGroups>
       <infoLinks>
-        <infoLink id="e60d-ee1b-8c43-5fee" name="Orochi&apos;s Visage" hidden="false" targetId="6b51-8609-ade7-4fc7" type="rule"/>
+        <infoLink id="e60d-ee1b-8c43-5fee" name="Orochi&apos;s Visage" hidden="false" targetId="7ad0-c368-fe91-72f3" type="infoGroup"/>
         <infoLink id="6e5d-fce6-87ad-7a9e" name="Blood of Orochi" hidden="false" targetId="7a5a-2e8e-4a81-c48f" type="rule"/>
         <infoLink id="42b9-ad4f-c243-2246" name="Immune" hidden="false" targetId="ea08-b25e-0ea8-af73" type="rule"/>
         <infoLink id="379c-12cc-6ae6-9d21" name="Impetuous" hidden="false" targetId="4b80-3180-0b04-fb11" type="rule"/>
@@ -215,51 +246,6 @@
         <categoryLink id="d246-318a-9a77-fbf5" name="Hebimimman" hidden="false" targetId="683a-eb26-1ee8-43d1" primary="false"/>
         <categoryLink id="fe04-fd60-aedf-0653" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
       </categoryLinks>
-      <selectionEntries>
-        <selectionEntry id="cece-7e46-6966-9bf4" name="Bite" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="270c-0da7-0153-9d4a" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="85e3-2384-cb81-3bae" type="min"/>
-          </constraints>
-          <profiles>
-            <profile id="62b9-1c4d-afef-54e2" name="Bite" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
-              <characteristics>
-                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">-1</characteristic>
-                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Poison (1/1)</characteristic>
-                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d"/>
-              </characteristics>
-            </profile>
-          </profiles>
-          <infoLinks>
-            <infoLink id="b97c-2d95-8917-b71d" name="Poison " hidden="false" targetId="7290-85f4-42cf-0b75" type="rule"/>
-          </infoLinks>
-          <costs>
-            <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="f705-b32f-bd97-0f2c" name="Poison Spit" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="047e-7a98-e03d-2cc5" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e851-ac72-af08-9a8c" type="min"/>
-          </constraints>
-          <profiles>
-            <profile id="7fe9-5157-0503-7444" name="Poison Spit" hidden="false" typeId="7e20-258e-bf92-18f9" typeName="Ranged Weapon">
-              <characteristics>
-                <characteristic name="Ranged Weapon Strength" typeId="15aa-b6bd-6923-271f">Sp</characteristic>
-                <characteristic name="Range Bands" typeId="be6a-50c6-d691-e2e9">3/6/9</characteristic>
-                <characteristic name="Traits" typeId="3410-4428-ef91-eb61">Lightweight</characteristic>
-                <characteristic name="Specials" typeId="cdaf-b6ac-89d4-39ef"/>
-              </characteristics>
-            </profile>
-          </profiles>
-          <infoLinks>
-            <infoLink id="3f16-a09a-9440-d7a2" name="Lightweight" hidden="false" targetId="c75c-7124-2b1f-a4d9" type="rule"/>
-          </infoLinks>
-          <costs>
-            <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
       <entryLinks>
         <entryLink id="7a1f-b4a0-3423-24a6" name="Enhancements" hidden="false" collective="false" import="true" targetId="c1b7-60f5-a313-5345" type="selectionEntryGroup"/>
       </entryLinks>
@@ -283,7 +269,7 @@
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1562-2a50-6177-8e8d" type="max"/>
       </constraints>
       <profiles>
-        <profile id="4b23-5adc-0d0b-81f5" name="Ito Itsunagi" hidden="true" typeId="6ea2-0f74-4852-4a98" typeName="Profile">
+        <profile id="4b23-5adc-0d0b-81f5" name="Ito Itsunagi" hidden="true" typeId="6ea2-0f74-4852-4a98" typeName="Character Profile">
           <characteristics>
             <characteristic name="Melee Pool" typeId="8409-8d55-ce45-a33b">4</characteristic>
             <characteristic name="Melee Boost" typeId="6a36-e826-18f3-0b25">2</characteristic>
@@ -294,104 +280,61 @@
             <characteristic name="Ki" typeId="8b76-2b4b-066e-a0c5">2</characteristic>
             <characteristic name="Ki Boost" typeId="c34e-f8ae-0984-37ac">3</characteristic>
             <characteristic name="Ki Cap" typeId="2e88-c65e-4e45-d4c4">8</characteristic>
-            <characteristic name="Wounds" typeId="a1dc-c2c1-e2d2-ca98">5</characteristic>
-            <characteristic name="Base Size" typeId="6af2-e777-20ce-e060">30</characteristic>
-            <characteristic name="Traits" typeId="e742-1b02-09cf-fd97"/>
+            <characteristic name="Wounds" typeId="a1dc-c2c1-e2d2-ca98">OOOOO</characteristic>
+            <characteristic name="Base Size" typeId="6af2-e777-20ce-e060">S 30mm</characteristic>
+            <characteristic name="Traits" typeId="e742-1b02-09cf-fd97">Dodge (1), Evasive, Fearless, Indomitable (1), Prowess [Melee](1), Ranged Defence (2), Resistance (1), Split Attack</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="e4c2-22ef-1bbd-7097" name="Ito Itsunagi" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+          <characteristics>
+            <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">This model begins the game with 2 Ki Tokens.</characteristic>
           </characteristics>
         </profile>
       </profiles>
       <infoGroups>
         <infoGroup id="890c-1fdc-0048-c10f" name="Traits" hidden="true">
           <infoLinks>
-            <infoLink id="de36-b6cb-6b9e-8d57" name="Dodge " hidden="false" targetId="14d5-d459-5d8a-c73e" type="rule">
-              <modifiers>
-                <modifier type="append" field="name" value="(1)"/>
-              </modifiers>
-            </infoLink>
+            <infoLink id="de36-b6cb-6b9e-8d57" name="Dodge " hidden="false" targetId="14d5-d459-5d8a-c73e" type="rule"/>
             <infoLink id="6632-f240-5ef8-32e9" name="Fearless" hidden="false" targetId="5d6f-1746-9080-aca5" type="rule"/>
-            <infoLink id="df51-a9c2-1425-4cbe" name="Indomitable " hidden="false" targetId="3beb-6f28-e7c4-a236" type="rule">
-              <modifiers>
-                <modifier type="append" field="name" value="(1)"/>
-              </modifiers>
-            </infoLink>
-            <infoLink id="3675-b5ea-c26c-7ec1" name="Ranged Defence " hidden="false" targetId="9b8d-9ca9-e25d-3988" type="rule">
-              <modifiers>
-                <modifier type="append" field="name" value="(2)"/>
-              </modifiers>
-            </infoLink>
-            <infoLink id="1790-08a9-b292-fe88" name="Prowess " hidden="false" targetId="75ef-327a-cd08-a248" type="rule">
-              <modifiers>
-                <modifier type="append" field="name" value="[Melee](1)"/>
-              </modifiers>
-            </infoLink>
-            <infoLink id="bab8-a8b8-a2c7-b5f9" name="Resistance " hidden="false" targetId="7e3f-9dc3-cacb-469f" type="rule">
-              <modifiers>
-                <modifier type="append" field="name" value="(1)"/>
-              </modifiers>
-            </infoLink>
+            <infoLink id="df51-a9c2-1425-4cbe" name="Indomitable " hidden="false" targetId="3beb-6f28-e7c4-a236" type="rule"/>
+            <infoLink id="3675-b5ea-c26c-7ec1" name="Ranged Defence " hidden="false" targetId="9b8d-9ca9-e25d-3988" type="rule"/>
+            <infoLink id="1790-08a9-b292-fe88" name="Prowess " hidden="false" targetId="75ef-327a-cd08-a248" type="rule"/>
+            <infoLink id="bab8-a8b8-a2c7-b5f9" name="Resistance " hidden="false" targetId="7e3f-9dc3-cacb-469f" type="rule"/>
             <infoLink id="8387-93d6-ec3f-c700" name="Split Attack" hidden="false" targetId="92d0-d4fe-e58e-7535" type="rule"/>
-            <infoLink id="998b-acbd-009c-918e" name="Evasive" hidden="false" targetId="4fbc-851f-63e8-19e8" type="rule"/>
+            <infoLink id="6d5f-c36c-d236-b55b" name="Evasive" hidden="false" targetId="b0f8-d197-536b-c8fc" type="rule"/>
           </infoLinks>
         </infoGroup>
-        <infoGroup id="6ff9-9c74-bee8-94d5" name="Feats" hidden="true">
+        <infoGroup id="a6bc-0819-fd20-40a4" name="Melee Weapon" hidden="false">
+          <profiles>
+            <profile id="a628-6859-70f3-a07e" name="Twin Katanas" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+1</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Pierce (1)</characteristic>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Combo Attack (0), Sidestep Attack (0), Counterstrike Defence (0), Sidestep Defence (0)</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
           <infoLinks>
-            <infoLink id="6f10-19a3-504e-a834" name="Umbrella Block" hidden="false" targetId="2058-cc5c-47d8-70e2" type="rule"/>
+            <infoLink id="396c-a673-8493-f495" name="Sidestep Defence " hidden="false" targetId="753c-6c3b-64d7-203c" type="rule"/>
+            <infoLink id="4ea2-c7d2-3780-756b" name="Sidestep Attack " hidden="false" targetId="070d-a69d-0b46-27dc" type="rule"/>
+            <infoLink id="9312-4efc-794c-db7f" name="Counterstrike Defence " hidden="false" targetId="136e-4c77-dc59-4c6e" type="rule"/>
+            <infoLink id="08b0-e5b4-756f-f45a" name="Combo Attack " hidden="false" targetId="78ab-6a94-be24-8f74" type="rule"/>
+            <infoLink id="368e-1db5-894b-eda7" name="Pierce " hidden="false" targetId="39e4-14d7-5533-6e67" type="rule"/>
           </infoLinks>
         </infoGroup>
       </infoGroups>
+      <infoLinks>
+        <infoLink id="ecda-8f59-5576-a587" name="Umbrella Block" hidden="false" targetId="0005-2a79-5638-daa2" type="infoGroup"/>
+        <infoLink id="3b56-ba63-79b0-8309" name="Cobra Strike" hidden="false" targetId="172c-d546-50a5-c020" type="infoGroup"/>
+        <infoLink id="e595-80f6-d2e1-a710" name="Do-Kote" hidden="false" targetId="7c80-7e85-fc45-381a" type="infoGroup"/>
+        <infoLink id="75b8-4829-e5d3-b263" name="Kurouma Koryu" hidden="false" targetId="3ba5-1837-b036-ca3d" type="infoGroup"/>
+      </infoLinks>
       <categoryLinks>
         <categoryLink id="455b-dac2-a697-9b4c" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
         <categoryLink id="e08c-5d01-cb35-53c6" name="Samurai" hidden="false" targetId="e12a-f782-3281-7444" primary="false"/>
         <categoryLink id="0d32-9267-a9cb-c932" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
         <categoryLink id="7993-eb25-6b3a-962f" name="Itsunagi" hidden="false" targetId="273a-b61b-c7f8-76fd" primary="false"/>
       </categoryLinks>
-      <selectionEntries>
-        <selectionEntry id="c5cd-9bd0-dde5-be6f" name="Twin Katanas" hidden="true" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="143b-dc85-cb2e-342f" type="max"/>
-            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0741-74bf-7bbf-268c" type="min"/>
-          </constraints>
-          <profiles>
-            <profile id="fd03-cffa-05e6-3b54" name="Twin Katanas" hidden="true" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
-              <characteristics>
-                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+1</characteristic>
-                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e"/>
-                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d"/>
-              </characteristics>
-            </profile>
-          </profiles>
-          <infoLinks>
-            <infoLink id="c321-1b46-6a04-f4eb" name="Sidestep Attack " hidden="false" targetId="070d-a69d-0b46-27dc" type="rule">
-              <modifiers>
-                <modifier type="append" field="name" value="(0)"/>
-              </modifiers>
-            </infoLink>
-            <infoLink id="6c27-e300-e888-55dc" name="Counterstrike Defence " hidden="false" targetId="136e-4c77-dc59-4c6e" type="rule">
-              <modifiers>
-                <modifier type="append" field="name" value="(0)"/>
-              </modifiers>
-            </infoLink>
-            <infoLink id="59bb-2113-9b57-3329" name="Sidestep Defence " hidden="false" targetId="753c-6c3b-64d7-203c" type="rule">
-              <modifiers>
-                <modifier type="append" field="name" value="(0)"/>
-              </modifiers>
-            </infoLink>
-            <infoLink id="61ed-829c-4e33-32b7" name="Pierce " hidden="false" targetId="39e4-14d7-5533-6e67" type="rule">
-              <modifiers>
-                <modifier type="append" field="name" value="(1)"/>
-              </modifiers>
-            </infoLink>
-            <infoLink id="42cf-1448-97b8-d353" name="Combo Attack " hidden="false" targetId="78ab-6a94-be24-8f74" type="rule">
-              <modifiers>
-                <modifier type="append" field="name" value="(0)"/>
-              </modifiers>
-            </infoLink>
-          </infoLinks>
-          <costs>
-            <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
       <entryLinks>
         <entryLink id="8266-d14c-428c-1e18" name="Enhancements" hidden="false" collective="false" import="true" targetId="c1b7-60f5-a313-5345" type="selectionEntryGroup"/>
       </entryLinks>
@@ -434,6 +377,67 @@
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="53b6-e8e4-59c9-c951" type="max"/>
       </constraints>
+      <profiles>
+        <profile id="69ec-b1d0-3a2b-b051" name="Ito Kaihime" hidden="true" typeId="6ea2-0f74-4852-4a98" typeName="Character Profile">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="8409-8d55-ce45-a33b">3</characteristic>
+            <characteristic name="Melee Boost" typeId="6a36-e826-18f3-0b25">3</characteristic>
+            <characteristic name="Ranged Pool" typeId="7a01-37c0-4741-672c">3</characteristic>
+            <characteristic name="Ranged Boost" typeId="ff66-ea54-d863-5c17">3</characteristic>
+            <characteristic name="Move" typeId="af89-242d-625f-9bff">5</characteristic>
+            <characteristic name="Move Boost" typeId="62a6-8125-f293-5c76">2</characteristic>
+            <characteristic name="Ki" typeId="8b76-2b4b-066e-a0c5">2</characteristic>
+            <characteristic name="Ki Boost" typeId="c34e-f8ae-0984-37ac"/>
+            <characteristic name="Ki Cap" typeId="2e88-c65e-4e45-d4c4">6</characteristic>
+            <characteristic name="Wounds" typeId="a1dc-c2c1-e2d2-ca98">OOOOO</characteristic>
+            <characteristic name="Base Size" typeId="6af2-e777-20ce-e060">S 30mm</characteristic>
+            <characteristic name="Traits" typeId="e742-1b02-09cf-fd97">Armour (1), Blood of Orochi (1), Jump Up, Prowess [Melee](1)</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="cc50-c4a6-f1f7-2299" name="Traits" hidden="true">
+          <infoLinks>
+            <infoLink id="2700-74ec-c2a7-1e7b" name="Armour" hidden="false" targetId="8615-1c63-2242-5746" type="rule"/>
+            <infoLink id="38d8-eacd-c998-be78" name="Blood of Orochi" hidden="false" targetId="7a5a-2e8e-4a81-c48f" type="rule"/>
+            <infoLink id="286a-1be6-dac5-fc79" name="Jump Up" hidden="false" targetId="1575-e12f-4ca3-c557" type="rule"/>
+            <infoLink id="eb7d-71af-f6cb-e9ab" name="Prowess " hidden="false" targetId="75ef-327a-cd08-a248" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="abbf-74ba-2603-cd5a" name="Melee Weapon" hidden="false">
+          <profiles>
+            <profile id="2a2e-64a0-a559-9302" name="Katana" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+0</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e"/>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Sidestep Defence (0)</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="06eb-d193-2ae3-7d6e" name="Sidestep Defence " hidden="false" targetId="753c-6c3b-64d7-203c" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="786f-0431-fbcf-aa5c" name="Ranged Weapon" hidden="false">
+          <profiles>
+            <profile id="7732-7881-6039-9302" name="Dai-Kyu" hidden="false" typeId="7e20-258e-bf92-18f9" typeName="Ranged Weapon">
+              <characteristics>
+                <characteristic name="Ranged Weapon Strength" typeId="15aa-b6bd-6923-271f">+0</characteristic>
+                <characteristic name="Range Bands" typeId="be6a-50c6-d691-e2e9">5/10/15</characteristic>
+                <characteristic name="Traits" typeId="3410-4428-ef91-eb61">Reload (1)</characteristic>
+                <characteristic name="Specials" typeId="cdaf-b6ac-89d4-39ef"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="de0a-d298-ccad-ee77" name="Reload" hidden="false" targetId="9736-df56-0b62-b1a8" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+      </infoGroups>
+      <infoLinks>
+        <infoLink id="8801-6790-99c5-b92f" name="Precision Strike" hidden="false" targetId="d324-83dc-936d-cb9b" type="infoGroup"/>
+        <infoLink id="f775-55d5-6289-35ef" name="Quick Reload" hidden="false" targetId="8ffa-126c-60ed-f63f" type="infoGroup"/>
+      </infoLinks>
       <categoryLinks>
         <categoryLink id="8b2a-eb03-edf7-1141" name="Profile Cards" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
         <categoryLink id="1760-3db8-d6e3-f69e" name="Blood of Orochi" hidden="false" targetId="a678-8869-7918-cb24" primary="false"/>
@@ -464,6 +468,73 @@
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7fee-60e2-19ed-3e11" type="max"/>
       </constraints>
+      <profiles>
+        <profile id="42ea-c8bd-ef18-c203" name="Ito Ayako" hidden="false" typeId="6ea2-0f74-4852-4a98" typeName="Character Profile">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="8409-8d55-ce45-a33b">2</characteristic>
+            <characteristic name="Melee Boost" typeId="6a36-e826-18f3-0b25">3</characteristic>
+            <characteristic name="Ranged Pool" typeId="7a01-37c0-4741-672c">2</characteristic>
+            <characteristic name="Ranged Boost" typeId="ff66-ea54-d863-5c17"/>
+            <characteristic name="Move" typeId="af89-242d-625f-9bff">5</characteristic>
+            <characteristic name="Move Boost" typeId="62a6-8125-f293-5c76">2</characteristic>
+            <characteristic name="Ki" typeId="8b76-2b4b-066e-a0c5">2</characteristic>
+            <characteristic name="Ki Boost" typeId="c34e-f8ae-0984-37ac">3</characteristic>
+            <characteristic name="Ki Cap" typeId="2e88-c65e-4e45-d4c4">8</characteristic>
+            <characteristic name="Wounds" typeId="a1dc-c2c1-e2d2-ca98">OOOOO</characteristic>
+            <characteristic name="Base Size" typeId="6af2-e777-20ce-e060">S 30mm</characteristic>
+            <characteristic name="Traits" typeId="e742-1b02-09cf-fd97">Blood of Orochi (1), Channel (6/6&quot;), Immune [Poison], Jump Up, Virtue (6&quot;)</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="e1a9-e3d8-2768-1ca3" name="Traits" hidden="false">
+          <infoLinks>
+            <infoLink id="9a71-031c-a089-a35b" name="Blood of Orochi" hidden="false" targetId="7a5a-2e8e-4a81-c48f" type="rule"/>
+            <infoLink id="90b3-9cbd-e82e-ad96" name="Channel" hidden="false" targetId="69af-3098-e21e-7734" type="rule"/>
+            <infoLink id="f358-78e4-10d2-39c2" name="Immune" hidden="false" targetId="ea08-b25e-0ea8-af73" type="rule"/>
+            <infoLink id="2e96-35d1-5880-cdba" name="Jump Up" hidden="false" targetId="1575-e12f-4ca3-c557" type="rule"/>
+            <infoLink id="6f95-66b5-f2f4-8527" name="Virtue" hidden="false" targetId="57d7-cc96-ce93-9258" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="5c8d-1859-ec40-3360" name="Virtue" hidden="false">
+          <profiles>
+            <profile id="8e42-a07b-b895-2113" name="Virtue" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">While this model is in play, when a Friendly model spends a Virtue Token you may choose the following effects until the End Phase:
+• This model gains Lightning Reflexes
+• This model gains Assassin
+• This model gains Sixth Sense
+• This model gains Jump Up</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="0292-c2c5-6518-c3d7" name="Assassin" hidden="false" targetId="ef59-928b-2550-f0a3" type="rule"/>
+            <infoLink id="ae12-e466-b7de-85f0" name="Lightning Reflexes" hidden="false" targetId="efd4-dc31-6523-9c79" type="rule"/>
+            <infoLink id="d3ef-889c-7b87-4b1f" name="Sixth Sense" hidden="false" targetId="ec49-3908-f1d1-8de2" type="rule"/>
+            <infoLink id="ca89-a640-0e52-f9c0" name="Jump Up" hidden="false" targetId="1575-e12f-4ca3-c557" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="b43e-93f3-b26a-562b" name="Melee Weapon" hidden="false">
+          <profiles>
+            <profile id="75ae-90de-bc95-d706" name="Tanto" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">-1</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e"/>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Sidestep Defence (0)</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="3521-d631-d780-3e56" name="Sidestep Defence " hidden="false" targetId="753c-6c3b-64d7-203c" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+      </infoGroups>
+      <infoLinks>
+        <infoLink id="c90c-a4f4-d988-bb93" name="Hypnotic Gaze" hidden="false" targetId="82a3-6db1-792a-1f38" type="infoGroup"/>
+        <infoLink id="8d39-fbf4-9589-9272" name="Psychic Drain" hidden="false" targetId="00bc-a067-636c-4757" type="infoGroup"/>
+        <infoLink id="c47f-7e56-6675-baaf" name="Death Sentence" hidden="false" targetId="3bd6-b4a8-04a6-cba8" type="infoGroup"/>
+      </infoLinks>
       <categoryLinks>
         <categoryLink id="6b09-c2b3-ceca-c653" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
         <categoryLink id="b9a2-c49d-f8e8-da96" name="Blood of Orochi" hidden="false" targetId="a678-8869-7918-cb24" primary="false"/>
@@ -483,7 +554,7 @@
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="72d3-f070-2fd4-debb" type="max"/>
       </constraints>
       <profiles>
-        <profile id="0c1a-856b-b5a3-c375" name="Chiyo" hidden="false" typeId="6ea2-0f74-4852-4a98" typeName="Profile">
+        <profile id="0c1a-856b-b5a3-c375" name="Chiyo" hidden="false" typeId="6ea2-0f74-4852-4a98" typeName="Character Profile">
           <characteristics>
             <characteristic name="Melee Pool" typeId="8409-8d55-ce45-a33b">3</characteristic>
             <characteristic name="Melee Boost" typeId="6a36-e826-18f3-0b25">3</characteristic>
@@ -494,33 +565,16 @@
             <characteristic name="Ki" typeId="8b76-2b4b-066e-a0c5">1</characteristic>
             <characteristic name="Ki Boost" typeId="c34e-f8ae-0984-37ac"/>
             <characteristic name="Ki Cap" typeId="2e88-c65e-4e45-d4c4">6</characteristic>
-            <characteristic name="Wounds" typeId="a1dc-c2c1-e2d2-ca98">5</characteristic>
+            <characteristic name="Wounds" typeId="a1dc-c2c1-e2d2-ca98">OOOOO</characteristic>
             <characteristic name="Base Size" typeId="6af2-e777-20ce-e060">S 30mm</characteristic>
             <characteristic name="Traits" typeId="e742-1b02-09cf-fd97">Bravery, Cloudwalk, Jump Up, Vengeance [Poisoned]</characteristic>
           </characteristics>
         </profile>
       </profiles>
-      <infoLinks>
-        <infoLink id="689c-afff-2801-0793" name="Bravery" hidden="false" targetId="f9b2-38d2-7cda-de6e" type="rule"/>
-        <infoLink id="e790-8f89-c050-5482" name="Cloudwalk" hidden="false" targetId="538c-1266-626b-fcc9" type="rule"/>
-        <infoLink id="4358-c4d3-fc69-6587" name="Jump Up" hidden="false" targetId="1575-e12f-4ca3-c557" type="rule"/>
-        <infoLink id="e3ab-1876-4bd5-9af5" name="Vengeance" hidden="false" targetId="6779-0aac-2f51-f67e" type="rule"/>
-        <infoLink id="14d3-e08a-d8c1-d9e2" name="Asp Strike" hidden="false" targetId="3fcc-7224-2b63-3226" type="rule"/>
-      </infoLinks>
-      <categoryLinks>
-        <categoryLink id="e572-2c1d-512d-72d2" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
-        <categoryLink id="3289-40e4-500f-7564" name="Acolyte" hidden="false" targetId="3134-f1cd-dcfc-649f" primary="false"/>
-        <categoryLink id="f973-5d35-151f-c939" name="Ashigaru" hidden="false" targetId="f434-17e6-174c-b4f6" primary="false"/>
-        <categoryLink id="5964-1df9-b56d-72a3" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
-      </categoryLinks>
-      <selectionEntries>
-        <selectionEntry id="6196-73d0-5d80-8e88" name="Katana" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="edf5-39cc-bf38-72fa" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="15c2-441c-6eba-380a" type="min"/>
-          </constraints>
+      <infoGroups>
+        <infoGroup id="563f-f212-9a82-8b14" name="Melee Weapon" hidden="false">
           <profiles>
-            <profile id="427c-3ff3-eb2a-5615" name="Katana" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+            <profile id="4a65-b6ed-ef70-e667" name="Katana" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
               <characteristics>
                 <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+0</characteristic>
                 <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Poison (1/1)</characteristic>
@@ -529,14 +583,24 @@
             </profile>
           </profiles>
           <infoLinks>
-            <infoLink id="2df5-40e2-a2d2-4194" name="Poison " hidden="false" targetId="7290-85f4-42cf-0b75" type="rule"/>
-            <infoLink id="9485-f53f-edbe-d287" name="Sidestep Defence " hidden="false" targetId="753c-6c3b-64d7-203c" type="rule"/>
+            <infoLink id="a778-e3d9-77d8-4b99" name="Poison " hidden="false" targetId="7290-85f4-42cf-0b75" type="rule"/>
+            <infoLink id="e386-ef10-e810-c10d" name="Sidestep Defence " hidden="false" targetId="753c-6c3b-64d7-203c" type="rule"/>
           </infoLinks>
-          <costs>
-            <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
+        </infoGroup>
+      </infoGroups>
+      <infoLinks>
+        <infoLink id="689c-afff-2801-0793" name="Bravery" hidden="false" targetId="f9b2-38d2-7cda-de6e" type="rule"/>
+        <infoLink id="e790-8f89-c050-5482" name="Cloudwalk" hidden="false" targetId="538c-1266-626b-fcc9" type="rule"/>
+        <infoLink id="4358-c4d3-fc69-6587" name="Jump Up" hidden="false" targetId="1575-e12f-4ca3-c557" type="rule"/>
+        <infoLink id="e3ab-1876-4bd5-9af5" name="Vengeance" hidden="false" targetId="6779-0aac-2f51-f67e" type="rule"/>
+        <infoLink id="14d3-e08a-d8c1-d9e2" name="Asp Strike" hidden="false" targetId="4d47-155e-0ec4-a7fe" type="infoGroup"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="e572-2c1d-512d-72d2" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
+        <categoryLink id="3289-40e4-500f-7564" name="Acolyte" hidden="false" targetId="3134-f1cd-dcfc-649f" primary="false"/>
+        <categoryLink id="f973-5d35-151f-c939" name="Ashigaru" hidden="false" targetId="f434-17e6-174c-b4f6" primary="false"/>
+        <categoryLink id="5964-1df9-b56d-72a3" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
+      </categoryLinks>
       <entryLinks>
         <entryLink id="3035-5c66-3f5c-e855" name="Enhancements" hidden="false" collective="false" import="true" targetId="c1b7-60f5-a313-5345" type="selectionEntryGroup"/>
       </entryLinks>
@@ -559,6 +623,50 @@
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="68df-1574-4081-63d9" type="max"/>
       </constraints>
+      <profiles>
+        <profile id="fbaa-643f-2495-f573" name="Haruki" hidden="false" typeId="6ea2-0f74-4852-4a98" typeName="Character Profile">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="8409-8d55-ce45-a33b">3</characteristic>
+            <characteristic name="Melee Boost" typeId="6a36-e826-18f3-0b25">3</characteristic>
+            <characteristic name="Ranged Pool" typeId="7a01-37c0-4741-672c">3</characteristic>
+            <characteristic name="Ranged Boost" typeId="ff66-ea54-d863-5c17"/>
+            <characteristic name="Move" typeId="af89-242d-625f-9bff">5</characteristic>
+            <characteristic name="Move Boost" typeId="62a6-8125-f293-5c76"/>
+            <characteristic name="Ki" typeId="8b76-2b4b-066e-a0c5">2</characteristic>
+            <characteristic name="Ki Boost" typeId="c34e-f8ae-0984-37ac"/>
+            <characteristic name="Ki Cap" typeId="2e88-c65e-4e45-d4c4">6</characteristic>
+            <characteristic name="Wounds" typeId="a1dc-c2c1-e2d2-ca98">OOOOO</characteristic>
+            <characteristic name="Base Size" typeId="6af2-e777-20ce-e060">S 30mm</characteristic>
+            <characteristic name="Traits" typeId="e742-1b02-09cf-fd97">Armou (1), Charging Bonus (Lightfooted), Parry (1)</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="c51d-835c-ece1-4cc2" name="Melee Weapon" hidden="false">
+          <profiles>
+            <profile id="1f09-4bf8-c201-6de8" name="Barbed Spear" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+0</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Bleed (1/1), Reach</characteristic>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Push Attack (1), Sidestep Defence (0)</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="104b-eb26-36b1-649e" name="Bleed" hidden="false" targetId="ac4a-e540-4fe3-126a" type="rule"/>
+            <infoLink id="81ce-df89-3398-951c" name="Push Attack" hidden="false" targetId="6c26-94ba-6b96-9e1b" type="rule"/>
+            <infoLink id="d21f-1e37-09c7-769c" name="Reach" hidden="false" targetId="e28e-d5dd-a262-1101" type="rule"/>
+            <infoLink id="fbd1-7183-36da-80c9" name="Sidestep Defence " hidden="false" targetId="753c-6c3b-64d7-203c" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+      </infoGroups>
+      <infoLinks>
+        <infoLink id="d6ff-f2d7-5365-0a38" name="Armour" hidden="false" targetId="8615-1c63-2242-5746" type="rule"/>
+        <infoLink id="10bc-2912-47cf-5447" name="Charging Bonus" hidden="false" targetId="d747-f7f2-ea6f-5ceb" type="rule"/>
+        <infoLink id="8b6c-77df-4e3e-31ef" name="Parry" hidden="false" targetId="c7c2-b36e-7952-c79b" type="rule"/>
+        <infoLink id="ddb2-493a-a038-e8c6" name="Military Training" hidden="false" targetId="308c-6600-0817-c51e" type="infoGroup"/>
+        <infoLink id="7f83-6e9b-8dab-8842" name="Precision Strike" hidden="false" targetId="d324-83dc-936d-cb9b" type="infoGroup"/>
+      </infoLinks>
       <categoryLinks>
         <categoryLink id="920f-11a9-3915-1974" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
         <categoryLink id="3ff6-9f75-6b5c-7416" name="Ashigaru" hidden="false" targetId="f434-17e6-174c-b4f6" primary="false"/>
@@ -587,6 +695,46 @@
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2f76-324f-8a47-9bed" type="max"/>
       </constraints>
+      <profiles>
+        <profile id="4dbe-25f3-6b28-2ea7" name="Hitoshi" hidden="false" typeId="6ea2-0f74-4852-4a98" typeName="Character Profile">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="8409-8d55-ce45-a33b">3</characteristic>
+            <characteristic name="Melee Boost" typeId="6a36-e826-18f3-0b25">3</characteristic>
+            <characteristic name="Ranged Pool" typeId="7a01-37c0-4741-672c">2</characteristic>
+            <characteristic name="Ranged Boost" typeId="ff66-ea54-d863-5c17"/>
+            <characteristic name="Move" typeId="af89-242d-625f-9bff">5</characteristic>
+            <characteristic name="Move Boost" typeId="62a6-8125-f293-5c76"/>
+            <characteristic name="Ki" typeId="8b76-2b4b-066e-a0c5">1</characteristic>
+            <characteristic name="Ki Boost" typeId="c34e-f8ae-0984-37ac"/>
+            <characteristic name="Ki Cap" typeId="2e88-c65e-4e45-d4c4">6</characteristic>
+            <characteristic name="Wounds" typeId="a1dc-c2c1-e2d2-ca98">OOOOO</characteristic>
+            <characteristic name="Base Size" typeId="6af2-e777-20ce-e060">S 30mm</characteristic>
+            <characteristic name="Traits" typeId="e742-1b02-09cf-fd97">Armour (1)</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="1f3c-a2ab-493b-023a" name="Melee Weapon" hidden="false">
+          <profiles>
+            <profile id="299b-c802-fa24-43bc" name="Sasumata" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+0</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Reach</characteristic>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Grapple Attack (1), Sidestep Defence (0)</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="b937-634c-dbc5-2109" name="Grapple Attack" hidden="false" targetId="1b9a-c71d-0a30-8d0d" type="rule"/>
+            <infoLink id="96c1-d4a1-c0ea-ea55" name="Reach" hidden="false" targetId="e28e-d5dd-a262-1101" type="rule"/>
+            <infoLink id="1700-e563-1f1b-a593" name="Sidestep Defence " hidden="false" targetId="753c-6c3b-64d7-203c" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+      </infoGroups>
+      <infoLinks>
+        <infoLink id="4625-f62a-cfcb-1c3b" name="Armour" hidden="false" targetId="8615-1c63-2242-5746" type="rule"/>
+        <infoLink id="05a4-1818-0fd0-203e" name="Sweep" hidden="false" targetId="acb4-d601-61d6-539f" type="infoGroup"/>
+      </infoLinks>
       <categoryLinks>
         <categoryLink id="ef87-5d8d-0a1f-bf6a" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
         <categoryLink id="c5fe-7145-f321-9b82" name="Ashigaru" hidden="false" targetId="f434-17e6-174c-b4f6" primary="false"/>
@@ -614,6 +762,56 @@
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="195e-f520-2096-04ce" type="max"/>
       </constraints>
+      <profiles>
+        <profile id="7744-275d-003c-485f" name="Ito Kenzo" hidden="true" typeId="6ea2-0f74-4852-4a98" typeName="Character Profile">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="8409-8d55-ce45-a33b">4</characteristic>
+            <characteristic name="Melee Boost" typeId="6a36-e826-18f3-0b25">3</characteristic>
+            <characteristic name="Ranged Pool" typeId="7a01-37c0-4741-672c">2</characteristic>
+            <characteristic name="Ranged Boost" typeId="ff66-ea54-d863-5c17"/>
+            <characteristic name="Move" typeId="af89-242d-625f-9bff">5</characteristic>
+            <characteristic name="Move Boost" typeId="62a6-8125-f293-5c76">2</characteristic>
+            <characteristic name="Ki" typeId="8b76-2b4b-066e-a0c5">2</characteristic>
+            <characteristic name="Ki Boost" typeId="c34e-f8ae-0984-37ac">3</characteristic>
+            <characteristic name="Ki Cap" typeId="2e88-c65e-4e45-d4c4">6</characteristic>
+            <characteristic name="Wounds" typeId="a1dc-c2c1-e2d2-ca98">OOOOOO</characteristic>
+            <characteristic name="Base Size" typeId="6af2-e777-20ce-e060">M 40mm</characteristic>
+            <characteristic name="Traits" typeId="e742-1b02-09cf-fd97">Armour (2), Blood of Orochi (1), Jump Up, Prowess [Melee](1)</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="52ec-615a-23c7-bd8c" name="Traits" hidden="true">
+          <infoLinks>
+            <infoLink id="58bd-c3bd-5056-fc0a" name="Armour" hidden="false" targetId="8615-1c63-2242-5746" type="rule"/>
+            <infoLink id="1e6f-ebbb-dfdd-313d" name="Jump Up" hidden="false" targetId="1575-e12f-4ca3-c557" type="rule"/>
+            <infoLink id="5adf-e01c-be20-f7ef" name="Indomitable " hidden="false" targetId="3beb-6f28-e7c4-a236" type="rule"/>
+            <infoLink id="65b7-434f-a0c1-00b2" name="Prowess " hidden="false" targetId="75ef-327a-cd08-a248" type="rule"/>
+            <infoLink id="d791-c927-7d8b-2a21" name="Blood of Orochi" hidden="false" targetId="7a5a-2e8e-4a81-c48f" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="1933-4665-7582-f5f3" name="Melee Weapon" hidden="false">
+          <profiles>
+            <profile id="6dda-e642-22ac-5729" name="Naginata" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+1</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Reach</characteristic>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Powerful Attack (1), Sidestep Defence (0)</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="5fbe-66ed-8342-e971" name="Sidestep Defence " hidden="false" targetId="753c-6c3b-64d7-203c" type="rule"/>
+            <infoLink id="4470-c689-d6bd-bf8c" name="Reach" hidden="false" targetId="e28e-d5dd-a262-1101" type="rule"/>
+            <infoLink id="fad6-3f98-ea5b-8fef" name="Powerful Attack" hidden="false" targetId="d56a-058d-95d9-5b60" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+      </infoGroups>
+      <infoLinks>
+        <infoLink id="4147-813f-2525-4ea0" name="Cobra Strike" hidden="false" targetId="172c-d546-50a5-c020" type="infoGroup"/>
+        <infoLink id="ef8a-df5b-fb88-64e1" name="Do-Kote" hidden="false" targetId="7c80-7e85-fc45-381a" type="infoGroup"/>
+        <infoLink id="9dde-c494-8c72-4978" name="Grapple" hidden="false" targetId="1318-27dd-bda2-861b" type="infoGroup"/>
+      </infoLinks>
       <categoryLinks>
         <categoryLink id="2fad-b961-a378-d543" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
         <categoryLink id="053a-16de-d2b4-9bb8" name="Blood of Orochi" hidden="false" targetId="a678-8869-7918-cb24" primary="false"/>
@@ -644,6 +842,51 @@
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8a45-acd5-3e9f-6deb" type="max"/>
       </constraints>
+      <profiles>
+        <profile id="03fc-7574-44a3-26dd" name="Ito Masunagi" hidden="true" typeId="6ea2-0f74-4852-4a98" typeName="Character Profile">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="8409-8d55-ce45-a33b">4</characteristic>
+            <characteristic name="Melee Boost" typeId="6a36-e826-18f3-0b25">3</characteristic>
+            <characteristic name="Ranged Pool" typeId="7a01-37c0-4741-672c">4</characteristic>
+            <characteristic name="Ranged Boost" typeId="ff66-ea54-d863-5c17"/>
+            <characteristic name="Move" typeId="af89-242d-625f-9bff">5</characteristic>
+            <characteristic name="Move Boost" typeId="62a6-8125-f293-5c76"/>
+            <characteristic name="Ki" typeId="8b76-2b4b-066e-a0c5">2</characteristic>
+            <characteristic name="Ki Boost" typeId="c34e-f8ae-0984-37ac"/>
+            <characteristic name="Ki Cap" typeId="2e88-c65e-4e45-d4c4">6</characteristic>
+            <characteristic name="Wounds" typeId="a1dc-c2c1-e2d2-ca98">OOOOO</characteristic>
+            <characteristic name="Base Size" typeId="6af2-e777-20ce-e060">S 30mm</characteristic>
+            <characteristic name="Traits" typeId="e742-1b02-09cf-fd97">Armour (2), Prowess [Melee](1)</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="1ca0-3416-4122-ce2b" name="Traits" hidden="true">
+          <infoLinks>
+            <infoLink id="5ce9-6551-d36c-026a" name="Armour" hidden="false" targetId="8615-1c63-2242-5746" type="rule"/>
+            <infoLink id="d086-53d7-154d-b6e2" name="Prowess " hidden="false" targetId="75ef-327a-cd08-a248" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="fc13-b89a-bf57-c905" name="Melee Weapon" hidden="false">
+          <profiles>
+            <profile id="8752-7b31-0336-4221" name="Nodachi" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+2</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e"/>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Powerful Attack (1), Sidestep Defence (0)</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="814f-35c1-42af-08f4" name="Sidestep Defence " hidden="false" targetId="753c-6c3b-64d7-203c" type="rule"/>
+            <infoLink id="47e9-eea9-fdaa-5f07" name="Powerful Attack" hidden="false" targetId="d56a-058d-95d9-5b60" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+      </infoGroups>
+      <infoLinks>
+        <infoLink id="0e92-133c-659c-ae2e" name="Cobra Strike" hidden="false" targetId="172c-d546-50a5-c020" type="infoGroup"/>
+        <infoLink id="6bf9-99ec-2680-6df4" name="Cleave" hidden="false" targetId="7641-b66f-5fc4-0add" type="infoGroup"/>
+      </infoLinks>
       <categoryLinks>
         <categoryLink id="084b-d81a-4868-d3cf" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
         <categoryLink id="99de-4ea7-61a8-5aa3" name="Armoured" hidden="false" targetId="f322-702a-ff62-b37e" primary="false"/>
@@ -701,24 +944,6 @@
       <constraints>
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fcfa-9423-f178-20b2" type="max"/>
       </constraints>
-      <profiles>
-        <profile id="0af0-63ee-5f8e-8085" name="Child of Orochi" hidden="false" typeId="6ea2-0f74-4852-4a98" typeName="Profile">
-          <characteristics>
-            <characteristic name="Melee Pool" typeId="8409-8d55-ce45-a33b">2</characteristic>
-            <characteristic name="Melee Boost" typeId="6a36-e826-18f3-0b25"/>
-            <characteristic name="Ranged Pool" typeId="7a01-37c0-4741-672c">0</characteristic>
-            <characteristic name="Ranged Boost" typeId="ff66-ea54-d863-5c17"/>
-            <characteristic name="Move" typeId="af89-242d-625f-9bff">5</characteristic>
-            <characteristic name="Move Boost" typeId="62a6-8125-f293-5c76"/>
-            <characteristic name="Ki" typeId="8b76-2b4b-066e-a0c5">1</characteristic>
-            <characteristic name="Ki Boost" typeId="c34e-f8ae-0984-37ac"/>
-            <characteristic name="Ki Cap" typeId="2e88-c65e-4e45-d4c4">6</characteristic>
-            <characteristic name="Wounds" typeId="a1dc-c2c1-e2d2-ca98">5</characteristic>
-            <characteristic name="Base Size" typeId="6af2-e777-20ce-e060">S 30mm</characteristic>
-            <characteristic name="Traits" typeId="e742-1b02-09cf-fd97">Channel (4/4&quot;), Immune [Poison], Sacrifice (2&quot;/ Shisai)</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
       <rules>
         <rule id="986d-ffda-88d8-f166" name="Child of Orochi: Unique Effects" hidden="false">
           <description>This model&apos;s Melee Pool cannot be reduced by States.
@@ -727,25 +952,17 @@ While this model is in play, when a Friendly model spends a Virtue Token you may
 This model&apos;s weapons gains Poison (1/1)</description>
         </rule>
       </rules>
-      <infoLinks>
-        <infoLink id="e241-deaa-efaa-36f3" name="Channel" hidden="false" targetId="69af-3098-e21e-7734" type="rule"/>
-        <infoLink id="b261-54fd-b343-7916" name="Spiritual Conduit" hidden="false" targetId="3c42-43fa-8e4c-4dfa" type="rule"/>
-        <infoLink id="81c7-186d-5a03-2420" name="Sacrifice" hidden="false" targetId="28a8-7487-2fb6-e942" type="rule"/>
-        <infoLink id="2d01-2548-8834-894d" name="Immune" hidden="false" targetId="ea08-b25e-0ea8-af73" type="rule"/>
-      </infoLinks>
-      <categoryLinks>
-        <categoryLink id="30fd-1ccc-c1c9-0d9c" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
-        <categoryLink id="8094-01b2-6f7e-0d35" name="Acolyte" hidden="false" targetId="3134-f1cd-dcfc-649f" primary="false"/>
-        <categoryLink id="0d30-714d-f5cf-9741" name="Non-Unique" hidden="false" targetId="d181-219d-3add-d47b" primary="false"/>
-      </categoryLinks>
-      <selectionEntries>
-        <selectionEntry id="5578-cd55-0115-3bd1" name="Snake" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="24dc-5392-5caf-987c" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bd68-5742-fd03-3cce" type="min"/>
-          </constraints>
+      <infoGroups>
+        <infoGroup id="3ab1-a5bc-4c40-9298" name="Melee Weapon" hidden="false">
           <profiles>
-            <profile id="1459-a516-41c4-1c8e" name="Snake" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+            <profile id="43fa-0a46-11be-589a" name="Bite" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">-1</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Poison (1/1)</characteristic>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d"/>
+              </characteristics>
+            </profile>
+            <profile id="6972-66d9-c754-b838" name="Snake" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
               <characteristics>
                 <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">-2</characteristic>
                 <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Poison (1/1), Reach</characteristic>
@@ -754,19 +971,48 @@ This model&apos;s weapons gains Poison (1/1)</description>
             </profile>
           </profiles>
           <infoLinks>
-            <infoLink id="b252-0ff2-6d38-82b2" name="Poison " hidden="false" targetId="7290-85f4-42cf-0b75" type="rule"/>
-            <infoLink id="72a1-6a83-32d6-f3a6" name="Reach" hidden="false" targetId="e28e-d5dd-a262-1101" type="rule"/>
+            <infoLink id="230c-c484-7886-49fb" name="Poison " hidden="false" targetId="7290-85f4-42cf-0b75" type="rule"/>
+            <infoLink id="f1e5-2a6f-b2e0-0a76" name="Reach" hidden="false" targetId="e28e-d5dd-a262-1101" type="rule"/>
           </infoLinks>
-          <costs>
-            <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
+        </infoGroup>
+      </infoGroups>
+      <infoLinks>
+        <infoLink id="e241-deaa-efaa-36f3" name="Channel" hidden="false" targetId="69af-3098-e21e-7734" type="rule"/>
+        <infoLink id="81c7-186d-5a03-2420" name="Sacrifice" hidden="false" targetId="28a8-7487-2fb6-e942" type="rule"/>
+        <infoLink id="2d01-2548-8834-894d" name="Immune" hidden="false" targetId="ea08-b25e-0ea8-af73" type="rule"/>
+        <infoLink id="183a-1584-a3ac-54e0" name="Spiritual Conduit" hidden="false" targetId="9282-64e4-0bb9-a37d" type="infoGroup"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="30fd-1ccc-c1c9-0d9c" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
+        <categoryLink id="8094-01b2-6f7e-0d35" name="Acolyte" hidden="false" targetId="3134-f1cd-dcfc-649f" primary="false"/>
+        <categoryLink id="0d30-714d-f5cf-9741" name="Non-Unique" hidden="false" targetId="d181-219d-3add-d47b" primary="false"/>
+      </categoryLinks>
       <entryLinks>
         <entryLink id="abde-addd-4d46-3c0c" name="Child of Orochi" hidden="false" collective="false" import="true" targetId="d9f3-b2da-7f3b-d36c" type="selectionEntry">
           <modifiers>
             <modifier type="append" field="name" value="B"/>
           </modifiers>
+          <profiles>
+            <profile id="5511-f540-f3bf-379e" name="Child of Orochi" hidden="false" typeId="6ea2-0f74-4852-4a98" typeName="Character Profile">
+              <modifiers>
+                <modifier type="append" field="name" value="B"/>
+              </modifiers>
+              <characteristics>
+                <characteristic name="Melee Pool" typeId="8409-8d55-ce45-a33b">2</characteristic>
+                <characteristic name="Melee Boost" typeId="6a36-e826-18f3-0b25"/>
+                <characteristic name="Ranged Pool" typeId="7a01-37c0-4741-672c">0</characteristic>
+                <characteristic name="Ranged Boost" typeId="ff66-ea54-d863-5c17"/>
+                <characteristic name="Move" typeId="af89-242d-625f-9bff">5</characteristic>
+                <characteristic name="Move Boost" typeId="62a6-8125-f293-5c76"/>
+                <characteristic name="Ki" typeId="8b76-2b4b-066e-a0c5">1</characteristic>
+                <characteristic name="Ki Boost" typeId="c34e-f8ae-0984-37ac"/>
+                <characteristic name="Ki Cap" typeId="2e88-c65e-4e45-d4c4">6</characteristic>
+                <characteristic name="Wounds" typeId="a1dc-c2c1-e2d2-ca98">OOOOO</characteristic>
+                <characteristic name="Base Size" typeId="6af2-e777-20ce-e060">S 30mm</characteristic>
+                <characteristic name="Traits" typeId="e742-1b02-09cf-fd97">Channel (4/4&quot;), Immune [Poison], Sacrifice (2&quot;/ Shisai)</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
         </entryLink>
         <entryLink id="f967-4069-5fc1-8d03" name="Child of Orochi" hidden="false" collective="false" import="true" targetId="d9f3-b2da-7f3b-d36c" type="selectionEntry">
           <modifiers>
@@ -779,6 +1025,27 @@ This model&apos;s weapons gains Poison (1/1)</description>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ee9f-e388-487e-2dff" type="min"/>
           </constraints>
+          <profiles>
+            <profile id="7941-6ab7-0232-68a3" name="Child of Orochi" hidden="false" typeId="6ea2-0f74-4852-4a98" typeName="Character Profile">
+              <modifiers>
+                <modifier type="append" field="name" value="A"/>
+              </modifiers>
+              <characteristics>
+                <characteristic name="Melee Pool" typeId="8409-8d55-ce45-a33b">2</characteristic>
+                <characteristic name="Melee Boost" typeId="6a36-e826-18f3-0b25"/>
+                <characteristic name="Ranged Pool" typeId="7a01-37c0-4741-672c">0</characteristic>
+                <characteristic name="Ranged Boost" typeId="ff66-ea54-d863-5c17"/>
+                <characteristic name="Move" typeId="af89-242d-625f-9bff">5</characteristic>
+                <characteristic name="Move Boost" typeId="62a6-8125-f293-5c76"/>
+                <characteristic name="Ki" typeId="8b76-2b4b-066e-a0c5">1</characteristic>
+                <characteristic name="Ki Boost" typeId="c34e-f8ae-0984-37ac"/>
+                <characteristic name="Ki Cap" typeId="2e88-c65e-4e45-d4c4">6</characteristic>
+                <characteristic name="Wounds" typeId="a1dc-c2c1-e2d2-ca98">OOOOO</characteristic>
+                <characteristic name="Base Size" typeId="6af2-e777-20ce-e060">S 30mm</characteristic>
+                <characteristic name="Traits" typeId="e742-1b02-09cf-fd97">Channel (4/4&quot;), Immune [Poison], Sacrifice (2&quot;/ Shisai)</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
         </entryLink>
       </entryLinks>
       <costs>
@@ -1328,6 +1595,51 @@ This model&apos;s weapons gains Poison (1/1)</description>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a952-a9fe-b584-85a7" type="max"/>
       </constraints>
+      <profiles>
+        <profile id="c656-634e-1940-7720" name="Isas" hidden="false" typeId="6ea2-0f74-4852-4a98" typeName="Character Profile">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="8409-8d55-ce45-a33b">3</characteristic>
+            <characteristic name="Melee Boost" typeId="6a36-e826-18f3-0b25">3</characteristic>
+            <characteristic name="Ranged Pool" typeId="7a01-37c0-4741-672c">2</characteristic>
+            <characteristic name="Ranged Boost" typeId="ff66-ea54-d863-5c17"/>
+            <characteristic name="Move" typeId="af89-242d-625f-9bff">5</characteristic>
+            <characteristic name="Move Boost" typeId="62a6-8125-f293-5c76"/>
+            <characteristic name="Ki" typeId="8b76-2b4b-066e-a0c5">1</characteristic>
+            <characteristic name="Ki Boost" typeId="c34e-f8ae-0984-37ac"/>
+            <characteristic name="Ki Cap" typeId="2e88-c65e-4e45-d4c4">6</characteristic>
+            <characteristic name="Wounds" typeId="a1dc-c2c1-e2d2-ca98">OOOOO</characteristic>
+            <characteristic name="Base Size" typeId="6af2-e777-20ce-e060">S 30mm</characteristic>
+            <characteristic name="Traits" typeId="e742-1b02-09cf-fd97">Assassin, Blood of Orochi (1), Sixth Sense</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="d1d6-e5eb-d95d-9d14" name="Traits" hidden="false">
+          <infoLinks>
+            <infoLink id="f0e7-7f4a-25a7-fcb9" name="Assassin" hidden="false" targetId="ef59-928b-2550-f0a3" type="rule"/>
+            <infoLink id="0f72-7bb6-3770-68a0" name="Blood of Orochi" hidden="false" targetId="7a5a-2e8e-4a81-c48f" type="rule"/>
+            <infoLink id="12c1-946c-00bc-d52c" name="Sixth Sense" hidden="false" targetId="ec49-3908-f1d1-8de2" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="fccb-88d0-907e-d5f8" name="Melee Weapon" hidden="false">
+          <profiles>
+            <profile id="8e1a-3746-644c-a75f" name="Dagger" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+1</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Pierce (1)</characteristic>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Combo Attack (0)</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="1aa5-1da6-a2e5-06de" name="Pierce " hidden="false" targetId="39e4-14d7-5533-6e67" type="rule"/>
+            <infoLink id="4d41-32db-ab78-9d72" name="Combo Attack " hidden="false" targetId="78ab-6a94-be24-8f74" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+      </infoGroups>
+      <infoLinks>
+        <infoLink id="b8cb-ae00-fd92-8ce5" name="Lurker" hidden="false" targetId="3ace-c140-e71e-edb2" type="infoGroup"/>
+      </infoLinks>
       <categoryLinks>
         <categoryLink id="1bcc-6f5b-4635-1332" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
         <categoryLink id="1028-e518-84b3-5ef5" name="Hebimimman" hidden="false" targetId="683a-eb26-1ee8-43d1" primary="false"/>
@@ -1356,6 +1668,62 @@ This model&apos;s weapons gains Poison (1/1)</description>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a63a-6598-306f-4965" type="max"/>
       </constraints>
+      <profiles>
+        <profile id="7627-843b-20ac-8c86" name="Ishi" hidden="false" typeId="6ea2-0f74-4852-4a98" typeName="Character Profile">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="8409-8d55-ce45-a33b">3</characteristic>
+            <characteristic name="Melee Boost" typeId="6a36-e826-18f3-0b25"/>
+            <characteristic name="Ranged Pool" typeId="7a01-37c0-4741-672c">2</characteristic>
+            <characteristic name="Ranged Boost" typeId="ff66-ea54-d863-5c17">3</characteristic>
+            <characteristic name="Move" typeId="af89-242d-625f-9bff">5</characteristic>
+            <characteristic name="Move Boost" typeId="62a6-8125-f293-5c76"/>
+            <characteristic name="Ki" typeId="8b76-2b4b-066e-a0c5">1</characteristic>
+            <characteristic name="Ki Boost" typeId="c34e-f8ae-0984-37ac"/>
+            <characteristic name="Ki Cap" typeId="2e88-c65e-4e45-d4c4">6</characteristic>
+            <characteristic name="Wounds" typeId="a1dc-c2c1-e2d2-ca98">OOOOO</characteristic>
+            <characteristic name="Base Size" typeId="6af2-e777-20ce-e060">S 30mm</characteristic>
+            <characteristic name="Traits" typeId="e742-1b02-09cf-fd97">Lightfooted</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="a76c-b762-64bd-4af1" name="Ishi" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+          <characteristics>
+            <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">When this model declares a Walk Action, it may remove 1 Reload Marker.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="ed53-595a-7af5-78fe" name="Melee Weapon" hidden="false">
+          <profiles>
+            <profile id="94fa-0ec8-cfe3-5e37" name="Dagger" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+0</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e"/>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d"/>
+              </characteristics>
+            </profile>
+          </profiles>
+        </infoGroup>
+        <infoGroup id="d7c6-ddef-2b7f-e26a" name="Ranged Weapon" hidden="false">
+          <profiles>
+            <profile id="e7c5-26d4-71bf-9ea1" name="Bow" hidden="false" typeId="7e20-258e-bf92-18f9" typeName="Ranged Weapon">
+              <characteristics>
+                <characteristic name="Ranged Weapon Strength" typeId="15aa-b6bd-6923-271f">+1</characteristic>
+                <characteristic name="Range Bands" typeId="be6a-50c6-d691-e2e9">4/8/12</characteristic>
+                <characteristic name="Traits" typeId="3410-4428-ef91-eb61">Lightweight, Reload (1)</characteristic>
+                <characteristic name="Specials" typeId="cdaf-b6ac-89d4-39ef"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="ad9c-253b-6409-a1cd" name="Reload" hidden="false" targetId="9736-df56-0b62-b1a8" type="rule"/>
+            <infoLink id="9b86-dd77-f39e-7751" name="Lightweight" hidden="false" targetId="c75c-7124-2b1f-a4d9" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+      </infoGroups>
+      <infoLinks>
+        <infoLink id="7c2d-d9c4-a2dc-4857" name="Snap Shot" hidden="false" targetId="1b49-16aa-a2f7-fedb" type="infoGroup"/>
+        <infoLink id="ff8f-7074-9bcf-060a" name="Lightfooted" hidden="false" targetId="57d2-cd57-07f9-addf" type="rule"/>
+      </infoLinks>
       <categoryLinks>
         <categoryLink id="0002-a216-cf97-9373" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
         <categoryLink id="9674-8d71-5187-8e7a" name="Ashigaru" hidden="false" targetId="f434-17e6-174c-b4f6" primary="false"/>
@@ -1383,6 +1751,67 @@ This model&apos;s weapons gains Poison (1/1)</description>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2c76-3449-f9aa-68f0" type="max"/>
       </constraints>
+      <profiles>
+        <profile id="d2eb-cb57-db30-0d66" name="Ito Kinu" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+          <characteristics>
+            <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">This model&apos;s Melee Pool cannot be reduced by States.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="f22d-ed22-a5d5-42ce" name="Ito Kinu" hidden="false" typeId="6ea2-0f74-4852-4a98" typeName="Character Profile">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="8409-8d55-ce45-a33b">2</characteristic>
+            <characteristic name="Melee Boost" typeId="6a36-e826-18f3-0b25">3</characteristic>
+            <characteristic name="Ranged Pool" typeId="7a01-37c0-4741-672c">2</characteristic>
+            <characteristic name="Ranged Boost" typeId="ff66-ea54-d863-5c17">3</characteristic>
+            <characteristic name="Move" typeId="af89-242d-625f-9bff">5</characteristic>
+            <characteristic name="Move Boost" typeId="62a6-8125-f293-5c76"/>
+            <characteristic name="Ki" typeId="8b76-2b4b-066e-a0c5">2</characteristic>
+            <characteristic name="Ki Boost" typeId="c34e-f8ae-0984-37ac">3</characteristic>
+            <characteristic name="Ki Cap" typeId="2e88-c65e-4e45-d4c4">8</characteristic>
+            <characteristic name="Wounds" typeId="a1dc-c2c1-e2d2-ca98">OOOOO</characteristic>
+            <characteristic name="Base Size" typeId="6af2-e777-20ce-e060">S 30mm</characteristic>
+            <characteristic name="Traits" typeId="e742-1b02-09cf-fd97">Aware, Blood of Orochi (1), Immune [Poison]</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="6530-5d8a-4e3c-48ba" name="Melee Weapon" hidden="false">
+          <profiles>
+            <profile id="2ea2-5971-8ffd-d933" name="Snake" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">-1</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Poison (1/1)</characteristic>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="5055-4a49-a232-f471" name="Poison " hidden="false" targetId="7290-85f4-42cf-0b75" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="dda3-35bc-6bb0-0c16" name="Ranged Weapon" hidden="false">
+          <profiles>
+            <profile id="6d04-69fa-2f2f-ebbe" name="Sorcery" hidden="false" typeId="7e20-258e-bf92-18f9" typeName="Ranged Weapon">
+              <characteristics>
+                <characteristic name="Ranged Weapon Strength" typeId="15aa-b6bd-6923-271f">+1</characteristic>
+                <characteristic name="Range Bands" typeId="be6a-50c6-d691-e2e9">2/4/6</characteristic>
+                <characteristic name="Traits" typeId="3410-4428-ef91-eb61"/>
+                <characteristic name="Specials" typeId="cdaf-b6ac-89d4-39ef"/>
+              </characteristics>
+            </profile>
+          </profiles>
+        </infoGroup>
+        <infoGroup id="c091-17b0-961d-92d8" name="Traits" hidden="false">
+          <infoLinks>
+            <infoLink id="30f7-c8c3-fce8-5638" name="Blood of Orochi" hidden="false" targetId="7a5a-2e8e-4a81-c48f" type="rule"/>
+            <infoLink id="0a20-2bf0-907c-4bc5" name="Aware" hidden="false" targetId="ff4a-6b14-09dd-2343" type="rule"/>
+            <infoLink id="2f1f-6c84-a387-6181" name="Immune" hidden="false" targetId="ea08-b25e-0ea8-af73" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+      </infoGroups>
+      <infoLinks>
+        <infoLink id="fe67-fd8b-47fb-017f" name="Contagious Poison" hidden="false" targetId="21f6-c869-9e50-0910" type="infoGroup"/>
+      </infoLinks>
       <categoryLinks>
         <categoryLink id="329f-3195-7fbc-6a5d" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
         <categoryLink id="7405-851b-2321-d664" name="Blood of Orochi" hidden="false" targetId="a678-8869-7918-cb24" primary="false"/>
@@ -1788,16 +2217,98 @@ Attached model gains Move Ki Boost 2.</description>
       </entryLinks>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
-  <sharedRules>
-    <rule id="6b51-8609-ade7-4fc7" name="Orochi&apos;s Visage" hidden="false">
-      <description>Ki2 Instant Personal
-This model gains Fear (6) and Terror until the end of the current activation.</description>
-    </rule>
-    <rule id="3c42-43fa-8e4c-4dfa" name="Spiritual Conduit" hidden="false">
-      <description>Ki1 Active Aura 4&quot; NotBtB
-Friendly Ito Shisai models within the Aura can use this model as the point of origin for Targeted Ki Feats when this model is not in BtB with or within an Enemy model&apos;s ZoC.Use this model to draw LoS and Range for the feat.</description>
-    </rule>
-  </sharedRules>
+  <sharedProfiles>
+    <profile id="1b88-8277-1275-f2e6" name="Shisai" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+      <characteristics>
+        <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">This model gains Resistance (X) and Willpower (X). X is equal to the number of other friendly Shisai models within 3&quot;; this cannot be greater than 2.</characteristic>
+      </characteristics>
+    </profile>
+  </sharedProfiles>
+  <sharedInfoGroups>
+    <infoGroup id="7ad0-c368-fe91-72f3" name="Orochi&apos;s Visage" hidden="false">
+      <profiles>
+        <profile id="46b3-f8f2-5268-f878" name="Orochi&apos;s Visage" hidden="false" typeId="993a-e62a-7922-0ccb" typeName="Ki Feat">
+          <characteristics>
+            <characteristic name="Cost" typeId="a126-54d9-0a27-f4b6">2</characteristic>
+            <characteristic name="Timing" typeId="f8a8-8a3e-ef58-4c61">Instant</characteristic>
+            <characteristic name="Subject" typeId="4ac8-2bb1-0c84-f088">Personal</characteristic>
+            <characteristic name="Limitation" typeId="6fc9-5d13-2687-b2a5"/>
+            <characteristic name="Description" typeId="f804-b969-00da-2123">This model gains Fear (6) and Terror until the end of the current activation.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="46a3-7c0c-9a71-8c50" name="Fear" hidden="false" targetId="3586-4583-7f10-1f31" type="rule"/>
+        <infoLink id="f7c8-3c9e-3e6c-ba2f" name="Terror" hidden="false" targetId="ad7a-5dea-fee4-fb49" type="rule"/>
+      </infoLinks>
+    </infoGroup>
+    <infoGroup id="9282-64e4-0bb9-a37d" name="Spiritual Conduit" hidden="false">
+      <profiles>
+        <profile id="8782-fef9-a1bd-fae7" name="Spiritual Conduit" hidden="false" typeId="993a-e62a-7922-0ccb" typeName="Ki Feat">
+          <characteristics>
+            <characteristic name="Cost" typeId="a126-54d9-0a27-f4b6">1</characteristic>
+            <characteristic name="Timing" typeId="f8a8-8a3e-ef58-4c61">Active</characteristic>
+            <characteristic name="Subject" typeId="4ac8-2bb1-0c84-f088">Aura 4&quot;</characteristic>
+            <characteristic name="Limitation" typeId="6fc9-5d13-2687-b2a5">Not in BtB</characteristic>
+            <characteristic name="Description" typeId="f804-b969-00da-2123">Friendly Ito Shisai models within the Aura can use this model as the point of origin for Targeted Ki Feats when this model is not in BtB with or within an Enemy model&apos;s ZoC.Use this model to draw LoS and Range for the feat.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </infoGroup>
+    <infoGroup id="1b49-16aa-a2f7-fedb" name="Snap Shot" hidden="false">
+      <profiles>
+        <profile id="d1c5-951f-d438-607b" name="Snap Shot" hidden="false" typeId="993a-e62a-7922-0ccb" typeName="Ki Feat">
+          <characteristics>
+            <characteristic name="Cost" typeId="a126-54d9-0a27-f4b6">3</characteristic>
+            <characteristic name="Timing" typeId="f8a8-8a3e-ef58-4c61">Simple</characteristic>
+            <characteristic name="Subject" typeId="4ac8-2bb1-0c84-f088">Personal</characteristic>
+            <characteristic name="Limitation" typeId="6fc9-5d13-2687-b2a5">Not in BtB</characteristic>
+            <characteristic name="Description" typeId="f804-b969-00da-2123">This model immediately makes a Ranged Attack ignoring Reload markers on this model.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </infoGroup>
+    <infoGroup id="82a3-6db1-792a-1f38" name="Hypnotic Gaze" hidden="false">
+      <profiles>
+        <profile id="d403-8d5e-97cf-4a55" name="Hypnotic Gaze" hidden="false" typeId="993a-e62a-7922-0ccb" typeName="Ki Feat">
+          <characteristics>
+            <characteristic name="Cost" typeId="a126-54d9-0a27-f4b6">2</characteristic>
+            <characteristic name="Timing" typeId="f8a8-8a3e-ef58-4c61">Simple</characteristic>
+            <characteristic name="Subject" typeId="4ac8-2bb1-0c84-f088">Target 12&quot;, Opposed Ki Test</characteristic>
+            <characteristic name="Limitation" typeId="6fc9-5d13-2687-b2a5">Not in BtB, Once Per Turn</characteristic>
+            <characteristic name="Description" typeId="f804-b969-00da-2123">Target enemy model loses an Activation Counter and gains one Stunned Marker.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </infoGroup>
+    <infoGroup id="00bc-a067-636c-4757" name="Psychic Drain" hidden="false">
+      <profiles>
+        <profile id="c23b-ef7b-7550-80d5" name="Psychic Drain" hidden="false" typeId="993a-e62a-7922-0ccb" typeName="Ki Feat">
+          <characteristics>
+            <characteristic name="Cost" typeId="a126-54d9-0a27-f4b6">1</characteristic>
+            <characteristic name="Timing" typeId="f8a8-8a3e-ef58-4c61">Simple</characteristic>
+            <characteristic name="Subject" typeId="4ac8-2bb1-0c84-f088">Target 8&quot;, Opposed Ki Test</characteristic>
+            <characteristic name="Limitation" typeId="6fc9-5d13-2687-b2a5">Not in BtB, Once Per Turn</characteristic>
+            <characteristic name="Description" typeId="f804-b969-00da-2123">Transfer up to 3 Ki Tokens from the Target Enemy model&apos;s profile card to this card.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </infoGroup>
+    <infoGroup id="21f6-c869-9e50-0910" name="Contagious Poison" hidden="false">
+      <profiles>
+        <profile id="ac08-154e-47a1-155c" name="Contagious Poison" hidden="false" typeId="993a-e62a-7922-0ccb" typeName="Ki Feat">
+          <characteristics>
+            <characteristic name="Cost" typeId="a126-54d9-0a27-f4b6">4</characteristic>
+            <characteristic name="Timing" typeId="f8a8-8a3e-ef58-4c61">Complex</characteristic>
+            <characteristic name="Subject" typeId="4ac8-2bb1-0c84-f088">Target 6&quot;, Opposed Ki Test</characteristic>
+            <characteristic name="Limitation" typeId="6fc9-5d13-2687-b2a5">Not in BtB</characteristic>
+            <characteristic name="Description" typeId="f804-b969-00da-2123">Target model gains a Poison (2) Marker and a Stun Marker.
+Choose another Enemy model within 3&quot; of the Target and immediately repeat this Ki Feat on the new model, ignoring Range, LoS, and Camouflage.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </infoGroup>
+  </sharedInfoGroups>
   <catalogueLinks>
     <catalogueLink id="731a-c7b4-6731-44c7" name="Library_Ronin" targetId="b489-b304-948d-52d0" type="catalogue" importRootEntries="true"/>
   </catalogueLinks>
