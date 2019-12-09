@@ -49,6 +49,11 @@
         <characteristicType id="6de4-d067-c2aa-0dc2" name="Description"/>
       </characteristicTypes>
     </profileType>
+    <profileType id="d2bb-86b4-edf3-c4e5" name="Special Card">
+      <characteristicTypes>
+        <characteristicType id="b4b7-5338-e8e2-41fd" name="Description"/>
+      </characteristicTypes>
+    </profileType>
   </profileTypes>
   <categoryEntries>
     <categoryEntry id="d360-71aa-ca22-ba3c" name="Event Cards" hidden="false"/>
@@ -135,15 +140,4 @@
       </categoryLinks>
     </forceEntry>
   </forceEntries>
-  <sharedRules>
-    <rule id="787e-c15b-0741-8a53" name="Kurouma Koryu" hidden="false">
-      <description>If this model places all its Melee dice into Attack it gains Brutal (+1) until the end of the current Melee Exchange.</description>
-    </rule>
-    <rule id="05e0-3986-7fc6-30c8" name="Teachings of Yasushi" hidden="false">
-      <description>Attached model gains Tactician (+1).</description>
-    </rule>
-    <rule id="39ac-5340-cfe8-01fc" name="Dark Secrets" hidden="false">
-      <description>During the Starting Phase, choose an Enemy model within 3&quot; of any Friendly model. That model makes a Ki Challenge Test (6). If it fails, it gains 1 Control Marker.</description>
-    </rule>
-  </sharedRules>
 </gameSystem>
