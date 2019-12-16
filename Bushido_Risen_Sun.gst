@@ -25,6 +25,7 @@
         <characteristicType id="98e7-55ef-7ced-d4ba" name="Melee Weapon Strength"/>
         <characteristicType id="39e3-f945-7956-ad4e" name="Traits"/>
         <characteristicType id="85a9-0a2b-f966-0c8d" name="Specials"/>
+        <characteristicType id="2561-7ce8-3a17-1289" name="Unique Effects"/>
       </characteristicTypes>
     </profileType>
     <profileType id="7e20-258e-bf92-18f9" name="Ranged Weapon">
@@ -33,6 +34,7 @@
         <characteristicType id="be6a-50c6-d691-e2e9" name="Range Bands"/>
         <characteristicType id="3410-4428-ef91-eb61" name="Traits"/>
         <characteristicType id="cdaf-b6ac-89d4-39ef" name="Specials"/>
+        <characteristicType id="3bf8-6525-f003-4990" name="Unique Effects"/>
       </characteristicTypes>
     </profileType>
     <profileType id="993a-e62a-7922-0ccb" name="Ki Feat">
