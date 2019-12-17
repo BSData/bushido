@@ -16,7 +16,7 @@
         <characteristicType id="c34e-f8ae-0984-37ac" name="Ki Boost"/>
         <characteristicType id="2e88-c65e-4e45-d4c4" name="Ki Cap"/>
         <characteristicType id="a1dc-c2c1-e2d2-ca98" name="Wounds"/>
-        <characteristicType id="6af2-e777-20ce-e060" name="Base Size"/>
+        <characteristicType id="6af2-e777-20ce-e060" name="Size &amp; Base"/>
         <characteristicType id="e742-1b02-09cf-fd97" name="Traits"/>
       </characteristicTypes>
     </profileType>
@@ -54,6 +54,58 @@
     <profileType id="d2bb-86b4-edf3-c4e5" name="Special Card">
       <characteristicTypes>
         <characteristicType id="b4b7-5338-e8e2-41fd" name="Description"/>
+      </characteristicTypes>
+    </profileType>
+    <profileType id="6fa2-988d-fc04-c751" name="Special Card (Terrain)">
+      <characteristicTypes>
+        <characteristicType id="c40b-3106-986d-4db5" name="Base"/>
+        <characteristicType id="3df8-6a47-0c4d-73e7" name="Passage"/>
+        <characteristicType id="9858-c2c1-b6fc-b75c" name="Visibility"/>
+        <characteristicType id="000a-cf92-4d1e-c934" name="Size"/>
+        <characteristicType id="eaef-482b-c5d3-866e" name="Traits"/>
+        <characteristicType id="9cfa-9bd0-0b1b-9c06" name="Description"/>
+      </characteristicTypes>
+    </profileType>
+    <profileType id="bd15-7ead-9268-3576" name="Special Card (Ki Feat)">
+      <characteristicTypes>
+        <characteristicType id="17eb-17e2-4df4-5c5d" name="Description"/>
+        <characteristicType id="27c7-1649-f16e-8eaa" name="Name"/>
+        <characteristicType id="e410-b220-64e5-7953" name="Cost"/>
+        <characteristicType id="b9bf-562a-fe26-cb29" name="Timing"/>
+        <characteristicType id="47b8-f739-9d50-2e45" name="Subject"/>
+        <characteristicType id="870e-79e4-80ee-c0cc" name="Limitation"/>
+        <characteristicType id="3886-242b-fb70-5c88" name="Ki Feat Description"/>
+      </characteristicTypes>
+    </profileType>
+    <profileType id="e3e5-fd2b-c549-aa9f" name="Special Card (Melee Weapon)">
+      <characteristicTypes>
+        <characteristicType id="6ea7-0195-5369-2e8f" name="Melee Weapon Strength"/>
+        <characteristicType id="5aef-50d8-65f8-28c7" name="Traits"/>
+        <characteristicType id="11a1-1998-fe0a-3211" name="Specials"/>
+        <characteristicType id="a97f-eed7-2b8b-2e6b" name="Unique Effects"/>
+      </characteristicTypes>
+    </profileType>
+    <profileType id="814b-7c22-0b45-9acc" name="Special Card (Ranged Weapon)">
+      <characteristicTypes>
+        <characteristicType id="a0cf-2be6-a776-363b" name="Ranged Weapon Strength"/>
+        <characteristicType id="ea30-733c-e9dd-5c75" name="Range Bands"/>
+        <characteristicType id="a28d-cbd1-005e-e623" name="Traits"/>
+        <characteristicType id="55e0-9b2f-ad58-9c57" name="Specials"/>
+        <characteristicType id="76c8-d87b-83b3-3e58" name="Unique Effects"/>
+      </characteristicTypes>
+    </profileType>
+    <profileType id="6371-e768-6bfa-fd6a" name="Ki Feat (Ranged Weapon)">
+      <characteristicTypes>
+        <characteristicType id="54ca-6f96-9414-922d" name="Cost"/>
+        <characteristicType id="ae42-2385-926b-5832" name="Timing"/>
+        <characteristicType id="ce1f-d396-2925-d8f2" name="Subject"/>
+        <characteristicType id="ec4e-c810-ec03-911e" name="Limitation"/>
+        <characteristicType id="23c3-f856-2f53-8b40" name="Description"/>
+        <characteristicType id="d884-fd57-01ee-d00f" name="Ranged Weapon Strength"/>
+        <characteristicType id="6829-9f3d-cf99-2fa0" name="Range Bands"/>
+        <characteristicType id="07b8-50a5-db92-011c" name="Traits"/>
+        <characteristicType id="ff17-06fe-f0b0-9031" name="Specials"/>
+        <characteristicType id="2266-f1e7-8a6d-fd0f" name="Unique Effects"/>
       </characteristicTypes>
     </profileType>
   </profileTypes>
