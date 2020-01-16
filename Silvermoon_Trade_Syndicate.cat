@@ -169,6 +169,30 @@
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e81a-ef05-4702-5d4d" type="max"/>
         <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fc58-7a09-3f5d-9535" type="min"/>
       </constraints>
+      <profiles>
+        <profile id="d717-350f-a5b7-97f8" name="Yokozuna Akashi" hidden="false" typeId="6ea2-0f74-4852-4a98" typeName="Character Profile">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="8409-8d55-ce45-a33b"/>
+            <characteristic name="Melee Boost" typeId="6a36-e826-18f3-0b25"/>
+            <characteristic name="Ranged Pool" typeId="7a01-37c0-4741-672c"/>
+            <characteristic name="Ranged Boost" typeId="ff66-ea54-d863-5c17"/>
+            <characteristic name="Move" typeId="af89-242d-625f-9bff"/>
+            <characteristic name="Move Boost" typeId="62a6-8125-f293-5c76"/>
+            <characteristic name="Ki" typeId="8b76-2b4b-066e-a0c5"/>
+            <characteristic name="Ki Boost" typeId="c34e-f8ae-0984-37ac"/>
+            <characteristic name="Ki Cap" typeId="2e88-c65e-4e45-d4c4"/>
+            <characteristic name="Wounds" typeId="a1dc-c2c1-e2d2-ca98"/>
+            <characteristic name="Size &amp; Base" typeId="6af2-e777-20ce-e060"/>
+            <characteristic name="Traits" typeId="e742-1b02-09cf-fd97"/>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="70e6-8f40-1313-9854" name="Unique Effects" hidden="false"/>
+        <infoGroup id="1ec4-9a0f-ba4a-1947" name="Ki Feats" hidden="false"/>
+        <infoGroup id="8547-8d5d-6ae1-de1e" name="Traits" hidden="false"/>
+        <infoGroup id="2124-2f28-b8c8-486b" name="Melee Weapon" hidden="false"/>
+      </infoGroups>
       <categoryLinks>
         <categoryLink id="1aab-da20-d496-d7cc" name="Faction: Silvermoon Trade Syndicate" hidden="false" targetId="875a-48b1-3c9f-0a14" primary="false"/>
         <categoryLink id="bc11-4bbe-85cb-74ab" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
@@ -197,6 +221,31 @@
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1e2e-4faa-6d22-c5d1" type="max"/>
       </constraints>
+      <profiles>
+        <profile id="fed6-7e8f-43ac-b148" name="Wasupu" hidden="false" typeId="6ea2-0f74-4852-4a98" typeName="Character Profile">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="8409-8d55-ce45-a33b"/>
+            <characteristic name="Melee Boost" typeId="6a36-e826-18f3-0b25"/>
+            <characteristic name="Ranged Pool" typeId="7a01-37c0-4741-672c"/>
+            <characteristic name="Ranged Boost" typeId="ff66-ea54-d863-5c17"/>
+            <characteristic name="Move" typeId="af89-242d-625f-9bff"/>
+            <characteristic name="Move Boost" typeId="62a6-8125-f293-5c76"/>
+            <characteristic name="Ki" typeId="8b76-2b4b-066e-a0c5"/>
+            <characteristic name="Ki Boost" typeId="c34e-f8ae-0984-37ac"/>
+            <characteristic name="Ki Cap" typeId="2e88-c65e-4e45-d4c4"/>
+            <characteristic name="Wounds" typeId="a1dc-c2c1-e2d2-ca98"/>
+            <characteristic name="Size &amp; Base" typeId="6af2-e777-20ce-e060"/>
+            <characteristic name="Traits" typeId="e742-1b02-09cf-fd97"/>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="6243-ca76-a368-eeab" name="Unique Effects" hidden="false"/>
+        <infoGroup id="6b51-600c-c7f4-d599" name="Ki Feats" hidden="false"/>
+        <infoGroup id="4a9f-08e8-77af-7c71" name="Traits" hidden="false"/>
+        <infoGroup id="3763-1a70-f8b3-f756" name="Melee Weapon" hidden="false"/>
+        <infoGroup id="caf7-98a2-75ef-8764" name="Ranged Weapon" hidden="false"/>
+      </infoGroups>
       <categoryLinks>
         <categoryLink id="ea95-fd92-660b-f79a" name="Faction: Silvermoon Trade Syndicate" hidden="false" targetId="875a-48b1-3c9f-0a14" primary="false"/>
         <categoryLink id="c71b-76bf-f902-3b88" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
@@ -222,10 +271,44 @@
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="fec8-1e97-72ee-d649" type="lessThan"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="891a-f24c-5343-8e6a" type="lessThan"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1793-a2c7-29bd-8728" type="max"/>
       </constraints>
+      <profiles>
+        <profile id="3831-d991-3d38-3348" name="Wakasu Akuma" hidden="false" typeId="6ea2-0f74-4852-4a98" typeName="Character Profile">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="8409-8d55-ce45-a33b"/>
+            <characteristic name="Melee Boost" typeId="6a36-e826-18f3-0b25"/>
+            <characteristic name="Ranged Pool" typeId="7a01-37c0-4741-672c"/>
+            <characteristic name="Ranged Boost" typeId="ff66-ea54-d863-5c17"/>
+            <characteristic name="Move" typeId="af89-242d-625f-9bff"/>
+            <characteristic name="Move Boost" typeId="62a6-8125-f293-5c76"/>
+            <characteristic name="Ki" typeId="8b76-2b4b-066e-a0c5"/>
+            <characteristic name="Ki Boost" typeId="c34e-f8ae-0984-37ac"/>
+            <characteristic name="Ki Cap" typeId="2e88-c65e-4e45-d4c4"/>
+            <characteristic name="Wounds" typeId="a1dc-c2c1-e2d2-ca98"/>
+            <characteristic name="Size &amp; Base" typeId="6af2-e777-20ce-e060"/>
+            <characteristic name="Traits" typeId="e742-1b02-09cf-fd97"/>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="3b32-dee2-e04d-6e9e" name="Unique Effects" hidden="false"/>
+        <infoGroup id="f754-f784-164d-4b11" name="Ki Feats" hidden="false"/>
+        <infoGroup id="f5ba-8e9b-17f7-18c2" name="Traits" hidden="false"/>
+        <infoGroup id="d80d-0614-c99e-bc18" name="Melee Weapon" hidden="false"/>
+      </infoGroups>
       <categoryLinks>
         <categoryLink id="8fb5-399f-fe3a-ef6c" name="Akuma" hidden="false" targetId="b3bf-8f59-3895-c3a9" primary="false"/>
         <categoryLink id="900b-53c1-f264-bcf6" name="Animal" hidden="false" targetId="c382-9ab3-9924-e30a" primary="false"/>
@@ -254,6 +337,30 @@
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="80fb-89f9-24ad-1b8b" type="max"/>
       </constraints>
+      <profiles>
+        <profile id="09dd-a39d-7ffb-feac" name="Tsubaki" hidden="false" typeId="6ea2-0f74-4852-4a98" typeName="Character Profile">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="8409-8d55-ce45-a33b"/>
+            <characteristic name="Melee Boost" typeId="6a36-e826-18f3-0b25"/>
+            <characteristic name="Ranged Pool" typeId="7a01-37c0-4741-672c"/>
+            <characteristic name="Ranged Boost" typeId="ff66-ea54-d863-5c17"/>
+            <characteristic name="Move" typeId="af89-242d-625f-9bff"/>
+            <characteristic name="Move Boost" typeId="62a6-8125-f293-5c76"/>
+            <characteristic name="Ki" typeId="8b76-2b4b-066e-a0c5"/>
+            <characteristic name="Ki Boost" typeId="c34e-f8ae-0984-37ac"/>
+            <characteristic name="Ki Cap" typeId="2e88-c65e-4e45-d4c4"/>
+            <characteristic name="Wounds" typeId="a1dc-c2c1-e2d2-ca98"/>
+            <characteristic name="Size &amp; Base" typeId="6af2-e777-20ce-e060"/>
+            <characteristic name="Traits" typeId="e742-1b02-09cf-fd97"/>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="d4ad-7077-6b8d-9e1e" name="Unique Effects" hidden="false"/>
+        <infoGroup id="b3b7-a2da-68ec-ff0d" name="Ki Feats" hidden="false"/>
+        <infoGroup id="04ca-532f-3041-8daf" name="Traits" hidden="false"/>
+        <infoGroup id="5d34-c73e-6ffc-e581" name="Melee Weapon" hidden="false"/>
+      </infoGroups>
       <categoryLinks>
         <categoryLink id="f40b-798c-a412-7b29" name="Faction: Silvermoon Trade Syndicate" hidden="false" targetId="875a-48b1-3c9f-0a14" primary="false"/>
         <categoryLink id="66ba-11fd-48bf-2e9b" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
@@ -283,6 +390,30 @@
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="37c1-6b26-200d-72b4" type="max"/>
       </constraints>
+      <profiles>
+        <profile id="8e92-7a95-6e83-bef7" name="Tautolu" hidden="false" typeId="6ea2-0f74-4852-4a98" typeName="Character Profile">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="8409-8d55-ce45-a33b"/>
+            <characteristic name="Melee Boost" typeId="6a36-e826-18f3-0b25"/>
+            <characteristic name="Ranged Pool" typeId="7a01-37c0-4741-672c"/>
+            <characteristic name="Ranged Boost" typeId="ff66-ea54-d863-5c17"/>
+            <characteristic name="Move" typeId="af89-242d-625f-9bff"/>
+            <characteristic name="Move Boost" typeId="62a6-8125-f293-5c76"/>
+            <characteristic name="Ki" typeId="8b76-2b4b-066e-a0c5"/>
+            <characteristic name="Ki Boost" typeId="c34e-f8ae-0984-37ac"/>
+            <characteristic name="Ki Cap" typeId="2e88-c65e-4e45-d4c4"/>
+            <characteristic name="Wounds" typeId="a1dc-c2c1-e2d2-ca98"/>
+            <characteristic name="Size &amp; Base" typeId="6af2-e777-20ce-e060"/>
+            <characteristic name="Traits" typeId="e742-1b02-09cf-fd97"/>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="3be3-fe9d-bd89-530d" name="Unique Effects" hidden="false"/>
+        <infoGroup id="742b-c9c0-eedb-ee14" name="Ki Feats" hidden="false"/>
+        <infoGroup id="34ac-46af-66fb-2549" name="Traits" hidden="false"/>
+        <infoGroup id="a19c-cbf2-a7a2-194e" name="Melee Weapon" hidden="false"/>
+      </infoGroups>
       <categoryLinks>
         <categoryLink id="8240-337c-397c-7cd1" name="Faction: Silvermoon Trade Syndicate" hidden="false" targetId="875a-48b1-3c9f-0a14" primary="false"/>
         <categoryLink id="03bc-7050-ec94-7f85" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
@@ -310,6 +441,31 @@
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f718-e97e-3303-0d19" type="max"/>
       </constraints>
+      <profiles>
+        <profile id="441c-6385-f60e-c0e1" name="Sukuratchi" hidden="false" typeId="6ea2-0f74-4852-4a98" typeName="Character Profile">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="8409-8d55-ce45-a33b"/>
+            <characteristic name="Melee Boost" typeId="6a36-e826-18f3-0b25"/>
+            <characteristic name="Ranged Pool" typeId="7a01-37c0-4741-672c"/>
+            <characteristic name="Ranged Boost" typeId="ff66-ea54-d863-5c17"/>
+            <characteristic name="Move" typeId="af89-242d-625f-9bff"/>
+            <characteristic name="Move Boost" typeId="62a6-8125-f293-5c76"/>
+            <characteristic name="Ki" typeId="8b76-2b4b-066e-a0c5"/>
+            <characteristic name="Ki Boost" typeId="c34e-f8ae-0984-37ac"/>
+            <characteristic name="Ki Cap" typeId="2e88-c65e-4e45-d4c4"/>
+            <characteristic name="Wounds" typeId="a1dc-c2c1-e2d2-ca98"/>
+            <characteristic name="Size &amp; Base" typeId="6af2-e777-20ce-e060"/>
+            <characteristic name="Traits" typeId="e742-1b02-09cf-fd97"/>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="2a70-bbdb-7bfa-3433" name="Unique Effects" hidden="false"/>
+        <infoGroup id="2c59-2c54-529d-ac4f" name="Ki Feats" hidden="false"/>
+        <infoGroup id="20cd-412c-1f41-ec77" name="Traits" hidden="false"/>
+        <infoGroup id="8894-e45d-6230-d01c" name="Melee Weapon" hidden="false"/>
+        <infoGroup id="abd9-3acd-7494-0c06" name="Ranged Weapon" hidden="false"/>
+      </infoGroups>
       <categoryLinks>
         <categoryLink id="288e-ed42-ad62-16c7" name="Faction: Silvermoon Trade Syndicate" hidden="false" targetId="875a-48b1-3c9f-0a14" primary="false"/>
         <categoryLink id="19fe-a875-b1ef-cd4f" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
@@ -338,6 +494,30 @@
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c545-a143-98c2-6e24" type="max"/>
       </constraints>
+      <profiles>
+        <profile id="4c25-3dd7-cba0-d04e" name="Sukoshi Kani" hidden="false" typeId="6ea2-0f74-4852-4a98" typeName="Character Profile">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="8409-8d55-ce45-a33b"/>
+            <characteristic name="Melee Boost" typeId="6a36-e826-18f3-0b25"/>
+            <characteristic name="Ranged Pool" typeId="7a01-37c0-4741-672c"/>
+            <characteristic name="Ranged Boost" typeId="ff66-ea54-d863-5c17"/>
+            <characteristic name="Move" typeId="af89-242d-625f-9bff"/>
+            <characteristic name="Move Boost" typeId="62a6-8125-f293-5c76"/>
+            <characteristic name="Ki" typeId="8b76-2b4b-066e-a0c5"/>
+            <characteristic name="Ki Boost" typeId="c34e-f8ae-0984-37ac"/>
+            <characteristic name="Ki Cap" typeId="2e88-c65e-4e45-d4c4"/>
+            <characteristic name="Wounds" typeId="a1dc-c2c1-e2d2-ca98"/>
+            <characteristic name="Size &amp; Base" typeId="6af2-e777-20ce-e060"/>
+            <characteristic name="Traits" typeId="e742-1b02-09cf-fd97"/>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="a0b8-0d6b-8d5b-b080" name="Unique Effects" hidden="false"/>
+        <infoGroup id="0a7f-b19a-48eb-2f64" name="Ki Feats" hidden="false"/>
+        <infoGroup id="1e58-71b1-74dd-88d0" name="Traits" hidden="false"/>
+        <infoGroup id="6106-b6f0-96a9-f5d6" name="Melee Weapon" hidden="false"/>
+      </infoGroups>
       <categoryLinks>
         <categoryLink id="3ffc-03ee-0557-f91a" name="Faction: Silvermoon Trade Syndicate" hidden="false" targetId="875a-48b1-3c9f-0a14" primary="false"/>
         <categoryLink id="7def-fdb7-8255-821b" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
@@ -367,6 +547,30 @@
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cfef-fe7f-66a5-9fbb" type="max"/>
       </constraints>
+      <profiles>
+        <profile id="85e3-1889-b19e-9842" name="Senpu" hidden="false" typeId="6ea2-0f74-4852-4a98" typeName="Character Profile">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="8409-8d55-ce45-a33b"/>
+            <characteristic name="Melee Boost" typeId="6a36-e826-18f3-0b25"/>
+            <characteristic name="Ranged Pool" typeId="7a01-37c0-4741-672c"/>
+            <characteristic name="Ranged Boost" typeId="ff66-ea54-d863-5c17"/>
+            <characteristic name="Move" typeId="af89-242d-625f-9bff"/>
+            <characteristic name="Move Boost" typeId="62a6-8125-f293-5c76"/>
+            <characteristic name="Ki" typeId="8b76-2b4b-066e-a0c5"/>
+            <characteristic name="Ki Boost" typeId="c34e-f8ae-0984-37ac"/>
+            <characteristic name="Ki Cap" typeId="2e88-c65e-4e45-d4c4"/>
+            <characteristic name="Wounds" typeId="a1dc-c2c1-e2d2-ca98"/>
+            <characteristic name="Size &amp; Base" typeId="6af2-e777-20ce-e060"/>
+            <characteristic name="Traits" typeId="e742-1b02-09cf-fd97"/>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="f2f0-8bb0-5ee0-39a9" name="Unique Effects" hidden="false"/>
+        <infoGroup id="5232-7f5b-fda2-7fc8" name="Ki Feats" hidden="false"/>
+        <infoGroup id="8df0-3c5f-acce-1722" name="Traits" hidden="false"/>
+        <infoGroup id="2650-8335-7475-348c" name="Melee Weapon" hidden="false"/>
+      </infoGroups>
       <categoryLinks>
         <categoryLink id="27ef-83e2-befb-e5f2" name="Faction: Silvermoon Trade Syndicate" hidden="false" targetId="875a-48b1-3c9f-0a14" primary="false"/>
         <categoryLink id="3f5b-f05e-00f4-25c9" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
@@ -396,6 +600,30 @@
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="709b-9cc1-de70-8e43" type="max"/>
       </constraints>
+      <profiles>
+        <profile id="2718-54a6-b52e-9b01" name="Saki" hidden="false" typeId="6ea2-0f74-4852-4a98" typeName="Character Profile">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="8409-8d55-ce45-a33b"/>
+            <characteristic name="Melee Boost" typeId="6a36-e826-18f3-0b25"/>
+            <characteristic name="Ranged Pool" typeId="7a01-37c0-4741-672c"/>
+            <characteristic name="Ranged Boost" typeId="ff66-ea54-d863-5c17"/>
+            <characteristic name="Move" typeId="af89-242d-625f-9bff"/>
+            <characteristic name="Move Boost" typeId="62a6-8125-f293-5c76"/>
+            <characteristic name="Ki" typeId="8b76-2b4b-066e-a0c5"/>
+            <characteristic name="Ki Boost" typeId="c34e-f8ae-0984-37ac"/>
+            <characteristic name="Ki Cap" typeId="2e88-c65e-4e45-d4c4"/>
+            <characteristic name="Wounds" typeId="a1dc-c2c1-e2d2-ca98"/>
+            <characteristic name="Size &amp; Base" typeId="6af2-e777-20ce-e060"/>
+            <characteristic name="Traits" typeId="e742-1b02-09cf-fd97"/>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="d1b8-94c3-8bf1-115e" name="Unique Effects" hidden="false"/>
+        <infoGroup id="305e-490d-9c5b-431d" name="Ki Feats" hidden="false"/>
+        <infoGroup id="29a5-bed9-9277-79fd" name="Traits" hidden="false"/>
+        <infoGroup id="92b4-8b56-59f8-f73b" name="Melee Weapon" hidden="false"/>
+      </infoGroups>
       <categoryLinks>
         <categoryLink id="5021-1415-a2ab-075a" name="Faction: Silvermoon Trade Syndicate" hidden="false" targetId="875a-48b1-3c9f-0a14" primary="false"/>
         <categoryLink id="3220-8383-8f6b-bebd" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
@@ -426,6 +654,30 @@
       <constraints>
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="true" id="5137-3d94-f91b-6580" type="max"/>
       </constraints>
+      <profiles>
+        <profile id="0ef2-c6c0-109a-c786" name="Rakki" hidden="false" typeId="6ea2-0f74-4852-4a98" typeName="Character Profile">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="8409-8d55-ce45-a33b"/>
+            <characteristic name="Melee Boost" typeId="6a36-e826-18f3-0b25"/>
+            <characteristic name="Ranged Pool" typeId="7a01-37c0-4741-672c"/>
+            <characteristic name="Ranged Boost" typeId="ff66-ea54-d863-5c17"/>
+            <characteristic name="Move" typeId="af89-242d-625f-9bff"/>
+            <characteristic name="Move Boost" typeId="62a6-8125-f293-5c76"/>
+            <characteristic name="Ki" typeId="8b76-2b4b-066e-a0c5"/>
+            <characteristic name="Ki Boost" typeId="c34e-f8ae-0984-37ac"/>
+            <characteristic name="Ki Cap" typeId="2e88-c65e-4e45-d4c4"/>
+            <characteristic name="Wounds" typeId="a1dc-c2c1-e2d2-ca98"/>
+            <characteristic name="Size &amp; Base" typeId="6af2-e777-20ce-e060"/>
+            <characteristic name="Traits" typeId="e742-1b02-09cf-fd97"/>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="22e6-dec8-12ef-2a9a" name="Unique Effects" hidden="false"/>
+        <infoGroup id="d213-f8ff-e952-3b04" name="Ki Feats" hidden="false"/>
+        <infoGroup id="e07c-c844-90fc-bba8" name="Traits" hidden="false"/>
+        <infoGroup id="80c8-3df0-cd36-ecad" name="Melee Weapon" hidden="false"/>
+      </infoGroups>
       <categoryLinks>
         <categoryLink id="e3b5-84b1-1bb5-9777" name="Faction: Silvermoon Trade Syndicate" hidden="false" targetId="875a-48b1-3c9f-0a14" primary="false"/>
         <categoryLink id="63d4-9fd8-398a-6709" name="Kami" hidden="false" targetId="6639-615e-f1ab-bc64" primary="false"/>
@@ -471,6 +723,29 @@
       <constraints>
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="true" id="7515-2fe5-408d-7b97" type="max"/>
       </constraints>
+      <profiles>
+        <profile id="ba26-b137-f987-d419" name="Pit Dogs" hidden="false" typeId="6ea2-0f74-4852-4a98" typeName="Character Profile">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="8409-8d55-ce45-a33b"/>
+            <characteristic name="Melee Boost" typeId="6a36-e826-18f3-0b25"/>
+            <characteristic name="Ranged Pool" typeId="7a01-37c0-4741-672c"/>
+            <characteristic name="Ranged Boost" typeId="ff66-ea54-d863-5c17"/>
+            <characteristic name="Move" typeId="af89-242d-625f-9bff"/>
+            <characteristic name="Move Boost" typeId="62a6-8125-f293-5c76"/>
+            <characteristic name="Ki" typeId="8b76-2b4b-066e-a0c5"/>
+            <characteristic name="Ki Boost" typeId="c34e-f8ae-0984-37ac"/>
+            <characteristic name="Ki Cap" typeId="2e88-c65e-4e45-d4c4"/>
+            <characteristic name="Wounds" typeId="a1dc-c2c1-e2d2-ca98"/>
+            <characteristic name="Size &amp; Base" typeId="6af2-e777-20ce-e060"/>
+            <characteristic name="Traits" typeId="e742-1b02-09cf-fd97"/>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="94e3-09fe-6af5-e499" name="Unique Effects" hidden="false"/>
+        <infoGroup id="b5c9-982c-c14f-5ab0" name="Traits" hidden="false"/>
+        <infoGroup id="7941-5d07-54d1-5bbf" name="Melee Weapon" hidden="false"/>
+      </infoGroups>
       <categoryLinks>
         <categoryLink id="2257-3da9-5bd5-9fc9" name="Animal" hidden="false" targetId="c382-9ab3-9924-e30a" primary="false"/>
         <categoryLink id="fb86-882d-76cc-e81d" name="Dog" hidden="false" targetId="e966-5aa5-b165-496d" primary="false"/>
@@ -518,6 +793,30 @@
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="79b8-9600-9f2f-ecbc" type="max"/>
       </constraints>
+      <profiles>
+        <profile id="932b-8d2d-b2c5-2dc3" name="Old Zo" hidden="false" typeId="6ea2-0f74-4852-4a98" typeName="Character Profile">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="8409-8d55-ce45-a33b"/>
+            <characteristic name="Melee Boost" typeId="6a36-e826-18f3-0b25"/>
+            <characteristic name="Ranged Pool" typeId="7a01-37c0-4741-672c"/>
+            <characteristic name="Ranged Boost" typeId="ff66-ea54-d863-5c17"/>
+            <characteristic name="Move" typeId="af89-242d-625f-9bff"/>
+            <characteristic name="Move Boost" typeId="62a6-8125-f293-5c76"/>
+            <characteristic name="Ki" typeId="8b76-2b4b-066e-a0c5"/>
+            <characteristic name="Ki Boost" typeId="c34e-f8ae-0984-37ac"/>
+            <characteristic name="Ki Cap" typeId="2e88-c65e-4e45-d4c4"/>
+            <characteristic name="Wounds" typeId="a1dc-c2c1-e2d2-ca98"/>
+            <characteristic name="Size &amp; Base" typeId="6af2-e777-20ce-e060"/>
+            <characteristic name="Traits" typeId="e742-1b02-09cf-fd97"/>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="224f-8359-97ee-7adb" name="Unique Effects" hidden="false"/>
+        <infoGroup id="ceb2-7f9b-89cd-6f05" name="Ki Feats" hidden="false"/>
+        <infoGroup id="f101-d1e9-1283-ce87" name="Traits" hidden="false"/>
+        <infoGroup id="215c-a153-a79c-ce60" name="Melee Weapon" hidden="false"/>
+      </infoGroups>
       <categoryLinks>
         <categoryLink id="1538-dca8-9011-5e72" name="Faction: Silvermoon Trade Syndicate" hidden="false" targetId="875a-48b1-3c9f-0a14" primary="false"/>
         <categoryLink id="06ab-c5ce-c5cd-a76a" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
@@ -543,10 +842,43 @@
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="fec8-1e97-72ee-d649" type="lessThan"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="891a-f24c-5343-8e6a" type="lessThan"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="true" id="d1da-0c00-867f-b2de" type="max"/>
       </constraints>
+      <profiles>
+        <profile id="1ac9-182e-fcf6-93b1" name="Okkete San" hidden="false" typeId="6ea2-0f74-4852-4a98" typeName="Character Profile">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="8409-8d55-ce45-a33b"/>
+            <characteristic name="Melee Boost" typeId="6a36-e826-18f3-0b25"/>
+            <characteristic name="Ranged Pool" typeId="7a01-37c0-4741-672c"/>
+            <characteristic name="Ranged Boost" typeId="ff66-ea54-d863-5c17"/>
+            <characteristic name="Move" typeId="af89-242d-625f-9bff"/>
+            <characteristic name="Move Boost" typeId="62a6-8125-f293-5c76"/>
+            <characteristic name="Ki" typeId="8b76-2b4b-066e-a0c5"/>
+            <characteristic name="Ki Boost" typeId="c34e-f8ae-0984-37ac"/>
+            <characteristic name="Ki Cap" typeId="2e88-c65e-4e45-d4c4"/>
+            <characteristic name="Wounds" typeId="a1dc-c2c1-e2d2-ca98"/>
+            <characteristic name="Size &amp; Base" typeId="6af2-e777-20ce-e060"/>
+            <characteristic name="Traits" typeId="e742-1b02-09cf-fd97"/>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="fe64-9c87-61ac-7ec0" name="Unique Effects" hidden="false"/>
+        <infoGroup id="922c-d616-ed15-b9bd" name="Traits" hidden="false"/>
+        <infoGroup id="a2f4-c3cf-a75b-352f" name="Melee Weapon" hidden="false"/>
+      </infoGroups>
       <categoryLinks>
         <categoryLink id="d41c-f204-ce81-9b6e" name="Animal" hidden="false" targetId="c382-9ab3-9924-e30a" primary="false"/>
         <categoryLink id="f336-0e8b-0852-57b9" name="Faction: Silvermoon Trade Syndicate" hidden="false" targetId="875a-48b1-3c9f-0a14" primary="false"/>
@@ -593,6 +925,30 @@
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="883e-beb5-9030-8931" type="max"/>
       </constraints>
+      <profiles>
+        <profile id="d03b-2747-239a-a0df" name="Oda" hidden="false" typeId="6ea2-0f74-4852-4a98" typeName="Character Profile">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="8409-8d55-ce45-a33b"/>
+            <characteristic name="Melee Boost" typeId="6a36-e826-18f3-0b25"/>
+            <characteristic name="Ranged Pool" typeId="7a01-37c0-4741-672c"/>
+            <characteristic name="Ranged Boost" typeId="ff66-ea54-d863-5c17"/>
+            <characteristic name="Move" typeId="af89-242d-625f-9bff"/>
+            <characteristic name="Move Boost" typeId="62a6-8125-f293-5c76"/>
+            <characteristic name="Ki" typeId="8b76-2b4b-066e-a0c5"/>
+            <characteristic name="Ki Boost" typeId="c34e-f8ae-0984-37ac"/>
+            <characteristic name="Ki Cap" typeId="2e88-c65e-4e45-d4c4"/>
+            <characteristic name="Wounds" typeId="a1dc-c2c1-e2d2-ca98"/>
+            <characteristic name="Size &amp; Base" typeId="6af2-e777-20ce-e060"/>
+            <characteristic name="Traits" typeId="e742-1b02-09cf-fd97"/>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="f9bf-eac9-d283-dc00" name="Unique Effects" hidden="false"/>
+        <infoGroup id="7ce7-e239-dd70-c346" name="Ki Feats" hidden="false"/>
+        <infoGroup id="9ce2-8244-2f60-1dc9" name="Traits" hidden="false"/>
+        <infoGroup id="64ce-0e99-dfe6-bfff" name="Melee Weapon" hidden="false"/>
+      </infoGroups>
       <categoryLinks>
         <categoryLink id="53ca-051a-059a-1586" name="Faction: Silvermoon Trade Syndicate" hidden="false" targetId="875a-48b1-3c9f-0a14" primary="false"/>
         <categoryLink id="bb07-163a-ab91-85f2" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
@@ -622,6 +978,30 @@
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="180c-0b26-0477-1720" type="max"/>
       </constraints>
+      <profiles>
+        <profile id="8f4a-8050-3c76-f91f" name="Oda &amp; Tautolu" hidden="false" typeId="6ea2-0f74-4852-4a98" typeName="Character Profile">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="8409-8d55-ce45-a33b"/>
+            <characteristic name="Melee Boost" typeId="6a36-e826-18f3-0b25"/>
+            <characteristic name="Ranged Pool" typeId="7a01-37c0-4741-672c"/>
+            <characteristic name="Ranged Boost" typeId="ff66-ea54-d863-5c17"/>
+            <characteristic name="Move" typeId="af89-242d-625f-9bff"/>
+            <characteristic name="Move Boost" typeId="62a6-8125-f293-5c76"/>
+            <characteristic name="Ki" typeId="8b76-2b4b-066e-a0c5"/>
+            <characteristic name="Ki Boost" typeId="c34e-f8ae-0984-37ac"/>
+            <characteristic name="Ki Cap" typeId="2e88-c65e-4e45-d4c4"/>
+            <characteristic name="Wounds" typeId="a1dc-c2c1-e2d2-ca98"/>
+            <characteristic name="Size &amp; Base" typeId="6af2-e777-20ce-e060"/>
+            <characteristic name="Traits" typeId="e742-1b02-09cf-fd97"/>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="1e82-c818-580d-9dbb" name="Unique Effects" hidden="false"/>
+        <infoGroup id="4ffa-5bab-02ec-2be8" name="Ki Feats" hidden="false"/>
+        <infoGroup id="b746-2357-758c-e216" name="Traits" hidden="false"/>
+        <infoGroup id="5e6c-28a0-715f-b8ae" name="Melee Weapon" hidden="false"/>
+      </infoGroups>
       <categoryLinks>
         <categoryLink id="5d94-237e-a73c-0aa1" name="Faction: Silvermoon Trade Syndicate" hidden="false" targetId="875a-48b1-3c9f-0a14" primary="false"/>
         <categoryLink id="0150-7da8-ffa6-e9df" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
@@ -651,6 +1031,30 @@
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3cd9-19a7-7ce3-dbd3" type="max"/>
       </constraints>
+      <profiles>
+        <profile id="8157-7399-957b-5482" name="Nomi" hidden="false" typeId="6ea2-0f74-4852-4a98" typeName="Character Profile">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="8409-8d55-ce45-a33b"/>
+            <characteristic name="Melee Boost" typeId="6a36-e826-18f3-0b25"/>
+            <characteristic name="Ranged Pool" typeId="7a01-37c0-4741-672c"/>
+            <characteristic name="Ranged Boost" typeId="ff66-ea54-d863-5c17"/>
+            <characteristic name="Move" typeId="af89-242d-625f-9bff"/>
+            <characteristic name="Move Boost" typeId="62a6-8125-f293-5c76"/>
+            <characteristic name="Ki" typeId="8b76-2b4b-066e-a0c5"/>
+            <characteristic name="Ki Boost" typeId="c34e-f8ae-0984-37ac"/>
+            <characteristic name="Ki Cap" typeId="2e88-c65e-4e45-d4c4"/>
+            <characteristic name="Wounds" typeId="a1dc-c2c1-e2d2-ca98"/>
+            <characteristic name="Size &amp; Base" typeId="6af2-e777-20ce-e060"/>
+            <characteristic name="Traits" typeId="e742-1b02-09cf-fd97"/>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="687e-d1a0-6bdf-c7ae" name="Unique Effects" hidden="false"/>
+        <infoGroup id="2fa1-e28e-f379-8bb3" name="Ki Feats" hidden="false"/>
+        <infoGroup id="569d-fc2f-5840-5825" name="Traits" hidden="false"/>
+        <infoGroup id="0ae8-fead-ef60-c263" name="Melee Weapon" hidden="false"/>
+      </infoGroups>
       <categoryLinks>
         <categoryLink id="216c-a887-0d56-c635" name="Faction: Silvermoon Trade Syndicate" hidden="false" targetId="875a-48b1-3c9f-0a14" primary="false"/>
         <categoryLink id="d246-badf-fa36-1232" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
@@ -682,6 +1086,30 @@
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b567-e307-06a7-43ad" type="max"/>
       </constraints>
+      <profiles>
+        <profile id="1da1-1325-10db-39ad" name="Misao" hidden="false" typeId="6ea2-0f74-4852-4a98" typeName="Character Profile">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="8409-8d55-ce45-a33b"/>
+            <characteristic name="Melee Boost" typeId="6a36-e826-18f3-0b25"/>
+            <characteristic name="Ranged Pool" typeId="7a01-37c0-4741-672c"/>
+            <characteristic name="Ranged Boost" typeId="ff66-ea54-d863-5c17"/>
+            <characteristic name="Move" typeId="af89-242d-625f-9bff"/>
+            <characteristic name="Move Boost" typeId="62a6-8125-f293-5c76"/>
+            <characteristic name="Ki" typeId="8b76-2b4b-066e-a0c5"/>
+            <characteristic name="Ki Boost" typeId="c34e-f8ae-0984-37ac"/>
+            <characteristic name="Ki Cap" typeId="2e88-c65e-4e45-d4c4"/>
+            <characteristic name="Wounds" typeId="a1dc-c2c1-e2d2-ca98"/>
+            <characteristic name="Size &amp; Base" typeId="6af2-e777-20ce-e060"/>
+            <characteristic name="Traits" typeId="e742-1b02-09cf-fd97"/>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="400a-ac0a-8c72-d19d" name="Unique Effects" hidden="false"/>
+        <infoGroup id="2d90-6ba6-42b1-71fe" name="Ki Feats" hidden="false"/>
+        <infoGroup id="ceb1-0445-d4ce-ee15" name="Traits" hidden="false"/>
+        <infoGroup id="c300-bc23-a56f-3253" name="Melee Weapon" hidden="false"/>
+      </infoGroups>
       <categoryLinks>
         <categoryLink id="2a40-23a3-36cd-4ce5" name="Faction: Silvermoon Trade Syndicate" hidden="false" targetId="875a-48b1-3c9f-0a14" primary="false"/>
         <categoryLink id="c427-856f-d36e-6b76" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
@@ -711,6 +1139,30 @@
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="eb5b-b6c7-31e5-a6d0" type="max"/>
       </constraints>
+      <profiles>
+        <profile id="e020-723c-5a2b-1432" name="Manu" hidden="false" typeId="6ea2-0f74-4852-4a98" typeName="Character Profile">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="8409-8d55-ce45-a33b"/>
+            <characteristic name="Melee Boost" typeId="6a36-e826-18f3-0b25"/>
+            <characteristic name="Ranged Pool" typeId="7a01-37c0-4741-672c"/>
+            <characteristic name="Ranged Boost" typeId="ff66-ea54-d863-5c17"/>
+            <characteristic name="Move" typeId="af89-242d-625f-9bff"/>
+            <characteristic name="Move Boost" typeId="62a6-8125-f293-5c76"/>
+            <characteristic name="Ki" typeId="8b76-2b4b-066e-a0c5"/>
+            <characteristic name="Ki Boost" typeId="c34e-f8ae-0984-37ac"/>
+            <characteristic name="Ki Cap" typeId="2e88-c65e-4e45-d4c4"/>
+            <characteristic name="Wounds" typeId="a1dc-c2c1-e2d2-ca98"/>
+            <characteristic name="Size &amp; Base" typeId="6af2-e777-20ce-e060"/>
+            <characteristic name="Traits" typeId="e742-1b02-09cf-fd97"/>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="5ca8-3784-a1a7-f0c5" name="Unique Effects" hidden="false"/>
+        <infoGroup id="27e5-1e81-b6ef-7e51" name="Ki Feats" hidden="false"/>
+        <infoGroup id="ff20-b8c3-e600-cf4c" name="Traits" hidden="false"/>
+        <infoGroup id="babe-0c92-96c1-ec87" name="Melee Weapon" hidden="false"/>
+      </infoGroups>
       <categoryLinks>
         <categoryLink id="8754-cfa6-4169-8129" name="Faction: Silvermoon Trade Syndicate" hidden="false" targetId="875a-48b1-3c9f-0a14" primary="false"/>
         <categoryLink id="68cc-4047-8245-1902" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
@@ -738,6 +1190,30 @@
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5573-f23c-c1f7-a7a4" type="max"/>
       </constraints>
+      <profiles>
+        <profile id="fa36-9271-8213-9fb9" name="Malosi" hidden="false" typeId="6ea2-0f74-4852-4a98" typeName="Character Profile">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="8409-8d55-ce45-a33b"/>
+            <characteristic name="Melee Boost" typeId="6a36-e826-18f3-0b25"/>
+            <characteristic name="Ranged Pool" typeId="7a01-37c0-4741-672c"/>
+            <characteristic name="Ranged Boost" typeId="ff66-ea54-d863-5c17"/>
+            <characteristic name="Move" typeId="af89-242d-625f-9bff"/>
+            <characteristic name="Move Boost" typeId="62a6-8125-f293-5c76"/>
+            <characteristic name="Ki" typeId="8b76-2b4b-066e-a0c5"/>
+            <characteristic name="Ki Boost" typeId="c34e-f8ae-0984-37ac"/>
+            <characteristic name="Ki Cap" typeId="2e88-c65e-4e45-d4c4"/>
+            <characteristic name="Wounds" typeId="a1dc-c2c1-e2d2-ca98"/>
+            <characteristic name="Size &amp; Base" typeId="6af2-e777-20ce-e060"/>
+            <characteristic name="Traits" typeId="e742-1b02-09cf-fd97"/>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="503b-1bcb-8e55-d0e0" name="Unique Effects" hidden="false"/>
+        <infoGroup id="8428-a018-8e3a-1e05" name="Ki Feats" hidden="false"/>
+        <infoGroup id="87ce-a00f-33fb-b40e" name="Traits" hidden="false"/>
+        <infoGroup id="2a1c-2cd0-2326-dbf2" name="Melee Weapon" hidden="false"/>
+      </infoGroups>
       <categoryLinks>
         <categoryLink id="25fe-b8b0-3eb2-f042" name="Faction: Silvermoon Trade Syndicate" hidden="false" targetId="875a-48b1-3c9f-0a14" primary="false"/>
         <categoryLink id="fff8-c248-8df7-b0a3" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
@@ -765,6 +1241,30 @@
       <constraints>
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="515b-5edb-eae2-b61b" type="max"/>
       </constraints>
+      <profiles>
+        <profile id="212e-1a46-09e5-3186" name="Kyoaku-Han" hidden="false" typeId="6ea2-0f74-4852-4a98" typeName="Character Profile">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="8409-8d55-ce45-a33b"/>
+            <characteristic name="Melee Boost" typeId="6a36-e826-18f3-0b25"/>
+            <characteristic name="Ranged Pool" typeId="7a01-37c0-4741-672c"/>
+            <characteristic name="Ranged Boost" typeId="ff66-ea54-d863-5c17"/>
+            <characteristic name="Move" typeId="af89-242d-625f-9bff"/>
+            <characteristic name="Move Boost" typeId="62a6-8125-f293-5c76"/>
+            <characteristic name="Ki" typeId="8b76-2b4b-066e-a0c5"/>
+            <characteristic name="Ki Boost" typeId="c34e-f8ae-0984-37ac"/>
+            <characteristic name="Ki Cap" typeId="2e88-c65e-4e45-d4c4"/>
+            <characteristic name="Wounds" typeId="a1dc-c2c1-e2d2-ca98"/>
+            <characteristic name="Size &amp; Base" typeId="6af2-e777-20ce-e060"/>
+            <characteristic name="Traits" typeId="e742-1b02-09cf-fd97"/>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="8594-e080-f384-af2a" name="Unique Effects" hidden="false"/>
+        <infoGroup id="8e35-2e97-8bca-1171" name="Ki Feats" hidden="false"/>
+        <infoGroup id="54e2-6670-9b1e-1f2b" name="Traits" hidden="false"/>
+        <infoGroup id="93aa-b4ba-d0ae-1f41" name="Melee Weapon" hidden="false"/>
+      </infoGroups>
       <categoryLinks>
         <categoryLink id="0785-0d8f-9bd6-a8fa" name="Faction: Silvermoon Trade Syndicate" hidden="false" targetId="875a-48b1-3c9f-0a14" primary="false"/>
         <categoryLink id="ce01-71bd-ba3c-2ad3" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
@@ -810,6 +1310,31 @@
       <constraints>
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5e9a-713e-8016-90c7" type="max"/>
       </constraints>
+      <profiles>
+        <profile id="54c8-ba9b-58f5-29b9" name="Kyoaku-Han Crossbowman" hidden="false" typeId="6ea2-0f74-4852-4a98" typeName="Character Profile">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="8409-8d55-ce45-a33b"/>
+            <characteristic name="Melee Boost" typeId="6a36-e826-18f3-0b25"/>
+            <characteristic name="Ranged Pool" typeId="7a01-37c0-4741-672c"/>
+            <characteristic name="Ranged Boost" typeId="ff66-ea54-d863-5c17"/>
+            <characteristic name="Move" typeId="af89-242d-625f-9bff"/>
+            <characteristic name="Move Boost" typeId="62a6-8125-f293-5c76"/>
+            <characteristic name="Ki" typeId="8b76-2b4b-066e-a0c5"/>
+            <characteristic name="Ki Boost" typeId="c34e-f8ae-0984-37ac"/>
+            <characteristic name="Ki Cap" typeId="2e88-c65e-4e45-d4c4"/>
+            <characteristic name="Wounds" typeId="a1dc-c2c1-e2d2-ca98"/>
+            <characteristic name="Size &amp; Base" typeId="6af2-e777-20ce-e060"/>
+            <characteristic name="Traits" typeId="e742-1b02-09cf-fd97"/>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="2869-c1df-6fc8-f5ae" name="Unique Effects" hidden="false"/>
+        <infoGroup id="caf7-f292-e791-5c35" name="Ki Feats" hidden="false"/>
+        <infoGroup id="6dbb-5645-a6ed-3b70" name="Traits" hidden="false"/>
+        <infoGroup id="ff03-b962-3e9a-1287" name="Melee Weapon" hidden="false"/>
+        <infoGroup id="f9af-8908-7b60-31ca" name="Ranged Weapon" hidden="false"/>
+      </infoGroups>
       <categoryLinks>
         <categoryLink id="c1a9-688f-23c5-d672" name="Faction: Silvermoon Trade Syndicate" hidden="false" targetId="875a-48b1-3c9f-0a14" primary="false"/>
         <categoryLink id="2b00-908d-8b70-d6ba" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
@@ -854,6 +1379,30 @@
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8c69-0236-6143-ba4c" type="max"/>
       </constraints>
+      <profiles>
+        <profile id="55b9-a489-ff71-b929" name="Kaede" hidden="false" typeId="6ea2-0f74-4852-4a98" typeName="Character Profile">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="8409-8d55-ce45-a33b"/>
+            <characteristic name="Melee Boost" typeId="6a36-e826-18f3-0b25"/>
+            <characteristic name="Ranged Pool" typeId="7a01-37c0-4741-672c"/>
+            <characteristic name="Ranged Boost" typeId="ff66-ea54-d863-5c17"/>
+            <characteristic name="Move" typeId="af89-242d-625f-9bff"/>
+            <characteristic name="Move Boost" typeId="62a6-8125-f293-5c76"/>
+            <characteristic name="Ki" typeId="8b76-2b4b-066e-a0c5"/>
+            <characteristic name="Ki Boost" typeId="c34e-f8ae-0984-37ac"/>
+            <characteristic name="Ki Cap" typeId="2e88-c65e-4e45-d4c4"/>
+            <characteristic name="Wounds" typeId="a1dc-c2c1-e2d2-ca98"/>
+            <characteristic name="Size &amp; Base" typeId="6af2-e777-20ce-e060"/>
+            <characteristic name="Traits" typeId="e742-1b02-09cf-fd97"/>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="2022-ade0-7722-49d1" name="Unique Effects" hidden="false"/>
+        <infoGroup id="4016-714f-e443-fd25" name="Ki Feats" hidden="false"/>
+        <infoGroup id="601e-c64d-1930-8a7d" name="Traits" hidden="false"/>
+        <infoGroup id="5c52-5f27-ac2e-711d" name="Melee Weapon" hidden="false"/>
+      </infoGroups>
       <categoryLinks>
         <categoryLink id="29ab-3214-c9b9-7017" name="Faction: Silvermoon Trade Syndicate" hidden="false" targetId="875a-48b1-3c9f-0a14" primary="false"/>
         <categoryLink id="d363-0752-2dcb-2d18" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
@@ -883,6 +1432,31 @@
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7ce5-5513-68ce-9871" type="max"/>
       </constraints>
+      <profiles>
+        <profile id="1fbf-5cc2-7b6b-343a" name="Honoko" hidden="false" typeId="6ea2-0f74-4852-4a98" typeName="Character Profile">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="8409-8d55-ce45-a33b"/>
+            <characteristic name="Melee Boost" typeId="6a36-e826-18f3-0b25"/>
+            <characteristic name="Ranged Pool" typeId="7a01-37c0-4741-672c"/>
+            <characteristic name="Ranged Boost" typeId="ff66-ea54-d863-5c17"/>
+            <characteristic name="Move" typeId="af89-242d-625f-9bff"/>
+            <characteristic name="Move Boost" typeId="62a6-8125-f293-5c76"/>
+            <characteristic name="Ki" typeId="8b76-2b4b-066e-a0c5"/>
+            <characteristic name="Ki Boost" typeId="c34e-f8ae-0984-37ac"/>
+            <characteristic name="Ki Cap" typeId="2e88-c65e-4e45-d4c4"/>
+            <characteristic name="Wounds" typeId="a1dc-c2c1-e2d2-ca98"/>
+            <characteristic name="Size &amp; Base" typeId="6af2-e777-20ce-e060"/>
+            <characteristic name="Traits" typeId="e742-1b02-09cf-fd97"/>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="73ad-72ca-f89c-3568" name="Unique Effects" hidden="false"/>
+        <infoGroup id="9db4-5185-a45f-1a5f" name="Ki Feats" hidden="false"/>
+        <infoGroup id="c30f-ec30-2f0b-85f7" name="Traits" hidden="false"/>
+        <infoGroup id="2fe9-eac9-1525-b62a" name="Melee Weapon" hidden="false"/>
+        <infoGroup id="eab8-3d4e-c7bb-8b9a" name="Ranged Weapon" hidden="false"/>
+      </infoGroups>
       <categoryLinks>
         <categoryLink id="829e-922a-dfe3-deb3" name="Faction: Silvermoon Trade Syndicate" hidden="false" targetId="875a-48b1-3c9f-0a14" primary="false"/>
         <categoryLink id="e90c-9127-6016-afe5" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
@@ -913,6 +1487,30 @@
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="625e-9f47-36cc-994d" type="max"/>
       </constraints>
+      <profiles>
+        <profile id="9e8e-a1d5-f026-e33d" name="Harukichi" hidden="false" typeId="6ea2-0f74-4852-4a98" typeName="Character Profile">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="8409-8d55-ce45-a33b"/>
+            <characteristic name="Melee Boost" typeId="6a36-e826-18f3-0b25"/>
+            <characteristic name="Ranged Pool" typeId="7a01-37c0-4741-672c"/>
+            <characteristic name="Ranged Boost" typeId="ff66-ea54-d863-5c17"/>
+            <characteristic name="Move" typeId="af89-242d-625f-9bff"/>
+            <characteristic name="Move Boost" typeId="62a6-8125-f293-5c76"/>
+            <characteristic name="Ki" typeId="8b76-2b4b-066e-a0c5"/>
+            <characteristic name="Ki Boost" typeId="c34e-f8ae-0984-37ac"/>
+            <characteristic name="Ki Cap" typeId="2e88-c65e-4e45-d4c4"/>
+            <characteristic name="Wounds" typeId="a1dc-c2c1-e2d2-ca98"/>
+            <characteristic name="Size &amp; Base" typeId="6af2-e777-20ce-e060"/>
+            <characteristic name="Traits" typeId="e742-1b02-09cf-fd97"/>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="742a-672a-5063-a653" name="Unique Effects" hidden="false"/>
+        <infoGroup id="4ad3-7946-5373-1366" name="Ki Feats" hidden="false"/>
+        <infoGroup id="784f-b528-28d1-0fe7" name="Traits" hidden="false"/>
+        <infoGroup id="be3d-1479-15b8-4a9c" name="Melee Weapon" hidden="false"/>
+      </infoGroups>
       <categoryLinks>
         <categoryLink id="23a5-f568-716f-e5c6" name="Faction: Silvermoon Trade Syndicate" hidden="false" targetId="875a-48b1-3c9f-0a14" primary="false"/>
         <categoryLink id="f425-47b0-89d6-9844" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
@@ -943,6 +1541,58 @@
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="520c-7ce2-2ff3-eca7" type="max"/>
       </constraints>
+      <profiles>
+        <profile id="6001-cddf-469e-96de" name="Hanami" hidden="false" typeId="6ea2-0f74-4852-4a98" typeName="Character Profile">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="8409-8d55-ce45-a33b">3</characteristic>
+            <characteristic name="Melee Boost" typeId="6a36-e826-18f3-0b25">2</characteristic>
+            <characteristic name="Ranged Pool" typeId="7a01-37c0-4741-672c">3</characteristic>
+            <characteristic name="Ranged Boost" typeId="ff66-ea54-d863-5c17"></characteristic>
+            <characteristic name="Move" typeId="af89-242d-625f-9bff">5</characteristic>
+            <characteristic name="Move Boost" typeId="62a6-8125-f293-5c76"></characteristic>
+            <characteristic name="Ki" typeId="8b76-2b4b-066e-a0c5">2</characteristic>
+            <characteristic name="Ki Boost" typeId="c34e-f8ae-0984-37ac">2</characteristic>
+            <characteristic name="Ki Cap" typeId="2e88-c65e-4e45-d4c4">8</characteristic>
+            <characteristic name="Wounds" typeId="a1dc-c2c1-e2d2-ca98">5 OOOOO</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6af2-e777-20ce-e060">Small 30mm</characteristic>
+            <characteristic name="Traits" typeId="e742-1b02-09cf-fd97">Disguise (6), Jump up, Ranged Defence (2), Dodge(1), Evasive, Lightfooted</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="1d04-38ce-726e-cc6c" name="Ki Feats" hidden="false">
+          <infoLinks>
+            <infoLink id="f67a-cd24-5c1b-6503" name="Kiss of the Rose" hidden="false" targetId="d2e3-e059-32ba-8374" type="infoGroup"/>
+            <infoLink id="cb77-81bb-2d3f-2880" name="Lure" hidden="false" targetId="a913-4692-1061-437b" type="infoGroup"/>
+            <infoLink id="8bb5-8557-6dd5-d13d" name="Seduction" hidden="false" targetId="e6bc-1e8b-4ccf-6a65" type="infoGroup"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="675a-4604-b766-e441" name="Traits" hidden="false">
+          <infoLinks>
+            <infoLink id="83a3-6894-ce0c-2230" name="Disguise" hidden="false" targetId="1a0f-020f-3805-07f3" type="rule"/>
+            <infoLink id="e551-bf49-22d4-760c" name="Jump Up" hidden="false" targetId="1575-e12f-4ca3-c557" type="rule"/>
+            <infoLink id="29d3-7e53-8b8a-0935" name="Ranged Defence " hidden="false" targetId="9b8d-9ca9-e25d-3988" type="rule"/>
+            <infoLink id="11d7-ab3a-a16e-2ca9" name="Dodge " hidden="false" targetId="14d5-d459-5d8a-c73e" type="rule"/>
+            <infoLink id="d4e4-7b69-b8d7-2acb" name="Evasive" hidden="false" targetId="b0f8-d197-536b-c8fc" type="rule"/>
+            <infoLink id="b60b-ea82-20c5-bb5d" name="Lightfooted" hidden="false" targetId="57d2-cd57-07f9-addf" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="729d-20d9-413c-770b" name="Melee Weapon" hidden="false">
+          <profiles>
+            <profile id="1d95-c579-ee1c-35e8" name="Concealed Weapon" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+0</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e"/>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Sidestep Defence (0)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="be5a-8d8c-5ad6-5c35" name="Sidestep Defence " hidden="false" targetId="753c-6c3b-64d7-203c" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+      </infoGroups>
       <categoryLinks>
         <categoryLink id="727f-3958-c831-1c4c" name="Faction: Silvermoon Trade Syndicate" hidden="false" targetId="875a-48b1-3c9f-0a14" primary="false"/>
         <categoryLink id="18a4-eddc-5426-923a" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
@@ -969,10 +1619,68 @@
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="fec8-1e97-72ee-d649" type="lessThan"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="891a-f24c-5343-8e6a" type="lessThan"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="true" id="335b-9ff4-c02c-7222" type="max"/>
       </constraints>
+      <profiles>
+        <profile id="14be-a7dc-c88b-a8e9" name="Hakushi" hidden="false" typeId="6ea2-0f74-4852-4a98" typeName="Character Profile">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="8409-8d55-ce45-a33b">3</characteristic>
+            <characteristic name="Melee Boost" typeId="6a36-e826-18f3-0b25"></characteristic>
+            <characteristic name="Ranged Pool" typeId="7a01-37c0-4741-672c">0</characteristic>
+            <characteristic name="Ranged Boost" typeId="ff66-ea54-d863-5c17"></characteristic>
+            <characteristic name="Move" typeId="af89-242d-625f-9bff">5</characteristic>
+            <characteristic name="Move Boost" typeId="62a6-8125-f293-5c76"></characteristic>
+            <characteristic name="Ki" typeId="8b76-2b4b-066e-a0c5">2</characteristic>
+            <characteristic name="Ki Boost" typeId="c34e-f8ae-0984-37ac"></characteristic>
+            <characteristic name="Ki Cap" typeId="2e88-c65e-4e45-d4c4">0</characteristic>
+            <characteristic name="Wounds" typeId="a1dc-c2c1-e2d2-ca98">5 OOOOO</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6af2-e777-20ce-e060">Small 30mm</characteristic>
+            <characteristic name="Traits" typeId="e742-1b02-09cf-fd97">Aloof, Assassin, Camouflage (2), Cloudwalk,  Dodge (1), Jump Up, Lightning Reflexes, Sixth Sense</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="0470-6a73-483f-2f45" name="Traits" hidden="false">
+          <infoLinks>
+            <infoLink id="1944-5c02-5170-a6bd" name="Aloof" hidden="false" targetId="5101-70fc-eca4-d99b" type="rule"/>
+            <infoLink id="19e0-21e3-5a14-0e1b" name="Assassin" hidden="false" targetId="ef59-928b-2550-f0a3" type="rule"/>
+            <infoLink id="86ae-7d6d-69a4-997b" name="Camouflage" hidden="false" targetId="9010-4983-c98c-1751" type="rule"/>
+            <infoLink id="f81a-965f-f008-f14b" name="Cloudwalk" hidden="false" targetId="538c-1266-626b-fcc9" type="rule"/>
+            <infoLink id="b626-eb1c-ea3a-b44b" name="Dodge " hidden="false" targetId="14d5-d459-5d8a-c73e" type="rule"/>
+            <infoLink id="acc7-692b-ee75-2b0f" name="Jump Up" hidden="false" targetId="1575-e12f-4ca3-c557" type="rule"/>
+            <infoLink id="33fc-32ab-f169-a72e" name="Lightning Reflexes" hidden="false" targetId="efd4-dc31-6523-9c79" type="rule"/>
+            <infoLink id="9d61-5291-2926-bdac" name="Sixth Sense" hidden="false" targetId="ec49-3908-f1d1-8de2" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="f2e4-2d63-5a45-c43c" name="Melee Weapon" hidden="false">
+          <profiles>
+            <profile id="8ff2-0d0b-8aa9-cba2" name="Bite" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+0</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e"></characteristic>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Powerful Attack (1), Sidestep Defence (0)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="ca91-681e-a776-e658" name="Powerful Attack" hidden="false" targetId="d56a-058d-95d9-5b60" type="rule"/>
+            <infoLink id="36b9-3e46-4bde-91c4" name="Sidestep Defence " hidden="false" targetId="753c-6c3b-64d7-203c" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+      </infoGroups>
       <categoryLinks>
         <categoryLink id="c69d-786f-76a8-082e" name="Animal" hidden="false" targetId="c382-9ab3-9924-e30a" primary="false"/>
         <categoryLink id="6c52-c44e-74d7-28b8" name="Faction: Silvermoon Trade Syndicate" hidden="false" targetId="875a-48b1-3c9f-0a14" primary="false"/>
@@ -999,6 +1707,70 @@
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3950-b229-13ed-0cc0" type="max"/>
       </constraints>
+      <profiles>
+        <profile id="7f84-9dd3-717c-b557" name="Gichi" hidden="false" typeId="6ea2-0f74-4852-4a98" typeName="Character Profile">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="8409-8d55-ce45-a33b">3</characteristic>
+            <characteristic name="Melee Boost" typeId="6a36-e826-18f3-0b25">3</characteristic>
+            <characteristic name="Ranged Pool" typeId="7a01-37c0-4741-672c">3</characteristic>
+            <characteristic name="Ranged Boost" typeId="ff66-ea54-d863-5c17">3</characteristic>
+            <characteristic name="Move" typeId="af89-242d-625f-9bff">4</characteristic>
+            <characteristic name="Move Boost" typeId="62a6-8125-f293-5c76"></characteristic>
+            <characteristic name="Ki" typeId="8b76-2b4b-066e-a0c5">2</characteristic>
+            <characteristic name="Ki Boost" typeId="c34e-f8ae-0984-37ac"></characteristic>
+            <characteristic name="Ki Cap" typeId="2e88-c65e-4e45-d4c4">6</characteristic>
+            <characteristic name="Wounds" typeId="a1dc-c2c1-e2d2-ca98">7 OOOOO OO</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6af2-e777-20ce-e060">Small 30mm</characteristic>
+            <characteristic name="Traits" typeId="e742-1b02-09cf-fd97">Armour (1), Bravery</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="2eee-1f81-a327-66c6" name="Ki Feats" hidden="false">
+          <infoLinks>
+            <infoLink id="2ea3-144a-f4fc-6d1c" name="Dirty Fighting" hidden="false" targetId="b399-d8d0-47b1-00ee" type="infoGroup"/>
+            <infoLink id="6c59-2483-1afa-87f9" name="Mighty Blow" hidden="false" targetId="a9dd-2f09-5bc9-3498" type="infoGroup"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="e9c8-cddb-1ef1-66e3" name="Traits" hidden="false">
+          <infoLinks>
+            <infoLink id="3667-addd-74ce-cdab" name="Armour" hidden="false" targetId="8615-1c63-2242-5746" type="rule"/>
+            <infoLink id="7ac7-7757-2d79-be6f" name="Bravery" hidden="false" targetId="f9b2-38d2-7cda-de6e" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="6d1c-a83f-e2d1-7705" name="Melee Weapon" hidden="false">
+          <profiles>
+            <profile id="661d-4c94-20b8-5d9d" name="Chain Skull" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+2</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Chain Weapon (2)</characteristic>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d"/>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="9236-bda9-d294-ce46" name="Chain Weapon" hidden="false" targetId="84f9-d10e-0e9f-d79c" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="05c7-0bb4-9ecc-2afa" name="Ranged Weapon" hidden="false">
+          <profiles>
+            <profile id="d4cb-d79c-77cb-a499" name="Whip" hidden="false" typeId="7e20-258e-bf92-18f9" typeName="Ranged Weapon">
+              <characteristics>
+                <characteristic name="Ranged Weapon Strength" typeId="15aa-b6bd-6923-271f">-3</characteristic>
+                <characteristic name="Range Bands" typeId="be6a-50c6-d691-e2e9">2/3/4</characteristic>
+                <characteristic name="Traits" typeId="3410-4428-ef91-eb61">Lightweight</characteristic>
+                <characteristic name="Specials" typeId="cdaf-b6ac-89d4-39ef"/>
+                <characteristic name="Unique Effects" typeId="3bf8-6525-f003-4990">Models suffering Wounds from this model’s Ranged Attack gain Cowardly until the End Phase.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="c340-f067-8a2b-6643" name="Lightweight" hidden="false" targetId="c75c-7124-2b1f-a4d9" type="rule"/>
+            <infoLink id="0833-954c-a297-3944" name="Cowardly" hidden="false" targetId="c8d8-d1c7-905b-f971" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+      </infoGroups>
       <categoryLinks>
         <categoryLink id="4e84-36b3-d523-5966" name="Faction: Silvermoon Trade Syndicate" hidden="false" targetId="875a-48b1-3c9f-0a14" primary="false"/>
         <categoryLink id="bbaf-734d-6009-455f" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
@@ -1028,6 +1800,59 @@
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6eaf-166f-92db-c64f" type="max"/>
       </constraints>
+      <profiles>
+        <profile id="7516-c809-64fc-b63f" name="Fitiauma" hidden="false" typeId="6ea2-0f74-4852-4a98" typeName="Character Profile">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="8409-8d55-ce45-a33b">3</characteristic>
+            <characteristic name="Melee Boost" typeId="6a36-e826-18f3-0b25">3</characteristic>
+            <characteristic name="Ranged Pool" typeId="7a01-37c0-4741-672c">1</characteristic>
+            <characteristic name="Ranged Boost" typeId="ff66-ea54-d863-5c17"></characteristic>
+            <characteristic name="Move" typeId="af89-242d-625f-9bff">4</characteristic>
+            <characteristic name="Move Boost" typeId="62a6-8125-f293-5c76"></characteristic>
+            <characteristic name="Ki" typeId="8b76-2b4b-066e-a0c5">2</characteristic>
+            <characteristic name="Ki Boost" typeId="c34e-f8ae-0984-37ac"></characteristic>
+            <characteristic name="Ki Cap" typeId="2e88-c65e-4e45-d4c4">6</characteristic>
+            <characteristic name="Wounds" typeId="a1dc-c2c1-e2d2-ca98">10 OOOOO OOOOO</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6af2-e777-20ce-e060">Medium 40mm</characteristic>
+            <characteristic name="Traits" typeId="e742-1b02-09cf-fd97">Endurance, Fear (4), Fortune, Immune [Prone], Intimidate, Steadfast, Tough (1)</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="5a08-d6bb-3103-66c5" name="Ki Feats" hidden="false">
+          <infoLinks>
+            <infoLink id="33fb-27bb-911f-354e" name="Batter" hidden="false" targetId="b8c0-1f29-3c48-4b3a" type="infoGroup"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="691d-205e-326f-e167" name="Traits" hidden="false">
+          <infoLinks>
+            <infoLink id="9936-c613-6fd4-d442" name="Endurance" hidden="false" targetId="7fdc-d150-9641-1235" type="rule"/>
+            <infoLink id="c743-5a17-4e4e-b23b" name="Fear" hidden="false" targetId="3586-4583-7f10-1f31" type="rule"/>
+            <infoLink id="5d1b-2b55-3567-5efc" name="Fortune" hidden="false" targetId="abf1-1c0e-4717-77e2" type="rule"/>
+            <infoLink id="4382-0b25-3682-dd73" name="Immune" hidden="false" targetId="ea08-b25e-0ea8-af73" type="rule"/>
+            <infoLink id="5e39-8700-80ab-0f9c" name="Intimidate" hidden="false" targetId="f57d-b137-75c8-7329" type="rule"/>
+            <infoLink id="f65e-d1a8-2d9e-5f41" name="Steadfast" hidden="false" targetId="95e7-3178-c29b-013c" type="rule"/>
+            <infoLink id="0626-78c5-7f84-d1ab" name="Tough" hidden="false" targetId="5613-a6cf-495a-229f" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="4a01-c188-5726-156c" name="Melee Weapon" hidden="false">
+          <profiles>
+            <profile id="dc38-4a25-92d2-a2f9" name="Jumo" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+2</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e"></characteristic>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Combo Attack (1), Forceback Attack (0), Powerful Attack (1)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="c283-7942-54ce-859e" name="Combo Attack " hidden="false" targetId="78ab-6a94-be24-8f74" type="rule"/>
+            <infoLink id="77d5-9a3e-6a3e-8326" name="Forceback Attack" hidden="false" targetId="2682-7c66-4163-28f2" type="rule"/>
+            <infoLink id="d7ad-3f94-e665-aeba" name="Powerful Attack" hidden="false" targetId="d56a-058d-95d9-5b60" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+      </infoGroups>
       <categoryLinks>
         <categoryLink id="ac79-09b3-ff5a-ec73" name="Faction: Silvermoon Trade Syndicate" hidden="false" targetId="875a-48b1-3c9f-0a14" primary="false"/>
         <categoryLink id="cf43-27b1-fa9f-8f46" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
@@ -1055,6 +1880,72 @@
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8f0a-762c-81de-0b4a" type="max"/>
       </constraints>
+      <profiles>
+        <profile id="c8e3-1ba5-3bed-76ad" name="Fai-ginn" hidden="false" typeId="6ea2-0f74-4852-4a98" typeName="Character Profile">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="8409-8d55-ce45-a33b">2</characteristic>
+            <characteristic name="Melee Boost" typeId="6a36-e826-18f3-0b25">3</characteristic>
+            <characteristic name="Ranged Pool" typeId="7a01-37c0-4741-672c">2</characteristic>
+            <characteristic name="Ranged Boost" typeId="ff66-ea54-d863-5c17"/>
+            <characteristic name="Move" typeId="af89-242d-625f-9bff">3</characteristic>
+            <characteristic name="Move Boost" typeId="62a6-8125-f293-5c76"/>
+            <characteristic name="Ki" typeId="8b76-2b4b-066e-a0c5">2</characteristic>
+            <characteristic name="Ki Boost" typeId="c34e-f8ae-0984-37ac"/>
+            <characteristic name="Ki Cap" typeId="2e88-c65e-4e45-d4c4">6</characteristic>
+            <characteristic name="Wounds" typeId="a1dc-c2c1-e2d2-ca98">5 OOOOO</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6af2-e777-20ce-e060">Small 30mm</characteristic>
+            <characteristic name="Traits" typeId="e742-1b02-09cf-fd97">Command [Urchin](4/12&quot;), Fortune, Heal (2)</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="5ae2-bc55-453b-5d40" name="Unique Effects" hidden="false">
+          <profiles>
+            <profile id="20e4-efc7-8cc1-737e" name="Fai-Ginn" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">Urchin models in Fai-ginn’s Warband gain Camouflage (4&quot;), Dodge (+1) and when declaring a Scenario Action Urchins may make a Walk before or after resolving the action while Fai-ginn is in play.
+
+During the End Phase you can transfer an Enhancement card on this model to a Friendly model within 8&quot;.</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="e892-546e-7864-b197" name="Miserly" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">This model cannot have Enhancement cards bought for it when recruiting the Warband.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="4f01-9f74-00f2-4552" name="Camouflage" hidden="false" targetId="9010-4983-c98c-1751" type="rule"/>
+            <infoLink id="589a-294c-9bff-f6d8" name="Dodge " hidden="false" targetId="14d5-d459-5d8a-c73e" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="d1d4-5de8-a211-ffea" name="Ki Feats" hidden="false">
+          <infoLinks>
+            <infoLink id="0b59-bdac-153f-b0ac" name="Distraction" hidden="false" targetId="67dc-8faf-a547-262a" type="infoGroup"/>
+            <infoLink id="3160-7b92-c744-94d3" name="Pick Pocket" hidden="false" targetId="e69b-e154-a44b-a1a1" type="infoGroup"/>
+            <infoLink id="a146-19ed-5683-3972" name="Subtle Dominance" hidden="false" targetId="e1ba-2b8d-4483-ae5f" type="infoGroup"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="2ee3-bbb6-10c7-7154" name="Traits" hidden="false">
+          <infoLinks>
+            <infoLink id="f82c-8fc7-2bda-4040" name="Command" hidden="false" targetId="1b83-5421-f050-365a" type="rule"/>
+            <infoLink id="6696-5dac-5c42-a6a9" name="Fortune" hidden="false" targetId="abf1-1c0e-4717-77e2" type="rule"/>
+            <infoLink id="0f55-dd5a-7e79-aad6" name="Heal" hidden="false" targetId="bd98-52d2-3a66-08e7" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="b41b-e52d-82d8-f840" name="Melee Weapon" hidden="false">
+          <profiles>
+            <profile id="f0ef-6ad7-6479-37b8" name="Knife" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">-2</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e"/>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d"/>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+        </infoGroup>
+      </infoGroups>
       <categoryLinks>
         <categoryLink id="9b0f-25e1-3a46-5abe" name="Faction: Silvermoon Trade Syndicate" hidden="false" targetId="875a-48b1-3c9f-0a14" primary="false"/>
         <categoryLink id="8fae-50c3-634f-1c52" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
@@ -1084,6 +1975,73 @@
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c69d-f144-1232-84ce" type="max"/>
       </constraints>
+      <profiles>
+        <profile id="fbb7-4bf3-e47c-1277" name="Dafukaia" hidden="false" typeId="6ea2-0f74-4852-4a98" typeName="Character Profile">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="8409-8d55-ce45-a33b">4</characteristic>
+            <characteristic name="Melee Boost" typeId="6a36-e826-18f3-0b25">3</characteristic>
+            <characteristic name="Ranged Pool" typeId="7a01-37c0-4741-672c">3</characteristic>
+            <characteristic name="Ranged Boost" typeId="ff66-ea54-d863-5c17"/>
+            <characteristic name="Move" typeId="af89-242d-625f-9bff">4</characteristic>
+            <characteristic name="Move Boost" typeId="62a6-8125-f293-5c76"/>
+            <characteristic name="Ki" typeId="8b76-2b4b-066e-a0c5">2</characteristic>
+            <characteristic name="Ki Boost" typeId="c34e-f8ae-0984-37ac"/>
+            <characteristic name="Ki Cap" typeId="2e88-c65e-4e45-d4c4">8</characteristic>
+            <characteristic name="Wounds" typeId="a1dc-c2c1-e2d2-ca98">6 OOOOO O</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6af2-e777-20ce-e060">Small 30mm</characteristic>
+            <characteristic name="Traits" typeId="e742-1b02-09cf-fd97">Bravery, Immune (Fire), Jump Up, Kata, Ranged Defence (1)</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="dc07-4694-d00f-1d6f" name="Ki Feats" hidden="false">
+          <infoLinks>
+            <infoLink id="67a8-cdba-d66a-0f57" name="Inferno" hidden="false" targetId="a442-7344-87ea-dbe6" type="infoGroup"/>
+            <infoLink id="aa56-8c88-aea7-63e2" name="Flame On" hidden="false" targetId="e8f5-ec23-56e2-f58b" type="infoGroup"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="b541-42e4-b686-0361" name="Traits" hidden="false">
+          <infoLinks>
+            <infoLink id="b505-c1db-befc-1e41" name="Bravery" hidden="false" targetId="f9b2-38d2-7cda-de6e" type="rule"/>
+            <infoLink id="f55c-6c1b-813e-9b44" name="Immune" hidden="false" targetId="ea08-b25e-0ea8-af73" type="rule"/>
+            <infoLink id="5092-41aa-b8af-e3a3" name="Jump Up" hidden="false" targetId="1575-e12f-4ca3-c557" type="rule"/>
+            <infoLink id="0b00-6d3a-6dbf-86f3" name="Kata" hidden="false" targetId="7283-1e6d-cb9c-f1c8" type="rule"/>
+            <infoLink id="ba5f-4881-85fc-ca97" name="Ranged Defence " hidden="false" targetId="9b8d-9ca9-e25d-3988" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="8a05-4a79-9124-ab3e" name="Melee Weapon" hidden="false">
+          <profiles>
+            <profile id="5fff-229e-401d-1bd6" name="Bujutsu" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+1</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Brutal (1)</characteristic>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Powerful Attack (1), Slam Attack (1), Push Defence (0)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="87e7-4c1d-98ff-0829" name="Brutal" hidden="false" targetId="5d95-975e-a72c-25f3" type="rule"/>
+            <infoLink id="bd22-4d02-2608-4cf3" name="Powerful Attack" hidden="false" targetId="d56a-058d-95d9-5b60" type="rule"/>
+            <infoLink id="f3b0-5506-a80e-dcf5" name="Slam Attack" hidden="false" targetId="5d05-b0ce-d7db-9def" type="rule"/>
+            <infoLink id="e6ef-b674-4702-8786" name="Push Defence" hidden="false" targetId="74fc-a971-d9c2-278c" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="791b-2a0a-db92-48ad" name="Unique Effects" hidden="false">
+          <profiles>
+            <profile id="eef6-6f4e-510c-409e" name="Daifukaia" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">If this model is included in your Warband you may also include Ronin Fire Kami.
+While within 2&quot; of this model, Fire Kami models gain Aggressive and Brutal (1).</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="712b-e884-a922-c75d" name="Aggressive" hidden="false" targetId="a445-e041-8d5f-aa28" type="rule"/>
+            <infoLink id="04f8-83ec-98fb-6b65" name="Brutal" hidden="false" targetId="5d95-975e-a72c-25f3" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+      </infoGroups>
       <categoryLinks>
         <categoryLink id="395d-b7a6-ac3a-0054" name="Faction: Silvermoon Trade Syndicate" hidden="false" targetId="875a-48b1-3c9f-0a14" primary="false"/>
         <categoryLink id="ba6f-3a97-0b18-9903" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
@@ -1146,6 +2104,31 @@
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7975-49fd-9b71-bfbc" type="max"/>
       </constraints>
+      <profiles>
+        <profile id="afa8-6c4b-bc44-01d3" name="Shonosuke" hidden="false" typeId="6ea2-0f74-4852-4a98" typeName="Character Profile">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="8409-8d55-ce45-a33b"/>
+            <characteristic name="Melee Boost" typeId="6a36-e826-18f3-0b25"/>
+            <characteristic name="Ranged Pool" typeId="7a01-37c0-4741-672c"/>
+            <characteristic name="Ranged Boost" typeId="ff66-ea54-d863-5c17"/>
+            <characteristic name="Move" typeId="af89-242d-625f-9bff"/>
+            <characteristic name="Move Boost" typeId="62a6-8125-f293-5c76"/>
+            <characteristic name="Ki" typeId="8b76-2b4b-066e-a0c5"/>
+            <characteristic name="Ki Boost" typeId="c34e-f8ae-0984-37ac"/>
+            <characteristic name="Ki Cap" typeId="2e88-c65e-4e45-d4c4"/>
+            <characteristic name="Wounds" typeId="a1dc-c2c1-e2d2-ca98"/>
+            <characteristic name="Size &amp; Base" typeId="6af2-e777-20ce-e060"/>
+            <characteristic name="Traits" typeId="e742-1b02-09cf-fd97"/>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="6d5e-5551-7808-4732" name="Unique Effects" hidden="false"/>
+        <infoGroup id="78ec-034e-a0d1-d794" name="Ki Feats" hidden="false"/>
+        <infoGroup id="fb1b-9345-ba3d-181b" name="Traits" hidden="false"/>
+        <infoGroup id="5e49-6887-2ab8-e473" name="Melee Weapon" hidden="false"/>
+        <infoGroup id="95bd-19cd-481c-906b" name="Ranged Weapon" hidden="false"/>
+      </infoGroups>
       <categoryLinks>
         <categoryLink id="21c3-1ea0-9295-1094" name="Faction: Silvermoon Trade Syndicate" hidden="false" targetId="875a-48b1-3c9f-0a14" primary="false"/>
         <categoryLink id="310d-b402-ec9f-3992" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
@@ -1238,6 +2221,58 @@
       </modifiers>
       <categoryLinks>
         <categoryLink id="9f80-a8b0-ea8a-4c9a" name="New CategoryLink" hidden="false" targetId="477a-e693-0888-08f7" primary="true"/>
+      </categoryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="aa04-73dc-ade6-fa06" name="!DRAFT!CYCLE Food Monopoly" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true"/>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a86e-7e49-0a9d-fe59" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="c2e4-170b-b0c3-38c3" name="Food Monopoly" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
+          <characteristics>
+            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">During the Starting Phase choose an Enemy model. That model gains Slow and Weak until the End Phase.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="9e21-4a97-1119-820b" name="Slow" hidden="false" targetId="f1c3-4a84-c616-23cd" type="rule"/>
+        <infoLink id="8a10-6288-dac5-215d" name="Weak" hidden="false" targetId="6a0c-59fb-ff0e-aced" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="8fb2-4a48-33b6-ccea" name="New CategoryLink" hidden="false" targetId="d360-71aa-ca22-ba3c" primary="true"/>
+        <categoryLink id="15e9-74e5-a37d-0632" name="Cycle: Risen Sun" hidden="false" targetId="a745-0548-80c8-ece4" primary="false"/>
+      </categoryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="1abe-3a57-0622-2719" name="!DRAFT!CYCLE In the Hands of the Kami" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true"/>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3b41-b3cf-b7e2-34b2" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="a50a-13c1-9764-94ea" name="In the Hands of the Kami" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
+          <characteristics>
+            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">Play before dice are rolled for any test by a Friendly model. Guess the final result of your roll. If you are correct, add 1 Ki Token to the Friendly model.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="e004-c560-fd60-d417" name="Slow" hidden="false" targetId="f1c3-4a84-c616-23cd" type="rule"/>
+        <infoLink id="ce6e-0e90-4a74-9a88" name="Weak" hidden="false" targetId="6a0c-59fb-ff0e-aced" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="1f98-a23c-0078-282e" name="New CategoryLink" hidden="false" targetId="d360-71aa-ca22-ba3c" primary="true"/>
+        <categoryLink id="4227-8428-201b-ea5b" name="Cycle: Risen Sun" hidden="false" targetId="a745-0548-80c8-ece4" primary="false"/>
       </categoryLinks>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0.0"/>
@@ -1648,15 +2683,120 @@
             <entryLink id="b84a-77bc-077d-7687" name="!DRAFT Obscure Charm" hidden="false" collective="false" import="true" targetId="74be-1ece-8b7d-739d" type="selectionEntry"/>
             <entryLink id="51e7-3c2a-6d23-5a2b" name="!DRAFT Minimoto Steel Helm" hidden="false" collective="false" import="true" targetId="38b5-a50d-24f0-4435" type="selectionEntry"/>
             <entryLink id="c1ea-862c-3916-9666" name="!DRAFT Demon-Face Mask" hidden="false" collective="false" import="true" targetId="2437-81ed-3b75-d23b" type="selectionEntry"/>
+            <entryLink id="678d-6516-dc7e-936c" name="!DRAFT!CYCLE Magamata" hidden="false" collective="false" import="true" targetId="370e-e02b-d9ee-8b80" type="selectionEntry"/>
+            <entryLink id="79e9-7bb4-d422-1022" name="!DRAFT!CYCLE Wolf Heart Talisman" hidden="false" collective="false" import="true" targetId="a56e-8e8e-97b4-ec73" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
         <entryLink id="a3c8-a0c0-8813-05c4" name="Paragon" hidden="false" collective="false" import="true" targetId="9059-1680-57c0-9f71" type="selectionEntry"/>
         <entryLink id="76a5-0648-7714-1bf0" name="!DRAFT Finesse" hidden="false" collective="false" import="true" targetId="e916-ca9f-75ef-1c24" type="selectionEntry"/>
+        <entryLink id="950c-7f69-0df8-18f6" name="!DRAFT!CYCLE Pacifism" hidden="false" collective="false" import="true" targetId="6bf3-9dca-b4c5-6a3e" type="selectionEntry"/>
+        <entryLink id="dcd0-8b93-2774-7d08" name="!DRAFT!CYCLE Prayer Scroll" hidden="false" collective="false" import="true" targetId="bb42-702b-ab84-a9f9" type="selectionEntry"/>
       </entryLinks>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
+  <sharedInfoGroups>
+    <infoGroup id="e8f5-ec23-56e2-f58b" name="Flame On" hidden="false">
+      <profiles>
+        <profile id="0ff5-8e45-5b3a-d6ee" name="Flame On" hidden="false" typeId="993a-e62a-7922-0ccb" typeName="Ki Feat">
+          <characteristics>
+            <characteristic name="Cost" typeId="a126-54d9-0a27-f4b6">2</characteristic>
+            <characteristic name="Timing" typeId="f8a8-8a3e-ef58-4c61">Instant</characteristic>
+            <characteristic name="Subject" typeId="4ac8-2bb1-0c84-f088">Personal</characteristic>
+            <characteristic name="Limitation" typeId="6fc9-5d13-2687-b2a5"/>
+            <characteristic name="Description" typeId="f804-b969-00da-2123">Until the End Phase, this model’s Melee Attack gains the Fire (1/1) trait and when this model suffers Wounds from a Melee Attack, the Attacking model gains a Fire (1) Marker.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="b5fa-9e64-d8ed-b35d" name="Fire" hidden="false" targetId="2422-40b7-254f-f6f1" type="rule"/>
+      </infoLinks>
+    </infoGroup>
+    <infoGroup id="a442-7344-87ea-dbe6" name="Inferno" hidden="false">
+      <profiles>
+        <profile id="e644-c179-e5cc-35a0" name="Inferno" hidden="false" typeId="993a-e62a-7922-0ccb" typeName="Ki Feat">
+          <characteristics>
+            <characteristic name="Cost" typeId="a126-54d9-0a27-f4b6">2</characteristic>
+            <characteristic name="Timing" typeId="f8a8-8a3e-ef58-4c61">Simple</characteristic>
+            <characteristic name="Subject" typeId="4ac8-2bb1-0c84-f088">Pulse 2&quot;</characteristic>
+            <characteristic name="Limitation" typeId="6fc9-5d13-2687-b2a5"/>
+            <characteristic name="Description" typeId="f804-b969-00da-2123">All other models within the Pulse’s area of effect gain a Fire (2) Marker.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </infoGroup>
+    <infoGroup id="e69b-e154-a44b-a1a1" name="Pick Pocket" hidden="false">
+      <profiles>
+        <profile id="3c46-0a3d-bda2-c0ea" name="Pick Pocket" hidden="false" typeId="993a-e62a-7922-0ccb" typeName="Ki Feat">
+          <characteristics>
+            <characteristic name="Cost" typeId="a126-54d9-0a27-f4b6">1</characteristic>
+            <characteristic name="Timing" typeId="f8a8-8a3e-ef58-4c61">Simple</characteristic>
+            <characteristic name="Subject" typeId="4ac8-2bb1-0c84-f088">Target 8&quot;</characteristic>
+            <characteristic name="Limitation" typeId="6fc9-5d13-2687-b2a5">Not in BtB</characteristic>
+            <characteristic name="Description" typeId="f804-b969-00da-2123">Target Friendly Urchin that is within 2&quot; of an Enemy model. If the Enemy model has an enhancement - equipment card, transfer it to Fai-ginn’s card.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </infoGroup>
+    <infoGroup id="e1ba-2b8d-4483-ae5f" name="Subtle Dominance" hidden="false">
+      <profiles>
+        <profile id="224d-19b2-adea-82cc" name="Subtle Dominance" hidden="false" typeId="993a-e62a-7922-0ccb" typeName="Ki Feat">
+          <characteristics>
+            <characteristic name="Cost" typeId="a126-54d9-0a27-f4b6">1</characteristic>
+            <characteristic name="Timing" typeId="f8a8-8a3e-ef58-4c61">Instant</characteristic>
+            <characteristic name="Subject" typeId="4ac8-2bb1-0c84-f088">Target 8&quot;</characteristic>
+            <characteristic name="Limitation" typeId="6fc9-5d13-2687-b2a5">Once Per Turn</characteristic>
+            <characteristic name="Description" typeId="f804-b969-00da-2123">When Target model declares an action it must make a Ki Challenge Test (5), if it fails its activation ends and it loses an Activation Counter.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </infoGroup>
+    <infoGroup id="d2e3-e059-32ba-8374" name="Kiss of the Rose" hidden="false">
+      <profiles>
+        <profile id="f7cb-68a9-9a85-d131" name="Kiss of the Rose" hidden="false" typeId="993a-e62a-7922-0ccb" typeName="Ki Feat">
+          <characteristics>
+            <characteristic name="Cost" typeId="a126-54d9-0a27-f4b6">1</characteristic>
+            <characteristic name="Timing" typeId="f8a8-8a3e-ef58-4c61">Instant</characteristic>
+            <characteristic name="Subject" typeId="4ac8-2bb1-0c84-f088">Target BtB</characteristic>
+            <characteristic name="Limitation" typeId="6fc9-5d13-2687-b2a5">Once Per Turn</characteristic>
+            <characteristic name="Description" typeId="f804-b969-00da-2123">During a non-Soulless, Enemy model’s activation in which it enters BtB with this model, that Enemy model gains a Control Marker.
+No Melee Exchange takes place, this model does not lose an Activation Counter.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </infoGroup>
+    <infoGroup id="a913-4692-1061-437b" name="Lure" hidden="false">
+      <profiles>
+        <profile id="d943-ca88-91ea-01d1" name="Lure" hidden="false" typeId="993a-e62a-7922-0ccb" typeName="Ki Feat">
+          <characteristics>
+            <characteristic name="Cost" typeId="a126-54d9-0a27-f4b6">2</characteristic>
+            <characteristic name="Timing" typeId="f8a8-8a3e-ef58-4c61">Simple</characteristic>
+            <characteristic name="Subject" typeId="4ac8-2bb1-0c84-f088">Target 6&quot; Opposed Ki</characteristic>
+            <characteristic name="Limitation" typeId="6fc9-5d13-2687-b2a5">Not in BtB</characteristic>
+            <characteristic name="Description" typeId="f804-b969-00da-2123">Target model not in BtB with a Friendly model gains an Impetuous Marker, must declare a Walk Action as its next activation, and must move directly towards this model with its full move changing its facing so that this model is in LoS. If unable to perform a Walk Action, it may activate without restriction.
+This effect expires in the End Phase.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </infoGroup>
+    <infoGroup id="e6bc-1e8b-4ccf-6a65" name="Seduction" hidden="false">
+      <profiles>
+        <profile id="bb78-d8f5-fd66-ee06" name="Seduction" hidden="false" typeId="993a-e62a-7922-0ccb" typeName="Ki Feat">
+          <characteristics>
+            <characteristic name="Cost" typeId="a126-54d9-0a27-f4b6">2</characteristic>
+            <characteristic name="Timing" typeId="f8a8-8a3e-ef58-4c61">Simple</characteristic>
+            <characteristic name="Subject" typeId="4ac8-2bb1-0c84-f088">Target 6&quot; Opposed Ki</characteristic>
+            <characteristic name="Limitation" typeId="6fc9-5d13-2687-b2a5">Not in BtB, Once Per Turn</characteristic>
+            <characteristic name="Description" typeId="f804-b969-00da-2123">If this model is successful the Targeted model gains Stupid until the End Phase.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="484c-6710-da45-1cb8" name="Stupid" hidden="false" targetId="4251-8743-3f5e-8781" type="rule"/>
+      </infoLinks>
+    </infoGroup>
+  </sharedInfoGroups>
   <catalogueLinks>
     <catalogueLink id="0010-319a-e539-0162" name="Library_Ronin" targetId="b489-b304-948d-52d0" type="catalogue" importRootEntries="true"/>
   </catalogueLinks>
