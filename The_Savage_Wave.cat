@@ -1474,8 +1474,19 @@ Whenever a Bakemono model would spend Ki Tokens you may spend them from this car
       </categoryLinks>
     </entryLink>
     <entryLink id="15b0-4d45-5fec-2c48" name="Eldest Brother" hidden="false" collective="false" import="true" targetId="294d-a0fa-f437-2fca" type="selectionEntry">
+      <modifierGroups>
+        <modifierGroup>
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="477a-e693-0888-08f7" type="atLeast"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set-primary" field="category" value="0ca8-2040-37f2-a1e0"/>
+            <modifier type="unset-primary" field="category" value="9fba-f50b-c8f7-8396"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
       <categoryLinks>
-        <categoryLink id="b093-c874-7154-ee63" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
+        <categoryLink id="d76b-5ddb-94c6-6617" name="Ronin Profile Cards" hidden="false" targetId="9fba-f50b-c8f7-8396" primary="true"/>
       </categoryLinks>
     </entryLink>
     <entryLink id="dc46-971e-b316-6f76" name="Hiretsuna" hidden="false" collective="false" import="true" targetId="fee6-a48b-db82-74e7" type="selectionEntry">
@@ -1496,18 +1507,23 @@ Whenever a Bakemono model would spend Ki Tokens you may spend them from this car
       </categoryLinks>
     </entryLink>
     <entryLink id="14a6-cb63-91d8-f6d8" name="Hirota, Drunken Master" hidden="true" collective="false" import="true" targetId="f616-46d8-5907-fafd" type="selectionEntry">
-      <modifiers>
-        <modifier type="set" field="hidden" value="false">
+      <modifierGroups>
+        <modifierGroup>
           <conditionGroups>
             <conditionGroup type="and">
               <conditions>
                 <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="294d-a0fa-f437-2fca" type="atLeast"/>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="477a-e693-0888-08f7" type="lessThan"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="477a-e693-0888-08f7" type="atLeast"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
-        </modifier>
-      </modifiers>
+          <modifiers>
+            <modifier type="set" field="hidden" value="false"/>
+            <modifier type="unset-primary" field="category" value="9fba-f50b-c8f7-8396"/>
+            <modifier type="set-primary" field="category" value="0ca8-2040-37f2-a1e0"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
       <categoryLinks>
         <categoryLink id="93b7-e308-0331-ff2a" name="New CategoryLink" hidden="false" targetId="9fba-f50b-c8f7-8396" primary="true"/>
       </categoryLinks>
@@ -1568,6 +1584,9 @@ Whenever a Bakemono model would spend Ki Tokens you may spend them from this car
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="32c7-a793-4108-ecb6" type="max"/>
       </constraints>
+      <categoryLinks>
+        <categoryLink id="f6a1-c4d6-f68d-3cc1" name="Bakemono" hidden="false" targetId="9b14-5558-cfeb-ee1c" primary="false"/>
+      </categoryLinks>
       <entryLinks>
         <entryLink id="d307-5cf1-dc61-4aac" name="Enhancements" hidden="false" collective="false" import="true" targetId="74e6-2485-1c0a-4227" type="selectionEntryGroup"/>
       </entryLinks>
@@ -1579,6 +1598,9 @@ Whenever a Bakemono model would spend Ki Tokens you may spend them from this car
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="9963-a93a-35d8-90c8" type="max"/>
       </constraints>
+      <categoryLinks>
+        <categoryLink id="fbd8-8e7b-3cc7-5430" name="Bakemono" hidden="false" targetId="9b14-5558-cfeb-ee1c" primary="false"/>
+      </categoryLinks>
       <entryLinks>
         <entryLink id="806d-7ece-c177-9cce" name="Enhancements" hidden="false" collective="false" import="true" targetId="74e6-2485-1c0a-4227" type="selectionEntryGroup"/>
       </entryLinks>
@@ -1590,6 +1612,9 @@ Whenever a Bakemono model would spend Ki Tokens you may spend them from this car
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="8b92-cbd7-678f-a82c" type="max"/>
       </constraints>
+      <categoryLinks>
+        <categoryLink id="719f-a194-3e6f-1c39" name="Animal" hidden="false" targetId="c382-9ab3-9924-e30a" primary="false"/>
+      </categoryLinks>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="7.0"/>
       </costs>
@@ -1598,6 +1623,9 @@ Whenever a Bakemono model would spend Ki Tokens you may spend them from this car
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="e8eb-dcab-a6c4-b657" type="max"/>
       </constraints>
+      <categoryLinks>
+        <categoryLink id="6203-6d3f-af01-1ad3" name="Bakemono" hidden="false" targetId="9b14-5558-cfeb-ee1c" primary="false"/>
+      </categoryLinks>
       <entryLinks>
         <entryLink id="3137-5546-ed49-79c0" name="Enhancements" hidden="false" collective="false" import="true" targetId="74e6-2485-1c0a-4227" type="selectionEntryGroup"/>
       </entryLinks>
@@ -1609,6 +1637,9 @@ Whenever a Bakemono model would spend Ki Tokens you may spend them from this car
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="6710-ac98-f3f4-1f8e" type="max"/>
       </constraints>
+      <categoryLinks>
+        <categoryLink id="b7e5-090b-ba1f-26cc" name="Bakemono" hidden="false" targetId="9b14-5558-cfeb-ee1c" primary="false"/>
+      </categoryLinks>
       <entryLinks>
         <entryLink id="9843-918e-35a4-a73d" name="Enhancements" hidden="false" collective="false" import="true" targetId="74e6-2485-1c0a-4227" type="selectionEntryGroup"/>
       </entryLinks>
@@ -1620,6 +1651,9 @@ Whenever a Bakemono model would spend Ki Tokens you may spend them from this car
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="c1a9-adb5-12d9-b2b8" type="max"/>
       </constraints>
+      <categoryLinks>
+        <categoryLink id="8b1c-8fd4-79b9-ffb8" name="Bakemono" hidden="false" targetId="9b14-5558-cfeb-ee1c" primary="false"/>
+      </categoryLinks>
       <entryLinks>
         <entryLink id="b4ac-ce98-5680-659c" name="Enhancements" hidden="false" collective="false" import="true" targetId="74e6-2485-1c0a-4227" type="selectionEntryGroup"/>
       </entryLinks>
@@ -1631,6 +1665,9 @@ Whenever a Bakemono model would spend Ki Tokens you may spend them from this car
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="c726-4d88-6618-ffef" type="max"/>
       </constraints>
+      <categoryLinks>
+        <categoryLink id="de60-6a12-8960-e6fa" name="Bakemono" hidden="false" targetId="9b14-5558-cfeb-ee1c" primary="false"/>
+      </categoryLinks>
       <entryLinks>
         <entryLink id="b9d4-fd5a-aaca-bcd1" name="Enhancements" hidden="false" collective="false" import="true" targetId="74e6-2485-1c0a-4227" type="selectionEntryGroup"/>
       </entryLinks>
@@ -1642,6 +1679,9 @@ Whenever a Bakemono model would spend Ki Tokens you may spend them from this car
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b205-27f7-e316-3bc0" type="max"/>
       </constraints>
+      <categoryLinks>
+        <categoryLink id="d80a-8ff3-0eb9-0501" name="Bakemono" hidden="false" targetId="9b14-5558-cfeb-ee1c" primary="false"/>
+      </categoryLinks>
       <entryLinks>
         <entryLink id="df79-b8b7-8cd5-512f" name="Enhancements" hidden="false" collective="false" import="true" targetId="74e6-2485-1c0a-4227" type="selectionEntryGroup"/>
       </entryLinks>
@@ -1653,6 +1693,9 @@ Whenever a Bakemono model would spend Ki Tokens you may spend them from this car
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d8bc-7ac4-a958-e63e" type="max"/>
       </constraints>
+      <categoryLinks>
+        <categoryLink id="c0f7-5169-579f-4523" name="Bakemono" hidden="false" targetId="9b14-5558-cfeb-ee1c" primary="false"/>
+      </categoryLinks>
       <entryLinks>
         <entryLink id="7541-936a-c72f-e6df" name="Enhancements" hidden="false" collective="false" import="true" targetId="74e6-2485-1c0a-4227" type="selectionEntryGroup"/>
       </entryLinks>
