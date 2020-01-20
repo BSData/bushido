@@ -204,6 +204,9 @@
           </costs>
         </selectionEntry>
       </selectionEntries>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0.0"/>
+      </costs>
     </selectionEntry>
   </selectionEntries>
 </gameSystem>
