@@ -108,6 +108,11 @@
         <characteristicType id="2266-f1e7-8a6d-fd0f" name="Unique Effects"/>
       </characteristicTypes>
     </profileType>
+    <profileType id="b175-cf39-0ab9-4d58" name="Character Traits">
+      <characteristicTypes>
+        <characteristicType id="6fb8-4540-ed80-9332" name="Traits"/>
+      </characteristicTypes>
+    </profileType>
   </profileTypes>
   <categoryEntries>
     <categoryEntry id="d360-71aa-ca22-ba3c" name="Event Cards" hidden="false"/>
