@@ -2235,6 +2235,15 @@ The first time in a turn when a model moves into BtB with this model, if this mo
             <infoLink id="255a-54d3-4a80-0600" name="Flank" hidden="false" targetId="a847-f02d-7e99-8a66" type="rule"/>
           </infoLinks>
         </infoGroup>
+        <infoGroup id="9c90-bec7-2930-b741" name="Unique Effects" hidden="false">
+          <profiles>
+            <profile id="72c2-07fd-c095-18db" name="Trained Birds" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">During the Starting Phase choose a Target Enemy model within 8&quot; of this model. That model gains a Stunned Marker.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </infoGroup>
       </infoGroups>
       <categoryLinks>
         <categoryLink id="799b-6bbf-d2ba-af8f" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
@@ -2255,8 +2264,63 @@ The first time in a turn when a model moves into BtB with this model, if this mo
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="14f1-806b-d0b6-d868" type="max"/>
       </constraints>
+      <profiles>
+        <profile id="6247-b8c6-869f-88bf" name="Zenkibo" hidden="false" typeId="6ea2-0f74-4852-4a98" typeName="Character Profile">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="8409-8d55-ce45-a33b">3</characteristic>
+            <characteristic name="Melee Boost" typeId="6a36-e826-18f3-0b25">3</characteristic>
+            <characteristic name="Ranged Pool" typeId="7a01-37c0-4741-672c">3</characteristic>
+            <characteristic name="Ranged Boost" typeId="ff66-ea54-d863-5c17"/>
+            <characteristic name="Move" typeId="af89-242d-625f-9bff">5</characteristic>
+            <characteristic name="Move Boost" typeId="62a6-8125-f293-5c76">2</characteristic>
+            <characteristic name="Ki" typeId="8b76-2b4b-066e-a0c5">1</characteristic>
+            <characteristic name="Ki Boost" typeId="c34e-f8ae-0984-37ac"/>
+            <characteristic name="Ki Cap" typeId="2e88-c65e-4e45-d4c4">6</characteristic>
+            <characteristic name="Wounds" typeId="a1dc-c2c1-e2d2-ca98">5 OOOOO</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6af2-e777-20ce-e060">Small 30mm</characteristic>
+            <characteristic name="Traits" typeId="e742-1b02-09cf-fd97">Armour (1), Cloudwalk, Dodge (1)</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
       <infoGroups>
-        <infoGroup id="9171-17e1-9a23-8d5f" name="Ki Feats" hidden="false"/>
+        <infoGroup id="9171-17e1-9a23-8d5f" name="Ki Feats" hidden="false">
+          <infoLinks>
+            <infoLink id="2fe8-da92-dcff-5c62" name="Blade Finesse" hidden="false" targetId="8f8d-557b-13c4-41bd" type="infoGroup"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="bc44-a815-7bc2-9445" name="Melee Weapon" hidden="false">
+          <profiles>
+            <profile id="6f92-29f7-529b-0853" name="Spear" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+0</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Reach</characteristic>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Drag Defence (1), Push Defence (0)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="a661-11cd-c9d1-f85b" name="Reach" hidden="false" targetId="e28e-d5dd-a262-1101" type="rule"/>
+            <infoLink id="5561-63d6-3cdf-eb36" name="Push Defence" hidden="false" targetId="74fc-a971-d9c2-278c" type="rule"/>
+            <infoLink id="677e-9a2b-28f5-7b20" name="Drag Defence" hidden="false" targetId="be46-98c7-87e8-c024" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="5238-adae-97e0-c65d" name="Unique Effects" hidden="false">
+          <profiles>
+            <profile id="3af6-b015-06cc-02b1" name="Suzume" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">During the Starting Phase, if this model is not in BtB with an Enemy model, Place this model within 1&quot; of its current location and not in the ZoC of an Enemy model.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </infoGroup>
+        <infoGroup id="1636-850f-7fb1-1d0f" name="Traits" hidden="false">
+          <infoLinks>
+            <infoLink id="e6e0-8fd7-37be-c54c" name="Cloudwalk" hidden="false" targetId="538c-1266-626b-fcc9" type="rule"/>
+            <infoLink id="505a-1158-79c2-70f7" name="Armour" hidden="false" targetId="8615-1c63-2242-5746" type="rule"/>
+            <infoLink id="5861-c16e-d000-5e77" name="Dodge " hidden="false" targetId="14d5-d459-5d8a-c73e" type="rule"/>
+          </infoLinks>
+        </infoGroup>
       </infoGroups>
       <categoryLinks>
         <categoryLink id="57c6-af73-740a-e341" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
@@ -2278,8 +2342,42 @@ The first time in a turn when a model moves into BtB with this model, if this mo
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="83b9-eba8-00c0-fbcc" type="max"/>
       </constraints>
       <infoGroups>
-        <infoGroup id="0f96-d996-aed1-af4c" name="Ki Feats" hidden="false"/>
-        <infoGroup id="e982-934c-7f6b-781b" name="Melee Weapon" hidden="false"/>
+        <infoGroup id="0f96-d996-aed1-af4c" name="Ki Feats" hidden="false">
+          <infoLinks>
+            <infoLink id="ce29-cb3b-baa0-196c" name="Precision Strike" hidden="false" targetId="d324-83dc-936d-cb9b" type="infoGroup"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="e982-934c-7f6b-781b" name="Melee Weapon" hidden="false">
+          <profiles>
+            <profile id="72a8-4ea1-08a5-09f3" name="Spear" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">-1</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Reach</characteristic>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Drag Defence (1)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="a083-e0a9-5f7c-1970" name="Reach" hidden="false" targetId="e28e-d5dd-a262-1101" type="rule"/>
+            <infoLink id="8c58-5386-929d-63bb" name="Drag Defence" hidden="false" targetId="be46-98c7-87e8-c024" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="12cd-7697-fe65-f6c0" name="Unique Effects" hidden="false">
+          <profiles>
+            <profile id="eaa2-2c53-bbea-ca6f" name="Suzume" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">During the Starting Phase, if this model is not in BtB with an Enemy model, Place this model within 1&quot; of its current location and not in the ZoC of an Enemy model.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </infoGroup>
+        <infoGroup id="752b-847c-deb9-80f8" name="Traits" hidden="false">
+          <infoLinks>
+            <infoLink id="ac20-df1e-91d8-c127" name="Cloudwalk" hidden="false" targetId="538c-1266-626b-fcc9" type="rule"/>
+            <infoLink id="396e-2129-9f53-f367" name="Armour" hidden="false" targetId="8615-1c63-2242-5746" type="rule"/>
+          </infoLinks>
+        </infoGroup>
       </infoGroups>
       <categoryLinks>
         <categoryLink id="b3ee-c885-790a-b0e5" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
@@ -2294,6 +2392,24 @@ The first time in a turn when a model moves into BtB with this model, if this mo
           <modifiers>
             <modifier type="append" field="name" value="B"/>
           </modifiers>
+          <profiles>
+            <profile id="b3ea-1607-0d98-4960" name="Zephyr Guard B" hidden="false" typeId="6ea2-0f74-4852-4a98" typeName="Character Profile">
+              <characteristics>
+                <characteristic name="Melee Pool" typeId="8409-8d55-ce45-a33b">3</characteristic>
+                <characteristic name="Melee Boost" typeId="6a36-e826-18f3-0b25">3</characteristic>
+                <characteristic name="Ranged Pool" typeId="7a01-37c0-4741-672c">3</characteristic>
+                <characteristic name="Ranged Boost" typeId="ff66-ea54-d863-5c17"/>
+                <characteristic name="Move" typeId="af89-242d-625f-9bff">5</characteristic>
+                <characteristic name="Move Boost" typeId="62a6-8125-f293-5c76">2</characteristic>
+                <characteristic name="Ki" typeId="8b76-2b4b-066e-a0c5">1</characteristic>
+                <characteristic name="Ki Boost" typeId="c34e-f8ae-0984-37ac"/>
+                <characteristic name="Ki Cap" typeId="2e88-c65e-4e45-d4c4">6</characteristic>
+                <characteristic name="Wounds" typeId="a1dc-c2c1-e2d2-ca98">5 OOOOO</characteristic>
+                <characteristic name="Size &amp; Base" typeId="6af2-e777-20ce-e060">Small 30mm</characteristic>
+                <characteristic name="Traits" typeId="e742-1b02-09cf-fd97">Armour (1), Cloudwalk</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
         </entryLink>
         <entryLink id="51a3-30ea-52b6-0d21" name="Zephyr Guard" hidden="false" collective="false" import="true" targetId="e281-eb25-ed0e-d987" type="selectionEntry">
           <modifiers>
@@ -2306,6 +2422,24 @@ The first time in a turn when a model moves into BtB with this model, if this mo
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="629b-1ee7-e47e-a468" type="min"/>
           </constraints>
+          <profiles>
+            <profile id="00dc-3273-1dd1-1e8a" name="Zephyr Guard A" hidden="false" typeId="6ea2-0f74-4852-4a98" typeName="Character Profile">
+              <characteristics>
+                <characteristic name="Melee Pool" typeId="8409-8d55-ce45-a33b">3</characteristic>
+                <characteristic name="Melee Boost" typeId="6a36-e826-18f3-0b25">3</characteristic>
+                <characteristic name="Ranged Pool" typeId="7a01-37c0-4741-672c">3</characteristic>
+                <characteristic name="Ranged Boost" typeId="ff66-ea54-d863-5c17"/>
+                <characteristic name="Move" typeId="af89-242d-625f-9bff">5</characteristic>
+                <characteristic name="Move Boost" typeId="62a6-8125-f293-5c76">2</characteristic>
+                <characteristic name="Ki" typeId="8b76-2b4b-066e-a0c5">1</characteristic>
+                <characteristic name="Ki Boost" typeId="c34e-f8ae-0984-37ac"/>
+                <characteristic name="Ki Cap" typeId="2e88-c65e-4e45-d4c4">6</characteristic>
+                <characteristic name="Wounds" typeId="a1dc-c2c1-e2d2-ca98">5 OOOOO</characteristic>
+                <characteristic name="Size &amp; Base" typeId="6af2-e777-20ce-e060">Small 30mm</characteristic>
+                <characteristic name="Traits" typeId="e742-1b02-09cf-fd97">Armour (1), Cloudwalk</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
         </entryLink>
       </entryLinks>
       <costs>
@@ -2700,7 +2834,7 @@ Permitted [Ronin Kami, Small Tengu, Tribesmen]</characteristic>
               <characteristics>
                 <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+0</characteristic>
                 <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Reach</characteristic>
-                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Puch Defence (0)</characteristic>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Push Defence (0)</characteristic>
                 <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
               </characteristics>
             </profile>
@@ -3125,7 +3259,7 @@ Until the End Phase, Enemy models gain Weak when making Size Tests.</characteris
                 <characteristic name="Cost" typeId="e410-b220-64e5-7953">4</characteristic>
                 <characteristic name="Timing" typeId="b9bf-562a-fe26-cb29">Active</characteristic>
                 <characteristic name="Subject" typeId="47b8-f739-9d50-2e45">Personal</characteristic>
-                <characteristic name="Limitation" typeId="870e-79e4-80ee-c0cc"></characteristic>
+                <characteristic name="Limitation" typeId="870e-79e4-80ee-c0cc"/>
                 <characteristic name="Ki Feat Description" typeId="3886-242b-fb70-5c88">This model gains Combo Attack (0).
 If this model&apos;s Melee Attack is successful and causes any Damage the Target gains a Blind Marker.
 This Ki Feat lasts until the end of the current Melee Exchange.</characteristic>
