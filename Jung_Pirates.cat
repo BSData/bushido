@@ -4,6 +4,11 @@
     <categoryEntry id="258a-e1a8-8db1-9635" name="Ki&lt;2" hidden="true"/>
     <categoryEntry id="f6c9-50fa-a9d3-e9f3" name="Ranged Weapon" hidden="true"/>
     <categoryEntry id="1354-9751-9f78-9ff4" name="Duri" hidden="false"/>
+    <categoryEntry id="cb2f-d783-2ab5-8337" name="Max. Juhin" hidden="false">
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e178-2ff4-f3a4-c8f5" type="max"/>
+      </constraints>
+    </categoryEntry>
   </categoryEntries>
   <selectionEntries>
     <selectionEntry id="21b7-f8af-69c4-6c0b" name="Blow the Man Down" hidden="false" collective="false" import="true" type="upgrade">
@@ -1083,22 +1088,17 @@ If this model uses its Scout trait, it begins the game Prone with 2 Ki Tokens.</
     </selectionEntry>
     <selectionEntry id="0f03-2a1b-83a7-dbc5" name="Fujiwaro Ran" hidden="false" collective="false" import="true" type="model">
       <modifiers>
+        <modifier type="add" field="category" value="cb2f-d783-2ab5-8337">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="aaa8-4503-68d2-4665" type="atLeast"/>
+          </conditions>
+        </modifier>
         <modifier type="set" field="hidden" value="true">
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
                 <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4e07-8c38-7f78-6e5d" type="equalTo"/>
                 <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="068d-6ee9-fa4a-a8bf" type="equalTo"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-        <modifier type="set" field="03ef-c16d-3fcf-797a" value="0.0">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="aaa8-4503-68d2-4665" type="equalTo"/>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="72e6-8f13-65b3-a7ca" type="atLeast"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -1892,22 +1892,17 @@ If this model has no Ammo Tokens on its Net Weapon it loses the Net Weapon.</cha
     </selectionEntry>
     <selectionEntry id="672c-e5d6-819b-9b11" name="Yuji" hidden="false" collective="false" import="true" type="model">
       <modifiers>
+        <modifier type="add" field="category" value="cb2f-d783-2ab5-8337">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="aaa8-4503-68d2-4665" type="atLeast"/>
+          </conditions>
+        </modifier>
         <modifier type="set" field="hidden" value="true">
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
                 <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="068d-6ee9-fa4a-a8bf" type="equalTo"/>
                 <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1b47-eda0-6ebd-dc1a" type="equalTo"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-        <modifier type="set" field="df02-bd4e-45e3-aa96" value="0.0">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="aaa8-4503-68d2-4665" type="equalTo"/>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="72e6-8f13-65b3-a7ca" type="atLeast"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -2051,15 +2046,10 @@ Exclusion [Kancho, More than 1 Juhin]</characteristic>
             </conditionGroup>
           </conditionGroups>
         </modifier>
-        <modifier type="set" field="f47f-7c44-f0c2-252d" value="0.0">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="aaa8-4503-68d2-4665" type="equalTo"/>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="72e6-8f13-65b3-a7ca" type="atLeast"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
+        <modifier type="add" field="category" value="cb2f-d783-2ab5-8337">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="aaa8-4503-68d2-4665" type="atLeast"/>
+          </conditions>
         </modifier>
       </modifiers>
       <constraints>
