@@ -113,6 +113,21 @@
         <characteristicType id="6fb8-4540-ed80-9332" name="Traits"/>
       </characteristicTypes>
     </profileType>
+    <profileType id="08e8-3cf2-6d1d-b8f0" name="Character">
+      <characteristicTypes>
+        <characteristicType id="eea0-d5a3-2540-a974" name="Melee Pool"/>
+        <characteristicType id="4d43-9498-6fa0-8277" name="Melee Boost"/>
+        <characteristicType id="54f1-7472-e609-b4eb" name="Ranged Pool"/>
+        <characteristicType id="5454-b765-a65d-8a33" name="Ranged Boost"/>
+        <characteristicType id="91b7-833e-fd8e-a620" name="Move"/>
+        <characteristicType id="f168-6d2b-e60e-28ac" name="Move Boost"/>
+        <characteristicType id="3969-9568-a914-6854" name="Ki"/>
+        <characteristicType id="5b71-1ed7-9aa7-039c" name="Ki Boost"/>
+        <characteristicType id="9a7e-38d3-92c5-a672" name="Ki Cap"/>
+        <characteristicType id="2ee5-ab93-4a78-ea29" name="Wounds"/>
+        <characteristicType id="6cf9-c5fd-3e3c-b35b" name="Size &amp; Base"/>
+      </characteristicTypes>
+    </profileType>
   </profileTypes>
   <categoryEntries>
     <categoryEntry id="d360-71aa-ca22-ba3c" name="Event Cards" hidden="false"/>
