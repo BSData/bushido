@@ -55,7 +55,7 @@
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="3.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="9400-6b98-97ac-197d" name="Rice Bail Barricades" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="9400-6b98-97ac-197d" name="Rice Bail Barricades" hidden="false" collective="false" import="true" type="model">
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d84d-7320-8aa2-0148" type="max"/>
       </constraints>
@@ -97,7 +97,7 @@ It may be placed in Scenario Zones and within 2&quot; of the edge of the table.<
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="d214-c204-4ae5-8675" name="Spirit Catcher Wind Chime" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="d214-c204-4ae5-8675" name="Spirit Catcher Wind Chime" hidden="false" collective="false" import="true" type="model">
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c7df-6568-db00-e0f3" type="max"/>
       </constraints>
@@ -388,7 +388,7 @@ All Soulless models gain Insignificant until the End Phase.</characteristic>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="49fb-d207-3a25-9327" name="Golden Sentinel" hidden="false" collective="false" import="true" type="model">
+    <selectionEntry id="49fb-d207-3a25-9327" name="Golden Sentinel" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
         <modifier type="set" field="hidden" value="true">
           <conditionGroups>
@@ -453,7 +453,7 @@ This model cannot declare Melee or Charge Actions Targeting Imperial models.</ch
         <categoryLink id="0198-2e1d-0df1-4443" name="New CategoryLink" hidden="false" targetId="9fba-f50b-c8f7-8396" primary="true"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="a218-b749-8176-e97c" name="Golden Sentinel A" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="a218-b749-8176-e97c" name="Golden Sentinel A" hidden="false" collective="false" import="true" type="model">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5074-0d90-f751-1fa3" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="79f3-6b8b-69c4-3648" type="min"/>
@@ -476,6 +476,12 @@ This model cannot declare Melee or Charge Actions Targeting Imperial models.</ch
               </characteristics>
             </profile>
           </profiles>
+          <categoryLinks>
+            <categoryLink id="db55-2516-155f-e26e" name="Armour" hidden="false" targetId="f322-702a-ff62-b37e" primary="false"/>
+            <categoryLink id="ec6b-9f21-6c22-6e95" name="Samurai" hidden="false" targetId="e12a-f782-3281-7444" primary="false"/>
+            <categoryLink id="effa-b9ff-56fa-8e58" name="Non-Unique" hidden="false" targetId="d181-219d-3add-d47b" primary="false"/>
+            <categoryLink id="2ec1-40c9-e3f6-bb06" name="Imperial" hidden="false" targetId="1a5c-7165-4266-4fbc" primary="false"/>
+          </categoryLinks>
           <entryLinks>
             <entryLink id="e797-2bb0-d0fa-687c" name="Ronin Enhancements" hidden="false" collective="false" import="true" targetId="f486-4498-03e3-c397" type="selectionEntryGroup"/>
           </entryLinks>
@@ -483,7 +489,7 @@ This model cannot declare Melee or Charge Actions Targeting Imperial models.</ch
             <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="38c9-5ef9-915a-a58b" name="Golden Sentinel B" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="38c9-5ef9-915a-a58b" name="Golden Sentinel B" hidden="false" collective="false" import="true" type="model">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e91b-bea6-0d93-4d77" type="max"/>
           </constraints>
@@ -505,6 +511,12 @@ This model cannot declare Melee or Charge Actions Targeting Imperial models.</ch
               </characteristics>
             </profile>
           </profiles>
+          <categoryLinks>
+            <categoryLink id="fe16-6553-5036-14e4" name="Armour" hidden="false" targetId="f322-702a-ff62-b37e" primary="false"/>
+            <categoryLink id="feb3-9678-d76e-940f" name="Imperial" hidden="false" targetId="1a5c-7165-4266-4fbc" primary="false"/>
+            <categoryLink id="1436-e88d-0cbe-00ca" name="Non-Unique" hidden="false" targetId="d181-219d-3add-d47b" primary="false"/>
+            <categoryLink id="90b0-6f80-7d9e-2dd9" name="Samurai" hidden="false" targetId="e12a-f782-3281-7444" primary="false"/>
+          </categoryLinks>
           <entryLinks>
             <entryLink id="3b47-0adf-f967-02e4" name="Ronin Enhancements" hidden="false" collective="false" import="true" targetId="f486-4498-03e3-c397" type="selectionEntryGroup"/>
           </entryLinks>
@@ -1845,6 +1857,7 @@ If this model becomes Prone, it loses all Ki tokens and gains a Spirit Block Mar
         <categoryLink id="f8a8-2cac-00bc-070a" name="Yokai" hidden="false" targetId="8a19-8c2b-46a8-4086" primary="false"/>
         <categoryLink id="5ece-4633-4354-dcf2" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
         <categoryLink id="0ea3-f486-268a-9206" name="New CategoryLink" hidden="false" targetId="9fba-f50b-c8f7-8396" primary="true"/>
+        <categoryLink id="4a58-f50b-1422-e96f" name="Armour" hidden="false" targetId="f322-702a-ff62-b37e" primary="false"/>
       </categoryLinks>
       <entryLinks>
         <entryLink id="5ead-2089-53e3-e81e" name="Ronin Enhancements" hidden="false" collective="false" import="true" targetId="f486-4498-03e3-c397" type="selectionEntryGroup"/>
@@ -1965,6 +1978,7 @@ If this model becomes Prone, it loses all Ki tokens and gains a Spirit Block Mar
         <categoryLink id="764b-24d7-1d67-83e1" name="Teishin" hidden="false" targetId="216a-c1c3-66df-b497" primary="false"/>
         <categoryLink id="cea8-d4cf-daa2-03fc" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
         <categoryLink id="8d74-113e-4862-eb19" name="New CategoryLink" hidden="false" targetId="9fba-f50b-c8f7-8396" primary="true"/>
+        <categoryLink id="96d0-2bb9-33db-4754" name="Armour" hidden="false" targetId="f322-702a-ff62-b37e" primary="false"/>
       </categoryLinks>
       <entryLinks>
         <entryLink id="ce14-d722-d980-83a9" name="Ronin Enhancements" hidden="false" collective="false" import="true" targetId="f486-4498-03e3-c397" type="selectionEntryGroup"/>
@@ -2300,6 +2314,7 @@ If this model becomes Prone, it loses all Ki tokens and gains a Spirit Block Mar
         <categoryLink id="e22a-c687-b64a-b511" name="Samurai" hidden="false" targetId="e12a-f782-3281-7444" primary="false"/>
         <categoryLink id="24a8-7c4d-230d-17a6" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
         <categoryLink id="7276-8d85-0ff3-bb42" name="New CategoryLink" hidden="false" targetId="9fba-f50b-c8f7-8396" primary="true"/>
+        <categoryLink id="4236-aa79-d16c-18ae" name="Brutal" hidden="false" targetId="f62f-dd0b-4f06-06a6" primary="false"/>
       </categoryLinks>
       <entryLinks>
         <entryLink id="78b0-d9ad-9e53-092a" name="Enhancements" hidden="false" collective="false" import="true" targetId="f486-4498-03e3-c397" type="selectionEntryGroup"/>
@@ -2308,7 +2323,7 @@ If this model becomes Prone, it loses all Ki tokens and gains a Spirit Block Mar
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="16.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="fe51-839e-8885-7850" name="Silverback" hidden="false" collective="false" import="true" type="model">
+    <selectionEntry id="fe51-839e-8885-7850" name="Silverback" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
         <modifier type="set" field="hidden" value="true">
           <conditionGroups>
@@ -2385,6 +2400,10 @@ If this model becomes Prone, it loses all Ki tokens and gains a Spirit Block Mar
               </characteristics>
             </profile>
           </profiles>
+          <categoryLinks>
+            <categoryLink id="27e5-640a-0021-7746" name="Animal" hidden="false" targetId="c382-9ab3-9924-e30a" primary="false"/>
+            <categoryLink id="1444-6c0b-d667-7e33" name="Brutal" hidden="false" targetId="f62f-dd0b-4f06-06a6" primary="false"/>
+          </categoryLinks>
           <costs>
             <cost name=" Rice" typeId="a111-8656-5c05-7415" value="10.0"/>
           </costs>
@@ -2411,6 +2430,10 @@ If this model becomes Prone, it loses all Ki tokens and gains a Spirit Block Mar
               </characteristics>
             </profile>
           </profiles>
+          <categoryLinks>
+            <categoryLink id="2630-0162-0711-fab5" name="Animal" hidden="false" targetId="c382-9ab3-9924-e30a" primary="false"/>
+            <categoryLink id="4be3-7f74-7094-03d0" name="Brutal" hidden="false" targetId="f62f-dd0b-4f06-06a6" primary="false"/>
+          </categoryLinks>
           <costs>
             <cost name=" Rice" typeId="a111-8656-5c05-7415" value="10.0"/>
           </costs>
@@ -2490,7 +2513,7 @@ If this model becomes Prone, it loses all Ki tokens and gains a Spirit Block Mar
             <infoLink id="ad07-a7e9-b5c2-9160" name="Counterstrike Defence " hidden="false" targetId="136e-4c77-dc59-4c6e" type="rule"/>
           </infoLinks>
         </infoGroup>
-        <infoGroup id="aecc-16a8-03cd-c605" name="Ki Feats" hidden="false">
+        <infoGroup id="aecc-16a8-03cd-c605" name="Unique Effects" hidden="false">
           <infoLinks>
             <infoLink id="addf-5c6e-012d-123e" name="Outcast" hidden="false" targetId="52b5-d398-01f2-8ed1" type="profile"/>
           </infoLinks>
@@ -2757,6 +2780,7 @@ Against Durable models, instead of making a Damage Roll, always cause 1 Damage (
         <categoryLink id="8b87-e07d-3b40-a327" name="Seishin Na Goei" hidden="false" targetId="31c6-0ccd-777b-5dbc" primary="false"/>
         <categoryLink id="db21-123b-1891-011b" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
         <categoryLink id="f26d-f4f5-1655-d4a3" name="New CategoryLink" hidden="false" targetId="9fba-f50b-c8f7-8396" primary="true"/>
+        <categoryLink id="cf1b-90dc-190b-b654" name="Armour" hidden="false" targetId="f322-702a-ff62-b37e" primary="false"/>
       </categoryLinks>
       <entryLinks>
         <entryLink id="22f8-8fb6-8b28-7414" name="Ronin Enhancements" hidden="false" collective="false" import="true" targetId="f486-4498-03e3-c397" type="selectionEntryGroup"/>
@@ -2864,6 +2888,8 @@ Against Durable models, instead of making a Damage Roll, always cause 1 Damage (
         <categoryLink id="fac2-dfe7-8c84-4777" name="Samurai" hidden="false" targetId="e12a-f782-3281-7444" primary="false"/>
         <categoryLink id="cb71-a82f-670f-7ffc" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
         <categoryLink id="d67e-8b7c-fa39-fcfd" name="New CategoryLink" hidden="false" targetId="9fba-f50b-c8f7-8396" primary="true"/>
+        <categoryLink id="b9ba-cd39-e9c0-e4d9" name="Armour" hidden="false" targetId="f322-702a-ff62-b37e" primary="false"/>
+        <categoryLink id="c803-a9c2-b3f0-8393" name="Brutal" hidden="false" targetId="f62f-dd0b-4f06-06a6" primary="false"/>
       </categoryLinks>
       <entryLinks>
         <entryLink id="9379-f3b1-8ef7-3e2c" name="Ronin Enhancements" hidden="false" collective="false" import="true" targetId="f486-4498-03e3-c397" type="selectionEntryGroup"/>
@@ -3576,6 +3602,7 @@ While this model is in play, other models with marked Wound boxes gain +1 Melee 
         <categoryLink id="1820-9bb1-baa0-33a1" name="Samurai" hidden="false" targetId="e12a-f782-3281-7444" primary="false"/>
         <categoryLink id="45fa-af8e-d91e-a7de" name="Non-Unique" hidden="false" targetId="d181-219d-3add-d47b" primary="false"/>
         <categoryLink id="4cf6-a3f3-e143-ca97" name="New CategoryLink" hidden="false" targetId="9fba-f50b-c8f7-8396" primary="true"/>
+        <categoryLink id="adea-18e6-528d-27a3" name="Soulless" hidden="false" targetId="0abe-c3e6-4300-478f" primary="false"/>
       </categoryLinks>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="17.0"/>
@@ -3706,7 +3733,7 @@ While this model is in play, other models with marked Wound boxes gain +1 Melee 
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="15.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="d998-94b8-fd53-f8ce" name="Baichi" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="d998-94b8-fd53-f8ce" name="Baichi" hidden="false" collective="false" import="true" type="model">
       <modifiers>
         <modifier type="set" field="hidden" value="true">
           <conditionGroups>
@@ -3910,6 +3937,7 @@ This model can only be recruited into a Warband that contains all three Blood Br
         <categoryLink id="ab10-3389-93c3-0b3b" name="North Star" hidden="false" targetId="2bf8-b13c-a906-baea" primary="false"/>
         <categoryLink id="facc-5553-ce00-4926" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
         <categoryLink id="9424-11ee-b873-3c97" name="New CategoryLink" hidden="false" targetId="9fba-f50b-c8f7-8396" primary="true"/>
+        <categoryLink id="9410-2d32-6653-45c3" name="Armour" hidden="false" targetId="f322-702a-ff62-b37e" primary="false"/>
       </categoryLinks>
       <entryLinks>
         <entryLink id="b3d6-45a0-ddad-2322" name="Ronin Enhancements" hidden="false" collective="false" import="true" targetId="f486-4498-03e3-c397" type="selectionEntryGroup"/>
@@ -4005,6 +4033,7 @@ This model can only be recruited into a Warband that contains all three Blood Br
         <categoryLink id="1c3e-0a7b-5c8e-12b7" name="Onisho" hidden="false" targetId="3507-42ea-bf26-b23d" primary="false"/>
         <categoryLink id="7755-746f-07bf-b564" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
         <categoryLink id="efbf-a6f5-a94d-b274" name="New CategoryLink" hidden="false" targetId="9fba-f50b-c8f7-8396" primary="true"/>
+        <categoryLink id="aef3-d15f-80be-71d2" name="Brutal" hidden="false" targetId="f62f-dd0b-4f06-06a6" primary="false"/>
       </categoryLinks>
       <entryLinks>
         <entryLink id="b3b5-a1df-8fb6-431e" name="Ronin Enhancements" hidden="false" collective="false" import="true" targetId="f486-4498-03e3-c397" type="selectionEntryGroup"/>
@@ -4013,7 +4042,7 @@ This model can only be recruited into a Warband that contains all three Blood Br
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="18.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="f25f-493d-4123-b0ee" name="Giant Eagle" hidden="false" collective="false" import="true" type="model">
+    <selectionEntry id="f25f-493d-4123-b0ee" name="Giant Eagle" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
         <modifier type="set" field="hidden" value="true">
           <conditionGroups>
@@ -4210,6 +4239,7 @@ This model can only be recruited into a Warband that contains all three Blood Br
       </infoGroups>
       <categoryLinks>
         <categoryLink id="02cd-bb84-d4a7-ce48" name="Buto" hidden="false" targetId="48d9-12ca-aeef-7295" primary="false"/>
+        <categoryLink id="2a7a-b33e-e95d-0532" name="Brutal" hidden="false" targetId="f62f-dd0b-4f06-06a6" primary="false"/>
       </categoryLinks>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="19.0"/>
@@ -4261,7 +4291,23 @@ This model can only be recruited into a Warband that contains all three Blood Br
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="2437-81ed-3b75-d23b" name="!DRAFT Demon-Face Mask" hidden="true" collective="false" import="true" type="upgrade">
+    <selectionEntry id="2437-81ed-3b75-d23b" name="!DRAFT Demon-Face Mask" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c382-9ab3-9924-e30a" type="instanceOf"/>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d7c5-a2b9-4696-fd33" type="instanceOf"/>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6639-615e-f1ab-bc64" type="instanceOf"/>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7435-856f-ece2-fe58" type="instanceOf"/>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f322-702a-ff62-b37e" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" field="hidden" value="true"/>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d6d3-4882-9b5e-0cd0" type="max"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="13aa-2218-71ce-a717" type="max"/>
@@ -4284,7 +4330,23 @@ This model can only be recruited into a Warband that contains all three Blood Br
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="38b5-a50d-24f0-4435" name="!DRAFT Minimoto Steel Helm" hidden="true" collective="false" import="true" type="upgrade">
+    <selectionEntry id="38b5-a50d-24f0-4435" name="!DRAFT Minimoto Steel Helm" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c382-9ab3-9924-e30a" type="instanceOf"/>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d7c5-a2b9-4696-fd33" type="instanceOf"/>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6639-615e-f1ab-bc64" type="instanceOf"/>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7435-856f-ece2-fe58" type="instanceOf"/>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f322-702a-ff62-b37e" type="notInstanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" field="hidden" value="true"/>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4ea2-c4cd-cb8a-0384" type="max"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1fa8-8709-adcb-9af3" type="max"/>
@@ -4325,7 +4387,23 @@ This model can only be recruited into a Warband that contains all three Blood Br
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="fcc9-c236-babe-2239" name="!DRAFT Triangle Knife" hidden="true" collective="false" import="true" type="upgrade">
+    <selectionEntry id="fcc9-c236-babe-2239" name="!DRAFT Triangle Knife" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true"/>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c382-9ab3-9924-e30a" type="instanceOf"/>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d7c5-a2b9-4696-fd33" type="instanceOf"/>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6639-615e-f1ab-bc64" type="instanceOf"/>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7435-856f-ece2-fe58" type="instanceOf"/>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="57a9-2b8a-3729-1ad8" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2cc6-1f9c-b4fd-5e13" type="max"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="29a8-c48c-3274-b61b" type="max"/>
@@ -4352,7 +4430,23 @@ This model can only be recruited into a Warband that contains all three Blood Br
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="e916-ca9f-75ef-1c24" name="!DRAFT Finesse" hidden="true" collective="false" import="true" type="upgrade">
+    <selectionEntry id="e916-ca9f-75ef-1c24" name="!DRAFT Finesse" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c382-9ab3-9924-e30a" type="instanceOf"/>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d7c5-a2b9-4696-fd33" type="instanceOf"/>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6639-615e-f1ab-bc64" type="instanceOf"/>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7435-856f-ece2-fe58" type="instanceOf"/>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7ad5-75e1-6134-ca44" type="notInstanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" field="hidden" value="true"/>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="069a-ee3c-d0fb-6f68" type="max"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8591-1f0c-9960-90ad" type="max"/>

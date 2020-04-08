@@ -122,7 +122,7 @@ Any numeric values will be 1.</characteristic>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="ef56-0db4-3990-68c9" name="Cursed Honden" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="ef56-0db4-3990-68c9" name="Cursed Honden" hidden="false" collective="false" import="true" type="model">
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c6aa-b9fd-0daf-86d7" type="max"/>
       </constraints>
@@ -146,7 +146,7 @@ If any Ki is Removed in this way, a Friendly Kami model within 4&quot; of this t
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="5b3c-abae-1d5a-8991" name="Haunted Well" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="5b3c-abae-1d5a-8991" name="Haunted Well" hidden="false" collective="false" import="true" type="model">
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fc54-720c-1436-409f" type="max"/>
       </constraints>
@@ -172,7 +172,7 @@ If any Ki is Removed in this way, a Friendly Kami model within 4&quot; of this t
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="89f0-c813-f394-6dd9" name="Desecrated Grave" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="89f0-c813-f394-6dd9" name="Desecrated Grave" hidden="false" collective="false" import="true" type="model">
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="27d0-6835-5b6b-bf51" type="max"/>
       </constraints>
@@ -197,7 +197,7 @@ Any models that are Deployed in this way do not generate Activation Markers in t
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="4.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="4582-a96b-a921-a81e" name="Refuse Pile" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="4582-a96b-a921-a81e" name="Refuse Pile" hidden="false" collective="false" import="true" type="model">
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="53d5-c17c-9eb6-6ab7" type="max"/>
       </constraints>
@@ -667,6 +667,7 @@ When this model causes an Enemy model to be removed from play as a result of a M
         <categoryLink id="6e94-45e4-63fa-0199" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
         <categoryLink id="de82-5107-e99c-1359" name="Kairai" hidden="false" targetId="26f6-e547-6d94-8b70" primary="false"/>
         <categoryLink id="7d98-b234-c313-a6ae" name="Oni" hidden="false" targetId="4864-a322-cefd-fbfb" primary="false"/>
+        <categoryLink id="24c2-1bb3-3b7e-2f9b" name="Brutal" hidden="false" targetId="f62f-dd0b-4f06-06a6" primary="false"/>
       </categoryLinks>
       <entryLinks>
         <entryLink id="6d0a-f823-9b80-8e77" name="Enhancements" hidden="false" collective="false" import="true" targetId="ef93-ecd4-88c1-9224" type="selectionEntryGroup"/>
@@ -1268,6 +1269,7 @@ Wounds caused by this effect ignore Armor and Tough.</characteristic>
         <categoryLink id="7214-fade-ed9c-60b1" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
         <categoryLink id="f4b7-4774-97dc-aed9" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
         <categoryLink id="e334-31a4-5bde-a0b5" name="Kairai" hidden="false" targetId="26f6-e547-6d94-8b70" primary="false"/>
+        <categoryLink id="b046-fb52-30c7-0439" name="Armour" hidden="false" targetId="f322-702a-ff62-b37e" primary="false"/>
       </categoryLinks>
       <entryLinks>
         <entryLink id="437e-e68d-e93b-a8d0" name="Enhancements" hidden="false" collective="false" import="true" targetId="ef93-ecd4-88c1-9224" type="selectionEntryGroup"/>
@@ -1507,6 +1509,7 @@ Models that fail gain Vengeance [Rokuro] until the action is resolved.</characte
         <categoryLink id="1be7-2f0a-cf1d-ad88" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
         <categoryLink id="7706-f484-9afe-cadd" name="Tengu" hidden="false" targetId="6da4-f657-173c-c135" primary="false"/>
         <categoryLink id="a6bb-50eb-fcb3-3f90" name="Cultist" hidden="false" targetId="3522-14fa-d48f-3e16" primary="false"/>
+        <categoryLink id="4ab0-2ef0-26c3-bd81" name="Brutal" hidden="false" targetId="f62f-dd0b-4f06-06a6" primary="false"/>
       </categoryLinks>
       <entryLinks>
         <entryLink id="89ca-6a31-700d-a541" name="Enhancements" hidden="false" collective="false" import="true" targetId="ef93-ecd4-88c1-9224" type="selectionEntryGroup"/>
@@ -1920,7 +1923,7 @@ If this model is removed from play, also remove any Friendly Envy from play.</ch
             <characteristic name="Move Boost" typeId="62a6-8125-f293-5c76"/>
             <characteristic name="Ki" typeId="8b76-2b4b-066e-a0c5">1</characteristic>
             <characteristic name="Ki Boost" typeId="c34e-f8ae-0984-37ac"/>
-            <characteristic name="Ki Cap" typeId="2e88-c65e-4e45-d4c4">3</characteristic>
+            <characteristic name="Ki Cap" typeId="2e88-c65e-4e45-d4c4">6</characteristic>
             <characteristic name="Wounds" typeId="a1dc-c2c1-e2d2-ca98">5 OOOOO</characteristic>
             <characteristic name="Size &amp; Base" typeId="6af2-e777-20ce-e060">Tiny 30mm</characteristic>
             <characteristic name="Traits" typeId="e742-1b02-09cf-fd97">Camouflage (3&quot;), Fear (5), Lightfooted, Regenerate (2), Sixth Sense, Tiny</characteristic>
@@ -2293,7 +2296,7 @@ If this model is removed from play, also remove any Friendly Envy from play.</ch
             <characteristic name="Ki Cap" typeId="2e88-c65e-4e45-d4c4">10</characteristic>
             <characteristic name="Wounds" typeId="a1dc-c2c1-e2d2-ca98">Special</characteristic>
             <characteristic name="Size &amp; Base" typeId="6af2-e777-20ce-e060">Huge 50mm</characteristic>
-            <characteristic name="Traits" typeId="e742-1b02-09cf-fd97">Aloof, Armor (2), Aware, Dread (1),Fear (6),  Huge, Immune (Prone), Intangible, Kami, Soulless</characteristic>
+            <characteristic name="Traits" typeId="e742-1b02-09cf-fd97">Aloof, Armour (2), Aware, Dread (1),Fear (6),  Huge, Immune (Prone), Intangible, Kami, Soulless</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -2351,6 +2354,8 @@ If this model is removed from play, also remove any Friendly Envy from play.</ch
         <categoryLink id="14d8-1b60-ba08-dbe0" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
         <categoryLink id="6086-c74a-4126-a8d8" name="Kami" hidden="false" targetId="6639-615e-f1ab-bc64" primary="false"/>
         <categoryLink id="a00a-551f-ac90-b19d" name="Major" hidden="false" targetId="55f7-c1ef-44fe-3e0c" primary="false"/>
+        <categoryLink id="6102-787c-9d2f-1be9" name="Soulless" hidden="false" targetId="0abe-c3e6-4300-478f" primary="false"/>
+        <categoryLink id="1c35-4f2f-78d8-5d06" name="Armour" hidden="false" targetId="f322-702a-ff62-b37e" primary="false"/>
       </categoryLinks>
       <entryLinks>
         <entryLink id="c0fb-954d-9214-e446" name="Enhancements" hidden="false" collective="false" import="true" targetId="ef93-ecd4-88c1-9224" type="selectionEntryGroup"/>
@@ -2531,7 +2536,7 @@ If a model with a Death Sentence Marker is Killed this model Heals two Wounds.</
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="10.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="3cdc-79da-a124-73ad" name="Risen Karai" hidden="false" collective="false" import="true" type="model">
+    <selectionEntry id="3cdc-79da-a124-73ad" name="Risen Karai" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
         <modifier type="set" field="hidden" value="true">
           <conditionGroups>
@@ -2698,7 +2703,7 @@ In the End Phase, if this model is not in BtB with another Kairai this model bec
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="19b3-2f4f-088d-dd22" name="Kusatta Karai" hidden="false" collective="false" import="true" type="model">
+    <selectionEntry id="19b3-2f4f-088d-dd22" name="Kusatta Karai" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
         <modifier type="set" field="hidden" value="true">
           <conditionGroups>
@@ -2816,7 +2821,7 @@ When this model is reduced to 0 Wounds remove it from play and each model within
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="8d24-db2e-eab9-9b5e" name="Karai Villagers" hidden="false" collective="false" import="true" type="model">
+    <selectionEntry id="8d24-db2e-eab9-9b5e" name="Karai Villagers" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
         <modifier type="set" field="hidden" value="true">
           <conditionGroups>
@@ -2927,7 +2932,7 @@ When this model is reduced to 0 Wounds remove it from play and each model within
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="24c5-fdd3-d030-a94d" name="Karai Militia" hidden="false" collective="false" import="true" type="model">
+    <selectionEntry id="24c5-fdd3-d030-a94d" name="Karai Militia" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
         <modifier type="set" field="hidden" value="true">
           <conditionGroups>
@@ -3038,7 +3043,7 @@ When this model is reduced to 0 Wounds remove it from play and each model within
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="3507-5198-d538-b5a6" name="Kairai Farmers" hidden="false" collective="false" import="true" type="model">
+    <selectionEntry id="3507-5198-d538-b5a6" name="Kairai Farmers" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
         <modifier type="set" field="hidden" value="true">
           <conditionGroups>
@@ -3146,7 +3151,7 @@ When this model is reduced to 0 Wounds remove it from play and each model within
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="fe8e-dec2-03e3-49e9" name="Small Rat Swarms" hidden="false" collective="false" import="true" type="model">
+    <selectionEntry id="fe8e-dec2-03e3-49e9" name="Small Rat Swarms" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
         <modifier type="set" field="hidden" value="true">
           <conditionGroups>
@@ -3280,7 +3285,7 @@ When this model is reduced to 0 Wounds remove it from play and each model within
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="1f41-4244-304e-4eb0" name="Large Rat Swarms" hidden="false" collective="false" import="true" type="model">
+    <selectionEntry id="1f41-4244-304e-4eb0" name="Large Rat Swarms" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
         <modifier type="set" field="hidden" value="true">
           <conditionGroups>
@@ -3402,7 +3407,7 @@ During the End Phase you may remove a Friendly Rat model in BtB with this model 
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="2fee-f570-7e43-b0f1" name="Plague Rats" hidden="false" collective="false" import="true" type="model">
+    <selectionEntry id="2fee-f570-7e43-b0f1" name="Plague Rats" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
         <modifier type="set" field="hidden" value="true">
           <conditionGroups>
@@ -3531,7 +3536,7 @@ During the End Phase you may remove a Friendly Rat model in BtB with this model 
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="92ae-3122-7789-3db1" name="Armoured Kairai" hidden="false" collective="false" import="true" type="model">
+    <selectionEntry id="92ae-3122-7789-3db1" name="Armoured Kairai" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
         <modifier type="set" field="hidden" value="true">
           <conditionGroups>
@@ -4662,7 +4667,7 @@ Permitted [Yuta models, Kairai, Burakumin, Gashadokuro]</characteristic>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="0aee-81a8-92eb-dbc4" name="Profane Idol" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="0aee-81a8-92eb-dbc4" name="Profane Idol" hidden="false" collective="false" import="true" type="model">
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b744-e3b4-7615-335b" type="max"/>
       </constraints>
@@ -4722,6 +4727,75 @@ Any time a Yuta model needs to spend Ki Tokens, it may spend them from this card
       </categoryLinks>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="e478-1f8d-47a4-2a07" name="!DRAFT Crush the Oppressed" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true"/>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="889b-e26b-5081-ab47" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="2837-fc76-94f6-0a31" name="Crush the Oppressed" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
+          <characteristics>
+            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">Double the number (retaining the same values) of all State Markers on all models.
+Note this will not affect Markers that are limited to 1 per model.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="27d8-d4bf-a838-9bbb" name="New CategoryLink" hidden="false" targetId="d360-71aa-ca22-ba3c" primary="true"/>
+      </categoryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="3.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="8ae5-064b-98fb-892a" name="!DRAFT Rest in Peace" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true"/>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="65fd-9d26-e8b5-da2e" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="6f51-efd9-84f8-7830" name="Rest in Peace" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
+          <characteristics>
+            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">Show this card to your Opponent before the game. They choose to play it or not.
+Tadao begins the game with 4 Ki Tokens and can never be Leached from.
+All Minimoto models gain Vengeance [Tadao].</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="e706-138a-1afb-a61f" name="New CategoryLink" hidden="false" targetId="d360-71aa-ca22-ba3c" primary="true"/>
+      </categoryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="44e5-8dfb-cad2-3267" name="!DRAFT Sharing is Killing" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true"/>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8b4d-c9d7-7b7e-2067" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="d489-d1d5-b0c4-f7a5" name="Sharing is Killing" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
+          <characteristics>
+            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">Choose an Enemy model. Make a Success Level 0 Damage Roll against that model.
+That model&apos;s Controller may then choose 1 of your models and make a SL 0 Damage Roll on that model, if they do you must use this event again immediately with a cumulative +1 on the Success Level for both players.
+All damage from this event ignores Tough.
+No model may be chosen more than once.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="9f1a-bbd6-b061-2147" name="New CategoryLink" hidden="false" targetId="d360-71aa-ca22-ba3c" primary="true"/>
+      </categoryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1.0"/>
       </costs>
     </selectionEntry>
   </selectionEntries>
@@ -4845,6 +4919,7 @@ Any time a Yuta model needs to spend Ki Tokens, it may spend them from this card
       </constraints>
       <categoryLinks>
         <categoryLink id="975b-f746-32ea-e436" name="Kairai" hidden="false" targetId="26f6-e547-6d94-8b70" primary="false"/>
+        <categoryLink id="bc0c-6202-5b7a-23a8" name="Soulless" hidden="false" targetId="0abe-c3e6-4300-478f" primary="false"/>
       </categoryLinks>
       <entryLinks>
         <entryLink id="a9bb-4646-0fca-daf5" name="Enhancements" hidden="false" collective="false" import="true" targetId="ef93-ecd4-88c1-9224" type="selectionEntryGroup"/>
@@ -4859,6 +4934,7 @@ Any time a Yuta model needs to spend Ki Tokens, it may spend them from this card
       </constraints>
       <categoryLinks>
         <categoryLink id="b2ab-a25c-0f45-4068" name="Kairai" hidden="false" targetId="26f6-e547-6d94-8b70" primary="false"/>
+        <categoryLink id="d7ec-8da6-d81c-3e1b" name="Soulless" hidden="false" targetId="0abe-c3e6-4300-478f" primary="false"/>
       </categoryLinks>
       <entryLinks>
         <entryLink id="6536-612b-cc11-d062" name="Enhancements" hidden="false" collective="false" import="true" targetId="ef93-ecd4-88c1-9224" type="selectionEntryGroup"/>
@@ -4873,6 +4949,7 @@ Any time a Yuta model needs to spend Ki Tokens, it may spend them from this card
       </constraints>
       <categoryLinks>
         <categoryLink id="2652-68b8-0cf2-0945" name="Kairai" hidden="false" targetId="26f6-e547-6d94-8b70" primary="false"/>
+        <categoryLink id="41ac-a491-f0c2-9203" name="Soulless" hidden="false" targetId="0abe-c3e6-4300-478f" primary="false"/>
       </categoryLinks>
       <entryLinks>
         <entryLink id="c34e-75f5-5114-d381" name="Enhancements" hidden="false" collective="false" import="true" targetId="ef93-ecd4-88c1-9224" type="selectionEntryGroup"/>
@@ -4887,6 +4964,7 @@ Any time a Yuta model needs to spend Ki Tokens, it may spend them from this card
       </constraints>
       <categoryLinks>
         <categoryLink id="b0a1-5fdf-d8a6-eb70" name="Kairai" hidden="false" targetId="26f6-e547-6d94-8b70" primary="false"/>
+        <categoryLink id="caba-ca80-b0f8-b66c" name="Soulless" hidden="false" targetId="0abe-c3e6-4300-478f" primary="false"/>
       </categoryLinks>
       <entryLinks>
         <entryLink id="2b38-fc13-c980-e4cd" name="Enhancements" hidden="false" collective="false" import="true" targetId="ef93-ecd4-88c1-9224" type="selectionEntryGroup"/>
@@ -4914,6 +4992,7 @@ Any time a Yuta model needs to spend Ki Tokens, it may spend them from this card
       <categoryLinks>
         <categoryLink id="d3bf-bf1f-984d-e685" name="Kairai" hidden="false" targetId="26f6-e547-6d94-8b70" primary="false"/>
         <categoryLink id="884b-f38e-98c0-6e21" name="Insignificant" hidden="false" targetId="0b0f-53a8-7e80-f525" primary="false"/>
+        <categoryLink id="521f-f091-e321-c6e8" name="Soulless" hidden="false" targetId="0abe-c3e6-4300-478f" primary="false"/>
       </categoryLinks>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="3.0"/>
@@ -4937,6 +5016,8 @@ Any time a Yuta model needs to spend Ki Tokens, it may spend them from this card
       </constraints>
       <categoryLinks>
         <categoryLink id="8c9e-6748-0b0e-9b21" name="Kairai" hidden="false" targetId="26f6-e547-6d94-8b70" primary="false"/>
+        <categoryLink id="bfc8-55fc-4dfe-3688" name="Armour" hidden="false" targetId="f322-702a-ff62-b37e" primary="false"/>
+        <categoryLink id="f23d-1733-b414-36eb" name="Soulless" hidden="false" targetId="0abe-c3e6-4300-478f" primary="false"/>
       </categoryLinks>
       <entryLinks>
         <entryLink id="4f88-ae61-d888-a0dd" name="Enhancements" hidden="false" collective="false" import="true" targetId="ef93-ecd4-88c1-9224" type="selectionEntryGroup"/>
@@ -5266,7 +5347,15 @@ Restriction [Burakumin]</characteristic>
       </selectionEntryGroups>
       <entryLinks>
         <entryLink id="dc2e-bc65-4462-0c1e" name="Paragon" hidden="false" collective="false" import="true" targetId="9059-1680-57c0-9f71" type="selectionEntry"/>
-        <entryLink id="7ba1-6d2e-5bbe-e3d1" name="!DRAFT Finesse" hidden="false" collective="false" import="true" targetId="e916-ca9f-75ef-1c24" type="selectionEntry"/>
+        <entryLink id="7ba1-6d2e-5bbe-e3d1" name="!DRAFT Finesse" hidden="false" collective="false" import="true" targetId="e916-ca9f-75ef-1c24" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="aae6-faa6-7741-8e52" type="instanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
         <entryLink id="5d27-d87b-2f84-ec2d" name="!DRAFT!CYCLE Pacifism" hidden="false" collective="false" import="true" targetId="6bf3-9dca-b4c5-6a3e" type="selectionEntry"/>
         <entryLink id="2de9-c1c9-d3c8-57dd" name="!DRAFT!CYCLE Prayer Scroll" hidden="false" collective="false" import="true" targetId="bb42-702b-ab84-a9f9" type="selectionEntry"/>
       </entryLinks>

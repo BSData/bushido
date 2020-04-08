@@ -3905,6 +3905,46 @@ If unsuccessful, the current activation ends, the model gains Unstable until the
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1.0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="692c-cb9f-95a2-ea79" name="Taiki" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true"/>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4915-4ea3-a59d-1cee" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="91a5-0f50-ea28-ae0f" name="Taiki" hidden="false" typeId="6ea2-0f74-4852-4a98" typeName="Character Profile">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="8409-8d55-ce45-a33b"/>
+            <characteristic name="Melee Boost" typeId="6a36-e826-18f3-0b25"/>
+            <characteristic name="Ranged Pool" typeId="7a01-37c0-4741-672c"/>
+            <characteristic name="Ranged Boost" typeId="ff66-ea54-d863-5c17"/>
+            <characteristic name="Move" typeId="af89-242d-625f-9bff"/>
+            <characteristic name="Move Boost" typeId="62a6-8125-f293-5c76"/>
+            <characteristic name="Ki" typeId="8b76-2b4b-066e-a0c5"/>
+            <characteristic name="Ki Boost" typeId="c34e-f8ae-0984-37ac"/>
+            <characteristic name="Ki Cap" typeId="2e88-c65e-4e45-d4c4"/>
+            <characteristic name="Wounds" typeId="a1dc-c2c1-e2d2-ca98"/>
+            <characteristic name="Size &amp; Base" typeId="6af2-e777-20ce-e060"/>
+            <characteristic name="Traits" typeId="e742-1b02-09cf-fd97"/>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="30c8-c762-a9b9-8351" name="Element: Water" hidden="false" targetId="8ec2-de25-acb0-7b5a" primary="false"/>
+        <categoryLink id="140c-7b51-5e0b-a269" name="Faction: Temple of Rokan" hidden="false" targetId="3186-3d3a-a105-887b" primary="false"/>
+        <categoryLink id="926b-0504-c138-b368" name="Monk" hidden="false" targetId="57a9-2b8a-3729-1ad8" primary="false"/>
+        <categoryLink id="a699-392e-1783-11e8" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
+        <categoryLink id="daa7-8a6e-fd1a-0fd6" name="Unsui" hidden="false" targetId="65b2-664f-9065-3e67" primary="false"/>
+        <categoryLink id="acca-7f00-840e-66d9" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="a054-4575-dde6-c6a1" name="Enhancements" hidden="false" collective="false" import="true" targetId="d716-36e8-af1d-0a1f" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="10.0"/>
+      </costs>
+    </selectionEntry>
   </selectionEntries>
   <entryLinks>
     <entryLink id="0f32-6304-1fad-6541" name="Ashinaga Tenaga" hidden="false" collective="false" import="true" targetId="e7ea-c376-aac2-5726" type="selectionEntry">
@@ -4866,7 +4906,15 @@ When this model performs a Focus Action it gains Channel (6/6&quot;) until the e
         <entryLink id="8d7b-7398-938d-35f3" name="Wind Kick" hidden="false" collective="false" import="true" targetId="1175-4433-a947-cf28" type="selectionEntry"/>
         <entryLink id="fbdb-5d65-2aa2-97ac" name="Earthen Communion" hidden="false" collective="false" import="true" targetId="a482-ea5e-8404-efd1" type="selectionEntry"/>
         <entryLink id="6ada-c91f-0f97-3099" name="Name of the Wind" hidden="false" collective="false" import="true" targetId="0c02-3f33-711e-b961" type="selectionEntry"/>
-        <entryLink id="ee77-ccc5-223d-53b2" name="!DRAFT Finesse" hidden="false" collective="false" import="true" targetId="e916-ca9f-75ef-1c24" type="selectionEntry"/>
+        <entryLink id="ee77-ccc5-223d-53b2" name="!DRAFT Finesse" hidden="false" collective="false" import="true" targetId="e916-ca9f-75ef-1c24" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="692c-cb9f-95a2-ea79" type="instanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
         <entryLink id="ffba-26e3-3fd6-22b9" name="!DRAFT! Ki Disrupting Palm" hidden="false" collective="false" import="true" targetId="c9c9-e5eb-74a3-990c" type="selectionEntry"/>
         <entryLink id="8a66-4673-7a60-46ca" name="!DRAFT!CYCLE Pacifism" hidden="false" collective="false" import="true" targetId="6bf3-9dca-b4c5-6a3e" type="selectionEntry"/>
         <entryLink id="1fdc-e1ef-3721-67d7" name="!DRAFT!CYCLE Prayer Scroll" hidden="false" collective="false" import="true" targetId="bb42-702b-ab84-a9f9" type="selectionEntry"/>
