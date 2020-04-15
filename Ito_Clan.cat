@@ -3290,6 +3290,29 @@ This model&apos;s weapons gains Poison (1/1)</characteristic>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2.0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="e5b8-c300-4654-653f" name="!DRAFT!CYCLE Greater Sacrifices" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true"/>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="91c9-8008-10e1-1b63" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="704e-2d54-0d02-08dc" name="Greater Sacrifices" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
+          <characteristics>
+            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">Play after an Acolyte is removed from play through a Friendly Unique Effect or Self-Sacrifice.
+All Friendly Shisai models gain 2 Ki Tokens.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="0aba-012c-073a-10ea" name="New CategoryLink" hidden="false" targetId="d360-71aa-ca22-ba3c" primary="true"/>
+        <categoryLink id="7a91-d0c0-082a-21f7" name="Cycle: Risen Sun" hidden="false" targetId="a745-0548-80c8-ece4" primary="false"/>
+      </categoryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2.0"/>
+      </costs>
+    </selectionEntry>
   </selectionEntries>
   <entryLinks>
     <entryLink id="a128-3c72-cd19-3719" name="Ancestor Spirit" hidden="false" collective="false" import="true" targetId="a8a8-fc30-a7e2-2913" type="selectionEntry">
@@ -3676,6 +3699,39 @@ This model&apos;s weapons gains Poison (1/1)</characteristic>
           </categoryLinks>
           <costs>
             <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="d8f8-0157-e673-1772" name="!DRAFT!CYCLE Itsunagi&apos;s Retinue" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a485-b6b0-b58e-a3a1" type="atLeast"/>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3134-f1cd-dcfc-649f" type="atLeast"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" field="hidden" value="true"/>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fcf0-5a80-c8f1-a357" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6753-c557-b356-ed0d" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="7cf8-6d96-ef78-da4e" name="Itsunagi&apos;s Retinue" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
+              <characteristics>
+                <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">Attached model begins the game with 2 Ki Tokens.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <categoryLinks>
+            <categoryLink id="7228-f806-feab-1527" name="New CategoryLink" hidden="false" targetId="17cf-d9a9-c7c1-bcb6" primary="true"/>
+            <categoryLink id="b1f5-196d-ad30-c386" name="Cycle: Risen Sun" hidden="false" targetId="a745-0548-80c8-ece4" primary="false"/>
+          </categoryLinks>
+          <costs>
+            <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
