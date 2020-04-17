@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="d2c8-91e9-1a97-89b4" name="Minimoto Clan" revision="1" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="d2c8-91e9-1a97-89b4" name="Minimoto Clan" revision="2" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="6b68-2575-cc8f-c08f" name="Armour 3+" hidden="false"/>
   </categoryEntries>
@@ -627,22 +627,22 @@
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="14.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="4c49-cc4d-d54f-d6b9" name="Minimoto Niko" hidden="true" collective="false" import="true" type="model">
+    <selectionEntry id="4c49-cc4d-d54f-d6b9" name="Minimoto Niko" hidden="false" collective="false" import="true" type="model">
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="22d9-a60f-91c7-7e58" type="max"/>
       </constraints>
       <profiles>
         <profile id="f504-1440-1ae4-67df" name="Minimoto Niko" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
           <characteristics>
-            <characteristic name="Traits" typeId="6fb8-4540-ed80-9332"/>
+            <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Armour (4), Bear Stands Alone, Bravery, Prowess [Melee](1), Resistance (2), Split Attack, Steadfast</characteristic>
           </characteristics>
         </profile>
         <profile id="ec95-5070-6770-f772" name="Minimoto Niko" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character">
           <characteristics>
-            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974"/>
-            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277"/>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">4</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
             <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">3</characteristic>
-            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33">3</characteristic>
             <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
             <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
             <characteristic name="Ki" typeId="3969-9568-a914-6854">2</characteristic>
@@ -654,22 +654,50 @@
         </profile>
       </profiles>
       <infoGroups>
-        <infoGroup id="1475-2d9d-3e3d-112c" name="Traits" hidden="false">
-          <infoLinks>
-            <infoLink id="b627-868c-0bb6-c3a7" name="Steadfast" hidden="false" targetId="95e7-3178-c29b-013c" type="rule"/>
-          </infoLinks>
-        </infoGroup>
         <infoGroup id="e127-e536-579b-909a" name="Melee Weapon" hidden="false">
           <profiles>
             <profile id="eb49-7e5d-36e4-155e" name="Tetsubo" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
               <characteristics>
-                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+0</characteristic>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+2</characteristic>
                 <characteristic name="Traits" typeId="39e3-f945-7956-ad4e"/>
-                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d"/>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Push Attack (0), Stun Attack (0)</characteristic>
                 <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
               </characteristics>
             </profile>
           </profiles>
+          <infoLinks>
+            <infoLink id="33b5-9524-357c-229d" name="Push Attack" hidden="false" targetId="6c26-94ba-6b96-9e1b" type="rule"/>
+            <infoLink id="a497-b481-62e4-3c61" name="Stun Attack" hidden="false" targetId="ae27-975e-6c4b-d84e" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="3871-a5d8-ed5a-2821" name="Traits" hidden="false">
+          <infoLinks>
+            <infoLink id="e346-3fbb-704c-9720" name="Steadfast" hidden="false" targetId="95e7-3178-c29b-013c" type="rule"/>
+            <infoLink id="1a83-5449-319a-3774" name="Bear Stands Alone" hidden="false" targetId="40cc-86cf-58d8-8799" type="rule"/>
+            <infoLink id="9783-a5a1-bcde-5a60" name="Armour" hidden="false" targetId="8615-1c63-2242-5746" type="rule"/>
+            <infoLink id="70ca-93c1-a089-5b52" name="Bravery" hidden="false" targetId="f9b2-38d2-7cda-de6e" type="rule"/>
+            <infoLink id="706a-ffc3-9b10-1f0a" name="Resistance " hidden="false" targetId="7e3f-9dc3-cacb-469f" type="rule"/>
+            <infoLink id="f3ee-d735-f77f-b494" name="Prowess " hidden="false" targetId="75ef-327a-cd08-a248" type="rule"/>
+            <infoLink id="10e9-a77b-4bc2-4d68" name="Split Attack" hidden="false" targetId="92d0-d4fe-e58e-7535" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="8e33-2f5a-6120-0874" name="Unique Effects" hidden="false">
+          <profiles>
+            <profile id="0790-3a33-ac42-28e4" name="Bear&apos;s Supremacy" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">While this model has at least 4 marked Wound boxes, it gains Sweep Attack (0) and its Sweep Attacks cause full Damage instead of half Damage..</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="c807-69ca-13af-67e2" name="Sweep Attack" hidden="false" targetId="bcbd-fab2-c8e2-6ff7" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="a19c-5dfa-008e-5a76" name="Ki Feats" hidden="false">
+          <infoLinks>
+            <infoLink id="aa31-9f66-3fcb-84de" name="Savage Beating" hidden="false" targetId="1043-4026-45a3-c9c0" type="infoGroup"/>
+            <infoLink id="f825-42e0-600c-03ea" name="Yoko-Men" hidden="false" targetId="efdd-d3c0-8b9e-eff0" type="infoGroup"/>
+          </infoLinks>
         </infoGroup>
       </infoGroups>
       <categoryLinks>
@@ -1096,9 +1124,9 @@
         </infoGroup>
         <infoGroup id="e0c9-f438-c0a1-0779" name="Unique Effects" hidden="false">
           <profiles>
-            <profile id="9323-6b99-1357-5875" name="Unique Effects" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+            <profile id="9323-6b99-1357-5875" name="Bear&apos;s Resilience" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
               <characteristics>
-                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">Bear&apos;s Resilience: While this model has at least 4 makerd Wound boxes, it gains Durable.</characteristic>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">While this model has at least 4 marked Wound boxes, it gains Durable.</characteristic>
               </characteristics>
             </profile>
           </profiles>
