@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="d2c8-91e9-1a97-89b4" name="Minimoto Clan" revision="2" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="d2c8-91e9-1a97-89b4" name="Minimoto Clan" revision="2" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="6b68-2575-cc8f-c08f" name="Armour 3+" hidden="false"/>
   </categoryEntries>
@@ -1023,15 +1023,20 @@
         </infoGroup>
         <infoGroup id="b566-c6e5-e36c-b8dc" name="Melee Weapon" hidden="false">
           <profiles>
-            <profile id="2f6c-56ee-76d8-a615" name="Blacksmith Hammer" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+            <profile id="2f6c-56ee-76d8-a615" name="Bite" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
               <characteristics>
-                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+0</characteristic>
-                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e"/>
-                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d"/>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+2</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Brutal (1)</characteristic>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Powerful Attack (1), Slam Attack (1)</characteristic>
                 <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
               </characteristics>
             </profile>
           </profiles>
+          <infoLinks>
+            <infoLink id="c66a-3c1a-76c8-2b09" name="Brutal" hidden="false" targetId="5d95-975e-a72c-25f3" type="rule"/>
+            <infoLink id="fb6c-5142-e772-d0fb" name="Slam Attack" hidden="false" targetId="5d05-b0ce-d7db-9def" type="rule"/>
+            <infoLink id="c960-8c4f-65d5-efd5" name="Powerful Attack" hidden="false" targetId="d56a-058d-95d9-5b60" type="rule"/>
+          </infoLinks>
         </infoGroup>
         <infoGroup id="ca8d-b4b7-9a0d-5a44" name="Unique Effects" hidden="false">
           <profiles>
@@ -1396,7 +1401,7 @@ This model may declare a Charge Action while in BtB with an Enemy model.</charac
         <categoryLink id="341b-625b-0f8c-6e71" name="Ronin Profile Cards" hidden="false" targetId="9fba-f50b-c8f7-8396" primary="true"/>
       </categoryLinks>
     </entryLink>
-    <entryLink id="fa4a-1978-6134-1bd7" name="Kami of Evening Flame" hidden="true" collective="false" import="true" targetId="c4fd-a8c6-2b3d-e5a4" type="selectionEntry">
+    <entryLink id="fa4a-1978-6134-1bd7" name="Kami of Evening Flame" hidden="false" collective="false" import="true" targetId="c4fd-a8c6-2b3d-e5a4" type="selectionEntry">
       <modifiers>
         <modifier type="set" field="hidden" value="false">
           <conditionGroups>
@@ -1404,6 +1409,16 @@ This model may declare a Charge Action while in BtB with an Enemy model.</charac
               <conditions>
                 <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3f95-c0aa-ac59-2d8b" type="atLeast"/>
                 <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="bb6b-f562-e323-b44e" type="atLeast"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" field="9df8-a67b-feaf-2822" value="0.0">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3f95-c0aa-ac59-2d8b" type="lessThan"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="bb6b-f562-e323-b44e" type="lessThan"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -1453,11 +1468,16 @@ This model may declare a Charge Action while in BtB with an Enemy model.</charac
         <categoryLink id="90b4-9380-e108-e55b" name="New CategoryLink" hidden="false" targetId="9fba-f50b-c8f7-8396" primary="true"/>
       </categoryLinks>
     </entryLink>
-    <entryLink id="0048-b8fa-a3a7-1ff7" name="Kami of Reflection" hidden="true" collective="false" import="true" targetId="55d0-ba9c-f4c8-c0d3" type="selectionEntry">
+    <entryLink id="0048-b8fa-a3a7-1ff7" name="Kami of Reflection" hidden="false" collective="false" import="true" targetId="55d0-ba9c-f4c8-c0d3" type="selectionEntry">
       <modifiers>
         <modifier type="set" field="hidden" value="false">
           <conditions>
             <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="bf82-59e5-bfa8-89e4" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="9b8b-4b8c-502c-095a" value="0.0">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="bf82-59e5-bfa8-89e4" type="lessThan"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -1468,12 +1488,12 @@ This model may declare a Charge Action while in BtB with an Enemy model.</charac
     <entryLink id="d223-dab0-eae7-d2b1" name="The Imperial March" hidden="false" collective="false" import="true" targetId="b94d-f7cb-a84c-4077" type="selectionEntry"/>
     <entryLink id="6e0d-0364-b238-5b1b" name="Kami (Metal)" hidden="true" collective="false" import="true" targetId="f311-bffb-b3a9-42e6" type="selectionEntry">
       <modifiers>
-        <modifier type="set" field="hidden" value="false">
+        <modifier type="set" field="7b8d-253e-d718-318a" value="0.0">
           <conditionGroups>
-            <conditionGroup type="or">
+            <conditionGroup type="and">
               <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3f95-c0aa-ac59-2d8b" type="atLeast"/>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="bb6b-f562-e323-b44e" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3f95-c0aa-ac59-2d8b" type="lessThan"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="bb6b-f562-e323-b44e" type="lessThan"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>

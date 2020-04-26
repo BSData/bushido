@@ -4344,16 +4344,6 @@ Permitted [Oni, Onisho]</characteristic>
       </categoryLinks>
     </entryLink>
   </entryLinks>
-  <rules>
-    <rule id="74e3-d9e2-7360-a788" name="Tasks" hidden="false">
-      <description>• Create Categories in &apos;Category Entries&apos;
-• Create Themes in &apos;Force Entries&apos;
-• Add Category Links to each Theme
-• Add Enhancement &amp; Equipment Cards to profiles
-• Add profiles as &apos;Links&apos; in &apos;Root Selection Entries&apos; (assign Categories)
-• Add Modifiers &amp; Conditions to Restricted profiles</description>
-    </rule>
-  </rules>
   <sharedSelectionEntries>
     <selectionEntry id="db76-ea05-1047-4ccd" name="Rinsho" hidden="false" collective="false" import="true" type="model">
       <constraints>
@@ -4514,11 +4504,6 @@ Permitted [Oni, Onisho]</characteristic>
             </conditionGroup>
           </conditionGroups>
         </modifier>
-        <modifier type="decrement" field="a111-8656-5c05-7415" value="3.0">
-          <conditions>
-            <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="atLeast"/>
-          </conditions>
-        </modifier>
         <modifier type="increment" field="a111-8656-5c05-7415" value="3.0">
           <repeats>
             <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
@@ -4527,6 +4512,11 @@ Permitted [Oni, Onisho]</characteristic>
         <modifier type="set" field="b295-126f-783f-1410" value="0.0">
           <conditions>
             <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5bcd-fe93-a8ea-0164" type="greaterThan"/>
+          </conditions>
+        </modifier>
+        <modifier type="decrement" field="a111-8656-5c05-7415" value="3.0">
+          <conditions>
+            <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="atLeast"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -4548,12 +4538,18 @@ Exclusion [Unique, Cavalry]</characteristic>
           </characteristics>
         </profile>
       </profiles>
+      <rules>
+        <rule id="126f-4b5a-51a2-97e9" name="Design Note" hidden="true">
+          <description>The initial cost is set to 3, so that it displays within the data editor prior to selection.
+Due to the cost increment per model, the cost needs to decrement once to offset the original cost.</description>
+        </rule>
+      </rules>
       <categoryLinks>
         <categoryLink id="3562-cd8b-d993-40a9" name="New CategoryLink" hidden="false" targetId="17cf-d9a9-c7c1-bcb6" primary="true"/>
         <categoryLink id="3567-1e38-2fd0-ea89" name="Cycle: Risen Sun" hidden="false" targetId="a745-0548-80c8-ece4" primary="false"/>
       </categoryLinks>
       <costs>
-        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0.0"/>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="3.0"/>
       </costs>
     </selectionEntry>
   </sharedSelectionEntries>

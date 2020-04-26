@@ -5028,6 +5028,18 @@ No model may be chosen more than once.</characteristic>
       </costs>
     </selectionEntry>
     <selectionEntry id="ab7f-d22b-08ee-9a07" name="Fresh" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="decrement" field="a111-8656-5c05-7415" value="1.0">
+          <conditions>
+            <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="atLeast"/>
+          </conditions>
+        </modifier>
+        <modifier type="increment" field="a111-8656-5c05-7415" value="1.0">
+          <repeats>
+            <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+          </repeats>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7db1-2fbe-0c8b-cd82" type="max"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="730d-d5ee-187e-a6cc" type="max"/>
@@ -5041,6 +5053,12 @@ X = The number of models recruited on the profile card, this card may be bought 
           </characteristics>
         </profile>
       </profiles>
+      <rules>
+        <rule id="e53b-cc48-169f-d3f7" name="Design Note" hidden="true">
+          <description>The initial cost is set to 1, so that it displays within the data editor prior to selection.
+Due to the cost increment per model, the cost needs to decrement once to offset the original cost.</description>
+        </rule>
+      </rules>
       <categoryLinks>
         <categoryLink id="3bc6-c808-89c0-1887" name="New CategoryLink" hidden="false" targetId="17cf-d9a9-c7c1-bcb6" primary="true"/>
       </categoryLinks>
@@ -5090,6 +5108,12 @@ Requirement [Kairai, Burakumin]</characteristic>
           </characteristics>
         </profile>
       </profiles>
+      <rules>
+        <rule id="f8da-ca0b-0a9b-993c" name="Design Note" hidden="true">
+          <description>The initial cost is set to 1, so that it displays within the data editor prior to selection.
+Due to the cost increment per model, the cost needs to decrement once to offset the original cost.</description>
+        </rule>
+      </rules>
       <infoLinks>
         <infoLink id="40e9-6c29-0ebe-3842" name="Fear" hidden="false" targetId="3586-4583-7f10-1f31" type="rule"/>
       </infoLinks>
