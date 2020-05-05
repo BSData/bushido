@@ -86,10 +86,10 @@
       <modifiers>
         <modifier type="set" field="hidden" value="true">
           <conditionGroups>
-            <conditionGroup type="or">
+            <conditionGroup type="and">
               <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9c2d-5c9d-444f-bfc8" type="equalTo"/>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9d97-adca-3f6a-ae4d" type="equalTo"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="dcb0-65d5-e72e-138d" type="lessThan"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="477a-e693-0888-08f7" type="atLeast"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -114,10 +114,10 @@
       <modifiers>
         <modifier type="set" field="hidden" value="true">
           <conditionGroups>
-            <conditionGroup type="or">
+            <conditionGroup type="and">
               <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="dcb0-65d5-e72e-138d" type="equalTo"/>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9d97-adca-3f6a-ae4d" type="equalTo"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9c2d-5c9d-444f-bfc8" type="lessThan"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="477a-e693-0888-08f7" type="atLeast"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -143,10 +143,10 @@
       <modifiers>
         <modifier type="set" field="hidden" value="true">
           <conditionGroups>
-            <conditionGroup type="or">
+            <conditionGroup type="and">
               <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="dcb0-65d5-e72e-138d" type="equalTo"/>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9c2d-5c9d-444f-bfc8" type="equalTo"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9d97-adca-3f6a-ae4d" type="lessThan"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="477a-e693-0888-08f7" type="atLeast"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -1719,9 +1719,6 @@ After a Damage Roll, the Attached model suffers Damage equal to the value of the
           </constraints>
           <profiles>
             <profile id="e721-1d5c-5b7f-905b" name="Avalanche" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true"/>
-              </modifiers>
               <characteristics>
                 <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">When the Attached model is Killed in a Melee Exchange make a Success Level 2 Damage Roll, using the strength modifier of one of that model&apos;s Melee Weapons, against the Enemy model in the Melee Exchange before removing the Friendly model from the table.
 Use any relevant traits the model has or Weapon traits the chosen Melee Weapon has but not Special Attacks.</characteristic>
@@ -1743,9 +1740,6 @@ Use any relevant traits the model has or Weapon traits the chosen Melee Weapon h
           </constraints>
           <profiles>
             <profile id="a975-bf5d-6e55-2c10" name="The Mountain Moves" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true"/>
-              </modifiers>
               <characteristics>
                 <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">While no Friendly models are within 3&quot; of Attached model it gains Vengeance [Enemy].
 

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="0b85-0901-eb64-b84b" name="The Savage Wave" revision="1" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="0b85-0901-eb64-b84b" name="The Savage Wave" revision="2" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="5048-3a52-5689-6d0b" name="Ambush" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -169,7 +169,7 @@ Add 2 Ki Tokens to the Bakemono Horde card every turn.</characteristic>
             <conditionGroup type="and">
               <conditions>
                 <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="true" childId="477a-e693-0888-08f7" type="atLeast"/>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="bd75-31a1-5a23-cd2d" type="notEqualTo"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="bd75-31a1-5a23-cd2d" type="lessThan"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -198,7 +198,7 @@ Add 2 Ki Tokens to the Bakemono Horde card every turn.</characteristic>
             <conditionGroup type="and">
               <conditions>
                 <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="true" childId="477a-e693-0888-08f7" type="atLeast"/>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d14c-bf06-fc37-16e2" type="notEqualTo"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d14c-bf06-fc37-16e2" type="lessThan"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -237,7 +237,7 @@ Add 2 Ki Tokens to the Bakemono Horde card every turn.</characteristic>
             <conditionGroup type="and">
               <conditions>
                 <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="true" childId="477a-e693-0888-08f7" type="atLeast"/>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2125-1289-3bb1-15c1" type="notEqualTo"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2125-1289-3bb1-15c1" type="lessThan"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -4206,9 +4206,6 @@ Restriction [Bakemono]</characteristic>
       </modifiers>
       <profiles>
         <profile id="ec0f-31e5-fcc7-b6cf" name="Wrath of the Red Sun" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true"/>
-          </modifiers>
           <characteristics>
             <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">• Whenever a Friendly Oni or Onisho model deals Damage in a Melee Exchange, place a Counter on this card at the end of the activation.
 • Whenever a Friendly Oni or Onisho model Kills an Enemy model in a Melee Exchange, place 2 Counters on this card at the end of the activation.
@@ -4526,9 +4523,6 @@ Permitted [Oni, Onisho]</characteristic>
       </constraints>
       <profiles>
         <profile id="9103-01e3-cefd-1017" name="Endless Numbers" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true"/>
-          </modifiers>
           <characteristics>
             <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">Attached card gains the &quot;Horde&quot; Type.
 X is equal to 3 per model bought on the Attached card.

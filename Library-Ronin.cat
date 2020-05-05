@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="b489-b304-948d-52d0" name="Library-Ronin" revision="1" battleScribeVersion="2.03" library="true" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="b489-b304-948d-52d0" name="Library-Ronin" revision="2" battleScribeVersion="2.03" library="true" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="4e24-3a7e-77bc-dfed" name="Balance" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -124,10 +124,10 @@ It may be placed in Scenario Zones and within 2&quot; of the edge of the table.<
       <modifiers>
         <modifier type="set" field="hidden" value="true">
           <conditionGroups>
-            <conditionGroup type="or">
+            <conditionGroup type="and">
               <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b94d-f7cb-a84c-4077" type="equalTo"/>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ebaa-825a-5d71-a2a2" type="equalTo"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ff27-a550-2dd1-e2e3" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a2ef-85b3-5ca7-8720" type="lessThan"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -162,10 +162,10 @@ In a timed event, you have 5 minutes to make substitutions.</characteristic>
       <modifiers>
         <modifier type="set" field="hidden" value="true">
           <conditionGroups>
-            <conditionGroup type="or">
+            <conditionGroup type="and">
               <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b94d-f7cb-a84c-4077" type="equalTo"/>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a2ef-85b3-5ca7-8720" type="equalTo"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ff27-a550-2dd1-e2e3" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ebaa-825a-5d71-a2a2" type="lessThan"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -216,9 +216,6 @@ In a timed event, both Players have 5 minutes to choose which Warband to use.</c
       </constraints>
       <profiles>
         <profile id="dff5-2226-3172-bfc5" name="Sun Goddess Shrine" hidden="false" typeId="6fa2-988d-fc04-c751" typeName="Special Card (Terrain)">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true"/>
-          </modifiers>
           <characteristics>
             <characteristic name="Base" typeId="c40b-3106-986d-4db5">50mm</characteristic>
             <characteristic name="Passage" typeId="3df8-6a47-0c4d-73e7">Impassable</characteristic>
@@ -243,9 +240,6 @@ In a timed event, both Players have 5 minutes to choose which Warband to use.</c
       </constraints>
       <profiles>
         <profile id="2976-c8b5-22b5-6992" name="War Weary" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true"/>
-          </modifiers>
           <characteristics>
             <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">In the first turn of the game, models receive only 1 Activation Counter instead of 2.</characteristic>
           </characteristics>
@@ -265,9 +259,6 @@ In a timed event, both Players have 5 minutes to choose which Warband to use.</c
       </constraints>
       <profiles>
         <profile id="df09-88e9-4e9a-e553" name="Year of the Risen Sun" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true"/>
-          </modifiers>
           <characteristics>
             <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">Play on turn 1.
 All models gain +1 Ki Token.</characteristic>
@@ -288,9 +279,6 @@ All models gain +1 Ki Token.</characteristic>
       </constraints>
       <profiles>
         <profile id="eb75-433b-92b1-4327" name="Ganbatte" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true"/>
-          </modifiers>
           <characteristics>
             <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">After the dice roll to see if the game will end, you may discard this card to re-roll the dice.</characteristic>
           </characteristics>
@@ -310,9 +298,6 @@ All models gain +1 Ki Token.</characteristic>
       </constraints>
       <profiles>
         <profile id="6c77-a681-00b3-5f50" name="Blessing of Kah&apos;Non" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true"/>
-          </modifiers>
           <characteristics>
             <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">This turn any Damage Roll where the individual dice values of the Damage Roll are the same number is ignored.</characteristic>
           </characteristics>
@@ -332,9 +317,6 @@ All models gain +1 Ki Token.</characteristic>
       </constraints>
       <profiles>
         <profile id="330c-4c36-0e6c-38e4" name="Celebration of Life" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true"/>
-          </modifiers>
           <characteristics>
             <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">Play in the Starting Phase.
 All Soulless models gain Insignificant until the End Phase.</characteristic>
@@ -4163,10 +4145,10 @@ This model can only be recruited into a Warband that contains all three Blood Br
       <modifiers>
         <modifier type="set" field="hidden" value="true">
           <conditionGroups>
-            <conditionGroup type="or">
+            <conditionGroup type="and">
               <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a2ef-85b3-5ca7-8720" type="equalTo"/>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ebaa-825a-5d71-a2a2" type="equalTo"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ff27-a550-2dd1-e2e3" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b94d-f7cb-a84c-4077" type="lessThan"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -4517,9 +4499,6 @@ This model can only be recruited into a Warband that contains all three Blood Br
       </constraints>
       <profiles>
         <profile id="3f3a-becf-d562-fe91" name="Magamata" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true"/>
-          </modifiers>
           <characteristics>
             <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">When Attached model uses a Target Ki Feat with a Range value, you may spend 1 additional Ki to extend the range of the feat by 2&quot;.</characteristic>
           </characteristics>
@@ -4554,9 +4533,6 @@ This model can only be recruited into a Warband that contains all three Blood Br
       </constraints>
       <profiles>
         <profile id="15ee-72d1-784f-b7e8" name="Pacifism" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true"/>
-          </modifiers>
           <characteristics>
             <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">If this model is in play at the end of the turn, gain 1 Scenario Point.
 Discard this card as soon as this model declares a Ranged Attack or Scenario Action, participates in a Melee Exchange, or makes an Opposed Ki Test.
@@ -4600,9 +4576,6 @@ Note: there is currently no simple way to automatically check for this.</charact
       </constraints>
       <profiles>
         <profile id="0711-40f2-9ef7-921a" name="Prayer Scroll" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true"/>
-          </modifiers>
           <characteristics>
             <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">Attached model gains Immune [Spirit Block].</characteristic>
           </characteristics>
@@ -4640,9 +4613,6 @@ Note: there is currently no simple way to automatically check for this.</charact
       </constraints>
       <profiles>
         <profile id="e66e-64e4-fd25-5f5c" name="Wolf Heart Talisman" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true"/>
-          </modifiers>
           <characteristics>
             <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">Attached model gains Bravery for its first Fear Test of the game, then discard this card.</characteristic>
           </characteristics>

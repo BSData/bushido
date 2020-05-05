@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="b4d7-0e2a-728f-20cf" name="Kage Kaze Zoku" revision="1" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="b4d7-0e2a-728f-20cf" name="Kage Kaze Zoku" revision="2" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="33d5-3364-f1d4-a94c" name="Lockdown" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -472,6 +472,18 @@ X = the number of Ninja models in the Warband.</characteristic>
       </costs>
     </selectionEntry>
     <selectionEntry id="f423-abc7-6e32-6e8c" name="Scouting Mission" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f423-abc7-6e32-6e8c" type="lessThan"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="477a-e693-0888-08f7" type="atLeast"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="97a7-768e-7744-04ba" name="Scouting Mission" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
           <characteristics>
@@ -484,7 +496,7 @@ X = the number of Ninja models in the Warband.</characteristic>
       </profiles>
       <infoLinks>
         <infoLink id="7806-e8fd-9235-a648" name="Disguise" hidden="false" targetId="1a0f-020f-3805-07f3" type="rule"/>
-        <infoLink id="d8b2-eb70-2562-282d" name="Bravery" hidden="false" targetId="f9b2-38d2-7cda-de6e" type="rule"/>
+        <infoLink id="d8b2-eb70-2562-282d" name="Bravery" page="" hidden="false" targetId="f9b2-38d2-7cda-de6e" type="rule"/>
         <infoLink id="677e-6dda-ae41-1787" name="Scout" hidden="false" targetId="8c82-d05a-f63b-1841" type="rule"/>
       </infoLinks>
       <categoryLinks>
@@ -495,6 +507,18 @@ X = the number of Ninja models in the Warband.</characteristic>
       </costs>
     </selectionEntry>
     <selectionEntry id="6c2d-b743-18d7-2779" name="Skirmish Mission" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6c2d-b743-18d7-2779" type="lessThan"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="477a-e693-0888-08f7" type="atLeast"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="1d91-086d-917d-cf55" name="Skirmish Mission" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
           <characteristics>
@@ -517,6 +541,18 @@ X = the number of Ninja models in the Warband.</characteristic>
       </costs>
     </selectionEntry>
     <selectionEntry id="70cc-ef54-f1d8-9837" name="Assassination Mission" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="70cc-ef54-f1d8-9837" type="lessThan"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="477a-e693-0888-08f7" type="atLeast"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="9ae3-0baf-cd60-e74b" name="Assassination Mission" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
           <characteristics>
@@ -1566,9 +1602,6 @@ This model may only make one Ranged Attack with the Kusari per activation
       </constraints>
       <profiles>
         <profile id="3281-b7e0-0407-6110" name="Espionage" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true"/>
-          </modifiers>
           <characteristics>
             <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">Play before the first turn.
 Choose 1 Enemy model using the Flank trait. Its owner must reveal which table edge it will enter from.</characteristic>
@@ -1661,9 +1694,6 @@ Choose 1 Enemy model using the Flank trait. Its owner must reveal which table ed
           </constraints>
           <profiles>
             <profile id="19e4-ca8f-1e4a-b158" name="First Strike" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true"/>
-              </modifiers>
               <characteristics>
                 <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">If Attached model is involved in the first Melee Exchange of the game, it gains Unblockable (1) for that Melee Exchange, then discard this card.</characteristic>
               </characteristics>
