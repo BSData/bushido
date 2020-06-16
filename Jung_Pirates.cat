@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="d615-aef7-31d5-367d" name="Jung Pirates" revision="2" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="d615-aef7-31d5-367d" name="Jung Pirates" revision="2" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="258a-e1a8-8db1-9635" name="Ki&lt;2" hidden="true"/>
     <categoryEntry id="f6c9-50fa-a9d3-e9f3" name="Ranged Weapon" hidden="true"/>
@@ -616,7 +616,7 @@ If this model has no Ammo Tokens on its Net Weapon it loses the Net Weapon.</cha
       <infoGroups>
         <infoGroup id="fd59-4bed-dd78-8acc" name="Unique Effects" hidden="false">
           <infoLinks>
-            <infoLink id="6d65-4eed-b981-e92a" name="Samemiman" hidden="false" targetId="7b65-9ab7-966e-a4f0" type="infoGroup"/>
+            <infoLink id="6d65-4eed-b981-e92a" name="Tiger Shark" hidden="false" targetId="02bd-7ef5-4472-d9ba" type="infoGroup"/>
           </infoLinks>
         </infoGroup>
         <infoGroup id="a4c0-899d-7c46-bc0f" name="Traits" hidden="false">
@@ -1546,7 +1546,7 @@ This model cannot attach the Peg Leg Enhancement card.</characteristic>
         </infoGroup>
         <infoGroup id="9d51-6633-4623-451c" name="Unique Effects" hidden="false">
           <infoLinks>
-            <infoLink id="2a02-1113-ea24-f2ae" name="Samemiman" hidden="false" targetId="7b65-9ab7-966e-a4f0" type="infoGroup"/>
+            <infoLink id="2a02-1113-ea24-f2ae" name="Hammerhead" hidden="false" targetId="7b65-9ab7-966e-a4f0" type="infoGroup"/>
           </infoLinks>
         </infoGroup>
       </infoGroups>
@@ -2389,6 +2389,18 @@ Permitted [Ronin Yokai, Jung models, Hiroto, the Drunken Master]</characteristic
       </categoryLinks>
     </entryLink>
     <entryLink id="a289-cbb0-c7f1-8575" name="Eldest Brother" hidden="false" collective="false" import="true" targetId="294d-a0fa-f437-2fca" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0496-2e83-7db3-12e2" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="843d-db96-732e-cf8c" type="atLeast"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
       <categoryLinks>
         <categoryLink id="769f-9fe6-c179-92ce" name="New CategoryLink" hidden="false" targetId="9fba-f50b-c8f7-8396" primary="true"/>
       </categoryLinks>
@@ -2442,7 +2454,7 @@ Permitted [Ronin Yokai, Jung models, Hiroto, the Drunken Master]</characteristic
         <categoryLink id="d2b8-f8e6-dab5-9d55" name="New CategoryLink" hidden="false" targetId="9fba-f50b-c8f7-8396" primary="true"/>
       </categoryLinks>
     </entryLink>
-    <entryLink id="0496-2e83-7db3-12e2" name="Hirota, Drunken Master" hidden="false" collective="false" import="true" targetId="f616-46d8-5907-fafd" type="selectionEntry">
+    <entryLink id="0496-2e83-7db3-12e2" name="Hiroto, Drunken Master" hidden="false" collective="false" import="true" targetId="f616-46d8-5907-fafd" type="selectionEntry">
       <modifiers>
         <modifier type="set" field="hidden" value="false">
           <conditionGroups>
@@ -2605,7 +2617,7 @@ Permitted [Ronin Yokai, Jung models, Hiroto, the Drunken Master]</characteristic
               <conditionGroups>
                 <conditionGroup type="or">
                   <conditions>
-                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b1f3-c9f3-71c7-4965" type="notInstanceOf"/>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b1f3-c9f3-71c7-4965" type="instanceOf"/>
                     <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1426-55d7-3b7a-c515" type="instanceOf"/>
                   </conditions>
                 </conditionGroup>
@@ -3248,13 +3260,13 @@ Active</characteristic>
         </profile>
       </profiles>
     </infoGroup>
-    <infoGroup id="7b65-9ab7-966e-a4f0" name="Samemiman" hidden="false">
+    <infoGroup id="7b65-9ab7-966e-a4f0" name="Hammerhead" hidden="false">
       <profiles>
-        <profile id="db01-8476-8c9e-88b0" name="Samemiman" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+        <profile id="db01-8476-8c9e-88b0" name="Hammerhead" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
           <characteristics>
             <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">This Model cannot declare Wait and Focus actions.
 
-When this model causes Wounds to a non-soulless model during a Melee Exchange it may Heal 1 Wound.
+When this model causes Wounds to a non-Soulless model during a Melee Exchange it may Heal 1 Wound.
 
 When targeting a model with a Bleed Marker on it&apos;s card with a Charge Action this model gains Charging Bonus [+1 Move] and Banzai!</characteristic>
           </characteristics>
@@ -3263,6 +3275,23 @@ When targeting a model with a Bleed Marker on it&apos;s card with a Charge Actio
       <infoLinks>
         <infoLink id="b7be-bc7e-211d-5ea5" name="Banzai!" hidden="false" targetId="99b0-606c-1640-3d93" type="rule"/>
         <infoLink id="795a-c280-479d-a4d0" name="Charging Bonus" hidden="false" targetId="d747-f7f2-ea6f-5ceb" type="rule"/>
+      </infoLinks>
+    </infoGroup>
+    <infoGroup id="02bd-7ef5-4472-d9ba" name="Tiger Shark" hidden="false">
+      <profiles>
+        <profile id="f95b-1d39-4eb8-b6be" name="Tiger Shark" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+          <characteristics>
+            <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">This Model cannot declare Wait and Focus actions.
+
+When this model causes Wounds to a model during a Melee Exchange it may Heal 1 Wound.
+
+When targeting a model with a Bleed Marker on it&apos;s card with a Charge Action this model gains Charging Bonus [+1 Move] and Banzai!</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="a3ba-4454-82a1-079a" name="Banzai!" hidden="false" targetId="99b0-606c-1640-3d93" type="rule"/>
+        <infoLink id="8057-e5df-7ec3-303c" name="Charging Bonus" hidden="false" targetId="d747-f7f2-ea6f-5ceb" type="rule"/>
       </infoLinks>
     </infoGroup>
   </sharedInfoGroups>
