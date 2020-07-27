@@ -2753,6 +2753,11 @@ Until the end of the game, whenever you win a Tactical Test, choose 2 Prefecture
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="add" field="category" value="f434-17e6-174c-b4f6">
+          <conditions>
+            <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b596-d287-0d47-e2ee" type="atLeast"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b902-c095-5e44-17a3" type="max"/>
@@ -3453,9 +3458,6 @@ During Deployment place this model in BtB with Atsushi.</characteristic>
       </constraints>
       <profiles>
         <profile id="cb7c-9617-8424-b7ce" name="Ranked Fire Drill" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true"/>
-          </modifiers>
           <characteristics>
             <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">Play in the Starting Phase.
 Remove all Reload Markers from models within 4&quot; of a Friendly Gunso model.</characteristic>
@@ -3478,9 +3480,6 @@ Remove all Reload Markers from models within 4&quot; of a Friendly Gunso model.<
       </constraints>
       <profiles>
         <profile id="ac84-4cc3-9b4c-0b05" name="Sudden Alacrity" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true"/>
-          </modifiers>
           <characteristics>
             <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">Discard 5 Pass Tokens, add 1 Activation Counter to a Prefecture model.</characteristic>
           </characteristics>
@@ -3894,9 +3893,6 @@ Whenever this model performs a Wait Action, its Controller gains 2 Pass Tokens a
           </constraints>
           <profiles>
             <profile id="a98b-653e-8df4-8014" name="Asama&apos;s Dying Wish" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true"/>
-              </modifiers>
               <characteristics>
                 <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">Attached model gains Dodge (1), its Melee Weapons gain Push Defence (0), and its Call Lightning Attack gains Stun Attack (1).
 While this model is on the table, Mizuchi gains Bodyguard [Matsu](3&quot;).</characteristic>
@@ -3930,9 +3926,6 @@ While this model is on the table, Mizuchi gains Bodyguard [Matsu](3&quot;).</cha
           </constraints>
           <profiles>
             <profile id="a77b-5083-0edc-58e2" name="Second Book of Yasushi" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true"/>
-              </modifiers>
               <characteristics>
                 <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">Attached model gains Prowess [Tactical].</characteristic>
               </characteristics>
@@ -3987,6 +3980,70 @@ Requirement [Ashigaru]</characteristic>
           </categoryLinks>
           <costs>
             <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="b596-d287-0d47-e2ee" name="Heir by Blood" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="57c6-2296-2324-068c" type="notInstanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0a9e-e08b-ff73-9707" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1a74-9c60-929b-8633" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="4900-b05f-95ee-843e" name="Heir by Blood" hidden="false" typeId="bd15-7ead-9268-3576" typeName="Special Card (Ki Feat)">
+              <characteristics>
+                <characteristic name="Description" typeId="17eb-17e2-4df4-5c5d">Attached model gains the Ashigaru Type and the following Ki Feat:</characteristic>
+                <characteristic name="Name" typeId="27c7-1649-f16e-8eaa">Inspiration</characteristic>
+                <characteristic name="Cost" typeId="e410-b220-64e5-7953">2</characteristic>
+                <characteristic name="Timing" typeId="b9bf-562a-fe26-cb29">Active</characteristic>
+                <characteristic name="Subject" typeId="47b8-f739-9d50-2e45">Target 6&quot;</characteristic>
+                <characteristic name="Limitation" typeId="870e-79e4-80ee-c0cc">Once Per Turn</characteristic>
+                <characteristic name="Ki Feat Description" typeId="3886-242b-fb70-5c88">Target Friendly Faction model with a Rice Cost of less than this model gains +1 to its Melee Pool and Ranged Pool until the End Phase.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <categoryLinks>
+            <categoryLink id="4ea5-a1cd-9d73-35db" name="New CategoryLink" hidden="false" targetId="17cf-d9a9-c7c1-bcb6" primary="true"/>
+          </categoryLinks>
+          <costs>
+            <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="c519-9395-dbff-0bf7" name="Heir by Deed" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0ee0-ec8a-625a-e0f4" type="notInstanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b25f-d80d-b7bb-4bc5" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="330c-61d6-f68e-a079" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="f557-3556-3c9a-632b" name="Heir by Deed" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
+              <characteristics>
+                <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">Attached model gains Banzai!
+Friendly Faction Samurai models gain Charging Bonus [Fearless] when they begin their activation with LoS to the Attached model.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="e029-6030-94cf-b304" name="Banzai!" hidden="false" targetId="99b0-606c-1640-3d93" type="rule"/>
+            <infoLink id="43c7-2a74-242a-1c84" name="Charging Bonus" hidden="false" targetId="d747-f7f2-ea6f-5ceb" type="rule"/>
+            <infoLink id="4fe5-bc78-66a1-534b" name="Fearless" hidden="false" targetId="5d6f-1746-9080-aca5" type="rule"/>
+          </infoLinks>
+          <categoryLinks>
+            <categoryLink id="84b3-1a29-226d-fe2a" name="New CategoryLink" hidden="false" targetId="17cf-d9a9-c7c1-bcb6" primary="true"/>
+          </categoryLinks>
+          <costs>
+            <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -4163,9 +4220,6 @@ Enemy Damage Rolls are ignored if the idnividual dice values of the Damage Roll 
               </constraints>
               <profiles>
                 <profile id="464e-0536-84ce-daad" name="The Dragon Banner" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
-                  <modifiers>
-                    <modifier type="set" field="hidden" value="true"/>
-                  </modifiers>
                   <characteristics>
                     <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">While this model is within 6&quot; of any Enemy model, any Friendly Ashigaru or Samurai model with LoS to this model gains:
 Vengeance [Enemy models with RC &gt; 10]
