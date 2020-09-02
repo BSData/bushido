@@ -2791,7 +2791,6 @@ This model may Move through Destructible terrain; if you do, remove the terrain 
       </infoGroups>
       <categoryLinks>
         <categoryLink id="0652-fb5b-5ce8-32ca" name="Bakemono" hidden="false" targetId="9b14-5558-cfeb-ee1c" primary="false"/>
-        <categoryLink id="7000-c9d8-48dd-88e2" name="Horde" hidden="false" targetId="1afa-b4a3-cd57-56c8" primary="false"/>
         <categoryLink id="b6ed-58e5-302d-66b6" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
         <categoryLink id="16a7-7793-083e-a863" name="Non-Unique" hidden="false" targetId="d181-219d-3add-d47b" primary="false"/>
         <categoryLink id="e0d6-3c8f-429c-094e" name="Armour" hidden="false" targetId="f322-702a-ff62-b37e" primary="false"/>
@@ -4340,6 +4339,13 @@ Permitted [Oni, Onisho]</characteristic>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="db76-ea05-1047-4ccd" name="Rinsho" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="add" field="category" value="1afa-b4a3-cd57-56c8">
+          <conditions>
+            <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a7a7-4971-6952-2ed5" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="32c7-a793-4108-ecb6" type="max"/>
       </constraints>
@@ -4356,6 +4362,13 @@ Permitted [Oni, Onisho]</characteristic>
       </costs>
     </selectionEntry>
     <selectionEntry id="11b7-f913-1160-ee25" name="Bakemono Boomer" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="add" field="category" value="1afa-b4a3-cd57-56c8">
+          <conditions>
+            <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a7a7-4971-6952-2ed5" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="9963-a93a-35d8-90c8" type="max"/>
       </constraints>
@@ -4643,8 +4656,8 @@ Discard this card during the End Phase if you do so.</characteristic>
               <conditionGroups>
                 <conditionGroup type="and">
                   <conditions>
-                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9b14-5558-cfeb-ee1c" type="instanceOf"/>
-                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1afa-b4a3-cd57-56c8" type="instanceOf"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1afa-b4a3-cd57-56c8" type="instanceOf"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9b14-5558-cfeb-ee1c" type="instanceOf"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
