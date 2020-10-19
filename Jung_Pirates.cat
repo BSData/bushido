@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="d615-aef7-31d5-367d" name="Jung Pirates" revision="3" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="d615-aef7-31d5-367d" name="Jung Pirates" revision="4" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="258a-e1a8-8db1-9635" name="Ki&lt;2" hidden="true"/>
     <categoryEntry id="f6c9-50fa-a9d3-e9f3" name="Ranged Weapon" hidden="true"/>
@@ -1356,6 +1356,9 @@ This model cannot attach the Peg Leg Enhancement card.</characteristic>
           <categoryLinks>
             <categoryLink id="2a09-0334-1539-5ac1" name="Armour" hidden="false" targetId="f322-702a-ff62-b37e" primary="false"/>
           </categoryLinks>
+          <entryLinks>
+            <entryLink id="d79e-a79a-0167-89f8" name="Knife" hidden="false" collective="false" import="true" targetId="6c13-1e3e-8e36-0585" type="selectionEntry"/>
+          </entryLinks>
           <costs>
             <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1.0"/>
           </costs>
@@ -1415,7 +1418,7 @@ This model cannot attach the Peg Leg Enhancement card.</characteristic>
             </infoGroup>
           </infoGroups>
           <entryLinks>
-            <entryLink id="641a-7d86-63bc-4a0b" name="!DRAFT Knife" hidden="false" collective="false" import="true" targetId="6c13-1e3e-8e36-0585" type="selectionEntry"/>
+            <entryLink id="641a-7d86-63bc-4a0b" name="Knife" hidden="false" collective="false" import="true" targetId="6c13-1e3e-8e36-0585" type="selectionEntry"/>
           </entryLinks>
           <costs>
             <cost name=" Rice" typeId="a111-8656-5c05-7415" value="4.0"/>
@@ -1469,6 +1472,9 @@ This model cannot attach the Peg Leg Enhancement card.</characteristic>
               </infoLinks>
             </infoGroup>
           </infoGroups>
+          <entryLinks>
+            <entryLink id="0236-6671-d99a-e53e" name="Knife" hidden="false" collective="false" import="true" targetId="6c13-1e3e-8e36-0585" type="selectionEntry"/>
+          </entryLinks>
           <costs>
             <cost name=" Rice" typeId="a111-8656-5c05-7415" value="7.0"/>
           </costs>
@@ -2327,6 +2333,121 @@ Permitted [Ronin Yokai, Jung models, Hiroto, the Drunken Master]</characteristic
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2.0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="79f0-2b93-bf2b-ca41" name="Ryujin" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="068d-6ee9-fa4a-a8bf" type="atLeast"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <profiles>
+        <profile id="3f17-f79a-4ef1-b405" name="Ryujin" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">3</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33">3</characteristic>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac">3</characteristic>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">3</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c">3</characteristic>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">10</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29"/>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Huge 60mm</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="fdf9-956f-3b3f-4900" name="Ki Feats" hidden="false">
+          <infoLinks>
+            <infoLink id="52c0-f63b-e65a-dad9" name="Tsunami" hidden="false" targetId="cfb1-aa26-7f9c-a9d9" type="infoGroup"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="acdc-24fd-2778-62b9" name="Melee Weapon" hidden="false">
+          <profiles>
+            <profile id="d3af-32bf-abc5-f04e" name="Bite" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+4</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Pierce (2), Sharp (2)</characteristic>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Drag Attack (0), Forceback Attack (0), Slam Attack (0)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="55d7-0e95-d97e-2e07" name="Pierce " hidden="false" targetId="39e4-14d7-5533-6e67" type="rule"/>
+            <infoLink id="97f7-3131-4c30-e85d" name="Sharp " hidden="false" targetId="6092-9fb5-5196-d1eb" type="rule"/>
+            <infoLink id="b37c-410a-65f3-55ff" name="Drag Attack" hidden="false" targetId="9902-026d-4637-cc7d" type="rule"/>
+            <infoLink id="c494-0b98-d6a9-f796" name="Forceback Attack" hidden="false" targetId="2682-7c66-4163-28f2" type="rule"/>
+            <infoLink id="109d-467a-ca30-fc5f" name="Slam Attack" hidden="false" targetId="5d05-b0ce-d7db-9def" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="1321-c3ee-19e1-6c53" name="Ranged Weapon" hidden="false">
+          <profiles>
+            <profile id="262e-0466-01b0-a098" name="Ranged Weapon" hidden="false" typeId="7e20-258e-bf92-18f9" typeName="Ranged Weapon">
+              <characteristics>
+                <characteristic name="Ranged Weapon Strength" typeId="15aa-b6bd-6923-271f">+0</characteristic>
+                <characteristic name="Range Bands" typeId="be6a-50c6-d691-e2e9">4/6/8</characteristic>
+                <characteristic name="Traits" typeId="3410-4428-ef91-eb61"/>
+                <characteristic name="Specials" typeId="cdaf-b6ac-89d4-39ef">Combo Attack (1), Drag Attack (0), Forceback Attack (0)</characteristic>
+                <characteristic name="Unique Effects" typeId="3bf8-6525-f003-4990"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="b57b-a2d4-2487-b5ad" name="Combo Attack " hidden="false" targetId="78ab-6a94-be24-8f74" type="rule"/>
+            <infoLink id="4bdf-2b7f-b424-ef55" name="Drag Attack" hidden="false" targetId="9902-026d-4637-cc7d" type="rule"/>
+            <infoLink id="ce94-55ba-a3a8-d7f2" name="Forceback Attack" hidden="false" targetId="2682-7c66-4163-28f2" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="c74f-511b-61ce-9c45" name="Traits" hidden="false">
+          <profiles>
+            <profile id="3773-1626-6227-721a" name="Ryujin" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Believer [Shugenja](1/2&quot;), Cloudwalk, Fear (6), Kami, Sixth Sense, Soulless, Tough (2)</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="5f8a-e0dd-c44c-7fbe" name="Believer" hidden="false" targetId="d41e-8717-2e5c-38db" type="rule"/>
+            <infoLink id="19df-8ef9-011e-b390" name="Cloudwalk" hidden="false" targetId="538c-1266-626b-fcc9" type="rule"/>
+            <infoLink id="c9ac-dd17-1597-b47a" name="Fear" hidden="false" targetId="3586-4583-7f10-1f31" type="rule"/>
+            <infoLink id="5ae0-b648-ba76-5f2e" name="Kami" hidden="false" targetId="50d4-ec7a-9763-1b4d" type="rule"/>
+            <infoLink id="a6b3-7a35-7566-9aed" name="Sixth Sense" hidden="false" targetId="ec49-3908-f1d1-8de2" type="rule"/>
+            <infoLink id="9f33-bf99-17af-81ab" name="Soulless" hidden="false" targetId="af31-aad0-fcea-9590" type="rule"/>
+            <infoLink id="be8d-0a76-2981-8ca3" name="Tough" hidden="false" targetId="5613-a6cf-495a-229f" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="98c1-a37a-2351-7150" name="Unique Effects" hidden="false">
+          <profiles>
+            <profile id="1528-6c20-c193-6187" name="Incoming Tide" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">The area within X&quot; of this model is considered Difficult Terrain. Models in this area gain Immune [Fire] and Cover. X is the current turn number.</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="ed34-964b-1d8c-e318" name="Unique Effects" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">If a Water Lesser Kami model ends its activation in BtB with this model, remove it from play.
+This model gains Ki Tokens equal to the removed Water Lesser Kami&apos;s remaining Ki Tokens.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </infoGroup>
+      </infoGroups>
+      <categoryLinks>
+        <categoryLink id="1cc8-a0c6-60a6-eb25" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
+        <categoryLink id="493f-10c8-eea7-f821" name="Spirit of the Deep Ocean" hidden="false" targetId="fb35-9d9f-de1f-bf96" primary="false"/>
+        <categoryLink id="2a0e-006b-bbb5-e872" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
+      </categoryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="30.0"/>
+      </costs>
+    </selectionEntry>
   </selectionEntries>
   <entryLinks>
     <entryLink id="7c58-4740-ab52-3330" name="Koshimori Yukio" hidden="false" collective="false" import="true" targetId="de1e-de2d-1044-bf56" type="selectionEntry">
@@ -2391,8 +2512,8 @@ Permitted [Ronin Yokai, Jung models, Hiroto, the Drunken Master]</characteristic
           <conditionGroups>
             <conditionGroup type="and">
               <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0496-2e83-7db3-12e2" type="atLeast"/>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="843d-db96-732e-cf8c" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="843d-db96-732e-cf8c" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f616-46d8-5907-fafd" type="atLeast"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -2574,6 +2695,12 @@ Permitted [Ronin Yokai, Jung models, Hiroto, the Drunken Master]</characteristic
         <entryLink id="6987-63f5-652a-8c82" name="Enhancements" hidden="false" collective="false" import="true" targetId="2327-1257-a4b4-df32" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
+    <entryLink id="a54b-1c17-94bf-8666" name="Two Lone Swordsmen" hidden="false" collective="false" import="true" targetId="29e4-7f5e-593d-2445" type="selectionEntry"/>
+    <entryLink id="1528-6094-b0f6-9725" name="Khendish" hidden="false" collective="false" import="true" targetId="dc54-b54e-1428-7c3e" type="selectionEntry"/>
+    <entryLink id="2edd-b3c5-3031-206f" name="Brotherhood" hidden="false" collective="false" import="true" targetId="9402-edcc-93a2-aef1" type="selectionEntry"/>
+    <entryLink id="1697-746c-ced6-d8d8" name="Tru&apos;pah" hidden="true" collective="false" import="true" targetId="82bb-a55d-5366-baf2" type="selectionEntry"/>
+    <entryLink id="9daf-b3d6-9b17-5269" name="Batu" hidden="true" collective="false" import="true" targetId="5e97-28ce-9c1b-6b8b" type="selectionEntry"/>
+    <entryLink id="7276-8b81-ad5e-a2dc" name="Shosu" hidden="true" collective="false" import="true" targetId="39f7-4bb9-edb9-bde8" type="selectionEntry"/>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="a382-7e2d-9df9-d700" name="Korusea" hidden="false" collective="false" import="true" type="model">
@@ -3028,6 +3155,8 @@ Note: there is currently no way to automatically check for this.</characteristic
             <entryLink id="14b9-5898-8c1a-26bc" name="!DRAFT Demon-Face Mask" hidden="false" collective="false" import="true" targetId="2437-81ed-3b75-d23b" type="selectionEntry"/>
             <entryLink id="4a25-fb14-fd66-3274" name="!DRAFT!CYCLE Magamata" hidden="false" collective="false" import="true" targetId="370e-e02b-d9ee-8b80" type="selectionEntry"/>
             <entryLink id="1c27-8e8e-316e-8cf7" name="!DRAFT!CYCLE Wolf Heart Talisman" hidden="false" collective="false" import="true" targetId="a56e-8e8e-97b4-ec73" type="selectionEntry"/>
+            <entryLink id="f338-3cff-edd9-b007" name="The Eagle Banner" hidden="false" collective="false" import="true" targetId="010e-1205-db10-6a2d" type="selectionEntry"/>
+            <entryLink id="b2a4-e8f1-5bcf-ee37" name="Hand Cannon" hidden="false" collective="false" import="true" targetId="3009-1a3c-223d-cae2" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
@@ -3036,6 +3165,7 @@ Note: there is currently no way to automatically check for this.</characteristic
         <entryLink id="ab42-f7dc-c0d9-fa46" name="!DRAFT Finesse" hidden="false" collective="false" import="true" targetId="e916-ca9f-75ef-1c24" type="selectionEntry"/>
         <entryLink id="43f5-3566-d75b-a3f5" name="!DRAFT!CYCLE Pacifism" hidden="false" collective="false" import="true" targetId="6bf3-9dca-b4c5-6a3e" type="selectionEntry"/>
         <entryLink id="5130-ced6-0f03-81a6" name="!DRAFT!CYCLE Prayer Scroll" hidden="false" collective="false" import="true" targetId="bb42-702b-ab84-a9f9" type="selectionEntry"/>
+        <entryLink id="4a2a-ec46-ec9b-2999" name="Fujin&apos;s Charm" hidden="false" collective="false" import="true" targetId="5110-9b07-a9dd-d71e" type="selectionEntry"/>
       </entryLinks>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <gameSystem id="62e4-ab79-1c4c-9ffe" name="Bushido: Risen Sun" revision="1" battleScribeVersion="2.03" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <costTypes>
-    <costType id="a111-8656-5c05-7415" name=" Rice" defaultCostLimit="-1.0"/>
+    <costType id="a111-8656-5c05-7415" name=" Rice" defaultCostLimit="-1.0" hidden="false"/>
   </costTypes>
   <profileTypes>
     <profileType id="6ea2-0f74-4852-4a98" name="Character Profile">
@@ -137,9 +137,14 @@
     <categoryEntry id="0ca8-2040-37f2-a1e0" name="Profile Cards" hidden="false">
       <modifiers>
         <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6eac-b6fc-ac09-4d64" type="equalTo"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b254-2810-6b62-66d9" type="equalTo"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6eac-b6fc-ac09-4d64" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
     </categoryEntry>
@@ -201,6 +206,7 @@
     <categoryEntry id="875a-48b1-3c9f-0a14" name="Faction: Silvermoon Trade Syndicate" hidden="false"/>
     <categoryEntry id="4a43-1cd1-cfb2-f5cd" name="Risen Sun Cycle" hidden="false"/>
     <categoryEntry id="a745-0548-80c8-ece4" name="Cycle: Risen Sun" hidden="false"/>
+    <categoryEntry id="b254-2810-6b62-66d9" name="Brotherhood" hidden="false"/>
   </categoryEntries>
   <forceEntries>
     <forceEntry id="2150-40b1-52f8-4a8a" name="Risen Sun" hidden="true">
