@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="0b85-0901-eb64-b84b" name="The Savage Wave" revision="4" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="0b85-0901-eb64-b84b" name="The Savage Wave" revision="5" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="5048-3a52-5689-6d0b" name="Ambush" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -3923,20 +3923,34 @@ On a successful ranged attack the Target gains a Stunned marker.</characteristic
       </profiles>
       <infoGroups>
         <infoGroup id="3d00-36ad-bc86-3838" name="Ki Feats" hidden="false">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2125-1289-3bb1-15c1" type="lessThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <infoLinks>
-            <infoLink id="7f30-e551-bf77-1793" name="Distraction" hidden="true" targetId="67dc-8faf-a547-262a" type="infoGroup">
-              <modifiers>
-                <modifier type="set" field="hidden" value="false">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2125-1289-3bb1-15c1" type="atLeast"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </infoLink>
             <infoLink id="b3c2-c54a-5c48-84ce" name="Darkness" hidden="false" targetId="043d-73fe-cc06-b294" type="infoGroup"/>
             <infoLink id="555a-a890-2abe-1a0f" name="Shadow Walk" hidden="false" targetId="26dc-6aae-4be0-6e22" type="infoGroup"/>
             <infoLink id="e6ca-f7f5-7bfe-e764" name="Summon from the Shadows" hidden="false" targetId="443a-eb7b-fe65-ae7d" type="infoGroup"/>
             <infoLink id="4b4f-e062-20ef-f82b" name="Mob Mentality" hidden="false" targetId="b3b7-f4cb-44c1-96c4" type="infoGroup"/>
+            <infoLink id="4818-8c24-acda-932f" name="Distraction" hidden="true" targetId="67dc-8faf-a547-262a" type="infoGroup"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="c027-e272-5248-5b6a" name="Ki Feats" hidden="false">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2125-1289-3bb1-15c1" type="atLeast"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <infoLinks>
+            <infoLink id="0fa3-086a-3295-42f4" name="Darkness" hidden="false" targetId="043d-73fe-cc06-b294" type="infoGroup"/>
+            <infoLink id="e3bd-a7db-4326-6f3b" name="Shadow Walk" hidden="false" targetId="26dc-6aae-4be0-6e22" type="infoGroup"/>
+            <infoLink id="2f28-66b1-3879-8a6c" name="Summon from the Shadows" hidden="false" targetId="443a-eb7b-fe65-ae7d" type="infoGroup"/>
+            <infoLink id="ef85-98d9-0fa4-38db" name="Mob Mentality" hidden="false" targetId="b3b7-f4cb-44c1-96c4" type="infoGroup"/>
           </infoLinks>
         </infoGroup>
       </infoGroups>
@@ -4257,8 +4271,8 @@ Permitted [Oni, Onisho]</characteristic>
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2125-1289-3bb1-15c1" type="equalTo"/>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d14c-bf06-fc37-16e2" type="equalTo"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2125-1289-3bb1-15c1" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d14c-bf06-fc37-16e2" type="atLeast"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -4284,6 +4298,13 @@ Permitted [Oni, Onisho]</characteristic>
       </categoryLinks>
     </entryLink>
     <entryLink id="2c49-4f74-f666-0355" name="Nightwing Swarm" hidden="false" collective="false" import="true" targetId="93fb-482f-8751-9809" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d14c-bf06-fc37-16e2" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <categoryLinks>
         <categoryLink id="f759-1881-b88d-f653" name="New CategoryLink" hidden="false" targetId="9fba-f50b-c8f7-8396" primary="true"/>
       </categoryLinks>
@@ -4357,7 +4378,6 @@ Permitted [Oni, Onisho]</characteristic>
       </constraints>
       <categoryLinks>
         <categoryLink id="fbd8-8e7b-3cc7-5430" name="Bakemono" hidden="false" targetId="9b14-5558-cfeb-ee1c" primary="false"/>
-        <categoryLink id="fc30-03a8-75c8-7ab3" name="Horde" hidden="false" targetId="1afa-b4a3-cd57-56c8" primary="false"/>
         <categoryLink id="28d3-4b1b-ab39-2018" name="Armour" hidden="false" targetId="f322-702a-ff62-b37e" primary="false"/>
       </categoryLinks>
       <entryLinks>
