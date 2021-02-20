@@ -2753,11 +2753,12 @@ Until the end of the game, whenever you win a Tactical Test, choose 2 Prefecture
     </selectionEntry>
     <selectionEntry id="57c6-2296-2324-068c" name="Takashi Hiro" hidden="false" collective="false" import="true" type="model">
       <modifiers>
-        <modifier type="set" field="hidden" value="true">
+        <modifier type="set" field="b902-c095-5e44-17a3" value="0.0">
           <conditionGroups>
-            <conditionGroup type="or">
+            <conditionGroup type="and">
               <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d5a3-42bc-c296-969a" type="equalTo"/>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b596-d287-0d47-e2ee" type="lessThan"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d5a3-42bc-c296-969a" type="atLeast"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
