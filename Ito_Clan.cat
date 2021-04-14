@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="302b-66f1-a875-3b63" name="Ito Clan" revision="4" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="302b-66f1-a875-3b63" name="Ito Clan" revision="5" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="46b2-47c2-4c55-2e3a" name="Kinu" hidden="false"/>
     <categoryEntry id="273a-b61b-c7f8-76fd" name="Itsunagi" hidden="false"/>
@@ -538,7 +538,7 @@ Exclusion [Hebimiman]</characteristic>
           <profiles>
             <profile id="7732-7881-6039-9302" name="Dai-Kyu" hidden="false" typeId="7e20-258e-bf92-18f9" typeName="Ranged Weapon">
               <characteristics>
-                <characteristic name="Ranged Weapon Strength" typeId="15aa-b6bd-6923-271f">+0</characteristic>
+                <characteristic name="Ranged Weapon Strength" typeId="15aa-b6bd-6923-271f">+1</characteristic>
                 <characteristic name="Range Bands" typeId="be6a-50c6-d691-e2e9">5/10/15</characteristic>
                 <characteristic name="Traits" typeId="3410-4428-ef91-eb61">Reload (1)</characteristic>
                 <characteristic name="Specials" typeId="cdaf-b6ac-89d4-39ef"/>
@@ -2903,7 +2903,7 @@ This model&apos;s weapons gains Poison (1/1)</characteristic>
           <profiles>
             <profile id="1c82-2cb2-bbad-11c0" name="Shortbow" hidden="false" typeId="7e20-258e-bf92-18f9" typeName="Ranged Weapon">
               <characteristics>
-                <characteristic name="Ranged Weapon Strength" typeId="15aa-b6bd-6923-271f">+1</characteristic>
+                <characteristic name="Ranged Weapon Strength" typeId="15aa-b6bd-6923-271f">+0</characteristic>
                 <characteristic name="Range Bands" typeId="be6a-50c6-d691-e2e9">5/10/15</characteristic>
                 <characteristic name="Traits" typeId="3410-4428-ef91-eb61"> Reload (1)</characteristic>
                 <characteristic name="Specials" typeId="cdaf-b6ac-89d4-39ef"/>
@@ -3608,7 +3608,7 @@ All Friendly Shisai models gain 2 Ki Tokens.</characteristic>
           <profiles>
             <profile id="3112-a777-9652-f000" name="Beneath the Skin" hidden="false" typeId="bd15-7ead-9268-3576" typeName="Special Card (Ki Feat)">
               <characteristics>
-                <characteristic name="Description" typeId="17eb-17e2-4df4-5c5d">Attached model gains the following Ki Feat until the end of the current activation:</characteristic>
+                <characteristic name="Description" typeId="17eb-17e2-4df4-5c5d">Attached model gains the following Ki Feat:</characteristic>
                 <characteristic name="Name" typeId="27c7-1649-f16e-8eaa">Orochi&apos;s Visage</characteristic>
                 <characteristic name="Cost" typeId="e410-b220-64e5-7953">2</characteristic>
                 <characteristic name="Timing" typeId="b9bf-562a-fe26-cb29">Instant</characteristic>
@@ -3842,7 +3842,7 @@ All Friendly Shisai models gain 2 Ki Tokens.</characteristic>
                 <profile id="2498-163e-8867-77ac" name="Ito Clan Armour" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
                   <characteristics>
                     <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">Attached model gains Armour (3).
-Enemy Damage Rolls are ignored if the individual dice values of the Damage Roll are the same number.
+Enemy Damage Rolls against the Attached model are ignored if the individual dice values of the Damage Roll are the same number.
 Attached model gains Move Ki Boost (2).</characteristic>
                   </characteristics>
                 </profile>
@@ -4047,10 +4047,12 @@ This model is considered Medium Sized for the purposes of this ability.</charact
           <characteristics>
             <characteristic name="Cost" typeId="a126-54d9-0a27-f4b6">4</characteristic>
             <characteristic name="Timing" typeId="f8a8-8a3e-ef58-4c61">Complex</characteristic>
-            <characteristic name="Subject" typeId="4ac8-2bb1-0c84-f088">Target 6&quot;, Opposed Ki Test</characteristic>
+            <characteristic name="Subject" typeId="4ac8-2bb1-0c84-f088">Target 6&quot;</characteristic>
             <characteristic name="Limitation" typeId="6fc9-5d13-2687-b2a5">Not in BtB</characteristic>
-            <characteristic name="Description" typeId="f804-b969-00da-2123">Target model gains a Poison (2) Marker and a Stun Marker.
-Choose another Enemy model within 3&quot; of the Target and immediately repeat this Ki Feat on the new model, ignoring Range, LoS, and Camouflage.</characteristic>
+            <characteristic name="Description" typeId="f804-b969-00da-2123">Perform an Opposed Ki test with Target Enemy Model. If successful, that model gains a Poison (2) Marker and a Stun Marker.
+Regardless of Success of the opposed Ki Test, choose another Enemy model within 3&quot; of the Target and immediately repeat this Ki Feat at no cost on the chosen model, ignoring Range, LoS, and Camouflage.
+The chosen model is then considered the Target.
+No model may be affected more than once by this Ki Feat in a turn.</characteristic>
           </characteristics>
         </profile>
       </profiles>

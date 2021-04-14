@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="0b85-0901-eb64-b84b" name="The Savage Wave" revision="5" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="0b85-0901-eb64-b84b" name="The Savage Wave" revision="6" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="5048-3a52-5689-6d0b" name="Ambush" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -1463,6 +1463,18 @@ Oni and Onisho models, except Kijo models, activating within 4&quot;&quot; of th
             <infoLink id="716c-08bd-73e5-a4bc" name="Frenzied Rythm" hidden="false" targetId="cf0b-c82b-0331-39e5" type="infoGroup"/>
           </infoLinks>
         </infoGroup>
+        <infoGroup id="c3fc-3bb8-887e-d590" name="Unique Effects" hidden="false">
+          <profiles>
+            <profile id="ff79-96d4-0cab-e380" name="Virtue" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">When a Friendly model spends a Virtue Token while this model is in play, it gains one of the following until the End Phase:
+• +1 Melee Weapon Strength
+• Last Stand
+• Bravery</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </infoGroup>
       </infoGroups>
       <categoryLinks>
         <categoryLink id="64a5-7aee-3e00-ce7f" name="Bakemono" hidden="false" targetId="9b14-5558-cfeb-ee1c" primary="false"/>
@@ -1989,7 +2001,7 @@ This model may Move through Destructible terrain; if you do, remove the terrain 
             <characteristic name="Ki Cap" typeId="2e88-c65e-4e45-d4c4">6</characteristic>
             <characteristic name="Wounds" typeId="a1dc-c2c1-e2d2-ca98">6 OOOOO O</characteristic>
             <characteristic name="Size &amp; Base" typeId="6af2-e777-20ce-e060">Small 30mm</characteristic>
-            <characteristic name="Traits" typeId="e742-1b02-09cf-fd97">Self-Sacrifice [Oni](2&quot;), Resistance (-1)</characteristic>
+            <characteristic name="Traits" typeId="e742-1b02-09cf-fd97">Sacrifice [Oni](2&quot;), Resistance (-1)</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -3368,7 +3380,7 @@ This model automatically passes Fear Tests caused by Small Based models.</charac
                 <characteristic name="Ki Cap" typeId="2e88-c65e-4e45-d4c4">6</characteristic>
                 <characteristic name="Wounds" typeId="a1dc-c2c1-e2d2-ca98">5 OOOOO</characteristic>
                 <characteristic name="Size &amp; Base" typeId="6af2-e777-20ce-e060">Small 30mm</characteristic>
-                <characteristic name="Traits" typeId="e742-1b02-09cf-fd97">Cowardly, Self-Sacrifice [Oni](2&quot;), Resistance (-1)</characteristic>
+                <characteristic name="Traits" typeId="e742-1b02-09cf-fd97">Cowardly, Sacrifice [Oni](2&quot;), Resistance (-1)</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -3391,7 +3403,7 @@ This model automatically passes Fear Tests caused by Small Based models.</charac
                 <characteristic name="Ki Cap" typeId="2e88-c65e-4e45-d4c4">6</characteristic>
                 <characteristic name="Wounds" typeId="a1dc-c2c1-e2d2-ca98">5 OOOOO</characteristic>
                 <characteristic name="Size &amp; Base" typeId="6af2-e777-20ce-e060">Small 30mm</characteristic>
-                <characteristic name="Traits" typeId="e742-1b02-09cf-fd97">Cowardly, Self-Sacrifice [Oni](2&quot;), Resistance (-1)</characteristic>
+                <characteristic name="Traits" typeId="e742-1b02-09cf-fd97">Cowardly, Sacrifice [Oni](2&quot;), Resistance (-1)</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -3872,7 +3884,8 @@ On a successful ranged attack the Target gains a Stunned marker.</characteristic
           <profiles>
             <profile id="7b92-b752-ac34-319a" name="Unique Effects" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
               <characteristics>
-                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">While there is a Friendly Herald or Council model in play, this model gains the Horde Type.</characteristic>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">If this model was recruited into the same Warband as a Friendly Herald or Council model, it gains the Horde type while a Friendly Herald or Council model is in play.
+This model may gain the Horde type from this ability even while not in play.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -4184,6 +4197,7 @@ Kemono &amp; Ushi are considered the same model when creating a Warband.</charac
           <characteristics>
             <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">• Models in this Warband gain Banzai!
 • Models in this Warband may only declare Run or Charge Actions.
+  (If no Action choice is legal then the model loses all Activation Counters and ends its action immediately.)
 • Discard this Theme when a model declares any action other than Charge, or you may choose to discard this in any Starting Phase.
 
 Restriction [Bakemono]</characteristic>
@@ -4605,7 +4619,7 @@ Requirement [Oni]</characteristic>
           <profiles>
             <profile id="7c15-d9a8-ecfe-82a8" name="Unearthly Rage" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
               <characteristics>
-                <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">When Attached model uses Oni Rage you may have it gain Unblockable until the End Phase.
+                <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">When Attached model uses Oni Rage you may have it gain Unblockable (1) until the End Phase.
 Discard this card during the End Phase if you do so.</characteristic>
               </characteristics>
             </profile>
@@ -4875,6 +4889,7 @@ Restriction [Bakemono]</characteristic>
                   <characteristics>
                     <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">Double the Attached model&apos;s Melee Pool, and it gains +2 Melee Weapon Strength.
 Every End Phase mark 1 Damage Box of the Attached model.
+Attached model cannot be Healed.
 
 Requirement [Bakemono model in a Warband with a Bakemono Shugenja]</characteristic>
                   </characteristics>
@@ -5132,12 +5147,7 @@ Requirement [Warband with a Shugenja]</characteristic>
             <characteristic name="Timing" typeId="f8a8-8a3e-ef58-4c61">Simple</characteristic>
             <characteristic name="Subject" typeId="4ac8-2bb1-0c84-f088">Pulse 4&quot;</characteristic>
             <characteristic name="Limitation" typeId="6fc9-5d13-2687-b2a5">Not in BtB, Once Per Turn</characteristic>
-            <characteristic name="Description" typeId="f804-b969-00da-2123">Each Friendly Bakemono within the Pulse’s area of effect gain one Virtue Token.
-A model may spend a Virtue Token at any time it could use an Instant Ki Feat.
-When a model spends a Virtue Token, while this model is in play, it gains one of the following until the End Phase:
-• +1 Melee Weapon Strength
-• Last Stand
-• Bravery</characteristic>
+            <characteristic name="Description" typeId="f804-b969-00da-2123">Each Friendly Bakemono within the Pulse’s area of effect gain one Virtue Token.</characteristic>
           </characteristics>
         </profile>
       </profiles>

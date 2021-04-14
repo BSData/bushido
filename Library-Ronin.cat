@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="b489-b304-948d-52d0" name="Library-Ronin" revision="9" battleScribeVersion="2.03" library="true" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="b489-b304-948d-52d0" name="Library-Ronin" revision="11" battleScribeVersion="2.03" library="true" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="4e24-3a7e-77bc-dfed" name="Balance" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -136,8 +136,8 @@ It may be placed in Scenario Zones and within 2&quot; of the edge of the table.<
       <profiles>
         <profile id="08eb-14b5-7129-3e7d" name="Ordered for Battle" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
           <characteristics>
-            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">After recruiting the Warband to the correct Rice Cost, choose another 30 Rice of cards as Reserves. These are not added to the main list, but kept separate. The Warband, both with and without Reserves, must be legal.
-Before Deployment you may switch cards in the Reserves with cards in the main list. The main list must remain legal. Show the new list to your Opponent before the game.
+            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">After recruiting the Warband to the correct Rice Cost, choose another 30 Rice of cards as Reserves. These are not added to the main list but kept separate. The Warband with and without Reserves must be legal.
+Before Deployment you may switch cards in the Reserves with cards in the main list, the main list must remain legal.  Enhancement cards may not be attached or removed from profile cards.  Show the new list to your Opponent before the game.
 In a timed event, you have 5 minutes to make substitutions.</characteristic>
           </characteristics>
         </profile>
@@ -146,8 +146,9 @@ In a timed event, you have 5 minutes to make substitutions.</characteristic>
         <rule id="1c9e-36cd-a550-f28d" name="Ordered for Battle" hidden="true">
           <description>Theme
 • After recruiting the Warband to the correct Rice Cost, choose another 30 Rice of cards as Reserves. These are not added to the main list but kept separate.
-• The Warband, with and without Reserves, must be legal.
-• Before deployment you may switch models in the Reserves with models in the main list, the main list must remain legal.  Show the new list to your opponent before the game.
+• The Warband with and without Reserves must be legal.
+• Before Deployment you may switch cards in the Reserves with cards in the main list, the main list must remain legal.  Enhancement cards may not be attached or removed from profile cards. 
+• Show the new list to your Opponent before the game.
 • In a timed event, you have 5 minutes to make substitutions.</description>
         </rule>
       </rules>
@@ -736,6 +737,9 @@ This model cannot declare Melee or Charge Actions Targeting Imperial models.</ch
           </costs>
         </selectionEntry>
       </selectionEntries>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="fee6-a48b-db82-74e7" name="Hiretsuna" hidden="false" collective="false" import="true" type="model">
       <modifiers>
@@ -1613,9 +1617,9 @@ This model does not gain Slow from Blizzard.</characteristic>
           <profiles>
             <profile id="1154-fe5e-35a6-c0b6" name="Starting Phase" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
               <characteristics>
-                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">During the Starting Phase choose 1 of the following effects:
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">During the Starting Phase you may choose 1 of the following effects:
 • Remove this model from play and choose an Enemy model within 2&quot;. Remove 1 Activation Counter from that model
-• 1 model within 2&quot; suffers -2 Move until the End Phase</characteristic>
+• Up to 1 model within 2&quot; suffers -2 Move until the End Phase</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -2126,7 +2130,7 @@ If this model becomes Prone, it loses all Ki tokens and gains a Spirit Block Mar
             <characteristic name="Timing" typeId="b9bf-562a-fe26-cb29">Instant</characteristic>
             <characteristic name="Subject" typeId="47b8-f739-9d50-2e45">Personal</characteristic>
             <characteristic name="Limitation" typeId="870e-79e4-80ee-c0cc"/>
-            <characteristic name="Ki Feat Description" typeId="3886-242b-fb70-5c88">This model gains Strong for the next Damage Roll.</characteristic>
+            <characteristic name="Ki Feat Description" typeId="3886-242b-fb70-5c88">This model&apos;s Melee Weapons gain Strong for the next Damage Roll.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -2244,7 +2248,6 @@ If this model becomes Prone, it loses all Ki tokens and gains a Spirit Block Mar
             <infoLink id="a670-f03b-6f23-a736" name="Cloudwalk" hidden="false" targetId="538c-1266-626b-fcc9" type="rule"/>
             <infoLink id="e0a2-18f3-f250-6dc0" name="Insignificant" hidden="false" targetId="1614-d86c-ef8a-c095" type="rule"/>
             <infoLink id="54d6-a8b0-e3e6-676f" name="Immune" hidden="false" targetId="ea08-b25e-0ea8-af73" type="rule"/>
-            <infoLink id="a4be-c21e-1f89-a986" name="Poison " hidden="false" targetId="7290-85f4-42cf-0b75" type="rule"/>
             <infoLink id="42a1-b98b-a990-8ae1" name="Durable" hidden="false" targetId="3612-7e19-3cb9-72d0" type="rule"/>
             <infoLink id="ccba-4af4-016e-73ab" name="Evasive" hidden="false" targetId="b0f8-d197-536b-c8fc" type="rule"/>
             <infoLink id="22c0-9292-0af6-6676" name="Flank" hidden="false" targetId="a847-f02d-7e99-8a66" type="rule"/>
@@ -2261,12 +2264,15 @@ If this model becomes Prone, it loses all Ki tokens and gains a Spirit Block Mar
             <profile id="ab63-f2ff-9d0f-9f84" name="Bats" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
               <characteristics>
                 <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">-2</characteristic>
-                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e"/>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Poison (1/1)</characteristic>
                 <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d"/>
                 <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
               </characteristics>
             </profile>
           </profiles>
+          <infoLinks>
+            <infoLink id="72f9-a81a-bfcf-5b3d" name="Poison " hidden="false" targetId="7290-85f4-42cf-0b75" type="rule"/>
+          </infoLinks>
         </infoGroup>
         <infoGroup id="209f-ecdb-bdf4-c0fc" name="Unique Effects" hidden="false">
           <infoLinks>
@@ -2300,7 +2306,7 @@ If this model becomes Prone, it loses all Ki tokens and gains a Spirit Block Mar
                 <characteristic name="Ki Cap" typeId="2e88-c65e-4e45-d4c4">0</characteristic>
                 <characteristic name="Wounds" typeId="a1dc-c2c1-e2d2-ca98">3 OOO</characteristic>
                 <characteristic name="Size &amp; Base" typeId="6af2-e777-20ce-e060">Tiny 40mm</characteristic>
-                <characteristic name="Traits" typeId="e742-1b02-09cf-fd97">Agile, Cloudwalk, Durable, Evasive, Flank, Immune [Prone], Insignificant, Poison (1/1), Ranged Defence (1), Regenerate (1), Sixth Sense, Swarm, Tiny, Tireless</characteristic>
+                <characteristic name="Traits" typeId="e742-1b02-09cf-fd97">Agile, Cloudwalk, Durable, Evasive, Flank, Immune [Prone], Insignificant, Ranged Defence (1), Regenerate (1), Sixth Sense, Swarm, Tiny, Tireless</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -2326,7 +2332,7 @@ If this model becomes Prone, it loses all Ki tokens and gains a Spirit Block Mar
                 <characteristic name="Ki Cap" typeId="2e88-c65e-4e45-d4c4">0</characteristic>
                 <characteristic name="Wounds" typeId="a1dc-c2c1-e2d2-ca98">3 OOO</characteristic>
                 <characteristic name="Size &amp; Base" typeId="6af2-e777-20ce-e060">Tiny 40mm</characteristic>
-                <characteristic name="Traits" typeId="e742-1b02-09cf-fd97">Agile, Cloudwalk, Durable, Evasive, Flank, Immune [Prone], Insignificant, Poison (1/1), Ranged Defence (1), Regenerate (1), Sixth Sense, Swarm, Tiny, Tireless</characteristic>
+                <characteristic name="Traits" typeId="e742-1b02-09cf-fd97">Agile, Cloudwalk, Durable, Evasive, Flank, Immune [Prone], Insignificant, Ranged Defence (1), Regenerate (1), Sixth Sense, Swarm, Tiny, Tireless</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -3227,7 +3233,7 @@ Against Durable models, instead of making a Damage Roll, always cause 1 Damage (
           <profiles>
             <profile id="b906-a53c-55c2-b495" name="The Grey Pilgrim" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
               <characteristics>
-                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">A model Damaged by a Call Lightning or Raijin&apos;s Rage Attack gains a Stunned Marker.
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">A model that suffers wounds from any Call Lightning or Raijin&apos;s Rage Attack gains a Stunned Marker.
 This model cannot be Targeted by Call Lightning Ranged Attacks or by Attacks generated by the Raijin&apos;s Rage Ki Feat.</characteristic>
               </characteristics>
             </profile>
@@ -4357,6 +4363,7 @@ This model can only be recruited into a Warband that contains all three Blood Br
         <categoryLink id="f680-b921-51a7-21b2" name="Eagle" hidden="false" targetId="52d1-8aa3-4c32-0c50" primary="false"/>
         <categoryLink id="388d-5975-d425-5ade" name="Non-Unique" hidden="false" targetId="d181-219d-3add-d47b" primary="false"/>
         <categoryLink id="d15e-7021-a2b2-178e" name="New CategoryLink" hidden="false" targetId="9fba-f50b-c8f7-8396" primary="true"/>
+        <categoryLink id="2efe-de10-6b5b-991b" name="Bird" hidden="false" targetId="cfb8-797d-9fae-9a4f" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="31b3-893c-e547-0854" name="Giant Eagle A" hidden="false" collective="false" import="true" type="upgrade">
@@ -4509,7 +4516,7 @@ This model can only be recruited into a Warband that contains all three Blood Br
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="19.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="f311-bffb-b3a9-42e6" name="Kami of Tempered Iron" hidden="true" collective="false" import="true" type="unit">
+    <selectionEntry id="f311-bffb-b3a9-42e6" name="Kami of Tempered Iron" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
         <modifier type="set" field="hidden" value="true">
           <conditionGroups>
@@ -5308,7 +5315,7 @@ This model cannot have Enhancement cards Attached.</characteristic>
             <profile id="1ce8-c8dd-c9eb-a1ef" name="Unique Effects" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
               <characteristics>
                 <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">This model always has Cover.
-This model may ignore Stupid when declaring its Fire Spin Ki Feat.</characteristic>
+This model may use Fire Spin despite its Stupid trait.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -5734,6 +5741,12 @@ Requirement [Tru&apos;pah]</characteristic>
             <infoLink id="7d09-ad31-99da-1908" name="Zanbato" hidden="false" targetId="1774-0187-b918-96c4" type="infoGroup"/>
           </infoLinks>
         </infoGroup>
+        <infoGroup id="daa6-d31d-e15f-03cb" name="Ki Feats" hidden="false">
+          <infoLinks>
+            <infoLink id="a7ee-7003-6945-991f" name="Tsukkakaru" hidden="false" targetId="8fcb-74be-c338-21ed" type="infoGroup"/>
+            <infoLink id="5ece-7bc3-3044-6248" name="Hageshiku Furu" hidden="false" targetId="e4a9-a9e9-3991-52ab" type="infoGroup"/>
+          </infoLinks>
+        </infoGroup>
       </infoGroups>
       <categoryLinks>
         <categoryLink id="fd00-ae2d-df1f-cf7b" name="New CategoryLink" hidden="false" targetId="9fba-f50b-c8f7-8396" primary="true"/>
@@ -5999,6 +6012,273 @@ Exclusion [Monk]</characteristic>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2.0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="1edd-65f3-2fdb-67b9" name="Ichiro" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="477a-e693-0888-08f7" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b94d-f7cb-a84c-4077" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9402-edcc-93a2-aef1" type="atLeast"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <profiles>
+        <profile id="7098-9194-53a8-7aad" name="Ichiro" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">2</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">2</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33">3</characteristic>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">1</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">6</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">5 OOOOO</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="83d9-2925-3386-9c90" name="Ichiro" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+          <characteristics>
+            <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Cowardly, Lightfooted, Scout (1/2&quot;)</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="ba38-770f-ede7-aa86" name="Traits" hidden="false">
+          <infoLinks>
+            <infoLink id="f24c-697e-aa04-46c6" name="Scout" hidden="false" targetId="8c82-d05a-f63b-1841" type="rule"/>
+            <infoLink id="0f72-8b2d-fd0e-461f" name="Lightfooted" hidden="false" targetId="57d2-cd57-07f9-addf" type="rule"/>
+            <infoLink id="896c-a41a-6c36-0430" name="Cowardly" hidden="false" targetId="c8d8-d1c7-905b-f971" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="a60a-a6f7-02d9-29b2" name="Ki Feats" hidden="false">
+          <infoLinks>
+            <infoLink id="5664-a1d3-b9e4-8018" name="Hope" hidden="false" targetId="e848-cc86-3864-44fd" type="infoGroup"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="0321-103c-b494-6ae7" name="Unique Effects" hidden="false">
+          <profiles>
+            <profile id="6377-560d-09ff-7b7f" name="Unique Effects" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">If this model begins its activation within 3&quot; of a Monk, it loses Cowardly for the rest of the activation.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </infoGroup>
+        <infoGroup id="9370-3aba-613f-ac8d" name="Ranged Weapon" hidden="false">
+          <profiles>
+            <profile id="c250-026a-cdac-96aa" name="Sling" hidden="false" typeId="7e20-258e-bf92-18f9" typeName="Ranged Weapon">
+              <characteristics>
+                <characteristic name="Ranged Weapon Strength" typeId="15aa-b6bd-6923-271f">+0</characteristic>
+                <characteristic name="Range Bands" typeId="be6a-50c6-d691-e2e9">4/8/12</characteristic>
+                <characteristic name="Traits" typeId="3410-4428-ef91-eb61">Lightweight, Reload (1)</characteristic>
+                <characteristic name="Specials" typeId="cdaf-b6ac-89d4-39ef"/>
+                <characteristic name="Unique Effects" typeId="3bf8-6525-f003-4990"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="c923-4f57-9626-ab48" name="Lightweight" hidden="false" targetId="c75c-7124-2b1f-a4d9" type="rule"/>
+            <infoLink id="942c-e443-08ad-94b3" name="Reload" hidden="false" targetId="9736-df56-0b62-b1a8" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="c5ea-17fe-d225-2f55" name="Melee Weapon" hidden="false">
+          <profiles>
+            <profile id="7439-e583-deaf-a9a1" name="Unarmed" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">-1</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e"/>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d"/>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+        </infoGroup>
+      </infoGroups>
+      <categoryLinks>
+        <categoryLink id="3845-0f0f-2076-cd5a" name="Hunter" hidden="false" targetId="1752-5928-fe3d-a800" primary="false"/>
+        <categoryLink id="842a-c6d2-ce34-2af8" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
+        <categoryLink id="4beb-e66a-1200-006d" name="Villager" hidden="false" targetId="9389-c90b-a833-f68d" primary="false"/>
+        <categoryLink id="27c9-96df-8f23-eb8b" name="Peasant" hidden="false" targetId="78b4-4485-a93e-754c" primary="false"/>
+      </categoryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="10.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="7ae1-11df-c8ef-4f5a" name="Eagles of Jwar" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="477a-e693-0888-08f7" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b94d-f7cb-a84c-4077" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9402-edcc-93a2-aef1" type="atLeast"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="2c52-c035-b85a-dac7" type="max"/>
+      </constraints>
+      <infoGroups>
+        <infoGroup id="df91-1c90-fe1b-fd9d" name="Traits" hidden="false">
+          <infoLinks>
+            <infoLink id="866f-ac1f-8fd2-cda4" name="Insignificant" hidden="false" targetId="1614-d86c-ef8a-c095" type="rule"/>
+            <infoLink id="8af3-8e7f-7a60-96d7" name="Group" hidden="false" targetId="4c02-03a1-ae7b-7821" type="rule"/>
+            <infoLink id="b340-afaf-9971-f23e" name="Cloudwalk" hidden="false" targetId="538c-1266-626b-fcc9" type="rule"/>
+            <infoLink id="d6ca-ffb5-3a4f-b207" name="Immune" hidden="false" targetId="ea08-b25e-0ea8-af73" type="rule"/>
+            <infoLink id="dec0-a06e-db86-fd76" name="Tiny" hidden="false" targetId="335c-7f6f-9ca0-cb93" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="756d-80e3-74a9-1d12" name="Melee Weapon" hidden="false">
+          <profiles>
+            <profile id="c25a-8d41-3f1a-4d39" name="Talons" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">-1</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Sharp (1)</characteristic>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Sidestep Attack (0)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="ba9d-79fa-b551-077a" name="Sidestep Attack " hidden="false" targetId="070d-a69d-0b46-27dc" type="rule"/>
+            <infoLink id="4f81-0781-122c-63bf" name="Sharp " hidden="false" targetId="6092-9fb5-5196-d1eb" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="cb7b-11ee-770d-8ade" name="Unique Effects" hidden="false">
+          <profiles>
+            <profile id="82ff-1548-28a3-5598" name="Unique Effects" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">This card represents three different models, each with their own abilities. A Warband may not recruit multiples of the same Eagle.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="1065-9a63-70f3-6975" name="Fly High" hidden="false" targetId="8342-321c-1d2f-b04b" type="infoGroup"/>
+          </infoLinks>
+        </infoGroup>
+      </infoGroups>
+      <categoryLinks>
+        <categoryLink id="8f09-77bd-518b-42ca" name="Animal" hidden="false" targetId="c382-9ab3-9924-e30a" primary="false"/>
+        <categoryLink id="8bf8-1537-d53d-3602" name="Eagle" hidden="false" targetId="52d1-8aa3-4c32-0c50" primary="false"/>
+        <categoryLink id="c3a4-b858-1127-48a0" name="Non-Unique" hidden="false" targetId="d181-219d-3add-d47b" primary="false"/>
+        <categoryLink id="7a30-d940-c50d-d655" name="New CategoryLink" hidden="false" targetId="9fba-f50b-c8f7-8396" primary="true"/>
+        <categoryLink id="dbd0-f004-d2df-f8b9" name="Bird" hidden="false" targetId="cfb8-797d-9fae-9a4f" primary="false"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="0f86-bf5d-dd83-e3de" name="Dawn Eagle" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5ee3-1bc3-6d9e-f3c6" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="d258-b89f-c17e-f0cb" name="Dawn Eagle" hidden="false" typeId="6ea2-0f74-4852-4a98" typeName="Character Profile">
+              <characteristics>
+                <characteristic name="Melee Pool" typeId="8409-8d55-ce45-a33b">1</characteristic>
+                <characteristic name="Melee Boost" typeId="6a36-e826-18f3-0b25"/>
+                <characteristic name="Ranged Pool" typeId="7a01-37c0-4741-672c">0</characteristic>
+                <characteristic name="Ranged Boost" typeId="ff66-ea54-d863-5c17"/>
+                <characteristic name="Move" typeId="af89-242d-625f-9bff">7</characteristic>
+                <characteristic name="Move Boost" typeId="62a6-8125-f293-5c76"/>
+                <characteristic name="Ki" typeId="8b76-2b4b-066e-a0c5">1</characteristic>
+                <characteristic name="Ki Boost" typeId="c34e-f8ae-0984-37ac"/>
+                <characteristic name="Ki Cap" typeId="2e88-c65e-4e45-d4c4">0</characteristic>
+                <characteristic name="Wounds" typeId="a1dc-c2c1-e2d2-ca98">2 OO</characteristic>
+                <characteristic name="Size &amp; Base" typeId="6af2-e777-20ce-e060">Tiny 30mm</characteristic>
+                <characteristic name="Traits" typeId="e742-1b02-09cf-fd97">Cloudwalk, Group, Insignificant, Immune [Prone], Tiny</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="f0cc-8dd7-eaa9-7792" name="Dawn Eagle" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">While within 1&quot; of the model, Friendly models gain Aware.
+When in a Melee Exchange with a Tiny model, this model&apos;s Talons Melee Weapon gains Throw Attack (0).</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="6f58-46d6-7d8d-6c3d" name="Throw Attack" hidden="false" targetId="e4a9-1967-fb91-ce07" type="rule"/>
+            <infoLink id="dbad-bffd-4074-92ec" name="Aware" hidden="false" targetId="ff4a-6b14-09dd-2343" type="rule"/>
+          </infoLinks>
+          <costs>
+            <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="e21d-90a7-4264-39fa" name="Eagle of Ro-Kan" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="df78-7f61-ca7e-3428" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="74d8-edc9-cfe1-25d4" name="Eagle of Ro-Kan" hidden="false" typeId="6ea2-0f74-4852-4a98" typeName="Character Profile">
+              <characteristics>
+                <characteristic name="Melee Pool" typeId="8409-8d55-ce45-a33b">1</characteristic>
+                <characteristic name="Melee Boost" typeId="6a36-e826-18f3-0b25"/>
+                <characteristic name="Ranged Pool" typeId="7a01-37c0-4741-672c">0</characteristic>
+                <characteristic name="Ranged Boost" typeId="ff66-ea54-d863-5c17"/>
+                <characteristic name="Move" typeId="af89-242d-625f-9bff">7</characteristic>
+                <characteristic name="Move Boost" typeId="62a6-8125-f293-5c76"/>
+                <characteristic name="Ki" typeId="8b76-2b4b-066e-a0c5">1</characteristic>
+                <characteristic name="Ki Boost" typeId="c34e-f8ae-0984-37ac"/>
+                <characteristic name="Ki Cap" typeId="2e88-c65e-4e45-d4c4">0</characteristic>
+                <characteristic name="Wounds" typeId="a1dc-c2c1-e2d2-ca98">2 OO</characteristic>
+                <characteristic name="Size &amp; Base" typeId="6af2-e777-20ce-e060">Tiny 30mm</characteristic>
+                <characteristic name="Traits" typeId="e742-1b02-09cf-fd97">Cloudwalk, Co-Ordinated Attack[Eagle, Washi, Kurama], Group, Insignificant, Immune [Prone], Tiny</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="c7f2-0975-e808-0428" name="Co-ordinated Attack" hidden="false" targetId="2337-7bcc-c1f2-f2bd" type="rule"/>
+          </infoLinks>
+          <costs>
+            <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="3b6d-e526-ce91-89c4" name="Fuwa Eagle" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0bc4-cbe0-c840-c080" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="46d6-177d-8327-f61e" name="Fuwa Eagle" hidden="false" typeId="6ea2-0f74-4852-4a98" typeName="Character Profile">
+              <characteristics>
+                <characteristic name="Melee Pool" typeId="8409-8d55-ce45-a33b">1</characteristic>
+                <characteristic name="Melee Boost" typeId="6a36-e826-18f3-0b25"/>
+                <characteristic name="Ranged Pool" typeId="7a01-37c0-4741-672c">0</characteristic>
+                <characteristic name="Ranged Boost" typeId="ff66-ea54-d863-5c17"/>
+                <characteristic name="Move" typeId="af89-242d-625f-9bff">7</characteristic>
+                <characteristic name="Move Boost" typeId="62a6-8125-f293-5c76"/>
+                <characteristic name="Ki" typeId="8b76-2b4b-066e-a0c5">1</characteristic>
+                <characteristic name="Ki Boost" typeId="c34e-f8ae-0984-37ac"/>
+                <characteristic name="Ki Cap" typeId="2e88-c65e-4e45-d4c4">0</characteristic>
+                <characteristic name="Wounds" typeId="a1dc-c2c1-e2d2-ca98">1 O</characteristic>
+                <characteristic name="Size &amp; Base" typeId="6af2-e777-20ce-e060">Tiny 30mm</characteristic>
+                <characteristic name="Traits" typeId="e742-1b02-09cf-fd97">Cloudwalk, Flank, Group, Insignificant, Immune [Prone], Tiny</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="a554-6199-34e2-9771" name="Fuwa Eagle" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">When this model arives from Elsewhere, if it declares a Charge Action, it does not need LoS to its Target.
+The Charge Target is Surprised, regardless of the usual Surprised requirements.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="2e14-be8b-29dd-fce3" name="Flank" hidden="false" targetId="a847-f02d-7e99-8a66" type="rule"/>
+          </infoLinks>
+          <costs>
+            <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0.0"/>
+      </costs>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup id="f486-4498-03e3-c397" name="Enhancements" hidden="false" collective="false" import="true">
@@ -6092,10 +6372,12 @@ Exclusion [Monk]</characteristic>
         <profile id="f4db-cb51-b13c-b5dc" name="Swift Executor" hidden="false" typeId="993a-e62a-7922-0ccb" typeName="Ki Feat">
           <characteristics>
             <characteristic name="Cost" typeId="a126-54d9-0a27-f4b6">2</characteristic>
-            <characteristic name="Timing" typeId="f8a8-8a3e-ef58-4c61">Active</characteristic>
+            <characteristic name="Timing" typeId="f8a8-8a3e-ef58-4c61">Simple</characteristic>
             <characteristic name="Subject" typeId="4ac8-2bb1-0c84-f088">Personal</characteristic>
             <characteristic name="Limitation" typeId="6fc9-5d13-2687-b2a5">No Movement, Not in BtB, Once Per Turn</characteristic>
-            <characteristic name="Description" typeId="f804-b969-00da-2123">This model loses Insignificant until the end of this activation. It makes a Walk then a Scenario Action.</characteristic>
+            <characteristic name="Description" typeId="f804-b969-00da-2123">This model loses Insignificant until the end of this activation.
+This Model makes a Walk then a Simple Scenario Action.
+This Scenario Action does not remove an Activation Counter.</characteristic>
           </characteristics>
         </profile>
       </profiles>

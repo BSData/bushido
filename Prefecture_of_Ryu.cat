@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="0cac-b8ad-fb7f-ef84" name="Prefecture of Ryu" revision="4" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="0cac-b8ad-fb7f-ef84" name="Prefecture of Ryu" revision="5" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="8688-cd6e-bcbe-2cbb" name="Ima" hidden="false"/>
     <categoryEntry id="65a8-4392-a95b-115b" name="Takashi" hidden="false"/>
@@ -122,7 +122,7 @@ Until the end of the game, whenever you win a Tactical Test, choose 2 Prefecture
       <profiles>
         <profile id="0d40-cf68-b4b9-91f4" name="Blood of the Dragon" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
           <characteristics>
-            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">• All models gain double Ki during the first turn&apos;s Ki Generation step
+            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">• Friendly models gain double Ki during the first turn&apos;s Ki Generation step
 • If a Friendly model fails a Fear Test, after the activation ends, it gains Fearless until the End Phase
 • Friendly models reduce the dice cost of Critical Attack by 1 (to a minimum of 0)</characteristic>
           </characteristics>
@@ -1671,7 +1671,7 @@ Until the end of the game, whenever you win a Tactical Test, choose 2 Prefecture
                 <characteristic name="Range Bands" typeId="be6a-50c6-d691-e2e9">4/6/8</characteristic>
                 <characteristic name="Traits" typeId="3410-4428-ef91-eb61"/>
                 <characteristic name="Specials" typeId="cdaf-b6ac-89d4-39ef"/>
-                <characteristic name="Unique Effects" typeId="3bf8-6525-f003-4990">When resolving a Ranged Attack as part of a Ranged Attack Action, successful Attacks cause the Target to gain a Prone Marker in addition to any Wounds suffered.</characteristic>
+                <characteristic name="Unique Effects" typeId="3bf8-6525-f003-4990">When this model resolves a Ranged Attack as part of a Ranged Attack Action, successful Attacks cause the Target to gain a Prone Marker in addition to any Wounds suffered.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -2735,6 +2735,11 @@ Until the end of the game, whenever you win a Tactical Test, choose 2 Prefecture
             <infoLink id="2abc-1245-4a3f-3253" name="Push Defence" hidden="false" targetId="74fc-a971-d9c2-278c" type="rule"/>
           </infoLinks>
         </infoGroup>
+        <infoGroup id="e38b-13f4-64aa-6bd6" name="Unique Effects" hidden="false">
+          <infoLinks>
+            <infoLink id="bcee-c339-85fa-2f75" name="Kurouma Koryu" hidden="false" targetId="3ba5-1837-b036-ca3d" type="infoGroup"/>
+          </infoLinks>
+        </infoGroup>
       </infoGroups>
       <categoryLinks>
         <categoryLink id="eff2-adb7-151c-5e00" name="Faction: Prefecture of Ryu" hidden="false" targetId="7532-4f60-381d-2941" primary="false"/>
@@ -3510,7 +3515,8 @@ Remove all Reload Markers from models within 4&quot; of a Friendly Gunso model.<
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d5a3-42bc-c296-969a" type="lessThan"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="07e0-41f1-b800-70ad" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1c4e-2aa6-2d32-f0d4" type="atLeast"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -4186,7 +4192,7 @@ Friendly Faction Samurai models gain Charging Bonus [Fearless] when they begin t
                 <profile id="fc4c-f2be-8e6c-13a9" name="Takashi Clan Armour" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
                   <characteristics>
                     <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">Attached model gains Armour (3) and Fearless.
-Enemy Damage Rolls are ignored if the idnividual dice values of the Damage Roll are the same number.</characteristic>
+Enemy Damage Rolls against the Attached model are ignored if the individual dice values of the Damage Roll are the same number.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -4370,7 +4376,7 @@ This model is considered Medium Size for the purposes of this ability.</characte
             <characteristic name="Cost" typeId="a126-54d9-0a27-f4b6">4</characteristic>
             <characteristic name="Timing" typeId="f8a8-8a3e-ef58-4c61">Active</characteristic>
             <characteristic name="Subject" typeId="4ac8-2bb1-0c84-f088">Pulse 8&quot;</characteristic>
-            <characteristic name="Limitation" typeId="6fc9-5d13-2687-b2a5">No Movement</characteristic>
+            <characteristic name="Limitation" typeId="6fc9-5d13-2687-b2a5"/>
             <characteristic name="Description" typeId="f804-b969-00da-2123">This model&apos;s Controller chooses up to 3 other Friendly Ashigaru models within the Pulse&apos;s area of effect. Those models immediately perform a Walk up to their Move stat in inches.</characteristic>
           </characteristics>
         </profile>
@@ -4384,7 +4390,7 @@ This model is considered Medium Size for the purposes of this ability.</characte
             <characteristic name="Timing" typeId="f8a8-8a3e-ef58-4c61">Instant</characteristic>
             <characteristic name="Subject" typeId="4ac8-2bb1-0c84-f088">Personal</characteristic>
             <characteristic name="Limitation" typeId="6fc9-5d13-2687-b2a5"/>
-            <characteristic name="Description" typeId="f804-b969-00da-2123">During an Enemy model&apos;s activation, when that model moves into BtB with another Ashigaru model, this model can move up to its Move in inches to attempt to get into BtB with that Enemy model.</characteristic>
+            <characteristic name="Description" typeId="f804-b969-00da-2123">During an Enemy model’s activation, when that model moves into BtB with another Friendly Ashigaru model,  this model can move up to its Move in inches to attempt to get into BtB with that Enemy model.</characteristic>
           </characteristics>
         </profile>
       </profiles>

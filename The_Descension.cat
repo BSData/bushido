@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="d4b0-a54e-a48b-88a5" name="The Descension" revision="5" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="d4b0-a54e-a48b-88a5" name="The Descension" revision="6" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="093f-43eb-fd72-ead0" name="Move Boost" hidden="false"/>
   </categoryEntries>
@@ -1011,7 +1011,7 @@ Each Friendly Suzume model may be placed within 1&quot; of its current location 
             <profile id="ea8f-c4bc-e8f3-d78d" name="Hilltribe Warrior A" hidden="false" typeId="6ea2-0f74-4852-4a98" typeName="Character Profile">
               <characteristics>
                 <characteristic name="Melee Pool" typeId="8409-8d55-ce45-a33b">2</characteristic>
-                <characteristic name="Melee Boost" typeId="6a36-e826-18f3-0b25">2</characteristic>
+                <characteristic name="Melee Boost" typeId="6a36-e826-18f3-0b25">3</characteristic>
                 <characteristic name="Ranged Pool" typeId="7a01-37c0-4741-672c">2</characteristic>
                 <characteristic name="Ranged Boost" typeId="ff66-ea54-d863-5c17"/>
                 <characteristic name="Move" typeId="af89-242d-625f-9bff">4</characteristic>
@@ -1034,7 +1034,7 @@ Each Friendly Suzume model may be placed within 1&quot; of its current location 
             <profile id="e997-b230-0f0f-2841" name="Hilltribe Warrior B" hidden="false" typeId="6ea2-0f74-4852-4a98" typeName="Character Profile">
               <characteristics>
                 <characteristic name="Melee Pool" typeId="8409-8d55-ce45-a33b">2</characteristic>
-                <characteristic name="Melee Boost" typeId="6a36-e826-18f3-0b25">2</characteristic>
+                <characteristic name="Melee Boost" typeId="6a36-e826-18f3-0b25">3</characteristic>
                 <characteristic name="Ranged Pool" typeId="7a01-37c0-4741-672c">2</characteristic>
                 <characteristic name="Ranged Boost" typeId="ff66-ea54-d863-5c17"/>
                 <characteristic name="Move" typeId="af89-242d-625f-9bff">4</characteristic>
@@ -1103,7 +1103,7 @@ Each Friendly Suzume model may be placed within 1&quot; of its current location 
                 <characteristic name="Range Bands" typeId="be6a-50c6-d691-e2e9">2/4/6</characteristic>
                 <characteristic name="Traits" typeId="3410-4428-ef91-eb61"/>
                 <characteristic name="Specials" typeId="cdaf-b6ac-89d4-39ef"/>
-                <characteristic name="Unique Effects" typeId="3bf8-6525-f003-4990">When this model makes a successful Ranged Attack the Target model gains Weak Mind (1) until the End Phase.</characteristic>
+                <characteristic name="Unique Effects" typeId="3bf8-6525-f003-4990">When this model makes a successful Ranged Attack the Target model gains Spirit (-1) until the End Phase.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -2067,7 +2067,7 @@ The first time in a turn when a model moves into BtB with this model, if this mo
           <profiles>
             <profile id="04ab-1bc4-cf71-4a70" name="Sanjakubo" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
               <characteristics>
-                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">A model Damaged by a Call Lightning or Raijin&apos;s Rage Attack gains a Stunned Marker.</characteristic>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">A model that suffers wounds from this model&apos;s Call Lightning or Raijin&apos;s Rage Attack gains a Stunned Marker.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -2931,7 +2931,7 @@ Permitted [Ronin Kami, Small Tengu, Tribesmen]</characteristic>
           <profiles>
             <profile id="9ec4-4e56-b9e0-761f" name="Virtue" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
               <characteristics>
-                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">While this model is in play, when a model spends a Virtue Token you may choose one of the following effects:
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">While this model is in play, when a Friendly model spends a Virtue Token you may choose one of the following effects:
 • This model may not be Targeted by &apos;Call Lightning&apos; Ranged Attacks or the &apos;Raijin&apos;s Rage&apos; Ki Feat.</characteristic>
               </characteristics>
             </profile>
@@ -3141,6 +3141,19 @@ Until the End Phase, Enemy models gain Weak when making Size Tests.</characteris
     <entryLink id="1a35-14a3-a745-fcd6" name="Khendish" hidden="true" collective="false" import="true" targetId="dc54-b54e-1428-7c3e" type="selectionEntry"/>
     <entryLink id="8fb6-2cb3-b466-8eba" name="Tru&apos;pah" hidden="true" collective="false" import="true" targetId="82bb-a55d-5366-baf2" type="selectionEntry"/>
     <entryLink id="a235-cd69-539e-c7b9" name="Shosu" hidden="true" collective="false" import="true" targetId="39f7-4bb9-edb9-bde8" type="selectionEntry"/>
+    <entryLink id="8f5d-e571-d4e0-4d0e" name="Eagles of Jwar" hidden="false" collective="false" import="true" targetId="7ae1-11df-c8ef-4f5a" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9704-9d38-8681-8266" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+    </entryLink>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="e767-2b69-cf2f-8713" name="Hilltribe Tracker" hidden="false" collective="false" import="true" type="model">
