@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="0cac-b8ad-fb7f-ef84" name="Prefecture of Ryu" revision="5" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="0cac-b8ad-fb7f-ef84" name="Prefecture of Ryu" revision="6" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="8688-cd6e-bcbe-2cbb" name="Ima" hidden="false"/>
     <categoryEntry id="65a8-4392-a95b-115b" name="Takashi" hidden="false"/>
@@ -3574,7 +3574,19 @@ Remove all Reload Markers from models within 4&quot; of a Friendly Gunso model.<
         <categoryLink id="6c92-d8e4-325e-b149" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
       </categoryLinks>
     </entryLink>
-    <entryLink id="90d5-0cfd-e90f-43a8" name="Shosu" hidden="false" collective="false" import="true" targetId="39f7-4bb9-edb9-bde8" type="selectionEntry"/>
+    <entryLink id="90d5-0cfd-e90f-43a8" name="Shosu" hidden="false" collective="false" import="true" targetId="39f7-4bb9-edb9-bde8" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1c4e-2aa6-2d32-f0d4" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+    </entryLink>
     <entryLink id="42c4-74a2-b8ea-7473" name="Karu" hidden="false" collective="false" import="true" targetId="556c-88bf-b5ef-d732" type="selectionEntry"/>
     <entryLink id="a976-6eac-b5a6-d32f" name="Brotherhood" hidden="false" collective="false" import="true" targetId="9402-edcc-93a2-aef1" type="selectionEntry"/>
     <entryLink id="b7ef-e374-a9af-2b4b" name="Hiroto, Drunken Master" hidden="true" collective="false" import="true" targetId="f616-46d8-5907-fafd" type="selectionEntry"/>

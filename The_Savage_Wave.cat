@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="0b85-0901-eb64-b84b" name="The Savage Wave" revision="6" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="0b85-0901-eb64-b84b" name="The Savage Wave" revision="7" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="5048-3a52-5689-6d0b" name="Ambush" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -3881,16 +3881,9 @@ On a successful ranged attack the Target gains a Stunned marker.</characteristic
           </infoLinks>
         </infoGroup>
         <infoGroup id="aacc-e05b-dabf-5ad3" name="Unique Effects" hidden="false">
-          <profiles>
-            <profile id="7b92-b752-ac34-319a" name="Unique Effects" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
-              <characteristics>
-                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">If this model was recruited into the same Warband as a Friendly Herald or Council model, it gains the Horde type while a Friendly Herald or Council model is in play.
-This model may gain the Horde type from this ability even while not in play.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
           <infoLinks>
             <infoLink id="6f15-bd03-9b07-935d" name="Shield" hidden="false" targetId="9f06-6fb1-c193-b964" type="infoGroup"/>
+            <infoLink id="71a7-2953-d39c-df27" name="Escort" hidden="false" targetId="2ae8-d108-bb05-60c7" type="infoGroup"/>
           </infoLinks>
         </infoGroup>
         <infoGroup id="60d5-b034-d68e-550b" name="Ki Feats" hidden="false">
@@ -4246,6 +4239,95 @@ Permitted [Oni, Onisho]</characteristic>
       </categoryLinks>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="0de1-6acf-3e1b-3f3f" name="Ook" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="bd75-31a1-5a23-cd2d" type="equalTo"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4ff5-0ce5-fd04-3969" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2157-b788-2623-fd83" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="0a47-915c-6f1c-3b3f" name="Ook" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">2</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">2</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">*</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">4 OOOO</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Tiny 30mm</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="7b38-92be-579d-fd49" name="Ook" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+          <characteristics>
+            <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Bodyguard [Herald, Council](3&quot;), Camouflage (4&quot;), Soulless, Tiny</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="8eaa-5dfd-38d9-6efa" name="Melee Weapon" hidden="false">
+          <profiles>
+            <profile id="46ae-95f6-9819-e792" name="Something Big" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+1</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Reach</characteristic>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Counterstrike Defence (1), Push Attack (0), Sweep Attack (1)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="3413-356b-0175-3e8b" name="Reach" hidden="false" targetId="e28e-d5dd-a262-1101" type="rule"/>
+            <infoLink id="dbe6-2c5e-7f3b-fac7" name="Counterstrike Defence " hidden="false" targetId="136e-4c77-dc59-4c6e" type="rule"/>
+            <infoLink id="a8c6-2fa0-4410-87d6" name="Push Attack" hidden="false" targetId="6c26-94ba-6b96-9e1b" type="rule"/>
+            <infoLink id="7b58-99c6-5a6b-5057" name="Sweep Attack" hidden="false" targetId="bcbd-fab2-c8e2-6ff7" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="a489-7e56-8121-9139" name="Traits" hidden="false">
+          <infoLinks>
+            <infoLink id="7bef-2fd2-6c4b-47f3" name="Camouflage" hidden="false" targetId="9010-4983-c98c-1751" type="rule"/>
+            <infoLink id="3d60-98b0-496f-93e7" name="Soulless" hidden="false" targetId="af31-aad0-fcea-9590" type="rule"/>
+            <infoLink id="0fc5-1f2e-1829-6dad" name="Tiny" hidden="false" targetId="335c-7f6f-9ca0-cb93" type="rule"/>
+            <infoLink id="df60-2341-54ee-d971" name="Bodyguard" hidden="false" targetId="0286-6d10-a236-e0c3" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="8fe1-4a20-77d9-3bf4" name="Unique Effects" hidden="false">
+          <infoLinks>
+            <infoLink id="2136-3a66-8e58-49da" name="Escort" hidden="false" targetId="2ae8-d108-bb05-60c7" type="infoGroup"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="76d9-93b1-37e7-9214" name="Ki Feats" hidden="false">
+          <infoLinks>
+            <infoLink id="97b3-df0c-fa91-565d" name="Barge" hidden="false" targetId="e412-1432-1b74-58eb" type="infoGroup"/>
+          </infoLinks>
+        </infoGroup>
+      </infoGroups>
+      <categoryLinks>
+        <categoryLink id="27f3-9951-621a-159a" name="Bakemono" hidden="false" targetId="9b14-5558-cfeb-ee1c" primary="false"/>
+        <categoryLink id="6852-f3a5-eb4a-735a" name="Faction: The Savage Wave" hidden="false" targetId="c920-0951-5d96-5693" primary="false"/>
+        <categoryLink id="f731-567f-2f16-dad8" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
+        <categoryLink id="9ab4-f685-0278-0d72" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="6b3a-0ee7-7c40-4d78" name="Enhancements" hidden="false" collective="false" import="true" targetId="74e6-2485-1c0a-4227" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="14.0"/>
       </costs>
     </selectionEntry>
   </selectionEntries>
@@ -5292,6 +5374,16 @@ Transfer State Markers and any tokens to Xi-Han’s profile card.</characteristi
       <infoLinks>
         <infoLink id="a1a7-4c7d-e29a-ddc7" name="Insignificant" hidden="false" targetId="1614-d86c-ef8a-c095" type="rule"/>
       </infoLinks>
+    </infoGroup>
+    <infoGroup id="2ae8-d108-bb05-60c7" name="Escort" hidden="false">
+      <profiles>
+        <profile id="e427-3b5d-6ba7-59d1" name="Escort" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+          <characteristics>
+            <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">If this model was recruited into the same Warband as a Friendly Herald or Council model, it gains the Horde type while a Friendly Herald or Council model is in play.
+This model may gain the Horde type from this ability even while not in play.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
     </infoGroup>
   </sharedInfoGroups>
   <catalogueLinks>

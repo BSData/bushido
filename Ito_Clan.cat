@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="302b-66f1-a875-3b63" name="Ito Clan" revision="5" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="302b-66f1-a875-3b63" name="Ito Clan" revision="6" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="46b2-47c2-4c55-2e3a" name="Kinu" hidden="false"/>
     <categoryEntry id="273a-b61b-c7f8-76fd" name="Itsunagi" hidden="false"/>
@@ -3314,6 +3314,92 @@ All Friendly Shisai models gain 2 Ki Tokens.</characteristic>
       </categoryLinks>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="80cc-c8c5-a20e-9dab" name="Akane" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9ca6-7a62-7b68-47a2" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="652b-f4ad-c9c1-5ee8" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="e2ab-8d80-b398-2c7a" name="Akane" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">2</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">5</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac">2</characteristic>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">2</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">6</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">5 OOOOO</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="104f-95b7-82cc-603f" name="Akane" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+          <characteristics>
+            <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Armour (1), Blood of Orochi (1), Jump Up</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="5dac-32fe-bee6-d22d" name="Traits" hidden="true">
+          <infoLinks>
+            <infoLink id="7381-ccc1-6b56-3685" name="Armour" hidden="false" targetId="8615-1c63-2242-5746" type="rule"/>
+            <infoLink id="99c4-4f22-453c-ad95" name="Jump Up" hidden="false" targetId="1575-e12f-4ca3-c557" type="rule"/>
+            <infoLink id="1aa0-7081-08ed-10af" name="Indomitable " hidden="false" targetId="3beb-6f28-e7c4-a236" type="rule"/>
+            <infoLink id="98ab-da4c-4ea3-8785" name="Blood of Orochi" hidden="false" targetId="7a5a-2e8e-4a81-c48f" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="f09c-1073-18ab-9a9d" name="Melee Weapon" hidden="false">
+          <profiles>
+            <profile id="ae18-d4ff-7e5a-58b0" name="Barbed Spear" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+0</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Bleed (1/1), Reach</characteristic>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Push Attack (1), Sidestep Defence (0)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="e57f-a968-dcc4-ee4f" name="Sidestep Defence " hidden="false" targetId="753c-6c3b-64d7-203c" type="rule"/>
+            <infoLink id="4632-9f36-ee99-39c1" name="Reach" hidden="false" targetId="e28e-d5dd-a262-1101" type="rule"/>
+            <infoLink id="c97a-518f-b427-043d" name="Push Attack" hidden="false" targetId="6c26-94ba-6b96-9e1b" type="rule"/>
+            <infoLink id="86d2-1c3c-7575-57b4" name="Bleed" hidden="false" targetId="ac4a-e540-4fe3-126a" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="edfc-b2a4-a630-1252" name="Ki Feats" hidden="false">
+          <infoLinks>
+            <infoLink id="ca9e-f3f1-ab1b-9564" name="Skewer" hidden="false" targetId="36f6-4acc-2f2a-145a" type="infoGroup"/>
+          </infoLinks>
+        </infoGroup>
+      </infoGroups>
+      <categoryLinks>
+        <categoryLink id="e674-76bf-66b1-ec4e" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
+        <categoryLink id="72b7-4edf-e528-92a5" name="Blood of Orochi" hidden="false" targetId="a678-8869-7918-cb24" primary="false"/>
+        <categoryLink id="3a46-c7d4-6250-1257" name="Hebimimman" hidden="false" targetId="683a-eb26-1ee8-43d1" primary="false"/>
+        <categoryLink id="1d37-4154-74fd-c33b" name="Armoured" hidden="false" targetId="f322-702a-ff62-b37e" primary="false"/>
+        <categoryLink id="d4c4-bca1-0391-cb4a" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
+        <categoryLink id="b16c-1219-9f5c-f6ef" name="Ashigaru" hidden="false" targetId="f434-17e6-174c-b4f6" primary="false"/>
+        <categoryLink id="d45a-bf8c-ab96-a490" name="Gunso" hidden="false" targetId="90e9-830c-e4e0-dcde" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="5ce3-61a7-e5bd-547c" name="Enhancements" hidden="false" collective="false" import="true" targetId="c1b7-60f5-a313-5345" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="14.0"/>
       </costs>
     </selectionEntry>
   </selectionEntries>

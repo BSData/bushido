@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="1ac7-2939-2874-7530" name="Cult of Yurei" revision="8" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="1ac7-2939-2874-7530" name="Cult of Yurei" revision="9" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="5048-3a52-5689-6d0b" name="Drain Spirit" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -1242,7 +1242,7 @@ Wounds caused by this effect ignore Armor and Tough.</characteristic>
             <characteristic name="Ki Cap" typeId="2e88-c65e-4e45-d4c4">8</characteristic>
             <characteristic name="Wounds" typeId="a1dc-c2c1-e2d2-ca98">7 OOOOO OO</characteristic>
             <characteristic name="Size &amp; Base" typeId="6af2-e777-20ce-e060">Small 30mm</characteristic>
-            <characteristic name="Traits" typeId="e742-1b02-09cf-fd97">Armor (3), Bear Stands Alone, Fear (5), Leech(2/8&quot;), Prowess [Melee](1), Rise (4), Slow, Soulless, Tough (1)</characteristic>
+            <characteristic name="Traits" typeId="e742-1b02-09cf-fd97">Armour (3), Bear Stands Alone, Fear (5), Leech(2/8&quot;), Prowess [Melee](1), Rise (4), Slow, Soulless, Tough (1)</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -4956,6 +4956,101 @@ No model may be chosen more than once.</characteristic>
       </entryLinks>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="13.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="d693-c48a-4979-d0a5" name="Minarai" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8a75-ceb1-bdf5-c64b" type="equalTo"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f013-587d-b333-6938" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="true" id="3c59-7fc8-a9e4-e2d0" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="9cbf-b948-0957-196f" name="Minarai" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">2</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">0</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">3</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">0</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">6</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">5 OOOOO</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="f51f-caf9-b67e-51e9" name="Minarai" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+          <characteristics>
+            <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Aware, Fear (5), Rise (4), Slow, Soulless, Tough (1)</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="f3f1-9ea7-2883-e30d" name="Melee Weapon" hidden="false">
+          <profiles>
+            <profile id="11e4-01a6-66cb-84bd" name="Improvised Weapon" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">-1</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e"/>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d"/>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="f7ef-9658-cc14-4d9e" name="Powerful Attack" hidden="false" targetId="d56a-058d-95d9-5b60" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="ca7b-7c66-7866-ac61" name="Traits" hidden="false">
+          <infoLinks>
+            <infoLink id="7df0-2ebe-9220-65da" name="Fear" hidden="false" targetId="3586-4583-7f10-1f31" type="rule"/>
+            <infoLink id="9179-7629-6231-5acf" name="Rise" hidden="false" targetId="f774-9156-2996-f5c6" type="rule"/>
+            <infoLink id="30bf-9446-4a34-3367" name="Slow" hidden="false" targetId="f1c3-4a84-c616-23cd" type="rule"/>
+            <infoLink id="6671-9df3-9838-f577" name="Soulless" hidden="false" targetId="af31-aad0-fcea-9590" type="rule"/>
+            <infoLink id="49d1-b5a4-991a-26d8" name="Tough" hidden="false" targetId="5613-a6cf-495a-229f" type="rule"/>
+            <infoLink id="c5e0-6dbe-f65d-b2fd" name="Aware" hidden="false" targetId="ff4a-6b14-09dd-2343" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="b1ad-6bae-e841-fe6e" name="Ki Feats" hidden="false">
+          <infoLinks>
+            <infoLink id="f77b-c978-30e9-9cb1" name="Reanimate" hidden="false" targetId="3143-ffed-7102-4233" type="infoGroup"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="ad1f-09a1-359f-35c5" name="Unique Effects" hidden="false">
+          <profiles>
+            <profile id="864f-d22a-1abf-dc6f" name="Unique Effects" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">When this model succeeds in a Rise Test it gains 1 Ki Token.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </infoGroup>
+      </infoGroups>
+      <categoryLinks>
+        <categoryLink id="0e78-31c6-3f1a-6233" name="Faction: Cult of Yurei" hidden="false" targetId="0d0a-4c02-8dce-676b" primary="false"/>
+        <categoryLink id="b602-7829-d9b4-4345" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
+        <categoryLink id="d3b5-b454-db8b-4d55" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
+        <categoryLink id="d109-5bf4-cda3-d8e3" name="Kairai" hidden="false" targetId="26f6-e547-6d94-8b70" primary="false"/>
+        <categoryLink id="8654-ab90-204b-629f" name="Soulless" hidden="false" targetId="0abe-c3e6-4300-478f" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="f6dc-b3f2-802a-e65e" name="Enhancements" hidden="false" collective="false" import="true" targetId="ef93-ecd4-88c1-9224" type="selectionEntryGroup"/>
+        <entryLink id="e03b-cee3-102c-0fbf" name="Fresh" hidden="false" collective="false" import="true" targetId="ab7f-d22b-08ee-9a07" type="selectionEntry"/>
+        <entryLink id="3778-31f8-a93f-1301" name="Ijimyo&apos;s Masks" hidden="false" collective="false" import="true" targetId="c138-ec1d-df76-737c" type="selectionEntry"/>
+      </entryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="15.0"/>
       </costs>
     </selectionEntry>
   </selectionEntries>
