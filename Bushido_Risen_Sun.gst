@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="62e4-ab79-1c4c-9ffe" name="Bushido: Risen Sun" revision="2" battleScribeVersion="2.03" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="62e4-ab79-1c4c-9ffe" name="Bushido: Risen Sun" revision="3" battleScribeVersion="2.03" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <costTypes>
     <costType id="a111-8656-5c05-7415" name=" Rice" defaultCostLimit="-1.0" hidden="false"/>
   </costTypes>
@@ -207,6 +207,8 @@
     <categoryEntry id="4a43-1cd1-cfb2-f5cd" name="Risen Sun Cycle" hidden="false"/>
     <categoryEntry id="a745-0548-80c8-ece4" name="Cycle: Risen Sun" hidden="false"/>
     <categoryEntry id="b254-2810-6b62-66d9" name="Brotherhood" hidden="false"/>
+    <categoryEntry id="3df8-0340-a4a1-a8be" name="Ronin Terrain Cards" hidden="false"/>
+    <categoryEntry id="7638-6ad1-8829-91db" name="Ronin Event Cards" hidden="false"/>
   </categoryEntries>
   <forceEntries>
     <forceEntry id="2150-40b1-52f8-4a8a" name="Risen Sun" hidden="true">
