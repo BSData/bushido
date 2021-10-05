@@ -1414,18 +1414,17 @@ This model may declare a Charge Action while in BtB with an Enemy model.</charac
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="f198-6c47-76bd-6fcb" name="!DRAFT Masaema Yama" hidden="false" collective="false" import="true" type="model">
+    <selectionEntry id="f198-6c47-76bd-6fcb" name="Masaema Yama" hidden="false" collective="false" import="true" type="model">
       <modifiers>
         <modifier type="set" field="hidden" value="true">
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9d97-adca-3f6a-ae4d" type="equalTo"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9d97-adca-3f6a-ae4d" type="atLeast"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
         </modifier>
-        <modifier type="set" field="hidden" value="true"/>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="550b-7c7a-4dab-d5cd" type="max"/>
@@ -1444,7 +1443,7 @@ This model may declare a Charge Action while in BtB with an Enemy model.</charac
             <characteristic name="Ki Cap" typeId="2e88-c65e-4e45-d4c4">6</characteristic>
             <characteristic name="Wounds" typeId="a1dc-c2c1-e2d2-ca98">7 OOOOO OO</characteristic>
             <characteristic name="Size &amp; Base" typeId="6af2-e777-20ce-e060">Small 30mm</characteristic>
-            <characteristic name="Traits" typeId="e742-1b02-09cf-fd97">Armour (3), Bear Stands Alone, Endurance, Fearless, Resistance (2)</characteristic>
+            <characteristic name="Traits" typeId="e742-1b02-09cf-fd97">Armour (3), Bear Stands Alone, Indomitable (1). Last Stand, Resistance (2), Steadfast</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -1452,17 +1451,18 @@ This model may declare a Charge Action while in BtB with an Enemy model.</charac
         <infoGroup id="51c8-a5b7-3a53-5ad2" name="Traits" hidden="false">
           <infoLinks>
             <infoLink id="af92-74ca-426c-8b08" name="Resistance " hidden="false" targetId="7e3f-9dc3-cacb-469f" type="rule"/>
-            <infoLink id="82d2-f02f-2b52-85dd" name="Fearless" hidden="false" targetId="5d6f-1746-9080-aca5" type="rule"/>
+            <infoLink id="82d2-f02f-2b52-85dd" name="Last Stand" hidden="false" targetId="54e7-a381-1c38-dd0e" type="rule"/>
             <infoLink id="1b07-704c-1ba2-3b19" name="Armour" hidden="false" targetId="8615-1c63-2242-5746" type="rule"/>
             <infoLink id="033b-292d-d008-e988" name="Bear Stands Alone" hidden="false" targetId="40cc-86cf-58d8-8799" type="rule"/>
-            <infoLink id="7370-e7fc-d627-f3df" name="Endurance" hidden="false" targetId="7fdc-d150-9641-1235" type="rule"/>
+            <infoLink id="7370-e7fc-d627-f3df" name="Indomitable " hidden="false" targetId="3beb-6f28-e7c4-a236" type="rule"/>
+            <infoLink id="52d7-e1e0-eeef-a1e5" name="Steadfast" hidden="false" targetId="95e7-3178-c29b-013c" type="rule"/>
           </infoLinks>
         </infoGroup>
         <infoGroup id="587b-3ffa-c587-728c" name="Melee Weapon" hidden="false">
           <profiles>
-            <profile id="707c-99fc-1f0e-f64b" name="Tetsubo" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+            <profile id="707c-99fc-1f0e-f64b" name="Ararebo" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
               <characteristics>
-                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+1</characteristic>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+2</characteristic>
                 <characteristic name="Traits" typeId="39e3-f945-7956-ad4e"/>
                 <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Push Attack (0), Sweep Attack (1)</characteristic>
                 <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
@@ -1476,15 +1476,13 @@ This model may declare a Charge Action while in BtB with an Enemy model.</charac
         </infoGroup>
         <infoGroup id="59ec-d141-95c7-63b5" name="Ki Feats" hidden="false">
           <infoLinks>
-            <infoLink id="d82b-33ee-d171-d982" name="Military Training" hidden="false" targetId="308c-6600-0817-c51e" type="infoGroup"/>
-            <infoLink id="ef75-8346-02c6-5e92" name="Veteran" hidden="false" targetId="f386-e304-3104-3952" type="infoGroup"/>
+            <infoLink id="ef75-8346-02c6-5e92" name="Rally" hidden="false" targetId="d11a-2a0d-5984-5688" type="infoGroup"/>
           </infoLinks>
         </infoGroup>
       </infoGroups>
       <categoryLinks>
         <categoryLink id="4133-c348-3a97-77fa" name="Ashigaru" hidden="false" targetId="f434-17e6-174c-b4f6" primary="false"/>
         <categoryLink id="992c-1e25-cf60-be8d" name="Faction: Minimoto Clan" hidden="false" targetId="7ad5-75e1-6134-ca44" primary="false"/>
-        <categoryLink id="a8b0-4c01-c9b1-ecc9" name="Gunso" hidden="false" targetId="90e9-830c-e4e0-dcde" primary="false"/>
         <categoryLink id="4174-3512-f47a-7144" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
         <categoryLink id="a257-6b6e-f606-478b" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
         <categoryLink id="d55c-3d3a-fa79-7ffe" name="Armour" hidden="false" targetId="f322-702a-ff62-b37e" primary="false"/>
