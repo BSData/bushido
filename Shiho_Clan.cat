@@ -862,7 +862,6 @@ This model gains Bravery when declaring actions Targeting or Selecting a model a
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="20c1-3369-b4e1-9cb2" type="atLeast"/>
                 <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="fb4a-18a7-5b40-74ec" type="atLeast"/>
               </conditions>
             </conditionGroup>
@@ -1167,7 +1166,7 @@ When a model performs a Wait Action to Destroy this Terrain, it need not spend 2
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2379-f077-1de3-5d39" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f5cd-3db3-365a-7cb0" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="f5cd-3db3-365a-7cb0" type="max"/>
           </constraints>
           <profiles>
             <profile id="12a2-4e1e-fed5-a856" name="Heimin A" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character">
@@ -1197,7 +1196,7 @@ When a model performs a Wait Action to Destroy this Terrain, it need not spend 2
             <modifier type="append" field="name" value="B"/>
           </modifiers>
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d507-60a0-714b-4d1f" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d507-60a0-714b-4d1f" type="max"/>
           </constraints>
           <profiles>
             <profile id="412c-e9d6-ddb1-4a20" name="Heimin B" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character">
@@ -1227,7 +1226,7 @@ When a model performs a Wait Action to Destroy this Terrain, it need not spend 2
             <modifier type="append" field="name" value="C"/>
           </modifiers>
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="489b-3f03-c609-2302" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="489b-3f03-c609-2302" type="max"/>
           </constraints>
           <profiles>
             <profile id="ba3e-5a1e-0d24-d5ff" name="Heimin C" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character">
@@ -1418,7 +1417,7 @@ When a model performs a Wait Action to Destroy this Terrain, it need not spend 2
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="df1c-9d28-e3ac-d123" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cd6c-2881-1a3a-20f0" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="cd6c-2881-1a3a-20f0" type="max"/>
           </constraints>
           <profiles>
             <profile id="1e51-fd28-e51f-8642" name="Loyal Yariman A" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character">
@@ -1448,7 +1447,7 @@ When a model performs a Wait Action to Destroy this Terrain, it need not spend 2
             <modifier type="append" field="name" value="B"/>
           </modifiers>
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e410-17d2-ae48-c6c6" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="e410-17d2-ae48-c6c6" type="max"/>
           </constraints>
           <profiles>
             <profile id="a643-653e-c873-7466" name="Loyal Yariman B" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character">
@@ -2187,6 +2186,123 @@ Requirement [Warband must contain a model with Tactician]</characteristic>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1.0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="513e-f86e-dbc0-c9f6" name="Shiho Shota" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="fb4a-18a7-5b40-74ec" type="atLeast"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <profiles>
+        <profile id="bdf2-a472-09f5-2ff7" name="Shiho Shota" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">2</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">3</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33">3</characteristic>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">2</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">8</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">6 OOOOO O</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="91ed-543e-dce2-8e54" name="Shiho Shota" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+          <characteristics>
+            <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">Bravery, Booted, Flank, Prowess [Melee](1), Ranged Defence (1), Vengeance [Takashi]</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="fa93-c0b7-cee5-09c2" name="Traits" hidden="false">
+          <infoLinks>
+            <infoLink id="583a-709e-d23c-aeb1" name="Prowess " hidden="false" targetId="75ef-327a-cd08-a248" type="rule"/>
+            <infoLink id="ef2a-88e1-4ce5-e71c" name="Vengeance" hidden="false" targetId="6779-0aac-2f51-f67e" type="rule"/>
+            <infoLink id="e37f-2ccb-c189-f19b" name="Bravery" hidden="false" targetId="f9b2-38d2-7cda-de6e" type="rule"/>
+            <infoLink id="3637-34bc-36b1-d461" name="Booted" hidden="false" targetId="90ff-48db-c79d-251c" type="rule"/>
+            <infoLink id="2fea-217c-5cc5-add7" name="Flank" hidden="false" targetId="a847-f02d-7e99-8a66" type="rule"/>
+            <infoLink id="5ab4-6791-af6b-29f9" name="Ranged Defence " hidden="false" targetId="9b8d-9ca9-e25d-3988" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="9f27-0dbd-a21a-4a31" name="Ki Feats" hidden="false">
+          <infoLinks>
+            <infoLink id="fd79-41c9-5bad-e792" name="Eagle Eye" hidden="false" targetId="7605-d181-ec04-ef1a" type="infoGroup"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="22cb-b6ab-d859-022c" name="Melee Weapon" hidden="false">
+          <profiles>
+            <profile id="e3c0-b8a1-2ccf-a436" name="Katana" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+1</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Parry (1), Weak</characteristic>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Combo Attack (1), Sidestep Attack (0)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="cfa4-67f6-b078-f4ee" name="Weak" hidden="false" targetId="6a0c-59fb-ff0e-aced" type="rule"/>
+            <infoLink id="cda0-a4c5-500b-98d6" name="Combo Attack " hidden="false" targetId="78ab-6a94-be24-8f74" type="rule"/>
+            <infoLink id="13f1-47eb-755a-801b" name="Sidestep Attack " hidden="false" targetId="070d-a69d-0b46-27dc" type="rule"/>
+            <infoLink id="a5bf-5520-1316-ed23" name="Parry" hidden="false" targetId="c7c2-b36e-7952-c79b" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="4888-5c9a-3f43-e462" name="Unique Effects" hidden="false">
+          <profiles>
+            <profile id="f75b-3c33-ac49-2560" name="Unique Effects" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">When this model declares a Wait Action to remove Reload Markers, its Ranged Weapons gain Lightweight until the End Phase.</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="d95a-2938-1d70-71be" name="Kyudo" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">This model may choose to use this ability when it chooses to use its Dai Kyu Ranged Weapon during a Ranged Attack.
+This model&apos;s Dai Kyu Ranged Weapon gains Reload (+1) and this model does not need LoS to target a Ranged Attack, ignores Cover, and ignores the Blind State during a Ranged Attack Action.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="bc22-f748-898b-0b9b" name="Lightweight" hidden="false" targetId="c75c-7124-2b1f-a4d9" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="8e04-13f4-7096-90b5" name="Ranged Weapon" hidden="false">
+          <profiles>
+            <profile id="2062-b62c-22a8-c7d3" name="Dai Kyu" hidden="false" typeId="7e20-258e-bf92-18f9" typeName="Ranged Weapon">
+              <characteristics>
+                <characteristic name="Ranged Weapon Strength" typeId="15aa-b6bd-6923-271f">+1</characteristic>
+                <characteristic name="Range Bands" typeId="be6a-50c6-d691-e2e9">5/10/15</characteristic>
+                <characteristic name="Traits" typeId="3410-4428-ef91-eb61">Reload (1)</characteristic>
+                <characteristic name="Specials" typeId="cdaf-b6ac-89d4-39ef"/>
+                <characteristic name="Unique Effects" typeId="3bf8-6525-f003-4990"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="7ebb-392c-2816-c782" name="Reload" hidden="false" targetId="9736-df56-0b62-b1a8" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+      </infoGroups>
+      <categoryLinks>
+        <categoryLink id="befb-56ab-190f-5773" name="Faction: Shiho Clan" hidden="false" targetId="53b4-db5e-0527-0759" primary="false"/>
+        <categoryLink id="d381-4d37-7425-d671" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
+        <categoryLink id="926e-675d-9fd5-c940" name="Samurai" hidden="false" targetId="e12a-f782-3281-7444" primary="false"/>
+        <categoryLink id="4276-9be3-a8eb-72c8" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
+        <categoryLink id="4ad0-6b4c-9ee6-19f4" name="Loyal" hidden="false" targetId="f476-156e-8599-9253" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="ec7d-038d-db47-6fe2" name="Enhancements" hidden="false" collective="false" import="true" targetId="8a7c-6251-523e-a67c" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="18.0"/>
+      </costs>
+    </selectionEntry>
   </selectionEntries>
   <entryLinks>
     <entryLink id="5cd8-ec39-5a8f-a160" name="Giant Eagle" hidden="false" collective="false" import="true" targetId="f25f-493d-4123-b0ee" type="selectionEntry">
@@ -2469,6 +2585,7 @@ Requirement [Warband must contain a model with Tactician]</characteristic>
             <conditionGroup type="or">
               <conditions>
                 <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f5-1986-098c-0729" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9126-f480-c2df-fbaf" type="atLeast"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -2482,6 +2599,7 @@ Requirement [Warband must contain a model with Tactician]</characteristic>
             <conditionGroup type="or">
               <conditions>
                 <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f5-1986-098c-0729" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9126-f480-c2df-fbaf" type="atLeast"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -2495,6 +2613,7 @@ Requirement [Warband must contain a model with Tactician]</characteristic>
             <conditionGroup type="or">
               <conditions>
                 <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f5-1986-098c-0729" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9126-f480-c2df-fbaf" type="atLeast"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -2508,6 +2627,7 @@ Requirement [Warband must contain a model with Tactician]</characteristic>
             <conditionGroup type="or">
               <conditions>
                 <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f5-1986-098c-0729" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9126-f480-c2df-fbaf" type="atLeast"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -2521,19 +2641,6 @@ Requirement [Warband must contain a model with Tactician]</characteristic>
             <conditionGroup type="or">
               <conditions>
                 <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f5-1986-098c-0729" type="atLeast"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
-    </entryLink>
-    <entryLink id="5323-3a6e-0ae8-414a" name="Brotherhood" hidden="false" collective="false" import="true" targetId="9402-edcc-93a2-aef1" type="selectionEntry"/>
-    <entryLink id="20c1-3369-b4e1-9cb2" name="Hiroto, Drunken Master" hidden="true" collective="false" import="true" targetId="f616-46d8-5907-fafd" type="selectionEntry">
-      <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
                 <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9126-f480-c2df-fbaf" type="atLeast"/>
               </conditions>
             </conditionGroup>
@@ -2541,6 +2648,7 @@ Requirement [Warband must contain a model with Tactician]</characteristic>
         </modifier>
       </modifiers>
     </entryLink>
+    <entryLink id="5323-3a6e-0ae8-414a" name="Brotherhood" hidden="false" collective="false" import="true" targetId="9402-edcc-93a2-aef1" type="selectionEntry"/>
     <entryLink id="97bf-558f-3853-c62d" name="Eldest Brother" hidden="true" collective="false" import="true" targetId="294d-a0fa-f437-2fca" type="selectionEntry">
       <modifiers>
         <modifier type="set" field="hidden" value="false">
