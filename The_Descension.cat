@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="d4b0-a54e-a48b-88a5" name="The Descension" revision="6" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="d4b0-a54e-a48b-88a5" name="The Descension" revision="6" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="3" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="093f-43eb-fd72-ead0" name="Move Boost" hidden="false"/>
   </categoryEntries>
@@ -2809,7 +2809,7 @@ Permitted [Ronin Kami, Small Tengu, Tribesmen]</characteristic>
           <characteristics>
             <characteristic name="Melee Pool" typeId="8409-8d55-ce45-a33b">3</characteristic>
             <characteristic name="Melee Boost" typeId="6a36-e826-18f3-0b25">3</characteristic>
-            <characteristic name="Ranged Pool" typeId="7a01-37c0-4741-672c"/>
+            <characteristic name="Ranged Pool" typeId="7a01-37c0-4741-672c">3</characteristic>
             <characteristic name="Ranged Boost" typeId="ff66-ea54-d863-5c17">3</characteristic>
             <characteristic name="Move" typeId="af89-242d-625f-9bff">5</characteristic>
             <characteristic name="Move Boost" typeId="62a6-8125-f293-5c76">2</characteristic>
@@ -3011,6 +3011,87 @@ Until the End Phase, Enemy models gain Weak when making Size Tests.</characteris
       </categoryLinks>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="c83b-c2b1-2a4d-632d" name="Oshibe" hidden="false" collective="false" import="true" type="model">
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a6ff-7ae6-3dac-4729" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="f360-791a-f0b4-e8d9" name="Oshibe" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">2</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"></characteristic>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">5</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac">2</characteristic>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">1</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">6</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">5 OOOOO</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="c49c-7481-b2ac-4cf1" name="Traits" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+          <characteristics>
+            <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Cloudwalk, Co-ordinated Attack [Suzume], Dodge (1)</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="b5a2-e253-c9b1-3aa7" name="Traits" hidden="false">
+          <infoLinks>
+            <infoLink id="2b31-e636-156d-d50c" name="Co-ordinated Attack" hidden="false" targetId="2337-7bcc-c1f2-f2bd" type="rule"/>
+            <infoLink id="0cf7-c7ef-d55f-0d1b" name="Cloudwalk" hidden="false" targetId="538c-1266-626b-fcc9" type="rule"/>
+            <infoLink id="fdac-c12a-6763-8ab1" name="Dodge " hidden="false" targetId="14d5-d459-5d8a-c73e" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="7707-3561-90b4-13f5" name="Melee Weapon" hidden="false">
+          <profiles>
+            <profile id="2c53-e87a-f9aa-f5f5" name="Katana" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+1</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e"></characteristic>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Push Defence (0), Sidestep Defence (0)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="a901-9cf1-8d31-634b" name="Push Defence" hidden="false" targetId="74fc-a971-d9c2-278c" type="rule"/>
+            <infoLink id="ca0d-ca0d-5fa0-8291" name="Sidestep Defence " hidden="false" targetId="753c-6c3b-64d7-203c" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="9c50-4bfe-d967-aad4" name="Ki Feats" hidden="false">
+          <infoLinks>
+            <infoLink id="a7cd-b46e-94a2-6cce" name="Firm Resolve" hidden="false" targetId="445c-f774-ea85-5b9b" type="infoGroup"/>
+            <infoLink id="0257-cda4-d3ad-e36a" name="Dart" hidden="false" targetId="4be8-ce08-dd88-83a7" type="infoGroup"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="fdf6-7939-e59a-df09" name="Unique Effects" hidden="false">
+          <profiles>
+            <profile id="33c5-b33b-5d34-b760" name="Prayer Beads" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">This model gains one additional Ki Token each Starting Phase.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </infoGroup>
+      </infoGroups>
+      <categoryLinks>
+        <categoryLink id="f35f-8c7c-2de8-c086" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
+        <categoryLink id="3cc1-9f64-d224-c01b" name="Faction: The Descension" hidden="false" targetId="daaa-d0d2-e66e-0672" primary="false"/>
+        <categoryLink id="598f-a17f-81f3-46cd" name="Tengu" hidden="false" targetId="6da4-f657-173c-c135" primary="false"/>
+        <categoryLink id="4604-f7ff-5856-1e45" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
+        <categoryLink id="90ec-6d5f-f3c0-e87e" name="Suzume" hidden="false" targetId="65a7-1850-c579-5111" primary="false"/>
+        <categoryLink id="cba2-39e8-ed42-f902" name="Bushi" hidden="false" targetId="bd21-7464-7dc8-a907" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="113f-82bf-d6a2-faac" name="Enhancements" hidden="false" collective="false" import="true" targetId="f513-13e0-08f2-0d67" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="13.0"/>
       </costs>
     </selectionEntry>
   </selectionEntries>

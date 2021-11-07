@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="6a8f-b352-80c6-855f" name="Silvermoon Trade Syndicate" revision="7" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="6a8f-b352-80c6-855f" name="Silvermoon Trade Syndicate" revision="7" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="3" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="5048-3a52-5689-6d0b" name="Bought Loyalty" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -3418,6 +3418,112 @@ While within 2&quot; of this model, Fire Kami models gain Aggressive and Brutal 
       </entryLinks>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="13.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="bec4-0a37-c53b-ef68" name="Jum" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="98a6-e76a-f99b-a1d3" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="59b3-3411-6193-0f63" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="f92f-7e18-1437-4753" name="Jum" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">2</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277"></characteristic>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">2</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33">3</characteristic>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">1</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">6</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">5 OOOOO</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="1ac5-1ce2-6826-0ea8" name="Traits" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+          <characteristics>
+            <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Assassin, Disguise (5), Fortune</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="55b9-ba33-10a1-cc9d" name="Ki Feats" hidden="false">
+          <infoLinks>
+            <infoLink id="9c7b-3029-072a-da88" name="Lurker" hidden="false" targetId="3ace-c140-e71e-edb2" type="infoGroup"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="ba08-a091-11f5-9445" name="Traits" hidden="false">
+          <infoLinks>
+            <infoLink id="7d0e-ad0d-9785-7a4c" name="Assassin" hidden="false" targetId="ef59-928b-2550-f0a3" type="rule"/>
+            <infoLink id="1010-19b4-3ebe-f933" name="Disguise" hidden="false" targetId="1a0f-020f-3805-07f3" type="rule"/>
+            <infoLink id="bfa3-a95c-7694-6b29" name="Fortune" hidden="false" targetId="abf1-1c0e-4717-77e2" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="e54c-d31e-5126-7bee" name="Melee Weapon" hidden="false">
+          <profiles>
+            <profile id="02fa-0097-d084-679e" name="Tachi" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+0</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e"/>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Powerful Attack (1)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="f23e-aac9-1ce0-54de" name="Powerful Attack" hidden="false" targetId="d56a-058d-95d9-5b60" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="a1ed-f748-d5af-b0da" name="Ranged Weapon" hidden="false">
+          <profiles>
+            <profile id="d744-3fad-bcf3-a079" name="Shuriken" hidden="false" typeId="7e20-258e-bf92-18f9" typeName="Ranged Weapon">
+              <characteristics>
+                <characteristic name="Ranged Weapon Strength" typeId="15aa-b6bd-6923-271f">-1</characteristic>
+                <characteristic name="Range Bands" typeId="be6a-50c6-d691-e2e9">3/5/7</characteristic>
+                <characteristic name="Traits" typeId="3410-4428-ef91-eb61">Lightweight</characteristic>
+                <characteristic name="Specials" typeId="cdaf-b6ac-89d4-39ef">Combo Attack (1)</characteristic>
+                <characteristic name="Unique Effects" typeId="3bf8-6525-f003-4990">If an Attack with this weapon is successful and the individual dice results of the Damage Roll are the same number this weapon gains Pierce (3) for that Damage Roll.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="a3f7-6af6-a4f8-ea69" name="Combo Attack " hidden="false" targetId="78ab-6a94-be24-8f74" type="rule"/>
+            <infoLink id="aa97-a0a5-e92d-ac23" name="Pierce " hidden="false" targetId="39e4-14d7-5533-6e67" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="12c5-e4f6-bf4e-e3b3" name="Unique Effects" hidden="false">
+          <profiles>
+            <profile id="c8c0-33c8-f30a-2de5" name="Hitman" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">If this model is involved in a Melee Exchange with a Surprised Enemy model, double this model&apos;s Melee Pool until the end of the Melee Exchange.
+</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </infoGroup>
+      </infoGroups>
+      <categoryLinks>
+        <categoryLink id="517d-6589-5e48-8e2d" name="Faction: Silvermoon Trade Syndicate" hidden="false" targetId="875a-48b1-3c9f-0a14" primary="false"/>
+        <categoryLink id="e4e0-ac42-e6a2-fb0a" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
+        <categoryLink id="1924-85cf-b962-eb97" name="Shatei" hidden="false" targetId="dd57-4bab-fa7b-f75c" primary="false"/>
+        <categoryLink id="1690-3216-1d13-6c09" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="a29e-01cd-1893-741f" name="Enhancements" hidden="false" collective="false" import="true" targetId="37a1-1d53-ef45-026d" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="11.0"/>
       </costs>
     </selectionEntry>
   </selectionEntries>

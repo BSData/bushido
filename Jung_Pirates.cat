@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="d615-aef7-31d5-367d" name="Jung Pirates" revision="7" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="d615-aef7-31d5-367d" name="Jung Pirates" revision="7" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="3" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="258a-e1a8-8db1-9635" name="Ki&lt;2" hidden="true"/>
     <categoryEntry id="f6c9-50fa-a9d3-e9f3" name="Ranged Weapon" hidden="true"/>
@@ -2737,6 +2737,82 @@ This model may not be recruited into a Warband with the Docks of Ryu theme.</cha
       </entryLinks>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="18.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="8290-8093-41cd-5fda" name="Joben" hidden="false" collective="false" import="true" type="model">
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="72c8-b13b-bb8d-17fd" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="8fe9-3c84-6a99-0bb7" name="Joben" hidden="false" typeId="6ea2-0f74-4852-4a98" typeName="Character Profile">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="8409-8d55-ce45-a33b">2</characteristic>
+            <characteristic name="Melee Boost" typeId="6a36-e826-18f3-0b25"/>
+            <characteristic name="Ranged Pool" typeId="7a01-37c0-4741-672c">2</characteristic>
+            <characteristic name="Ranged Boost" typeId="ff66-ea54-d863-5c17">3</characteristic>
+            <characteristic name="Move" typeId="af89-242d-625f-9bff">4</characteristic>
+            <characteristic name="Move Boost" typeId="62a6-8125-f293-5c76"/>
+            <characteristic name="Ki" typeId="8b76-2b4b-066e-a0c5">1</characteristic>
+            <characteristic name="Ki Boost" typeId="c34e-f8ae-0984-37ac"/>
+            <characteristic name="Ki Cap" typeId="2e88-c65e-4e45-d4c4">6</characteristic>
+            <characteristic name="Wounds" typeId="a1dc-c2c1-e2d2-ca98">6 OOOOO O</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6af2-e777-20ce-e060">Small 30mm</characteristic>
+            <characteristic name="Traits" typeId="e742-1b02-09cf-fd97">Jump Up</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="3661-8503-b000-6020" name="Ki Feats" hidden="false">
+          <infoLinks>
+            <infoLink id="35d7-d1b0-49e2-fc6d" name="Hot Shot" hidden="false" targetId="c26d-6ebc-515b-c0fc" type="infoGroup"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="6fd9-6ca4-6e76-a9f1" name="Melee Weapon" hidden="false">
+          <profiles>
+            <profile id="72a9-c7f2-0872-a4a4" name="Shiv" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+0</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e"/>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d"/>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+        </infoGroup>
+        <infoGroup id="2baa-6943-300d-def3" name="Ranged Weapon" hidden="false">
+          <profiles>
+            <profile id="cfce-90d8-589e-59a1" name="Arquebus" hidden="false" typeId="7e20-258e-bf92-18f9" typeName="Ranged Weapon">
+              <characteristics>
+                <characteristic name="Ranged Weapon Strength" typeId="15aa-b6bd-6923-271f">+4</characteristic>
+                <characteristic name="Range Bands" typeId="be6a-50c6-d691-e2e9">6/12/18</characteristic>
+                <characteristic name="Traits" typeId="3410-4428-ef91-eb61">Reload (2), Pierce (3)</characteristic>
+                <characteristic name="Specials" typeId="cdaf-b6ac-89d4-39ef"/>
+                <characteristic name="Unique Effects" typeId="3bf8-6525-f003-4990"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="8079-f823-f7f3-3f8a" name="Reload" hidden="false" targetId="9736-df56-0b62-b1a8" type="rule"/>
+            <infoLink id="db6b-7a5b-167f-f88a" name="Pierce " hidden="false" targetId="39e4-14d7-5533-6e67" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="dbe7-3b84-4077-2774" name="Traits" hidden="false">
+          <infoLinks>
+            <infoLink id="e621-e7f5-c6d3-8b9f" name="Jump Up" hidden="false" targetId="1575-e12f-4ca3-c557" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+      </infoGroups>
+      <categoryLinks>
+        <categoryLink id="4beb-a4be-1b0a-f8f8" name="Faction: Jung Pirates" hidden="false" targetId="76df-04fb-ea1f-77ab" primary="false"/>
+        <categoryLink id="3c6d-94b5-3ce2-bb58" name="Kaizoku" hidden="false" targetId="5bf8-7b73-412a-f654" primary="false"/>
+        <categoryLink id="c200-07a6-e827-477d" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
+        <categoryLink id="394b-1201-1b4a-5ed0" name="Ranged Weapon" hidden="false" targetId="f6c9-50fa-a9d3-e9f3" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="6aeb-5f79-3ef2-a7f4" name="Enhancements" hidden="false" collective="false" import="true" targetId="2327-1257-a4b4-df32" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="12.0"/>
       </costs>
     </selectionEntry>
   </selectionEntries>

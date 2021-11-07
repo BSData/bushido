@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="b4d7-0e2a-728f-20cf" name="Kage Kaze Zoku" revision="4" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="b4d7-0e2a-728f-20cf" name="Kage Kaze Zoku" revision="4" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="3" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="33d5-3364-f1d4-a94c" name="Lockdown" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -1706,6 +1706,105 @@ Once per game, in the Starting Phase, you may add a permitted Faction Enhancemen
       </entryLinks>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="24.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="8875-ae8d-4bba-df11" name="Shinyuki" hidden="false" collective="false" import="true" type="model">
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2ddf-5319-85f6-d9ac" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="9d64-9dd4-80b9-eb28" name="Shinyuki" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">3</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33">3</characteristic>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac">3</characteristic>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">2</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">8</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">6 OOOOO O</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="0c76-07b7-006a-9bea" name="Traits" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+          <characteristics>
+            <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Armour (1), Assassin, Camouflage (2&quot;), Lightfooted</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="fc70-d05b-784f-451f" name="Ki Feats" hidden="false">
+          <infoLinks>
+            <infoLink id="5cf2-9e47-d8ab-bdf9" name="Escape" hidden="false" targetId="b7ac-c02d-fe10-2c6c" type="infoGroup"/>
+            <infoLink id="bc1f-d1b3-0321-93e0" name="Slice" hidden="false" targetId="d965-6fc1-a97d-be58" type="infoGroup"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="c81d-5bf1-c66d-6944" name="Melee Weapons" hidden="false">
+          <profiles>
+            <profile id="3b22-be3a-80e1-93b4" name="Kama Point" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+1</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Pierce (1)</characteristic>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Combo Attack (0), Sidestep Defence (0)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+            <profile id="58fd-49dc-1dfa-8e71" name="Kama Edge" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+1</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e"></characteristic>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Sweep Defence (0), Sidestep Attack (0)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="fc54-8e62-4ada-cc29" name="Sidestep Defence " hidden="false" targetId="753c-6c3b-64d7-203c" type="rule"/>
+            <infoLink id="30f6-d533-fd70-e03f" name="Sidestep Attack " hidden="false" targetId="070d-a69d-0b46-27dc" type="rule"/>
+            <infoLink id="14a6-6085-c0b3-358d" name="Pierce " hidden="false" targetId="39e4-14d7-5533-6e67" type="rule"/>
+            <infoLink id="5916-ee68-1af7-6b60" name="Sweep Defence" hidden="false" targetId="5338-2d8f-f189-062d" type="rule"/>
+            <infoLink id="2639-01b9-b559-d824" name="Combo Attack " hidden="false" targetId="78ab-6a94-be24-8f74" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="2715-f35d-7936-56bf" name="Unique Effects" hidden="false">
+          <profiles>
+            <profile id="9c45-9390-704f-6a83" name="Start of Activation" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
+              <characteristics>
+                <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">At the start of this model&apos;s activation choose one of the following:
+• This model gains Melee Boost (2) until the end of the activation.
+• This model gains Fear (6) and Terror until the end of the current activation.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="5d4b-2909-e5ba-6523" name="Terror" hidden="false" targetId="ad7a-5dea-fee4-fb49" type="rule"/>
+            <infoLink id="ae0d-4487-8cbc-8275" name="Fear" hidden="false" targetId="3586-4583-7f10-1f31" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="7186-a100-0909-8fca" name="Traits" hidden="false">
+          <infoLinks>
+            <infoLink id="1b58-5f99-ec38-bb6c" name="Assassin" hidden="false" targetId="ef59-928b-2550-f0a3" type="rule"/>
+            <infoLink id="77c6-6971-8e41-4d6e" name="Armour" hidden="false" targetId="8615-1c63-2242-5746" type="rule"/>
+            <infoLink id="c699-8379-0019-16fb" name="Camouflage" hidden="false" targetId="9010-4983-c98c-1751" type="rule"/>
+            <infoLink id="ba21-8012-0a75-a42e" name="Lightfooted" hidden="false" targetId="57d2-cd57-07f9-addf" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+      </infoGroups>
+      <categoryLinks>
+        <categoryLink id="3138-34f0-10c3-f1a0" name="Faction: Kage Kaze Zoku" hidden="false" targetId="3aa4-cadb-b4be-0dc6" primary="false"/>
+        <categoryLink id="140f-d047-ec06-3c6a" name="House of the Bleeding Moon" hidden="false" targetId="6ac4-d054-eb7e-e75d" primary="false"/>
+        <categoryLink id="b309-40b2-0539-9041" name="Ninja" hidden="false" targetId="dc64-e668-4aac-8ec9" primary="false"/>
+        <categoryLink id="1f61-13c3-ddc0-af26" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
+        <categoryLink id="5d32-3fc4-1bee-aa6c" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
+        <categoryLink id="2d16-f4f4-58dd-a78d" name="Armour" hidden="false" targetId="f322-702a-ff62-b37e" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="4951-027c-5202-dfb3" name="Enhancements" hidden="false" collective="false" import="true" targetId="b18f-16ea-bed1-4709" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="19.0"/>
       </costs>
     </selectionEntry>
   </selectionEntries>
