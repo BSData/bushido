@@ -937,6 +937,7 @@ Exclusion [Animal, Cavalry]</characteristic>
         <categoryLink id="c27a-2f36-dc08-ab90" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
         <categoryLink id="c1dd-46a7-0475-360f" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
         <categoryLink id="6e0c-f496-2476-e5a7" name="Armour" hidden="false" targetId="f322-702a-ff62-b37e" primary="false"/>
+        <categoryLink id="4d6e-d220-e62f-6b90" name="Brute" hidden="false" targetId="843a-8028-99c1-88b1" primary="false"/>
       </categoryLinks>
       <entryLinks>
         <entryLink id="9524-feb4-a050-780f" name="Enhancements" hidden="false" collective="false" import="true" targetId="74e6-2485-1c0a-4227" type="selectionEntryGroup"/>
@@ -3301,7 +3302,7 @@ This model automatically passes Fear Tests caused by Small Based models.</charac
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="355f-17c8-76c4-c521" name="Oni Slaves" hidden="false" collective="false" import="true" type="unit">
+    <selectionEntry id="355f-17c8-76c4-c521" name="Lost Slaves" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
         <modifier type="set" field="hidden" value="true">
           <conditionGroups>
@@ -3349,7 +3350,7 @@ This model automatically passes Fear Tests caused by Small Based models.</charac
         </infoGroup>
         <infoGroup id="4501-6c06-182c-535f" name="Unique Effects" hidden="false">
           <infoLinks>
-            <infoLink id="16d0-307f-2166-22be" name="Oni Slave" hidden="false" targetId="f1d1-eb4f-8c07-e960" type="infoGroup"/>
+            <infoLink id="16d0-307f-2166-22be" name="Lost Slave" hidden="false" targetId="f1d1-eb4f-8c07-e960" type="infoGroup"/>
           </infoLinks>
         </infoGroup>
       </infoGroups>
@@ -3367,7 +3368,7 @@ This model automatically passes Fear Tests caused by Small Based models.</charac
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1c9e-4b5c-88a8-a6ee" type="min"/>
           </constraints>
           <profiles>
-            <profile id="0f25-62ff-da7e-31a4" name="Oni Slave A" hidden="false" typeId="6ea2-0f74-4852-4a98" typeName="Character Profile">
+            <profile id="0f25-62ff-da7e-31a4" name="Lost Slave A" hidden="false" typeId="6ea2-0f74-4852-4a98" typeName="Character Profile">
               <characteristics>
                 <characteristic name="Melee Pool" typeId="8409-8d55-ce45-a33b">2</characteristic>
                 <characteristic name="Melee Boost" typeId="6a36-e826-18f3-0b25">3</characteristic>
@@ -3390,7 +3391,7 @@ This model automatically passes Fear Tests caused by Small Based models.</charac
             <modifier type="append" field="name" value="B"/>
           </modifiers>
           <profiles>
-            <profile id="e2a2-f4ad-5fea-de95" name="Oni Slave B" hidden="false" typeId="6ea2-0f74-4852-4a98" typeName="Character Profile">
+            <profile id="e2a2-f4ad-5fea-de95" name="Lost Slave B" hidden="false" typeId="6ea2-0f74-4852-4a98" typeName="Character Profile">
               <characteristics>
                 <characteristic name="Melee Pool" typeId="8409-8d55-ce45-a33b">2</characteristic>
                 <characteristic name="Melee Boost" typeId="6a36-e826-18f3-0b25">3</characteristic>
@@ -3474,6 +3475,7 @@ This model automatically passes Fear Tests caused by Small Based models.</charac
         <categoryLink id="93b6-770d-7c0d-a1f8" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
         <categoryLink id="4e38-e77b-bb4d-ee7a" name="Non-Unique" hidden="false" targetId="d181-219d-3add-d47b" primary="false"/>
         <categoryLink id="bf1c-4d56-8848-3beb" name="Armour" hidden="false" targetId="f322-702a-ff62-b37e" primary="false"/>
+        <categoryLink id="f6fb-6464-2322-ff05" name="Brute" hidden="false" targetId="843a-8028-99c1-88b1" primary="false"/>
       </categoryLinks>
       <entryLinks>
         <entryLink id="08e3-da3c-3650-3203" name="Tribal Brute" hidden="false" collective="false" import="true" targetId="9d1d-34ce-2f1e-37ae" type="selectionEntry">
@@ -4190,8 +4192,8 @@ Kemono &amp; Ushi are considered the same model when creating a Warband.</charac
           <characteristics>
             <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">• Models in this Warband gain Banzai!
 • Models in this Warband may only declare Run or Charge Actions.
-  (If no Action choice is legal then the model loses all Activation Counters and ends its action immediately.)
-• Discard this Theme when a model declares any action other than Charge, or you may choose to discard this in any Starting Phase.
+  (If no Action choice is legal then the model loses all Activation Counters and ends its Action immediately.)
+• Discard this Theme when a model declares any action other than Charge, or you may choose to discard this card in any Starting Phase.
 
 Restriction [Bakemono]</characteristic>
           </characteristics>
@@ -4585,7 +4587,7 @@ Permitted [Oni, Onisho]</characteristic>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="8.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="e299-8234-b5b5-c8e9" name="Oni Slave" hidden="false" collective="false" import="true" type="model">
+    <selectionEntry id="e299-8234-b5b5-c8e9" name="Lost Slave" hidden="false" collective="false" import="true" type="model">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d743-ce13-bcb3-3c2b" type="max"/>
       </constraints>
@@ -4969,9 +4971,9 @@ Restriction [Bakemono]</characteristic>
               <profiles>
                 <profile id="b2d9-5325-ce92-edf0" name="Crimson Sky Mushroom" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
                   <characteristics>
-                    <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">Double the Attached model&apos;s Melee Pool, and it gains +2 Melee Weapon Strength.
-Every End Phase mark 1 Damage Box of the Attached model.
-Attached model cannot be Healed.
+                    <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">Attached model cannot be Healed.
+Double the Attached model&apos;s Melee Pool, and it gains +2 Melee Weapon Strength.
+Every End Phase mark 1 Wound Box of the Attached model.
 
 Requirement [Bakemono model in a Warband with a Bakemono Shugenja]</characteristic>
                   </characteristics>
@@ -5169,9 +5171,9 @@ Requirement [Warband with a Shugenja]</characteristic>
         </profile>
       </profiles>
     </infoGroup>
-    <infoGroup id="f1d1-eb4f-8c07-e960" name="Oni Slave" hidden="false">
+    <infoGroup id="f1d1-eb4f-8c07-e960" name="Lost Slave" hidden="false">
       <profiles>
-        <profile id="0675-c0d2-6d1d-a38e" name="Oni Slave" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+        <profile id="0675-c0d2-6d1d-a38e" name="Lost Slave" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
           <characteristics>
             <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">During the Starting Phase this model may spend Oni Blood Tokens. If it does it suffers one Wound and gains Fearless, Last Stand and +1 Melee Weapon Strength until the End Phase for each token spent.</characteristic>
           </characteristics>
@@ -5229,7 +5231,7 @@ Requirement [Warband with a Shugenja]</characteristic>
             <characteristic name="Timing" typeId="f8a8-8a3e-ef58-4c61">Simple</characteristic>
             <characteristic name="Subject" typeId="4ac8-2bb1-0c84-f088">Pulse 4&quot;</characteristic>
             <characteristic name="Limitation" typeId="6fc9-5d13-2687-b2a5">Not in BtB, Once Per Turn</characteristic>
-            <characteristic name="Description" typeId="f804-b969-00da-2123">Each Friendly Bakemono within the Pulse’s area of effect gain one Virtue Token.</characteristic>
+            <characteristic name="Description" typeId="f804-b969-00da-2123">Each Friendly Bakemono within the Pulse gains 1 Virtue Token.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -5337,11 +5339,11 @@ X cannot be greater than 3.</characteristic>
             <characteristic name="Limitation" typeId="6fc9-5d13-2687-b2a5"/>
             <characteristic name="Description" typeId="f804-b969-00da-2123">Replace this model with the Zoo model.
 Recover or Inflict Wounds so that Zoo’s profile card has the same number of Wounds marked as Xi-Han.
-Transfer State Markers and any tokens to Zoo’s profile card, Zoo gains an Impetuous Marker.
+Transfer State Markers, Enhancements, and any tokens to Zoo’s profile card, Zoo gains an Impetuous Marker.
 
-This effect expires in the End Phase, replace Zoo with Xi-Han.
+When this effect expires in the End Phase, replace Zoo with Xi-Han.
 Recover or Inflict Wounds so that Xi-Han’s profile has the same number of Wounds marked as Zoo.
-Transfer State Markers and any tokens to Xi-Han’s profile card.</characteristic>
+Transfer State Markers, Enhancements, and any tokens to Xi-Han’s profile card.</characteristic>
           </characteristics>
         </profile>
       </profiles>
