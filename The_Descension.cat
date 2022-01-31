@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="d4b0-a54e-a48b-88a5" name="The Descension" revision="7" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="3" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="d4b0-a54e-a48b-88a5" name="The Descension" revision="8" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="3" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="093f-43eb-fd72-ead0" name="Move Boost" hidden="false"/>
   </categoryEntries>
@@ -2577,7 +2577,7 @@ Permitted [Ronin Kami, Small Tengu, Tribesmen]</characteristic>
       <profiles>
         <profile id="c667-56aa-c06c-d94b" name="Ironfeather Pinions" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
           <characteristics>
-            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">1 Friendlt Tengu model with Cloudwalk loses Cloudwalk and gains &apos;Shield&apos; until the End Phase.</characteristic>
+            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">1 Friendly Tengu model with Cloudwalk loses Cloudwalk and gains &apos;Shield&apos; until the End Phase.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -3098,6 +3098,102 @@ Until the End Phase, Enemy models gain Weak when making Size Tests.</characteris
       </categoryLinks>
       <entryLinks>
         <entryLink id="113f-82bf-d6a2-faac" name="Enhancements" hidden="false" collective="false" import="true" targetId="f513-13e0-08f2-0d67" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="13.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="cfe2-00a3-c39f-87b8" name="Kukibo" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9704-9d38-8681-8266" type="equalTo"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="118b-3406-56d9-05d2" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4b6e-4e50-f303-e9e2" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="74fb-7fcc-0789-9d1c" name="Kukibo" hidden="false" typeId="6ea2-0f74-4852-4a98" typeName="Character Profile">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="8409-8d55-ce45-a33b">2</characteristic>
+            <characteristic name="Melee Boost" typeId="6a36-e826-18f3-0b25"/>
+            <characteristic name="Ranged Pool" typeId="7a01-37c0-4741-672c">2</characteristic>
+            <characteristic name="Ranged Boost" typeId="ff66-ea54-d863-5c17"/>
+            <characteristic name="Move" typeId="af89-242d-625f-9bff">5</characteristic>
+            <characteristic name="Move Boost" typeId="62a6-8125-f293-5c76">2</characteristic>
+            <characteristic name="Ki" typeId="8b76-2b4b-066e-a0c5">2</characteristic>
+            <characteristic name="Ki Boost" typeId="c34e-f8ae-0984-37ac">3</characteristic>
+            <characteristic name="Ki Cap" typeId="2e88-c65e-4e45-d4c4">8</characteristic>
+            <characteristic name="Wounds" typeId="a1dc-c2c1-e2d2-ca98">5 OOOOO</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6af2-e777-20ce-e060">Small 30mm</characteristic>
+            <characteristic name="Traits" typeId="e742-1b02-09cf-fd97">Cloudwalk, Spirit (1)</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="0f68-ea93-81f2-9cbe" name="Ki Feats" hidden="false">
+          <infoLinks>
+            <infoLink id="badf-c38c-101e-2afc" name="Storm Manipulation" hidden="false" targetId="6682-2ca9-9a13-40dd" type="infoGroup"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="b5de-e42f-6ba7-a154" name="Ranged Weapon" hidden="false">
+          <profiles>
+            <profile id="ed55-302f-f923-c9ca" name="Call Lightning" hidden="false" typeId="7e20-258e-bf92-18f9" typeName="Ranged Weapon">
+              <characteristics>
+                <characteristic name="Ranged Weapon Strength" typeId="15aa-b6bd-6923-271f">+1</characteristic>
+                <characteristic name="Range Bands" typeId="be6a-50c6-d691-e2e9">2/4/6</characteristic>
+                <characteristic name="Traits" typeId="3410-4428-ef91-eb61"/>
+                <characteristic name="Specials" typeId="cdaf-b6ac-89d4-39ef"/>
+                <characteristic name="Unique Effects" typeId="3bf8-6525-f003-4990"/>
+              </characteristics>
+            </profile>
+          </profiles>
+        </infoGroup>
+        <infoGroup id="6a76-8fd4-79d3-5443" name="Melee Weapon" hidden="false">
+          <profiles>
+            <profile id="2058-26ed-04c0-7483" name="Athame" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">-2</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e"/>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d"/>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+        </infoGroup>
+        <infoGroup id="bb17-3d1c-bcd1-5952" name="Traits" hidden="false">
+          <infoLinks>
+            <infoLink id="519d-fbd0-46c2-48ce" name="Spirit" hidden="false" targetId="a9ba-9904-7d29-7bcb" type="rule"/>
+            <infoLink id="c362-0651-d902-98e0" name="Cloudwalk" hidden="false" targetId="538c-1266-626b-fcc9" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="4f8b-fd38-f043-aaa5" name="Unique Effects" hidden="false">
+          <profiles>
+            <profile id="61ca-ead7-ae15-be55" name="Unique Effects" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">When this model uses its Storm Manipulation Ki Feat, it gains Ranged Boost (2) until the End Phase.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </infoGroup>
+      </infoGroups>
+      <categoryLinks>
+        <categoryLink id="1586-c47a-500c-8b75" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
+        <categoryLink id="fa1c-c349-1907-50ef" name="Faction: The Descension" hidden="false" targetId="daaa-d0d2-e66e-0672" primary="false"/>
+        <categoryLink id="0454-fa1f-7010-ba07" name="Tengu" hidden="false" targetId="6da4-f657-173c-c135" primary="false"/>
+        <categoryLink id="2ee0-effb-210d-ed5a" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
+        <categoryLink id="86f8-e0de-859b-7577" name="Karasu" hidden="false" targetId="0411-16ed-43d9-962c" primary="false"/>
+        <categoryLink id="883a-958a-cfba-6476" name="Shugenja" hidden="false" targetId="0c22-e9ca-a3de-e706" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="1521-059e-d74f-383e" name="Enhancements" hidden="false" collective="false" import="true" targetId="f513-13e0-08f2-0d67" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="13.0"/>

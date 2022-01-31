@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="2276-2df6-78a7-841d" name="Shiho Clan" revision="8" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="3" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="2276-2df6-78a7-841d" name="Shiho Clan" revision="9" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="3" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="7fa5-7ef0-59c5-f657" name="Tanaka" hidden="false"/>
   </categoryEntries>
@@ -2450,6 +2450,117 @@ This model&apos;s Dai Kyu Ranged Weapon gains Reload (+1) and this model does no
       </entryLinks>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="c53e-1786-db5e-306c" name="Shiho Misaki" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="fb4a-18a7-5b40-74ec" type="atLeast"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <profiles>
+        <profile id="f124-6fd1-1c85-3270" name="Shiho Misaki" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">2</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">3</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33">3</characteristic>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">2</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">6</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">6 OOOOO O</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="0de1-f7dd-15f2-9963" name="Shiho Misaki" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+          <characteristics>
+            <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">Bravery, Booted, Dodge (1), Flank, Prowess [Melee](1), Vengeance [Takashi]</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="9c90-695a-d28a-6c27" name="Traits" hidden="false">
+          <infoLinks>
+            <infoLink id="c0e9-e9f2-3180-ab81" name="Prowess " hidden="false" targetId="75ef-327a-cd08-a248" type="rule"/>
+            <infoLink id="ee13-fb00-8954-ef60" name="Vengeance" hidden="false" targetId="6779-0aac-2f51-f67e" type="rule"/>
+            <infoLink id="cc7c-8667-3e89-a18e" name="Bravery" hidden="false" targetId="f9b2-38d2-7cda-de6e" type="rule"/>
+            <infoLink id="34d2-dd1e-6367-c125" name="Booted" hidden="false" targetId="90ff-48db-c79d-251c" type="rule"/>
+            <infoLink id="7b8a-7883-31ab-dd15" name="Flank" hidden="false" targetId="a847-f02d-7e99-8a66" type="rule"/>
+            <infoLink id="2206-3e71-c4d3-570d" name="Dodge " hidden="false" targetId="14d5-d459-5d8a-c73e" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="633c-0dc6-daf9-617e" name="Ki Feats" hidden="false">
+          <infoLinks>
+            <infoLink id="9b31-9dc4-2e14-8d93" name="Precision" hidden="false" targetId="9092-23cf-afcb-9b46" type="infoGroup"/>
+            <infoLink id="71e3-01b8-9eb5-7fae" name="Debana" hidden="false" targetId="f41b-11f6-fd0d-f4f5" type="infoGroup"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="afeb-aaac-c777-06e0" name="Melee Weapon" hidden="false">
+          <profiles>
+            <profile id="f0bf-f581-4e68-d4b0" name="Katana" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+1</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e"/>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Combo Attack (1), Counterstrike Defence (1), Sidestep Attack (0)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="c0a4-11b2-afda-1aae" name="Combo Attack " hidden="false" targetId="78ab-6a94-be24-8f74" type="rule"/>
+            <infoLink id="1da2-d8d7-c227-1773" name="Sidestep Attack " hidden="false" targetId="070d-a69d-0b46-27dc" type="rule"/>
+            <infoLink id="65dc-a93f-ba5a-573c" name="Counterstrike Defence " hidden="false" targetId="136e-4c77-dc59-4c6e" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="2e83-bbf0-17d0-c641" name="Unique Effects" hidden="false">
+          <profiles>
+            <profile id="56db-5b82-4e90-fb3f" name="Unique Effects" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">When this model declares a Wait Action to remove Reload Markers, its Ranged Weapons gain Lightweight until the End Phase.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="3e4d-037f-e463-f3f3" name="Lightweight" hidden="false" targetId="c75c-7124-2b1f-a4d9" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="532a-881c-a600-c20d" name="Ranged Weapon" hidden="false">
+          <profiles>
+            <profile id="eac0-ea52-ec43-623f" name="Dai Kyu" hidden="false" typeId="7e20-258e-bf92-18f9" typeName="Ranged Weapon">
+              <characteristics>
+                <characteristic name="Ranged Weapon Strength" typeId="15aa-b6bd-6923-271f">+1</characteristic>
+                <characteristic name="Range Bands" typeId="be6a-50c6-d691-e2e9">5/10/15</characteristic>
+                <characteristic name="Traits" typeId="3410-4428-ef91-eb61">Reload (1)</characteristic>
+                <characteristic name="Specials" typeId="cdaf-b6ac-89d4-39ef"/>
+                <characteristic name="Unique Effects" typeId="3bf8-6525-f003-4990"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="4a3f-51e2-e3a8-6e96" name="Reload" hidden="false" targetId="9736-df56-0b62-b1a8" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+      </infoGroups>
+      <categoryLinks>
+        <categoryLink id="6b12-42a9-2dba-a165" name="Faction: Shiho Clan" hidden="false" targetId="53b4-db5e-0527-0759" primary="false"/>
+        <categoryLink id="69e3-d7b4-df3d-9068" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
+        <categoryLink id="cebe-ff57-00dd-ba69" name="Samurai" hidden="false" targetId="e12a-f782-3281-7444" primary="false"/>
+        <categoryLink id="ade1-4a7e-7839-39ad" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
+        <categoryLink id="0a56-8753-8b8c-ebd2" name="Loyal" hidden="false" targetId="f476-156e-8599-9253" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="c576-b8ba-20eb-c17f" name="Enhancements" hidden="false" collective="false" import="true" targetId="8a7c-6251-523e-a67c" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="12.0"/>
       </costs>
     </selectionEntry>
   </selectionEntries>

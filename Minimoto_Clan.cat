@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="d2c8-91e9-1a97-89b4" name="Minimoto Clan" revision="7" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="3" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="d2c8-91e9-1a97-89b4" name="Minimoto Clan" revision="8" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="3" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="6b68-2575-cc8f-c08f" name="Armour 3+" hidden="false"/>
   </categoryEntries>
@@ -1042,9 +1042,10 @@
                 <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">While this model has at least 4 marked Wound boxes, models Wounded by this model&apos;s Melee Attacks gain a Stunned Marker.</characteristic>
               </characteristics>
             </profile>
-            <profile id="0c98-c0fb-848c-be75" name="Charging Effect" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+            <profile id="0c98-c0fb-848c-be75" name="Unique Effects" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
               <characteristics>
-                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">If this model Charges, the Target gains a Prone Marker when this model enters BtB.</characteristic>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">If this model Charges, the Target gains a Prone Marker when this model enters BtB.
+This model may be recruited into any Minimoto Theme that does not restrict it.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -1822,6 +1823,108 @@ This model may declare a Charge Action while in BtB with an Enemy model.</charac
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="15.0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="ee8e-e7db-7b2c-e34f" name="Yuyokuma" hidden="false" collective="false" import="true" type="model">
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2f6e-c074-da21-6c47" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="c1b0-eea5-87c7-8fd5" name="Yuyokuma" hidden="false" typeId="6ea2-0f74-4852-4a98" typeName="Character Profile">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="8409-8d55-ce45-a33b">4</characteristic>
+            <characteristic name="Melee Boost" typeId="6a36-e826-18f3-0b25"/>
+            <characteristic name="Ranged Pool" typeId="7a01-37c0-4741-672c">0</characteristic>
+            <characteristic name="Ranged Boost" typeId="ff66-ea54-d863-5c17"/>
+            <characteristic name="Move" typeId="af89-242d-625f-9bff">4</characteristic>
+            <characteristic name="Move Boost" typeId="62a6-8125-f293-5c76"/>
+            <characteristic name="Ki" typeId="8b76-2b4b-066e-a0c5">2</characteristic>
+            <characteristic name="Ki Boost" typeId="c34e-f8ae-0984-37ac"/>
+            <characteristic name="Ki Cap" typeId="2e88-c65e-4e45-d4c4">0</characteristic>
+            <characteristic name="Wounds" typeId="a1dc-c2c1-e2d2-ca98">7 OOOOO OO</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6af2-e777-20ce-e060">Medium 40mm</characteristic>
+            <characteristic name="Traits" typeId="e742-1b02-09cf-fd97">Aloof, Bear Stands Alone, Fear (6), Immune [Prone], Lightfooted, Steadfast, Tough (2)</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="b3f2-6660-5704-d690" name="Traits" hidden="false">
+          <infoLinks>
+            <infoLink id="bc65-26f9-6465-3f77" name="Steadfast" hidden="false" targetId="95e7-3178-c29b-013c" type="rule"/>
+            <infoLink id="5f99-b391-9bf5-6c26" name="Tough" hidden="false" targetId="5613-a6cf-495a-229f" type="rule"/>
+            <infoLink id="7ba6-9c18-fe3d-a210" name="Lightfooted" hidden="false" targetId="57d2-cd57-07f9-addf" type="rule"/>
+            <infoLink id="82ad-5fab-3627-3294" name="Fear" hidden="false" targetId="3586-4583-7f10-1f31" type="rule"/>
+            <infoLink id="c74b-17e7-5da4-b703" name="Bear Stands Alone" hidden="false" targetId="40cc-86cf-58d8-8799" type="rule"/>
+            <infoLink id="c681-f457-e6ed-170b" name="Immune" hidden="false" targetId="ea08-b25e-0ea8-af73" type="rule"/>
+            <infoLink id="bfbe-6c38-8bd1-4c65" name="Aloof" hidden="false" targetId="5101-70fc-eca4-d99b" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="e82f-a3dc-c7eb-aff0" name="Melee Weapon" hidden="false">
+          <profiles>
+            <profile id="09d3-544f-169b-c3e5" name="Bite" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+1</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Pierce (2), Sharp (2)</characteristic>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Grapple Attack (1), Throw Attack (1)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="2317-bdcf-0d56-2f8d" name="Pierce " hidden="false" targetId="39e4-14d7-5533-6e67" type="rule"/>
+            <infoLink id="247f-358d-dff4-d881" name="Throw Attack" hidden="false" targetId="e4a9-1967-fb91-ce07" type="rule"/>
+            <infoLink id="7d18-a56a-44aa-3a52" name="Grapple Attack" hidden="false" targetId="1b9a-c71d-0a30-8d0d" type="rule"/>
+            <infoLink id="267c-2007-0b89-7df9" name="Sharp " hidden="false" targetId="6092-9fb5-5196-d1eb" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="fe32-6b36-b1dc-8ed9" name="Unique Effects" hidden="false">
+          <profiles>
+            <profile id="9326-a3e9-db21-2297" name="Bear&apos;s Awe" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">While this model has at least 4 marked Wound boxes, it gains Terror.</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="4b9a-4dec-977c-e317" name="Unique Effects" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">Unless this model is Surprised or Exhausted, at the start of any Melee Exchange involving this model, the Enemy model gains a Prone Marker if it did not perform a Stand Up action, or use the Jump Up trait, this activation.
+This model may be recruited into any Minimoto Theme that does not restrict it.
+</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="0b60-48ad-6098-47dd" name="Blizzard" hidden="false" targetId="49bf-eafe-cfd5-12fc" type="profile"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="4541-9b31-cba1-c530" name="Melee Weapon" hidden="false">
+          <profiles>
+            <profile id="e15b-8836-1c8d-d93d" name="Bear Arms" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+3</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Brutal (1), Charging Bonus [Slam Attack (0)]</characteristic>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Stun Attack (1), Powerful Attack (1)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="c56a-0456-5277-b19b" name="Brutal" hidden="false" targetId="5d95-975e-a72c-25f3" type="rule"/>
+            <infoLink id="d389-aeb6-0aa2-c600" name="Slam Attack" hidden="false" targetId="5d05-b0ce-d7db-9def" type="rule"/>
+            <infoLink id="3e38-46d9-3f73-695d" name="Powerful Attack" hidden="false" targetId="d56a-058d-95d9-5b60" type="rule"/>
+            <infoLink id="2240-03f2-67c0-0d85" name="Stun Attack" hidden="false" targetId="ae27-975e-6c4b-d84e" type="rule"/>
+            <infoLink id="8314-b94e-d3e2-99a9" name="Charging Bonus" hidden="false" targetId="d747-f7f2-ea6f-5ceb" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+      </infoGroups>
+      <categoryLinks>
+        <categoryLink id="b395-0f50-fcb3-c2ff" name="Animal" hidden="false" targetId="c382-9ab3-9924-e30a" primary="false"/>
+        <categoryLink id="f2cd-e47b-b24f-ebae" name="Bear" hidden="false" targetId="78d7-81d9-18b7-5384" primary="false"/>
+        <categoryLink id="de80-c6d3-60c2-3494" name="New CategoryLink" hidden="false" targetId="7ad5-75e1-6134-ca44" primary="false"/>
+        <categoryLink id="9c71-fc14-bada-c08d" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
+        <categoryLink id="6032-dd0e-93f9-73f0" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
+      </categoryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="25.0"/>
+      </costs>
+    </selectionEntry>
   </selectionEntries>
   <entryLinks>
     <entryLink id="7750-2ede-a509-e6c0" name="Golden Sentinel" hidden="false" collective="false" import="true" targetId="49fb-d207-3a25-9327" type="selectionEntry">
@@ -1942,7 +2045,7 @@ This model may declare a Charge Action while in BtB with an Enemy model.</charac
       </categoryLinks>
     </entryLink>
     <entryLink id="d223-dab0-eae7-d2b1" name="The Imperial March" hidden="false" collective="false" import="true" targetId="b94d-f7cb-a84c-4077" type="selectionEntry"/>
-    <entryLink id="6e0d-0364-b238-5b1b" name="Kami (Metal)" hidden="true" collective="false" import="true" targetId="f311-bffb-b3a9-42e6" type="selectionEntry">
+    <entryLink id="6e0d-0364-b238-5b1b" name="Kami of Tempered Iron" hidden="false" collective="false" import="true" targetId="f311-bffb-b3a9-42e6" type="selectionEntry">
       <modifiers>
         <modifier type="set" field="7b8d-253e-d718-318a" value="0.0">
           <conditionGroups>
@@ -1951,6 +2054,17 @@ This model may declare a Charge Action while in BtB with an Enemy model.</charac
                 <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3f95-c0aa-ac59-2d8b" type="lessThan"/>
                 <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="bb6b-f562-e323-b44e" type="lessThan"/>
                 <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="797b-a8f3-dcdd-165a" type="lessThan"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3f95-c0aa-ac59-2d8b" type="greaterThan"/>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="797b-a8f3-dcdd-165a" type="greaterThan"/>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="bb6b-f562-e323-b44e" type="greaterThan"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>

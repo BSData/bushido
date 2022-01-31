@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="302b-66f1-a875-3b63" name="Ito Clan" revision="8" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="3" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="302b-66f1-a875-3b63" name="Ito Clan" revision="9" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="3" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="46b2-47c2-4c55-2e3a" name="Kinu" hidden="false"/>
     <categoryEntry id="273a-b61b-c7f8-76fd" name="Itsunagi" hidden="false"/>
@@ -3488,6 +3488,117 @@ All Friendly Shisai models gain 2 Ki Tokens.</characteristic>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="14.0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="1c16-0e3a-cf46-1981" name="Ito Koburai" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f0-9b34-3c84-dbc2" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c97e-85e0-cf0f-e052" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="7007-f8dd-ce58-9c3c" name="Ito Koburai" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">4</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">3</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33">3</characteristic>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">5</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac">3</characteristic>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">2</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c">3</characteristic>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">6</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">5 OOOOO</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="1dd0-de8a-3a3c-0d11" name="Ito Koburai" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+          <characteristics>
+            <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Aggressive, Impetuous (2), Jump Up, Lightning Reflexes, Parry (1), Prowess [Melee, Move](1), Split Attack</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="5f09-9f64-de2c-9483" name="Traits" hidden="true">
+          <infoLinks>
+            <infoLink id="8833-729a-98f4-3349" name="Aggressive" hidden="false" targetId="a445-e041-8d5f-aa28" type="rule"/>
+            <infoLink id="5c70-8d9e-26ea-e58f" name="Jump Up" hidden="false" targetId="1575-e12f-4ca3-c557" type="rule"/>
+            <infoLink id="0722-26ca-7faf-1edb" name="Lightning Reflexes" hidden="false" targetId="efd4-dc31-6523-9c79" type="rule"/>
+            <infoLink id="faf7-15ee-a646-13dd" name="Parry" hidden="false" targetId="c7c2-b36e-7952-c79b" type="rule"/>
+            <infoLink id="00f3-f684-4f2c-12b5" name="Prowess " hidden="false" targetId="75ef-327a-cd08-a248" type="rule"/>
+            <infoLink id="3935-1f2c-c637-4d57" name="Split Attack" hidden="false" targetId="92d0-d4fe-e58e-7535" type="rule"/>
+            <infoLink id="3d9d-f71d-3f81-ebe9" name="Impetuous" hidden="false" targetId="4b80-3180-0b04-fb11" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="1c99-5a24-2d15-51f8" name="Melee Weapon" hidden="false">
+          <profiles>
+            <profile id="09fb-b55b-f5bb-b35a" name="Twin Katanas" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+1</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Pierce (1)</characteristic>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Combo Attack (0), Counterstrike Defence (0), Sidestep Defence (0)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="4300-6f3c-fd22-d63b" name="Sidestep Defence " hidden="false" targetId="753c-6c3b-64d7-203c" type="rule"/>
+            <infoLink id="7fde-93a4-8325-eeb5" name="Counterstrike Defence " hidden="false" targetId="136e-4c77-dc59-4c6e" type="rule"/>
+            <infoLink id="e055-0ef7-25a6-1e13" name="Combo Attack " hidden="false" targetId="78ab-6a94-be24-8f74" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="1808-d06b-ae29-23fa" name="Ki Feats" hidden="false">
+          <infoLinks>
+            <infoLink id="6e21-194f-1fbf-f11f" name="Hayai" hidden="false" targetId="7eb2-546b-abae-6f8e" type="infoGroup"/>
+            <infoLink id="c526-fe3f-a422-6bd5" name="Dash" hidden="false" targetId="e566-060c-5bcc-1f3d" type="infoGroup"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="4089-eb56-b39e-e43e" name="Unique Effects" hidden="false">
+          <profiles>
+            <profile id="4362-4059-9987-f1e5" name="Unique Effects" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">Whenever this model is required to roll a Size or Ki Test, you may choose to roll a Move Test instead.
+Use the same Challenge Number (For Challenge Tests) or against the Opponent&apos;s normal statistic roll (For Opposed Tests).
+The Success or Failure on the Move Test replaces the original test.
+
+This model may not be given Enhancement Cards.
+
+If recruited into the same Warband as Itsunagi, this model gains Kurouma Koryu.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="dc73-86db-1290-8906" name="Kurouma Koryu" hidden="false" targetId="3ba5-1837-b036-ca3d" type="infoGroup">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="273a-b61b-c7f8-76fd" type="lessThan"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
+        </infoGroup>
+      </infoGroups>
+      <categoryLinks>
+        <categoryLink id="2795-de42-654e-6bc3" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
+        <categoryLink id="6c06-caa6-25ac-88fe" name="Samurai" hidden="false" targetId="e12a-f782-3281-7444" primary="false"/>
+        <categoryLink id="665d-1298-e576-c095" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="6a3e-d19d-4e92-bcd1" name="Enhancements" hidden="false" collective="false" import="true" targetId="c1b7-60f5-a313-5345" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="17.0"/>
+      </costs>
+    </selectionEntry>
   </selectionEntries>
   <entryLinks>
     <entryLink id="a128-3c72-cd19-3719" name="Ancestor Spirit" hidden="false" collective="false" import="true" targetId="a8a8-fc30-a7e2-2913" type="selectionEntry">
@@ -3723,7 +3834,7 @@ All Friendly Shisai models gain 2 Ki Tokens.</characteristic>
             <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="3be7-2aa0-00f5-50a4" name="Teachings of Yasushi" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="3be7-2aa0-00f5-50a4" name="Teachings of Yashushi" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2413-43e4-bc69-ee4a" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="744a-9c5d-7518-71f6" type="max"/>
