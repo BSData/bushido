@@ -1807,6 +1807,106 @@ Once per game, in the Starting Phase, you may add a permitted Faction Enhancemen
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="19.0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="d4fe-5e70-101c-f4b8" name="Jinichi" hidden="false" collective="false" import="true" type="model">
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5356-952f-d8f3-8c30" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="f4ca-8b6d-788e-33a2" name="Jinichi" hidden="false" typeId="6ea2-0f74-4852-4a98" typeName="Character Profile">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="8409-8d55-ce45-a33b">3</characteristic>
+            <characteristic name="Melee Boost" typeId="6a36-e826-18f3-0b25">3</characteristic>
+            <characteristic name="Ranged Pool" typeId="7a01-37c0-4741-672c">3</characteristic>
+            <characteristic name="Ranged Boost" typeId="ff66-ea54-d863-5c17">3</characteristic>
+            <characteristic name="Move" typeId="af89-242d-625f-9bff">4</characteristic>
+            <characteristic name="Move Boost" typeId="62a6-8125-f293-5c76">3</characteristic>
+            <characteristic name="Ki" typeId="8b76-2b4b-066e-a0c5">2</characteristic>
+            <characteristic name="Ki Boost" typeId="c34e-f8ae-0984-37ac"/>
+            <characteristic name="Ki Cap" typeId="2e88-c65e-4e45-d4c4">8</characteristic>
+            <characteristic name="Wounds" typeId="a1dc-c2c1-e2d2-ca98">6 OOOOO O</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6af2-e777-20ce-e060">Small 30mm</characteristic>
+            <characteristic name="Traits" typeId="e742-1b02-09cf-fd97">Armour (1), Assassin, Camouflage (2&quot;), Lightfooted, Resistance (1)</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="b1b3-f349-3fcd-84a0" name="Traits" hidden="false">
+          <infoLinks>
+            <infoLink id="8475-af35-79b1-83e4" name="Assassin" hidden="false" targetId="ef59-928b-2550-f0a3" type="rule"/>
+            <infoLink id="946e-f628-7f8c-971e" name="Armour" hidden="false" targetId="8615-1c63-2242-5746" type="rule"/>
+            <infoLink id="69bd-3f1b-c72a-0eee" name="Camouflage" hidden="false" targetId="9010-4983-c98c-1751" type="rule"/>
+            <infoLink id="a0a3-b5ed-1c32-f1f1" name="Lightfooted" hidden="false" targetId="57d2-cd57-07f9-addf" type="rule"/>
+            <infoLink id="9f8d-d32d-3139-8435" name="Resistance " hidden="false" targetId="7e3f-9dc3-cacb-469f" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="90be-4e68-0114-1b6d" name="Ki Feats" hidden="false">
+          <infoLinks>
+            <infoLink id="72b5-890c-0aa3-18e0" name="Distraction" hidden="false" targetId="67dc-8faf-a547-262a" type="infoGroup"/>
+            <infoLink id="9129-256f-5233-cdf9" name="Insight" hidden="false" targetId="b01d-25b0-eec2-5a4f" type="infoGroup"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="6dce-4c29-a0c5-d42d" name="Melee Weapon" hidden="false">
+          <profiles>
+            <profile id="cc47-17dd-a43a-34aa" name="Bolas" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+1</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Chain Weapon (1), Bleed (1/1)</characteristic>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Grapple Attack (0), Push Defence (0)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="aa67-4f54-2114-1c56" name="Grapple Attack" hidden="false" targetId="1b9a-c71d-0a30-8d0d" type="rule"/>
+            <infoLink id="d48c-7519-2ffc-c53b" name="Push Defence" hidden="false" targetId="74fc-a971-d9c2-278c" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="18e2-ddb6-b477-7bc1" name="Ranged Weapon" hidden="false">
+          <profiles>
+            <profile id="eaaa-ef7c-977c-fc78" name="Thrown Bolas" hidden="false" typeId="7e20-258e-bf92-18f9" typeName="Ranged Weapon">
+              <characteristics>
+                <characteristic name="Ranged Weapon Strength" typeId="15aa-b6bd-6923-271f">+1</characteristic>
+                <characteristic name="Range Bands" typeId="be6a-50c6-d691-e2e9">4/6/8</characteristic>
+                <characteristic name="Traits" typeId="3410-4428-ef91-eb61">Bleed (1/1)</characteristic>
+                <characteristic name="Specials" typeId="cdaf-b6ac-89d4-39ef"/>
+                <characteristic name="Unique Effects" typeId="3bf8-6525-f003-4990">Successful Attacks with this Weapon cause the Target to gain an Immobilised Marker.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="1536-6e14-bbee-126f" name="Bleed" hidden="false" targetId="ac4a-e540-4fe3-126a" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="bdd1-b9da-e9b6-3edf" name="Unique Effects" hidden="false">
+          <profiles>
+            <profile id="9e3c-fa7b-f53e-53fc" name="Start of Activation" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
+              <characteristics>
+                <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">At the start of this model&apos;s activation choose one of the following:
+• This model&apos;s Melee Weapons gain Poison (1/1) until the end of the activation.
+• This model gains Move Boost (2) until the end of the activation.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="ffd5-5016-166c-1a7f" name="Poison " hidden="false" targetId="7290-85f4-42cf-0b75" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+      </infoGroups>
+      <categoryLinks>
+        <categoryLink id="d28b-dbd7-b4fc-2f74" name="House of the North Star" hidden="false" targetId="2bf8-b13c-a906-baea" primary="false"/>
+        <categoryLink id="71a3-8e29-c0e6-2101" name="Ninja" hidden="false" targetId="dc64-e668-4aac-8ec9" primary="false"/>
+        <categoryLink id="cdd8-4e30-3fbd-2a96" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
+        <categoryLink id="a2d5-d4da-da3e-c961" name="Faction: Kage Kaze Zoku" hidden="false" targetId="3aa4-cadb-b4be-0dc6" primary="false"/>
+        <categoryLink id="b5e9-2bb2-b164-e804" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
+        <categoryLink id="fe7f-524e-5ec0-22b4" name="Armour" hidden="false" targetId="f322-702a-ff62-b37e" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="065e-4b90-f1c9-1ad8" name="Enhancements" hidden="false" collective="false" import="true" targetId="b18f-16ea-bed1-4709" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="21.0"/>
+      </costs>
+    </selectionEntry>
   </selectionEntries>
   <entryLinks>
     <entryLink id="0225-d3c7-eee7-c723" name="Hiretsuna" hidden="false" collective="false" import="true" targetId="fee6-a48b-db82-74e7" type="selectionEntry">

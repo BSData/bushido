@@ -3526,6 +3526,97 @@ While within 2&quot; of this model, Fire Kami models gain Aggressive and Brutal 
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="11.0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="5e35-f8ea-6a38-c233" name="Satzuko" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="60c2-7558-d59a-0e05" type="equalTo"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="98a6-e76a-f99b-a1d3" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8ce4-1f59-015e-76bf" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="6df4-96d9-fc87-785c" name="Satzuko" hidden="false" typeId="6ea2-0f74-4852-4a98" typeName="Character Profile">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="8409-8d55-ce45-a33b">3</characteristic>
+            <characteristic name="Melee Boost" typeId="6a36-e826-18f3-0b25">2</characteristic>
+            <characteristic name="Ranged Pool" typeId="7a01-37c0-4741-672c">3</characteristic>
+            <characteristic name="Ranged Boost" typeId="ff66-ea54-d863-5c17"/>
+            <characteristic name="Move" typeId="af89-242d-625f-9bff">5</characteristic>
+            <characteristic name="Move Boost" typeId="62a6-8125-f293-5c76">3</characteristic>
+            <characteristic name="Ki" typeId="8b76-2b4b-066e-a0c5">2</characteristic>
+            <characteristic name="Ki Boost" typeId="c34e-f8ae-0984-37ac"/>
+            <characteristic name="Ki Cap" typeId="2e88-c65e-4e45-d4c4">6</characteristic>
+            <characteristic name="Wounds" typeId="a1dc-c2c1-e2d2-ca98">5 OOOOO</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6af2-e777-20ce-e060">Small 30mm</characteristic>
+            <characteristic name="Traits" typeId="e742-1b02-09cf-fd97">Agile, Disguise (5), Dodge (1), Evasive, Jump Up, Lightfooted, Ranged Defence (2)</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="3cc2-3ba1-f64c-18a3" name="Ki Feats" hidden="false">
+          <infoLinks>
+            <infoLink id="3749-63e1-73fa-07f8" name="Shiatzu" hidden="false" targetId="d556-62c9-4d49-1317" type="infoGroup"/>
+            <infoLink id="a6a1-d7dd-710c-1c39" name="Envigorate" hidden="false" targetId="e5cc-f02b-9e71-a92b" type="infoGroup"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="c920-ce83-b8a7-fcad" name="Traits" hidden="false">
+          <infoLinks>
+            <infoLink id="c701-7bab-e0c6-f699" name="Disguise" hidden="false" targetId="1a0f-020f-3805-07f3" type="rule"/>
+            <infoLink id="e163-3d06-747b-285d" name="Dodge " hidden="false" targetId="14d5-d459-5d8a-c73e" type="rule"/>
+            <infoLink id="eb8d-c169-4d33-aae6" name="Jump Up" hidden="false" targetId="1575-e12f-4ca3-c557" type="rule"/>
+            <infoLink id="7b6f-a4f6-bb1e-d624" name="Agile" hidden="false" targetId="6a46-2f07-1725-11b2" type="rule"/>
+            <infoLink id="af47-d2d7-7449-1db3" name="Lightfooted" hidden="false" targetId="57d2-cd57-07f9-addf" type="rule"/>
+            <infoLink id="b63f-942b-2d99-0336" name="Ranged Defence " hidden="false" targetId="9b8d-9ca9-e25d-3988" type="rule"/>
+            <infoLink id="4987-69f2-67d0-76b3" name="Evasive" hidden="false" targetId="b0f8-d197-536b-c8fc" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="b8a7-fa60-b215-f422" name="Melee Weapons" hidden="false">
+          <profiles>
+            <profile id="3c82-5b40-890a-9548" name="Tessen" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+1</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e"/>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Sidestep Defence (0)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+            <profile id="88c3-fa6c-677a-7056" name="Unarmed" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">-1</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Ki Block</characteristic>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d"></characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="9c62-d520-1bbe-7f79" name="Sidestep Defence " hidden="false" targetId="753c-6c3b-64d7-203c" type="rule"/>
+            <infoLink id="c9bf-9823-073b-01bb" name="Ki Block" hidden="false" targetId="d134-7fba-38f0-8896" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+      </infoGroups>
+      <categoryLinks>
+        <categoryLink id="b409-6398-7cd5-0a7c" name="Faction: Silvermoon Trade Syndicate" hidden="false" targetId="875a-48b1-3c9f-0a14" primary="false"/>
+        <categoryLink id="1704-6fe8-b7b8-be52" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
+        <categoryLink id="3d32-1d53-fa10-eb04" name="Shatei" hidden="false" targetId="dd57-4bab-fa7b-f75c" primary="false"/>
+        <categoryLink id="4687-dfb0-2685-ccac" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
+        <categoryLink id="b634-5be0-eb21-58ec" name="Rose" hidden="false" targetId="38c2-663a-aa2e-8d30" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="ac83-b44e-60a3-3473" name="Enhancements" hidden="false" collective="false" import="true" targetId="37a1-1d53-ef45-026d" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="11.0"/>
+      </costs>
+    </selectionEntry>
   </selectionEntries>
   <entryLinks>
     <entryLink id="7ae5-b29d-c5eb-c5c7" name="Kappa" hidden="false" collective="false" import="true" targetId="34f2-cc79-8047-6138" type="selectionEntry">

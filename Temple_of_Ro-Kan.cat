@@ -4173,6 +4173,102 @@ This model may be recruited into any Warband that includes Taiki.</characteristi
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="10.0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="963b-d95f-acab-abf7" name="Botan" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1a12-f47f-8f23-0777" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="add" field="category" value="760e-95d4-349a-cb3c">
+          <conditions>
+            <condition field="selections" scope="963b-d95f-acab-abf7" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7ec6-dce9-29e5-a209" type="atLeast"/>
+          </conditions>
+        </modifier>
+        <modifier type="add" field="category" value="18b7-00de-cec4-40ca">
+          <conditions>
+            <condition field="selections" scope="963b-d95f-acab-abf7" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f38d-d916-8836-28cd" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="93b4-24aa-2f53-6b7e" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="c901-5d33-186f-e3d8" name="Botan" hidden="false" typeId="6ea2-0f74-4852-4a98" typeName="Character Profile">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="8409-8d55-ce45-a33b">3</characteristic>
+            <characteristic name="Melee Boost" typeId="6a36-e826-18f3-0b25">2</characteristic>
+            <characteristic name="Ranged Pool" typeId="7a01-37c0-4741-672c">3</characteristic>
+            <characteristic name="Ranged Boost" typeId="ff66-ea54-d863-5c17">2</characteristic>
+            <characteristic name="Move" typeId="af89-242d-625f-9bff">4</characteristic>
+            <characteristic name="Move Boost" typeId="62a6-8125-f293-5c76">2</characteristic>
+            <characteristic name="Ki" typeId="8b76-2b4b-066e-a0c5">2</characteristic>
+            <characteristic name="Ki Boost" typeId="c34e-f8ae-0984-37ac">2</characteristic>
+            <characteristic name="Ki Cap" typeId="2e88-c65e-4e45-d4c4">6</characteristic>
+            <characteristic name="Wounds" typeId="a1dc-c2c1-e2d2-ca98">6 OOOOO O</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6af2-e777-20ce-e060">Small 30mm</characteristic>
+            <characteristic name="Traits" typeId="e742-1b02-09cf-fd97">Bravery, Courage (1), Jump Up, Kata, Ranged Defence (1)</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="eb95-57fa-4e28-3cb6" name="Traits" hidden="false">
+          <infoLinks>
+            <infoLink id="fdab-70a6-c95d-73f9" name="Bravery" hidden="false" targetId="f9b2-38d2-7cda-de6e" type="rule"/>
+            <infoLink id="466c-f6a8-3927-d32b" name="Courage" hidden="false" targetId="2c5f-d52f-24ba-7927" type="rule"/>
+            <infoLink id="3313-d624-5fd2-f303" name="Kata" hidden="false" targetId="7283-1e6d-cb9c-f1c8" type="rule"/>
+            <infoLink id="f2b7-2844-1e0f-09bd" name="Ranged Defence " hidden="false" targetId="9b8d-9ca9-e25d-3988" type="rule"/>
+            <infoLink id="890e-b372-d2e7-7723" name="Jump Up" hidden="false" targetId="1575-e12f-4ca3-c557" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="d1a4-2940-86ba-f0e1" name="Melee Weapon" hidden="false">
+          <profiles>
+            <profile id="7f68-83fc-cab6-c979" name="Bujutsu" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+0</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e"/>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Combo Attack (1), Counterstrike Defence (1), Sidestep Defence (0)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="10ae-23d5-e1b3-df56" name="Counterstrike Defence " hidden="false" targetId="136e-4c77-dc59-4c6e" type="rule"/>
+            <infoLink id="0b7f-ab78-ad74-0c18" name="Combo Attack " hidden="false" targetId="78ab-6a94-be24-8f74" type="rule"/>
+            <infoLink id="dbb3-c102-c527-f7fa" name="Sidestep Defence " hidden="false" targetId="753c-6c3b-64d7-203c" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="a74d-d3fb-23d2-7c0a" name="Ki Feats" hidden="false">
+          <infoLinks>
+            <infoLink id="afb1-fea5-0bde-457b" name="Blazing Maelstrom" hidden="false" targetId="10b2-b8f8-3e07-a3dd" type="infoGroup"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="6aa8-f665-de4c-bc85" name="Unique Effects" hidden="false">
+          <infoLinks>
+            <infoLink id="7378-7d5c-e769-006d" name="Wind Disciple" hidden="false" targetId="b961-56bd-c441-246d" type="infoGroup"/>
+          </infoLinks>
+        </infoGroup>
+      </infoGroups>
+      <categoryLinks>
+        <categoryLink id="84ff-a2e2-173c-fe36" name="Element: Wind" hidden="false" targetId="3184-d389-7218-d304" primary="false"/>
+        <categoryLink id="506a-e045-ca4e-fc71" name="Faction: Temple of Rokan" hidden="false" targetId="3186-3d3a-a105-887b" primary="false"/>
+        <categoryLink id="4b39-cf8b-284a-d2f4" name="Monk" hidden="false" targetId="57a9-2b8a-3729-1ad8" primary="false"/>
+        <categoryLink id="604a-0ed9-7671-d654" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
+        <categoryLink id="0d49-eba2-0f1f-96d5" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
+        <categoryLink id="c3ed-dea1-ff98-395c" name="Element: Fire" hidden="false" targetId="7ad2-8152-55dc-b4c9" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="d89a-0a09-bc4c-49e1" name="Enhancements" hidden="false" collective="false" import="true" targetId="d716-36e8-af1d-0a1f" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="14.0"/>
+      </costs>
+    </selectionEntry>
   </selectionEntries>
   <entryLinks>
     <entryLink id="0f32-6304-1fad-6541" name="Ashinaga Tenaga" hidden="false" collective="false" import="true" targetId="e7ea-c376-aac2-5726" type="selectionEntry">
