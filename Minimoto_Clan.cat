@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="d2c8-91e9-1a97-89b4" name="Minimoto Clan" revision="9" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="3" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="d2c8-91e9-1a97-89b4" name="Minimoto Clan" revision="10" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="4" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="6b68-2575-cc8f-c08f" name="Armour 3+" hidden="false"/>
   </categoryEntries>
@@ -2087,6 +2087,18 @@ This model may be recruited into any Minimoto Theme that does not restrict it.
     <entryLink id="1e69-6f07-2257-1fac" name="Khendish" hidden="true" collective="false" import="true" targetId="dc54-b54e-1428-7c3e" type="selectionEntry"/>
     <entryLink id="8f65-0e8a-c11c-ccef" name="Batu" hidden="true" collective="false" import="true" targetId="5e97-28ce-9c1b-6b8b" type="selectionEntry"/>
     <entryLink id="18a4-7400-c5e3-cbe0" name="Tru&apos;pah" hidden="true" collective="false" import="true" targetId="82bb-a55d-5366-baf2" type="selectionEntry"/>
+    <entryLink id="e45c-fe7e-e50b-0d9d" name="The Kiyozumi Family" hidden="false" collective="false" import="true" targetId="0e4a-a40c-14eb-2f4f" type="selectionEntry"/>
+    <entryLink id="6791-f92b-29ba-5b51" name="The Hozumi Family" hidden="false" collective="false" import="true" targetId="4750-f234-49e4-79c1" type="selectionEntry"/>
+    <entryLink id="7f24-4b6f-c418-863c" name="Taiyo" hidden="true" collective="false" import="true" targetId="90d7-5fe5-0a05-1bea" type="selectionEntry"/>
+    <entryLink id="8f6c-4584-c4b0-abff" name="Ryokeen" hidden="true" collective="false" import="true" targetId="f97b-84fa-27d7-b73b" type="selectionEntry"/>
+    <entryLink id="6016-a742-11e8-294c" name="Kiyozumi Sadaka" hidden="true" collective="false" import="true" targetId="7728-72dd-3889-91b2" type="selectionEntry"/>
+    <entryLink id="ab00-5676-04fe-59c1" name="Kiyozumi Kicho" hidden="true" collective="false" import="true" targetId="7b8f-61a1-2d88-60f2" type="selectionEntry"/>
+    <entryLink id="4a36-f007-d5bc-ba82" name="Kiyozumi Hinadori" hidden="true" collective="false" import="true" targetId="07f2-8804-f10d-7bbb" type="selectionEntry"/>
+    <entryLink id="6f95-9062-8c2f-3ce6" name="Kiyozumi Haiboku" hidden="false" collective="false" import="true" targetId="91b9-5dcc-298c-0bfb" type="selectionEntry"/>
+    <entryLink id="89dd-15bf-7223-ed59" name="Kenmeina" hidden="true" collective="false" import="true" targetId="b896-0ea7-fb05-1ecc" type="selectionEntry"/>
+    <entryLink id="70af-aefa-07ed-590d" name="Hozumi Maha" hidden="true" collective="false" import="true" targetId="09da-574e-599a-3226" type="selectionEntry"/>
+    <entryLink id="c9cd-0cb3-0135-df25" name="Hozumi Koga" hidden="true" collective="false" import="true" targetId="2b64-ba79-8ea1-4098" type="selectionEntry"/>
+    <entryLink id="1fa8-9dde-3b8f-5622" name="Hozumi Daihanji" hidden="false" collective="false" import="true" targetId="2195-17c7-b68c-0111" type="selectionEntry"/>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="a382-7e2d-9df9-d700" name="Jyoto Ashigaru" hidden="false" collective="false" import="true" type="model">
@@ -2425,6 +2437,11 @@ Requirement [Ashigaru]</characteristic>
                     <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6b68-2575-cc8f-c08f" type="instanceOf"/>
                   </conditions>
                 </modifier>
+                <modifier type="decrement" field="a111-8656-5c05-7415" value="1.0">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="90d7-5fe5-0a05-1bea" type="atLeast"/>
+                  </conditions>
+                </modifier>
               </modifiers>
               <constraints>
                 <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="07f2-f348-3995-334a" type="max"/>
@@ -2449,6 +2466,13 @@ Requirement [Ashigaru]</characteristic>
               </costs>
             </selectionEntry>
             <selectionEntry id="bb0c-585e-f888-9062" name="Irokane Tetsubo" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="decrement" field="a111-8656-5c05-7415" value="1.0">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="90d7-5fe5-0a05-1bea" type="atLeast"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9bc4-4735-8c82-ace4" type="max"/>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6205-11d9-5b4f-eb06" type="max"/>
@@ -2484,6 +2508,11 @@ Requirement [Ashigaru]</characteristic>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
+                </modifier>
+                <modifier type="decrement" field="a111-8656-5c05-7415" value="1.0">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="90d7-5fe5-0a05-1bea" type="atLeast"/>
+                  </conditions>
                 </modifier>
               </modifiers>
               <constraints>
@@ -2604,6 +2633,9 @@ Requirement [Masaema Yama]</characteristic>
             <entryLink id="cd84-1a93-5a24-c41d" name="!DRAFT!CYCLE Wolf Heart Talisman" hidden="false" collective="false" import="true" targetId="a56e-8e8e-97b4-ec73" type="selectionEntry"/>
             <entryLink id="4375-d12d-62d9-a241" name="The Eagle Banner" hidden="false" collective="false" import="true" targetId="010e-1205-db10-6a2d" type="selectionEntry"/>
             <entryLink id="7f4f-b72e-1a16-28b5" name="Hand Cannon" hidden="false" collective="false" import="true" targetId="3009-1a3c-223d-cae2" type="selectionEntry"/>
+            <entryLink id="cd5d-632f-359a-8f75" name="The Sunrise Katana" hidden="false" collective="false" import="true" targetId="a54a-aa90-53f2-d9df" type="selectionEntry"/>
+            <entryLink id="28df-97c6-4766-b9b2" name="The Kiyozumi Katana" hidden="false" collective="false" import="true" targetId="f882-5ccf-0724-2290" type="selectionEntry"/>
+            <entryLink id="bb60-72c5-f783-5347" name="The Hozumi Katana" hidden="false" collective="false" import="true" targetId="5cac-d0cc-1c51-a147" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
@@ -2613,6 +2645,14 @@ Requirement [Masaema Yama]</characteristic>
         <entryLink id="60a2-4c3b-d728-de55" name="!DRAFT!CYCLE Prayer Scroll" hidden="false" collective="false" import="true" targetId="bb42-702b-ab84-a9f9" type="selectionEntry"/>
         <entryLink id="ce44-7a54-20b4-582a" name="!DRAFT!CYCLE Pacifism" hidden="false" collective="false" import="true" targetId="6bf3-9dca-b4c5-6a3e" type="selectionEntry"/>
         <entryLink id="1883-0c48-61a2-b012" name="Fujin&apos;s Charm" hidden="false" collective="false" import="true" targetId="5110-9b07-a9dd-d71e" type="selectionEntry"/>
+        <entryLink id="5252-94c6-6ca0-56f6" name="Accepted into the Shadow" hidden="false" collective="false" import="true" targetId="5a4f-6e3e-0e2b-3e81" type="selectionEntry"/>
+        <entryLink id="fdc8-6224-9f89-71bc" name="Broken Spirit" hidden="false" collective="false" import="true" targetId="66cd-f1c0-8da8-e6d9" type="selectionEntry"/>
+        <entryLink id="0b57-3f0b-3388-d3f4" name="Inducted into the Miko" hidden="false" collective="false" import="true" targetId="0ceb-eea9-97e0-8726" type="selectionEntry"/>
+        <entryLink id="5956-8ad5-c745-13ad" name="Iron Will" hidden="false" collective="false" import="true" targetId="2944-c703-8038-d0f4" type="selectionEntry"/>
+        <entryLink id="68d6-e1f8-23f9-e74f" name="Loyalty" hidden="false" collective="false" import="true" targetId="d9ab-b401-633c-78f4" type="selectionEntry"/>
+        <entryLink id="3c8f-bb77-0fe7-c619" name="Man of the People" hidden="false" collective="false" import="true" targetId="f306-2092-6d16-77ea" type="selectionEntry"/>
+        <entryLink id="3649-6587-6bf6-8ffb" name="Plans Made, Bargains Kept" hidden="false" collective="false" import="true" targetId="472f-7192-8d65-aea1" type="selectionEntry"/>
+        <entryLink id="9516-bb20-67c0-e73c" name="True Love" hidden="false" collective="false" import="true" targetId="8690-885b-08be-8353" type="selectionEntry"/>
       </entryLinks>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>

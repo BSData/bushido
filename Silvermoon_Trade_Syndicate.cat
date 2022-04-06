@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="6a8f-b352-80c6-855f" name="Silvermoon Trade Syndicate" revision="9" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="3" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="6a8f-b352-80c6-855f" name="Silvermoon Trade Syndicate" revision="10" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="4" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="5048-3a52-5689-6d0b" name="Bought Loyalty" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -3592,7 +3592,7 @@ While within 2&quot; of this model, Fire Kami models gain Aggressive and Brutal 
               <characteristics>
                 <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">-1</characteristic>
                 <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Ki Block</characteristic>
-                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d"></characteristic>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d"/>
                 <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
               </characteristics>
             </profile>
@@ -3751,6 +3751,19 @@ While within 2&quot; of this model, Fire Kami models gain Aggressive and Brutal 
     <entryLink id="96d7-fa23-4a43-426e" name="Brotherhood" hidden="false" collective="false" import="true" targetId="9402-edcc-93a2-aef1" type="selectionEntry"/>
     <entryLink id="ae32-84d6-aa33-1832" name="Tru&apos;pah" hidden="true" collective="false" import="true" targetId="82bb-a55d-5366-baf2" type="selectionEntry"/>
     <entryLink id="64ba-0376-c2a6-4ef1" name="Shosu" hidden="true" collective="false" import="true" targetId="39f7-4bb9-edb9-bde8" type="selectionEntry"/>
+    <entryLink id="b47d-874a-aec3-e86d" name="Hozumi Daihanji" hidden="true" collective="false" import="true" targetId="2195-17c7-b68c-0111" type="selectionEntry"/>
+    <entryLink id="c860-95f3-7d0b-3a8a" name="Hozumi Koga" hidden="true" collective="false" import="true" targetId="2b64-ba79-8ea1-4098" type="selectionEntry"/>
+    <entryLink id="a94b-a5dd-2ef1-9575" name="Hozumi Maha" hidden="true" collective="false" import="true" targetId="09da-574e-599a-3226" type="selectionEntry"/>
+    <entryLink id="60d8-5c97-fd02-8ecf" name="Kenmeina" hidden="false" collective="false" import="true" targetId="b896-0ea7-fb05-1ecc" type="selectionEntry"/>
+    <entryLink id="1cdd-abd1-de0b-7ca5" name="Kiyozumi Haiboku" hidden="false" collective="false" import="true" targetId="91b9-5dcc-298c-0bfb" type="selectionEntry"/>
+    <entryLink id="e9df-1834-ef56-a725" name="Kiyozumi Hinadori" hidden="true" collective="false" import="true" targetId="07f2-8804-f10d-7bbb" type="selectionEntry"/>
+    <entryLink id="a673-b1bd-3578-ee0f" name="Kiyozumi Kicho" hidden="true" collective="false" import="true" targetId="7b8f-61a1-2d88-60f2" type="selectionEntry"/>
+    <entryLink id="2192-91e3-fe00-cb90" name="Kiyozumi Sadaka" hidden="true" collective="false" import="true" targetId="7728-72dd-3889-91b2" type="selectionEntry"/>
+    <entryLink id="6f63-fb98-bd31-6f55" name="Ryokeen" hidden="true" collective="false" import="true" targetId="f97b-84fa-27d7-b73b" type="selectionEntry"/>
+    <entryLink id="9db6-3794-8b32-2870" name="Taiyo" hidden="true" collective="false" import="true" targetId="90d7-5fe5-0a05-1bea" type="selectionEntry"/>
+    <entryLink id="75e2-5163-2d73-f279" name="The Hozumi Family" hidden="false" collective="false" import="true" targetId="4750-f234-49e4-79c1" type="selectionEntry"/>
+    <entryLink id="2b2d-590b-33d7-654f" name="The Kiyozumi Family" hidden="false" collective="false" import="true" targetId="0e4a-a40c-14eb-2f4f" type="selectionEntry"/>
+    <entryLink id="e60b-3ab2-f465-931f" name="Tadaoki" hidden="false" collective="false" import="true" targetId="b245-4e75-8620-b975" type="selectionEntry"/>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="7dd1-2a29-81b8-8e4e" name="Okkete San" hidden="false" collective="false" import="true" type="model">
@@ -4002,6 +4015,11 @@ While within 2&quot; of this model, Fire Kami models gain Aggressive and Brutal 
                     </conditionGroup>
                   </conditionGroups>
                 </modifier>
+                <modifier type="decrement" field="a111-8656-5c05-7415" value="1.0">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="90d7-5fe5-0a05-1bea" type="atLeast"/>
+                  </conditions>
+                </modifier>
               </modifiers>
               <constraints>
                 <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5c52-ad95-5243-eb0c" type="max"/>
@@ -4032,6 +4050,11 @@ While within 2&quot; of this model, Fire Kami models gain Aggressive and Brutal 
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
+                </modifier>
+                <modifier type="decrement" field="a111-8656-5c05-7415" value="1.0">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="90d7-5fe5-0a05-1bea" type="atLeast"/>
+                  </conditions>
                 </modifier>
               </modifiers>
               <constraints>
@@ -4096,6 +4119,11 @@ While within 2&quot; of this model, Fire Kami models gain Aggressive and Brutal 
                     <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b78e-e8cc-b9e5-3fd9" type="instanceOf"/>
                   </conditions>
                 </modifier>
+                <modifier type="decrement" field="a111-8656-5c05-7415" value="1.0">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="90d7-5fe5-0a05-1bea" type="atLeast"/>
+                  </conditions>
+                </modifier>
               </modifiers>
               <constraints>
                 <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="77b5-b559-4e0a-afd5" type="max"/>
@@ -4121,6 +4149,11 @@ Once per test this model may re-roll 1s before determining the final result.</ch
                 <modifier type="set" field="hidden" value="false">
                   <conditions>
                     <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="38c2-663a-aa2e-8d30" type="instanceOf"/>
+                  </conditions>
+                </modifier>
+                <modifier type="decrement" field="a111-8656-5c05-7415" value="1.0">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="90d7-5fe5-0a05-1bea" type="atLeast"/>
                   </conditions>
                 </modifier>
               </modifiers>
@@ -4157,6 +4190,9 @@ Once per test this model may re-roll 1s before determining the final result.</ch
             <entryLink id="79e9-7bb4-d422-1022" name="!DRAFT!CYCLE Wolf Heart Talisman" hidden="false" collective="false" import="true" targetId="a56e-8e8e-97b4-ec73" type="selectionEntry"/>
             <entryLink id="5c14-9e36-9bea-e751" name="Hand Cannon" hidden="false" collective="false" import="true" targetId="3009-1a3c-223d-cae2" type="selectionEntry"/>
             <entryLink id="85ee-e7ac-b110-400e" name="The Eagle Banner" hidden="false" collective="false" import="true" targetId="010e-1205-db10-6a2d" type="selectionEntry"/>
+            <entryLink id="8900-bce3-36b8-3db5" name="The Sunrise Katana" hidden="false" collective="false" import="true" targetId="a54a-aa90-53f2-d9df" type="selectionEntry"/>
+            <entryLink id="e732-6a6a-0c71-d164" name="The Kiyozumi Katana" hidden="false" collective="false" import="true" targetId="f882-5ccf-0724-2290" type="selectionEntry"/>
+            <entryLink id="f493-69f3-e555-f89a" name="The Hozumi Katana" hidden="false" collective="false" import="true" targetId="5cac-d0cc-1c51-a147" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
@@ -4166,6 +4202,14 @@ Once per test this model may re-roll 1s before determining the final result.</ch
         <entryLink id="950c-7f69-0df8-18f6" name="!DRAFT!CYCLE Pacifism" hidden="false" collective="false" import="true" targetId="6bf3-9dca-b4c5-6a3e" type="selectionEntry"/>
         <entryLink id="dcd0-8b93-2774-7d08" name="!DRAFT!CYCLE Prayer Scroll" hidden="false" collective="false" import="true" targetId="bb42-702b-ab84-a9f9" type="selectionEntry"/>
         <entryLink id="f57d-7c11-cdd4-f4b2" name="Fujin&apos;s Charm" hidden="false" collective="false" import="true" targetId="5110-9b07-a9dd-d71e" type="selectionEntry"/>
+        <entryLink id="129c-541a-1fe2-59cb" name="True Love" hidden="false" collective="false" import="true" targetId="8690-885b-08be-8353" type="selectionEntry"/>
+        <entryLink id="92f9-233f-288b-c91c" name="Plans Made, Bargains Kept" hidden="false" collective="false" import="true" targetId="472f-7192-8d65-aea1" type="selectionEntry"/>
+        <entryLink id="5b42-06d0-b2f9-01e7" name="Man of the People" hidden="false" collective="false" import="true" targetId="f306-2092-6d16-77ea" type="selectionEntry"/>
+        <entryLink id="5763-91ac-03b6-1eab" name="Loyalty" hidden="false" collective="false" import="true" targetId="d9ab-b401-633c-78f4" type="selectionEntry"/>
+        <entryLink id="7a5f-5918-832d-3dff" name="Iron Will" hidden="false" collective="false" import="true" targetId="2944-c703-8038-d0f4" type="selectionEntry"/>
+        <entryLink id="2f25-bf45-b48e-7ebb" name="Inducted into the Miko" hidden="false" collective="false" import="true" targetId="0ceb-eea9-97e0-8726" type="selectionEntry"/>
+        <entryLink id="9430-9898-2f00-9cb0" name="Broken Spirit" hidden="false" collective="false" import="true" targetId="66cd-f1c0-8da8-e6d9" type="selectionEntry"/>
+        <entryLink id="7025-9988-8a7f-da2a" name="Accepted into the Shadow" hidden="false" collective="false" import="true" targetId="5a4f-6e3e-0e2b-3e81" type="selectionEntry"/>
       </entryLinks>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>

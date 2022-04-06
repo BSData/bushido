@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="1ac7-2939-2874-7530" name="Cult of Yurei" revision="12" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="3" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="1ac7-2939-2874-7530" name="Cult of Yurei" revision="13" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="4" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="5048-3a52-5689-6d0b" name="Drain Spirit" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -4672,14 +4672,9 @@ Burakumin models in the same Warband as this model gain Regenerate (1).</charact
     <selectionEntry id="0be2-7ffb-b17d-1918" name="Nightmares Unleashed" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
         <modifier type="set" field="hidden" value="true">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="538d-4d36-c07f-9024" type="lessThan"/>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="477a-e693-0888-08f7" type="atLeast"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="538d-4d36-c07f-9024" type="lessThan"/>
+          </conditions>
         </modifier>
       </modifiers>
       <constraints>
@@ -5106,7 +5101,7 @@ No model may be chosen more than once.</characteristic>
               <characteristics>
                 <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+0</characteristic>
                 <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Sharp (1)</characteristic>
-                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d"></characteristic>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d"/>
                 <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289">When this model inflicts Wounds through a successful Melee Attack, it gains a number of Ki Tokens equal to the Wounded model’s Ki Statistic.</characteristic>
               </characteristics>
             </profile>
@@ -5328,6 +5323,18 @@ No model may be chosen more than once.</characteristic>
     <entryLink id="c14c-1924-6d80-092a" name="Batu" hidden="true" collective="false" import="true" targetId="5e97-28ce-9c1b-6b8b" type="selectionEntry"/>
     <entryLink id="01e4-6918-3638-6749" name="Khendish" hidden="true" collective="false" import="true" targetId="dc54-b54e-1428-7c3e" type="selectionEntry"/>
     <entryLink id="0bad-9998-2f9b-a504" name="Tru&apos;pah" hidden="true" collective="false" import="true" targetId="82bb-a55d-5366-baf2" type="selectionEntry"/>
+    <entryLink id="7144-cf2f-5cbf-3f0c" name="Hozumi Maha" hidden="false" collective="false" import="true" targetId="09da-574e-599a-3226" type="selectionEntry"/>
+    <entryLink id="5ca5-ade3-8c91-a392" name="Ryokeen" hidden="false" collective="false" import="true" targetId="f97b-84fa-27d7-b73b" type="selectionEntry"/>
+    <entryLink id="5195-72c8-00a4-106a" name="The Hozumi Family" hidden="false" collective="false" import="true" targetId="4750-f234-49e4-79c1" type="selectionEntry"/>
+    <entryLink id="4fb6-df51-c9cc-f74c" name="The Kiyozumi Family" hidden="false" collective="false" import="true" targetId="0e4a-a40c-14eb-2f4f" type="selectionEntry"/>
+    <entryLink id="0904-9a39-6f7d-ed55" name="Hozumi Daihanji" hidden="true" collective="false" import="true" targetId="2195-17c7-b68c-0111" type="selectionEntry"/>
+    <entryLink id="eea8-19e3-978a-fc9d" name="Hozumi Koga" hidden="true" collective="false" import="true" targetId="2b64-ba79-8ea1-4098" type="selectionEntry"/>
+    <entryLink id="28bf-50e4-aa9e-b1fe" name="Taiyo" hidden="true" collective="false" import="true" targetId="90d7-5fe5-0a05-1bea" type="selectionEntry"/>
+    <entryLink id="a3ca-c3b5-3e10-0529" name="Kenmeina" hidden="true" collective="false" import="true" targetId="b896-0ea7-fb05-1ecc" type="selectionEntry"/>
+    <entryLink id="98db-8a83-b27c-4fec" name="Kiyozumi Haiboku" hidden="true" collective="false" import="true" targetId="91b9-5dcc-298c-0bfb" type="selectionEntry"/>
+    <entryLink id="694a-e0e5-c332-3722" name="Kiyozumi Hinadori" hidden="true" collective="false" import="true" targetId="07f2-8804-f10d-7bbb" type="selectionEntry"/>
+    <entryLink id="d98c-9a5e-93c5-4af9" name="Kiyozumi Kicho" hidden="true" collective="false" import="true" targetId="7b8f-61a1-2d88-60f2" type="selectionEntry"/>
+    <entryLink id="cbba-721f-231b-62b4" name="Kiyozumi Sadaka" hidden="true" collective="false" import="true" targetId="7728-72dd-3889-91b2" type="selectionEntry"/>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="9449-ed36-7d0f-1eeb" name="Large Rat Swarm" hidden="false" collective="false" import="true" type="model">
@@ -5726,6 +5733,13 @@ Restriction [Warbands with the &apos;We Three meet Again&apos; Theme card]</char
               </costs>
             </selectionEntry>
             <selectionEntry id="4b9d-6148-ff67-b5d6" name="Kimiko&apos;s Whistle" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="decrement" field="a111-8656-5c05-7415" value="1.0">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="90d7-5fe5-0a05-1bea" type="atLeast"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="df44-a0fb-e1fe-649e" type="max"/>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="987f-a20f-bb7b-ec00" type="max"/>
@@ -5746,6 +5760,13 @@ This may not cause the model to exceed its maximum Ki Statistic.</characteristic
               </costs>
             </selectionEntry>
             <selectionEntry id="155a-4505-5a91-9242" name="Violence Fetish" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="decrement" field="a111-8656-5c05-7415" value="1.0">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="90d7-5fe5-0a05-1bea" type="atLeast"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1f2e-ab0e-7540-ccb8" type="max"/>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="723c-926d-f75c-4b6b" type="max"/>
@@ -5767,6 +5788,13 @@ Restriction [Burakumin]</characteristic>
               </costs>
             </selectionEntry>
             <selectionEntry id="69cc-b8db-2ba5-3fdd" name="Sacrificial Knife" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="decrement" field="a111-8656-5c05-7415" value="1.0">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="90d7-5fe5-0a05-1bea" type="atLeast"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f6d2-ec0d-c548-2ce0" type="max"/>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7602-b742-fda1-42f2" type="max"/>
@@ -5800,12 +5828,15 @@ Restriction [Burakumin]</characteristic>
             <entryLink id="19d6-71d4-c963-9194" name="!DRAFT!CYCLE Wolf Heart Talisman" hidden="false" collective="false" import="true" targetId="a56e-8e8e-97b4-ec73" type="selectionEntry"/>
             <entryLink id="4a1f-4c0f-7965-3d38" name="Hand Cannon" hidden="false" collective="false" import="true" targetId="3009-1a3c-223d-cae2" type="selectionEntry"/>
             <entryLink id="09cf-d83f-6e93-3c66" name="The Eagle Banner" hidden="false" collective="false" import="true" targetId="010e-1205-db10-6a2d" type="selectionEntry"/>
+            <entryLink id="7f0d-bb30-0a67-01ad" name="The Hozumi Katana" hidden="false" collective="false" import="true" targetId="5cac-d0cc-1c51-a147" type="selectionEntry"/>
+            <entryLink id="5ee9-a0e0-e211-b98f" name="The Kiyozumi Katana" hidden="false" collective="false" import="true" targetId="f882-5ccf-0724-2290" type="selectionEntry"/>
+            <entryLink id="af85-fafa-da9b-79d0" name="The Sunrise Katana" hidden="false" collective="false" import="true" targetId="a54a-aa90-53f2-d9df" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
         <entryLink id="dc2e-bc65-4462-0c1e" name="Paragon" hidden="false" collective="false" import="true" targetId="9059-1680-57c0-9f71" type="selectionEntry"/>
-        <entryLink id="7ba1-6d2e-5bbe-e3d1" name="!DRAFT Finesse" hidden="false" collective="false" import="true" targetId="e916-ca9f-75ef-1c24" type="selectionEntry">
+        <entryLink id="7ba1-6d2e-5bbe-e3d1" name="Finesse" hidden="false" collective="false" import="true" targetId="e916-ca9f-75ef-1c24" type="selectionEntry">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditions>
@@ -5815,8 +5846,17 @@ Restriction [Burakumin]</characteristic>
           </modifiers>
         </entryLink>
         <entryLink id="5d27-d87b-2f84-ec2d" name="!DRAFT!CYCLE Pacifism" hidden="false" collective="false" import="true" targetId="6bf3-9dca-b4c5-6a3e" type="selectionEntry"/>
-        <entryLink id="2de9-c1c9-d3c8-57dd" name="!DRAFT!CYCLE Prayer Scroll" hidden="false" collective="false" import="true" targetId="bb42-702b-ab84-a9f9" type="selectionEntry"/>
+        <entryLink id="2de9-c1c9-d3c8-57dd" name="Prayer Scroll" hidden="false" collective="false" import="true" targetId="bb42-702b-ab84-a9f9" type="selectionEntry"/>
         <entryLink id="caac-6a2f-35e9-2254" name="Fujin&apos;s Charm" hidden="false" collective="false" import="true" targetId="5110-9b07-a9dd-d71e" type="selectionEntry"/>
+        <entryLink id="b089-de63-8c2b-13dd" name="Loyalty" hidden="false" collective="false" import="true" targetId="d9ab-b401-633c-78f4" type="selectionEntry"/>
+        <entryLink id="02f1-7fdf-5093-46d3" name="Plans Made, Bargains Kept" hidden="false" collective="false" import="true" targetId="472f-7192-8d65-aea1" type="selectionEntry"/>
+        <entryLink id="231d-97bb-72e2-a2ca" name="Accepted into the Shadow" hidden="false" collective="false" import="true" targetId="5a4f-6e3e-0e2b-3e81" type="selectionEntry"/>
+        <entryLink id="3055-52d2-6ddf-a8d9" name="Broken Spirit" hidden="false" collective="false" import="true" targetId="66cd-f1c0-8da8-e6d9" type="selectionEntry"/>
+        <entryLink id="4679-b1b4-e02b-1438" name="Dark Nurture" hidden="false" collective="false" import="true" targetId="9077-4def-6328-8ac2" type="selectionEntry"/>
+        <entryLink id="56b1-4a43-d93f-7dff" name="Inducted into the Miko" hidden="false" collective="false" import="true" targetId="0ceb-eea9-97e0-8726" type="selectionEntry"/>
+        <entryLink id="5b00-bae1-24ea-dcd0" name="Iron Will" hidden="false" collective="false" import="true" targetId="2944-c703-8038-d0f4" type="selectionEntry"/>
+        <entryLink id="f638-bf05-8f0d-dbe2" name="Man of the People" hidden="false" collective="false" import="true" targetId="f306-2092-6d16-77ea" type="selectionEntry"/>
+        <entryLink id="b1be-9697-dd4a-1119" name="True Love" hidden="false" collective="false" import="true" targetId="8690-885b-08be-8353" type="selectionEntry"/>
       </entryLinks>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
@@ -6491,7 +6531,7 @@ When this model is removed from play for any reason, first place any affected mo
             <characteristic name="Cost" typeId="a126-54d9-0a27-f4b6">3</characteristic>
             <characteristic name="Timing" typeId="f8a8-8a3e-ef58-4c61">Simple</characteristic>
             <characteristic name="Subject" typeId="4ac8-2bb1-0c84-f088">Target 12&quot; Opposed Ki Test</characteristic>
-            <characteristic name="Limitation" typeId="6fc9-5d13-2687-b2a5"></characteristic>
+            <characteristic name="Limitation" typeId="6fc9-5d13-2687-b2a5"/>
             <characteristic name="Description" typeId="f804-b969-00da-2123">Target model gains a Control Marker and, while it has any Control Markers from this Ki Feat, the Target gains the following Weapon:
 Gluttonous Maw: Melee Strength (-1)
 This model must always choose to use this weapon in a Melee Exchange.

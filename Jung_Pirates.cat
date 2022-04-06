@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="d615-aef7-31d5-367d" name="Jung Pirates" revision="8" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="3" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="d615-aef7-31d5-367d" name="Jung Pirates" revision="9" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="4" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="258a-e1a8-8db1-9635" name="Ki&lt;2" hidden="true"/>
     <categoryEntry id="f6c9-50fa-a9d3-e9f3" name="Ranged Weapon" hidden="true"/>
@@ -2855,7 +2855,7 @@ This model may not be recruited into a Warband with the Docks of Ryu theme.</cha
             <profile id="b44d-4a2b-ff03-b2a4" name="Blades" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
               <characteristics>
                 <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+0</characteristic>
-                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e"></characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e"/>
                 <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Combo Attack (0), Push Attack (0)</characteristic>
                 <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
               </characteristics>
@@ -3133,6 +3133,18 @@ This model may not be recruited into a Warband with the Docks of Ryu theme.</cha
     <entryLink id="1697-746c-ced6-d8d8" name="Tru&apos;pah" hidden="true" collective="false" import="true" targetId="82bb-a55d-5366-baf2" type="selectionEntry"/>
     <entryLink id="9daf-b3d6-9b17-5269" name="Batu" hidden="true" collective="false" import="true" targetId="5e97-28ce-9c1b-6b8b" type="selectionEntry"/>
     <entryLink id="7276-8b81-ad5e-a2dc" name="Shosu" hidden="true" collective="false" import="true" targetId="39f7-4bb9-edb9-bde8" type="selectionEntry"/>
+    <entryLink id="9a9b-36de-a75b-fdcf" name="Kenmeina" hidden="false" collective="false" import="true" targetId="b896-0ea7-fb05-1ecc" type="selectionEntry"/>
+    <entryLink id="5efa-60f7-57c1-a9cd" name="Kiyozumi Haiboku" hidden="true" collective="false" import="true" targetId="91b9-5dcc-298c-0bfb" type="selectionEntry"/>
+    <entryLink id="46c6-4eb4-23e0-bd2d" name="Kiyozumi Hinadori" hidden="true" collective="false" import="true" targetId="07f2-8804-f10d-7bbb" type="selectionEntry"/>
+    <entryLink id="5adb-7b5e-7d11-dcb9" name="Kiyozumi Kicho" hidden="true" collective="false" import="true" targetId="7b8f-61a1-2d88-60f2" type="selectionEntry"/>
+    <entryLink id="8996-359b-7656-18de" name="Kiyozumi Sadaka" hidden="true" collective="false" import="true" targetId="7728-72dd-3889-91b2" type="selectionEntry"/>
+    <entryLink id="e117-c0af-1564-2cbc" name="Ryokeen" hidden="true" collective="false" import="true" targetId="f97b-84fa-27d7-b73b" type="selectionEntry"/>
+    <entryLink id="fba7-bfc4-0e0b-188a" name="Taiyo" hidden="true" collective="false" import="true" targetId="90d7-5fe5-0a05-1bea" type="selectionEntry"/>
+    <entryLink id="7882-496b-16e6-e6bd" name="Hozumi Daihanji" hidden="true" collective="false" import="true" targetId="2195-17c7-b68c-0111" type="selectionEntry"/>
+    <entryLink id="057f-376e-24b3-6e8f" name="Hozumi Koga" hidden="true" collective="false" import="true" targetId="2b64-ba79-8ea1-4098" type="selectionEntry"/>
+    <entryLink id="800e-c142-ece1-9de4" name="Hozumi Maha" hidden="true" collective="false" import="true" targetId="09da-574e-599a-3226" type="selectionEntry"/>
+    <entryLink id="9975-82c1-481f-0bbf" name="The Hozumi Family" hidden="false" collective="false" import="true" targetId="4750-f234-49e4-79c1" type="selectionEntry"/>
+    <entryLink id="ff9e-ba87-b6da-1097" name="The Kiyozumi Family" hidden="false" collective="false" import="true" targetId="0e4a-a40c-14eb-2f4f" type="selectionEntry"/>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="a382-7e2d-9df9-d700" name="Korusea" hidden="false" collective="false" import="true" type="model">
@@ -3409,6 +3421,11 @@ Note: there is currently no way to automatically check for this.</characteristic
                     </conditionGroup>
                   </conditionGroups>
                 </modifier>
+                <modifier type="decrement" field="a111-8656-5c05-7415" value="1.0">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="90d7-5fe5-0a05-1bea" type="atLeast"/>
+                  </conditions>
+                </modifier>
               </modifiers>
               <constraints>
                 <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4a94-bd4e-b217-3f95" type="max"/>
@@ -3438,6 +3455,13 @@ Note: there is currently no way to automatically check for this.</characteristic
               </costs>
             </selectionEntry>
             <selectionEntry id="7a54-2562-12f5-a16f" name="Hook Hand" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="decrement" field="a111-8656-5c05-7415" value="1.0">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="90d7-5fe5-0a05-1bea" type="atLeast"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4562-b40b-a594-953d" type="max"/>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="90e5-0ba1-5baf-0445" type="max"/>
@@ -3589,6 +3613,9 @@ Note: there is currently no way to automatically check for this.</characteristic
             <entryLink id="1c27-8e8e-316e-8cf7" name="!DRAFT!CYCLE Wolf Heart Talisman" hidden="false" collective="false" import="true" targetId="a56e-8e8e-97b4-ec73" type="selectionEntry"/>
             <entryLink id="f338-3cff-edd9-b007" name="The Eagle Banner" hidden="false" collective="false" import="true" targetId="010e-1205-db10-6a2d" type="selectionEntry"/>
             <entryLink id="b2a4-e8f1-5bcf-ee37" name="Hand Cannon" hidden="false" collective="false" import="true" targetId="3009-1a3c-223d-cae2" type="selectionEntry"/>
+            <entryLink id="664c-dd0b-d133-a475" name="The Hozumi Katana" hidden="false" collective="false" import="true" targetId="5cac-d0cc-1c51-a147" type="selectionEntry"/>
+            <entryLink id="8929-5449-1179-64ac" name="The Kiyozumi Katana" hidden="false" collective="false" import="true" targetId="f882-5ccf-0724-2290" type="selectionEntry"/>
+            <entryLink id="667d-1af0-67ff-9ee6" name="The Sunrise Katana" hidden="false" collective="false" import="true" targetId="a54a-aa90-53f2-d9df" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
@@ -3598,6 +3625,14 @@ Note: there is currently no way to automatically check for this.</characteristic
         <entryLink id="43f5-3566-d75b-a3f5" name="!DRAFT!CYCLE Pacifism" hidden="false" collective="false" import="true" targetId="6bf3-9dca-b4c5-6a3e" type="selectionEntry"/>
         <entryLink id="5130-ced6-0f03-81a6" name="!DRAFT!CYCLE Prayer Scroll" hidden="false" collective="false" import="true" targetId="bb42-702b-ab84-a9f9" type="selectionEntry"/>
         <entryLink id="4a2a-ec46-ec9b-2999" name="Fujin&apos;s Charm" hidden="false" collective="false" import="true" targetId="5110-9b07-a9dd-d71e" type="selectionEntry"/>
+        <entryLink id="0f04-d89b-d156-4414" name="Accepted into the Shadow" hidden="false" collective="false" import="true" targetId="5a4f-6e3e-0e2b-3e81" type="selectionEntry"/>
+        <entryLink id="f4dd-0a00-4e4f-79ff" name="Broken Spirit" hidden="false" collective="false" import="true" targetId="66cd-f1c0-8da8-e6d9" type="selectionEntry"/>
+        <entryLink id="99e9-15ad-679c-ce78" name="Inducted into the Miko" hidden="false" collective="false" import="true" targetId="0ceb-eea9-97e0-8726" type="selectionEntry"/>
+        <entryLink id="8d34-4408-8fb7-5b01" name="Iron Will" hidden="false" collective="false" import="true" targetId="2944-c703-8038-d0f4" type="selectionEntry"/>
+        <entryLink id="068f-f4e6-4bb7-c462" name="Loyalty" hidden="false" collective="false" import="true" targetId="d9ab-b401-633c-78f4" type="selectionEntry"/>
+        <entryLink id="b239-ca02-93e5-587c" name="Man of the People" hidden="false" collective="false" import="true" targetId="f306-2092-6d16-77ea" type="selectionEntry"/>
+        <entryLink id="a2e0-d147-77e1-a419" name="Plans Made, Bargains Kept" hidden="false" collective="false" import="true" targetId="472f-7192-8d65-aea1" type="selectionEntry"/>
+        <entryLink id="5074-c38a-832e-ec3a" name="True Love" hidden="false" collective="false" import="true" targetId="8690-885b-08be-8353" type="selectionEntry"/>
       </entryLinks>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="d4b0-a54e-a48b-88a5" name="The Descension" revision="9" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="3" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="d4b0-a54e-a48b-88a5" name="The Descension" revision="10" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="4" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="093f-43eb-fd72-ead0" name="Move Boost" hidden="false"/>
   </categoryEntries>
@@ -3339,6 +3339,18 @@ Until the End Phase, Enemy models gain Weak when making Size Tests.</characteris
         </modifier>
       </modifiers>
     </entryLink>
+    <entryLink id="db38-f9da-9d80-d7e8" name="Hozumi Daihanji" hidden="true" collective="false" import="true" targetId="2195-17c7-b68c-0111" type="selectionEntry"/>
+    <entryLink id="7b50-d9c2-913f-1ea3" name="Hozumi Koga" hidden="false" collective="false" import="true" targetId="2b64-ba79-8ea1-4098" type="selectionEntry"/>
+    <entryLink id="7d9b-0766-158d-8f7d" name="Hozumi Maha" hidden="true" collective="false" import="true" targetId="09da-574e-599a-3226" type="selectionEntry"/>
+    <entryLink id="e0fe-6e54-9158-6c64" name="Kenmeina" hidden="true" collective="false" import="true" targetId="b896-0ea7-fb05-1ecc" type="selectionEntry"/>
+    <entryLink id="9128-9f30-39fb-91e4" name="Kiyozumi Haiboku" hidden="true" collective="false" import="true" targetId="91b9-5dcc-298c-0bfb" type="selectionEntry"/>
+    <entryLink id="0163-904a-0e11-838b" name="Kiyozumi Hinadori" hidden="true" collective="false" import="true" targetId="07f2-8804-f10d-7bbb" type="selectionEntry"/>
+    <entryLink id="e520-1a09-4c23-8646" name="Kiyozumi Kicho" hidden="false" collective="false" import="true" targetId="7b8f-61a1-2d88-60f2" type="selectionEntry"/>
+    <entryLink id="1263-fddf-3a8c-a2b0" name="Kiyozumi Sadaka" hidden="true" collective="false" import="true" targetId="7728-72dd-3889-91b2" type="selectionEntry"/>
+    <entryLink id="b171-16a2-fbe0-2a62" name="Ryokeen" hidden="false" collective="false" import="true" targetId="f97b-84fa-27d7-b73b" type="selectionEntry"/>
+    <entryLink id="5efc-b365-0534-9a96" name="Taiyo" hidden="true" collective="false" import="true" targetId="90d7-5fe5-0a05-1bea" type="selectionEntry"/>
+    <entryLink id="a641-168b-55f6-1a2c" name="The Hozumi Family" hidden="false" collective="false" import="true" targetId="4750-f234-49e4-79c1" type="selectionEntry"/>
+    <entryLink id="ec16-bbe9-0bcb-357b" name="The Kiyozumi Family" hidden="false" collective="false" import="true" targetId="0e4a-a40c-14eb-2f4f" type="selectionEntry"/>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="e767-2b69-cf2f-8713" name="Hilltribe Tracker" hidden="false" collective="false" import="true" type="model">
@@ -3575,6 +3587,11 @@ Requirement |Tribesman]</characteristic>
                     <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="607a-a497-e3f1-edfe" type="instanceOf"/>
                   </conditions>
                 </modifier>
+                <modifier type="decrement" field="a111-8656-5c05-7415" value="1.0">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="90d7-5fe5-0a05-1bea" type="atLeast"/>
+                  </conditions>
+                </modifier>
               </modifiers>
               <constraints>
                 <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="9013-5c99-ad66-9e2c" type="max"/>
@@ -3635,6 +3652,11 @@ If you do, discard this card.</characteristic>
                     </conditionGroup>
                   </conditionGroups>
                 </modifier>
+                <modifier type="decrement" field="a111-8656-5c05-7415" value="1.0">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="90d7-5fe5-0a05-1bea" type="atLeast"/>
+                  </conditions>
+                </modifier>
               </modifiers>
               <constraints>
                 <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="f358-69af-26da-b4cb" type="max"/>
@@ -3680,6 +3702,9 @@ Exclusion [Warbands that have recruited a Kakyu model]</characteristic>
             <entryLink id="f07f-dbdc-1d65-6bf0" name="!DRAFT!CYCLE Wolf Heart Talisman" hidden="false" collective="false" import="true" targetId="a56e-8e8e-97b4-ec73" type="selectionEntry"/>
             <entryLink id="31b8-a507-1fd6-9128" name="The Eagle Banner" hidden="false" collective="false" import="true" targetId="010e-1205-db10-6a2d" type="selectionEntry"/>
             <entryLink id="31fd-f0ec-454f-9730" name="Hand Cannon" hidden="false" collective="false" import="true" targetId="3009-1a3c-223d-cae2" type="selectionEntry"/>
+            <entryLink id="5989-020d-56eb-3630" name="The Hozumi Katana" hidden="false" collective="false" import="true" targetId="5cac-d0cc-1c51-a147" type="selectionEntry"/>
+            <entryLink id="58d1-5e36-1b0b-d0a2" name="The Kiyozumi Katana" hidden="false" collective="false" import="true" targetId="f882-5ccf-0724-2290" type="selectionEntry"/>
+            <entryLink id="0d75-53e3-334d-dec1" name="The Sunrise Katana" hidden="false" collective="false" import="true" targetId="a54a-aa90-53f2-d9df" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
@@ -3689,6 +3714,15 @@ Exclusion [Warbands that have recruited a Kakyu model]</characteristic>
         <entryLink id="3233-5b7a-def2-1e03" name="Pacifism" hidden="false" collective="false" import="true" targetId="6bf3-9dca-b4c5-6a3e" type="selectionEntry"/>
         <entryLink id="af4b-c35c-c040-a44e" name="!DRAFT!CYCLE Prayer Scroll" hidden="false" collective="false" import="true" targetId="bb42-702b-ab84-a9f9" type="selectionEntry"/>
         <entryLink id="e7db-a8b6-610e-e044" name="Fujin&apos;s Charm" hidden="false" collective="false" import="true" targetId="5110-9b07-a9dd-d71e" type="selectionEntry"/>
+        <entryLink id="9adf-cdf1-663f-74ae" name="Accepted into the Shadow" hidden="false" collective="false" import="true" targetId="5a4f-6e3e-0e2b-3e81" type="selectionEntry"/>
+        <entryLink id="d056-9b78-3967-981e" name="Bright Nurture" hidden="false" collective="false" import="true" targetId="7345-3239-1f28-59f1" type="selectionEntry"/>
+        <entryLink id="bba8-bb9b-d1af-6742" name="Broken Spirit" hidden="false" collective="false" import="true" targetId="66cd-f1c0-8da8-e6d9" type="selectionEntry"/>
+        <entryLink id="85b5-003c-b09e-5479" name="Inducted into the Miko" hidden="false" collective="false" import="true" targetId="0ceb-eea9-97e0-8726" type="selectionEntry"/>
+        <entryLink id="7174-86c0-0486-bc0b" name="Iron Will" hidden="false" collective="false" import="true" targetId="2944-c703-8038-d0f4" type="selectionEntry"/>
+        <entryLink id="d1fe-3eca-8b6e-6cf0" name="Loyalty" hidden="false" collective="false" import="true" targetId="d9ab-b401-633c-78f4" type="selectionEntry"/>
+        <entryLink id="e1b1-b270-3ea4-c258" name="Man of the People" hidden="false" collective="false" import="true" targetId="f306-2092-6d16-77ea" type="selectionEntry"/>
+        <entryLink id="0a3e-5b18-1f70-3c8b" name="Plans Made, Bargains Kept" hidden="false" collective="false" import="true" targetId="472f-7192-8d65-aea1" type="selectionEntry"/>
+        <entryLink id="fcdf-2f13-50a7-3430" name="True Love" hidden="false" collective="false" import="true" targetId="8690-885b-08be-8353" type="selectionEntry"/>
       </entryLinks>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>

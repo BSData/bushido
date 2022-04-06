@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="b4d7-0e2a-728f-20cf" name="Kage Kaze Zoku" revision="5" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="3" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="b4d7-0e2a-728f-20cf" name="Kage Kaze Zoku" revision="6" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="4" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="33d5-3364-f1d4-a94c" name="Lockdown" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -1617,6 +1617,9 @@ Choose 1 Enemy model using the Flank trait. Its owner must reveal which table ed
       </costs>
     </selectionEntry>
     <selectionEntry id="49e4-6f46-1251-36b4" name="Axiam" hidden="false" collective="false" import="true" type="model">
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9bd3-701a-1a4a-5753" type="max"/>
+      </constraints>
       <profiles>
         <profile id="4881-6d63-3f5d-f843" name="Axiam" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character">
           <characteristics>
@@ -1927,6 +1930,18 @@ Once per game, in the Starting Phase, you may add a permitted Faction Enhancemen
     <entryLink id="5458-8de7-dcda-5e6d" name="Eldest Brother" hidden="true" collective="false" import="true" targetId="294d-a0fa-f437-2fca" type="selectionEntry"/>
     <entryLink id="d3e9-99a5-bb18-23fb" name="Tru&apos;pah" hidden="true" collective="false" import="true" targetId="82bb-a55d-5366-baf2" type="selectionEntry"/>
     <entryLink id="ca04-d36c-aeb0-c34b" name="Hiroto, Drunken Master" hidden="true" collective="false" import="true" targetId="f616-46d8-5907-fafd" type="selectionEntry"/>
+    <entryLink id="44a8-7058-7667-3435" name="Hozumi Daihanji" hidden="true" collective="false" import="true" targetId="2195-17c7-b68c-0111" type="selectionEntry"/>
+    <entryLink id="0e8b-7a78-fef6-945e" name="Hozumi Koga" hidden="true" collective="false" import="true" targetId="2b64-ba79-8ea1-4098" type="selectionEntry"/>
+    <entryLink id="4b18-439f-206f-1996" name="Hozumi Maha" hidden="true" collective="false" import="true" targetId="09da-574e-599a-3226" type="selectionEntry"/>
+    <entryLink id="cd23-7476-5c1d-3f65" name="Kenmeina" hidden="true" collective="false" import="true" targetId="b896-0ea7-fb05-1ecc" type="selectionEntry"/>
+    <entryLink id="bc97-c8d6-9cdf-1869" name="Kiyozumi Haiboku" hidden="true" collective="false" import="true" targetId="91b9-5dcc-298c-0bfb" type="selectionEntry"/>
+    <entryLink id="2a9f-750e-f2c0-446b" name="Kiyozumi Hinadori" hidden="true" collective="false" import="true" targetId="07f2-8804-f10d-7bbb" type="selectionEntry"/>
+    <entryLink id="3b2a-4c0a-9862-0219" name="Kiyozumi Kicho" hidden="false" collective="false" import="true" targetId="7b8f-61a1-2d88-60f2" type="selectionEntry"/>
+    <entryLink id="42d9-e9d5-eea7-e29a" name="Kiyozumi Sadaka" hidden="true" collective="false" import="true" targetId="7728-72dd-3889-91b2" type="selectionEntry"/>
+    <entryLink id="40f9-65bb-791b-b159" name="Ryokeen" hidden="true" collective="false" import="true" targetId="f97b-84fa-27d7-b73b" type="selectionEntry"/>
+    <entryLink id="4388-e64b-f3cc-6a83" name="Taiyo" hidden="true" collective="false" import="true" targetId="90d7-5fe5-0a05-1bea" type="selectionEntry"/>
+    <entryLink id="0029-46a1-7e4d-9333" name="The Kiyozumi Family" hidden="false" collective="false" import="true" targetId="0e4a-a40c-14eb-2f4f" type="selectionEntry"/>
+    <entryLink id="231c-ae9b-e1a1-ff30" name="The Hozumi Family" hidden="false" collective="false" import="true" targetId="4750-f234-49e4-79c1" type="selectionEntry"/>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="08df-a834-9433-f20a" name="Karapan" hidden="false" collective="false" import="true" type="model">
@@ -2017,6 +2032,13 @@ Once per game, in the Starting Phase, you may add a permitted Faction Enhancemen
           </constraints>
           <selectionEntries>
             <selectionEntry id="986d-9fe2-b4a7-e5f5" name="Signaling Flare" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="decrement" field="a111-8656-5c05-7415" value="1.0">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="90d7-5fe5-0a05-1bea" type="atLeast"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="3055-aca4-b338-f406" type="max"/>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="345f-c3d8-8ef5-fb6a" type="max"/>
@@ -2155,6 +2177,9 @@ On a successful Attack with this weapon, instead of a Damage Roll, centre a 1&qu
             <entryLink id="4714-641d-dc98-5df2" name="!DRAFT!CYCLE Wolf Heart Talisman" hidden="false" collective="false" import="true" targetId="a56e-8e8e-97b4-ec73" type="selectionEntry"/>
             <entryLink id="3125-d7d4-3407-937c" name="Hand Cannon" hidden="false" collective="false" import="true" targetId="3009-1a3c-223d-cae2" type="selectionEntry"/>
             <entryLink id="918f-7b28-8b60-931f" name="The Eagle Banner" hidden="false" collective="false" import="true" targetId="010e-1205-db10-6a2d" type="selectionEntry"/>
+            <entryLink id="c5d1-d622-ee71-ef1f" name="The Sunrise Katana" hidden="false" collective="false" import="true" targetId="a54a-aa90-53f2-d9df" type="selectionEntry"/>
+            <entryLink id="b4be-6d21-dda1-8f2e" name="The Kiyozumi Katana" hidden="false" collective="false" import="true" targetId="f882-5ccf-0724-2290" type="selectionEntry"/>
+            <entryLink id="f8e4-d8b2-07f1-6c23" name="The Hozumi Katana" hidden="false" collective="false" import="true" targetId="5cac-d0cc-1c51-a147" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
@@ -2164,6 +2189,14 @@ On a successful Attack with this weapon, instead of a Damage Roll, centre a 1&qu
         <entryLink id="5d61-6269-9d4d-e2fb" name="!DRAFT!CYCLE Prayer Scroll" hidden="false" collective="false" import="true" targetId="bb42-702b-ab84-a9f9" type="selectionEntry"/>
         <entryLink id="a64e-386c-7381-c3e2" name="!DRAFT!CYCLE Pacifism" hidden="false" collective="false" import="true" targetId="6bf3-9dca-b4c5-6a3e" type="selectionEntry"/>
         <entryLink id="9b37-75a4-7192-7428" name="Fujin&apos;s Charm" hidden="false" collective="false" import="true" targetId="5110-9b07-a9dd-d71e" type="selectionEntry"/>
+        <entryLink id="28eb-d787-e006-46a8" name="Accepted into the Shadow" hidden="false" collective="false" import="true" targetId="5a4f-6e3e-0e2b-3e81" type="selectionEntry"/>
+        <entryLink id="7848-22b6-a7f7-faab" name="Broken Spirit" hidden="false" collective="false" import="true" targetId="66cd-f1c0-8da8-e6d9" type="selectionEntry"/>
+        <entryLink id="0ded-e084-7e7b-1457" name="Inducted into the Miko" hidden="false" collective="false" import="true" targetId="0ceb-eea9-97e0-8726" type="selectionEntry"/>
+        <entryLink id="9d95-a3e1-b359-a7e9" name="Iron Will" hidden="false" collective="false" import="true" targetId="2944-c703-8038-d0f4" type="selectionEntry"/>
+        <entryLink id="a4c5-5d20-e355-e117" name="Loyalty" hidden="false" collective="false" import="true" targetId="d9ab-b401-633c-78f4" type="selectionEntry"/>
+        <entryLink id="0626-8f09-d554-1b31" name="Man of the People" hidden="false" collective="false" import="true" targetId="f306-2092-6d16-77ea" type="selectionEntry"/>
+        <entryLink id="0ca4-5d80-1a3e-bf39" name="Plans Made, Bargains Kept" hidden="false" collective="false" import="true" targetId="472f-7192-8d65-aea1" type="selectionEntry"/>
+        <entryLink id="9651-c604-62fb-684e" name="True Love" hidden="false" collective="false" import="true" targetId="8690-885b-08be-8353" type="selectionEntry"/>
       </entryLinks>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="4213-717c-2228-e731" name="Temple of Ro-Kan" revision="9" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="3" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="4213-717c-2228-e731" name="Temple of Ro-Kan" revision="10" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="4" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="5048-3a52-5689-6d0b" name="Spiritual Harmony" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -2851,6 +2851,11 @@ During Ki Generation 1 Friendly Villager within 6&quot; may gain a Ki Token.</ch
             <condition field="selections" scope="138c-7646-d2d9-459e" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f38d-d916-8836-28cd" type="atLeast"/>
           </conditions>
         </modifier>
+        <modifier type="add" field="category" value="7ad2-8152-55dc-b4c9">
+          <conditions>
+            <condition field="selections" scope="138c-7646-d2d9-459e" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3473-2978-59d5-a5c2" type="atLeast"/>
+          </conditions>
+        </modifier>
         <modifier type="add" field="category" value="3184-d389-7218-d304">
           <conditionGroups>
             <conditionGroup type="or">
@@ -2860,11 +2865,6 @@ During Ki Generation 1 Friendly Villager within 6&quot; may gain a Ki Token.</ch
               </conditions>
             </conditionGroup>
           </conditionGroups>
-        </modifier>
-        <modifier type="add" field="category" value="7ad2-8152-55dc-b4c9">
-          <conditions>
-            <condition field="selections" scope="138c-7646-d2d9-459e" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3473-2978-59d5-a5c2" type="atLeast"/>
-          </conditions>
         </modifier>
       </modifiers>
       <constraints>
@@ -4506,6 +4506,31 @@ This model may be recruited into any Warband that includes Taiki.</characteristi
         </modifier>
       </modifiers>
     </entryLink>
+    <entryLink id="8a28-d558-ee86-1822" name="Hozumi Daihanji" hidden="true" collective="false" import="true" targetId="2195-17c7-b68c-0111" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f306-2092-6d16-77ea" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1a12-f47f-8f23-0777" type="atLeast"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink id="0d54-3648-cf40-d184" name="Hozumi Koga" hidden="false" collective="false" import="true" targetId="2b64-ba79-8ea1-4098" type="selectionEntry"/>
+    <entryLink id="4981-ab22-197a-a12d" name="Hozumi Maha" hidden="true" collective="false" import="true" targetId="09da-574e-599a-3226" type="selectionEntry"/>
+    <entryLink id="95f3-445c-ef6a-d8ad" name="Kenmeina" hidden="true" collective="false" import="true" targetId="b896-0ea7-fb05-1ecc" type="selectionEntry"/>
+    <entryLink id="df5c-177b-1bb2-be7f" name="Kiyozumi Haiboku" hidden="true" collective="false" import="true" targetId="91b9-5dcc-298c-0bfb" type="selectionEntry"/>
+    <entryLink id="907d-a4f0-5fbe-42d3" name="Kiyozumi Hinadori" hidden="false" collective="false" import="true" targetId="07f2-8804-f10d-7bbb" type="selectionEntry"/>
+    <entryLink id="e167-a59c-729f-8833" name="Kiyozumi Kicho" hidden="true" collective="false" import="true" targetId="7b8f-61a1-2d88-60f2" type="selectionEntry"/>
+    <entryLink id="518e-d976-9ade-e521" name="Kiyozumi Sadaka" hidden="true" collective="false" import="true" targetId="7728-72dd-3889-91b2" type="selectionEntry"/>
+    <entryLink id="20cb-ac18-dacc-6135" name="Ryokeen" hidden="false" collective="false" import="true" targetId="f97b-84fa-27d7-b73b" type="selectionEntry"/>
+    <entryLink id="bd03-352a-f2ab-43cc" name="Taiyo" hidden="false" collective="false" import="true" targetId="90d7-5fe5-0a05-1bea" type="selectionEntry"/>
+    <entryLink id="07da-0f54-ea58-c348" name="The Hozumi Family" hidden="false" collective="false" import="true" targetId="4750-f234-49e4-79c1" type="selectionEntry"/>
+    <entryLink id="303b-1989-4db9-a5a0" name="The Kiyozumi Family" hidden="false" collective="false" import="true" targetId="0e4a-a40c-14eb-2f4f" type="selectionEntry"/>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="fdb3-04df-ec18-16cd" name="Fisherman" hidden="false" collective="false" import="true" type="model">
@@ -5261,6 +5286,9 @@ When this model performs a Focus Action it gains Channel (6/6&quot;) until the e
             <entryLink id="ea9c-3d80-2bab-e9e1" name="!DRAFT!CYCLE Wolf Heart Talisman" hidden="false" collective="false" import="true" targetId="a56e-8e8e-97b4-ec73" type="selectionEntry"/>
             <entryLink id="164e-a3f1-0d99-04f8" name="Hand Cannon" hidden="false" collective="false" import="true" targetId="3009-1a3c-223d-cae2" type="selectionEntry"/>
             <entryLink id="8f1e-1d22-8dea-472d" name="The Eagle Banner" hidden="false" collective="false" import="true" targetId="010e-1205-db10-6a2d" type="selectionEntry"/>
+            <entryLink id="f55e-7a88-cc4c-9d2e" name="The Hozumi Katana" hidden="false" collective="false" import="true" targetId="5cac-d0cc-1c51-a147" type="selectionEntry"/>
+            <entryLink id="e508-538e-c3d8-6079" name="The Kiyozumi Katana" hidden="false" collective="false" import="true" targetId="f882-5ccf-0724-2290" type="selectionEntry"/>
+            <entryLink id="391b-b1e4-e490-1e7a" name="The Sunrise Katana" hidden="false" collective="false" import="true" targetId="a54a-aa90-53f2-d9df" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
@@ -5282,6 +5310,15 @@ When this model performs a Focus Action it gains Channel (6/6&quot;) until the e
         <entryLink id="8a66-4673-7a60-46ca" name="!DRAFT!CYCLE Pacifism" hidden="false" collective="false" import="true" targetId="6bf3-9dca-b4c5-6a3e" type="selectionEntry"/>
         <entryLink id="1fdc-e1ef-3721-67d7" name="!DRAFT!CYCLE Prayer Scroll" hidden="false" collective="false" import="true" targetId="bb42-702b-ab84-a9f9" type="selectionEntry"/>
         <entryLink id="ac8f-c8de-9097-4e56" name="Fujin&apos;s Charm" hidden="false" collective="false" import="true" targetId="5110-9b07-a9dd-d71e" type="selectionEntry"/>
+        <entryLink id="f8e3-763d-59cc-c4af" name="Accepted into the Shadow" hidden="false" collective="false" import="true" targetId="5a4f-6e3e-0e2b-3e81" type="selectionEntry"/>
+        <entryLink id="0b0d-d69d-09f4-caa5" name="Bright Nurture" hidden="false" collective="false" import="true" targetId="7345-3239-1f28-59f1" type="selectionEntry"/>
+        <entryLink id="9690-e3ef-8229-424a" name="Broken Spirit" hidden="false" collective="false" import="true" targetId="66cd-f1c0-8da8-e6d9" type="selectionEntry"/>
+        <entryLink id="cae5-9106-7e7b-8d14" name="Inducted into the Miko" hidden="false" collective="false" import="true" targetId="0ceb-eea9-97e0-8726" type="selectionEntry"/>
+        <entryLink id="eb41-553f-303c-13e5" name="Iron Will" hidden="false" collective="false" import="true" targetId="2944-c703-8038-d0f4" type="selectionEntry"/>
+        <entryLink id="8104-9089-9e76-e7fa" name="Loyalty" hidden="false" collective="false" import="true" targetId="d9ab-b401-633c-78f4" type="selectionEntry"/>
+        <entryLink id="7112-d1a7-7a98-92dd" name="Man of the People" hidden="false" collective="false" import="true" targetId="f306-2092-6d16-77ea" type="selectionEntry"/>
+        <entryLink id="e05d-668f-b92e-5144" name="Plans Made, Bargains Kept" hidden="false" collective="false" import="true" targetId="472f-7192-8d65-aea1" type="selectionEntry"/>
+        <entryLink id="4be6-238a-642b-f4ae" name="True Love" hidden="false" collective="false" import="true" targetId="8690-885b-08be-8353" type="selectionEntry"/>
       </entryLinks>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>

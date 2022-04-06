@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="302b-66f1-a875-3b63" name="Ito Clan" revision="9" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="3" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="302b-66f1-a875-3b63" name="Ito Clan" revision="10" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="4" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="46b2-47c2-4c55-2e3a" name="Kinu" hidden="false"/>
     <categoryEntry id="273a-b61b-c7f8-76fd" name="Itsunagi" hidden="false"/>
@@ -3678,7 +3678,7 @@ If recruited into the same Warband as Itsunagi, this model gains Kurouma Koryu.<
         <categoryLink id="715e-3192-bdc4-d4ed" name="New CategoryLink" hidden="false" targetId="9fba-f50b-c8f7-8396" primary="true"/>
       </categoryLinks>
     </entryLink>
-    <entryLink id="723e-a768-3384-6a03" name="Theme - The Imperial March" hidden="false" collective="false" import="true" targetId="b94d-f7cb-a84c-4077" type="selectionEntry"/>
+    <entryLink id="723e-a768-3384-6a03" name="The Imperial March" hidden="false" collective="false" import="true" targetId="b94d-f7cb-a84c-4077" type="selectionEntry"/>
     <entryLink id="d51f-3009-0a5f-a435" name="Shosu" hidden="false" collective="false" import="true" targetId="39f7-4bb9-edb9-bde8" type="selectionEntry"/>
     <entryLink id="9563-f48f-2da2-4754" name="Karu" hidden="false" collective="false" import="true" targetId="556c-88bf-b5ef-d732" type="selectionEntry"/>
     <entryLink id="0d6e-f43f-afb7-bc51" name="Brotherhood" hidden="false" collective="false" import="true" targetId="9402-edcc-93a2-aef1" type="selectionEntry"/>
@@ -3688,6 +3688,18 @@ If recruited into the same Warband as Itsunagi, this model gains Kurouma Koryu.<
     <entryLink id="b9a5-88fb-37fe-5dad" name="Tru&apos;pah" hidden="true" collective="false" import="true" targetId="82bb-a55d-5366-baf2" type="selectionEntry"/>
     <entryLink id="0646-0434-485d-252e" name="Eldest Brother" hidden="true" collective="false" import="true" targetId="294d-a0fa-f437-2fca" type="selectionEntry"/>
     <entryLink id="62ca-3726-862f-0b87" name="Hiroto, Drunken Master" hidden="true" collective="false" import="true" targetId="f616-46d8-5907-fafd" type="selectionEntry"/>
+    <entryLink id="37af-1489-dba3-5609" name="The Hozumi Family" hidden="false" collective="false" import="true" targetId="4750-f234-49e4-79c1" type="selectionEntry"/>
+    <entryLink id="20f9-0e81-2bcc-1324" name="The Kiyozumi Family" hidden="false" collective="false" import="true" targetId="0e4a-a40c-14eb-2f4f" type="selectionEntry"/>
+    <entryLink id="56b8-4c27-e0cb-f577" name="Hozumi Daihanji" hidden="true" collective="false" import="true" targetId="2195-17c7-b68c-0111" type="selectionEntry"/>
+    <entryLink id="fc59-87f0-56e5-88ea" name="Hozumi Koga" hidden="true" collective="false" import="true" targetId="2b64-ba79-8ea1-4098" type="selectionEntry"/>
+    <entryLink id="3ce5-5b74-d2ef-31d3" name="Hozumi Maha" hidden="true" collective="false" import="true" targetId="09da-574e-599a-3226" type="selectionEntry"/>
+    <entryLink id="d47d-7386-f06f-b55b" name="Kenmeina" hidden="true" collective="false" import="true" targetId="b896-0ea7-fb05-1ecc" type="selectionEntry"/>
+    <entryLink id="eb03-6148-3b0e-45f3" name="Kiyozumi Haiboku" hidden="true" collective="false" import="true" targetId="91b9-5dcc-298c-0bfb" type="selectionEntry"/>
+    <entryLink id="3b7e-e5cb-8027-91dd" name="Kiyozumi Hinadori" hidden="true" collective="false" import="true" targetId="07f2-8804-f10d-7bbb" type="selectionEntry"/>
+    <entryLink id="507e-b35d-2df7-6b1c" name="Kiyozumi Kicho" hidden="true" collective="false" import="true" targetId="7b8f-61a1-2d88-60f2" type="selectionEntry"/>
+    <entryLink id="f9a2-a357-4dd8-3496" name="Kiyozumi Sadaka" hidden="false" collective="false" import="true" targetId="7728-72dd-3889-91b2" type="selectionEntry"/>
+    <entryLink id="4e31-3afd-a44a-9bf7" name="Ryokeen" hidden="true" collective="false" import="true" targetId="f97b-84fa-27d7-b73b" type="selectionEntry"/>
+    <entryLink id="3fc8-aff3-0caf-f78d" name="Taiyo" hidden="true" collective="false" import="true" targetId="90d7-5fe5-0a05-1bea" type="selectionEntry"/>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="aa49-891a-7805-f60e" name="Okyo Ashigaru" hidden="false" collective="false" import="true" type="model">
@@ -4035,6 +4047,13 @@ If recruited into the same Warband as Itsunagi, this model gains Kurouma Koryu.<
           </constraints>
           <selectionEntries>
             <selectionEntry id="3549-0f89-cc40-97a5" name="Muramasa&apos;s Blade" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="decrement" field="a111-8656-5c05-7415" value="1.0">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="90d7-5fe5-0a05-1bea" type="atLeast"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a3a9-a1c3-41e4-2490" type="max"/>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b93a-ab18-6338-a89c" type="max"/>
@@ -4115,6 +4134,11 @@ If recruited into the same Warband as Itsunagi, this model gains Kurouma Koryu.<
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
+                </modifier>
+                <modifier type="decrement" field="a111-8656-5c05-7415" value="1.0">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="90d7-5fe5-0a05-1bea" type="atLeast"/>
+                  </conditions>
                 </modifier>
               </modifiers>
               <constraints>
@@ -4200,6 +4224,11 @@ Attached model gains Move Ki Boost (2).</characteristic>
                     <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2433-ee5c-b206-4d91" type="notInstanceOf"/>
                   </conditions>
                 </modifier>
+                <modifier type="decrement" field="a111-8656-5c05-7415" value="1.0">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="90d7-5fe5-0a05-1bea" type="atLeast"/>
+                  </conditions>
+                </modifier>
               </modifiers>
               <constraints>
                 <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="1a54-0a96-2ec1-6c56" type="max"/>
@@ -4225,6 +4254,13 @@ This model is considered Medium Sized for the purposes of this ability.</charact
               </costs>
             </selectionEntry>
             <selectionEntry id="f2c3-37f1-659d-363c" name="Muramasa Edge" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="decrement" field="a111-8656-5c05-7415" value="1.0">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="90d7-5fe5-0a05-1bea" type="atLeast"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="28f6-a5dc-e5cb-00ae" type="max"/>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9996-a8ab-5650-0166" type="max"/>
@@ -4268,6 +4304,9 @@ This model is considered Medium Sized for the purposes of this ability.</charact
             <entryLink id="3888-7b91-1324-e89e" name="!DRAFT!CYCLE Wolf Heart Talisman" hidden="false" collective="false" import="true" targetId="a56e-8e8e-97b4-ec73" type="selectionEntry"/>
             <entryLink id="88d4-1694-a32e-7e2c" name="The Eagle Banner" hidden="false" collective="false" import="true" targetId="010e-1205-db10-6a2d" type="selectionEntry"/>
             <entryLink id="9479-5d62-cd22-5900" name="Hand Cannon" hidden="false" collective="false" import="true" targetId="3009-1a3c-223d-cae2" type="selectionEntry"/>
+            <entryLink id="4fbc-a07b-af91-784b" name="The Sunrise Katana" hidden="false" collective="false" import="true" targetId="a54a-aa90-53f2-d9df" type="selectionEntry"/>
+            <entryLink id="454f-40d3-6552-f6ae" name="The Kiyozumi Katana" hidden="false" collective="false" import="true" targetId="f882-5ccf-0724-2290" type="selectionEntry"/>
+            <entryLink id="7c26-371b-2509-2a82" name="The Hozumi Katana" hidden="false" collective="false" import="true" targetId="5cac-d0cc-1c51-a147" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
@@ -4277,6 +4316,14 @@ This model is considered Medium Sized for the purposes of this ability.</charact
         <entryLink id="fe4b-c6c1-a0b9-7acf" name="!DRAFT!CYCLE Pacifism" hidden="false" collective="false" import="true" targetId="6bf3-9dca-b4c5-6a3e" type="selectionEntry"/>
         <entryLink id="ebf4-3774-da2b-6a6e" name="!DRAFT!CYCLE Prayer Scroll" hidden="false" collective="false" import="true" targetId="bb42-702b-ab84-a9f9" type="selectionEntry"/>
         <entryLink id="26d4-e622-b6d4-3d48" name="Fujin&apos;s Charm" hidden="false" collective="false" import="true" targetId="5110-9b07-a9dd-d71e" type="selectionEntry"/>
+        <entryLink id="4020-b78a-8338-e1ce" name="Accepted into the Shadow" hidden="false" collective="false" import="true" targetId="5a4f-6e3e-0e2b-3e81" type="selectionEntry"/>
+        <entryLink id="e874-68a7-7f54-d7a5" name="Broken Spirit" hidden="false" collective="false" import="true" targetId="66cd-f1c0-8da8-e6d9" type="selectionEntry"/>
+        <entryLink id="b2bb-e78c-f295-40d3" name="Inducted into the Miko" hidden="false" collective="false" import="true" targetId="0ceb-eea9-97e0-8726" type="selectionEntry"/>
+        <entryLink id="2aad-6aa0-bdbe-8140" name="Iron Will" hidden="false" collective="false" import="true" targetId="2944-c703-8038-d0f4" type="selectionEntry"/>
+        <entryLink id="e4c9-14d4-70dd-ca8f" name="Loyalty" hidden="false" collective="false" import="true" targetId="d9ab-b401-633c-78f4" type="selectionEntry"/>
+        <entryLink id="14bb-8c8c-0ba1-c92c" name="Man of the People" hidden="false" collective="false" import="true" targetId="f306-2092-6d16-77ea" type="selectionEntry"/>
+        <entryLink id="abf0-505b-b73c-9caa" name="Plans Made, Bargains Kept" hidden="false" collective="false" import="true" targetId="472f-7192-8d65-aea1" type="selectionEntry"/>
+        <entryLink id="d803-697e-622a-05a2" name="True Love" hidden="false" collective="false" import="true" targetId="8690-885b-08be-8353" type="selectionEntry"/>
       </entryLinks>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
