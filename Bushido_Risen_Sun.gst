@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="62e4-ab79-1c4c-9ffe" name="Bushido: Risen Sun" revision="4" battleScribeVersion="2.03" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="62e4-ab79-1c4c-9ffe" name="Bushido: Risen Sun" revision="5" battleScribeVersion="2.03" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <costTypes>
     <costType id="a111-8656-5c05-7415" name=" Rice" defaultCostLimit="-1.0" hidden="false"/>
   </costTypes>
@@ -140,8 +140,10 @@
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b254-2810-6b62-66d9" type="equalTo"/>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6eac-b6fc-ac09-4d64" type="equalTo"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b254-2810-6b62-66d9" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6eac-b6fc-ac09-4d64" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7567-af27-0612-2915" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0611-cc97-0bfa-e973" type="atLeast"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -210,6 +212,8 @@
     <categoryEntry id="3df8-0340-a4a1-a8be" name="Ronin Terrain Cards" hidden="false"/>
     <categoryEntry id="7638-6ad1-8829-91db" name="Ronin Event Cards" hidden="false"/>
     <categoryEntry id="943d-6b70-d85b-fb7b" name="Faction: Kinshi Temple" hidden="false"/>
+    <categoryEntry id="0611-cc97-0bfa-e973" name="The Kiyozumi Family" hidden="false"/>
+    <categoryEntry id="7567-af27-0612-2915" name="The Hozumi Family" hidden="false"/>
   </categoryEntries>
   <forceEntries>
     <forceEntry id="2150-40b1-52f8-4a8a" name="Risen Sun" hidden="true">

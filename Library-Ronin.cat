@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="b489-b304-948d-52d0" name="Library-Ronin" revision="17" battleScribeVersion="2.03" library="true" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="4" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="b489-b304-948d-52d0" name="Library-Ronin" revision="18" battleScribeVersion="2.03" library="true" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="5" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="4e24-3a7e-77bc-dfed" name="Balance" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -6584,6 +6584,7 @@ Permitted [Hozumi, Taiyo, Ryokeen, Ronin models]
       </infoLinks>
       <categoryLinks>
         <categoryLink id="a326-a4d4-d974-7120" name="New CategoryLink" hidden="false" targetId="ff27-a550-2dd1-e2e3" primary="true"/>
+        <categoryLink id="141d-47d4-049f-9b23" name="The Hozumi Family" hidden="false" targetId="7567-af27-0612-2915" primary="false"/>
       </categoryLinks>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0.0"/>
@@ -6614,6 +6615,7 @@ Permitted [Kiyozumi, Kenmeina, Ronin models]
       </profiles>
       <categoryLinks>
         <categoryLink id="3d89-14c5-92ce-2d5c" name="New CategoryLink" hidden="false" targetId="ff27-a550-2dd1-e2e3" primary="true"/>
+        <categoryLink id="8baf-b94d-d10e-7bfe" name="The Kiyozumi Family" hidden="false" targetId="0611-cc97-0bfa-e973" primary="false"/>
       </categoryLinks>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0.0"/>
@@ -7455,9 +7457,21 @@ When this model spends Ki Tokens, it may instead remove any number of Ghost Toke
     <selectionEntry id="7345-3239-1f28-59f1" name="Bright Nurture" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
         <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f97b-84fa-27d7-b73b" type="notInstanceOf"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f97b-84fa-27d7-b73b" type="notInstanceOf"/>
+              </conditions>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="primary-catalogue" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d4b0-a54e-a48b-88a5" type="notInstanceOf"/>
+                    <condition field="selections" scope="primary-catalogue" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4213-717c-2228-e731" type="notInstanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <constraints>
@@ -7483,9 +7497,21 @@ Requirement [Ryokeen]</characteristic>
     <selectionEntry id="9077-4def-6328-8ac2" name="Dark Nurture" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
         <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f97b-84fa-27d7-b73b" type="notInstanceOf"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f97b-84fa-27d7-b73b" type="notInstanceOf"/>
+              </conditions>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="primary-catalogue" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0b85-0901-eb64-b84b" type="notInstanceOf"/>
+                    <condition field="selections" scope="primary-catalogue" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1ac7-2939-2874-7530" type="notInstanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <constraints>
