@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="b586-d588-5153-3d1d" name="Library-Feats" revision="9" battleScribeVersion="2.03" library="true" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="4" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="b586-d588-5153-3d1d" name="Library-Feats" revision="9" battleScribeVersion="2.03" library="true" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="5" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedInfoGroups>
     <infoGroup id="172c-d546-50a5-c020" name="Cobra Strike" hidden="false">
       <profiles>
@@ -2452,6 +2452,49 @@ Models in the Aura gain Bodyguard [Haiboku](3&quot;).</characteristic>
             <characteristic name="Description" typeId="f804-b969-00da-2123">This model gains an additional Activation Counter.
 An Enemy model may cancel this Ki Feat by spending 1 Ki Token, this model gains that Ki Token, and the Ki Feat has no other effect but is still considered to
 have been used this turn.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </infoGroup>
+    <infoGroup id="2c97-ad49-a7c7-17d7" name="Chill" hidden="false">
+      <profiles>
+        <profile id="0936-536b-1319-1ca9" name="Chill" hidden="false" typeId="993a-e62a-7922-0ccb" typeName="Ki Feat">
+          <characteristics>
+            <characteristic name="Cost" typeId="a126-54d9-0a27-f4b6">2</characteristic>
+            <characteristic name="Timing" typeId="f8a8-8a3e-ef58-4c61">Instant</characteristic>
+            <characteristic name="Subject" typeId="4ac8-2bb1-0c84-f088">Target BtB</characteristic>
+            <characteristic name="Limitation" typeId="6fc9-5d13-2687-b2a5"/>
+            <characteristic name="Description" typeId="f804-b969-00da-2123">Target Enemy model in BtB gains Slow until the End Phase.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="cc23-ec05-100a-94e3" name="Slow" hidden="false" targetId="f1c3-4a84-c616-23cd" type="rule"/>
+      </infoLinks>
+    </infoGroup>
+    <infoGroup id="a627-d5b8-7d22-417c" name="To the Front!" hidden="false">
+      <profiles>
+        <profile id="0b0e-bbbf-3710-8c74" name="To the Front!" hidden="false" typeId="993a-e62a-7922-0ccb" typeName="Ki Feat">
+          <characteristics>
+            <characteristic name="Cost" typeId="a126-54d9-0a27-f4b6">2</characteristic>
+            <characteristic name="Timing" typeId="f8a8-8a3e-ef58-4c61">Simple</characteristic>
+            <characteristic name="Subject" typeId="4ac8-2bb1-0c84-f088">Aura 3&quot;</characteristic>
+            <characteristic name="Limitation" typeId="6fc9-5d13-2687-b2a5">Not in BtB</characteristic>
+            <characteristic name="Description" typeId="f804-b969-00da-2123">Friendly Bushi models in the Aura do not suffer the Melee Penalty for having Run.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </infoGroup>
+    <infoGroup id="c021-3f8c-56e8-5861" name="Defensive Line" hidden="false">
+      <profiles>
+        <profile id="102a-5b78-cd2b-c1fa" name="Defensive Line" hidden="false" typeId="993a-e62a-7922-0ccb" typeName="Ki Feat">
+          <characteristics>
+            <characteristic name="Cost" typeId="a126-54d9-0a27-f4b6">3</characteristic>
+            <characteristic name="Timing" typeId="f8a8-8a3e-ef58-4c61">Active</characteristic>
+            <characteristic name="Subject" typeId="4ac8-2bb1-0c84-f088">Personal</characteristic>
+            <characteristic name="Limitation" typeId="6fc9-5d13-2687-b2a5"/>
+            <characteristic name="Description" typeId="f804-b969-00da-2123">Until the End Phase, while in BtB with another Friendly Tengu Bushi, this model and ÊFriendly Tengu Bushi in BtB with this model gain Parry (+1).
+A model can only benefit from this feat once, though it does stack with other sources of Parry.</characteristic>
           </characteristics>
         </profile>
       </profiles>

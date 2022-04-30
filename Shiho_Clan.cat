@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="2276-2df6-78a7-841d" name="Shiho Clan" revision="10" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="4" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="2276-2df6-78a7-841d" name="Shiho Clan" revision="10" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="5" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="7fa5-7ef0-59c5-f657" name="Tanaka" hidden="false"/>
   </categoryEntries>
   <selectionEntries>
     <selectionEntry id="aee3-32e3-790c-827d" name="Full Moon" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
-        <modifier type="set" field="3e07-c7e7-15ed-d28e" value="0">
+        <modifier type="set" field="3e07-c7e7-15ed-d28e" value="0.0">
           <conditions>
             <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="fb4a-18a7-5b40-74ec" type="lessThan"/>
           </conditions>
@@ -84,6 +84,13 @@ Excluded [Giant Eagle]</characteristic>
       </costs>
     </selectionEntry>
     <selectionEntry id="ae88-cb3c-4133-4b39" name="Primal Howl" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="a0a0-7386-0d19-5402" value="0.0">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="fb4a-18a7-5b40-74ec" type="lessThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a0a0-7386-0d19-5402" type="max"/>
       </constraints>
@@ -1859,14 +1866,16 @@ While this model is in play, when a Friendly Loyal model spends a Virtue Token y
             <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
           </characteristics>
         </profile>
-        <profile id="3991-fe6a-5c84-48dd" name="Shiho Takuya" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
-          <characteristics>
-            <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">Bravery, Leadership [Loyal](1/6&quot;], Prowess [Melee](1), Tactician (1), Vengeance [Takashi]</characteristic>
-          </characteristics>
-        </profile>
       </profiles>
       <infoGroups>
         <infoGroup id="9050-aeff-7cd2-b580" name="Traits" hidden="false">
+          <profiles>
+            <profile id="f865-9808-ed93-6a11" name="Shiho Takuya" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">Bravery, Leadership [Loyal](1/6&quot;], Prowess [Melee](1), Tactician (1), Vengeance [Takashi]</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
           <infoLinks>
             <infoLink id="a247-6f63-92d7-32c8" name="Prowess " hidden="false" targetId="75ef-327a-cd08-a248" type="rule"/>
             <infoLink id="5d3e-8c95-1730-9879" name="Vengeance" hidden="false" targetId="6779-0aac-2f51-f67e" type="rule"/>
@@ -1878,6 +1887,7 @@ While this model is in play, when a Friendly Loyal model spends a Virtue Token y
         <infoGroup id="1fb1-03ed-67f2-1d01" name="Ki Feats" hidden="false">
           <infoLinks>
             <infoLink id="edc1-fda0-7d10-c499" name="Awe" hidden="false" targetId="9a81-8763-ea17-abbe" type="infoGroup"/>
+            <infoLink id="0c75-5329-86d9-9bd1" name="Move It!" hidden="false" targetId="de77-6a18-6e31-7d33" type="infoGroup"/>
           </infoLinks>
         </infoGroup>
         <infoGroup id="6e26-5f54-97b8-3d3c" name="Melee Weapon" hidden="false">
@@ -3519,12 +3529,12 @@ Enemy Damage Rolls are ignored if the individual dice values of the Damage Roll 
                 </modifier>
                 <modifier type="set" field="a111-8656-5c05-7415" value="0.5">
                   <conditions>
-                    <condition field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8427-0ae1-a2d6-6b1d" type="equalTo"/>
+                    <condition field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8427-0ae1-a2d6-6b1d" type="equalTo"/>
                   </conditions>
                 </modifier>
               </modifiers>
               <constraints>
-                <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5746-ea7a-16ee-7bda" type="max"/>
+                <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5746-ea7a-16ee-7bda" type="max"/>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="aa80-6bf0-4e8c-2b92" type="max"/>
               </constraints>
               <profiles>
