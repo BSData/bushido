@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="b489-b304-948d-52d0" name="Library-Ronin" revision="18" battleScribeVersion="2.03" library="true" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="5" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="b489-b304-948d-52d0" name="Library-Ronin" revision="19" battleScribeVersion="2.03" library="true" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="5" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="4e24-3a7e-77bc-dfed" name="Balance" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -605,7 +605,8 @@ Requirement [The Hozumi Family Theme]</characteristic>
         </profile>
       </profiles>
       <categoryLinks>
-        <categoryLink id="d8c4-5109-cf9f-7f10" name="New CategoryLink" hidden="false" targetId="7638-6ad1-8829-91db" primary="true"/>
+        <categoryLink id="d8c4-5109-cf9f-7f10" name="New CategoryLink" hidden="false" targetId="7638-6ad1-8829-91db" primary="false"/>
+        <categoryLink id="b89a-0891-16e9-5ba3" name="New CategoryLink" hidden="false" targetId="d360-71aa-ca22-ba3c" primary="true"/>
       </categoryLinks>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2.0"/>
@@ -633,7 +634,8 @@ Requirement [The Hozumi Family Theme]</characteristic>
         </profile>
       </profiles>
       <categoryLinks>
-        <categoryLink id="c607-e8e9-0858-e9db" name="New CategoryLink" hidden="false" targetId="7638-6ad1-8829-91db" primary="true"/>
+        <categoryLink id="c607-e8e9-0858-e9db" name="New CategoryLink" hidden="false" targetId="7638-6ad1-8829-91db" primary="false"/>
+        <categoryLink id="d10f-be68-1bbd-60e6" name="New CategoryLink" hidden="false" targetId="d360-71aa-ca22-ba3c" primary="true"/>
       </categoryLinks>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2.0"/>
@@ -663,7 +665,8 @@ Requirement [The Kiyozumi Family Theme]
         </profile>
       </profiles>
       <categoryLinks>
-        <categoryLink id="2ce0-b80e-917f-646b" name="New CategoryLink" hidden="false" targetId="7638-6ad1-8829-91db" primary="true"/>
+        <categoryLink id="2ce0-b80e-917f-646b" name="New CategoryLink" hidden="false" targetId="7638-6ad1-8829-91db" primary="false"/>
+        <categoryLink id="14a9-9d0f-4db8-30bd" name="New CategoryLink" hidden="false" targetId="d360-71aa-ca22-ba3c" primary="true"/>
       </categoryLinks>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2.0"/>
@@ -694,7 +697,8 @@ Requirement [ The Kiyozumi Family theme]</characteristic>
         <infoLink id="8d10-d604-7b27-13e8" name="Indomitable " hidden="false" targetId="3beb-6f28-e7c4-a236" type="rule"/>
       </infoLinks>
       <categoryLinks>
-        <categoryLink id="2609-e2cc-5f91-16b4" name="New CategoryLink" hidden="false" targetId="7638-6ad1-8829-91db" primary="true"/>
+        <categoryLink id="2609-e2cc-5f91-16b4" name="New CategoryLink" hidden="false" targetId="7638-6ad1-8829-91db" primary="false"/>
+        <categoryLink id="8abd-bdd9-7dab-b72d" name="New CategoryLink" hidden="false" targetId="d360-71aa-ca22-ba3c" primary="true"/>
       </categoryLinks>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1.0"/>
@@ -724,7 +728,8 @@ Requirement [ The Kiyozumi Family Theme]</characteristic>
         <infoLink id="1259-f319-b03c-2088" name="Flank" hidden="false" targetId="a847-f02d-7e99-8a66" type="rule"/>
       </infoLinks>
       <categoryLinks>
-        <categoryLink id="152a-7a54-5493-42ba" name="New CategoryLink" hidden="false" targetId="7638-6ad1-8829-91db" primary="true"/>
+        <categoryLink id="152a-7a54-5493-42ba" name="New CategoryLink" hidden="false" targetId="7638-6ad1-8829-91db" primary="false"/>
+        <categoryLink id="6432-5622-0301-71c3" name="New CategoryLink" hidden="false" targetId="d360-71aa-ca22-ba3c" primary="true"/>
       </categoryLinks>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1.0"/>
@@ -6952,6 +6957,11 @@ Requirement [Kiyozumi Kicho]
             <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="0e4a-a40c-14eb-2f4f" type="atLeast"/>
           </conditions>
         </modifier>
+        <modifier type="add" field="category" value="dc64-e668-4aac-8ec9">
+          <conditions>
+            <condition field="selections" scope="7b8f-61a1-2d88-60f2" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5a4f-6e3e-0e2b-3e81" type="atLeast"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dddf-60f5-759f-2c31" type="max"/>
@@ -8114,6 +8124,7 @@ Requirement [Kiyozumi Haiboku]</characteristic>
         <categoryLink id="777e-44f8-8eca-29c0" name="Kaizoku" hidden="false" targetId="5bf8-7b73-412a-f654" primary="false"/>
         <categoryLink id="4ffb-d0d6-7170-6ab6" name="Shatei" hidden="false" targetId="dd57-4bab-fa7b-f75c" primary="false"/>
         <categoryLink id="669c-1820-dcbe-29d7" name="Ashigaru" hidden="false" targetId="f434-17e6-174c-b4f6" primary="false"/>
+        <categoryLink id="1df0-6992-df0c-0033" name="Armour" hidden="false" targetId="f322-702a-ff62-b37e" primary="false"/>
       </categoryLinks>
       <entryLinks>
         <entryLink id="ba84-2a56-651b-d3de" name="Enhancements" hidden="false" collective="false" import="true" targetId="f486-4498-03e3-c397" type="selectionEntryGroup"/>
@@ -8309,6 +8320,92 @@ Requirement (Kenmeina)</characteristic>
       </categoryLinks>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="fa0e-c387-cd61-f331" name="Atsunobu" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="477a-e693-0888-08f7" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9402-edcc-93a2-aef1" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b94d-f7cb-a84c-4077" type="atLeast"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <profiles>
+        <profile id="73bf-6f49-0021-adbd" name="Atsunobu" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">2</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">1</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">6</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">6 OOOOO O</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="62de-ff34-bc56-a858" name="Traits" hidden="false">
+          <profiles>
+            <profile id="4afb-c856-4ff5-d103" name="Atsunobu" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Leech (1/4&quot;)</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="0568-0395-ea24-7061" name="Leech" hidden="false" targetId="bab1-710b-4f90-7c2f" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="cc44-eec6-07d1-36af" name="Melee Weapon" hidden="false">
+          <profiles>
+            <profile id="0f0b-140a-15d3-c446" name="Katana" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+1</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e"/>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d"/>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+        </infoGroup>
+        <infoGroup id="faf4-9bfb-fe5b-60fe" name="Unique Effects" hidden="false">
+          <profiles>
+            <profile id="785f-8679-0c23-116f" name="Unique Effects" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">If this model gains any Ki using its Leech trait then it gains Bravery until the End Phase.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="6df6-d414-1b7b-edc9" name="Bravery" hidden="false" targetId="f9b2-38d2-7cda-de6e" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="4892-4e61-372c-3683" name="Ki Feats" hidden="false">
+          <infoLinks>
+            <infoLink id="983c-ac65-b2fc-2c7f" name="Iaijutsu" hidden="false" targetId="ba0c-49f7-cee1-9585" type="infoGroup"/>
+          </infoLinks>
+        </infoGroup>
+      </infoGroups>
+      <categoryLinks>
+        <categoryLink id="f3fe-f0ab-bfb6-0f73" name="New CategoryLink" hidden="false" targetId="9fba-f50b-c8f7-8396" primary="true"/>
+        <categoryLink id="08a5-40c3-fc25-95b7" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
+        <categoryLink id="f170-22cb-1929-5a33" name="Mercenary" hidden="false" targetId="3cf6-ff9a-b96a-cb1f" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="475d-4755-0d45-91c5" name="Enhancements" hidden="false" collective="false" import="true" targetId="f486-4498-03e3-c397" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="13.0"/>
       </costs>
     </selectionEntry>
   </sharedSelectionEntries>
