@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="4213-717c-2228-e731" name="Temple of Ro-Kan" revision="10" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="5" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="4213-717c-2228-e731" name="Temple of Ro-Kan" revision="11" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="5" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="5048-3a52-5689-6d0b" name="Spiritual Harmony" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -4508,15 +4508,20 @@ This model may be recruited into any Warband that includes Taiki.</characteristi
     </entryLink>
     <entryLink id="8a28-d558-ee86-1822" name="Hozumi Daihanji" hidden="true" collective="false" import="true" targetId="2195-17c7-b68c-0111" type="selectionEntry">
       <modifiers>
-        <modifier type="set" field="hidden" value="false">
+        <modifier type="set" field="3ff2-d919-3510-4d21" value="0.0">
           <conditionGroups>
             <conditionGroup type="and">
               <conditions>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f306-2092-6d16-77ea" type="atLeast"/>
                 <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1a12-f47f-8f23-0777" type="atLeast"/>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f306-2092-6d16-77ea" type="lessThan"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
+        </modifier>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1a12-f47f-8f23-0777" type="atLeast"/>
+          </conditions>
         </modifier>
       </modifiers>
     </entryLink>

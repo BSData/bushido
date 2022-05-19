@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="2276-2df6-78a7-841d" name="Shiho Clan" revision="11" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="5" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="2276-2df6-78a7-841d" name="Shiho Clan" revision="12" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="5" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="7fa5-7ef0-59c5-f657" name="Tanaka" hidden="false"/>
   </categoryEntries>
@@ -211,6 +211,7 @@ This model gains Bravery when declaring actions Targeting or Selecting a model a
           </profiles>
           <categoryLinks>
             <categoryLink id="9c14-944b-b759-1227" name="Animal" hidden="false" targetId="c382-9ab3-9924-e30a" primary="false"/>
+            <categoryLink id="f68d-34d4-244a-6ec2" name="Wolf" hidden="false" targetId="4e48-1ed5-3567-b991" primary="false"/>
           </categoryLinks>
           <entryLinks>
             <entryLink id="a3bd-3919-838d-4dc1" name="Enhancements" hidden="false" collective="false" import="true" targetId="8a7c-6251-523e-a67c" type="selectionEntryGroup"/>
@@ -243,6 +244,7 @@ This model gains Bravery when declaring actions Targeting or Selecting a model a
           </profiles>
           <categoryLinks>
             <categoryLink id="45d7-44fb-1a32-39a3" name="Animal" hidden="false" targetId="c382-9ab3-9924-e30a" primary="false"/>
+            <categoryLink id="549a-edf2-d898-fbe9" name="Wolf" hidden="false" targetId="4e48-1ed5-3567-b991" primary="false"/>
           </categoryLinks>
           <entryLinks>
             <entryLink id="93d3-b30a-15e1-5164" name="Enhancements" hidden="false" collective="false" import="true" targetId="8a7c-6251-523e-a67c" type="selectionEntryGroup"/>
@@ -3048,6 +3050,7 @@ This model&apos;s Dai Kyu Ranged Weapon gains Reload (+1) and this model does no
     <selectionEntry id="7784-df09-a292-0749" name="Wolf" hidden="false" collective="false" import="true" type="model">
       <categoryLinks>
         <categoryLink id="6b0a-c195-c91a-3832" name="Animal" hidden="false" targetId="c382-9ab3-9924-e30a" primary="false"/>
+        <categoryLink id="171c-d7eb-7aba-6ca5" name="Wolf" hidden="false" targetId="4e48-1ed5-3567-b991" primary="false"/>
       </categoryLinks>
       <entryLinks>
         <entryLink id="722e-dc29-99eb-a3ce" name="Enhancements" hidden="false" collective="false" import="true" targetId="8a7c-6251-523e-a67c" type="selectionEntryGroup"/>
@@ -3103,6 +3106,18 @@ This model&apos;s Dai Kyu Ranged Weapon gains Reload (+1) and this model does no
                 <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2190-66df-018c-cb0c" type="instanceOf"/>
               </conditions>
             </modifier>
+            <modifier type="set" field="hidden" value="true">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c382-9ab3-9924-e30a" type="instanceOf"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d7c5-a2b9-4696-fd33" type="instanceOf"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6639-615e-f1ab-bc64" type="instanceOf"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7435-856f-ece2-fe58" type="instanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6b75-2264-9f3b-d2ca" type="max"/>
@@ -3131,6 +3146,18 @@ This model&apos;s Dai Kyu Ranged Weapon gains Reload (+1) and this model does no
               <conditions>
                 <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4e48-1ed5-3567-b991" type="instanceOf"/>
               </conditions>
+            </modifier>
+            <modifier type="set" field="hidden" value="true">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c382-9ab3-9924-e30a" type="instanceOf"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d7c5-a2b9-4696-fd33" type="instanceOf"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6639-615e-f1ab-bc64" type="instanceOf"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7435-856f-ece2-fe58" type="instanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
           <constraints>
@@ -3400,15 +3427,24 @@ Enemy Damage Rolls are ignored if the individual dice values of the Damage Roll 
                 <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="858f-dc9a-935d-6a44" name="Full Moon Talisman" hidden="true" collective="false" import="true" type="upgrade">
+            <selectionEntry id="858f-dc9a-935d-6a44" name="Full Moon Talisman" hidden="false" collective="false" import="true" type="upgrade">
               <modifiers>
-                <modifier type="set" field="hidden" value="false">
+                <modifier type="set" field="hidden" value="true">
                   <conditionGroups>
-                    <conditionGroup type="and">
+                    <conditionGroup type="or">
                       <conditions>
-                        <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4e48-1ed5-3567-b991" type="instanceOf"/>
-                        <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c382-9ab3-9924-e30a" type="instanceOf"/>
+                        <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d7c5-a2b9-4696-fd33" type="instanceOf"/>
+                        <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6639-615e-f1ab-bc64" type="instanceOf"/>
+                        <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7435-856f-ece2-fe58" type="instanceOf"/>
                       </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4e48-1ed5-3567-b991" type="notInstanceOf"/>
+                            <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c382-9ab3-9924-e30a" type="instanceOf"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
                     </conditionGroup>
                   </conditionGroups>
                 </modifier>
@@ -3431,7 +3467,7 @@ Enemy Damage Rolls are ignored if the individual dice values of the Damage Roll 
                 <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="d1ad-ef4d-c42e-45bb" name="Waning Crescent Blade" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="d1ad-ef4d-c42e-45bb" name="Waning Crescent Blade" hidden="true" collective="false" import="true" type="upgrade">
               <modifiers>
                 <modifier type="set" field="hidden" value="false">
                   <conditionGroups>
@@ -3474,7 +3510,7 @@ Enemy Damage Rolls are ignored if the individual dice values of the Damage Roll 
                 <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="e461-c63f-4e07-da04" name="Waxing Crescent Blade" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="e461-c63f-4e07-da04" name="Waxing Crescent Blade" hidden="true" collective="false" import="true" type="upgrade">
               <modifiers>
                 <modifier type="set" field="hidden" value="false">
                   <conditionGroups>
@@ -3555,6 +3591,20 @@ Requirement [Loyal]</characteristic>
               </costs>
             </selectionEntry>
             <selectionEntry id="271f-5e23-3559-5a07" name="Tengu Feather Charm" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c382-9ab3-9924-e30a" type="instanceOf"/>
+                        <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d7c5-a2b9-4696-fd33" type="instanceOf"/>
+                        <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6639-615e-f1ab-bc64" type="instanceOf"/>
+                        <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7435-856f-ece2-fe58" type="instanceOf"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dc64-d670-e632-899c" type="max"/>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0104-5728-9b28-1be2" type="max"/>
