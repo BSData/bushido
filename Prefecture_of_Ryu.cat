@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="0cac-b8ad-fb7f-ef84" name="Prefecture of Ryu" revision="11" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="5" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="0cac-b8ad-fb7f-ef84" name="Prefecture of Ryu" revision="12" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="5" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="8688-cd6e-bcbe-2cbb" name="Ima" hidden="false"/>
     <categoryEntry id="65a8-4392-a95b-115b" name="Takashi" hidden="false"/>
@@ -3374,9 +3374,6 @@ During Deployment place this model in BtB with Atsushi.</characteristic>
         <categoryLink id="d537-ad35-9b08-2b6e" name="Dog" hidden="false" targetId="e966-5aa5-b165-496d" primary="false"/>
         <categoryLink id="2655-d024-f2bc-fe57" name="Armour" hidden="false" targetId="f322-702a-ff62-b37e" primary="false"/>
       </categoryLinks>
-      <entryLinks>
-        <entryLink id="a815-ae03-34e3-4149" name="Enhancements" hidden="false" collective="false" import="true" targetId="3dad-1423-9b3c-86a7" type="selectionEntryGroup"/>
-      </entryLinks>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="6.0"/>
       </costs>
@@ -4186,6 +4183,21 @@ If this model is Successful, the Friendly model is not Surprised.</characteristi
           </costs>
         </selectionEntry>
         <selectionEntry id="410c-f19a-a5aa-cfe0" name="Patient Dragon" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c382-9ab3-9924-e30a" type="instanceOf"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d7c5-a2b9-4696-fd33" type="instanceOf"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6639-615e-f1ab-bc64" type="instanceOf"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7435-856f-ece2-fe58" type="instanceOf"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f62f-dd0b-4f06-06a6" type="instanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="36e9-0b5a-7234-f81e" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2419-0adf-d710-f890" type="max"/>
@@ -4466,6 +4478,21 @@ Friendly Faction Samurai models gain Charging Bonus [Fearless] when they begin t
           </constraints>
           <selectionEntries>
             <selectionEntry id="6c84-2460-9628-bdbf" name="Battle Plans" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c382-9ab3-9924-e30a" type="instanceOf"/>
+                        <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d7c5-a2b9-4696-fd33" type="instanceOf"/>
+                        <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6639-615e-f1ab-bc64" type="instanceOf"/>
+                        <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7435-856f-ece2-fe58" type="instanceOf"/>
+                        <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f62f-dd0b-4f06-06a6" type="instanceOf"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8ab9-43df-4ecb-c7fc" type="max"/>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9367-6360-1b59-f1fc" type="max"/>
@@ -4550,6 +4577,21 @@ Friendly Faction Samurai models gain Charging Bonus [Fearless] when they begin t
               </costs>
             </selectionEntry>
             <selectionEntry id="9624-feec-b84f-a872" name="Paper Cartridges" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c382-9ab3-9924-e30a" type="instanceOf"/>
+                        <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d7c5-a2b9-4696-fd33" type="instanceOf"/>
+                        <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6639-615e-f1ab-bc64" type="instanceOf"/>
+                        <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7435-856f-ece2-fe58" type="instanceOf"/>
+                        <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f62f-dd0b-4f06-06a6" type="instanceOf"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="446b-b74f-47a0-0323" type="max"/>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9850-f9f7-c844-919a" type="max"/>
@@ -4585,6 +4627,19 @@ Friendly Faction Samurai models gain Charging Bonus [Fearless] when they begin t
                     <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="90d7-5fe5-0a05-1bea" type="atLeast"/>
                   </conditions>
                 </modifier>
+                <modifier type="set" field="hidden" value="true">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c382-9ab3-9924-e30a" type="instanceOf"/>
+                        <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d7c5-a2b9-4696-fd33" type="instanceOf"/>
+                        <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6639-615e-f1ab-bc64" type="instanceOf"/>
+                        <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7435-856f-ece2-fe58" type="instanceOf"/>
+                        <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f62f-dd0b-4f06-06a6" type="instanceOf"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
               </modifiers>
               <constraints>
                 <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="fc53-41b5-1fd5-3723" type="max"/>
@@ -4614,6 +4669,19 @@ Enemy Damage Rolls against the Attached model are ignored if the individual dice
                   <conditions>
                     <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="90d7-5fe5-0a05-1bea" type="atLeast"/>
                   </conditions>
+                </modifier>
+                <modifier type="set" field="hidden" value="true">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c382-9ab3-9924-e30a" type="instanceOf"/>
+                        <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d7c5-a2b9-4696-fd33" type="instanceOf"/>
+                        <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6639-615e-f1ab-bc64" type="instanceOf"/>
+                        <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7435-856f-ece2-fe58" type="instanceOf"/>
+                        <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f62f-dd0b-4f06-06a6" type="instanceOf"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
                 </modifier>
               </modifiers>
               <constraints>
