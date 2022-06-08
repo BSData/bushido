@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="b489-b304-948d-52d0" name="Library-Ronin" revision="20" battleScribeVersion="2.03" library="true" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="5" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="b489-b304-948d-52d0" name="Library-Ronin" revision="21" battleScribeVersion="2.03" library="true" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="5" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="4e24-3a7e-77bc-dfed" name="Balance" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -3360,25 +3360,31 @@ Against Durable models, instead of making a Damage Roll, always cause 1 Damage (
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="79e1-3a5e-4b63-f786" type="max"/>
       </constraints>
       <profiles>
-        <profile id="1f25-1890-0a7c-a821" name="The Grey Pilgrim" hidden="false" typeId="6ea2-0f74-4852-4a98" typeName="Character Profile">
+        <profile id="1f25-1890-0a7c-a821" name="The Grey Pilgrim" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character">
           <characteristics>
-            <characteristic name="Melee Pool" typeId="8409-8d55-ce45-a33b">3</characteristic>
-            <characteristic name="Melee Boost" typeId="6a36-e826-18f3-0b25">3</characteristic>
-            <characteristic name="Ranged Pool" typeId="7a01-37c0-4741-672c">3</characteristic>
-            <characteristic name="Ranged Boost" typeId="ff66-ea54-d863-5c17">3</characteristic>
-            <characteristic name="Move" typeId="af89-242d-625f-9bff">5</characteristic>
-            <characteristic name="Move Boost" typeId="62a6-8125-f293-5c76"/>
-            <characteristic name="Ki" typeId="8b76-2b4b-066e-a0c5">2</characteristic>
-            <characteristic name="Ki Boost" typeId="c34e-f8ae-0984-37ac"/>
-            <characteristic name="Ki Cap" typeId="2e88-c65e-4e45-d4c4">10</characteristic>
-            <characteristic name="Wounds" typeId="a1dc-c2c1-e2d2-ca98">6 OOOOO O</characteristic>
-            <characteristic name="Size &amp; Base" typeId="6af2-e777-20ce-e060">Small 30mm</characteristic>
-            <characteristic name="Traits" typeId="e742-1b02-09cf-fd97">Armour (1), Cloudwalk, Dodge (1), Lightning Reflexes, Sixth Sense, Soulless</characteristic>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">3</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33">3</characteristic>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">5</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">2</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">10</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">6 OOOOO O</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
           </characteristics>
         </profile>
       </profiles>
       <infoGroups>
         <infoGroup id="e2f0-fcca-140a-949c" name="Traits" hidden="false">
+          <profiles>
+            <profile id="ea1b-3360-6f80-bc53" name="The Grey Pilgrim" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Armour (1), Cloudwalk, Dodge (1), Lightning Reflexes, Sixth Sense, Soulless</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
           <infoLinks>
             <infoLink id="2717-0d2d-42a2-e94c" name="Soulless" hidden="false" targetId="af31-aad0-fcea-9590" type="rule"/>
             <infoLink id="d65b-60e3-2d6f-c8bf" name="Lightning Reflexes" hidden="false" targetId="efd4-dc31-6523-9c79" type="rule"/>
@@ -3418,7 +3424,7 @@ Against Durable models, instead of making a Damage Roll, always cause 1 Damage (
                 <characteristic name="Range Bands" typeId="be6a-50c6-d691-e2e9">2/4/6</characteristic>
                 <characteristic name="Traits" typeId="3410-4428-ef91-eb61">Lightweight</characteristic>
                 <characteristic name="Specials" typeId="cdaf-b6ac-89d4-39ef"/>
-                <characteristic name="Unique Effects" typeId="3bf8-6525-f003-4990">A model Damaged by a Call Lightning Attack gains a Stunned Marker.</characteristic>
+                <characteristic name="Unique Effects" typeId="3bf8-6525-f003-4990"/>
               </characteristics>
             </profile>
           </profiles>
@@ -3430,7 +3436,7 @@ Against Durable models, instead of making a Damage Roll, always cause 1 Damage (
           <profiles>
             <profile id="b906-a53c-55c2-b495" name="The Grey Pilgrim" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
               <characteristics>
-                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">A model Damaged by a Call Lightning or Raijin’s Rage Attack gains a Stunned Marker.
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">While this model is in play, a model Damaged by a Call Lightning or Raijin’s Rage Attack gains a Stunned Marker.
 This model cannot be Targeted by Call Lightning Ranged Attacks or by Attacks generated by the Raijin’s Rage Ki Feat.</characteristic>
               </characteristics>
             </profile>
@@ -6776,9 +6782,23 @@ Permitted [Kiyozumi, Kenmeina, Ronin models]
             </profile>
           </profiles>
           <infoLinks>
-            <infoLink id="9c24-49d9-bb44-728a" name="Armour" hidden="false" targetId="8615-1c63-2242-5746" type="rule"/>
+            <infoLink id="9c24-49d9-bb44-728a" name="Fearless" hidden="false" targetId="5d6f-1746-9080-aca5" type="rule">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8690-885b-08be-8353" type="lessThan"/>
+                        <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="07f2-8804-f10d-7bbb" type="lessThan"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+            </infoLink>
             <infoLink id="fcd3-1425-dace-5bc5" name="Bravery" hidden="false" targetId="f9b2-38d2-7cda-de6e" type="rule"/>
             <infoLink id="0556-62e2-4a09-8966" name="Prowess " hidden="false" targetId="75ef-327a-cd08-a248" type="rule"/>
+            <infoLink id="ee35-f744-c06c-463e" name="Armour" hidden="false" targetId="8615-1c63-2242-5746" type="rule"/>
           </infoLinks>
         </infoGroup>
         <infoGroup id="359f-6942-0c5e-a486" name="Melee Weapon" hidden="false">
@@ -6897,12 +6917,17 @@ Permitted [Kiyozumi, Kenmeina, Ronin models]
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
-                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c382-9ab3-9924-e30a" type="instanceOf"/>
-                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d7c5-a2b9-4696-fd33" type="instanceOf"/>
-                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6639-615e-f1ab-bc64" type="instanceOf"/>
-                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7435-856f-ece2-fe58" type="instanceOf"/>
-                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f62f-dd0b-4f06-06a6" type="instanceOf"/>
                 <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7b8f-61a1-2d88-60f2" type="notInstanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" field="015e-41c8-a27f-7bda" value="1.0">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="477a-e693-0888-08f7" type="atLeast"/>
+                <condition field="selections" scope="primary-catalogue" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b4d7-0e2a-728f-20cf" type="instanceOf"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -6911,6 +6936,7 @@ Permitted [Kiyozumi, Kenmeina, Ronin models]
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8e46-4345-c1b3-20f1" type="max"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fab0-0f47-f06c-9452" type="max"/>
+        <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="015e-41c8-a27f-7bda" type="min"/>
       </constraints>
       <profiles>
         <profile id="c0d2-dfcc-1e62-492f" name="Accepted into the Shadow" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
@@ -6945,10 +6971,17 @@ Requirement [Kiyozumi Kicho]
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="477a-e693-0888-08f7" type="atLeast"/>
                 <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9402-edcc-93a2-aef1" type="atLeast"/>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b94d-f7cb-a84c-4077" type="equalTo"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b94d-f7cb-a84c-4077" type="atLeast"/>
               </conditions>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="477a-e693-0888-08f7" type="atLeast"/>
+                    <condition field="selections" scope="primary-catalogue" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b4d7-0e2a-728f-20cf" type="notInstanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </conditionGroup>
           </conditionGroups>
         </modifier>
@@ -7583,10 +7616,21 @@ Requirement [Taiyo]</characteristic>
             <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2195-17c7-b68c-0111" type="notInstanceOf"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="eb06-d6b9-b194-4990" value="1.0">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="477a-e693-0888-08f7" type="atLeast"/>
+                <condition field="selections" scope="primary-catalogue" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4213-717c-2228-e731" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d994-1cf5-92bf-60fb" type="max"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e685-6608-55bf-fd07" type="max"/>
+        <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="eb06-d6b9-b194-4990" type="min"/>
       </constraints>
       <profiles>
         <profile id="6650-9cb9-f2f1-5cb0" name="Man of the People" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
@@ -7683,7 +7727,7 @@ Requirement [Hozumi Koga]</characteristic>
       <modifiers>
         <modifier type="set" field="hidden" value="true">
           <conditions>
-            <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2b64-ba79-8ea1-4098" type="notInstanceOf"/>
+            <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="91b9-5dcc-298c-0bfb" type="notInstanceOf"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -8408,6 +8452,222 @@ Requirement (Kenmeina)</characteristic>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="13.0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="1ada-6f0c-8123-5aab" name="The Dark Pilgrim" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="477a-e693-0888-08f7" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b94d-f7cb-a84c-4077" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9402-edcc-93a2-aef1" type="atLeast"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="203c-fb92-7716-44ef" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="5dd3-de97-feda-8e85" name="The Dark Pilgrim" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">3</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33">3</characteristic>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">5</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">2</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">10</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">6 OOOOO O</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="84f9-d449-5f30-265b" name="Traits" hidden="false">
+          <profiles>
+            <profile id="485f-2f90-eaf8-e378" name="The Dark Pilgrim" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Cloudwalk, Feint (1), Hatred [The Grey Pilgrim], Lightning Reflexes, Sixth Sense, Soulless</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="2e7b-ae47-9ea0-0396" name="Soulless" hidden="false" targetId="af31-aad0-fcea-9590" type="rule"/>
+            <infoLink id="dec3-ea22-9134-3857" name="Hatred" hidden="false" targetId="7e1f-e126-b487-828b" type="rule"/>
+            <infoLink id="f867-7e17-7724-d653" name="Dodge " hidden="false" targetId="14d5-d459-5d8a-c73e" type="rule"/>
+            <infoLink id="d3e9-e2cb-6a87-2954" name="Cloudwalk" hidden="false" targetId="538c-1266-626b-fcc9" type="rule"/>
+            <infoLink id="ec08-82ad-5916-84f3" name="Sixth Sense" hidden="false" targetId="ec49-3908-f1d1-8de2" type="rule"/>
+            <infoLink id="9540-d35d-9fa0-ec82" name="Lightning Reflexes" hidden="false" targetId="efd4-dc31-6523-9c79" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="e8b5-f181-10eb-3c06" name="Ki Feats" hidden="false">
+          <infoLinks>
+            <infoLink id="f13d-7c99-43ab-d865" name="Surge" hidden="false" targetId="bdf6-46a8-0a10-2f84" type="infoGroup"/>
+            <infoLink id="3863-b86a-e574-81b5" name="Storm Path" hidden="false" targetId="afe1-f869-2875-53af" type="infoGroup"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="8875-f06f-8cc9-db54" name="Melee Weapon" hidden="false">
+          <profiles>
+            <profile id="7fcb-e951-52c1-2dd8" name="Kusari" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+1</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Chain Weapon (1)</characteristic>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Sweep Attack (1)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="5187-f535-8e33-0029" name="Sweep Attack" hidden="false" targetId="bcbd-fab2-c8e2-6ff7" type="rule"/>
+            <infoLink id="2436-60d5-44dc-664c" name="Chain Weapon" hidden="false" targetId="84f9-d10e-0e9f-d79c" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="c1d7-d713-fe63-4e12" name="Ranged Weapon" hidden="false">
+          <profiles>
+            <profile id="1497-ecd3-caa9-4376" name="Call Lightning" hidden="false" typeId="7e20-258e-bf92-18f9" typeName="Ranged Weapon">
+              <characteristics>
+                <characteristic name="Ranged Weapon Strength" typeId="15aa-b6bd-6923-271f">+1</characteristic>
+                <characteristic name="Range Bands" typeId="be6a-50c6-d691-e2e9">2/4/6</characteristic>
+                <characteristic name="Traits" typeId="3410-4428-ef91-eb61">Lightweight, Rapid Fire (X)</characteristic>
+                <characteristic name="Specials" typeId="cdaf-b6ac-89d4-39ef"/>
+                <characteristic name="Unique Effects" typeId="3bf8-6525-f003-4990">This weapon&apos;s Rapid Fire Trait is variable. X is equal to the number of Stunned Markers on Enemy models within 6&quot; of this model.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="1ffc-99d0-cf65-8add" name="Lightweight" hidden="false" targetId="c75c-7124-2b1f-a4d9" type="rule"/>
+            <infoLink id="de25-de6c-9e0b-b7ad" name="Rapid Fire" hidden="false" targetId="129c-7864-4cc1-f7bc" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="a91d-c9b9-dcf1-fda6" name="Unique Effects" hidden="false">
+          <profiles>
+            <profile id="584f-549e-2f8f-f8e5" name="The Dark Pilgrim" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">While this model is in play, a model Damaged by a Call Lightning or Raijin’s Rage Attack gains a Stunned Marker and a Fire (1) Marker.
+This model cannot be Targeted by Call Lightning Ranged Attacks or by Attacks generated by the Raijin’s Rage Ki Feat.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </infoGroup>
+      </infoGroups>
+      <categoryLinks>
+        <categoryLink id="b5d1-cbc7-3582-863f" name="Asura" hidden="false" targetId="c48e-5e32-f0b0-1cfe" primary="false"/>
+        <categoryLink id="3716-0e60-3d20-5269" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
+        <categoryLink id="2bcb-d59d-1205-05a1" name="New CategoryLink" hidden="false" targetId="9fba-f50b-c8f7-8396" primary="true"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="392c-50fc-7b22-4c62" name="Enhancements" hidden="false" collective="false" import="true" targetId="f486-4498-03e3-c397" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="18.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="4965-ef2c-5ec7-2d99" name="The Oncoming Storm" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c382-9ab3-9924-e30a" type="instanceOf"/>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d7c5-a2b9-4696-fd33" type="instanceOf"/>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6639-615e-f1ab-bc64" type="instanceOf"/>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7435-856f-ece2-fe58" type="instanceOf"/>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1ada-6f0c-8123-5aab" type="notInstanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7c5c-5e90-1d4c-cbb4" type="max"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="72c9-8a0e-3b6c-0167" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="fbcf-5641-d7b1-99f3" name="The Oncoming Storm" hidden="false" typeId="bd15-7ead-9268-3576" typeName="Special Card (Ki Feat)">
+          <characteristics>
+            <characteristic name="Description" typeId="17eb-17e2-4df4-5c5d">• Enemy models within 3&quot; of this model lose the Cloudwalk trait.
+• In the End Phase, you may add a Blind Marker to every Enemy model that removes a Stunned Marker (Do not remove these Blind Markers this turn). If you do, discard this card.
+Requirement [The Dark Pilgrim]
+• Attached model gains the following Ki Feat:</characteristic>
+            <characteristic name="Name" typeId="27c7-1649-f16e-8eaa">Storm Mistress</characteristic>
+            <characteristic name="Cost" typeId="e410-b220-64e5-7953">3</characteristic>
+            <characteristic name="Timing" typeId="b9bf-562a-fe26-cb29">Active</characteristic>
+            <characteristic name="Subject" typeId="47b8-f739-9d50-2e45">Special</characteristic>
+            <characteristic name="Limitation" typeId="870e-79e4-80ee-c0cc">Once Per Turn</characteristic>
+            <characteristic name="Ki Feat Description" typeId="3886-242b-fb70-5c88">Replace this model by Summoning and Deploying any Ronin Lesser Air Kami (Ignoring which Faction may recruit that model), remove this model and place it Elsewhere.
+You still cannot have more of that Kami models in play than the Max value on its card.
+If this model is Elsewhere, it may use this feat. Replace a Friendly Ronin Lesser Air Kami that you own with this model. Remove the Kami from play.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="e464-88e6-e948-c8ba" name="New CategoryLink" hidden="false" targetId="17cf-d9a9-c7c1-bcb6" primary="true"/>
+      </categoryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="af1d-199c-fe39-69e6" name="Spark of Life" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c382-9ab3-9924-e30a" type="instanceOf"/>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d7c5-a2b9-4696-fd33" type="instanceOf"/>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6639-615e-f1ab-bc64" type="instanceOf"/>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7435-856f-ece2-fe58" type="instanceOf"/>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="35fb-da76-bee4-2938" type="notInstanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" field="e352-b46c-2234-5b83" value="1.0">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="primary-catalogue" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d4b0-a54e-a48b-88a5" type="instanceOf"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="35fb-da76-bee4-2938" type="atLeast"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e293-f6a7-82c8-ddb0" type="max"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="44a4-0917-2c2a-1daf" type="max"/>
+        <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="e352-b46c-2234-5b83" type="min"/>
+      </constraints>
+      <profiles>
+        <profile id="4182-5385-bdbe-dd70" name="Spark of Life" hidden="false" typeId="bd15-7ead-9268-3576" typeName="Special Card (Ki Feat)">
+          <characteristics>
+            <characteristic name="Description" typeId="17eb-17e2-4df4-5c5d">• The Attached model gains one additional Ki Token during Ki generation.
+• If a Friendly model is Killed while within 6&quot;, you may return it to play with one wound box unmarked in BtB with the Attached model and discard this card.
+• Attached model can be recruited into the Descension faction.
+Requirement [Grey Pilgrim]
+• Attached model gains the following Ki Feat:</characteristic>
+            <characteristic name="Name" typeId="27c7-1649-f16e-8eaa">Shield of Light</characteristic>
+            <characteristic name="Cost" typeId="e410-b220-64e5-7953">X</characteristic>
+            <characteristic name="Timing" typeId="b9bf-562a-fe26-cb29">Instant</characteristic>
+            <characteristic name="Subject" typeId="47b8-f739-9d50-2e45">Pulse 3&quot;</characteristic>
+            <characteristic name="Limitation" typeId="870e-79e4-80ee-c0cc">Once Per Turn</characteristic>
+            <characteristic name="Ki Feat Description" typeId="3886-242b-fb70-5c88">When a Friendly Model within the Pulse is successfully attacked in a Melee Exchange, before the Damage Roll spend X Ki Tokens. X may not be greater than 3.
+For each Ki Token spent, prevent one Wound.
+The model making the attack gains a Stunned Marker.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="1be3-eff6-da14-28c5" name="New CategoryLink" hidden="false" targetId="17cf-d9a9-c7c1-bcb6" primary="true"/>
+      </categoryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2.0"/>
+      </costs>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup id="f486-4498-03e3-c397" name="Enhancements" hidden="false" collective="false" import="true">
@@ -8453,6 +8713,8 @@ Requirement (Kenmeina)</characteristic>
         <entryLink id="b0cf-ea13-e956-3c24" name="Bright Nurture" hidden="false" collective="false" import="true" targetId="7345-3239-1f28-59f1" type="selectionEntry"/>
         <entryLink id="3e83-79b8-d5e7-83f7" name="True Love" hidden="false" collective="false" import="true" targetId="8690-885b-08be-8353" type="selectionEntry"/>
         <entryLink id="34b2-e25b-4b8a-fdaf" name="Professional" hidden="false" collective="false" import="true" targetId="a795-4dac-6489-ce72" type="selectionEntry"/>
+        <entryLink id="5902-ac4e-658c-7cf5" name="The Oncoming Storm" hidden="false" collective="false" import="true" targetId="4965-ef2c-5ec7-2d99" type="selectionEntry"/>
+        <entryLink id="0545-3170-07b3-d801" name="Spark of Life" hidden="false" collective="false" import="true" targetId="af1d-199c-fe39-69e6" type="selectionEntry"/>
       </entryLinks>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>

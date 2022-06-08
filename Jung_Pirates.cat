@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="d615-aef7-31d5-367d" name="Jung Pirates" revision="9" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="4" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="d615-aef7-31d5-367d" name="Jung Pirates" revision="10" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="5" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="258a-e1a8-8db1-9635" name="Ki&lt;2" hidden="true"/>
     <categoryEntry id="f6c9-50fa-a9d3-e9f3" name="Ranged Weapon" hidden="true"/>
@@ -2163,20 +2163,19 @@ When this model is removed from play by an Enemy attack or effect, all models in
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6836-3e67-8f6f-f17b" type="max"/>
       </constraints>
       <profiles>
-        <profile id="8258-6247-9480-54ae" name="Jori" hidden="false" typeId="6ea2-0f74-4852-4a98" typeName="Character Profile">
+        <profile id="8258-6247-9480-54ae" name="Jori" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character">
           <characteristics>
-            <characteristic name="Melee Pool" typeId="8409-8d55-ce45-a33b">3</characteristic>
-            <characteristic name="Melee Boost" typeId="6a36-e826-18f3-0b25">3</characteristic>
-            <characteristic name="Ranged Pool" typeId="7a01-37c0-4741-672c">3</characteristic>
-            <characteristic name="Ranged Boost" typeId="ff66-ea54-d863-5c17">3</characteristic>
-            <characteristic name="Move" typeId="af89-242d-625f-9bff">4</characteristic>
-            <characteristic name="Move Boost" typeId="62a6-8125-f293-5c76"/>
-            <characteristic name="Ki" typeId="8b76-2b4b-066e-a0c5">1</characteristic>
-            <characteristic name="Ki Boost" typeId="c34e-f8ae-0984-37ac"/>
-            <characteristic name="Ki Cap" typeId="2e88-c65e-4e45-d4c4">6</characteristic>
-            <characteristic name="Wounds" typeId="a1dc-c2c1-e2d2-ca98">6 OOOOO O</characteristic>
-            <characteristic name="Size &amp; Base" typeId="6af2-e777-20ce-e060">Small 30mm</characteristic>
-            <characteristic name="Traits" typeId="e742-1b02-09cf-fd97">Bravery, Jumo Up</characteristic>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">3</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33">3</characteristic>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">1</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">6</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">6 OOOOO O</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -2188,6 +2187,13 @@ When this model is removed from play by an Enemy attack or effect, all models in
           </infoLinks>
         </infoGroup>
         <infoGroup id="78a4-b857-9c32-a25a" name="Traits" hidden="false">
+          <profiles>
+            <profile id="3c58-8099-ccf3-a7fc" name="Jori" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Bravery, Jump Up</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
           <infoLinks>
             <infoLink id="ef2d-2a85-d2d4-69a9" name="Bravery" hidden="false" targetId="f9b2-38d2-7cda-de6e" type="rule"/>
             <infoLink id="c878-d797-7675-f4bd" name="Jump Up" hidden="false" targetId="1575-e12f-4ca3-c557" type="rule"/>
@@ -2197,7 +2203,7 @@ When this model is removed from play by an Enemy attack or effect, all models in
           <profiles>
             <profile id="e0ea-628e-187b-2fe8" name="Thrown Harpoon" hidden="false" typeId="7e20-258e-bf92-18f9" typeName="Ranged Weapon">
               <characteristics>
-                <characteristic name="Ranged Weapon Strength" typeId="15aa-b6bd-6923-271f">+0</characteristic>
+                <characteristic name="Ranged Weapon Strength" typeId="15aa-b6bd-6923-271f">+1</characteristic>
                 <characteristic name="Range Bands" typeId="be6a-50c6-d691-e2e9">2/4/6</characteristic>
                 <characteristic name="Traits" typeId="3410-4428-ef91-eb61">Bleed (1/1), Lightweight</characteristic>
                 <characteristic name="Specials" typeId="cdaf-b6ac-89d4-39ef"/>
@@ -2213,7 +2219,7 @@ When this model is removed from play by an Enemy attack or effect, all models in
           <profiles>
             <profile id="ba40-0464-4d82-3448" name="Harpoon" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
               <characteristics>
-                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+0</characteristic>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+1</characteristic>
                 <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Bleed (1/1)</characteristic>
                 <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Reach</characteristic>
                 <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
@@ -2880,6 +2886,108 @@ This model may not be recruited into a Warband with the Docks of Ryu theme.</cha
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="12.0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="a139-c3e7-46d6-998d" name="Taiho" hidden="true" collective="false" import="true" type="model">
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5e9b-fe54-54c9-c521" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="cd20-787b-4911-3bb6" name="Taiho" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">2</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">3</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">3</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">1</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">6</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">7 OOOOO OO</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="67a7-7ab9-92e1-f33f" name="Traits" hidden="false">
+          <profiles>
+            <profile id="f21d-4d63-fe28-595a" name="Traits" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Jump Up, Slow, Strong</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="787d-87c1-96ba-8440" name="Slow" hidden="false" targetId="f1c3-4a84-c616-23cd" type="rule"/>
+            <infoLink id="a19a-72b9-8e3e-800e" name="Jump Up" hidden="false" targetId="1575-e12f-4ca3-c557" type="rule"/>
+            <infoLink id="77e0-e505-0e2b-8b51" name="Strong" hidden="false" targetId="00b5-3637-d48a-807e" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="e0e5-2e1e-6c2b-031f" name="Ki Feats" hidden="false">
+          <infoLinks>
+            <infoLink id="d33d-0a4d-9814-1851" name="Cannon Manipulation" hidden="false" targetId="bc87-4442-0e06-4683" type="infoGroup"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="c759-c417-d39c-ad31" name="Melee Weapon" hidden="false">
+          <profiles>
+            <profile id="2b36-02c0-fa83-831c" name="Heavy Barrel" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">Special</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e"/>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Stun Attack (1)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="6199-05f7-9a0d-2143" name="Combo Attack " hidden="false" targetId="78ab-6a94-be24-8f74" type="rule"/>
+            <infoLink id="9e53-7667-e3cd-6093" name="Push Attack" hidden="false" targetId="6c26-94ba-6b96-9e1b" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="89cb-76ef-0e12-adce" name="Ranged Weapon" hidden="false">
+          <profiles>
+            <profile id="b606-7ff1-76e9-28e4" name="Cannon" hidden="false" typeId="7e20-258e-bf92-18f9" typeName="Ranged Weapon">
+              <characteristics>
+                <characteristic name="Ranged Weapon Strength" typeId="15aa-b6bd-6923-271f">+4</characteristic>
+                <characteristic name="Range Bands" typeId="be6a-50c6-d691-e2e9">-/18/-</characteristic>
+                <characteristic name="Traits" typeId="3410-4428-ef91-eb61">Pierce (2), Reload (2), Ammo (2)</characteristic>
+                <characteristic name="Specials" typeId="cdaf-b6ac-89d4-39ef">Stun Attack (0)</characteristic>
+                <characteristic name="Unique Effects" typeId="3bf8-6525-f003-4990">The Opposing player may not nominate a new Target during Ranged Attacks made with this Weapon.
+Bodyguard may be used as normal.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="04c9-3a8a-eaa4-9c4e" name="Reload" hidden="false" targetId="9736-df56-0b62-b1a8" type="rule"/>
+            <infoLink id="1131-db25-b40f-518e" name="Stun Attack" hidden="false" targetId="ae27-975e-6c4b-d84e" type="rule"/>
+            <infoLink id="42fc-f089-5a72-afcb" name="Pierce " hidden="false" targetId="39e4-14d7-5533-6e67" type="rule"/>
+            <infoLink id="b452-ece7-e95f-69bf" name="Ammo" hidden="false" targetId="765d-18a5-7170-9b56" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="2de5-65a5-6308-7644" name="Unique Effects" hidden="false">
+          <profiles>
+            <profile id="de84-77b8-20ec-b7d0" name="Unique Effects" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">This model may not Walk as part of a Ranged Attack Action.
+This model begins the game with 2 Reload Markers.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </infoGroup>
+      </infoGroups>
+      <categoryLinks>
+        <categoryLink id="7106-4450-f316-542d" name="Faction: Jung Pirates" hidden="false" targetId="76df-04fb-ea1f-77ab" primary="false"/>
+        <categoryLink id="2e49-eb14-e88c-cf3b" name="Kaizoku" hidden="false" targetId="5bf8-7b73-412a-f654" primary="false"/>
+        <categoryLink id="1154-72b5-f231-9924" name="Ki&lt;2" hidden="false" targetId="258a-e1a8-8db1-9635" primary="false"/>
+        <categoryLink id="d59e-793d-7a7a-55ec" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
+        <categoryLink id="763e-6709-2fe7-cbc1" name="Ranged Weapon" hidden="false" targetId="f6c9-50fa-a9d3-e9f3" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="5d42-ada2-dc6e-b2c0" name="Enhancements" hidden="false" collective="false" import="true" targetId="2327-1257-a4b4-df32" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="12.0"/>
+      </costs>
+    </selectionEntry>
   </selectionEntries>
   <entryLinks>
     <entryLink id="7c58-4740-ab52-3330" name="Koshimori Yukio" hidden="false" collective="false" import="true" targetId="de1e-de2d-1044-bf56" type="selectionEntry">
@@ -3145,6 +3253,7 @@ This model may not be recruited into a Warband with the Docks of Ryu theme.</cha
     <entryLink id="800e-c142-ece1-9de4" name="Hozumi Maha" hidden="true" collective="false" import="true" targetId="09da-574e-599a-3226" type="selectionEntry"/>
     <entryLink id="9975-82c1-481f-0bbf" name="The Hozumi Family" hidden="false" collective="false" import="true" targetId="4750-f234-49e4-79c1" type="selectionEntry"/>
     <entryLink id="ff9e-ba87-b6da-1097" name="The Kiyozumi Family" hidden="false" collective="false" import="true" targetId="0e4a-a40c-14eb-2f4f" type="selectionEntry"/>
+    <entryLink id="3bf1-3b6c-5c33-d886" name="The Dark Pilgrim" hidden="false" collective="false" import="true" targetId="1ada-6f0c-8123-5aab" type="selectionEntry"/>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="a382-7e2d-9df9-d700" name="Korusea" hidden="false" collective="false" import="true" type="model">

@@ -3623,6 +3623,120 @@ While within 2&quot; of this model, Fire Kami models gain Aggressive and Brutal 
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="11.0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="eba3-981b-4cb1-ed0d" name="Fuku" hidden="true" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="60c2-7558-d59a-0e05" type="lessThan"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="477a-e693-0888-08f7" type="atLeast"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8c1f-70cd-71cd-0bc6" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="fe6c-f434-bfbd-cdae" name="Fuku" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">2</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">2</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33">3</characteristic>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac">3</characteristic>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">1</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c">3</characteristic>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">10</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">5 OOOOO</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="2ed9-f2c8-6901-602f" name="Ki Feats" hidden="false">
+          <infoLinks>
+            <infoLink id="b763-a24a-2d67-f169" name="Gambler&apos;s Ruin" hidden="false" targetId="779b-8277-f01d-64b5" type="infoGroup"/>
+            <infoLink id="21f6-70ff-7dda-3176" name="All-In" hidden="false" targetId="ab23-a581-f3cd-2c8d" type="infoGroup"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="46b0-c524-79dd-e5d6" name="Traits" hidden="false">
+          <profiles>
+            <profile id="0160-4f14-5cb0-aee5" name="Traits" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Fortune, Soulless</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="0cfd-dc5c-8eb5-a819" name="Fortune" hidden="false" targetId="abf1-1c0e-4717-77e2" type="rule"/>
+            <infoLink id="2a51-626e-fd34-8d1a" name="Soulless" hidden="false" targetId="af31-aad0-fcea-9590" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="3b4e-c4c7-e99c-1c4d" name="Melee Weapon" hidden="false">
+          <profiles>
+            <profile id="e50e-fcee-93e4-7c64" name="Concealed" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">-1</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e"/>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Sidestep Attack (0)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="6f7d-3600-0bed-6c9a" name="Combo Attack " hidden="false" targetId="78ab-6a94-be24-8f74" type="rule"/>
+            <infoLink id="6861-b3fe-e6da-be1f" name="Sweep Attack" hidden="false" targetId="bcbd-fab2-c8e2-6ff7" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="c43f-37ae-1021-e879" name="Ranged Weapon" hidden="false">
+          <profiles>
+            <profile id="c16d-a813-eb47-bbe7" name="Misfortune" hidden="false" typeId="7e20-258e-bf92-18f9" typeName="Ranged Weapon">
+              <characteristics>
+                <characteristic name="Ranged Weapon Strength" typeId="15aa-b6bd-6923-271f">Special</characteristic>
+                <characteristic name="Range Bands" typeId="be6a-50c6-d691-e2e9">2/4/6</characteristic>
+                <characteristic name="Traits" typeId="3410-4428-ef91-eb61"></characteristic>
+                <characteristic name="Specials" typeId="cdaf-b6ac-89d4-39ef"></characteristic>
+                <characteristic name="Unique Effects" typeId="3bf8-6525-f003-4990">Successful attacks with this Weapon do no damage but the Target gains a Mishap Token.
+Before a Damage Roll on a model with a Mishap Token, that model&apos;s Controller must flip a coin and call heads or tails.
+If they call successfully, that model takes damage as normal, otherwise that model takes double damage.
+After the damage roll, remove one Mishap Token.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="73ea-3514-957f-b771" name="Combo Attack " hidden="false" targetId="78ab-6a94-be24-8f74" type="rule"/>
+            <infoLink id="3df0-7794-4283-d3bd" name="Pierce " hidden="false" targetId="39e4-14d7-5533-6e67" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="4043-3f5c-a3eb-9403" name="Unique Effects" hidden="false">
+          <profiles>
+            <profile id="7ae0-38f5-2e92-57f3" name="Lucky" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">While this model is in play, Friendly models may spend Luck Tokens to allow a Friendly model within 6&quot; to re-flip a coin.
+Whenever an Effect causes dice to be re-rolled, this model gains 1 Ki Token.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </infoGroup>
+      </infoGroups>
+      <categoryLinks>
+        <categoryLink id="8440-165e-cfa8-d00e" name="Faction: Silvermoon Trade Syndicate" hidden="false" targetId="875a-48b1-3c9f-0a14" primary="false"/>
+        <categoryLink id="cfac-fd40-0ecf-aff0" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
+        <categoryLink id="c352-009f-c8b1-f99e" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
+        <categoryLink id="5a7d-ba20-8b5d-4771" name="Asura" hidden="false" targetId="c48e-5e32-f0b0-1cfe" primary="false"/>
+        <categoryLink id="9aa7-4814-f0e2-87b9" name="Golden Dawn" hidden="false" targetId="6e25-3b37-ec6a-9040" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="1fdc-7b33-5600-fbc5" name="Enhancements" hidden="false" collective="false" import="true" targetId="37a1-1d53-ef45-026d" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="13.0"/>
+      </costs>
+    </selectionEntry>
   </selectionEntries>
   <entryLinks>
     <entryLink id="7ae5-b29d-c5eb-c5c7" name="Kappa" hidden="false" collective="false" import="true" targetId="34f2-cc79-8047-6138" type="selectionEntry">

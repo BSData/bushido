@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="4213-717c-2228-e731" name="Temple of Ro-Kan" revision="11" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="5" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="4213-717c-2228-e731" name="Temple of Ro-Kan" revision="12" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="5" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="5048-3a52-5689-6d0b" name="Spiritual Harmony" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -4269,6 +4269,126 @@ This model may be recruited into any Warband that includes Taiki.</characteristi
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="14.0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="35ed-119b-9d99-36d9" name="Mina" hidden="true" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1a12-f47f-8f23-0777" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="add" field="category" value="760e-95d4-349a-cb3c">
+          <conditions>
+            <condition field="selections" scope="35ed-119b-9d99-36d9" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7ec6-dce9-29e5-a209" type="atLeast"/>
+          </conditions>
+        </modifier>
+        <modifier type="add" field="category" value="18b7-00de-cec4-40ca">
+          <conditions>
+            <condition field="selections" scope="35ed-119b-9d99-36d9" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f38d-d916-8836-28cd" type="atLeast"/>
+          </conditions>
+        </modifier>
+        <modifier type="add" field="category" value="3184-d389-7218-d304">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="35ed-119b-9d99-36d9" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e95f-bea1-b57e-6656" type="atLeast"/>
+                <condition field="selections" scope="35ed-119b-9d99-36d9" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="54e8-2b73-88a3-e1b7" type="atLeast"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="add" field="category" value="7ad2-8152-55dc-b4c9">
+          <conditions>
+            <condition field="selections" scope="35ed-119b-9d99-36d9" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3473-2978-59d5-a5c2" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f26b-525e-2770-db0f" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="23d3-4151-efbf-220e" name="Mina" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">2</characteristic>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">3</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33">2</characteristic>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac">2</characteristic>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">2</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c">2</characteristic>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">6</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">6 OOOOO O</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="0433-6342-9ffe-ce10" name="Traits" hidden="false">
+          <profiles>
+            <profile id="a704-e5be-b3db-8931" name="Traits" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Bravery, Heal (1), Jump Up, Kata, Lightfooted</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="af02-18f6-ca4f-5a8b" name="Lightfooted" hidden="false" targetId="57d2-cd57-07f9-addf" type="rule"/>
+            <infoLink id="2796-9cec-fabd-9c87" name="Kata" hidden="false" targetId="7283-1e6d-cb9c-f1c8" type="rule"/>
+            <infoLink id="65a5-21f6-ec88-0581" name="Heal" hidden="false" targetId="bd98-52d2-3a66-08e7" type="rule"/>
+            <infoLink id="cc6c-97b3-83a4-5b0f" name="Bravery" hidden="false" targetId="f9b2-38d2-7cda-de6e" type="rule"/>
+            <infoLink id="db91-fc06-ffa5-9c21" name="Jump Up" hidden="false" targetId="1575-e12f-4ca3-c557" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="2db8-e3aa-cb0a-43fb" name="Melee Weapon" hidden="false">
+          <profiles>
+            <profile id="7858-c01e-79fa-293b" name="Bujutsu" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+0</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e"/>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Drag Attack (0), Forceback Attack (0), Push Defence (0)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="4a15-7f62-977f-7c06" name="Drag Attack" hidden="false" targetId="9902-026d-4637-cc7d" type="rule"/>
+            <infoLink id="ebc9-3377-d2dd-72fd" name="Forceback Attack" hidden="false" targetId="2682-7c66-4163-28f2" type="rule"/>
+            <infoLink id="6383-e8ab-4aa5-0c7d" name="Push Defence" hidden="false" targetId="74fc-a971-d9c2-278c" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="a882-ee88-6202-7ce7" name="Ki Feats" hidden="false">
+          <infoLinks>
+            <infoLink id="07de-7778-2e0c-da33" name="Tidal Flow" hidden="false" targetId="110f-4b8c-3fba-6118" type="infoGroup"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="81b2-dd1f-ed33-8288" name="Unique Effects" hidden="false">
+          <profiles>
+            <profile id="afb6-2c1b-6d9c-38a9" name="Storm&apos;s Eye" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">This model is always treated as having Cover.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </infoGroup>
+      </infoGroups>
+      <categoryLinks>
+        <categoryLink id="db30-15ac-0574-6848" name="Element: Water" hidden="false" targetId="8ec2-de25-acb0-7b5a" primary="false"/>
+        <categoryLink id="22d4-f849-c7dd-c483" name="Faction: Temple of Rokan" hidden="false" targetId="3186-3d3a-a105-887b" primary="false"/>
+        <categoryLink id="f93f-7c54-0a60-1c3e" name="Monk" hidden="false" targetId="57a9-2b8a-3729-1ad8" primary="false"/>
+        <categoryLink id="1cc6-9f4e-19ca-df05" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
+        <categoryLink id="073c-0695-93b5-010e" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="ca07-3b99-0e33-37c8" name="Enhancements" hidden="false" collective="false" import="true" targetId="d716-36e8-af1d-0a1f" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="13.0"/>
+      </costs>
+    </selectionEntry>
   </selectionEntries>
   <entryLinks>
     <entryLink id="0f32-6304-1fad-6541" name="Ashinaga Tenaga" hidden="false" collective="false" import="true" targetId="e7ea-c376-aac2-5726" type="selectionEntry">
@@ -4508,16 +4628,6 @@ This model may be recruited into any Warband that includes Taiki.</characteristi
     </entryLink>
     <entryLink id="8a28-d558-ee86-1822" name="Hozumi Daihanji" hidden="true" collective="false" import="true" targetId="2195-17c7-b68c-0111" type="selectionEntry">
       <modifiers>
-        <modifier type="set" field="3ff2-d919-3510-4d21" value="0.0">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1a12-f47f-8f23-0777" type="atLeast"/>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f306-2092-6d16-77ea" type="lessThan"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
         <modifier type="set" field="hidden" value="false">
           <conditions>
             <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1a12-f47f-8f23-0777" type="atLeast"/>
@@ -4994,6 +5104,7 @@ When this model performs a Focus Action it gains Channel (6/6&quot;) until the e
                     <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="57a9-2b8a-3729-1ad8" type="instanceOf"/>
                     <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7379-3296-315e-62b2" type="notInstanceOf"/>
                     <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4280-5c0d-17ff-1d18" type="notInstanceOf"/>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="33ea-e647-b8c5-2267" type="lessThan"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>

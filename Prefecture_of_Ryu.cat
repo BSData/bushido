@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="0cac-b8ad-fb7f-ef84" name="Prefecture of Ryu" revision="12" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="5" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="0cac-b8ad-fb7f-ef84" name="Prefecture of Ryu" revision="13" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="5" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="8688-cd6e-bcbe-2cbb" name="Ima" hidden="false"/>
     <categoryEntry id="65a8-4392-a95b-115b" name="Takashi" hidden="false"/>
@@ -2768,16 +2768,6 @@ This model cannot be healed.</characteristic>
     </selectionEntry>
     <selectionEntry id="57c6-2296-2324-068c" name="Takashi Hiro" hidden="false" collective="false" import="true" type="model">
       <modifiers>
-        <modifier type="set" field="b902-c095-5e44-17a3" value="0.0">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b596-d287-0d47-e2ee" type="lessThan"/>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d5a3-42bc-c296-969a" type="atLeast"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
         <modifier type="add" field="category" value="f434-17e6-174c-b4f6">
           <conditions>
             <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b596-d287-0d47-e2ee" type="atLeast"/>
@@ -3867,6 +3857,141 @@ If this model is Successful, the Friendly model is not Surprised.</characteristi
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="17.0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="09e9-54aa-133c-8156" name="Kokkio" hidden="true" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1c4e-2aa6-2d32-f0d4" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1e02-a479-b92b-4103" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="4350-7fea-f8cd-bffd" name="Kokkio" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">2</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">3</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">1</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">6</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">6 OOOOO O</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="475e-9d36-f811-4c37" name="Ki Feats" hidden="false">
+          <infoLinks>
+            <infoLink id="0395-5b83-e0d3-69a2" name="Rangefinder" hidden="false" targetId="5dd6-c621-e58a-41df" type="infoGroup"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="f966-3138-e968-f7ed" name="Traits" hidden="false">
+          <profiles>
+            <profile id="3933-b617-d5da-110f" name="Traits" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Armour (2)</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="6bba-0f48-25ee-12d8" name="Armour" hidden="false" targetId="8615-1c63-2242-5746" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="2ab3-e860-a69a-85ea" name="Melee Weapon" hidden="false">
+          <profiles>
+            <profile id="344d-15e4-85b4-3ef6" name="Tachi" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+0</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e"/>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Push Defence (1)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="fcd1-2172-27aa-6c87" name="Push Defence" hidden="false" targetId="74fc-a971-d9c2-278c" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="5043-e52a-12e6-ac40" name="Unique Effects" hidden="false">
+          <profiles>
+            <profile id="77ab-b68e-b22f-4cc5" name="Plant Flag" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">If this model is recruited into the Warband, you may Deploy a Signal Flag anywhere on your half of the Battlefield when recruited terrain elements are deployed.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </infoGroup>
+        <infoGroup id="7361-acb0-81ec-71a0" name="Ranged Weapon" hidden="false">
+          <profiles>
+            <profile id="f9b0-3f01-8c94-40f3" name="Arquebus" hidden="false" typeId="7e20-258e-bf92-18f9" typeName="Ranged Weapon">
+              <characteristics>
+                <characteristic name="Ranged Weapon Strength" typeId="15aa-b6bd-6923-271f">+4</characteristic>
+                <characteristic name="Range Bands" typeId="be6a-50c6-d691-e2e9">6/12/18</characteristic>
+                <characteristic name="Traits" typeId="3410-4428-ef91-eb61">Pierce (3), Reload (2)</characteristic>
+                <characteristic name="Specials" typeId="cdaf-b6ac-89d4-39ef"/>
+                <characteristic name="Unique Effects" typeId="3bf8-6525-f003-4990"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="3e4d-502c-57f7-8158" name="Pierce " hidden="false" targetId="39e4-14d7-5533-6e67" type="rule"/>
+            <infoLink id="7828-3e42-2318-82e9" name="Reload" hidden="false" targetId="9736-df56-0b62-b1a8" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+      </infoGroups>
+      <categoryLinks>
+        <categoryLink id="ddec-a35f-d246-115f" name="Ashigaru" hidden="false" targetId="f434-17e6-174c-b4f6" primary="false"/>
+        <categoryLink id="c633-b85b-a2e3-5d8e" name="Faction: Prefecture of Ryu" hidden="false" targetId="7532-4f60-381d-2941" primary="false"/>
+        <categoryLink id="2d83-e737-dffa-8693" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
+        <categoryLink id="d98d-f477-c1b9-4a03" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
+        <categoryLink id="6396-bb98-5e37-c2e4" name="Armour" hidden="false" targetId="f322-702a-ff62-b37e" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="b6a8-4393-9a61-3032" name="Enhancements" hidden="false" collective="false" import="true" targetId="3dad-1423-9b3c-86a7" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="12.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="0b3d-bfb2-dc1a-ab89" name="Signal Flag" hidden="true" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="eab3-ef79-71af-410c" value="1.0">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="09e9-54aa-133c-8156" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="60ad-41f4-2177-9fc2" type="max"/>
+        <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="eab3-ef79-71af-410c" type="min"/>
+      </constraints>
+      <profiles>
+        <profile id="39bc-288e-831c-d7ca" name="Signal Flag" hidden="false" typeId="6fa2-988d-fc04-c751" typeName="Special Card (Terrain)">
+          <characteristics>
+            <characteristic name="Base" typeId="c40b-3106-986d-4db5">30mm</characteristic>
+            <characteristic name="Passage" typeId="3df8-6a47-0c4d-73e7">Normal</characteristic>
+            <characteristic name="Visibility" typeId="9858-c2c1-b6fc-b75c">Clear</characteristic>
+            <characteristic name="Size" typeId="000a-cf92-4d1e-c934">Small</characteristic>
+            <characteristic name="Traits" typeId="eaef-482b-c5d3-866e">Destructible</characteristic>
+            <characteristic name="Description" typeId="9cfa-9bd0-0b1b-9c06">Enemy models within 3&quot; of this terrain element gain Ranged Defence (-2).
+Max 3 in play.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="000f-857a-e8bc-68b2" name="New CategoryLink" hidden="false" targetId="bbd2-e0c8-797a-3f03" primary="true"/>
+      </categoryLinks>
+    </selectionEntry>
   </selectionEntries>
   <entryLinks>
     <entryLink id="d149-3ea0-90df-a450" name="Ancestor Spirit" hidden="false" collective="false" import="true" targetId="a8a8-fc30-a7e2-2913" type="selectionEntry">
@@ -4413,10 +4538,16 @@ Requirement [Ashigaru]</characteristic>
                 <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="57c6-2296-2324-068c" type="notInstanceOf"/>
               </conditions>
             </modifier>
+            <modifier type="set" field="76ce-7734-6343-ef60" value="1.0">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="true" childId="d5a3-42bc-c296-969a" type="atLeast"/>
+              </conditions>
+            </modifier>
           </modifiers>
           <constraints>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0a9e-e08b-ff73-9707" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1a74-9c60-929b-8633" type="max"/>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="76ce-7734-6343-ef60" type="min"/>
           </constraints>
           <profiles>
             <profile id="4900-b05f-95ee-843e" name="Heir by Blood" hidden="false" typeId="bd15-7ead-9268-3576" typeName="Special Card (Ki Feat)">
