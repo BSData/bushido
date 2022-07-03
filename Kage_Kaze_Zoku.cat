@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="b4d7-0e2a-728f-20cf" name="Kage Kaze Zoku" revision="9" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="5" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="b4d7-0e2a-728f-20cf" name="Kage Kaze Zoku" revision="10" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="5" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="33d5-3364-f1d4-a94c" name="Lockdown" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -1910,12 +1910,17 @@ Once per game, in the Starting Phase, you may add a permitted Faction Enhancemen
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="21.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="f15b-4d26-2eaa-dd2b" name="Neko" hidden="true" collective="false" import="true" type="model">
+    <selectionEntry id="f15b-4d26-2eaa-dd2b" name="Neko" hidden="false" collective="false" import="true" type="model">
       <modifiers>
         <modifier type="set" field="ac90-904a-50d7-0fd4" value="0.0">
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6ac4-d054-eb7e-e75d" type="lessThan"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6ac4-d054-eb7e-e75d" type="lessThan"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="dc64-e668-4aac-8ec9" type="lessThan"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <constraints>
@@ -1925,11 +1930,11 @@ Once per game, in the Starting Phase, you may add a permitted Faction Enhancemen
         <profile id="cd8c-e075-f18c-3b5d" name="Neko" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character">
           <characteristics>
             <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
-            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277"></characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277"/>
             <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">-</characteristic>
-            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"></characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
             <characteristic name="Move" typeId="91b7-833e-fd8e-a620">6</characteristic>
-            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"></characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
             <characteristic name="Ki" typeId="3969-9568-a914-6854">2</characteristic>
             <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
             <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">0</characteristic>
@@ -1952,7 +1957,7 @@ Once per game, in the Starting Phase, you may add a permitted Faction Enhancemen
             <profile id="a8e2-c057-ed8e-276c" name="ClawsBite" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
               <characteristics>
                 <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+2</characteristic>
-                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e"></characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e"/>
                 <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Sidestep Defence (0), Powerful Attack (1)</characteristic>
                 <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
               </characteristics>
