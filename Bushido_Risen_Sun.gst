@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="62e4-ab79-1c4c-9ffe" name="Bushido: Risen Sun" revision="5" battleScribeVersion="2.03" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="62e4-ab79-1c4c-9ffe" name="Bushido: Risen Sun" revision="6" battleScribeVersion="2.03" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <costTypes>
     <costType id="a111-8656-5c05-7415" name=" Rice" defaultCostLimit="-1.0" hidden="false"/>
   </costTypes>
@@ -130,11 +130,11 @@
     </profileType>
   </profileTypes>
   <categoryEntries>
-    <categoryEntry id="d360-71aa-ca22-ba3c" name="Event Cards" hidden="false"/>
-    <categoryEntry id="bbd2-e0c8-797a-3f03" name="Terrain Cards" hidden="false"/>
-    <categoryEntry id="17cf-d9a9-c7c1-bcb6" name="Enhancement Cards" hidden="false"/>
-    <categoryEntry id="5bcd-fe93-a8ea-0164" name="Equipment Cards" hidden="false"/>
-    <categoryEntry id="0ca8-2040-37f2-a1e0" name="Profile Cards" hidden="false">
+    <categoryEntry id="d360-71aa-ca22-ba3c" name="Faction Event Cards" hidden="false"/>
+    <categoryEntry id="bbd2-e0c8-797a-3f03" name="Faction Terrain Cards" hidden="false"/>
+    <categoryEntry id="17cf-d9a9-c7c1-bcb6" name="Faction Enhancement Cards" hidden="false"/>
+    <categoryEntry id="5bcd-fe93-a8ea-0164" name="Faction Equipment Cards" hidden="false"/>
+    <categoryEntry id="0ca8-2040-37f2-a1e0" name="Faction Profile Cards" hidden="false">
       <modifiers>
         <modifier type="set" field="hidden" value="true">
           <conditionGroups>
@@ -150,7 +150,7 @@
         </modifier>
       </modifiers>
     </categoryEntry>
-    <categoryEntry id="477a-e693-0888-08f7" name="Theme Cards" hidden="false">
+    <categoryEntry id="477a-e693-0888-08f7" name="Faction Theme Cards" hidden="false">
       <modifierGroups>
         <modifierGroup>
           <modifiers>
@@ -209,11 +209,46 @@
     <categoryEntry id="4a43-1cd1-cfb2-f5cd" name="Risen Sun Cycle" hidden="false"/>
     <categoryEntry id="a745-0548-80c8-ece4" name="Cycle: Risen Sun" hidden="false"/>
     <categoryEntry id="b254-2810-6b62-66d9" name="Brotherhood" hidden="false"/>
-    <categoryEntry id="3df8-0340-a4a1-a8be" name="Ronin Terrain Cards" hidden="false"/>
-    <categoryEntry id="7638-6ad1-8829-91db" name="Ronin Event Cards" hidden="false"/>
+    <categoryEntry id="3df8-0340-a4a1-a8be" name="Ronin Terrain Cards" hidden="false">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="ec59-5e92-0626-3540" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </categoryEntry>
+    <categoryEntry id="7638-6ad1-8829-91db" name="Ronin Event Cards" hidden="false">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="ec59-5e92-0626-3540" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </categoryEntry>
     <categoryEntry id="943d-6b70-d85b-fb7b" name="Faction: Kinshi Temple" hidden="false"/>
     <categoryEntry id="0611-cc97-0bfa-e973" name="The Kiyozumi Family" hidden="false"/>
     <categoryEntry id="7567-af27-0612-2915" name="The Hozumi Family" hidden="false"/>
+    <categoryEntry id="ec59-5e92-0626-3540" name="The Black Eagle&apos;s Coalition" hidden="false"/>
+    <categoryEntry id="278f-9379-320a-1a7a" name="Ronin Equipment Cards" hidden="false">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="ec59-5e92-0626-3540" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </categoryEntry>
+    <categoryEntry id="2758-69ad-6e26-c737" name="Ronin Enhancement Cards" hidden="false">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="ec59-5e92-0626-3540" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </categoryEntry>
   </categoryEntries>
   <forceEntries>
     <forceEntry id="2150-40b1-52f8-4a8a" name="Risen Sun" hidden="true">
