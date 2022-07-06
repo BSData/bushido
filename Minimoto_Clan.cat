@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="d2c8-91e9-1a97-89b4" name="Minimoto Clan" revision="13" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="5" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="d2c8-91e9-1a97-89b4" name="Minimoto Clan" revision="13" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="6" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="6b68-2575-cc8f-c08f" name="Armour 3+" hidden="false"/>
   </categoryEntries>
@@ -186,25 +186,31 @@
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="acdd-fcff-69fe-ec9a" type="max"/>
       </constraints>
       <profiles>
-        <profile id="6106-510f-3883-c599" name="Hauru" hidden="false" typeId="6ea2-0f74-4852-4a98" typeName="Character Profile">
+        <profile id="6106-510f-3883-c599" name="Hauru" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character">
           <characteristics>
-            <characteristic name="Melee Pool" typeId="8409-8d55-ce45-a33b">2</characteristic>
-            <characteristic name="Melee Boost" typeId="6a36-e826-18f3-0b25"/>
-            <characteristic name="Ranged Pool" typeId="7a01-37c0-4741-672c">2</characteristic>
-            <characteristic name="Ranged Boost" typeId="ff66-ea54-d863-5c17"/>
-            <characteristic name="Move" typeId="af89-242d-625f-9bff">4</characteristic>
-            <characteristic name="Move Boost" typeId="62a6-8125-f293-5c76"/>
-            <characteristic name="Ki" typeId="8b76-2b4b-066e-a0c5">1</characteristic>
-            <characteristic name="Ki Boost" typeId="c34e-f8ae-0984-37ac"/>
-            <characteristic name="Ki Cap" typeId="2e88-c65e-4e45-d4c4">6</characteristic>
-            <characteristic name="Wounds" typeId="a1dc-c2c1-e2d2-ca98">7 OOOOO OO</characteristic>
-            <characteristic name="Size &amp; Base" typeId="6af2-e777-20ce-e060">Small 30mm</characteristic>
-            <characteristic name="Traits" typeId="e742-1b02-09cf-fd97">Immune [Fire], Leadership [Minimoto](1/6&quot;), Resistance (2), Steadfast</characteristic>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">2</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277"/>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">2</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">1</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">6</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">7 OOOOO OO</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
           </characteristics>
         </profile>
       </profiles>
       <infoGroups>
         <infoGroup id="6b05-f748-da42-e45e" name="Traits" hidden="false">
+          <profiles>
+            <profile id="ab06-5db9-161a-eb3c" name="Hauru" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Immune [Fire], Leadership [Minimoto](1/6&quot;), Resistance (2), Steadfast</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
           <infoLinks>
             <infoLink id="9eac-d1df-8eac-8134" name="Steadfast" hidden="false" targetId="95e7-3178-c29b-013c" type="rule"/>
             <infoLink id="9a4d-62ae-a2dd-ce55" name="Immune" hidden="false" targetId="ea08-b25e-0ea8-af73" type="rule"/>
@@ -286,6 +292,13 @@
       </constraints>
       <infoGroups>
         <infoGroup id="3a23-305c-f8d2-f6ef" name="Traits" hidden="false">
+          <profiles>
+            <profile id="b8aa-aade-9cf3-b76d" name="Jyoto Ashigaru" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Armour (3), Bear Stands Alone, Steadfast</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
           <infoLinks>
             <infoLink id="5011-b122-59dc-69ef" name="Steadfast" hidden="false" targetId="95e7-3178-c29b-013c" type="rule"/>
             <infoLink id="00a7-76f3-57ca-ffad" name="Bear Stands Alone" hidden="false" targetId="40cc-86cf-58d8-8799" type="rule"/>
@@ -327,20 +340,19 @@
             <modifier type="append" field="name" value="B"/>
           </modifiers>
           <profiles>
-            <profile id="8d14-c492-86fd-b733" name="Jyoto Ashigaru B" hidden="false" typeId="6ea2-0f74-4852-4a98" typeName="Character Profile">
+            <profile id="8d14-c492-86fd-b733" name="Jyoto Ashigaru B" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character">
               <characteristics>
-                <characteristic name="Melee Pool" typeId="8409-8d55-ce45-a33b">3</characteristic>
-                <characteristic name="Melee Boost" typeId="6a36-e826-18f3-0b25">3</characteristic>
-                <characteristic name="Ranged Pool" typeId="7a01-37c0-4741-672c">2</characteristic>
-                <characteristic name="Ranged Boost" typeId="ff66-ea54-d863-5c17"/>
-                <characteristic name="Move" typeId="af89-242d-625f-9bff">4</characteristic>
-                <characteristic name="Move Boost" typeId="62a6-8125-f293-5c76"/>
-                <characteristic name="Ki" typeId="8b76-2b4b-066e-a0c5">1</characteristic>
-                <characteristic name="Ki Boost" typeId="c34e-f8ae-0984-37ac"/>
-                <characteristic name="Ki Cap" typeId="2e88-c65e-4e45-d4c4">6</characteristic>
-                <characteristic name="Wounds" typeId="a1dc-c2c1-e2d2-ca98">7 OOOOO OO</characteristic>
-                <characteristic name="Size &amp; Base" typeId="6af2-e777-20ce-e060">Small 30mm</characteristic>
-                <characteristic name="Traits" typeId="e742-1b02-09cf-fd97">Armour (3), Bear Stands Alone, Steadfast</characteristic>
+                <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
+                <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+                <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">2</characteristic>
+                <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+                <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
+                <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+                <characteristic name="Ki" typeId="3969-9568-a914-6854">1</characteristic>
+                <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+                <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">6</characteristic>
+                <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">7 OOOOO OO</characteristic>
+                <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -353,20 +365,19 @@
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="230d-c18c-4cc5-234f" type="min"/>
           </constraints>
           <profiles>
-            <profile id="42e5-f36f-c5a0-0cc3" name="Jyoto Ashigaru A" hidden="false" typeId="6ea2-0f74-4852-4a98" typeName="Character Profile">
+            <profile id="42e5-f36f-c5a0-0cc3" name="Jyoto Ashigaru A" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character">
               <characteristics>
-                <characteristic name="Melee Pool" typeId="8409-8d55-ce45-a33b">3</characteristic>
-                <characteristic name="Melee Boost" typeId="6a36-e826-18f3-0b25">3</characteristic>
-                <characteristic name="Ranged Pool" typeId="7a01-37c0-4741-672c">2</characteristic>
-                <characteristic name="Ranged Boost" typeId="ff66-ea54-d863-5c17"/>
-                <characteristic name="Move" typeId="af89-242d-625f-9bff">4</characteristic>
-                <characteristic name="Move Boost" typeId="62a6-8125-f293-5c76"/>
-                <characteristic name="Ki" typeId="8b76-2b4b-066e-a0c5">1</characteristic>
-                <characteristic name="Ki Boost" typeId="c34e-f8ae-0984-37ac"/>
-                <characteristic name="Ki Cap" typeId="2e88-c65e-4e45-d4c4">6</characteristic>
-                <characteristic name="Wounds" typeId="a1dc-c2c1-e2d2-ca98">7 OOOOO OO</characteristic>
-                <characteristic name="Size &amp; Base" typeId="6af2-e777-20ce-e060">Small 30mm</characteristic>
-                <characteristic name="Traits" typeId="e742-1b02-09cf-fd97">Armour (3), Bear Stands Alone, Steadfast</characteristic>
+                <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
+                <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+                <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">2</characteristic>
+                <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+                <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
+                <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+                <characteristic name="Ki" typeId="3969-9568-a914-6854">1</characteristic>
+                <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+                <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">6</characteristic>
+                <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">7 OOOOO OO</characteristic>
+                <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -392,25 +403,31 @@
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1424-4fad-01b9-6125" type="max"/>
       </constraints>
       <profiles>
-        <profile id="2a10-ec13-d68e-7341" name="Hoshi Kimiko" hidden="false" typeId="6ea2-0f74-4852-4a98" typeName="Character Profile">
+        <profile id="2a10-ec13-d68e-7341" name="Hoshi Kimiko" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character">
           <characteristics>
-            <characteristic name="Melee Pool" typeId="8409-8d55-ce45-a33b">2</characteristic>
-            <characteristic name="Melee Boost" typeId="6a36-e826-18f3-0b25"/>
-            <characteristic name="Ranged Pool" typeId="7a01-37c0-4741-672c">2</characteristic>
-            <characteristic name="Ranged Boost" typeId="ff66-ea54-d863-5c17"/>
-            <characteristic name="Move" typeId="af89-242d-625f-9bff">4</characteristic>
-            <characteristic name="Move Boost" typeId="62a6-8125-f293-5c76"/>
-            <characteristic name="Ki" typeId="8b76-2b4b-066e-a0c5">2</characteristic>
-            <characteristic name="Ki Boost" typeId="c34e-f8ae-0984-37ac">2</characteristic>
-            <characteristic name="Ki Cap" typeId="2e88-c65e-4e45-d4c4">8</characteristic>
-            <characteristic name="Wounds" typeId="a1dc-c2c1-e2d2-ca98">7 OOOOO OO</characteristic>
-            <characteristic name="Size &amp; Base" typeId="6af2-e777-20ce-e060">Small 30mm</characteristic>
-            <characteristic name="Traits" typeId="e742-1b02-09cf-fd97">Immune [Fire], Prowess [Melee](1), Spirit (1)</characteristic>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">2</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277"/>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">2</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">2</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c">2</characteristic>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">8</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">7 OOOOO OO</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
           </characteristics>
         </profile>
       </profiles>
       <infoGroups>
         <infoGroup id="0406-1afe-99e6-e764" name="Traits" hidden="false">
+          <profiles>
+            <profile id="4cf8-fc61-2d4d-0b75" name="Hoshi Kimiko" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Immune [Fire], Prowess [Melee](1), Spirit (1)</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
           <infoLinks>
             <infoLink id="3efc-501c-ba6d-47a6" name="Spirit" hidden="false" targetId="a9ba-9904-7d29-7bcb" type="rule"/>
             <infoLink id="d92c-5ae6-7f7e-35ae" name="Prowess " hidden="false" targetId="75ef-327a-cd08-a248" type="rule"/>
@@ -478,25 +495,31 @@
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8351-8bab-36aa-b635" type="max"/>
       </constraints>
       <profiles>
-        <profile id="1125-4c4d-aa98-07dc" name="Masaema Aya" hidden="false" typeId="6ea2-0f74-4852-4a98" typeName="Character Profile">
+        <profile id="1125-4c4d-aa98-07dc" name="Masaema Aya" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character">
           <characteristics>
-            <characteristic name="Melee Pool" typeId="8409-8d55-ce45-a33b">3</characteristic>
-            <characteristic name="Melee Boost" typeId="6a36-e826-18f3-0b25">3</characteristic>
-            <characteristic name="Ranged Pool" typeId="7a01-37c0-4741-672c">3</characteristic>
-            <characteristic name="Ranged Boost" typeId="ff66-ea54-d863-5c17"/>
-            <characteristic name="Move" typeId="af89-242d-625f-9bff">4</characteristic>
-            <characteristic name="Move Boost" typeId="62a6-8125-f293-5c76"/>
-            <characteristic name="Ki" typeId="8b76-2b4b-066e-a0c5">1</characteristic>
-            <characteristic name="Ki Boost" typeId="c34e-f8ae-0984-37ac"/>
-            <characteristic name="Ki Cap" typeId="2e88-c65e-4e45-d4c4">6</characteristic>
-            <characteristic name="Wounds" typeId="a1dc-c2c1-e2d2-ca98">7 OOOOO OO</characteristic>
-            <characteristic name="Size &amp; Base" typeId="6af2-e777-20ce-e060">Small 30mm</characteristic>
-            <characteristic name="Traits" typeId="e742-1b02-09cf-fd97">Armour (3), Bear Stands Alone, Endurance, Fearless, Resistance (2)</characteristic>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">3</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">1</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">6</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">7 OOOOO OO</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
           </characteristics>
         </profile>
       </profiles>
       <infoGroups>
         <infoGroup id="3dc9-f2b5-58db-2b6a" name="Traits" hidden="false">
+          <profiles>
+            <profile id="eda3-8edd-96e2-06ea" name="Masaema Aya" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Armour (3), Bear Stands Alone, Endurance, Fearless, Resistance (2)</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
           <infoLinks>
             <infoLink id="246b-d267-28ae-4437" name="Resistance " hidden="false" targetId="7e3f-9dc3-cacb-469f" type="rule"/>
             <infoLink id="2b76-8fea-ef29-729f" name="Fearless" hidden="false" targetId="5d6f-1746-9080-aca5" type="rule"/>
@@ -560,25 +583,31 @@
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fcfb-c919-5fc6-92b4" type="max"/>
       </constraints>
       <profiles>
-        <profile id="f8a9-1e7c-7c3b-47b9" name="Masaema Yoshinobu" hidden="false" typeId="6ea2-0f74-4852-4a98" typeName="Character Profile">
+        <profile id="f8a9-1e7c-7c3b-47b9" name="Masaema Yoshinobu" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character">
           <characteristics>
-            <characteristic name="Melee Pool" typeId="8409-8d55-ce45-a33b">3</characteristic>
-            <characteristic name="Melee Boost" typeId="6a36-e826-18f3-0b25">3</characteristic>
-            <characteristic name="Ranged Pool" typeId="7a01-37c0-4741-672c">2</characteristic>
-            <characteristic name="Ranged Boost" typeId="ff66-ea54-d863-5c17"/>
-            <characteristic name="Move" typeId="af89-242d-625f-9bff">4</characteristic>
-            <characteristic name="Move Boost" typeId="62a6-8125-f293-5c76"/>
-            <characteristic name="Ki" typeId="8b76-2b4b-066e-a0c5">1</characteristic>
-            <characteristic name="Ki Boost" typeId="c34e-f8ae-0984-37ac"/>
-            <characteristic name="Ki Cap" typeId="2e88-c65e-4e45-d4c4">6</characteristic>
-            <characteristic name="Wounds" typeId="a1dc-c2c1-e2d2-ca98">7 OOOOO OO</characteristic>
-            <characteristic name="Size &amp; Base" typeId="6af2-e777-20ce-e060">Small 30mm</characteristic>
-            <characteristic name="Traits" typeId="e742-1b02-09cf-fd97">Armour (3), Bear Stands Alone, Steadfast</characteristic>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">2</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">1</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">6</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">7 OOOOO OO</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
           </characteristics>
         </profile>
       </profiles>
       <infoGroups>
         <infoGroup id="6ed3-570b-6bbe-bd2e" name="Traits" hidden="false">
+          <profiles>
+            <profile id="3eae-ecc8-f74d-20f0" name="Masaema Yoshinobu" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Armour (3), Bear Stands Alone, Steadfast</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
           <infoLinks>
             <infoLink id="93a9-f308-1bef-5762" name="Steadfast" hidden="false" targetId="95e7-3178-c29b-013c" type="rule"/>
             <infoLink id="53c2-d17a-9cdf-9abe" name="Armour" hidden="false" targetId="8615-1c63-2242-5746" type="rule"/>
@@ -718,25 +747,31 @@
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2f31-82f7-2451-b501" type="max"/>
       </constraints>
       <profiles>
-        <profile id="2fce-e219-0ef2-6af1" name="Minimoto Yuji" hidden="false" typeId="6ea2-0f74-4852-4a98" typeName="Character Profile">
+        <profile id="2fce-e219-0ef2-6af1" name="Minimoto Yuji" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character">
           <characteristics>
-            <characteristic name="Melee Pool" typeId="8409-8d55-ce45-a33b">4</characteristic>
-            <characteristic name="Melee Boost" typeId="6a36-e826-18f3-0b25">3</characteristic>
-            <characteristic name="Ranged Pool" typeId="7a01-37c0-4741-672c">3</characteristic>
-            <characteristic name="Ranged Boost" typeId="ff66-ea54-d863-5c17"/>
-            <characteristic name="Move" typeId="af89-242d-625f-9bff">4</characteristic>
-            <characteristic name="Move Boost" typeId="62a6-8125-f293-5c76"/>
-            <characteristic name="Ki" typeId="8b76-2b4b-066e-a0c5">2</characteristic>
-            <characteristic name="Ki Boost" typeId="c34e-f8ae-0984-37ac"/>
-            <characteristic name="Ki Cap" typeId="2e88-c65e-4e45-d4c4">6</characteristic>
-            <characteristic name="Wounds" typeId="a1dc-c2c1-e2d2-ca98">7 OOOOO OO</characteristic>
-            <characteristic name="Size &amp; Base" typeId="6af2-e777-20ce-e060">Small 30mm</characteristic>
-            <characteristic name="Traits" typeId="e742-1b02-09cf-fd97">Armour (3), Bear Stands Alone, Bravery, Indomitable (1), Prowess [Melee](1), Resistance (2), Steadfast</characteristic>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">4</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">3</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">2</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">6</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">7 OOOOO OO</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
           </characteristics>
         </profile>
       </profiles>
       <infoGroups>
         <infoGroup id="9962-b9aa-14c3-bbd9" name="Traits" hidden="false">
+          <profiles>
+            <profile id="248c-fa64-b50f-4771" name="Minimoto Yuji" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Armour (3), Bear Stands Alone, Bravery, Indomitable (1), Prowess [Melee](1), Resistance (2), Steadfast</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
           <infoLinks>
             <infoLink id="de4b-910a-4e36-ee6b" name="Steadfast" hidden="false" targetId="95e7-3178-c29b-013c" type="rule"/>
             <infoLink id="3749-6d17-7d6f-d485" name="Armour" hidden="false" targetId="8615-1c63-2242-5746" type="rule"/>
@@ -812,25 +847,31 @@
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="667f-1354-c7d0-53c0" type="max"/>
       </constraints>
       <profiles>
-        <profile id="b3ee-7912-2373-7705" name="Nuan" hidden="false" typeId="6ea2-0f74-4852-4a98" typeName="Character Profile">
+        <profile id="b3ee-7912-2373-7705" name="Nuan" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character">
           <characteristics>
-            <characteristic name="Melee Pool" typeId="8409-8d55-ce45-a33b">2</characteristic>
-            <characteristic name="Melee Boost" typeId="6a36-e826-18f3-0b25"/>
-            <characteristic name="Ranged Pool" typeId="7a01-37c0-4741-672c">3</characteristic>
-            <characteristic name="Ranged Boost" typeId="ff66-ea54-d863-5c17">3</characteristic>
-            <characteristic name="Move" typeId="af89-242d-625f-9bff">4</characteristic>
-            <characteristic name="Move Boost" typeId="62a6-8125-f293-5c76"/>
-            <characteristic name="Ki" typeId="8b76-2b4b-066e-a0c5">1</characteristic>
-            <characteristic name="Ki Boost" typeId="c34e-f8ae-0984-37ac"/>
-            <characteristic name="Ki Cap" typeId="2e88-c65e-4e45-d4c4">6</characteristic>
-            <characteristic name="Wounds" typeId="a1dc-c2c1-e2d2-ca98">7 OOOOO OO</characteristic>
-            <characteristic name="Size &amp; Base" typeId="6af2-e777-20ce-e060">Small 30mm</characteristic>
-            <characteristic name="Traits" typeId="e742-1b02-09cf-fd97">Immune [Fire], Resistance (2), Steadfast</characteristic>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">2</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277"/>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">3</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33">3</characteristic>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">1</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">6</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">7 OOOOO OO</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
           </characteristics>
         </profile>
       </profiles>
       <infoGroups>
         <infoGroup id="1355-0d31-bd7a-4bdf" name="Traits" hidden="false">
+          <profiles>
+            <profile id="3d94-e743-018c-1169" name="Nuan" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Immune [Fire], Resistance (2), Steadfast</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
           <infoLinks>
             <infoLink id="f9f4-94ad-c118-f1da" name="Steadfast" hidden="false" targetId="95e7-3178-c29b-013c" type="rule"/>
             <infoLink id="132d-f594-9bfd-b2c1" name="Immune" hidden="false" targetId="ea08-b25e-0ea8-af73" type="rule"/>
@@ -912,25 +953,31 @@
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8fd8-2fc7-beec-f89e" type="max"/>
       </constraints>
       <profiles>
-        <profile id="c0a4-04dc-1f30-38e7" name="Raiko" hidden="false" typeId="6ea2-0f74-4852-4a98" typeName="Character Profile">
+        <profile id="c0a4-04dc-1f30-38e7" name="Raiko" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character">
           <characteristics>
-            <characteristic name="Melee Pool" typeId="8409-8d55-ce45-a33b">3</characteristic>
-            <characteristic name="Melee Boost" typeId="6a36-e826-18f3-0b25">3</characteristic>
-            <characteristic name="Ranged Pool" typeId="7a01-37c0-4741-672c">2</characteristic>
-            <characteristic name="Ranged Boost" typeId="ff66-ea54-d863-5c17"/>
-            <characteristic name="Move" typeId="af89-242d-625f-9bff">4</characteristic>
-            <characteristic name="Move Boost" typeId="62a6-8125-f293-5c76"/>
-            <characteristic name="Ki" typeId="8b76-2b4b-066e-a0c5">1</characteristic>
-            <characteristic name="Ki Boost" typeId="c34e-f8ae-0984-37ac"/>
-            <characteristic name="Ki Cap" typeId="2e88-c65e-4e45-d4c4">6</characteristic>
-            <characteristic name="Wounds" typeId="a1dc-c2c1-e2d2-ca98">7 OOOOO OO</characteristic>
-            <characteristic name="Size &amp; Base" typeId="6af2-e777-20ce-e060">Small 30mm</characteristic>
-            <characteristic name="Traits" typeId="e742-1b02-09cf-fd97">Bear Stands Alone, Steadfast</characteristic>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">2</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">1</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">6</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">7 OOOOO OO</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
           </characteristics>
         </profile>
       </profiles>
       <infoGroups>
         <infoGroup id="3403-e7eb-0d40-7c5f" name="Traits" hidden="false">
+          <profiles>
+            <profile id="c7e6-76f6-daaa-5891" name="Raiko" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Bear Stands Alone, Steadfast</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
           <infoLinks>
             <infoLink id="3780-8146-23d3-9910" name="Steadfast" hidden="false" targetId="95e7-3178-c29b-013c" type="rule"/>
             <infoLink id="7217-2b77-2104-f065" name="Bear Stands Alone" hidden="false" targetId="40cc-86cf-58d8-8799" type="rule"/>
@@ -988,25 +1035,31 @@
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a0d9-775e-7e62-27ec" type="max"/>
       </constraints>
       <profiles>
-        <profile id="b1d1-4b96-8b26-2846" name="Tetsu" hidden="false" typeId="6ea2-0f74-4852-4a98" typeName="Character Profile">
+        <profile id="b1d1-4b96-8b26-2846" name="Tetsu" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character">
           <characteristics>
-            <characteristic name="Melee Pool" typeId="8409-8d55-ce45-a33b">3</characteristic>
-            <characteristic name="Melee Boost" typeId="6a36-e826-18f3-0b25"/>
-            <characteristic name="Ranged Pool" typeId="7a01-37c0-4741-672c">0</characteristic>
-            <characteristic name="Ranged Boost" typeId="ff66-ea54-d863-5c17"/>
-            <characteristic name="Move" typeId="af89-242d-625f-9bff">4</characteristic>
-            <characteristic name="Move Boost" typeId="62a6-8125-f293-5c76"/>
-            <characteristic name="Ki" typeId="8b76-2b4b-066e-a0c5">2</characteristic>
-            <characteristic name="Ki Boost" typeId="c34e-f8ae-0984-37ac"/>
-            <characteristic name="Ki Cap" typeId="2e88-c65e-4e45-d4c4">0</characteristic>
-            <characteristic name="Wounds" typeId="a1dc-c2c1-e2d2-ca98">7 OOOOO OO</characteristic>
-            <characteristic name="Size &amp; Base" typeId="6af2-e777-20ce-e060">Medium 40mm</characteristic>
-            <characteristic name="Traits" typeId="e742-1b02-09cf-fd97">Aloof, Armour (1), Bear Stands Alone, Bravery, Fear (6), Resistance (2), Lightfooted, Steadfast, Tough (1)</characteristic>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277"/>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">0</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">2</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">0</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">7 OOOOO OO</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Medium 40mm</characteristic>
           </characteristics>
         </profile>
       </profiles>
       <infoGroups>
         <infoGroup id="8f4c-0599-ac44-c72d" name="Traits" hidden="false">
+          <profiles>
+            <profile id="e25a-1f51-8d63-f8e2" name="Tetsu" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Aloof, Armour (1), Bear Stands Alone, Bravery, Fear (6), Resistance (2), Lightfooted, Steadfast, Tough (1)</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
           <infoLinks>
             <infoLink id="1b30-fa41-9031-9e7f" name="Steadfast" hidden="false" targetId="95e7-3178-c29b-013c" type="rule"/>
             <infoLink id="1492-5eef-92b0-9a57" name="Tough" hidden="false" targetId="5613-a6cf-495a-229f" type="rule"/>
@@ -1170,20 +1223,19 @@ This model may be recruited into any Minimoto Theme that does not restrict it.</
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5e21-7d17-c9b2-7816" type="max"/>
       </constraints>
       <profiles>
-        <profile id="c996-c26f-209a-3727" name="Hoshi Rinko" hidden="false" typeId="6ea2-0f74-4852-4a98" typeName="Character Profile">
+        <profile id="c996-c26f-209a-3727" name="Hoshi Rinko" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character">
           <characteristics>
-            <characteristic name="Melee Pool" typeId="8409-8d55-ce45-a33b">2</characteristic>
-            <characteristic name="Melee Boost" typeId="6a36-e826-18f3-0b25">3</characteristic>
-            <characteristic name="Ranged Pool" typeId="7a01-37c0-4741-672c">3</characteristic>
-            <characteristic name="Ranged Boost" typeId="ff66-ea54-d863-5c17"/>
-            <characteristic name="Move" typeId="af89-242d-625f-9bff">4</characteristic>
-            <characteristic name="Move Boost" typeId="62a6-8125-f293-5c76"/>
-            <characteristic name="Ki" typeId="8b76-2b4b-066e-a0c5">3</characteristic>
-            <characteristic name="Ki Boost" typeId="c34e-f8ae-0984-37ac"/>
-            <characteristic name="Ki Cap" typeId="2e88-c65e-4e45-d4c4">8</characteristic>
-            <characteristic name="Wounds" typeId="a1dc-c2c1-e2d2-ca98">7 OOOOO OO</characteristic>
-            <characteristic name="Size &amp; Base" typeId="6af2-e777-20ce-e060">Small 30mm</characteristic>
-            <characteristic name="Traits" typeId="e742-1b02-09cf-fd97">Immune (Fire), Prowess [Melee](1), Steadfast</characteristic>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">2</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">3</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">3</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">8</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">7 OOOOO OO</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -1217,6 +1269,13 @@ This model may be recruited into any Minimoto Theme that does not restrict it.</
           </infoLinks>
         </infoGroup>
         <infoGroup id="04b3-0048-48ce-81a9" name="Traits" hidden="false">
+          <profiles>
+            <profile id="6a64-38a4-2cb4-d804" name="Hoshi Rinko" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Immune (Fire), Prowess [Melee](1), Steadfast</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
           <infoLinks>
             <infoLink id="b39c-beaa-76d6-7186" name="Steadfast" hidden="false" targetId="95e7-3178-c29b-013c" type="rule"/>
             <infoLink id="45e9-7352-8075-3b2f" name="Prowess " hidden="false" targetId="75ef-327a-cd08-a248" type="rule"/>
@@ -1292,6 +1351,13 @@ This model does not gain Slow from Blizzard.</characteristic>
           </infoLinks>
         </infoGroup>
         <infoGroup id="dbd1-17df-f8da-2509" name="Traits" hidden="false">
+          <profiles>
+            <profile id="5b59-a3a1-97ce-9227" name="Unblessed Ashigaru" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Bear Stand Alone, Group, Steadfast</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
           <infoLinks>
             <infoLink id="ab2b-7f92-2c76-f06d" name="Steadfast" hidden="false" targetId="95e7-3178-c29b-013c" type="rule"/>
             <infoLink id="9a9c-6d7b-4b6a-76b3" name="Bear Stands Alone" hidden="false" targetId="40cc-86cf-58d8-8799" type="rule"/>
@@ -1324,20 +1390,19 @@ This model does not gain Slow from Blizzard.</characteristic>
             <modifier type="append" field="name" value="B"/>
           </modifiers>
           <profiles>
-            <profile id="5b5f-fe7c-f02d-119e" name="Unblessed Ashigaru B" hidden="false" typeId="6ea2-0f74-4852-4a98" typeName="Character Profile">
+            <profile id="5b5f-fe7c-f02d-119e" name="Unblessed Ashigaru B" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character">
               <characteristics>
-                <characteristic name="Melee Pool" typeId="8409-8d55-ce45-a33b">2</characteristic>
-                <characteristic name="Melee Boost" typeId="6a36-e826-18f3-0b25">3</characteristic>
-                <characteristic name="Ranged Pool" typeId="7a01-37c0-4741-672c">2</characteristic>
-                <characteristic name="Ranged Boost" typeId="ff66-ea54-d863-5c17"/>
-                <characteristic name="Move" typeId="af89-242d-625f-9bff">4</characteristic>
-                <characteristic name="Move Boost" typeId="62a6-8125-f293-5c76"/>
-                <characteristic name="Ki" typeId="8b76-2b4b-066e-a0c5">1</characteristic>
-                <characteristic name="Ki Boost" typeId="c34e-f8ae-0984-37ac"/>
-                <characteristic name="Ki Cap" typeId="2e88-c65e-4e45-d4c4">6</characteristic>
-                <characteristic name="Wounds" typeId="a1dc-c2c1-e2d2-ca98">7 OOOOO OO</characteristic>
-                <characteristic name="Size &amp; Base" typeId="6af2-e777-20ce-e060">Small 30mm</characteristic>
-                <characteristic name="Traits" typeId="e742-1b02-09cf-fd97">Bear Stand Alone, Group, Steadfast</characteristic>
+                <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">2</characteristic>
+                <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+                <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">2</characteristic>
+                <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+                <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
+                <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+                <characteristic name="Ki" typeId="3969-9568-a914-6854">1</characteristic>
+                <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+                <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">6</characteristic>
+                <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">7 OOOOO OO</characteristic>
+                <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -1350,20 +1415,19 @@ This model does not gain Slow from Blizzard.</characteristic>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1c92-e231-34ff-50e9" type="min"/>
           </constraints>
           <profiles>
-            <profile id="731a-6539-0e12-df22" name="Unblessed Ashigaru A" hidden="false" typeId="6ea2-0f74-4852-4a98" typeName="Character Profile">
+            <profile id="731a-6539-0e12-df22" name="Unblessed Ashigaru A" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character">
               <characteristics>
-                <characteristic name="Melee Pool" typeId="8409-8d55-ce45-a33b">2</characteristic>
-                <characteristic name="Melee Boost" typeId="6a36-e826-18f3-0b25">3</characteristic>
-                <characteristic name="Ranged Pool" typeId="7a01-37c0-4741-672c">2</characteristic>
-                <characteristic name="Ranged Boost" typeId="ff66-ea54-d863-5c17"/>
-                <characteristic name="Move" typeId="af89-242d-625f-9bff">4</characteristic>
-                <characteristic name="Move Boost" typeId="62a6-8125-f293-5c76"/>
-                <characteristic name="Ki" typeId="8b76-2b4b-066e-a0c5">1</characteristic>
-                <characteristic name="Ki Boost" typeId="c34e-f8ae-0984-37ac"/>
-                <characteristic name="Ki Cap" typeId="2e88-c65e-4e45-d4c4">6</characteristic>
-                <characteristic name="Wounds" typeId="a1dc-c2c1-e2d2-ca98">7 OOOOO OO</characteristic>
-                <characteristic name="Size &amp; Base" typeId="6af2-e777-20ce-e060">Small 30mm</characteristic>
-                <characteristic name="Traits" typeId="e742-1b02-09cf-fd97">Bear Stand Alone, Group, Steadfast</characteristic>
+                <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">2</characteristic>
+                <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+                <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">2</characteristic>
+                <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+                <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
+                <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+                <characteristic name="Ki" typeId="3969-9568-a914-6854">1</characteristic>
+                <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+                <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">6</characteristic>
+                <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">7 OOOOO OO</characteristic>
+                <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -1514,6 +1578,13 @@ This model may declare a Charge Action while in BtB with an Enemy model.</charac
       </constraints>
       <infoGroups>
         <infoGroup id="4437-e639-6768-9878" name="Traits" hidden="false">
+          <profiles>
+            <profile id="7e8b-c7d7-9952-3f30" name="Eban&apos;nage Ashigaru" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Armour (3), Bear Stands Alone, Steadfast</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
           <infoLinks>
             <infoLink id="766d-fe55-3499-b551" name="Steadfast" hidden="false" targetId="95e7-3178-c29b-013c" type="rule"/>
             <infoLink id="207b-15e8-0f09-ac17" name="Bear Stands Alone" hidden="false" targetId="40cc-86cf-58d8-8799" type="rule"/>
@@ -1569,20 +1640,19 @@ This model may declare a Charge Action while in BtB with an Enemy model.</charac
             <modifier type="append" field="name" value="B"/>
           </modifiers>
           <profiles>
-            <profile id="0776-4ba9-d827-b873" name="Eban&apos;nage Ashigaru B" hidden="false" typeId="6ea2-0f74-4852-4a98" typeName="Character Profile">
+            <profile id="0776-4ba9-d827-b873" name="Eban&apos;nage Ashigaru B" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character">
               <characteristics>
-                <characteristic name="Melee Pool" typeId="8409-8d55-ce45-a33b">2</characteristic>
-                <characteristic name="Melee Boost" typeId="6a36-e826-18f3-0b25">3</characteristic>
-                <characteristic name="Ranged Pool" typeId="7a01-37c0-4741-672c">3</characteristic>
-                <characteristic name="Ranged Boost" typeId="ff66-ea54-d863-5c17">3</characteristic>
-                <characteristic name="Move" typeId="af89-242d-625f-9bff">4</characteristic>
-                <characteristic name="Move Boost" typeId="62a6-8125-f293-5c76"/>
-                <characteristic name="Ki" typeId="8b76-2b4b-066e-a0c5">1</characteristic>
-                <characteristic name="Ki Boost" typeId="c34e-f8ae-0984-37ac"/>
-                <characteristic name="Ki Cap" typeId="2e88-c65e-4e45-d4c4">6</characteristic>
-                <characteristic name="Wounds" typeId="a1dc-c2c1-e2d2-ca98">7 OOOOO OO</characteristic>
-                <characteristic name="Size &amp; Base" typeId="6af2-e777-20ce-e060">Small 30mm</characteristic>
-                <characteristic name="Traits" typeId="e742-1b02-09cf-fd97">Armour (3), Bear Stands Alone, Steadfast</characteristic>
+                <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">2</characteristic>
+                <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+                <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">3</characteristic>
+                <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33">3</characteristic>
+                <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
+                <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+                <characteristic name="Ki" typeId="3969-9568-a914-6854">1</characteristic>
+                <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+                <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">6</characteristic>
+                <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">7 OOOOO OO</characteristic>
+                <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -1595,20 +1665,19 @@ This model may declare a Charge Action while in BtB with an Enemy model.</charac
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ff07-1ae8-f9b1-069e" type="min"/>
           </constraints>
           <profiles>
-            <profile id="8fd1-c3c2-389f-4b14" name="Eban&apos;nage Ashigaru A" hidden="false" typeId="6ea2-0f74-4852-4a98" typeName="Character Profile">
+            <profile id="8fd1-c3c2-389f-4b14" name="Eban&apos;nage Ashigaru A" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character">
               <characteristics>
-                <characteristic name="Melee Pool" typeId="8409-8d55-ce45-a33b">2</characteristic>
-                <characteristic name="Melee Boost" typeId="6a36-e826-18f3-0b25">3</characteristic>
-                <characteristic name="Ranged Pool" typeId="7a01-37c0-4741-672c">3</characteristic>
-                <characteristic name="Ranged Boost" typeId="ff66-ea54-d863-5c17">3</characteristic>
-                <characteristic name="Move" typeId="af89-242d-625f-9bff">4</characteristic>
-                <characteristic name="Move Boost" typeId="62a6-8125-f293-5c76"/>
-                <characteristic name="Ki" typeId="8b76-2b4b-066e-a0c5">1</characteristic>
-                <characteristic name="Ki Boost" typeId="c34e-f8ae-0984-37ac"/>
-                <characteristic name="Ki Cap" typeId="2e88-c65e-4e45-d4c4">6</characteristic>
-                <characteristic name="Wounds" typeId="a1dc-c2c1-e2d2-ca98">7 OOOOO OO</characteristic>
-                <characteristic name="Size &amp; Base" typeId="6af2-e777-20ce-e060">Small 30mm</characteristic>
-                <characteristic name="Traits" typeId="e742-1b02-09cf-fd97">Armour (3), Bear Stands Alone, Steadfast</characteristic>
+                <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">2</characteristic>
+                <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+                <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">3</characteristic>
+                <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33">3</characteristic>
+                <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
+                <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+                <characteristic name="Ki" typeId="3969-9568-a914-6854">1</characteristic>
+                <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+                <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">6</characteristic>
+                <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">7 OOOOO OO</characteristic>
+                <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -1747,25 +1816,31 @@ This model may declare a Charge Action while in BtB with an Enemy model.</charac
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="04f3-b888-5632-0641" type="max"/>
       </constraints>
       <profiles>
-        <profile id="fb4f-9e9d-2ae9-5b0d" name="Akemi" hidden="false" typeId="6ea2-0f74-4852-4a98" typeName="Character Profile">
+        <profile id="fb4f-9e9d-2ae9-5b0d" name="Akemi" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character">
           <characteristics>
-            <characteristic name="Melee Pool" typeId="8409-8d55-ce45-a33b">3</characteristic>
-            <characteristic name="Melee Boost" typeId="6a36-e826-18f3-0b25">3</characteristic>
-            <characteristic name="Ranged Pool" typeId="7a01-37c0-4741-672c">3</characteristic>
-            <characteristic name="Ranged Boost" typeId="ff66-ea54-d863-5c17">3</characteristic>
-            <characteristic name="Move" typeId="af89-242d-625f-9bff">4</characteristic>
-            <characteristic name="Move Boost" typeId="62a6-8125-f293-5c76"/>
-            <characteristic name="Ki" typeId="8b76-2b4b-066e-a0c5">1</characteristic>
-            <characteristic name="Ki Boost" typeId="c34e-f8ae-0984-37ac"/>
-            <characteristic name="Ki Cap" typeId="2e88-c65e-4e45-d4c4">6</characteristic>
-            <characteristic name="Wounds" typeId="a1dc-c2c1-e2d2-ca98">7 OOOOO OO</characteristic>
-            <characteristic name="Size &amp; Base" typeId="6af2-e777-20ce-e060">Small 30mm</characteristic>
-            <characteristic name="Traits" typeId="e742-1b02-09cf-fd97">Armour (3), Bear Stands Alone, Immune [Prone], Steadfast</characteristic>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">3</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33">3</characteristic>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">1</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">6</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">7 OOOOO OO</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
           </characteristics>
         </profile>
       </profiles>
       <infoGroups>
         <infoGroup id="c6ce-c9ef-0b79-682b" name="Traits" hidden="false">
+          <profiles>
+            <profile id="3cc1-9a04-b368-a416" name="Akemi" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Armour (3), Bear Stands Alone, Immune [Prone], Steadfast</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
           <infoLinks>
             <infoLink id="f7e8-a36c-b5d1-a2d4" name="Steadfast" hidden="false" targetId="95e7-3178-c29b-013c" type="rule"/>
             <infoLink id="c8d4-2e49-a3eb-922a" name="Immune" hidden="false" targetId="ea08-b25e-0ea8-af73" type="rule"/>
@@ -1832,25 +1907,31 @@ This model may declare a Charge Action while in BtB with an Enemy model.</charac
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2f6e-c074-da21-6c47" type="max"/>
       </constraints>
       <profiles>
-        <profile id="c1b0-eea5-87c7-8fd5" name="Yuyokuma" hidden="false" typeId="6ea2-0f74-4852-4a98" typeName="Character Profile">
+        <profile id="c1b0-eea5-87c7-8fd5" name="Yuyokuma" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character">
           <characteristics>
-            <characteristic name="Melee Pool" typeId="8409-8d55-ce45-a33b">4</characteristic>
-            <characteristic name="Melee Boost" typeId="6a36-e826-18f3-0b25"/>
-            <characteristic name="Ranged Pool" typeId="7a01-37c0-4741-672c">0</characteristic>
-            <characteristic name="Ranged Boost" typeId="ff66-ea54-d863-5c17"/>
-            <characteristic name="Move" typeId="af89-242d-625f-9bff">4</characteristic>
-            <characteristic name="Move Boost" typeId="62a6-8125-f293-5c76"/>
-            <characteristic name="Ki" typeId="8b76-2b4b-066e-a0c5">2</characteristic>
-            <characteristic name="Ki Boost" typeId="c34e-f8ae-0984-37ac"/>
-            <characteristic name="Ki Cap" typeId="2e88-c65e-4e45-d4c4">0</characteristic>
-            <characteristic name="Wounds" typeId="a1dc-c2c1-e2d2-ca98">7 OOOOO OO</characteristic>
-            <characteristic name="Size &amp; Base" typeId="6af2-e777-20ce-e060">Medium 40mm</characteristic>
-            <characteristic name="Traits" typeId="e742-1b02-09cf-fd97">Aloof, Bear Stands Alone, Fear (6), Immune [Prone], Lightfooted, Steadfast, Tough (2)</characteristic>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">4</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277"/>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">0</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">2</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">0</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">7 OOOOO OO</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Medium 40mm</characteristic>
           </characteristics>
         </profile>
       </profiles>
       <infoGroups>
         <infoGroup id="b3f2-6660-5704-d690" name="Traits" hidden="false">
+          <profiles>
+            <profile id="51a6-5f23-24af-5bb6" name="Yuyokuma" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Aloof, Bear Stands Alone, Fear (6), Immune [Prone], Lightfooted, Steadfast, Tough (2)</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
           <infoLinks>
             <infoLink id="bc65-26f9-6465-3f77" name="Steadfast" hidden="false" targetId="95e7-3178-c29b-013c" type="rule"/>
             <infoLink id="5f99-b391-9bf5-6c26" name="Tough" hidden="false" targetId="5613-a6cf-495a-229f" type="rule"/>
