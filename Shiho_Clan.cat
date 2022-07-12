@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="2276-2df6-78a7-841d" name="Shiho Clan" revision="15" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="6" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="2276-2df6-78a7-841d" name="Shiho Clan" revision="16" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="6" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="7fa5-7ef0-59c5-f657" name="Tanaka" hidden="false"/>
   </categoryEntries>
@@ -41,7 +41,21 @@
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="set" field="aa6b-277b-3a0a-b373" value="1.0">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7265-24a0-f489-3a0d" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7bda-31ca-310f-2f3d" type="atLeast"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="aa6b-277b-3a0a-b373" type="min"/>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1ef9-7110-860b-fc67" type="max"/>
+      </constraints>
       <profiles>
         <profile id="93df-5f86-891f-ffba" name="Open Rebellion" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
           <characteristics>
@@ -138,6 +152,13 @@ Excluded [Giant Eagle]</characteristic>
       </constraints>
       <infoGroups>
         <infoGroup id="bca0-bbc8-769d-0519" name="Traits" hidden="false">
+          <profiles>
+            <profile id="f97a-d4cb-61e3-fab4" name="Hawk &amp; Kite" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Aloof, Aware, Bodyguard [Tsuki](1&quot;), Charging Bonus [Fear (6)], Co-ordinated Attack [Wolf], Endurance, Lightfooted, Pack (0/0&quot;)</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
           <infoLinks>
             <infoLink id="d71b-b6be-f498-6075" name="Aloof" hidden="false" targetId="5101-70fc-eca4-d99b" type="rule"/>
             <infoLink id="bfb2-80ae-9ff3-e788" name="Aware" hidden="false" targetId="ff4a-6b14-09dd-2343" type="rule"/>
@@ -170,12 +191,13 @@ Excluded [Giant Eagle]</characteristic>
             <profile id="5b38-c306-c82b-fd43" name="Loyal Wolves" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
               <characteristics>
                 <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">This model gains Bravery when declaring actions Targeting or Selecting a model already in BtB with a Friendly model.
-This model gains Bravery when declaring actions Targeting or Selecting a model already in BtB with Tanaka Tsuki, or when using Bodyguard.</characteristic>
+This model gains Fearless when declaring actions Targeting or Selecting a model already in BtB with Tanaka Tsuki, or when using Bodyguard.</characteristic>
               </characteristics>
             </profile>
           </profiles>
           <infoLinks>
-            <infoLink id="7e05-7aa6-4679-7b29" name="Coup de Grâce" hidden="false" targetId="6374-b4ae-6cc5-4908" type="profile"/>
+            <infoLink id="7e05-7aa6-4679-7b29" name="Killing Blow" hidden="false" targetId="6374-b4ae-6cc5-4908" type="profile"/>
+            <infoLink id="a7a7-8ea5-36e0-f49a" name="Open Rebellion" hidden="false" targetId="03b4-0274-07e0-8a00" type="profile"/>
           </infoLinks>
         </infoGroup>
       </infoGroups>
@@ -192,20 +214,19 @@ This model gains Bravery when declaring actions Targeting or Selecting a model a
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7baf-4c3f-9ab4-287f" type="max"/>
           </constraints>
           <profiles>
-            <profile id="6735-ff81-6fc6-c8aa" name="Hawk" hidden="false" typeId="6ea2-0f74-4852-4a98" typeName="Character Profile">
+            <profile id="6735-ff81-6fc6-c8aa" name="Hawk" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character">
               <characteristics>
-                <characteristic name="Melee Pool" typeId="8409-8d55-ce45-a33b">2</characteristic>
-                <characteristic name="Melee Boost" typeId="6a36-e826-18f3-0b25"/>
-                <characteristic name="Ranged Pool" typeId="7a01-37c0-4741-672c">0</characteristic>
-                <characteristic name="Ranged Boost" typeId="ff66-ea54-d863-5c17"/>
-                <characteristic name="Move" typeId="af89-242d-625f-9bff">5</characteristic>
-                <characteristic name="Move Boost" typeId="62a6-8125-f293-5c76"/>
-                <characteristic name="Ki" typeId="8b76-2b4b-066e-a0c5">1</characteristic>
-                <characteristic name="Ki Boost" typeId="c34e-f8ae-0984-37ac"/>
-                <characteristic name="Ki Cap" typeId="2e88-c65e-4e45-d4c4">0</characteristic>
-                <characteristic name="Wounds" typeId="a1dc-c2c1-e2d2-ca98">4 OOOO</characteristic>
-                <characteristic name="Size &amp; Base" typeId="6af2-e777-20ce-e060">Small 30mm</characteristic>
-                <characteristic name="Traits" typeId="e742-1b02-09cf-fd97">Aloof, Aware, Bodyguard [Tsuki](1&quot;), Charging Bonus [Fear (6)], Co-ordinated Attack [Wolf], Endurance, Lightfooted, Pack (0/0&quot;)</characteristic>
+                <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">2</characteristic>
+                <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277"/>
+                <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">0</characteristic>
+                <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+                <characteristic name="Move" typeId="91b7-833e-fd8e-a620">5</characteristic>
+                <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+                <characteristic name="Ki" typeId="3969-9568-a914-6854">1</characteristic>
+                <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+                <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">0</characteristic>
+                <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">4 OOOO</characteristic>
+                <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -225,20 +246,19 @@ This model gains Bravery when declaring actions Targeting or Selecting a model a
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d9bb-dfad-c6e7-77bd" type="max"/>
           </constraints>
           <profiles>
-            <profile id="5233-c882-a096-e14f" name="Kite" hidden="false" typeId="6ea2-0f74-4852-4a98" typeName="Character Profile">
+            <profile id="5233-c882-a096-e14f" name="Kite" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character">
               <characteristics>
-                <characteristic name="Melee Pool" typeId="8409-8d55-ce45-a33b">2</characteristic>
-                <characteristic name="Melee Boost" typeId="6a36-e826-18f3-0b25"/>
-                <characteristic name="Ranged Pool" typeId="7a01-37c0-4741-672c">0</characteristic>
-                <characteristic name="Ranged Boost" typeId="ff66-ea54-d863-5c17"/>
-                <characteristic name="Move" typeId="af89-242d-625f-9bff">5</characteristic>
-                <characteristic name="Move Boost" typeId="62a6-8125-f293-5c76"/>
-                <characteristic name="Ki" typeId="8b76-2b4b-066e-a0c5">1</characteristic>
-                <characteristic name="Ki Boost" typeId="c34e-f8ae-0984-37ac"/>
-                <characteristic name="Ki Cap" typeId="2e88-c65e-4e45-d4c4">0</characteristic>
-                <characteristic name="Wounds" typeId="a1dc-c2c1-e2d2-ca98">4 OOOO</characteristic>
-                <characteristic name="Size &amp; Base" typeId="6af2-e777-20ce-e060">Small 30mm</characteristic>
-                <characteristic name="Traits" typeId="e742-1b02-09cf-fd97">Aloof, Aware, Bodyguard [Tsuki](1&quot;), Charging Bonus [Fear (6)], Co-ordinated Attack [Wolf], Endurance, Lightfooted, Pack (0/0&quot;)</characteristic>
+                <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">2</characteristic>
+                <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277"/>
+                <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">0</characteristic>
+                <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+                <characteristic name="Move" typeId="91b7-833e-fd8e-a620">5</characteristic>
+                <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+                <characteristic name="Ki" typeId="3969-9568-a914-6854">1</characteristic>
+                <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+                <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">0</characteristic>
+                <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">4 OOOO</characteristic>
+                <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -277,25 +297,31 @@ This model gains Bravery when declaring actions Targeting or Selecting a model a
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7ff9-da8c-1b1a-689c" type="max"/>
       </constraints>
       <profiles>
-        <profile id="910e-5e6f-6439-cd6d" name="Tanaka Yue" hidden="false" typeId="6ea2-0f74-4852-4a98" typeName="Character Profile">
+        <profile id="910e-5e6f-6439-cd6d" name="Tanaka Yue" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character">
           <characteristics>
-            <characteristic name="Melee Pool" typeId="8409-8d55-ce45-a33b">3</characteristic>
-            <characteristic name="Melee Boost" typeId="6a36-e826-18f3-0b25">3</characteristic>
-            <characteristic name="Ranged Pool" typeId="7a01-37c0-4741-672c">3</characteristic>
-            <characteristic name="Ranged Boost" typeId="ff66-ea54-d863-5c17"/>
-            <characteristic name="Move" typeId="af89-242d-625f-9bff">4</characteristic>
-            <characteristic name="Move Boost" typeId="62a6-8125-f293-5c76">3</characteristic>
-            <characteristic name="Ki" typeId="8b76-2b4b-066e-a0c5">2</characteristic>
-            <characteristic name="Ki Boost" typeId="c34e-f8ae-0984-37ac"/>
-            <characteristic name="Ki Cap" typeId="2e88-c65e-4e45-d4c4">6</characteristic>
-            <characteristic name="Wounds" typeId="a1dc-c2c1-e2d2-ca98">5 OOOOO</characteristic>
-            <characteristic name="Size &amp; Base" typeId="6af2-e777-20ce-e060">Small 30mm</characteristic>
-            <characteristic name="Traits" typeId="e742-1b02-09cf-fd97">Bravery, Co-ordinated Attack [Tanaka], Endurance, Lightfooted, Pack (0/0&quot;), Prowess [Melee](1)</characteristic>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">3</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac">3</characteristic>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">2</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">6</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">5 OOOOO</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
           </characteristics>
         </profile>
       </profiles>
       <infoGroups>
         <infoGroup id="8dbe-47e3-69c1-82aa" name="Traits" hidden="false">
+          <profiles>
+            <profile id="71c4-bd2d-eb8a-24bb" name="Tanaka Yue" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Bravery, Co-ordinated Attack [Tanaka], Endurance, Lightfooted, Pack (0/0&quot;), Prowess [Melee](1)</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
           <infoLinks>
             <infoLink id="f402-1d55-aad2-07ad" name="Bravery" hidden="false" targetId="f9b2-38d2-7cda-de6e" type="rule"/>
             <infoLink id="bd47-5816-66fc-4629" name="Co-ordinated Attack" hidden="false" targetId="2337-7bcc-c1f2-f2bd" type="rule"/>
@@ -372,25 +398,31 @@ This model gains Bravery when declaring actions Targeting or Selecting a model a
         <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a0ca-48fb-3192-c03c" type="max"/>
       </constraints>
       <profiles>
-        <profile id="b5b3-5a17-f5c3-c7f8" name="Tanaka Tsuki" hidden="false" typeId="6ea2-0f74-4852-4a98" typeName="Character Profile">
+        <profile id="b5b3-5a17-f5c3-c7f8" name="Tanaka Tsuki" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character">
           <characteristics>
-            <characteristic name="Melee Pool" typeId="8409-8d55-ce45-a33b">3</characteristic>
-            <characteristic name="Melee Boost" typeId="6a36-e826-18f3-0b25">3</characteristic>
-            <characteristic name="Ranged Pool" typeId="7a01-37c0-4741-672c">3</characteristic>
-            <characteristic name="Ranged Boost" typeId="ff66-ea54-d863-5c17"/>
-            <characteristic name="Move" typeId="af89-242d-625f-9bff">4</characteristic>
-            <characteristic name="Move Boost" typeId="62a6-8125-f293-5c76">3</characteristic>
-            <characteristic name="Ki" typeId="8b76-2b4b-066e-a0c5">2</characteristic>
-            <characteristic name="Ki Boost" typeId="c34e-f8ae-0984-37ac"/>
-            <characteristic name="Ki Cap" typeId="2e88-c65e-4e45-d4c4">6</characteristic>
-            <characteristic name="Wounds" typeId="a1dc-c2c1-e2d2-ca98">6 OOOOO O</characteristic>
-            <characteristic name="Size &amp; Base" typeId="6af2-e777-20ce-e060">Small 30mm</characteristic>
-            <characteristic name="Traits" typeId="e742-1b02-09cf-fd97">Bravery, Co-ordinated Attack [Wolf], Endurance, Leadership [Wolf](1/6&quot;), Pack (2/6&quot;), Prowess [Melee](1), Tireless</characteristic>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">3</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac">3</characteristic>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">2</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">6</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">6 OOOOO O</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
           </characteristics>
         </profile>
       </profiles>
       <infoGroups>
         <infoGroup id="bb87-4d42-ac41-c1b3" name="Traits" hidden="false">
+          <profiles>
+            <profile id="c51e-570e-3f5b-ede1" name="Tanaka Tsuki" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Bravery, Co-ordinated Attack [Wolf], Endurance, Leadership [Wolf](1/6&quot;), Pack (2/6&quot;), Prowess [Melee](1), Tireless</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
           <infoLinks>
             <infoLink id="6239-e680-5354-16c4" name="Prowess " hidden="false" targetId="75ef-327a-cd08-a248" type="rule"/>
             <infoLink id="4e14-c47c-dce6-75a8" name="Pack" hidden="false" targetId="fa30-1c51-e091-9444" type="rule"/>
@@ -426,7 +458,8 @@ This model gains Bravery when declaring actions Targeting or Selecting a model a
         </infoGroup>
         <infoGroup id="40c8-9f7e-c980-fff4" name="Unique Effects" hidden="false">
           <infoLinks>
-            <infoLink id="533d-5a87-ed7b-ac1b" name="Killing Blow" hidden="false" targetId="6374-b4ae-6cc5-4908" type="profile"/>
+            <infoLink id="533d-5a87-ed7b-ac1b" name="Open Rebellion" hidden="false" targetId="03b4-0274-07e0-8a00" type="profile"/>
+            <infoLink id="fdaf-4ee6-7d36-fc41" name="Killing Blow" hidden="false" targetId="6374-b4ae-6cc5-4908" type="profile"/>
           </infoLinks>
         </infoGroup>
       </infoGroups>
@@ -465,25 +498,31 @@ This model gains Bravery when declaring actions Targeting or Selecting a model a
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="326c-9767-6392-7c0b" type="max"/>
       </constraints>
       <profiles>
-        <profile id="9ce9-6da4-972b-8fb9" name="Tanaka Muna" hidden="false" typeId="6ea2-0f74-4852-4a98" typeName="Character Profile">
+        <profile id="9ce9-6da4-972b-8fb9" name="Tanaka Muna" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character">
           <characteristics>
-            <characteristic name="Melee Pool" typeId="8409-8d55-ce45-a33b">3</characteristic>
-            <characteristic name="Melee Boost" typeId="6a36-e826-18f3-0b25">3</characteristic>
-            <characteristic name="Ranged Pool" typeId="7a01-37c0-4741-672c">3</characteristic>
-            <characteristic name="Ranged Boost" typeId="ff66-ea54-d863-5c17"/>
-            <characteristic name="Move" typeId="af89-242d-625f-9bff">4</characteristic>
-            <characteristic name="Move Boost" typeId="62a6-8125-f293-5c76">3</characteristic>
-            <characteristic name="Ki" typeId="8b76-2b4b-066e-a0c5">2</characteristic>
-            <characteristic name="Ki Boost" typeId="c34e-f8ae-0984-37ac"/>
-            <characteristic name="Ki Cap" typeId="2e88-c65e-4e45-d4c4">6</characteristic>
-            <characteristic name="Wounds" typeId="a1dc-c2c1-e2d2-ca98">5 OOOOO</characteristic>
-            <characteristic name="Size &amp; Base" typeId="6af2-e777-20ce-e060">Small 30mm</characteristic>
-            <characteristic name="Traits" typeId="e742-1b02-09cf-fd97">Bravery, Co-ordinated Attack [Tanaka], Endurance, Lightfooted, Pack (0/0&quot;), Prowess [Melee](1)</characteristic>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">3</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac">3</characteristic>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">2</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">6</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">5 OOOOO</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
           </characteristics>
         </profile>
       </profiles>
       <infoGroups>
         <infoGroup id="3bf9-bc40-88ce-9591" name="Traits" hidden="false">
+          <profiles>
+            <profile id="0f3f-85f4-4249-e91a" name="Tanaka Muna" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Bravery, Co-ordinated Attack [Tanaka], Endurance, Lightfooted, Pack (0/0&quot;), Prowess [Melee](1)</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
           <infoLinks>
             <infoLink id="16ab-7f17-19e8-eef0" name="Prowess " hidden="false" targetId="75ef-327a-cd08-a248" type="rule"/>
             <infoLink id="2c03-9309-04a4-5196" name="Pack" hidden="false" targetId="fa30-1c51-e091-9444" type="rule"/>
@@ -564,25 +603,31 @@ This model gains Bravery when declaring actions Targeting or Selecting a model a
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d8ed-5b92-4061-6d41" type="max"/>
       </constraints>
       <profiles>
-        <profile id="9c08-21d4-9344-9be4" name="Tanaka Nobuko" hidden="false" typeId="6ea2-0f74-4852-4a98" typeName="Character Profile">
+        <profile id="9c08-21d4-9344-9be4" name="Tanaka Nobuko" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character">
           <characteristics>
-            <characteristic name="Melee Pool" typeId="8409-8d55-ce45-a33b">3</characteristic>
-            <characteristic name="Melee Boost" typeId="6a36-e826-18f3-0b25">3</characteristic>
-            <characteristic name="Ranged Pool" typeId="7a01-37c0-4741-672c">3</characteristic>
-            <characteristic name="Ranged Boost" typeId="ff66-ea54-d863-5c17">3</characteristic>
-            <characteristic name="Move" typeId="af89-242d-625f-9bff">4</characteristic>
-            <characteristic name="Move Boost" typeId="62a6-8125-f293-5c76"/>
-            <characteristic name="Ki" typeId="8b76-2b4b-066e-a0c5">2</characteristic>
-            <characteristic name="Ki Boost" typeId="c34e-f8ae-0984-37ac"/>
-            <characteristic name="Ki Cap" typeId="2e88-c65e-4e45-d4c4">6</characteristic>
-            <characteristic name="Wounds" typeId="a1dc-c2c1-e2d2-ca98">5 OOOOO</characteristic>
-            <characteristic name="Size &amp; Base" typeId="6af2-e777-20ce-e060">Small 30mm</characteristic>
-            <characteristic name="Traits" typeId="e742-1b02-09cf-fd97">Bravery, Courage (1), Endurance, Pack (0,0&quot;), Prowess [Melee](1)</characteristic>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">3</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33">3</characteristic>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">2</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">6</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">5 OOOOO</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
           </characteristics>
         </profile>
       </profiles>
       <infoGroups>
         <infoGroup id="9481-e540-1cda-c008" name="Traits" hidden="false">
+          <profiles>
+            <profile id="9e4e-435d-1fdb-a9c2" name="Tanaka Nobuko" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Bravery, Courage (1), Endurance, Pack (0,0&quot;), Prowess [Melee](1)</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
           <infoLinks>
             <infoLink id="adb5-429a-acac-78af" name="Prowess " hidden="false" targetId="75ef-327a-cd08-a248" type="rule"/>
             <infoLink id="7b4d-3639-2ead-e1e3" name="Pack" hidden="false" targetId="fa30-1c51-e091-9444" type="rule"/>
@@ -666,25 +711,31 @@ This model gains Bravery when declaring actions Targeting or Selecting a model a
         </modifier>
       </modifiers>
       <profiles>
-        <profile id="4ad8-3cb6-0ef8-c746" name="Tanaka Gorak" hidden="false" typeId="6ea2-0f74-4852-4a98" typeName="Character Profile">
+        <profile id="4ad8-3cb6-0ef8-c746" name="Tanaka Gorak" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character">
           <characteristics>
-            <characteristic name="Melee Pool" typeId="8409-8d55-ce45-a33b">3</characteristic>
-            <characteristic name="Melee Boost" typeId="6a36-e826-18f3-0b25">3</characteristic>
-            <characteristic name="Ranged Pool" typeId="7a01-37c0-4741-672c">3</characteristic>
-            <characteristic name="Ranged Boost" typeId="ff66-ea54-d863-5c17"/>
-            <characteristic name="Move" typeId="af89-242d-625f-9bff">4</characteristic>
-            <characteristic name="Move Boost" typeId="62a6-8125-f293-5c76"/>
-            <characteristic name="Ki" typeId="8b76-2b4b-066e-a0c5">2</characteristic>
-            <characteristic name="Ki Boost" typeId="c34e-f8ae-0984-37ac"/>
-            <characteristic name="Ki Cap" typeId="2e88-c65e-4e45-d4c4">8</characteristic>
-            <characteristic name="Wounds" typeId="a1dc-c2c1-e2d2-ca98">6 OOOOO O</characteristic>
-            <characteristic name="Size &amp; Base" typeId="6af2-e777-20ce-e060">Small 30mm</characteristic>
-            <characteristic name="Traits" typeId="e742-1b02-09cf-fd97">Bravery, Co-ordinated Attack [Tanaka], Endurance, Indomitable (1), Pack (1/6&quot;), Prowess [Melee](1), Steadfast</characteristic>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">3</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">2</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">8</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">6 OOOOO O</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
           </characteristics>
         </profile>
       </profiles>
       <infoGroups>
         <infoGroup id="fc9e-4fe3-776d-61d6" name="Traits" hidden="false">
+          <profiles>
+            <profile id="b652-9763-09d2-c708" name="Tanaka Gorak" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Bravery, Co-ordinated Attack [Tanaka], Endurance, Indomitable (1), Pack (1/6&quot;), Prowess [Melee](1), Steadfast</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
           <infoLinks>
             <infoLink id="69a4-5b5f-02af-a117" name="Prowess " hidden="false" targetId="75ef-327a-cd08-a248" type="rule"/>
             <infoLink id="e8be-e916-efdc-9ff3" name="Pack" hidden="false" targetId="fa30-1c51-e091-9444" type="rule"/>
@@ -757,41 +808,46 @@ This model gains Bravery when declaring actions Targeting or Selecting a model a
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="480b-c47a-2f5a-dfe6" type="max"/>
       </constraints>
       <profiles>
-        <profile id="45ea-fa1f-348a-5e2c" name="Tanaka Kazuo" hidden="false" typeId="6ea2-0f74-4852-4a98" typeName="Character Profile">
+        <profile id="45ea-fa1f-348a-5e2c" name="Tanaka Kazuo" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character">
           <characteristics>
-            <characteristic name="Melee Pool" typeId="8409-8d55-ce45-a33b">5</characteristic>
-            <characteristic name="Melee Boost" typeId="6a36-e826-18f3-0b25">3</characteristic>
-            <characteristic name="Ranged Pool" typeId="7a01-37c0-4741-672c">4</characteristic>
-            <characteristic name="Ranged Boost" typeId="ff66-ea54-d863-5c17">3</characteristic>
-            <characteristic name="Move" typeId="af89-242d-625f-9bff">4</characteristic>
-            <characteristic name="Move Boost" typeId="62a6-8125-f293-5c76">3</characteristic>
-            <characteristic name="Ki" typeId="8b76-2b4b-066e-a0c5">2</characteristic>
-            <characteristic name="Ki Boost" typeId="c34e-f8ae-0984-37ac"/>
-            <characteristic name="Ki Cap" typeId="2e88-c65e-4e45-d4c4">8</characteristic>
-            <characteristic name="Wounds" typeId="a1dc-c2c1-e2d2-ca98">6 OOOOO O</characteristic>
-            <characteristic name="Size &amp; Base" typeId="6af2-e777-20ce-e060">Medium 40mm</characteristic>
-            <characteristic name="Traits" typeId="e742-1b02-09cf-fd97">Endurance, Fearless, Indomitable (5), Last Stand, Pack (2/6&quot;), Prowess [Melee](1), Ranged Defence (2), Split Attack, Tireless, Vengeance [Takashi]</characteristic>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">5</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">4</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33">3</characteristic>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac">3</characteristic>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">2</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">8</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">6 OOOOO O</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Medium 40mm</characteristic>
           </characteristics>
         </profile>
-        <profile id="7827-28f3-28a0-1d44" name="Cub" hidden="false" typeId="6ea2-0f74-4852-4a98" typeName="Character Profile">
+        <profile id="7827-28f3-28a0-1d44" name="Cub" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character">
           <characteristics>
-            <characteristic name="Melee Pool" typeId="8409-8d55-ce45-a33b"/>
-            <characteristic name="Melee Boost" typeId="6a36-e826-18f3-0b25"/>
-            <characteristic name="Ranged Pool" typeId="7a01-37c0-4741-672c"/>
-            <characteristic name="Ranged Boost" typeId="ff66-ea54-d863-5c17"/>
-            <characteristic name="Move" typeId="af89-242d-625f-9bff"/>
-            <characteristic name="Move Boost" typeId="62a6-8125-f293-5c76"/>
-            <characteristic name="Ki" typeId="8b76-2b4b-066e-a0c5"/>
-            <characteristic name="Ki Boost" typeId="c34e-f8ae-0984-37ac"/>
-            <characteristic name="Ki Cap" typeId="2e88-c65e-4e45-d4c4"/>
-            <characteristic name="Wounds" typeId="a1dc-c2c1-e2d2-ca98">2 OO</characteristic>
-            <characteristic name="Size &amp; Base" typeId="6af2-e777-20ce-e060"/>
-            <characteristic name="Traits" typeId="e742-1b02-09cf-fd97"/>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974"/>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277"/>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb"/>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620"/>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854"/>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672"/>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">2 OO</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b"/>
           </characteristics>
         </profile>
       </profiles>
       <infoGroups>
         <infoGroup id="8ba9-5e37-07dd-67d9" name="Traits" hidden="false">
+          <profiles>
+            <profile id="789a-84b1-f2d3-6244" name="Tanaka Kazuo" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Endurance, Fearless, Indomitable (5), Last Stand, Pack (2/6&quot;), Prowess [Melee](1), Ranged Defence (2), Split Attack, Tireless, Vengeance [Takashi]</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
           <infoLinks>
             <infoLink id="e95f-95a9-378f-ab80" name="Prowess " hidden="false" targetId="75ef-327a-cd08-a248" type="rule"/>
             <infoLink id="c1f2-6625-64e3-988a" name="Pack" hidden="false" targetId="fa30-1c51-e091-9444" type="rule"/>
@@ -910,14 +966,16 @@ This model gains Bravery when declaring actions Targeting or Selecting a model a
             <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
           </characteristics>
         </profile>
-        <profile id="b3e0-0116-3bab-7afd" name="Shiho Hiroto" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
-          <characteristics>
-            <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">Armour (2), Assassin, Booted, Endurance, Fearless, Flank, Hatred [Drunken Master], Prowess [Melee](1), Tough (1), Vengeance [Prefecture]</characteristic>
-          </characteristics>
-        </profile>
       </profiles>
       <infoGroups>
         <infoGroup id="3468-aa91-5a20-3d73" name="Traits" hidden="false">
+          <profiles>
+            <profile id="92c0-7eb2-b3bf-4961" name="Shiho Hiroto" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Armour (2), Assassin, Booted, Endurance, Fearless, Flank, Hatred [Drunken Master], Prowess [Melee](1), Tough (1), Vengeance [Prefecture]</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
           <infoLinks>
             <infoLink id="dc32-afb7-ea49-37ca" name="Prowess " hidden="false" targetId="75ef-327a-cd08-a248" type="rule"/>
             <infoLink id="c32a-3b50-7201-b3c5" name="Vengeance" hidden="false" targetId="6779-0aac-2f51-f67e" type="rule"/>
@@ -985,6 +1043,9 @@ This model gains Bravery when declaring actions Targeting or Selecting a model a
           </conditionGroups>
         </modifier>
       </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="144c-4c6e-e8c9-ebc3" type="max"/>
+      </constraints>
       <profiles>
         <profile id="2eda-fbc6-115f-0f38" name="Guerilla Warfare" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
           <characteristics>
@@ -1141,6 +1202,13 @@ When a model performs a Wait Action to Destroy this Terrain, it need not spend 2
       </modifiers>
       <infoGroups>
         <infoGroup id="6cb4-dd1f-cb5c-960e" name="Traits" hidden="false">
+          <profiles>
+            <profile id="2cf3-9ecf-93ab-1be1" name="Heimin" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Cowardly, Insignificant, Scout (0,0&quot;)</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
           <infoLinks>
             <infoLink id="a41a-f3fe-7051-24e7" name="Cowardly" hidden="false" targetId="c8d8-d1c7-905b-f971" type="rule"/>
             <infoLink id="ceea-d865-7a70-eb49" name="Insignificant" hidden="false" targetId="1614-d86c-ef8a-c095" type="rule"/>
@@ -1198,11 +1266,6 @@ When a model performs a Wait Action to Destroy this Terrain, it need not spend 2
                 <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
               </characteristics>
             </profile>
-            <profile id="07e1-17d3-f3e7-b629" name="Heimin A" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
-              <characteristics>
-                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Cowardly, Insignificant, Scout (0,0&quot;)</characteristic>
-              </characteristics>
-            </profile>
           </profiles>
         </entryLink>
         <entryLink id="9d93-be08-4025-78ad" name="Heimin" hidden="false" collective="false" import="true" targetId="bcc0-d49e-e6f8-4c5c" type="selectionEntry">
@@ -1228,11 +1291,6 @@ When a model performs a Wait Action to Destroy this Terrain, it need not spend 2
                 <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
               </characteristics>
             </profile>
-            <profile id="e4e4-5531-31f7-9338" name="Heimin B" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
-              <characteristics>
-                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Cowardly, Insignificant, Scout (0,0&quot;)</characteristic>
-              </characteristics>
-            </profile>
           </profiles>
         </entryLink>
         <entryLink id="8b24-409f-2c91-a143" name="Heimin" hidden="false" collective="false" import="true" targetId="bcc0-d49e-e6f8-4c5c" type="selectionEntry">
@@ -1256,11 +1314,6 @@ When a model performs a Wait Action to Destroy this Terrain, it need not spend 2
                 <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">6</characteristic>
                 <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">4 OOOO</characteristic>
                 <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
-              </characteristics>
-            </profile>
-            <profile id="7723-d2a4-99ae-e18c" name="Heimin C" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
-              <characteristics>
-                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Cowardly, Insignificant, Scout (0,0&quot;)</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -1300,14 +1353,16 @@ When a model performs a Wait Action to Destroy this Terrain, it need not spend 2
             <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
           </characteristics>
         </profile>
-        <profile id="a0af-a849-8bdd-70f7" name="Kazuki" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
-          <characteristics>
-            <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">Lightfooted, Vengeance [Takashi]</characteristic>
-          </characteristics>
-        </profile>
       </profiles>
       <infoGroups>
         <infoGroup id="9d62-1ec4-cd37-791b" name="Traits" hidden="false">
+          <profiles>
+            <profile id="6ec7-6c8e-5b5d-d693" name="Kazuki" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Lightfooted, Vengeance [Takashi]</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
           <infoLinks>
             <infoLink id="d9bf-4bc1-2a23-eb14" name="Vengeance" hidden="false" targetId="6779-0aac-2f51-f67e" type="rule"/>
             <infoLink id="45c7-c481-0e7a-b66c" name="Lightfooted" hidden="false" targetId="57d2-cd57-07f9-addf" type="rule"/>
@@ -1392,6 +1447,13 @@ When a model performs a Wait Action to Destroy this Terrain, it need not spend 2
       </modifiers>
       <infoGroups>
         <infoGroup id="d80b-7770-aee2-b026" name="Traits" hidden="false">
+          <profiles>
+            <profile id="ad5c-77c3-9cbf-8350" name="Loyal Yariman" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Vengeance [Takashi]</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
           <infoLinks>
             <infoLink id="38bb-4c8b-c498-5e89" name="Vengeance" hidden="false" targetId="6779-0aac-2f51-f67e" type="rule"/>
           </infoLinks>
@@ -1449,11 +1511,6 @@ When a model performs a Wait Action to Destroy this Terrain, it need not spend 2
                 <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
               </characteristics>
             </profile>
-            <profile id="852b-90cb-7498-f6b2" name="Loyal Yariman A" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
-              <characteristics>
-                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Vengeance [Takashi]</characteristic>
-              </characteristics>
-            </profile>
           </profiles>
         </entryLink>
         <entryLink id="4d8b-c947-c7dd-b874" name="Loyal Yariman" hidden="false" collective="false" import="true" targetId="f505-2b97-757b-b006" type="selectionEntry">
@@ -1477,11 +1534,6 @@ When a model performs a Wait Action to Destroy this Terrain, it need not spend 2
                 <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">6</characteristic>
                 <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">6 OOOOOO</characteristic>
                 <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
-              </characteristics>
-            </profile>
-            <profile id="a3ec-dd2f-200b-a62d" name="Loyal Yariman B" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
-              <characteristics>
-                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Vengeance [Takashi]</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -1521,14 +1573,16 @@ When a model performs a Wait Action to Destroy this Terrain, it need not spend 2
             <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
           </characteristics>
         </profile>
-        <profile id="2ae7-c52a-d329-169a" name="Maki" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
-          <characteristics>
-            <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">Vengeance [Takashi]</characteristic>
-          </characteristics>
-        </profile>
       </profiles>
       <infoGroups>
         <infoGroup id="b37b-ab84-d2ba-20af" name="Traits" hidden="false">
+          <profiles>
+            <profile id="1345-22f2-283d-b0ab" name="Maki" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Vengeance [Takashi]</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
           <infoLinks>
             <infoLink id="bc20-33d0-08df-024d" name="Vengeance" hidden="false" targetId="6779-0aac-2f51-f67e" type="rule"/>
           </infoLinks>
@@ -1597,6 +1651,9 @@ When a model performs a Wait Action to Destroy this Terrain, it need not spend 2
           </conditionGroups>
         </modifier>
       </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d444-ced6-1b95-5a4c" type="max"/>
+      </constraints>
       <profiles>
         <profile id="1174-7d95-1b39-62c7" name="The Shiho Return" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
           <characteristics>
@@ -1689,14 +1746,16 @@ Exclusion [Ronin Special Cards]</characteristic>
             <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
           </characteristics>
         </profile>
-        <profile id="f55f-333c-c5b5-1033" name="Shiho Keita" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
-          <characteristics>
-            <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">Bravery, Booted, Flank, Prowess [Melee](1), Ranged Defence (1), Vengeance [Takashi], Virtue (6&quot;)</characteristic>
-          </characteristics>
-        </profile>
       </profiles>
       <infoGroups>
         <infoGroup id="ead7-2a01-6edb-5ecb" name="Traits" hidden="false">
+          <profiles>
+            <profile id="4dc4-a456-fe11-1830" name="Shiho Keita" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Bravery, Booted, Flank, Prowess [Melee](1), Ranged Defence (1), Vengeance [Takashi], Virtue (6&quot;)</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
           <infoLinks>
             <infoLink id="9a35-9aa0-0e88-bc62" name="Prowess " hidden="false" targetId="75ef-327a-cd08-a248" type="rule"/>
             <infoLink id="cc05-8c9d-6636-7715" name="Vengeance" hidden="false" targetId="6779-0aac-2f51-f67e" type="rule"/>
@@ -1786,14 +1845,16 @@ While this model is in play, when a Friendly Loyal model spends a Virtue Token y
             <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
           </characteristics>
         </profile>
-        <profile id="6468-37c6-d9ed-ec26" name="Shiho Sayaka" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
-          <characteristics>
-            <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">Bravery, Booted, Endurance, Flank, Prowess [Melee](1), Vengeance [Takashi]</characteristic>
-          </characteristics>
-        </profile>
       </profiles>
       <infoGroups>
         <infoGroup id="32d0-9c30-ac72-ed2e" name="Traits" hidden="false">
+          <profiles>
+            <profile id="cf1c-9df2-a8ec-970d" name="Shiho Sayaka" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Bravery, Booted, Endurance, Flank, Prowess [Melee](1), Vengeance [Takashi]</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
           <infoLinks>
             <infoLink id="9c11-81ac-b263-a7ca" name="Prowess " hidden="false" targetId="75ef-327a-cd08-a248" type="rule"/>
             <infoLink id="7884-dca3-291d-6c02" name="Vengeance" hidden="false" targetId="6779-0aac-2f51-f67e" type="rule"/>
@@ -1873,9 +1934,9 @@ While this model is in play, when a Friendly Loyal model spends a Virtue Token y
       <infoGroups>
         <infoGroup id="9050-aeff-7cd2-b580" name="Traits" hidden="false">
           <profiles>
-            <profile id="f865-9808-ed93-6a11" name="Shiho Takuya" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+            <profile id="f865-9808-ed93-6a11" name="Shiho Takuya" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
               <characteristics>
-                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">Bravery, Leadership [Loyal](1/6&quot;], Prowess [Melee](1), Tactician (1), Vengeance [Takashi]</characteristic>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Bravery, Leadership [Loyal](1/6&quot;], Prowess [Melee](1), Tactician (1), Vengeance [Takashi]</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -1953,14 +2014,16 @@ While this model is in play, when a Friendly Loyal model spends a Virtue Token y
             <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
           </characteristics>
         </profile>
-        <profile id="7370-539d-8ef9-6994" name="Shiho Wimpie" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
-          <characteristics>
-            <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">Bravery, Booted, Flank, Prowess [Melee](1), Vengeance [Takashi]</characteristic>
-          </characteristics>
-        </profile>
       </profiles>
       <infoGroups>
         <infoGroup id="b286-7c40-7325-a7e6" name="Traits" hidden="false">
+          <profiles>
+            <profile id="0c9d-efcc-9336-059d" name="Shiho Wimpie" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Bravery, Booted, Flank, Prowess [Melee](1), Vengeance [Takashi]</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
           <infoLinks>
             <infoLink id="ad86-11fc-f731-8970" name="Prowess " hidden="false" targetId="75ef-327a-cd08-a248" type="rule"/>
             <infoLink id="f112-1d34-0dbe-af41" name="Vengeance" hidden="false" targetId="6779-0aac-2f51-f67e" type="rule"/>
@@ -2044,14 +2107,16 @@ While this model is in play, when a Friendly Loyal model spends a Virtue Token y
             <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
           </characteristics>
         </profile>
-        <profile id="dba2-4448-c249-7787" name="Shiho Yusuke" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
-          <characteristics>
-            <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">Bravery, Booted, Flank, Prowess [Melee](1), Vengeance [Takashi]</characteristic>
-          </characteristics>
-        </profile>
       </profiles>
       <infoGroups>
         <infoGroup id="c2e5-d3d3-b62a-8eac" name="Traits" hidden="false">
+          <profiles>
+            <profile id="88bd-d9a2-5766-2110" name="Shiho Yusuke" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Bravery, Booted, Flank, Prowess [Melee](1), Vengeance [Takashi]</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
           <infoLinks>
             <infoLink id="1ed0-0cef-4cb5-f647" name="Prowess " hidden="false" targetId="75ef-327a-cd08-a248" type="rule"/>
             <infoLink id="baf4-d834-6043-59b7" name="Vengeance" hidden="false" targetId="6779-0aac-2f51-f67e" type="rule"/>
@@ -2232,14 +2297,16 @@ Requirement [Warband must contain a model with Tactician]</characteristic>
             <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
           </characteristics>
         </profile>
-        <profile id="91ed-543e-dce2-8e54" name="Shiho Shota" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
-          <characteristics>
-            <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">Bravery, Booted, Flank, Prowess [Melee](1), Ranged Defence (1), Vengeance [Takashi]</characteristic>
-          </characteristics>
-        </profile>
       </profiles>
       <infoGroups>
         <infoGroup id="fa93-c0b7-cee5-09c2" name="Traits" hidden="false">
+          <profiles>
+            <profile id="d70b-0fbc-9465-a5b6" name="Shiho Shota" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Bravery, Booted, Flank, Prowess [Melee](1), Ranged Defence (1), Vengeance [Takashi]</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
           <infoLinks>
             <infoLink id="583a-709e-d23c-aeb1" name="Prowess " hidden="false" targetId="75ef-327a-cd08-a248" type="rule"/>
             <infoLink id="ef2a-88e1-4ce5-e71c" name="Vengeance" hidden="false" targetId="6779-0aac-2f51-f67e" type="rule"/>
@@ -2337,6 +2404,13 @@ This model&apos;s Dai Kyu Ranged Weapon gains Reload (+1) and this model does no
       </modifiers>
       <infoGroups>
         <infoGroup id="60a5-024a-292a-ae4a" name="Traits" hidden="false">
+          <profiles>
+            <profile id="4d7d-8081-3188-2765" name="Loyal Kyudoka" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Vengeance [Takashi]</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
           <infoLinks>
             <infoLink id="5abc-8923-0871-7ee9" name="Vengeance" hidden="false" targetId="6779-0aac-2f51-f67e" type="rule"/>
           </infoLinks>
@@ -2423,11 +2497,6 @@ This model&apos;s Dai Kyu Ranged Weapon gains Reload (+1) and this model does no
                 <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
               </characteristics>
             </profile>
-            <profile id="bef0-701c-ccae-f5e9" name="Traits" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
-              <characteristics>
-                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Vengeance [Takashi]</characteristic>
-              </characteristics>
-            </profile>
           </profiles>
         </entryLink>
         <entryLink id="c43e-15bc-f170-1ba7" name="Loyal Kyudoka" hidden="false" collective="false" import="true" targetId="dd57-5a6d-ddb8-4f1e" type="selectionEntry">
@@ -2451,11 +2520,6 @@ This model&apos;s Dai Kyu Ranged Weapon gains Reload (+1) and this model does no
                 <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">6</characteristic>
                 <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">6 OOOOOO</characteristic>
                 <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
-              </characteristics>
-            </profile>
-            <profile id="224d-afbe-ae57-4da6" name="Traits" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
-              <characteristics>
-                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Vengeance [Takashi]</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -2493,14 +2557,16 @@ This model&apos;s Dai Kyu Ranged Weapon gains Reload (+1) and this model does no
             <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
           </characteristics>
         </profile>
-        <profile id="0de1-f7dd-15f2-9963" name="Shiho Misaki" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
-          <characteristics>
-            <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">Bravery, Booted, Dodge (1), Flank, Prowess [Melee](1), Vengeance [Takashi]</characteristic>
-          </characteristics>
-        </profile>
       </profiles>
       <infoGroups>
         <infoGroup id="9c90-695a-d28a-6c27" name="Traits" hidden="false">
+          <profiles>
+            <profile id="3b5f-5e5b-551c-47f4" name="Shiho Misaki" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Bravery, Booted, Dodge (1), Flank, Prowess [Melee](1), Vengeance [Takashi]</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
           <infoLinks>
             <infoLink id="c0e9-e9f2-3180-ab81" name="Prowess " hidden="false" targetId="75ef-327a-cd08-a248" type="rule"/>
             <infoLink id="ee13-fb00-8954-ef60" name="Vengeance" hidden="false" targetId="6779-0aac-2f51-f67e" type="rule"/>
@@ -2591,7 +2657,7 @@ This model&apos;s Dai Kyu Ranged Weapon gains Reload (+1) and this model does no
         </modifier>
       </modifiers>
       <profiles>
-        <profile id="8cb0-9c6a-09c9-393c" name="Yoshitaka" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character">
+        <profile id="a014-9d52-8cc2-c68a" name="Yoshitaka" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character">
           <characteristics>
             <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">2</characteristic>
             <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
@@ -2606,14 +2672,16 @@ This model&apos;s Dai Kyu Ranged Weapon gains Reload (+1) and this model does no
             <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
           </characteristics>
         </profile>
-        <profile id="a014-9d52-8cc2-c68a" name="Yoshitaka" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
-          <characteristics>
-            <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">Vengeance [Takashi]</characteristic>
-          </characteristics>
-        </profile>
       </profiles>
       <infoGroups>
         <infoGroup id="cb61-3fd6-35e8-4e70" name="Traits" hidden="false">
+          <profiles>
+            <profile id="06f9-96f3-aa24-1ffc" name="Yoshitaka" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Vengeance [Takashi]</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
           <infoLinks>
             <infoLink id="cf6a-891d-78e8-23d9" name="Vengeance" hidden="false" targetId="6779-0aac-2f51-f67e" type="rule"/>
           </infoLinks>
@@ -4198,6 +4266,11 @@ Requirement [Loyal &amp; Samurai]</characteristic>
     <profile id="6374-b4ae-6cc5-4908" name="Killing Blow" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
       <characteristics>
         <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">This model gains +1 Melee Pool when engaged in a Melee Exchange with an Exhausted model.</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="03b4-0274-07e0-8a00" name="Open Rebellion" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+      <characteristics>
+        <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">This model may only be recruited into a Warband using the Open Rebellion theme.</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>
