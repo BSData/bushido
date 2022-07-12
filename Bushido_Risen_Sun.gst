@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="62e4-ab79-1c4c-9ffe" name="Bushido: Risen Sun" revision="6" battleScribeVersion="2.03" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="62e4-ab79-1c4c-9ffe" name="Bushido: Risen Sun" revision="7" battleScribeVersion="2.03" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <costTypes>
     <costType id="a111-8656-5c05-7415" name=" Rice" defaultCostLimit="-1.0" hidden="false"/>
   </costTypes>
   <profileTypes>
-    <profileType id="6ea2-0f74-4852-4a98" name="Character Profile">
+    <profileType id="6ea2-0f74-4852-4a98" name="Profile &amp; Traits">
       <characteristicTypes>
         <characteristicType id="8409-8d55-ce45-a33b" name="Melee Pool"/>
         <characteristicType id="6a36-e826-18f3-0b25" name="Melee Boost"/>
@@ -113,7 +113,7 @@
         <characteristicType id="6fb8-4540-ed80-9332" name="Traits"/>
       </characteristicTypes>
     </profileType>
-    <profileType id="08e8-3cf2-6d1d-b8f0" name="Character">
+    <profileType id="08e8-3cf2-6d1d-b8f0" name="Character Profile">
       <characteristicTypes>
         <characteristicType id="eea0-d5a3-2540-a974" name="Melee Pool"/>
         <characteristicType id="4d43-9498-6fa0-8277" name="Melee Boost"/>
