@@ -4,7 +4,7 @@
     <costType id="a111-8656-5c05-7415" name=" Rice" defaultCostLimit="-1.0" hidden="false"/>
   </costTypes>
   <profileTypes>
-    <profileType id="6ea2-0f74-4852-4a98" name="Profile &amp; Traits">
+    <profileType id="6ea2-0f74-4852-4a98" name="Character Profile &amp; Traits">
       <characteristicTypes>
         <characteristicType id="8409-8d55-ce45-a33b" name="Melee Pool"/>
         <characteristicType id="6a36-e826-18f3-0b25" name="Melee Boost"/>
