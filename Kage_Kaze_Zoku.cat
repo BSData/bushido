@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="b4d7-0e2a-728f-20cf" name="Kage Kaze Zoku" revision="11" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="6" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="b4d7-0e2a-728f-20cf" name="Kage Kaze Zoku" revision="12" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="7" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="33d5-3364-f1d4-a94c" name="Lockdown" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -290,9 +290,70 @@ X = the number of Ninja models in the Warband.</characteristic>
         <categoryLink id="b646-5d88-bea1-e2f3" name="New CategoryLink" hidden="false" targetId="d360-71aa-ca22-ba3c" primary="true"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="86b9-299c-6b70-43ab" name="Warband Size" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="86b9-299c-6b70-43ab" name="Ninjas in Warband" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="name" value="4 Ninjas in Warband">
+              <conditions>
+                <condition field="selections" scope="roster" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="dc64-e668-4aac-8ec9" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="increment" field="a111-8656-5c05-7415" value="1.0">
+              <repeats>
+                <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="dc64-e668-4aac-8ec9" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+            <modifier type="set" field="name" value=" Ninjas in Warband">
+              <conditions>
+                <condition field="selections" scope="roster" value="5.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="dc64-e668-4aac-8ec9" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="name" value="2 Ninjas in Warband">
+              <conditions>
+                <condition field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="dc64-e668-4aac-8ec9" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="name" value="3 Ninjas in Warband">
+              <conditions>
+                <condition field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="dc64-e668-4aac-8ec9" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="name" value="10 Ninjas in Warband">
+              <conditions>
+                <condition field="selections" scope="roster" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="dc64-e668-4aac-8ec9" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="name" value="1 Ninja in Warband">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="dc64-e668-4aac-8ec9" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="name" value="8 Ninjas in Warband">
+              <conditions>
+                <condition field="selections" scope="roster" value="8.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="dc64-e668-4aac-8ec9" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="name" value="9 Ninjas in Warband">
+              <conditions>
+                <condition field="selections" scope="roster" value="9.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="dc64-e668-4aac-8ec9" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="name" value="7 Ninjas in Warband">
+              <conditions>
+                <condition field="selections" scope="roster" value="7.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="dc64-e668-4aac-8ec9" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="name" value="6 Ninjas in Warband">
+              <conditions>
+                <condition field="selections" scope="roster" value="6.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="dc64-e668-4aac-8ec9" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="88c2-afd3-bbbc-72f3" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4f7d-7b84-ebeb-6d9e" type="max"/>
+          </constraints>
           <costs>
-            <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1.0"/>
+            <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -388,7 +449,7 @@ X = the number of Ninja models in the Warband.</characteristic>
             <modifier type="append" field="name" value="B"/>
           </modifiers>
           <profiles>
-            <profile id="1857-cf4c-63a1-4a4a" name="Karapan B" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character">
+            <profile id="1857-cf4c-63a1-4a4a" name="Karapan B" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
               <characteristics>
                 <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
                 <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277"/>
@@ -413,7 +474,7 @@ X = the number of Ninja models in the Warband.</characteristic>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a5c1-b917-08ff-830f" type="min"/>
           </constraints>
           <profiles>
-            <profile id="fd0b-2b72-a71e-6e84" name="Karapan A" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character">
+            <profile id="fd0b-2b72-a71e-6e84" name="Karapan A" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
               <characteristics>
                 <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
                 <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277"/>
@@ -609,7 +670,7 @@ X = the number of Ninja models in the Warband.</characteristic>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="94c4-9be6-01b9-0b8e" type="max"/>
       </constraints>
       <profiles>
-        <profile id="42f5-e7ac-1c8f-894a" name="Yuto" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character">
+        <profile id="42f5-e7ac-1c8f-894a" name="Yuto" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
           <characteristics>
             <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
             <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
@@ -704,7 +765,7 @@ This model may only make one Ranged Attack with the Kusari per activation
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="112a-1f61-0a2a-9a77" type="max"/>
       </constraints>
       <profiles>
-        <profile id="bd57-9a5b-074c-e6cb" name="Wamu" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character">
+        <profile id="bd57-9a5b-074c-e6cb" name="Wamu" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
           <characteristics>
             <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
             <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
@@ -787,7 +848,7 @@ This model may only make one Ranged Attack with the Kusari per activation
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d4ef-a48f-9756-1b5a" type="max"/>
       </constraints>
       <profiles>
-        <profile id="46e3-134d-3ddb-f17c" name="Ujimushi" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character">
+        <profile id="46e3-134d-3ddb-f17c" name="Ujimushi" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
           <characteristics>
             <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
             <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
@@ -884,7 +945,7 @@ This model may only make one Ranged Attack with the Kusari per activation
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5427-1727-1f92-646f" type="max"/>
       </constraints>
       <profiles>
-        <profile id="5569-a53d-aa5b-8acc" name="Shizuka" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character">
+        <profile id="5569-a53d-aa5b-8acc" name="Shizuka" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
           <characteristics>
             <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
             <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
@@ -977,7 +1038,7 @@ This model may only make one Ranged Attack with the Kusari per activation
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ccd7-5285-7de0-4536" type="max"/>
       </constraints>
       <profiles>
-        <profile id="46eb-2c50-bdf2-fb90" name="Rin" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character">
+        <profile id="46eb-2c50-bdf2-fb90" name="Rin" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
           <characteristics>
             <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">4</characteristic>
             <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
@@ -1070,7 +1131,7 @@ This model may only make one Ranged Attack with the Kusari per activation
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9c9c-0b2c-a78e-475e" type="max"/>
       </constraints>
       <profiles>
-        <profile id="7f73-926b-fdc6-4d62" name="Makoto" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character">
+        <profile id="7f73-926b-fdc6-4d62" name="Makoto" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
           <characteristics>
             <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
             <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
@@ -1158,7 +1219,7 @@ This model may only make one Ranged Attack with the Kusari per activation
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b83e-93a2-fe8d-4f1f" type="max"/>
       </constraints>
       <profiles>
-        <profile id="f32d-6190-daa0-bf16" name="Kouhei" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character">
+        <profile id="f32d-6190-daa0-bf16" name="Kouhei" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
           <characteristics>
             <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
             <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277"/>
@@ -1265,7 +1326,7 @@ This model may only make one Ranged Attack with the Kusari per activation
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ca82-ec1f-5304-c7ea" type="max"/>
       </constraints>
       <profiles>
-        <profile id="b4a2-f56d-2108-4765" name="Kerasu" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character">
+        <profile id="b4a2-f56d-2108-4765" name="Kerasu" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
           <characteristics>
             <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">4</characteristic>
             <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
@@ -1357,7 +1418,7 @@ This model may only make one Ranged Attack with the Kusari per activation
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="64a8-a8a7-2dc1-206f" type="max"/>
       </constraints>
       <profiles>
-        <profile id="02fb-dfb1-662b-667c" name="Katsumi" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character">
+        <profile id="02fb-dfb1-662b-667c" name="Katsumi" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
           <characteristics>
             <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">4</characteristic>
             <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
@@ -1467,7 +1528,7 @@ This model may only make one Ranged Attack with the Kusari per activation
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c864-2d77-7c77-075f" type="max"/>
       </constraints>
       <profiles>
-        <profile id="1f29-06e5-f3b5-05ec" name="Ghost" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character">
+        <profile id="1f29-06e5-f3b5-05ec" name="Ghost" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
           <characteristics>
             <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
             <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
@@ -1565,7 +1626,7 @@ This model may only make one Ranged Attack with the Kusari per activation
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9aef-a40b-2704-e566" type="max"/>
       </constraints>
       <profiles>
-        <profile id="cf4a-4b4b-7b4d-fe5d" name="Dudiko" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character">
+        <profile id="cf4a-4b4b-7b4d-fe5d" name="Dudiko" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
           <characteristics>
             <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
             <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
@@ -1692,7 +1753,7 @@ Choose 1 Enemy model using the Flank trait. Its owner must reveal which table ed
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9bd3-701a-1a4a-5753" type="max"/>
       </constraints>
       <profiles>
-        <profile id="4881-6d63-3f5d-f843" name="Axiam" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character">
+        <profile id="4881-6d63-3f5d-f843" name="Axiam" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
           <characteristics>
             <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">4</characteristic>
             <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
@@ -1787,7 +1848,7 @@ Once per game, in the Starting Phase, you may add a permitted Faction Enhancemen
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2ddf-5319-85f6-d9ac" type="max"/>
       </constraints>
       <profiles>
-        <profile id="9d64-9dd4-80b9-eb28" name="Shinyuki" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character">
+        <profile id="9d64-9dd4-80b9-eb28" name="Shinyuki" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
           <characteristics>
             <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
             <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
@@ -1888,7 +1949,7 @@ Once per game, in the Starting Phase, you may add a permitted Faction Enhancemen
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5356-952f-d8f3-8c30" type="max"/>
       </constraints>
       <profiles>
-        <profile id="f4ca-8b6d-788e-33a2" name="Jinichi" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character">
+        <profile id="f4ca-8b6d-788e-33a2" name="Jinichi" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
           <characteristics>
             <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
             <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
@@ -2006,7 +2067,7 @@ Once per game, in the Starting Phase, you may add a permitted Faction Enhancemen
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ac90-904a-50d7-0fd4" type="max"/>
       </constraints>
       <profiles>
-        <profile id="cd8c-e075-f18c-3b5d" name="Neko" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character">
+        <profile id="cd8c-e075-f18c-3b5d" name="Neko" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
           <characteristics>
             <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
             <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277"/>

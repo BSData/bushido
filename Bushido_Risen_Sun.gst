@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="62e4-ab79-1c4c-9ffe" name="Bushido: Risen Sun" revision="7" battleScribeVersion="2.03" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="62e4-ab79-1c4c-9ffe" name="Bushido: Risen Sun" revision="8" battleScribeVersion="2.03" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <costTypes>
     <costType id="a111-8656-5c05-7415" name=" Rice" defaultCostLimit="-1.0" hidden="false"/>
   </costTypes>
@@ -128,6 +128,14 @@
         <characteristicType id="6cf9-c5fd-3e3c-b35b" name="Size &amp; Base"/>
       </characteristicTypes>
     </profileType>
+    <profileType id="1c8a-f738-1536-a08c" name="Escalation">
+      <characteristicTypes>
+        <characteristicType id="f608-9700-ffa5-0c3f" name="Required"/>
+        <characteristicType id="84f7-58d8-a0a5-4d78" name="Rank"/>
+        <characteristicType id="d361-6342-4942-70a7" name="Card"/>
+        <characteristicType id="a962-35b8-ac0c-8018" name="Benefit"/>
+      </characteristicTypes>
+    </profileType>
   </profileTypes>
   <categoryEntries>
     <categoryEntry id="d360-71aa-ca22-ba3c" name="Faction Event Cards" hidden="false"/>
@@ -249,6 +257,7 @@
         </modifier>
       </modifiers>
     </categoryEntry>
+    <categoryEntry id="5073-f00b-a8f6-5e3b" name="Reference Cards" hidden="false"/>
   </categoryEntries>
   <forceEntries>
     <forceEntry id="2150-40b1-52f8-4a8a" name="Risen Sun" hidden="true">
@@ -260,6 +269,7 @@
         <categoryLink id="24e1-914a-6b91-3f09" name="Ronin Profile Cards" hidden="false" targetId="9fba-f50b-c8f7-8396" primary="false"/>
         <categoryLink id="5877-1a83-38ae-468e" name="Theme Cards: Ronin" hidden="false" targetId="ff27-a550-2dd1-e2e3" primary="false"/>
         <categoryLink id="849c-cf11-e943-d370" name="Communal" hidden="false" targetId="69a2-397e-9d7b-a47d" primary="false"/>
+        <categoryLink id="2870-03c0-ca95-7aea" name="Reference Cards" hidden="false" targetId="5073-f00b-a8f6-5e3b" primary="false"/>
       </categoryLinks>
     </forceEntry>
   </forceEntries>
