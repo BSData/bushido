@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="d2c8-91e9-1a97-89b4" name="Minimoto Clan" revision="15" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="8" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="d2c8-91e9-1a97-89b4" name="Minimoto Clan" revision="15" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="9" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="6b68-2575-cc8f-c08f" name="Armour 3+" hidden="false"/>
   </categoryEntries>
@@ -2259,6 +2259,28 @@ This model may be recruited into any Minimoto Theme that does not restrict it.
     <entryLink id="70af-aefa-07ed-590d" name="Hozumi Maha" hidden="true" collective="false" import="true" targetId="09da-574e-599a-3226" type="selectionEntry"/>
     <entryLink id="c9cd-0cb3-0135-df25" name="Hozumi Koga" hidden="true" collective="false" import="true" targetId="2b64-ba79-8ea1-4098" type="selectionEntry"/>
     <entryLink id="1fa8-9dde-3b8f-5622" name="Hozumi Daihanji" hidden="false" collective="false" import="true" targetId="2195-17c7-b68c-0111" type="selectionEntry"/>
+    <entryLink id="adfa-f921-3ab9-4aa8" name="Kami of Reflection" hidden="true" collective="false" import="true" targetId="55d0-ba9c-f4c8-c0d3" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="bf82-59e5-bfa8-89e4" type="atLeast"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="decrement" field="a111-8656-5c05-7415" value="8.0">
+          <repeats>
+            <repeat field="selections" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+          </repeats>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="5b4b-f003-e9de-8929" name="New CategoryLink" hidden="false" targetId="9fba-f50b-c8f7-8396" primary="false"/>
+        <categoryLink id="cc01-9f5a-ab5d-04f0" name="New CategoryLink" hidden="false" targetId="5073-f00b-a8f6-5e3b" primary="true"/>
+      </categoryLinks>
+    </entryLink>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="a382-7e2d-9df9-d700" name="Jyoto Ashigaru" hidden="false" collective="false" import="true" type="model">
