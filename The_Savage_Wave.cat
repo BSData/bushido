@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="0b85-0901-eb64-b84b" name="The Savage Wave" revision="15" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="8" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="0b85-0901-eb64-b84b" name="The Savage Wave" revision="16" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="10" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="5048-3a52-5689-6d0b" name="Ambush" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -1796,11 +1796,6 @@ Oni and Onisho models, except Kijo models, activating within 4&quot;&quot; of th
         <modifier type="decrement" field="a111-8656-5c05-7415" value="1.0">
           <conditions>
             <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="bd75-31a1-5a23-cd2d" type="atLeast"/>
-          </conditions>
-        </modifier>
-        <modifier type="set" field="8dfb-b38a-4a6e-68b6" value="1.0">
-          <conditions>
-            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f4f8-0e5a-457b-60ff" type="atLeast"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -4173,24 +4168,28 @@ On a successful ranged attack the Target gains a Stunned marker.</characteristic
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="f4f8-0e5a-457b-60ff" name="Ushi, The Sadistic" hidden="false" collective="false" import="true" type="model">
+    <selectionEntry id="f4f8-0e5a-457b-60ff" name="Ushi, The Sadistic (reference)" hidden="true" collective="false" import="true" type="model">
       <modifiers>
-        <modifier type="set" field="hidden" value="true">
+        <modifier type="set" field="hidden" value="false">
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d14c-bf06-fc37-16e2" type="equalTo"/>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2125-1289-3bb1-15c1" type="equalTo"/>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="04a3-b83a-ca08-c649" type="lessThan"/>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="bec1-2154-3ab5-7979" type="equalTo"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="04a3-b83a-ca08-c649" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c6a4-2cff-bc1d-d4b1" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="26c7-22c0-fab2-d4c4" type="atLeast"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
         </modifier>
         <modifier type="set" field="ad4e-b039-f47b-9251" value="1.0">
-          <conditions>
-            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="04a3-b83a-ca08-c649" type="atLeast"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c6a4-2cff-bc1d-d4b1" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="04a3-b83a-ca08-c649" type="atLeast"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <constraints>
@@ -4288,23 +4287,22 @@ Kemono &amp; Ushi are considered the same model when creating a Warband.</charac
       <categoryLinks>
         <categoryLink id="d6d8-b0b8-38a1-ee8d" name="Faction: The Savage Wave" hidden="false" targetId="c920-0951-5d96-5693" primary="false"/>
         <categoryLink id="7356-9371-843f-42e3" name="Oni" hidden="false" targetId="4864-a322-cefd-fbfb" primary="false"/>
-        <categoryLink id="5995-52d8-30c0-550f" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
+        <categoryLink id="5995-52d8-30c0-550f" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="false"/>
         <categoryLink id="8097-66fe-5bd4-cf6a" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
         <categoryLink id="db0a-8806-eeab-b472" name="Brutal" hidden="false" targetId="f62f-dd0b-4f06-06a6" primary="false"/>
+        <categoryLink id="5d6f-3684-fdab-36f0" name="New CategoryLink" hidden="false" targetId="5073-f00b-a8f6-5e3b" primary="true"/>
       </categoryLinks>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="85d6-8be6-0155-ec5a" name="Zoo" hidden="false" collective="false" import="true" type="model">
+    <selectionEntry id="85d6-8be6-0155-ec5a" name="Zoo" hidden="true" collective="false" import="true" type="model">
       <modifiers>
-        <modifier type="set" field="hidden" value="true">
+        <modifier type="set" field="hidden" value="false">
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="bd75-31a1-5a23-cd2d" type="equalTo"/>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="90cc-09e6-8e61-a99a" type="lessThan"/>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4ff5-0ce5-fd04-3969" type="equalTo"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="90cc-09e6-8e61-a99a" type="atLeast"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -4383,8 +4381,9 @@ Kemono &amp; Ushi are considered the same model when creating a Warband.</charac
       <categoryLinks>
         <categoryLink id="620b-4214-1956-d7ac" name="Bakemono" hidden="false" targetId="9b14-5558-cfeb-ee1c" primary="false"/>
         <categoryLink id="c9e0-9ca6-cee9-ba7f" name="Faction: The Savage Wave" hidden="false" targetId="c920-0951-5d96-5693" primary="false"/>
-        <categoryLink id="e35a-1a13-a22a-9925" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
+        <categoryLink id="e35a-1a13-a22a-9925" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="false"/>
         <categoryLink id="557b-13a7-4215-d156" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
+        <categoryLink id="cc27-1e76-92b9-f2e8" name="New CategoryLink" hidden="false" targetId="5073-f00b-a8f6-5e3b" primary="true"/>
       </categoryLinks>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0.0"/>
@@ -4727,6 +4726,1302 @@ Permitted [Oni, Onisho]</characteristic>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="7.0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="c8a9-16b5-caa1-b38f" name="Bobata, the Bell Ringer (reference)" hidden="true" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="26c7-22c0-fab2-d4c4" type="atLeast"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5ea1-8a0f-6a03-8265" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="1179-7b6c-755c-26c9" name="Bobata, the Bell Ringer" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">2</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33">3</characteristic>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">5</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">2</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">6</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">12 OOOOO OOOOO OO</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Large 50mm</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="b174-188a-6abb-0d2a" name="Ranged Weapon" hidden="false">
+          <profiles>
+            <profile id="40a1-45d4-402b-169a" name="Bell" hidden="false" typeId="7e20-258e-bf92-18f9" typeName="Ranged Weapon">
+              <characteristics>
+                <characteristic name="Ranged Weapon Strength" typeId="15aa-b6bd-6923-271f">+1</characteristic>
+                <characteristic name="Range Bands" typeId="be6a-50c6-d691-e2e9">2/4/6</characteristic>
+                <characteristic name="Traits" typeId="3410-4428-ef91-eb61"/>
+                <characteristic name="Specials" typeId="cdaf-b6ac-89d4-39ef"/>
+                <characteristic name="Unique Effects" typeId="3bf8-6525-f003-4990"/>
+              </characteristics>
+            </profile>
+          </profiles>
+        </infoGroup>
+        <infoGroup id="9d1f-9eff-ce76-5b84" name="Melee Weapon" hidden="false">
+          <profiles>
+            <profile id="4268-7485-00b8-f92c" name="Bell" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+2</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Brutal (1), Chain Weapon (1)</characteristic>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Slam Attack (1), Push Attack (0)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="3010-4007-cd23-1766" name="Slam Attack" hidden="false" targetId="5d05-b0ce-d7db-9def" type="rule"/>
+            <infoLink id="510b-6e76-e7be-723a" name="Push Attack" hidden="false" targetId="6c26-94ba-6b96-9e1b" type="rule"/>
+            <infoLink id="0c1b-00d4-d350-f3ba" name="Chain Weapon" hidden="false" targetId="84f9-d10e-0e9f-d79c" type="rule"/>
+            <infoLink id="09fa-82c3-3d86-9e5d" name="Brutal" hidden="false" targetId="5d95-975e-a72c-25f3" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="cf3b-045b-e3ff-553f" name="Ki Feats" hidden="false">
+          <infoLinks>
+            <infoLink id="e3f8-e9ab-ee2e-2ea8" name="Consume Soul" hidden="false" targetId="85bd-ac0d-842c-3097" type="infoGroup"/>
+            <infoLink id="c9b4-79c3-2e9c-7b8b" name="Circular Strike" hidden="false" targetId="4a19-1475-be08-ac1f" type="infoGroup"/>
+            <infoLink id="951e-8fbe-fb0c-adb4" name="Strafe" hidden="false" targetId="cd8a-6cd0-bb5b-6017" type="infoGroup"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="4d99-cdcb-c07f-bb14" name="Traits" hidden="false">
+          <profiles>
+            <profile id="23df-4b98-8c9d-9075" name="Bobata, the Bell Ringer" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332"> Bravery, Fear (6), Indomitable(1), Leadership [Friendly](1/3&quot;), Oni Rage, Strong, Tough (1)</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="9419-3a14-039c-f617" name="Bravery" hidden="false" targetId="f9b2-38d2-7cda-de6e" type="rule"/>
+            <infoLink id="d298-1da0-8ec3-e669" name="Fear" hidden="false" targetId="3586-4583-7f10-1f31" type="rule"/>
+            <infoLink id="ad0e-806f-8e38-87ac" name="Tough" hidden="false" targetId="5613-a6cf-495a-229f" type="rule"/>
+            <infoLink id="d140-c0a5-7766-960a" name="Indomitable " hidden="false" targetId="3beb-6f28-e7c4-a236" type="rule"/>
+            <infoLink id="2db8-7ba3-a1db-4179" name="Leadership" hidden="false" targetId="8ec4-bfdc-8c03-f631" type="rule"/>
+            <infoLink id="a549-2152-15a5-1394" name="Oni Rage" hidden="false" targetId="45cb-e585-e410-95c3" type="rule"/>
+            <infoLink id="5ba6-324d-99c8-f1bb" name="Strong" hidden="false" targetId="00b5-3637-d48a-807e" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+      </infoGroups>
+      <categoryLinks>
+        <categoryLink id="83c9-49d9-0e23-6974" name="Faction: The Savage Wave" hidden="false" targetId="c920-0951-5d96-5693" primary="false"/>
+        <categoryLink id="6126-43ce-73ac-24ad" name="Oni" hidden="false" targetId="4864-a322-cefd-fbfb" primary="false"/>
+        <categoryLink id="6e74-ee4b-f731-3b0a" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="false"/>
+        <categoryLink id="b0cb-da65-8f66-7973" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
+        <categoryLink id="c002-0d6e-ddd8-2387" name="Brutal" hidden="false" targetId="f62f-dd0b-4f06-06a6" primary="false"/>
+        <categoryLink id="f90a-0923-5b02-7409" name="New CategoryLink" hidden="false" targetId="5073-f00b-a8f6-5e3b" primary="true"/>
+      </categoryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="c6a4-2cff-bc1d-d4b1" name="Kemono, the Savage (reference)" hidden="true" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="26c7-22c0-fab2-d4c4" type="atLeast"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" field="07cb-747c-587d-fc67" value="1.0">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f4f8-0e5a-457b-60ff" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="26c7-22c0-fab2-d4c4" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="04a3-b83a-ca08-c649" type="lessThan"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="856a-64c3-ff79-afd4" type="max"/>
+        <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="07cb-747c-587d-fc67" type="min"/>
+      </constraints>
+      <profiles>
+        <profile id="9d38-8c41-2edd-4d4c" name="Kemono, the Savage" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">0</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">5</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">1</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">10</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">12 OOOOO OOOOO OO</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Large 50mm</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="5241-2067-7eeb-73d6" name="Melee Weapon" hidden="false">
+          <profiles>
+            <profile id="abd5-7b32-0fb0-5677" name="Club" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+2</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Brutal (1), Pierce (1)</characteristic>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Powerful Attack (1)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="d7db-12ac-67e2-ed34" name="Powerful Attack" hidden="false" targetId="d56a-058d-95d9-5b60" type="rule"/>
+            <infoLink id="02c3-fd5c-578d-b0f1" name="Pierce " hidden="false" targetId="39e4-14d7-5533-6e67" type="rule"/>
+            <infoLink id="040a-7661-81a9-de6d" name="Brutal" hidden="false" targetId="5d95-975e-a72c-25f3" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="02ac-de5c-aaa5-7808" name="Ki Feats" hidden="false">
+          <infoLinks>
+            <infoLink id="96a8-8eac-114b-47a2" name="Consume Soul" hidden="false" targetId="85bd-ac0d-842c-3097" type="infoGroup"/>
+            <infoLink id="120e-9e06-04ea-ad18" name="Savage Beating" hidden="false" targetId="1043-4026-45a3-c9c0" type="infoGroup"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="52f5-0ca0-aff2-8366" name="Traits" hidden="false">
+          <profiles>
+            <profile id="dc52-d16e-7838-27a3" name="Kemono, the Savage" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Aware, Bravery, Fear (6), Indomitable (2), Oni Rage, Strong [Melee], Tough (1)</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="0e60-c53c-d78b-d701" name="Bravery" hidden="false" targetId="f9b2-38d2-7cda-de6e" type="rule"/>
+            <infoLink id="8c1a-3257-7e98-64f6" name="Fear" hidden="false" targetId="3586-4583-7f10-1f31" type="rule"/>
+            <infoLink id="0ae9-dbf6-6bd2-4626" name="Tough" hidden="false" targetId="5613-a6cf-495a-229f" type="rule"/>
+            <infoLink id="979b-0e23-3dca-3880" name="Indomitable " hidden="false" targetId="3beb-6f28-e7c4-a236" type="rule"/>
+            <infoLink id="712d-d97e-ef24-62db" name="Aware" hidden="false" targetId="ff4a-6b14-09dd-2343" type="rule"/>
+            <infoLink id="e24b-1c82-bfac-a72b" name="Oni Rage" hidden="false" targetId="45cb-e585-e410-95c3" type="rule"/>
+            <infoLink id="6e6c-b19c-dcc0-6f92" name="Strong" hidden="false" targetId="00b5-3637-d48a-807e" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="6b4b-c56e-512c-6960" name="Unique Effects" hidden="false">
+          <profiles>
+            <profile id="f323-6e5e-7451-2ea1" name="Kemono" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">During the Ki Generation step this model’s Controller chooses whether to use Kemono’s profile card or Ushi’s profile card for the turn.
+• Heal or mark Wounds so that both profile cards have the same Wounds unmarked.
+• Transfer Ki Tokens, State Markers, Enhancement, and any tokens to the chosen profile card.
+
+Kemono &amp; Ushi are considered the same model when creating a Warband.
+ 
+This model may Move through Destructible terrain; if you do, remove the terrain from the battlefield.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </infoGroup>
+      </infoGroups>
+      <categoryLinks>
+        <categoryLink id="7c42-8541-efd6-a879" name="Faction: The Savage Wave" hidden="false" targetId="c920-0951-5d96-5693" primary="false"/>
+        <categoryLink id="4f04-11f2-1cee-27a2" name="Oni" hidden="false" targetId="4864-a322-cefd-fbfb" primary="false"/>
+        <categoryLink id="509a-6ce4-ec37-8dd5" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="false"/>
+        <categoryLink id="ef66-43e9-67e7-0069" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
+        <categoryLink id="794d-b373-ada2-22d3" name="Brutal" hidden="false" targetId="f62f-dd0b-4f06-06a6" primary="false"/>
+        <categoryLink id="d5bd-edcf-d205-d259" name="New CategoryLink" hidden="false" targetId="5073-f00b-a8f6-5e3b" primary="true"/>
+      </categoryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="f1a2-1d9e-f422-9bca" name="Rashka, the Devastator (reference)" hidden="true" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="26c7-22c0-fab2-d4c4" type="atLeast"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d646-c7ee-baea-95c1" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="f28e-f29d-9e3c-7c92" name="Rashka, the Devastator" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">3</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">5</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">2</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">8</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">13 OOOOO OOOOO OOO</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Huge 50mm</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="e170-0afd-f6cf-783b" name="Traits" hidden="false">
+          <profiles>
+            <profile id="3cb9-16aa-ba57-ddc1" name="Rashka, the Devastator" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Bravery, Courage (1), Fear (6), Huge, Indomitable (1), Resistance (1), Oni Rage, Split Attack, Strong, Tough (1)</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="2109-5286-dc64-a515" name="Bravery" hidden="false" targetId="f9b2-38d2-7cda-de6e" type="rule"/>
+            <infoLink id="b21f-7087-e6e4-4738" name="Fear" hidden="false" targetId="3586-4583-7f10-1f31" type="rule"/>
+            <infoLink id="b086-1242-1b70-a661" name="Tough" hidden="false" targetId="5613-a6cf-495a-229f" type="rule"/>
+            <infoLink id="a7c1-c922-2a82-e6b0" name="Indomitable " hidden="false" targetId="3beb-6f28-e7c4-a236" type="rule"/>
+            <infoLink id="2262-7545-fd56-d2f8" name="Courage" hidden="false" targetId="2c5f-d52f-24ba-7927" type="rule"/>
+            <infoLink id="e839-2bf9-0d41-fb49" name="Oni Rage" hidden="false" targetId="45cb-e585-e410-95c3" type="rule"/>
+            <infoLink id="967b-2ea8-8d8a-2bd9" name="Strong" hidden="false" targetId="00b5-3637-d48a-807e" type="rule"/>
+            <infoLink id="ea3d-ed2c-25c1-ff71" name="Huge" hidden="false" targetId="baca-f5d8-c383-49d2" type="rule"/>
+            <infoLink id="2781-8ade-e86c-1248" name="Resistance " hidden="false" targetId="7e3f-9dc3-cacb-469f" type="rule"/>
+            <infoLink id="f287-0f28-7edb-f645" name="Split Attack" hidden="false" targetId="92d0-d4fe-e58e-7535" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="4a0f-f05c-7d50-5148" name="Melee Weapon" hidden="false">
+          <profiles>
+            <profile id="b09c-5517-6cac-267b" name="Torii Arch" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+4</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Brutal (1), Reach</characteristic>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Slam Attack (0), Push Defence (1)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="d3f7-8548-26b8-ee49" name="Push Defence" hidden="false" targetId="74fc-a971-d9c2-278c" type="rule"/>
+            <infoLink id="864d-0a72-a229-da74" name="Reach" hidden="false" targetId="e28e-d5dd-a262-1101" type="rule"/>
+            <infoLink id="c6df-df46-99f7-1621" name="Brutal" hidden="false" targetId="5d95-975e-a72c-25f3" type="rule"/>
+            <infoLink id="1204-6b74-9a99-721a" name="Slam Attack" hidden="false" targetId="5d05-b0ce-d7db-9def" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="a532-799e-d5d0-44af" name="Ki Feats" hidden="false">
+          <infoLinks>
+            <infoLink id="c42f-a546-b4a1-3089" name="Consume Soul" hidden="false" targetId="85bd-ac0d-842c-3097" type="infoGroup"/>
+            <infoLink id="0d04-2d5c-e5c2-76bb" name="Crushing Blow" hidden="false" targetId="ca16-d173-676c-88da" type="infoGroup"/>
+            <infoLink id="4055-9816-aeb8-b4c1" name="Rampage" hidden="false" targetId="e2aa-ac43-c7b6-c459" type="infoGroup"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="907b-0e1f-8611-cef7" name="Unique Effects" hidden="false">
+          <profiles>
+            <profile id="0ab8-e085-8f2e-f9d9" name="The Devastator" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">When this model has the Initiative in a Melee Exchange, Enemy models cannot reroll Defence dice during that exchange.
+
+This model may move through Destructible terrain; if you do, remove the terrain from the battlefield.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </infoGroup>
+      </infoGroups>
+      <categoryLinks>
+        <categoryLink id="47ba-dda8-f2bf-9831" name="Faction: The Savage Wave" hidden="false" targetId="c920-0951-5d96-5693" primary="false"/>
+        <categoryLink id="8b78-310d-6421-1069" name="Oni" hidden="false" targetId="4864-a322-cefd-fbfb" primary="false"/>
+        <categoryLink id="6484-bf76-720a-f815" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="false"/>
+        <categoryLink id="c0ad-af55-b209-802a" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
+        <categoryLink id="2404-f4f9-f91c-f71c" name="Brutal" hidden="false" targetId="f62f-dd0b-4f06-06a6" primary="false"/>
+        <categoryLink id="d76a-3223-a004-bb79" name="New CategoryLink" hidden="false" targetId="5073-f00b-a8f6-5e3b" primary="true"/>
+      </categoryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="901d-8b69-38f6-f00d" name="Onyomi (reference)" hidden="true" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="26c7-22c0-fab2-d4c4" type="atLeast"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6058-895a-7827-f624" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="b0a2-88ed-4b08-ce12" name="Onyomi" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">1</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">5</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">2</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">8</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">12 OOOOO OOOOO OO</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Large 50mm</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="6a45-0529-beb7-8a63" name="Traits" hidden="false">
+          <profiles>
+            <profile id="cb39-e9ba-98e5-8adb" name="Onyomi" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Fear (6), Oni Rage, Strong [Melee], Tough (1)</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="de51-c527-52f1-695b" name="Fear" hidden="false" targetId="3586-4583-7f10-1f31" type="rule"/>
+            <infoLink id="200e-5f42-dae2-872e" name="Tough" hidden="false" targetId="5613-a6cf-495a-229f" type="rule"/>
+            <infoLink id="8b3a-dae4-ce1a-7492" name="Oni Rage" hidden="false" targetId="45cb-e585-e410-95c3" type="rule"/>
+            <infoLink id="f3eb-94ba-47f7-7d31" name="Strong" hidden="false" targetId="00b5-3637-d48a-807e" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="bf61-32eb-9991-fb74" name="Melee Weapon" hidden="false">
+          <profiles>
+            <profile id="3485-5662-b10b-07cc" name="Bone Club" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+2</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Brutal (1)</characteristic>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Combo Attack (1), Powerful Attack (1), Throw Attack (1)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="9f11-8d1a-e55c-113d" name="Powerful Attack" hidden="false" targetId="d56a-058d-95d9-5b60" type="rule"/>
+            <infoLink id="9f3b-30f4-b0e6-a716" name="Combo Attack " hidden="false" targetId="78ab-6a94-be24-8f74" type="rule"/>
+            <infoLink id="5586-e6e3-7011-89cf" name="Brutal" hidden="false" targetId="5d95-975e-a72c-25f3" type="rule"/>
+            <infoLink id="bde3-4a85-eba5-1ffd" name="Throw Attack" hidden="false" targetId="e4a9-1967-fb91-ce07" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="db4d-c13a-a701-e56c" name="Unique Effects" hidden="false">
+          <profiles>
+            <profile id="2d6b-7125-12d5-e2a7" name="Matriarch" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">This model may only target Onisho models with its Inspiration Ki Feat.
+
+Oni and Onisho models, except Kijo models, activating within 4&quot;&quot; of this model gain a Frightened Marker until the End Phase.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </infoGroup>
+        <infoGroup id="f10b-5b3c-c3fc-d450" name="Ki Feats" hidden="false">
+          <infoLinks>
+            <infoLink id="8a69-befd-259a-5846" name="Stolen Glory" hidden="false" targetId="6162-1b6c-0763-37a0" type="infoGroup"/>
+            <infoLink id="19ca-51d6-3423-449a" name="Inspiration" hidden="false" targetId="99a3-5be0-b64d-ab99" type="infoGroup"/>
+            <infoLink id="0fe2-bec7-2e7f-9659" name="Consume Soul" hidden="false" targetId="85bd-ac0d-842c-3097" type="infoGroup"/>
+          </infoLinks>
+        </infoGroup>
+      </infoGroups>
+      <categoryLinks>
+        <categoryLink id="d444-1400-c18f-1e14" name="Faction: The Savage Wave" hidden="false" targetId="c920-0951-5d96-5693" primary="false"/>
+        <categoryLink id="6ce9-aed7-92d8-fa8f" name="Kijo" hidden="false" targetId="cb8b-ca36-e256-96c7" primary="false"/>
+        <categoryLink id="0ee0-4249-afd2-e8b3" name="Oni" hidden="false" targetId="4864-a322-cefd-fbfb" primary="false"/>
+        <categoryLink id="95d4-5c10-e1cc-9fd3" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="false"/>
+        <categoryLink id="d652-5fc2-398d-9bf4" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
+        <categoryLink id="5e31-117a-f37a-7225" name="Brutal" hidden="false" targetId="f62f-dd0b-4f06-06a6" primary="false"/>
+        <categoryLink id="78b3-4464-12c9-e459" name="New CategoryLink" hidden="false" targetId="5073-f00b-a8f6-5e3b" primary="true"/>
+      </categoryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="7dea-c9ec-68be-cde0" name="Waka, the Rampager (reference)" hidden="true" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="26c7-22c0-fab2-d4c4" type="atLeast"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="12be-f830-ded4-efd1" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="b103-818c-d64f-a2ae" name="Waka, the Rampager" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">2</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33">3</characteristic>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">5</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">2</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">6</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">12 OOOOO OOOOO OO</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Large 50mm</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="a15d-5041-8b09-13ce" name="Unique Effects" hidden="false">
+          <profiles>
+            <profile id="9d22-13d7-d208-2009" name="The Rampager" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">When Waka declares a Wait Action and spends 2 Ki Tokens to remove Destructible terrain he is in BtB with, if he currently has no Ammo Tokens, he will also gain 1 Ammo Token and he may immediately make a Ranged Attack.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </infoGroup>
+        <infoGroup id="9dad-69ab-2763-7efe" name="Melee Weapon" hidden="false">
+          <profiles>
+            <profile id="498b-a6e2-6597-0eff" name="Fist" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+1</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e"/>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Throw Attack (1), Push Defence (0)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="df19-6195-a461-6b44" name="Throw Attack" hidden="false" targetId="e4a9-1967-fb91-ce07" type="rule"/>
+            <infoLink id="b740-c97f-1c36-70e3" name="Push Defence" hidden="false" targetId="74fc-a971-d9c2-278c" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="f9f6-6076-589b-f8fb" name="Ki Feats" hidden="false">
+          <infoLinks>
+            <infoLink id="9d83-57e0-3428-f058" name="Consume Soul" hidden="false" targetId="85bd-ac0d-842c-3097" type="infoGroup"/>
+            <infoLink id="894d-9d90-e812-8426" name="Dirty Fighting" hidden="false" targetId="b399-d8d0-47b1-00ee" type="infoGroup"/>
+            <infoLink id="b98e-c701-245a-58fa" name="Heave" hidden="false" targetId="7146-da74-6013-f33d" type="infoGroup"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="92e9-9161-8fa6-834b" name="Traits" hidden="false">
+          <profiles>
+            <profile id="7fae-8df2-fcb5-2704" name="Waka, the Rampager" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Fear (6), Indomitable (1), Oni Rage, Strong, Tough (1)</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="44fd-f8e6-014d-7cf5" name="Fear" hidden="false" targetId="3586-4583-7f10-1f31" type="rule"/>
+            <infoLink id="d031-43be-b5d7-519a" name="Tough" hidden="false" targetId="5613-a6cf-495a-229f" type="rule"/>
+            <infoLink id="24ed-dee0-2ff6-860c" name="Indomitable " hidden="false" targetId="3beb-6f28-e7c4-a236" type="rule"/>
+            <infoLink id="6ee4-8f91-9b3b-6b7d" name="Oni Rage" hidden="false" targetId="45cb-e585-e410-95c3" type="rule"/>
+            <infoLink id="6710-9b88-a426-0894" name="Strong" hidden="false" targetId="00b5-3637-d48a-807e" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="6002-383c-9914-174f" name="Ranged Weapon" hidden="false">
+          <profiles>
+            <profile id="8f84-9e57-34cd-476e" name="Debris" hidden="false" typeId="7e20-258e-bf92-18f9" typeName="Ranged Weapon">
+              <characteristics>
+                <characteristic name="Ranged Weapon Strength" typeId="15aa-b6bd-6923-271f">+0</characteristic>
+                <characteristic name="Range Bands" typeId="be6a-50c6-d691-e2e9">2/4/6</characteristic>
+                <characteristic name="Traits" typeId="3410-4428-ef91-eb61">Ammo (1), Pierce (3), Sharp (1)</characteristic>
+                <characteristic name="Specials" typeId="cdaf-b6ac-89d4-39ef">Critical Attack (0)</characteristic>
+                <characteristic name="Unique Effects" typeId="3bf8-6525-f003-4990">When this model makes a Ranged Attack deploy a 30mm base [Impassable, Blocking,Small] [Destructible] terrain element in contact with the target.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="f9d6-775c-5d59-95bd" name="Ammo" hidden="false" targetId="765d-18a5-7170-9b56" type="rule"/>
+            <infoLink id="ac54-e0ce-49de-3131" name="Pierce " hidden="false" targetId="39e4-14d7-5533-6e67" type="rule"/>
+            <infoLink id="6e75-33af-e9c7-e530" name="Sharp " hidden="false" targetId="6092-9fb5-5196-d1eb" type="rule"/>
+            <infoLink id="7196-1466-2099-9944" name="Critical Attack" hidden="false" targetId="7ec7-56ae-79e3-423e" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+      </infoGroups>
+      <categoryLinks>
+        <categoryLink id="cd4c-ed5e-6ad8-83d0" name="Faction: The Savage Wave" hidden="false" targetId="c920-0951-5d96-5693" primary="false"/>
+        <categoryLink id="4048-f918-e39f-dbb8" name="Oni" hidden="false" targetId="4864-a322-cefd-fbfb" primary="false"/>
+        <categoryLink id="0073-f646-e5f3-6608" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
+        <categoryLink id="a8fb-cd1d-cb3f-45a2" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="false"/>
+        <categoryLink id="4bae-71dd-e490-58e2" name="New CategoryLink" hidden="false" targetId="5073-f00b-a8f6-5e3b" primary="true"/>
+      </categoryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="3949-651a-a679-7850" name="Yusha, the Vindictive (reference)" hidden="true" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="26c7-22c0-fab2-d4c4" type="atLeast"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0e50-b52a-9044-2799" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="1e7c-8686-2e02-2d09" name="Yusha, the Vindictive" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">2</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33">3</characteristic>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">5</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">2</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">6</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">12 OOOOO OOOOO OO</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Large 50mm</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="83db-2939-4454-90d2" name="Ki Feats" hidden="false">
+          <infoLinks>
+            <infoLink id="4290-ace5-725d-21f8" name="Consume Soul" hidden="false" targetId="85bd-ac0d-842c-3097" type="infoGroup"/>
+            <infoLink id="0603-18fe-9ddf-1cfb" name="Inspiration" hidden="false" targetId="99a3-5be0-b64d-ab99" type="infoGroup"/>
+            <infoLink id="53bf-e35f-88aa-18c2" name="Spur On" hidden="false" targetId="0783-a6f2-be72-025d" type="infoGroup"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="73cf-71e1-5aed-964c" name="Melee Weapon" hidden="false">
+          <profiles>
+            <profile id="461e-a858-9da8-5109" name="Whip" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+1</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Brutal (1)</characteristic>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Throw Attack (1)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="bfb7-eede-65e8-3e3a" name="Throw Attack" hidden="false" targetId="e4a9-1967-fb91-ce07" type="rule"/>
+            <infoLink id="16ba-e3d4-82b0-a1fb" name="Brutal" hidden="false" targetId="5d95-975e-a72c-25f3" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="780e-6c99-b6fc-ae7b" name="Traits" hidden="false">
+          <profiles>
+            <profile id="02f9-df35-24e9-461c" name="Yusha, the Vindictive" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Bravery, Command [Animal](3/6&quot;), Fear (6), Indomitable (1), Oni Rage, Strong, Tough (1)</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="3cd5-10f0-71b1-095c" name="Fear" hidden="false" targetId="3586-4583-7f10-1f31" type="rule"/>
+            <infoLink id="068c-a98e-1955-3ebd" name="Tough" hidden="false" targetId="5613-a6cf-495a-229f" type="rule"/>
+            <infoLink id="a63e-dc12-4f6f-1a4e" name="Indomitable " hidden="false" targetId="3beb-6f28-e7c4-a236" type="rule"/>
+            <infoLink id="c64c-b319-7663-c59f" name="Oni Rage" hidden="false" targetId="45cb-e585-e410-95c3" type="rule"/>
+            <infoLink id="7776-4c33-19c3-6cff" name="Strong" hidden="false" targetId="00b5-3637-d48a-807e" type="rule"/>
+            <infoLink id="aaca-71a5-ca10-bcb1" name="Bravery" hidden="false" targetId="f9b2-38d2-7cda-de6e" type="rule"/>
+            <infoLink id="198d-f846-b18d-2e64" name="Command" hidden="false" targetId="1b83-5421-f050-365a" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="d16a-8ef2-19da-6cf7" name="Unique Effects" hidden="false">
+          <profiles>
+            <profile id="4282-6977-e27a-e074" name="The Vindictive" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">This model may only target Animal models with it&apos;s Inspiration Feat.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </infoGroup>
+        <infoGroup id="a75c-7957-800a-2efd" name="Ranged Weapon" hidden="false">
+          <profiles>
+            <profile id="5cd3-063e-0c65-8695" name="Whip" hidden="false" typeId="7e20-258e-bf92-18f9" typeName="Ranged Weapon">
+              <characteristics>
+                <characteristic name="Ranged Weapon Strength" typeId="15aa-b6bd-6923-271f">+0</characteristic>
+                <characteristic name="Range Bands" typeId="be6a-50c6-d691-e2e9">2/3/4</characteristic>
+                <characteristic name="Traits" typeId="3410-4428-ef91-eb61"/>
+                <characteristic name="Specials" typeId="cdaf-b6ac-89d4-39ef"/>
+                <characteristic name="Unique Effects" typeId="3bf8-6525-f003-4990">Models suffering Wounds from this model’s Ranged Attack gain Cowardly until the End Phase.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="75c4-2e34-2806-c86a" name="Cowardly" hidden="false" targetId="c8d8-d1c7-905b-f971" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+      </infoGroups>
+      <categoryLinks>
+        <categoryLink id="bc1a-953e-7e89-f5eb" name="Faction: The Savage Wave" hidden="false" targetId="c920-0951-5d96-5693" primary="false"/>
+        <categoryLink id="e2dd-bcf4-21c8-6388" name="Oni" hidden="false" targetId="4864-a322-cefd-fbfb" primary="false"/>
+        <categoryLink id="eb83-b957-3aa3-6207" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="false"/>
+        <categoryLink id="6ff5-50bc-c2a6-06ea" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
+        <categoryLink id="6b45-cb96-b862-13b6" name="Brutal" hidden="false" targetId="f62f-dd0b-4f06-06a6" primary="false"/>
+        <categoryLink id="0251-a2f0-2bce-74dc" name="New CategoryLink" hidden="false" targetId="5073-f00b-a8f6-5e3b" primary="true"/>
+      </categoryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="4ac1-706a-fe3f-68ad" name="Zuba, the All-Seeing (reference)" hidden="true" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="26c7-22c0-fab2-d4c4" type="atLeast"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="61e0-2ce7-c381-41a1" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="0e83-fd65-263c-8b46" name="Zuba, the All-Seeing" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">3</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">5</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">2</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">8</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">12 OOOOO OOOOO OO</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Large 50mm</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="38ab-3595-4ddd-bc6c" name="Ki Feats" hidden="false">
+          <infoLinks>
+            <infoLink id="d32b-4d6a-ee75-c594" name="Consume Soul" hidden="false" targetId="85bd-ac0d-842c-3097" type="infoGroup"/>
+            <infoLink id="fbd5-60b4-b698-3756" name="Future Sight" hidden="false" targetId="fb1c-5ab1-36b3-4d52" type="infoGroup"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="aa09-373f-0f77-c99e" name="Melee Weapon" hidden="false">
+          <profiles>
+            <profile id="9bee-209b-d841-2321" name="Hammer" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+3</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Brutal (1)</characteristic>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Slam Attack (1), Powerful Attack (1)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="e67c-6636-c612-c873" name="Slam Attack" hidden="false" targetId="5d05-b0ce-d7db-9def" type="rule"/>
+            <infoLink id="148e-6b51-2fa8-18e1" name="Brutal" hidden="false" targetId="5d95-975e-a72c-25f3" type="rule"/>
+            <infoLink id="d99d-6c4e-fdc9-4e3a" name="Powerful Attack" hidden="false" targetId="d56a-058d-95d9-5b60" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="4561-0929-1942-00d9" name="Traits" hidden="false">
+          <profiles>
+            <profile id="2358-b04c-3ba7-bc22" name="Zuba, the All-Seeing" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Charging Bonus [Fearless, +1 Melee Pool], Fear (6), Indomitable (1), Oni Rage, Sixth Sense, Strong, Tough (1)</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="cbb8-9b89-62f2-8e3e" name="Fear" hidden="false" targetId="3586-4583-7f10-1f31" type="rule"/>
+            <infoLink id="6f24-570b-17ff-199d" name="Tough" hidden="false" targetId="5613-a6cf-495a-229f" type="rule"/>
+            <infoLink id="a3f0-e5c4-26ce-c4e3" name="Indomitable " hidden="false" targetId="3beb-6f28-e7c4-a236" type="rule"/>
+            <infoLink id="46da-2694-a3d9-0768" name="Oni Rage" hidden="false" targetId="45cb-e585-e410-95c3" type="rule"/>
+            <infoLink id="323f-7541-15d5-2301" name="Strong" hidden="false" targetId="00b5-3637-d48a-807e" type="rule"/>
+            <infoLink id="c250-e8c1-2d0e-984d" name="Charging Bonus" hidden="false" targetId="d747-f7f2-ea6f-5ceb" type="rule"/>
+            <infoLink id="f2b5-8140-93a2-5692" name="Fearless" hidden="false" targetId="5d6f-1746-9080-aca5" type="rule"/>
+            <infoLink id="3eac-027c-7250-b4b3" name="Sixth Sense" hidden="false" targetId="ec49-3908-f1d1-8de2" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="7893-be04-468e-1b0c" name="Unique Effects" hidden="false">
+          <profiles>
+            <profile id="f4a5-cbe1-7eaf-7754" name="The All-Seeing" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">Once per game, after a dice roll has been made, you may choose one of the dice used to be rerolled.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </infoGroup>
+        <infoGroup id="9537-ea2e-09de-f95b" name="Ranged Weapon" hidden="false">
+          <profiles>
+            <profile id="3925-b4ca-1246-a2b1" name="Ground Slam" hidden="false" typeId="7e20-258e-bf92-18f9" typeName="Ranged Weapon">
+              <characteristics>
+                <characteristic name="Ranged Weapon Strength" typeId="15aa-b6bd-6923-271f">Special</characteristic>
+                <characteristic name="Range Bands" typeId="be6a-50c6-d691-e2e9">-/6/-</characteristic>
+                <characteristic name="Traits" typeId="3410-4428-ef91-eb61"/>
+                <characteristic name="Specials" typeId="cdaf-b6ac-89d4-39ef">Sweep Attack (0)</characteristic>
+                <characteristic name="Unique Effects" typeId="3bf8-6525-f003-4990">Ranged Attacks by this model are not modified by Cover. Successful Ranged Attacks by this model cause no Damage Roll but the Target becomes Prone.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </infoGroup>
+      </infoGroups>
+      <categoryLinks>
+        <categoryLink id="7735-108d-81da-2965" name="Faction: The Savage Wave" hidden="false" targetId="c920-0951-5d96-5693" primary="false"/>
+        <categoryLink id="6ff5-6893-b428-e824" name="Oni" hidden="false" targetId="4864-a322-cefd-fbfb" primary="false"/>
+        <categoryLink id="527c-d3ba-ebf8-c192" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="false"/>
+        <categoryLink id="3c71-f321-47c1-3aac" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
+        <categoryLink id="aa7e-9c3b-277a-b60c" name="Brutal" hidden="false" targetId="f62f-dd0b-4f06-06a6" primary="false"/>
+        <categoryLink id="a7d1-2d00-5d17-e6b3" name="New CategoryLink" hidden="false" targetId="5073-f00b-a8f6-5e3b" primary="true"/>
+      </categoryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="0db6-6f36-8a67-c9c9" name="Bakemono Archers (reference)" hidden="true" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5132-d58b-2573-7d92" type="atLeast"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fab2-f583-1ea3-9ffc" type="max"/>
+      </constraints>
+      <infoGroups>
+        <infoGroup id="6b0d-b66e-f4fb-a538" name="Traits" hidden="false">
+          <profiles>
+            <profile id="ac62-73d2-51cd-8043" name="Bakemono" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Camouflage (4&quot;), Cowardly, Tiny</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="713f-0cbe-0b03-da12" name="Camouflage" hidden="false" targetId="9010-4983-c98c-1751" type="rule"/>
+            <infoLink id="e954-1c4f-bb4c-a82f" name="Cowardly" hidden="false" targetId="c8d8-d1c7-905b-f971" type="rule"/>
+            <infoLink id="c1d4-1817-196d-e794" name="Tiny" hidden="false" targetId="335c-7f6f-9ca0-cb93" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="3e8d-87f4-8a3b-7a43" name="Melee Weapon" hidden="false">
+          <profiles>
+            <profile id="0cad-ab12-54a3-2858" name="Improvised" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">-2</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e"/>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d"/>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+        </infoGroup>
+        <infoGroup id="fcc0-1d54-d55e-f2bb" name="Ranged Weapon" hidden="false">
+          <profiles>
+            <profile id="b633-fcd2-e26c-8aec" name="Short Bow" hidden="false" typeId="7e20-258e-bf92-18f9" typeName="Ranged Weapon">
+              <characteristics>
+                <characteristic name="Ranged Weapon Strength" typeId="15aa-b6bd-6923-271f">-1</characteristic>
+                <characteristic name="Range Bands" typeId="be6a-50c6-d691-e2e9">4/8/12</characteristic>
+                <characteristic name="Traits" typeId="3410-4428-ef91-eb61">Reload (1)</characteristic>
+                <characteristic name="Specials" typeId="cdaf-b6ac-89d4-39ef"/>
+                <characteristic name="Unique Effects" typeId="3bf8-6525-f003-4990"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="73fe-03c8-9697-ce3a" name="Reload" hidden="false" targetId="9736-df56-0b62-b1a8" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+      </infoGroups>
+      <categoryLinks>
+        <categoryLink id="7429-d77b-ba5e-13e8" name="Bakemono" hidden="false" targetId="9b14-5558-cfeb-ee1c" primary="false"/>
+        <categoryLink id="8306-f35b-52cf-4b07" name="Horde" hidden="false" targetId="1afa-b4a3-cd57-56c8" primary="false"/>
+        <categoryLink id="bb34-907c-cf58-b6ed" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="false"/>
+        <categoryLink id="858d-5f7a-4710-4dcc" name="Non-Unique" hidden="false" targetId="d181-219d-3add-d47b" primary="false"/>
+        <categoryLink id="ec3f-f009-f7a9-add0" name="New CategoryLink" hidden="false" targetId="5073-f00b-a8f6-5e3b" primary="true"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="2b9f-fd44-02c2-a511" name="Bakemono Archer" hidden="false" collective="false" import="true" targetId="1798-6533-32b0-0f26" type="selectionEntry">
+          <modifiers>
+            <modifier type="append" field="name" value="A"/>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="050b-8d7e-a598-1811" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="c80c-9e25-f8a8-a8ad" name="Bakemono Archer A" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+              <characteristics>
+                <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">1</characteristic>
+                <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+                <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">2</characteristic>
+                <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33">3</characteristic>
+                <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
+                <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+                <characteristic name="Ki" typeId="3969-9568-a914-6854">1</characteristic>
+                <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+                <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">*</characteristic>
+                <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">4 OOOO</characteristic>
+                <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Tiny 30mm</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </entryLink>
+        <entryLink id="afe1-638b-281f-8bf0" name="Bakemono Archer" hidden="false" collective="false" import="true" targetId="1798-6533-32b0-0f26" type="selectionEntry">
+          <modifiers>
+            <modifier type="append" field="name" value="B"/>
+          </modifiers>
+          <profiles>
+            <profile id="a4f5-e86e-01db-8786" name="Bakemono Archer B" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+              <characteristics>
+                <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">1</characteristic>
+                <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+                <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">2</characteristic>
+                <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33">3</characteristic>
+                <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
+                <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+                <characteristic name="Ki" typeId="3969-9568-a914-6854">1</characteristic>
+                <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+                <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">*</characteristic>
+                <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">4 OOOO</characteristic>
+                <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Tiny 30mm</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </entryLink>
+      </entryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="c1d7-afe9-ec3a-b1af" name="Bakemono Beaters (reference)" hidden="true" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5132-d58b-2573-7d92" type="atLeast"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="844c-b025-12ec-9588" type="max"/>
+      </constraints>
+      <infoGroups>
+        <infoGroup id="d2af-2035-3660-e866" name="Traits" hidden="false">
+          <profiles>
+            <profile id="663b-d9b9-7e65-7707" name="Bakemono" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Camouflage (4&quot;), Cowardly, Tiny</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="51ab-5c64-e3e2-4b7d" name="Camouflage" hidden="false" targetId="9010-4983-c98c-1751" type="rule"/>
+            <infoLink id="b347-5de4-a2c1-d0f2" name="Cowardly" hidden="false" targetId="c8d8-d1c7-905b-f971" type="rule"/>
+            <infoLink id="ba1e-9e14-acc0-3f23" name="Tiny" hidden="false" targetId="335c-7f6f-9ca0-cb93" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="e582-e17c-f0a6-3ed6" name="Melee Weapon" hidden="false">
+          <profiles>
+            <profile id="d1e8-f7a7-e523-5c28" name="Improvised" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+1</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e"/>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d"/>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+        </infoGroup>
+      </infoGroups>
+      <categoryLinks>
+        <categoryLink id="0c4d-e64c-3bab-e70c" name="Bakemono" hidden="false" targetId="9b14-5558-cfeb-ee1c" primary="false"/>
+        <categoryLink id="9d0b-c9cd-a06b-ba96" name="Horde" hidden="false" targetId="1afa-b4a3-cd57-56c8" primary="false"/>
+        <categoryLink id="e151-bddb-8f25-81c2" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="false"/>
+        <categoryLink id="ff1b-699e-436f-4251" name="Non-Unique" hidden="false" targetId="d181-219d-3add-d47b" primary="false"/>
+        <categoryLink id="31c3-e6d7-6e76-26fb" name="New CategoryLink" hidden="false" targetId="5073-f00b-a8f6-5e3b" primary="true"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="a6da-48b0-c41d-9c3d" name="Bakemono Beater" hidden="false" collective="false" import="true" targetId="9932-6942-c8a3-7d72" type="selectionEntry">
+          <modifiers>
+            <modifier type="append" field="name" value="B"/>
+          </modifiers>
+          <profiles>
+            <profile id="d8b7-e105-bf5f-7c79" name="Bakemono Beater B" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+              <characteristics>
+                <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">2</characteristic>
+                <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+                <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">1</characteristic>
+                <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+                <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
+                <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+                <characteristic name="Ki" typeId="3969-9568-a914-6854">1</characteristic>
+                <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+                <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">*</characteristic>
+                <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">4 OOOO</characteristic>
+                <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Tiny 30mm</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </entryLink>
+        <entryLink id="2cd1-1c6f-05dc-44be" name="Bakemono Beater" hidden="false" collective="false" import="true" targetId="9932-6942-c8a3-7d72" type="selectionEntry">
+          <modifiers>
+            <modifier type="append" field="name" value="A"/>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5f46-7e50-b8dd-3d88" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="0dc9-ea56-e0ee-bc87" name="Bakemono Beater A" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+              <characteristics>
+                <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">2</characteristic>
+                <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+                <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">1</characteristic>
+                <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+                <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
+                <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+                <characteristic name="Ki" typeId="3969-9568-a914-6854">1</characteristic>
+                <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+                <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">*</characteristic>
+                <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">4 OOOO</characteristic>
+                <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Tiny 30mm</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </entryLink>
+      </entryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="cc20-1e32-61cf-9fee" name="Bakemono Bushi (reference)" hidden="true" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5132-d58b-2573-7d92" type="atLeast"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e8ad-826d-ac40-6ddd" type="max"/>
+      </constraints>
+      <infoGroups>
+        <infoGroup id="9836-7e4a-9c55-a5a0" name="Traits" hidden="false">
+          <profiles>
+            <profile id="7abb-fae5-17ea-bc08" name="Bakemono" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Camouflage (4&quot;), Cowardly, Tiny</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="410f-78e4-2bfe-f972" name="Camouflage" hidden="false" targetId="9010-4983-c98c-1751" type="rule"/>
+            <infoLink id="e124-2bb2-3209-014e" name="Cowardly" hidden="false" targetId="c8d8-d1c7-905b-f971" type="rule"/>
+            <infoLink id="1aa3-c115-e71d-c602" name="Tiny" hidden="false" targetId="335c-7f6f-9ca0-cb93" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="75d7-8b06-a434-eb3f" name="Melee Weapon" hidden="false">
+          <profiles>
+            <profile id="65ee-a770-59e3-c9a2" name="Improvised" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">-1</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e"/>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Combo Attack (1)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="cd37-70cf-6343-a001" name="Combo Attack " hidden="false" targetId="78ab-6a94-be24-8f74" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+      </infoGroups>
+      <categoryLinks>
+        <categoryLink id="f6c9-9e89-b5d6-75f4" name="Bakemono" hidden="false" targetId="9b14-5558-cfeb-ee1c" primary="false"/>
+        <categoryLink id="98fc-9bd1-4d3b-5192" name="Horde" hidden="false" targetId="1afa-b4a3-cd57-56c8" primary="false"/>
+        <categoryLink id="8f91-8aee-fb8a-850f" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="false"/>
+        <categoryLink id="67b5-686a-70ba-7105" name="Non-Unique" hidden="false" targetId="d181-219d-3add-d47b" primary="false"/>
+        <categoryLink id="e8d5-24b0-b0d0-6a4e" name="New CategoryLink" hidden="false" targetId="5073-f00b-a8f6-5e3b" primary="true"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="4b4e-c0cc-6697-6b77" name="Bakemono Bushi" hidden="false" collective="false" import="true" targetId="7e77-1608-8841-c507" type="selectionEntry">
+          <modifiers>
+            <modifier type="append" field="name" value="B"/>
+          </modifiers>
+          <profiles>
+            <profile id="5098-53d7-61ce-e2a2" name="Bakemono Bushi B" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+              <characteristics>
+                <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">2</characteristic>
+                <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+                <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">1</characteristic>
+                <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+                <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
+                <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+                <characteristic name="Ki" typeId="3969-9568-a914-6854">1</characteristic>
+                <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+                <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">*</characteristic>
+                <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">4 OOOO</characteristic>
+                <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Tiny 30mm</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </entryLink>
+        <entryLink id="2f0f-eca9-7dc8-fb43" name="Bakemono Bushi" hidden="false" collective="false" import="true" targetId="7e77-1608-8841-c507" type="selectionEntry">
+          <modifiers>
+            <modifier type="append" field="name" value="A"/>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1f99-35eb-be88-14f5" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="839e-a7dd-8c12-e24d" name="Bakemono Bushi A" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+              <characteristics>
+                <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">2</characteristic>
+                <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+                <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">1</characteristic>
+                <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+                <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
+                <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+                <characteristic name="Ki" typeId="3969-9568-a914-6854">1</characteristic>
+                <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+                <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">*</characteristic>
+                <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">4 OOOO</characteristic>
+                <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Tiny 30mm</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </entryLink>
+      </entryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="c773-83f0-e129-9473" name="Bakemono Raiders (reference)" hidden="true" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5132-d58b-2573-7d92" type="atLeast"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2c35-3147-283a-072a" type="max"/>
+      </constraints>
+      <infoGroups>
+        <infoGroup id="a9cb-83da-b083-aedd" name="Traits" hidden="false">
+          <profiles>
+            <profile id="cc74-cbdb-e736-cce5" name="Bakemono Raider" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Armour (1), Camouflage (4&quot;), Cowardly, Defensive, Tiny</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="2dd0-cd7f-553e-1e74" name="Camouflage" hidden="false" targetId="9010-4983-c98c-1751" type="rule"/>
+            <infoLink id="bc39-a5be-27d7-dbfd" name="Cowardly" hidden="false" targetId="c8d8-d1c7-905b-f971" type="rule"/>
+            <infoLink id="60f3-23c4-7bfa-2745" name="Tiny" hidden="false" targetId="335c-7f6f-9ca0-cb93" type="rule"/>
+            <infoLink id="6638-3e4a-0e4b-3019" name="Defensive" hidden="false" targetId="c6e1-0904-b78f-7933" type="rule"/>
+            <infoLink id="e7ad-8ae2-e2ea-335e" name="Armour" hidden="false" targetId="8615-1c63-2242-5746" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="2d52-b1b6-1ff2-0254" name="Melee Weapon" hidden="false">
+          <profiles>
+            <profile id="4eda-e9c6-e8aa-9266" name="Cleaver" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">-1</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e"/>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d"/>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+        </infoGroup>
+        <infoGroup id="a386-f355-e0e6-1d99" name="Unique Effects" hidden="false">
+          <infoLinks>
+            <infoLink id="d5e7-973e-dddf-1a03" name="Shield" hidden="false" targetId="9f06-6fb1-c193-b964" type="infoGroup"/>
+          </infoLinks>
+        </infoGroup>
+      </infoGroups>
+      <categoryLinks>
+        <categoryLink id="7ac5-edeb-8e34-18c6" name="Bakemono" hidden="false" targetId="9b14-5558-cfeb-ee1c" primary="false"/>
+        <categoryLink id="9400-0e40-d423-dc5f" name="Horde" hidden="false" targetId="1afa-b4a3-cd57-56c8" primary="false"/>
+        <categoryLink id="c2f7-efeb-9589-6793" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="false"/>
+        <categoryLink id="2eb6-63da-b2ff-bb63" name="Non-Unique" hidden="false" targetId="d181-219d-3add-d47b" primary="false"/>
+        <categoryLink id="60d3-dce2-1d19-987d" name="Armour" hidden="false" targetId="f322-702a-ff62-b37e" primary="false"/>
+        <categoryLink id="009c-ad33-56dc-1bd4" name="New CategoryLink" hidden="false" targetId="5073-f00b-a8f6-5e3b" primary="true"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="f4ce-208b-f1ee-1887" name="Bakemono Raider" hidden="false" collective="false" import="true" targetId="373c-333e-9a1f-f881" type="selectionEntry">
+          <modifiers>
+            <modifier type="append" field="name" value="B"/>
+          </modifiers>
+          <profiles>
+            <profile id="c93c-d86a-a8f1-e321" name="Bakemono Raider B" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+              <characteristics>
+                <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">2</characteristic>
+                <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+                <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">2</characteristic>
+                <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+                <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
+                <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+                <characteristic name="Ki" typeId="3969-9568-a914-6854">1</characteristic>
+                <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+                <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">*</characteristic>
+                <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">4 OOOO</characteristic>
+                <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Tiny 30mm</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </entryLink>
+        <entryLink id="1427-ce1a-74b5-424f" name="Bakemono Raider" hidden="false" collective="false" import="true" targetId="373c-333e-9a1f-f881" type="selectionEntry">
+          <modifiers>
+            <modifier type="append" field="name" value="A"/>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f561-8255-ad16-5fd1" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="cdf1-e22f-ad8b-89cf" name="Bakemono Raider A" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+              <characteristics>
+                <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">2</characteristic>
+                <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+                <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">2</characteristic>
+                <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+                <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
+                <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+                <characteristic name="Ki" typeId="3969-9568-a914-6854">1</characteristic>
+                <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+                <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">*</characteristic>
+                <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">4 OOOO</characteristic>
+                <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Tiny 30mm</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </entryLink>
+      </entryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="f2e1-f99d-239a-56f4" name="Bakemono Spearmen (reference)" hidden="true" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5132-d58b-2573-7d92" type="atLeast"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1b3c-9c51-cc96-d280" type="max"/>
+      </constraints>
+      <infoGroups>
+        <infoGroup id="e229-4b14-0c36-5eb1" name="Traits" hidden="false">
+          <profiles>
+            <profile id="924e-6c8c-4b5d-3584" name="Bakemono" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Camouflage (4&quot;), Cowardly, Tiny</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="ce7b-b009-40f2-dbb2" name="Camouflage" hidden="false" targetId="9010-4983-c98c-1751" type="rule"/>
+            <infoLink id="3a0d-e44d-220e-c846" name="Cowardly" hidden="false" targetId="c8d8-d1c7-905b-f971" type="rule"/>
+            <infoLink id="6f5a-b81a-b51c-758e" name="Tiny" hidden="false" targetId="335c-7f6f-9ca0-cb93" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="7ed6-47d8-3065-968d" name="Melee Weapon" hidden="false">
+          <profiles>
+            <profile id="f27e-282b-fe18-e14a" name="Improvised" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">-1</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Reach</characteristic>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d"/>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="5038-048c-e3c1-a998" name="Reach" hidden="false" targetId="e28e-d5dd-a262-1101" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+      </infoGroups>
+      <categoryLinks>
+        <categoryLink id="7390-269f-5ab5-36a2" name="Bakemono" hidden="false" targetId="9b14-5558-cfeb-ee1c" primary="false"/>
+        <categoryLink id="b7ba-fde2-4145-b0a7" name="Horde" hidden="false" targetId="1afa-b4a3-cd57-56c8" primary="false"/>
+        <categoryLink id="b619-6b1a-3360-f157" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="false"/>
+        <categoryLink id="8073-7e86-72e0-b16a" name="Non-Unique" hidden="false" targetId="d181-219d-3add-d47b" primary="false"/>
+        <categoryLink id="1c31-e78a-f2bf-1c08" name="New CategoryLink" hidden="false" targetId="5073-f00b-a8f6-5e3b" primary="true"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="6807-0eaf-1ecf-1e73" name="Bakemono Spearman" hidden="false" collective="false" import="true" targetId="d985-3a04-866a-57a9" type="selectionEntry">
+          <modifiers>
+            <modifier type="append" field="name" value="B"/>
+          </modifiers>
+          <profiles>
+            <profile id="08f8-0f0b-baf4-05d4" name="Bakemono Spearman B" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+              <characteristics>
+                <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">2</characteristic>
+                <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+                <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">1</characteristic>
+                <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+                <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
+                <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+                <characteristic name="Ki" typeId="3969-9568-a914-6854">1</characteristic>
+                <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+                <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">*</characteristic>
+                <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">4 OOOO</characteristic>
+                <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Tiny 30mm</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </entryLink>
+        <entryLink id="eb4e-8ca8-890b-7acc" name="Bakemono Spearman" hidden="false" collective="false" import="true" targetId="d985-3a04-866a-57a9" type="selectionEntry">
+          <modifiers>
+            <modifier type="append" field="name" value="A"/>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5547-5b01-a8ad-463d" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="2575-9f56-34f7-f532" name="Bakemono Spearman A" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+              <characteristics>
+                <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">2</characteristic>
+                <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+                <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">1</characteristic>
+                <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+                <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
+                <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+                <characteristic name="Ki" typeId="3969-9568-a914-6854">1</characteristic>
+                <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+                <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">*</characteristic>
+                <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">4 OOOO</characteristic>
+                <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Tiny 30mm</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </entryLink>
+      </entryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0.0"/>
+      </costs>
+    </selectionEntry>
   </selectionEntries>
   <entryLinks>
     <entryLink id="0cf0-b06d-7082-467a" name="Baichi" hidden="false" collective="false" import="true" targetId="d998-94b8-fd53-f8ce" type="selectionEntry">
@@ -4878,6 +6173,11 @@ Permitted [Oni, Onisho]</characteristic>
             <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a7a7-4971-6952-2ed5" type="atLeast"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="a111-8656-5c05-7415" value="0.0">
+          <conditions>
+            <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5073-f00b-a8f6-5e3b" type="instanceOf"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="9963-a93a-35d8-90c8" type="max"/>
@@ -4920,6 +6220,13 @@ Permitted [Oni, Onisho]</characteristic>
       </costs>
     </selectionEntry>
     <selectionEntry id="1798-6533-32b0-0f26" name="Bakemono Archer" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="a111-8656-5c05-7415" value="0.0">
+          <conditions>
+            <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5073-f00b-a8f6-5e3b" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="6710-ac98-f3f4-1f8e" type="max"/>
       </constraints>
@@ -4935,6 +6242,13 @@ Permitted [Oni, Onisho]</characteristic>
       </costs>
     </selectionEntry>
     <selectionEntry id="373c-333e-9a1f-f881" name="Bakemono Raider" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="a111-8656-5c05-7415" value="0.0">
+          <conditions>
+            <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5073-f00b-a8f6-5e3b" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="c1a9-adb5-12d9-b2b8" type="max"/>
       </constraints>
@@ -4951,6 +6265,13 @@ Permitted [Oni, Onisho]</characteristic>
       </costs>
     </selectionEntry>
     <selectionEntry id="9932-6942-c8a3-7d72" name="Bakemono Beater" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="a111-8656-5c05-7415" value="0.0">
+          <conditions>
+            <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5073-f00b-a8f6-5e3b" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="c726-4d88-6618-ffef" type="max"/>
       </constraints>
@@ -4966,6 +6287,13 @@ Permitted [Oni, Onisho]</characteristic>
       </costs>
     </selectionEntry>
     <selectionEntry id="d985-3a04-866a-57a9" name="Bakemono Spearman" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="a111-8656-5c05-7415" value="0.0">
+          <conditions>
+            <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5073-f00b-a8f6-5e3b" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b205-27f7-e316-3bc0" type="max"/>
       </constraints>
@@ -4981,6 +6309,13 @@ Permitted [Oni, Onisho]</characteristic>
       </costs>
     </selectionEntry>
     <selectionEntry id="7e77-1608-8841-c507" name="Bakemono Bushi" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="a111-8656-5c05-7415" value="0.0">
+          <conditions>
+            <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5073-f00b-a8f6-5e3b" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d8bc-7ac4-a958-e63e" type="max"/>
       </constraints>
@@ -5067,6 +6402,13 @@ Due to the cost increment per model, the cost needs to decrement once to offset 
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup id="74e6-2485-1c0a-4227" name="Enhancements" hidden="false" collective="false" import="true">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5073-f00b-a8f6-5e3b" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <selectionEntries>
         <selectionEntry id="d6fe-ae72-01f6-ef8b" name="Spirit of the Consumed" hidden="true" collective="false" import="true" type="upgrade">
           <modifiers>

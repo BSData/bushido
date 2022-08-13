@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="302b-66f1-a875-3b63" name="Ito Clan" revision="14" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="8" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="302b-66f1-a875-3b63" name="Ito Clan" revision="15" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="10" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="46b2-47c2-4c55-2e3a" name="Kinu" hidden="false"/>
     <categoryEntry id="273a-b61b-c7f8-76fd" name="Itsunagi" hidden="false"/>
@@ -3788,9 +3788,6 @@ If recruited into the same Warband as Itsunagi, this model gains Kurouma Koryu.<
         <categoryLink id="6c06-caa6-25ac-88fe" name="Samurai" hidden="false" targetId="e12a-f782-3281-7444" primary="false"/>
         <categoryLink id="665d-1298-e576-c095" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
       </categoryLinks>
-      <entryLinks>
-        <entryLink id="6a3e-d19d-4e92-bcd1" name="Enhancements" hidden="false" collective="false" import="true" targetId="c1b7-60f5-a313-5345" type="selectionEntryGroup"/>
-      </entryLinks>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="17.0"/>
       </costs>
@@ -4081,6 +4078,13 @@ This model is not required to allocate at least as many dice to Defence as Attac
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup id="c1b7-60f5-a313-5345" name="Enhancements" hidden="false" collective="false" import="true">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5073-f00b-a8f6-5e3b" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <selectionEntries>
         <selectionEntry id="bea1-2e99-84d4-405c" name="Itsunagi&apos;s Gambit" hidden="true" collective="false" import="true" type="upgrade">
           <modifiers>

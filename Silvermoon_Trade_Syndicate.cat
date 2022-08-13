@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="6a8f-b352-80c6-855f" name="Silvermoon Trade Syndicate" revision="14" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="9" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="6a8f-b352-80c6-855f" name="Silvermoon Trade Syndicate" revision="15" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="10" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="5048-3a52-5689-6d0b" name="Bought Loyalty" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -4214,6 +4214,13 @@ Whenever an Effect causes dice to be re-rolled, this model gains 1 Ki Token.</ch
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup id="37a1-1d53-ef45-026d" name="Enhancements" hidden="false" collective="false" import="true">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5073-f00b-a8f6-5e3b" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <selectionEntries>
         <selectionEntry id="21f2-3911-7ea1-8ac8" name="Two-Headed Coin" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>

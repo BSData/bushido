@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="2276-2df6-78a7-841d" name="Shiho Clan" revision="17" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="9" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="2276-2df6-78a7-841d" name="Shiho Clan" revision="18" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="10" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="7fa5-7ef0-59c5-f657" name="Tanaka" hidden="false"/>
   </categoryEntries>
@@ -3228,6 +3228,13 @@ This model&apos;s Dai Kyu Ranged Weapon gains Reload (+1) and this model does no
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup id="8a7c-6251-523e-a67c" name="Enhancements" hidden="false" collective="false" import="true">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5073-f00b-a8f6-5e3b" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <selectionEntries>
         <selectionEntry id="99fc-976e-2369-80fd" name="Alpha Wolf" hidden="true" collective="false" import="true" type="upgrade">
           <modifiers>

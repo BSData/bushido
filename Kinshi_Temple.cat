@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="67f3-e3c0-9b54-71fa" name="Kinshi Temple" revision="4" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="9" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="67f3-e3c0-9b54-71fa" name="Kinshi Temple" revision="5" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="10" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="096c-e1e9-7274-9439" name="Master Shi" hidden="false" collective="false" import="true" type="model">
       <constraints>
@@ -1193,6 +1193,7 @@ Models may not end any Movement or be Placed on top of these Terrain elements.</
     <entryLink id="5b0a-3a21-1551-33a3" name="Kodai" hidden="false" collective="false" import="true" targetId="1c52-10dc-2bf8-938b" type="selectionEntry">
       <modifiers>
         <modifier type="set" field="a111-8656-5c05-7415" value="0.0"/>
+        <modifier type="append" field="name" value=" (reference)"/>
       </modifiers>
       <categoryLinks>
         <categoryLink id="7c37-09b5-27b6-7c29" name="New CategoryLink" hidden="false" targetId="5073-f00b-a8f6-5e3b" primary="true"/>
@@ -1215,6 +1216,7 @@ Models may not end any Movement or be Placed on top of these Terrain elements.</
             <repeat field="selections" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
           </repeats>
         </modifier>
+        <modifier type="append" field="name" value=" (reference)"/>
       </modifiers>
       <categoryLinks>
         <categoryLink id="a2e4-5e7a-b897-52d3" name="New CategoryLink" hidden="false" targetId="5073-f00b-a8f6-5e3b" primary="true"/>
@@ -1316,15 +1318,7 @@ Models within 3&quot; of this model with the Camouflage trait gain Camouflage (+
         <categoryLink id="5af7-a7b8-63f8-caa9" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
       </categoryLinks>
       <entryLinks>
-        <entryLink id="eb07-c00c-9d79-379c" name="Enhancements" hidden="false" collective="false" import="true" targetId="36b2-5747-21c9-8865" type="selectionEntryGroup">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="5073-f00b-a8f6-5e3b" type="instanceOf"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </entryLink>
+        <entryLink id="eb07-c00c-9d79-379c" name="Enhancements" hidden="false" collective="false" import="true" targetId="36b2-5747-21c9-8865" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="11.0"/>
@@ -1333,6 +1327,13 @@ Models within 3&quot; of this model with the Camouflage trait gain Camouflage (+
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup id="36b2-5747-21c9-8865" name="Enhancements" hidden="false" collective="false" import="true">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5073-f00b-a8f6-5e3b" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <selectionEntries>
         <selectionEntry id="4b8d-5b2f-13e9-cf46" name="Ki Disrupting Palm" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>

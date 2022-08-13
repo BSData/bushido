@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="b4d7-0e2a-728f-20cf" name="Kage Kaze Zoku" revision="12" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="7" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="b4d7-0e2a-728f-20cf" name="Kage Kaze Zoku" revision="13" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="10" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="33d5-3364-f1d4-a94c" name="Lockdown" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -2221,6 +2221,13 @@ When this model would Surprise an Enemy model, it gains Banzai! until the end of
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup id="b18f-16ea-bed1-4709" name="Enhancements" hidden="false" collective="false" import="true">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5073-f00b-a8f6-5e3b" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <selectionEntries>
         <selectionEntry id="d1c0-42fa-7b5d-2cfd" name="Cat-Like Agility" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>

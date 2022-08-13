@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="62e4-ab79-1c4c-9ffe" name="Bushido: Risen Sun" revision="9" battleScribeVersion="2.03" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="62e4-ab79-1c4c-9ffe" name="Bushido: Risen Sun" revision="10" battleScribeVersion="2.03" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <costTypes>
     <costType id="a111-8656-5c05-7415" name=" Rice" defaultCostLimit="-1.0" hidden="false"/>
   </costTypes>
@@ -136,6 +136,11 @@
         <characteristicType id="a962-35b8-ac0c-8018" name="Benefit"/>
       </characteristicTypes>
     </profileType>
+    <profileType id="db15-9d5e-ae6b-d56f" name="Character Types">
+      <characteristicTypes>
+        <characteristicType id="dd92-f9b1-4a4f-37d6" name="Types"/>
+      </characteristicTypes>
+    </profileType>
   </profileTypes>
   <categoryEntries>
     <categoryEntry id="d360-71aa-ca22-ba3c" name="Faction Event Cards" hidden="false"/>
@@ -212,7 +217,7 @@
     <categoryEntry id="0d0a-4c02-8dce-676b" name="Faction: Cult of Yurei" hidden="false"/>
     <categoryEntry id="7ad5-75e1-6134-ca44" name="Faction: Minimoto Clan" hidden="false"/>
     <categoryEntry id="6eac-b6fc-ac09-4d64" name="The Imperial March" hidden="false"/>
-    <categoryEntry id="69a2-397e-9d7b-a47d" name="Communal" hidden="false"/>
+    <categoryEntry id="69a2-397e-9d7b-a47d" name="Communal Cards" hidden="false"/>
     <categoryEntry id="875a-48b1-3c9f-0a14" name="Faction: Silvermoon Trade Syndicate" hidden="false"/>
     <categoryEntry id="4a43-1cd1-cfb2-f5cd" name="Risen Sun Cycle" hidden="false"/>
     <categoryEntry id="a745-0548-80c8-ece4" name="Cycle: Risen Sun" hidden="false"/>

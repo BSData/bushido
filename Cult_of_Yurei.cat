@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="1ac7-2939-2874-7530" name="Cult of Yurei" revision="18" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="8" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="1ac7-2939-2874-7530" name="Cult of Yurei" revision="19" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="10" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="5048-3a52-5689-6d0b" name="Drain Spirit" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -3774,24 +3774,6 @@ During the End Phase you may remove a Friendly Rat model in BtB with this model 
       <constraints>
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="true" id="6da3-202b-f122-4acf" type="max"/>
       </constraints>
-      <profiles>
-        <profile id="1e88-2b7a-3f03-f7d0" name="Armoured Kairai " hidden="false" typeId="6ea2-0f74-4852-4a98" typeName="Character Profile &amp; Traits">
-          <characteristics>
-            <characteristic name="Melee Pool" typeId="8409-8d55-ce45-a33b">3</characteristic>
-            <characteristic name="Melee Boost" typeId="6a36-e826-18f3-0b25">3</characteristic>
-            <characteristic name="Ranged Pool" typeId="7a01-37c0-4741-672c">0</characteristic>
-            <characteristic name="Ranged Boost" typeId="ff66-ea54-d863-5c17"/>
-            <characteristic name="Move" typeId="af89-242d-625f-9bff">3</characteristic>
-            <characteristic name="Move Boost" typeId="62a6-8125-f293-5c76"/>
-            <characteristic name="Ki" typeId="8b76-2b4b-066e-a0c5">0</characteristic>
-            <characteristic name="Ki Boost" typeId="c34e-f8ae-0984-37ac"/>
-            <characteristic name="Ki Cap" typeId="2e88-c65e-4e45-d4c4">6</characteristic>
-            <characteristic name="Wounds" typeId="a1dc-c2c1-e2d2-ca98">5</characteristic>
-            <characteristic name="Size &amp; Base" typeId="6af2-e777-20ce-e060">Small 30mm</characteristic>
-            <characteristic name="Traits" typeId="e742-1b02-09cf-fd97">Armour (2), Fear (5), Leech (2/8&quot;), Rise (4), Slow, Soulless, Tough (1)</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
       <infoGroups>
         <infoGroup id="e481-3626-c71e-2d3e" name="Melee Weapon" hidden="false">
           <profiles>
@@ -4008,14 +3990,9 @@ Permitted [Gok, Kairai, Burakumin, Kato]</characteristic>
           </conditions>
         </modifier>
         <modifier type="set" field="hidden" value="true">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="abc1-93da-2f5a-dab4" type="equalTo"/>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="609b-0413-7c94-c5f0" type="lessThan"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="609b-0413-7c94-c5f0" type="lessThan"/>
+          </conditions>
         </modifier>
       </modifiers>
       <constraints>
@@ -4085,12 +4062,13 @@ Permitted [Gok, Kairai, Burakumin, Kato]</characteristic>
         </infoGroup>
       </infoGroups>
       <categoryLinks>
-        <categoryLink id="243f-e37d-6ce1-1710" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
+        <categoryLink id="243f-e37d-6ce1-1710" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="false"/>
         <categoryLink id="96e8-71dd-10e2-be99" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
         <categoryLink id="d922-ec25-16d7-bb04" name="Faction: Cult of Yurei" hidden="false" targetId="0d0a-4c02-8dce-676b" primary="false"/>
         <categoryLink id="41b9-9617-f447-f193" name="Kami" hidden="false" targetId="6639-615e-f1ab-bc64" primary="false"/>
         <categoryLink id="4a01-6edc-0daa-bc0f" name="Minor" hidden="false" targetId="d45e-8b05-fa4c-e6c9" primary="false"/>
         <categoryLink id="10c1-f7ed-1e63-e998" name="Soulless" hidden="false" targetId="0abe-c3e6-4300-478f" primary="false"/>
+        <categoryLink id="20ab-370a-2df8-9899" name="New CategoryLink" hidden="false" targetId="5073-f00b-a8f6-5e3b" primary="true"/>
       </categoryLinks>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0.0"/>
@@ -4104,15 +4082,9 @@ Permitted [Gok, Kairai, Burakumin, Kato]</characteristic>
           </conditions>
         </modifier>
         <modifier type="set" field="hidden" value="true">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="abc1-93da-2f5a-dab4" type="equalTo"/>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="98a8-2097-0f7e-9013" type="lessThan"/>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="538d-4d36-c07f-9024" type="equalTo"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="98a8-2097-0f7e-9013" type="lessThan"/>
+          </conditions>
         </modifier>
       </modifiers>
       <constraints>
@@ -4172,12 +4144,13 @@ Permitted [Gok, Kairai, Burakumin, Kato]</characteristic>
         </infoGroup>
       </infoGroups>
       <categoryLinks>
-        <categoryLink id="621e-10f8-6e57-6dc3" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
+        <categoryLink id="621e-10f8-6e57-6dc3" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="false"/>
         <categoryLink id="ed84-338e-4b32-9c33" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
         <categoryLink id="728b-6127-17b3-41c9" name="Faction: Cult of Yurei" hidden="false" targetId="0d0a-4c02-8dce-676b" primary="false"/>
         <categoryLink id="635b-e4b6-021b-95df" name="Kami" hidden="false" targetId="6639-615e-f1ab-bc64" primary="false"/>
         <categoryLink id="1d34-9ebd-a740-292a" name="Minor" hidden="false" targetId="d45e-8b05-fa4c-e6c9" primary="false"/>
         <categoryLink id="50c0-9026-12f5-b240" name="Soulless" hidden="false" targetId="0abe-c3e6-4300-478f" primary="false"/>
+        <categoryLink id="7626-e029-9d30-ef05" name="New CategoryLink" hidden="false" targetId="5073-f00b-a8f6-5e3b" primary="true"/>
       </categoryLinks>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0.0"/>
@@ -4191,15 +4164,9 @@ Permitted [Gok, Kairai, Burakumin, Kato]</characteristic>
           </conditions>
         </modifier>
         <modifier type="set" field="hidden" value="true">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="abc1-93da-2f5a-dab4" type="equalTo"/>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3bf5-62ee-efbf-2baf" type="lessThan"/>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="538d-4d36-c07f-9024" type="equalTo"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3bf5-62ee-efbf-2baf" type="lessThan"/>
+          </conditions>
         </modifier>
       </modifiers>
       <constraints>
@@ -4269,12 +4236,13 @@ Permitted [Gok, Kairai, Burakumin, Kato]</characteristic>
         </infoGroup>
       </infoGroups>
       <categoryLinks>
-        <categoryLink id="adf8-bb1a-705d-8c88" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
+        <categoryLink id="adf8-bb1a-705d-8c88" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="false"/>
         <categoryLink id="bb07-dd5e-ea3b-fe17" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
         <categoryLink id="b0d4-a438-7e7d-027a" name="Faction: Cult of Yurei" hidden="false" targetId="0d0a-4c02-8dce-676b" primary="false"/>
         <categoryLink id="ac97-556c-2e86-87f9" name="Kami" hidden="false" targetId="6639-615e-f1ab-bc64" primary="false"/>
         <categoryLink id="4548-1c49-1636-e8b0" name="Minor" hidden="false" targetId="d45e-8b05-fa4c-e6c9" primary="false"/>
         <categoryLink id="d978-25d9-4afe-af6c" name="Soulless" hidden="false" targetId="0abe-c3e6-4300-478f" primary="false"/>
+        <categoryLink id="9170-c086-c5c8-5136" name="New CategoryLink" hidden="false" targetId="5073-f00b-a8f6-5e3b" primary="true"/>
       </categoryLinks>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0.0"/>
@@ -4288,15 +4256,9 @@ Permitted [Gok, Kairai, Burakumin, Kato]</characteristic>
           </conditions>
         </modifier>
         <modifier type="set" field="hidden" value="true">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8a75-ceb1-bdf5-c64b" type="equalTo"/>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b49b-6987-598a-9b9c" type="lessThan"/>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="538d-4d36-c07f-9024" type="equalTo"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b49b-6987-598a-9b9c" type="lessThan"/>
+          </conditions>
         </modifier>
       </modifiers>
       <constraints>
@@ -4368,8 +4330,9 @@ If Kato is successful place a number of Control Markers on the Target’s profil
         <categoryLink id="efa4-aaa7-6605-b9f3" name="Lesser" hidden="false" targetId="8540-b30b-2df6-fb17" primary="false"/>
         <categoryLink id="d021-650b-21c0-1f71" name="Kami" hidden="false" targetId="6639-615e-f1ab-bc64" primary="false"/>
         <categoryLink id="6a44-1e03-a4de-995d" name="Faction: Cult of Yurei" hidden="false" targetId="0d0a-4c02-8dce-676b" primary="false"/>
-        <categoryLink id="821a-ca7a-fb6c-4573" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
+        <categoryLink id="821a-ca7a-fb6c-4573" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="false"/>
         <categoryLink id="d42b-6d24-2219-78d7" name="Soulless" hidden="false" targetId="0abe-c3e6-4300-478f" primary="false"/>
+        <categoryLink id="4997-1aec-22cd-f754" name="New CategoryLink" hidden="false" targetId="5073-f00b-a8f6-5e3b" primary="true"/>
       </categoryLinks>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0.0"/>
@@ -5320,15 +5283,9 @@ No model may be chosen more than once.</characteristic>
           </conditions>
         </modifier>
         <modifier type="set" field="hidden" value="true">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="abc1-93da-2f5a-dab4" type="equalTo"/>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3bf5-62ee-efbf-2baf" type="lessThan"/>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="538d-4d36-c07f-9024" type="equalTo"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3bf5-62ee-efbf-2baf" type="lessThan"/>
+          </conditions>
         </modifier>
       </modifiers>
       <constraints>
@@ -5388,12 +5345,13 @@ No model may be chosen more than once.</characteristic>
         </infoGroup>
       </infoGroups>
       <categoryLinks>
-        <categoryLink id="1714-6362-13c8-937e" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
+        <categoryLink id="1714-6362-13c8-937e" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="false"/>
         <categoryLink id="e6b8-4d5d-5f68-316c" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
         <categoryLink id="f9e5-f901-adb2-818e" name="Faction: Cult of Yurei" hidden="false" targetId="0d0a-4c02-8dce-676b" primary="false"/>
         <categoryLink id="0091-3750-5bf8-95ee" name="Kami" hidden="false" targetId="6639-615e-f1ab-bc64" primary="false"/>
         <categoryLink id="389f-da59-0414-a5cc" name="Minor" hidden="false" targetId="d45e-8b05-fa4c-e6c9" primary="false"/>
         <categoryLink id="0b1f-4523-c1a3-3e2d" name="Soulless" hidden="false" targetId="0abe-c3e6-4300-478f" primary="false"/>
+        <categoryLink id="60fe-21ee-bffa-3c92" name="New CategoryLink" hidden="false" targetId="5073-f00b-a8f6-5e3b" primary="true"/>
       </categoryLinks>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0.0"/>
@@ -5724,6 +5682,870 @@ This terrain is always recruited in a Warband with Fuwa Kaidan.</characteristic>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0.0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="2f97-4707-3a8e-4c17" name="Armoured Kairai (reference)" hidden="true" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b49b-6987-598a-9b9c" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="true" id="e583-35f9-ec64-ae9c" type="max"/>
+      </constraints>
+      <infoGroups>
+        <infoGroup id="db3a-366e-3628-710b" name="Melee Weapon" hidden="false">
+          <profiles>
+            <profile id="fff9-87e8-3406-879e" name="Paired Tachi" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+1</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e"/>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Combo Attack (1)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="623d-efcc-bdf5-f769" name="Combo Attack " hidden="false" targetId="78ab-6a94-be24-8f74" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="3ea2-5775-24ab-5b47" name="Traits" hidden="false">
+          <profiles>
+            <profile id="c3ae-d6d8-3e3b-5e12" name="Armoured Kairai" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Armour (2), Fear (5), Leech (2/8&quot;), Rise (4), Slow, Soulless, Tough (1)</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="523d-6840-b4ea-b9c9" name="Armour" hidden="false" targetId="8615-1c63-2242-5746" type="rule"/>
+            <infoLink id="11dd-628f-ce2f-eb8a" name="Fear" hidden="false" targetId="3586-4583-7f10-1f31" type="rule"/>
+            <infoLink id="ae08-f781-925f-51d0" name="Leech" hidden="false" targetId="bab1-710b-4f90-7c2f" type="rule"/>
+            <infoLink id="589f-386a-bd4f-bbff" name="Rise" hidden="false" targetId="f774-9156-2996-f5c6" type="rule"/>
+            <infoLink id="01a7-9e56-f587-d279" name="Slow" hidden="false" targetId="f1c3-4a84-c616-23cd" type="rule"/>
+            <infoLink id="5001-e9e4-a901-c6f2" name="Soulless" hidden="false" targetId="af31-aad0-fcea-9590" type="rule"/>
+            <infoLink id="0b2f-bef6-f5be-5a81" name="Tough" hidden="false" targetId="5613-a6cf-495a-229f" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="d752-7756-f065-fb25" name="Ki Feats" hidden="false">
+          <infoLinks>
+            <infoLink id="ea96-c962-cd76-daaf" name="Haunting Vision" hidden="false" targetId="6223-6237-ce95-012d" type="infoGroup"/>
+          </infoLinks>
+        </infoGroup>
+      </infoGroups>
+      <categoryLinks>
+        <categoryLink id="8aaf-836a-3105-d62d" name="Faction: Cult of Yurei" hidden="false" targetId="0d0a-4c02-8dce-676b" primary="false"/>
+        <categoryLink id="f9d9-6da0-9f62-8c8c" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="false"/>
+        <categoryLink id="1983-81b5-8501-6e3a" name="Kairai" hidden="false" targetId="26f6-e547-6d94-8b70" primary="false"/>
+        <categoryLink id="8565-e487-ff54-0395" name="Non-Unique" hidden="false" targetId="d181-219d-3add-d47b" primary="false"/>
+        <categoryLink id="a0b4-323f-d1d9-5df1" name="Soulless" hidden="false" targetId="0abe-c3e6-4300-478f" primary="false"/>
+        <categoryLink id="e09e-b3a2-3c10-2c66" name="Armour" hidden="false" targetId="f322-702a-ff62-b37e" primary="false"/>
+        <categoryLink id="34c2-70ef-2553-b06b" name="New CategoryLink" hidden="false" targetId="5073-f00b-a8f6-5e3b" primary="true"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="2f62-6b03-94f9-637a" name="Armoured Kairai" hidden="false" collective="false" import="true" targetId="6d6b-2449-631f-053f" type="selectionEntry">
+          <modifiers>
+            <modifier type="append" field="name" value="A"/>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3a8f-b3c5-2962-c298" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="c97e-87b7-41a3-cd08" name="Armoured Kairai A" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+              <characteristics>
+                <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
+                <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+                <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">0</characteristic>
+                <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+                <characteristic name="Move" typeId="91b7-833e-fd8e-a620">3</characteristic>
+                <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+                <characteristic name="Ki" typeId="3969-9568-a914-6854">0</characteristic>
+                <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+                <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">6</characteristic>
+                <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">5</characteristic>
+                <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <categoryLinks>
+            <categoryLink id="4714-ad41-f423-634b" name="Soulless" hidden="false" targetId="0abe-c3e6-4300-478f" primary="false"/>
+          </categoryLinks>
+        </entryLink>
+        <entryLink id="af91-d754-71e6-fe94" name="Armoured Kairai" hidden="false" collective="false" import="true" targetId="6d6b-2449-631f-053f" type="selectionEntry">
+          <modifiers>
+            <modifier type="append" field="name" value="B"/>
+          </modifiers>
+          <profiles>
+            <profile id="4919-8fe2-5c09-6795" name="Armoured Kairai B" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+              <characteristics>
+                <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
+                <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+                <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">0</characteristic>
+                <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+                <characteristic name="Move" typeId="91b7-833e-fd8e-a620">3</characteristic>
+                <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+                <characteristic name="Ki" typeId="3969-9568-a914-6854">0</characteristic>
+                <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+                <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">6</characteristic>
+                <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">5</characteristic>
+                <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </entryLink>
+      </entryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="4629-d333-7138-b074" name="Kairai Farmers (reference)" hidden="true" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b49b-6987-598a-9b9c" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="true" id="583d-363d-9740-da1a" type="max"/>
+      </constraints>
+      <infoGroups>
+        <infoGroup id="a617-53a5-1640-4a5b" name="Traits" hidden="false">
+          <profiles>
+            <profile id="6393-f701-d44d-6928" name="Kairai" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Fear (5), Leech (2/8&quot;), Rise (4), Slow, Soulless, Tough (1)</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="4bbf-ad3d-29f5-69d5" name="Fear" hidden="false" targetId="3586-4583-7f10-1f31" type="rule"/>
+            <infoLink id="0d5b-81a1-afd7-6abf" name="Leech" hidden="false" targetId="bab1-710b-4f90-7c2f" type="rule"/>
+            <infoLink id="23f1-6f15-1170-5e37" name="Rise" hidden="false" targetId="f774-9156-2996-f5c6" type="rule"/>
+            <infoLink id="f1c8-d8d3-418c-bc34" name="Slow" hidden="false" targetId="f1c3-4a84-c616-23cd" type="rule"/>
+            <infoLink id="6d74-a66d-d513-e5b2" name="Soulless" hidden="false" targetId="af31-aad0-fcea-9590" type="rule"/>
+            <infoLink id="3f30-3102-5da8-e58b" name="Tough" hidden="false" targetId="5613-a6cf-495a-229f" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="eafe-60f3-054d-20bf" name="Ki Feats" hidden="false">
+          <infoLinks>
+            <infoLink id="4cab-b866-3120-2e86" name="Chill" hidden="false" targetId="2c97-ad49-a7c7-17d7" type="infoGroup"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="aeff-8e1c-c17d-a888" name="Melee Weapon" hidden="false">
+          <profiles>
+            <profile id="9f4b-2138-73a7-5275" name="Farm Implements" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+1</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e"/>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d"/>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+        </infoGroup>
+      </infoGroups>
+      <categoryLinks>
+        <categoryLink id="06e1-186e-ab03-9715" name="Faction: Cult of Yurei" hidden="false" targetId="0d0a-4c02-8dce-676b" primary="false"/>
+        <categoryLink id="4ccd-496d-57b1-752f" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="false"/>
+        <categoryLink id="4fc5-9eb5-0cb5-9166" name="Kairai" hidden="false" targetId="26f6-e547-6d94-8b70" primary="false"/>
+        <categoryLink id="f2ca-9e9f-82db-10f6" name="Non-Unique" hidden="false" targetId="d181-219d-3add-d47b" primary="false"/>
+        <categoryLink id="0ae2-6c75-853b-0cbe" name="Soulless" hidden="false" targetId="0abe-c3e6-4300-478f" primary="false"/>
+        <categoryLink id="defb-146f-db2d-ff6e" name="New CategoryLink" hidden="false" targetId="5073-f00b-a8f6-5e3b" primary="true"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="89b8-4807-8357-1243" name="Kairai Farmer" hidden="false" collective="false" import="true" targetId="ef48-c237-6573-6c21" type="selectionEntry">
+          <modifiers>
+            <modifier type="append" field="name" value="A"/>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5bf1-301e-1121-19da" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="335c-b3bf-6938-3bad" name="Kairai Farmer A" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+              <characteristics>
+                <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">2</characteristic>
+                <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+                <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">0</characteristic>
+                <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+                <characteristic name="Move" typeId="91b7-833e-fd8e-a620">3</characteristic>
+                <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+                <characteristic name="Ki" typeId="3969-9568-a914-6854">0</characteristic>
+                <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+                <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">6</characteristic>
+                <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">5 OOOOO</characteristic>
+                <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </entryLink>
+        <entryLink id="386d-74d7-6791-f9cd" name="Kairai Farmer" hidden="false" collective="false" import="true" targetId="ef48-c237-6573-6c21" type="selectionEntry">
+          <modifiers>
+            <modifier type="append" field="name" value="B"/>
+          </modifiers>
+          <profiles>
+            <profile id="c46e-dfb1-64ce-3969" name="Kairai Farmer B" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+              <characteristics>
+                <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">2</characteristic>
+                <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+                <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">0</characteristic>
+                <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+                <characteristic name="Move" typeId="91b7-833e-fd8e-a620">3</characteristic>
+                <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+                <characteristic name="Ki" typeId="3969-9568-a914-6854">0</characteristic>
+                <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+                <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">6</characteristic>
+                <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">5 OOOOO</characteristic>
+                <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </entryLink>
+      </entryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="770d-b09f-1539-1b70" name="Karai Militia (reference)" hidden="true" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b49b-6987-598a-9b9c" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="true" id="37b4-feb8-3e03-37fb" type="max"/>
+      </constraints>
+      <infoGroups>
+        <infoGroup id="8997-b6bd-34de-6375" name="Melee Weapon" hidden="false">
+          <profiles>
+            <profile id="912e-b05f-c847-de70" name="Yari" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+0</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Reach</characteristic>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d"/>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="86eb-ae99-07c2-fbc5" name="Reach" hidden="false" targetId="e28e-d5dd-a262-1101" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="c71a-9b11-970a-6dc0" name="Traits" hidden="false">
+          <profiles>
+            <profile id="b944-48a6-9d00-eef3" name="Karai" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Fear (5), Leech (2/8&quot;), Rise (4), Slow, Soulless, Tough (1)</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="395b-a08d-3db1-e96a" name="Fear" hidden="false" targetId="3586-4583-7f10-1f31" type="rule"/>
+            <infoLink id="16d9-2d12-aefa-6610" name="Leech" hidden="false" targetId="bab1-710b-4f90-7c2f" type="rule"/>
+            <infoLink id="45c9-2db3-5a76-233a" name="Rise" hidden="false" targetId="f774-9156-2996-f5c6" type="rule"/>
+            <infoLink id="5706-a186-b40a-4654" name="Slow" hidden="false" targetId="f1c3-4a84-c616-23cd" type="rule"/>
+            <infoLink id="9058-91b7-a4aa-964f" name="Soulless" hidden="false" targetId="af31-aad0-fcea-9590" type="rule"/>
+            <infoLink id="a6d5-e5cd-bb01-8437" name="Tough" hidden="false" targetId="5613-a6cf-495a-229f" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="4e17-e959-fa17-ca81" name="Ki Feats" hidden="false">
+          <infoLinks>
+            <infoLink id="e9c7-965f-b698-fb3b" name="Overwhelm" hidden="false" targetId="6896-cec8-1760-57fb" type="infoGroup"/>
+          </infoLinks>
+        </infoGroup>
+      </infoGroups>
+      <categoryLinks>
+        <categoryLink id="1cfb-93b9-c0cd-a6f4" name="Faction: Cult of Yurei" hidden="false" targetId="0d0a-4c02-8dce-676b" primary="false"/>
+        <categoryLink id="601e-7b23-4173-a29d" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="false"/>
+        <categoryLink id="62df-71c2-7d1b-77bb" name="Kairai" hidden="false" targetId="26f6-e547-6d94-8b70" primary="false"/>
+        <categoryLink id="c017-e7e8-d259-e8a2" name="Non-Unique" hidden="false" targetId="d181-219d-3add-d47b" primary="false"/>
+        <categoryLink id="6642-a44b-0d79-2fdd" name="Soulless" hidden="false" targetId="0abe-c3e6-4300-478f" primary="false"/>
+        <categoryLink id="62be-b5ca-273f-c28f" name="New CategoryLink" hidden="false" targetId="5073-f00b-a8f6-5e3b" primary="true"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="4bc0-3b66-cebf-d74a" name="Kairai Militia" hidden="false" collective="false" import="true" targetId="fc14-87e3-3096-84d7" type="selectionEntry">
+          <modifiers>
+            <modifier type="append" field="name" value="A"/>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5396-185c-9895-9e22" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="3160-18d9-e7d5-668c" name="Karai Militia A" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+              <characteristics>
+                <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">2</characteristic>
+                <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+                <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">0</characteristic>
+                <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+                <characteristic name="Move" typeId="91b7-833e-fd8e-a620">3</characteristic>
+                <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+                <characteristic name="Ki" typeId="3969-9568-a914-6854">0</characteristic>
+                <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+                <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">6</characteristic>
+                <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">5 OOOOO</characteristic>
+                <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </entryLink>
+        <entryLink id="2a31-f446-dbe7-e06e" name="Kairai Militia" hidden="false" collective="false" import="true" targetId="fc14-87e3-3096-84d7" type="selectionEntry">
+          <modifiers>
+            <modifier type="append" field="name" value="B"/>
+          </modifiers>
+          <profiles>
+            <profile id="90aa-af67-b49f-096d" name="Karai Militia B" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+              <characteristics>
+                <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">2</characteristic>
+                <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+                <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">0</characteristic>
+                <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+                <characteristic name="Move" typeId="91b7-833e-fd8e-a620">3</characteristic>
+                <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+                <characteristic name="Ki" typeId="3969-9568-a914-6854">0</characteristic>
+                <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+                <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">6</characteristic>
+                <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">5 OOOOO</characteristic>
+                <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </entryLink>
+      </entryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="44f0-51e8-6529-fb2e" name="Karai Villagers (reference)" hidden="true" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b49b-6987-598a-9b9c" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="true" id="a24a-293c-26b4-162b" type="max"/>
+      </constraints>
+      <infoGroups>
+        <infoGroup id="b9c3-e49a-f678-f4fe" name="Traits" hidden="false">
+          <profiles>
+            <profile id="ab0d-38da-eb89-983f" name="Karai" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Fear (5), Leech (2/8&quot;), Rise (4), Slow, Soulless, Tough (1)</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="e132-dd01-9104-2b27" name="Fear" hidden="false" targetId="3586-4583-7f10-1f31" type="rule"/>
+            <infoLink id="88aa-c839-f643-0fca" name="Leech" hidden="false" targetId="bab1-710b-4f90-7c2f" type="rule"/>
+            <infoLink id="ace2-a413-ca99-10ab" name="Rise" hidden="false" targetId="f774-9156-2996-f5c6" type="rule"/>
+            <infoLink id="a789-9e46-ae02-ec3c" name="Slow" hidden="false" targetId="f1c3-4a84-c616-23cd" type="rule"/>
+            <infoLink id="cad9-6a17-72b6-a34d" name="Soulless" hidden="false" targetId="af31-aad0-fcea-9590" type="rule"/>
+            <infoLink id="ab11-a715-fe1f-d429" name="Tough" hidden="false" targetId="5613-a6cf-495a-229f" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="22d7-a4ef-6465-260f" name="Ki Feats" hidden="false">
+          <infoLinks>
+            <infoLink id="e6ae-a964-bec5-1d5c" name="Will of Yurei" hidden="false" targetId="737f-cf2d-85b2-a94f" type="infoGroup"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="fcea-3983-bc9c-3505" name="Melee Weapon" hidden="false">
+          <profiles>
+            <profile id="c627-294b-8fab-778f" name="Improvised Weapons" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+0</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e"/>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Powerful Attack (1)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="fe87-4833-3fd5-057c" name="Powerful Attack" hidden="false" targetId="d56a-058d-95d9-5b60" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+      </infoGroups>
+      <categoryLinks>
+        <categoryLink id="95b5-c495-b7a3-9271" name="Faction: Cult of Yurei" hidden="false" targetId="0d0a-4c02-8dce-676b" primary="false"/>
+        <categoryLink id="c3b6-e77c-abbd-4ab6" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="false"/>
+        <categoryLink id="f6a1-9cac-720c-40cf" name="Kairai" hidden="false" targetId="26f6-e547-6d94-8b70" primary="false"/>
+        <categoryLink id="3a2a-9337-ac17-44a8" name="Non-Unique" hidden="false" targetId="d181-219d-3add-d47b" primary="false"/>
+        <categoryLink id="7137-50fa-7161-3bf8" name="Soulless" hidden="false" targetId="0abe-c3e6-4300-478f" primary="false"/>
+        <categoryLink id="87b7-fa3f-55d7-0dd8" name="New CategoryLink" hidden="false" targetId="5073-f00b-a8f6-5e3b" primary="true"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="0c53-ba1b-2c3b-f379" name="Kairai Villager" hidden="false" collective="false" import="true" targetId="32fe-fdee-7aa5-36a6" type="selectionEntry">
+          <modifiers>
+            <modifier type="append" field="name" value="A"/>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="016d-a428-4472-33bc" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="5abe-9e7b-c8d0-47c5" name="Karai Villager A" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+              <characteristics>
+                <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">2</characteristic>
+                <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+                <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">0</characteristic>
+                <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+                <characteristic name="Move" typeId="91b7-833e-fd8e-a620">3</characteristic>
+                <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+                <characteristic name="Ki" typeId="3969-9568-a914-6854">0</characteristic>
+                <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+                <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">6</characteristic>
+                <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">5 OOOOO</characteristic>
+                <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </entryLink>
+        <entryLink id="2f81-25b8-b9f7-489b" name="Kairai Villager" hidden="false" collective="false" import="true" targetId="32fe-fdee-7aa5-36a6" type="selectionEntry">
+          <modifiers>
+            <modifier type="append" field="name" value="B"/>
+          </modifiers>
+          <profiles>
+            <profile id="ba54-b24c-37a4-6cd1" name="Karai Villager B" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+              <characteristics>
+                <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">2</characteristic>
+                <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+                <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">0</characteristic>
+                <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+                <characteristic name="Move" typeId="91b7-833e-fd8e-a620">3</characteristic>
+                <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+                <characteristic name="Ki" typeId="3969-9568-a914-6854">0</characteristic>
+                <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+                <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">6</characteristic>
+                <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">5 OOOOO</characteristic>
+                <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </entryLink>
+      </entryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="5de2-9fea-5f77-3b87" name="Kusatta Karai (reference)" hidden="true" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b49b-6987-598a-9b9c" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="true" id="1cc5-04b9-ae28-d780" type="max"/>
+      </constraints>
+      <infoGroups>
+        <infoGroup id="ea86-8dc5-3a3d-a215" name="Ki Feats" hidden="false">
+          <infoLinks>
+            <infoLink id="4dc3-53fa-75cd-6e8b" name="Cloud of Flies" hidden="false" targetId="7da9-c041-f388-cc17" type="infoGroup"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="7a0a-d84e-009b-8194" name="Melee Weapon" hidden="false">
+          <profiles>
+            <profile id="db6a-dfaa-2bb7-046b" name="Improvised Weapons" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+0</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e"/>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d"/>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+        </infoGroup>
+        <infoGroup id="76a3-0522-c919-00fa" name="Traits" hidden="false">
+          <profiles>
+            <profile id="1bfa-cf25-c66c-32ca" name="Kusatta Karai" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Fear (5), Leech (2/8&quot;), Slow, Soulless, Tough (1)</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="505f-d39b-53eb-e23f" name="Fear" hidden="false" targetId="3586-4583-7f10-1f31" type="rule"/>
+            <infoLink id="f546-a2d4-9a00-8698" name="Leech" hidden="false" targetId="bab1-710b-4f90-7c2f" type="rule"/>
+            <infoLink id="87a8-6107-2984-99b9" name="Rise" hidden="false" targetId="f774-9156-2996-f5c6" type="rule"/>
+            <infoLink id="39fb-f54f-6c77-bb5a" name="Slow" hidden="false" targetId="f1c3-4a84-c616-23cd" type="rule"/>
+            <infoLink id="e861-c295-d697-697f" name="Soulless" hidden="false" targetId="af31-aad0-fcea-9590" type="rule"/>
+            <infoLink id="a964-ee1e-8050-7734" name="Tough" hidden="false" targetId="5613-a6cf-495a-229f" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="855c-2fac-2998-61a5" name="Unique Effects" hidden="false">
+          <profiles>
+            <profile id="2a69-2390-7760-5c3b" name="Kusatta" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">When this model suffers Wounds from a Melee Attack, the Attacker gains a Poison (1) Marker.
+When this model is reduced to 0 Wounds remove it from play and each model within 2&quot; gains a Poison (1) Marker.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </infoGroup>
+      </infoGroups>
+      <categoryLinks>
+        <categoryLink id="880a-a6d2-13e9-a76a" name="Faction: Cult of Yurei" hidden="false" targetId="0d0a-4c02-8dce-676b" primary="false"/>
+        <categoryLink id="62e1-2c59-525e-98bd" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="false"/>
+        <categoryLink id="b4a4-6e4e-1750-cebd" name="Kairai" hidden="false" targetId="26f6-e547-6d94-8b70" primary="false"/>
+        <categoryLink id="1c8b-ccce-3bc8-dd81" name="Non-Unique" hidden="false" targetId="d181-219d-3add-d47b" primary="false"/>
+        <categoryLink id="9738-f12f-f65e-62a8" name="Soulless" hidden="false" targetId="0abe-c3e6-4300-478f" primary="false"/>
+        <categoryLink id="65cd-48aa-c573-a9b1" name="New CategoryLink" hidden="false" targetId="5073-f00b-a8f6-5e3b" primary="true"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="013e-7ef3-3ef3-c633" name="Kusatta Kairai" hidden="false" collective="false" import="true" targetId="a405-e64b-bb87-9243" type="selectionEntry">
+          <modifiers>
+            <modifier type="append" field="name" value="A"/>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="aa4e-4062-b4d9-f276" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="181e-0fcd-867f-4d76" name="Kusatta Karai A" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+              <characteristics>
+                <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">2</characteristic>
+                <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+                <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">0</characteristic>
+                <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+                <characteristic name="Move" typeId="91b7-833e-fd8e-a620">3</characteristic>
+                <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+                <characteristic name="Ki" typeId="3969-9568-a914-6854">0</characteristic>
+                <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+                <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">6</characteristic>
+                <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">5 OOOOO</characteristic>
+                <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </entryLink>
+        <entryLink id="6c18-eeff-d368-1ac5" name="Kusatta Kairai" hidden="false" collective="false" import="true" targetId="a405-e64b-bb87-9243" type="selectionEntry">
+          <modifiers>
+            <modifier type="append" field="name" value="B"/>
+          </modifiers>
+          <profiles>
+            <profile id="15f3-2f92-3f7b-db61" name="Kusatta Karai B" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+              <characteristics>
+                <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">2</characteristic>
+                <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+                <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">0</characteristic>
+                <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+                <characteristic name="Move" typeId="91b7-833e-fd8e-a620">3</characteristic>
+                <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+                <characteristic name="Ki" typeId="3969-9568-a914-6854">0</characteristic>
+                <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+                <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">6</characteristic>
+                <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">5 OOOOO</characteristic>
+                <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </entryLink>
+      </entryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="f04c-0cab-6974-8342" name="Risen Karai (reference)" hidden="true" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b49b-6987-598a-9b9c" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="true" id="8be1-046f-85bd-c6a3" type="max"/>
+      </constraints>
+      <infoGroups>
+        <infoGroup id="791c-75c1-5fad-c06d" name="Unique Effects" hidden="false">
+          <profiles>
+            <profile id="18d0-a689-12ae-00da" name="Risen" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">This model loses Rise while Prone.
+In the End Phase, if this model is not in BtB with another Kairai this model becomes Prone.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </infoGroup>
+        <infoGroup id="907f-560f-c2cd-9968" name="Melee Weapon" hidden="false">
+          <profiles>
+            <profile id="3d3e-1c0a-9b01-baa8" name="Improvised Weapons" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">-1</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e"/>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d"/>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+        </infoGroup>
+        <infoGroup id="b16b-3c1f-5507-9a44" name="Traits" hidden="false">
+          <profiles>
+            <profile id="a68b-d199-6931-c0a4" name="Risen Karai" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Co-ordinated Attack (Kairai), Fear (4), Group, Insignificant, Leech (2/4&quot;), Rise (3), Slow, Soulless, Tough (1)</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="db14-1e63-1a17-0b8c" name="Fear" hidden="false" targetId="3586-4583-7f10-1f31" type="rule"/>
+            <infoLink id="bd15-3630-537a-c33c" name="Leech" hidden="false" targetId="bab1-710b-4f90-7c2f" type="rule"/>
+            <infoLink id="e5f4-2f4d-3f2d-9ec4" name="Rise" hidden="false" targetId="f774-9156-2996-f5c6" type="rule"/>
+            <infoLink id="6db5-e412-64cf-a457" name="Slow" hidden="false" targetId="f1c3-4a84-c616-23cd" type="rule"/>
+            <infoLink id="a582-4695-a3ad-6820" name="Soulless" hidden="false" targetId="af31-aad0-fcea-9590" type="rule"/>
+            <infoLink id="c59b-6a80-bfa3-50f2" name="Tough" hidden="false" targetId="5613-a6cf-495a-229f" type="rule"/>
+            <infoLink id="fae0-02a2-1c56-9b5b" name="Group" hidden="false" targetId="4c02-03a1-ae7b-7821" type="rule"/>
+            <infoLink id="37dd-dfc4-8c46-c26a" name="Co-ordinated Attack" hidden="false" targetId="2337-7bcc-c1f2-f2bd" type="rule"/>
+            <infoLink id="751c-783f-5cb3-8701" name="Insignificant" hidden="false" targetId="1614-d86c-ef8a-c095" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="207a-0a45-7adf-dc40" name="Ki Feats" hidden="false">
+          <infoLinks>
+            <infoLink id="5bd3-21fe-4d06-b691" name="Memories of Life" hidden="false" targetId="d648-a591-3730-5ee0" type="infoGroup"/>
+          </infoLinks>
+        </infoGroup>
+      </infoGroups>
+      <categoryLinks>
+        <categoryLink id="1cbd-3ec6-9f31-dc69" name="Faction: Cult of Yurei" hidden="false" targetId="0d0a-4c02-8dce-676b" primary="false"/>
+        <categoryLink id="093f-c402-74fa-f93a" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="false"/>
+        <categoryLink id="1d37-0910-32c8-fd96" name="Kairai" hidden="false" targetId="26f6-e547-6d94-8b70" primary="false"/>
+        <categoryLink id="4918-2402-0dce-4832" name="Non-Unique" hidden="false" targetId="d181-219d-3add-d47b" primary="false"/>
+        <categoryLink id="a9bd-5388-183d-bc07" name="Insignificant" hidden="false" targetId="0b0f-53a8-7e80-f525" primary="false"/>
+        <categoryLink id="09be-c8d2-40d3-2cd5" name="Soulless" hidden="false" targetId="0abe-c3e6-4300-478f" primary="false"/>
+        <categoryLink id="fcae-43d4-d98f-40f8" name="New CategoryLink" hidden="false" targetId="5073-f00b-a8f6-5e3b" primary="true"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="ac1d-0990-d096-e6b9" name="Risen Kairai" hidden="false" collective="false" import="true" targetId="3f69-4675-5931-c2dd" type="selectionEntry">
+          <modifiers>
+            <modifier type="append" field="name" value="A"/>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0d96-6fb4-1163-5410" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="3a82-1fa4-f20d-4817" name="Risen Karai A" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+              <characteristics>
+                <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">1</characteristic>
+                <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277"/>
+                <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">0</characteristic>
+                <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+                <characteristic name="Move" typeId="91b7-833e-fd8e-a620">3</characteristic>
+                <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+                <characteristic name="Ki" typeId="3969-9568-a914-6854">0</characteristic>
+                <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+                <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">2</characteristic>
+                <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">2 OO</characteristic>
+                <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </entryLink>
+        <entryLink id="729a-893a-73b5-71ca" name="Risen Kairai" hidden="false" collective="false" import="true" targetId="3f69-4675-5931-c2dd" type="selectionEntry">
+          <modifiers>
+            <modifier type="append" field="name" value="B"/>
+          </modifiers>
+          <profiles>
+            <profile id="46aa-8395-15b2-3a80" name="Risen Karai B" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+              <characteristics>
+                <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">1</characteristic>
+                <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277"/>
+                <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">0</characteristic>
+                <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+                <characteristic name="Move" typeId="91b7-833e-fd8e-a620">3</characteristic>
+                <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+                <characteristic name="Ki" typeId="3969-9568-a914-6854">0</characteristic>
+                <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+                <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">2</characteristic>
+                <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">2 OO</characteristic>
+                <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </entryLink>
+        <entryLink id="d681-da99-1c24-7451" name="Risen Kairai" hidden="false" collective="false" import="true" targetId="3f69-4675-5931-c2dd" type="selectionEntry">
+          <modifiers>
+            <modifier type="append" field="name" value="C"/>
+          </modifiers>
+          <profiles>
+            <profile id="cb7a-b659-9fb8-ee41" name="Risen Karai C" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+              <characteristics>
+                <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">1</characteristic>
+                <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277"/>
+                <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">0</characteristic>
+                <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+                <characteristic name="Move" typeId="91b7-833e-fd8e-a620">3</characteristic>
+                <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+                <characteristic name="Ki" typeId="3969-9568-a914-6854">0</characteristic>
+                <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+                <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">2</characteristic>
+                <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">2 OO</characteristic>
+                <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </entryLink>
+        <entryLink id="95f8-538d-a4d9-4cf7" name="Risen Kairai" hidden="false" collective="false" import="true" targetId="3f69-4675-5931-c2dd" type="selectionEntry">
+          <modifiers>
+            <modifier type="append" field="name" value="D"/>
+          </modifiers>
+          <profiles>
+            <profile id="0e7f-b849-bc67-7fd8" name="Risen Karai D" hidden="false" typeId="6ea2-0f74-4852-4a98" typeName="Character Profile &amp; Traits">
+              <characteristics>
+                <characteristic name="Melee Pool" typeId="8409-8d55-ce45-a33b">1</characteristic>
+                <characteristic name="Melee Boost" typeId="6a36-e826-18f3-0b25"/>
+                <characteristic name="Ranged Pool" typeId="7a01-37c0-4741-672c">0</characteristic>
+                <characteristic name="Ranged Boost" typeId="ff66-ea54-d863-5c17"/>
+                <characteristic name="Move" typeId="af89-242d-625f-9bff">3</characteristic>
+                <characteristic name="Move Boost" typeId="62a6-8125-f293-5c76"/>
+                <characteristic name="Ki" typeId="8b76-2b4b-066e-a0c5">0</characteristic>
+                <characteristic name="Ki Boost" typeId="c34e-f8ae-0984-37ac"/>
+                <characteristic name="Ki Cap" typeId="2e88-c65e-4e45-d4c4">2</characteristic>
+                <characteristic name="Wounds" typeId="a1dc-c2c1-e2d2-ca98">2 OO</characteristic>
+                <characteristic name="Size &amp; Base" typeId="6af2-e777-20ce-e060">Small 30mm</characteristic>
+                <characteristic name="Traits" typeId="e742-1b02-09cf-fd97">Co-ordinated Attack (Kairai), Fear (4), Group, Insignificant, Leech (2/4&quot;), Rise (3), Slow, Soulless, Tough (1)</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </entryLink>
+      </entryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="bdd6-cc25-6b98-8d3e" name="Small Rat Swarms (reference)" hidden="true" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8fdc-0d2c-2ca8-deee" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="true" id="43cb-2770-cb65-abce" type="max"/>
+      </constraints>
+      <infoGroups>
+        <infoGroup id="e0d7-8728-9f1e-7c7a" name="Traits" hidden="false">
+          <profiles>
+            <profile id="e56e-3e44-ca36-e2d6" name="Small Rat Swarm" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Agile, Co-ordinated Attack (Rat), Evasive, Group, Immune (Prone), Insignificant, Lightfooted, Swarm, Tiny, Tireless</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="bfa1-a8f0-632a-b1b3" name="Agile" hidden="false" targetId="6a46-2f07-1725-11b2" type="rule"/>
+            <infoLink id="db95-b3bf-9855-debb" name="Co-ordinated Attack" hidden="false" targetId="2337-7bcc-c1f2-f2bd" type="rule"/>
+            <infoLink id="5d4e-8a4b-7b16-d2eb" name="Group" hidden="false" targetId="4c02-03a1-ae7b-7821" type="rule"/>
+            <infoLink id="2641-c7b1-ca51-0d38" name="Evasive" hidden="false" targetId="b0f8-d197-536b-c8fc" type="rule"/>
+            <infoLink id="9b0f-962a-d991-098d" name="Immune" hidden="false" targetId="ea08-b25e-0ea8-af73" type="rule"/>
+            <infoLink id="6a44-106f-eed6-5acd" name="Insignificant" hidden="false" targetId="1614-d86c-ef8a-c095" type="rule"/>
+            <infoLink id="d016-5e53-c3c3-4354" name="Lightfooted" hidden="false" targetId="57d2-cd57-07f9-addf" type="rule"/>
+            <infoLink id="2575-9170-c2b5-ca60" name="Swarm" hidden="false" targetId="a2be-2179-aa5a-664a" type="rule"/>
+            <infoLink id="de0f-4e10-828a-5e79" name="Tiny" hidden="false" targetId="335c-7f6f-9ca0-cb93" type="rule"/>
+            <infoLink id="e224-1b57-77a3-e344" name="Tireless" hidden="false" targetId="5829-35f3-dd19-1290" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="a18f-8a6d-bb8d-84c6" name="Melee Weapon" hidden="false">
+          <profiles>
+            <profile id="8e5c-b37c-c17b-98e4" name="Bite" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">-2</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Pierce (1)</characteristic>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Combo Attack (0)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="5a3e-36cf-421d-125a" name="Combo Attack " hidden="false" targetId="78ab-6a94-be24-8f74" type="rule"/>
+            <infoLink id="5bc5-9c6e-3837-bc96" name="Pierce " hidden="false" targetId="39e4-14d7-5533-6e67" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+      </infoGroups>
+      <categoryLinks>
+        <categoryLink id="aa99-a3e9-6e3a-6653" name="Faction: Cult of Yurei" hidden="false" targetId="0d0a-4c02-8dce-676b" primary="false"/>
+        <categoryLink id="953b-9c0f-7efb-df42" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="false"/>
+        <categoryLink id="1b8f-e660-ce27-e494" name="Rat" hidden="false" targetId="1b63-9d2c-9724-21b5" primary="false"/>
+        <categoryLink id="a768-473f-8ac9-c5dd" name="Non-Unique" hidden="false" targetId="d181-219d-3add-d47b" primary="false"/>
+        <categoryLink id="a45f-f19c-5565-4166" name="Animal" hidden="false" targetId="c382-9ab3-9924-e30a" primary="false"/>
+        <categoryLink id="f02c-5748-4ddf-4670" name="Reference Cards" hidden="false" targetId="5073-f00b-a8f6-5e3b" primary="true"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="31f7-6e2c-55db-38f8" name="Small Rat Swarm" hidden="false" collective="false" import="true" targetId="99be-071c-688e-9b6d" type="selectionEntry">
+          <modifiers>
+            <modifier type="append" field="name" value="A"/>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9372-9a9f-0205-e8b0" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="5730-3fcf-46a6-04d2" name="Small Rat Swarm A" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+              <characteristics>
+                <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">1</characteristic>
+                <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277"/>
+                <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">0</characteristic>
+                <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+                <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
+                <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+                <characteristic name="Ki" typeId="3969-9568-a914-6854">1</characteristic>
+                <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+                <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">0</characteristic>
+                <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">1 O</characteristic>
+                <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Tiny 30mm</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </entryLink>
+        <entryLink id="591f-d5e4-4f9e-f3f2" name="Small Rat Swarm" hidden="false" collective="false" import="true" targetId="99be-071c-688e-9b6d" type="selectionEntry">
+          <modifiers>
+            <modifier type="append" field="name" value="B"/>
+          </modifiers>
+          <profiles>
+            <profile id="a80c-5e1d-93fe-74ac" name="Small Rat Swarm B" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+              <characteristics>
+                <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">1</characteristic>
+                <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277"/>
+                <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">0</characteristic>
+                <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+                <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
+                <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+                <characteristic name="Ki" typeId="3969-9568-a914-6854">1</characteristic>
+                <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+                <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">0</characteristic>
+                <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">1 O</characteristic>
+                <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Tiny 30mm</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </entryLink>
+        <entryLink id="2184-1a8c-b567-ab55" name="Small Rat Swarm" hidden="false" collective="false" import="true" targetId="99be-071c-688e-9b6d" type="selectionEntry">
+          <modifiers>
+            <modifier type="append" field="name" value="C"/>
+          </modifiers>
+          <profiles>
+            <profile id="fb1a-e7f9-f9f4-7162" name="Small Rat Swarm C" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+              <characteristics>
+                <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">1</characteristic>
+                <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277"/>
+                <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">0</characteristic>
+                <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+                <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
+                <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+                <characteristic name="Ki" typeId="3969-9568-a914-6854">1</characteristic>
+                <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+                <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">0</characteristic>
+                <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">1 O</characteristic>
+                <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Tiny 30mm</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </entryLink>
+      </entryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0.0"/>
+      </costs>
+    </selectionEntry>
   </selectionEntries>
   <entryLinks>
     <entryLink id="5358-9c72-b23c-c2e3" name="Baichi" hidden="false" collective="false" import="true" targetId="d998-94b8-fd53-f8ce" type="selectionEntry">
@@ -5845,6 +6667,13 @@ This terrain is always recruited in a Warband with Fuwa Kaidan.</characteristic>
       </costs>
     </selectionEntry>
     <selectionEntry id="ef48-c237-6573-6c21" name="Kairai Farmer" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="a111-8656-5c05-7415" value="0.0">
+          <conditions>
+            <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5073-f00b-a8f6-5e3b" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="eb06-a248-d832-67d9" type="max"/>
       </constraints>
@@ -5860,6 +6689,13 @@ This terrain is always recruited in a Warband with Fuwa Kaidan.</characteristic>
       </costs>
     </selectionEntry>
     <selectionEntry id="fc14-87e3-3096-84d7" name="Kairai Militia" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="a111-8656-5c05-7415" value="0.0">
+          <conditions>
+            <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5073-f00b-a8f6-5e3b" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="c86a-a2c9-78d8-10b2" type="max"/>
       </constraints>
@@ -5875,6 +6711,13 @@ This terrain is always recruited in a Warband with Fuwa Kaidan.</characteristic>
       </costs>
     </selectionEntry>
     <selectionEntry id="32fe-fdee-7aa5-36a6" name="Kairai Villager" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="a111-8656-5c05-7415" value="0.0">
+          <conditions>
+            <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5073-f00b-a8f6-5e3b" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="03b5-f6ca-3db7-57a6" type="max"/>
       </constraints>
@@ -5890,6 +6733,13 @@ This terrain is always recruited in a Warband with Fuwa Kaidan.</characteristic>
       </costs>
     </selectionEntry>
     <selectionEntry id="a405-e64b-bb87-9243" name="Kusatta Kairai" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="a111-8656-5c05-7415" value="0.0">
+          <conditions>
+            <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5073-f00b-a8f6-5e3b" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="fe5d-40a8-7fb2-c010" type="max"/>
       </constraints>
@@ -5917,6 +6767,13 @@ This terrain is always recruited in a Warband with Fuwa Kaidan.</characteristic>
       </costs>
     </selectionEntry>
     <selectionEntry id="3f69-4675-5931-c2dd" name="Risen Kairai" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="a111-8656-5c05-7415" value="0.0">
+          <conditions>
+            <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5073-f00b-a8f6-5e3b" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="ded5-a428-5a89-0a77" type="max"/>
       </constraints>
@@ -5930,6 +6787,13 @@ This terrain is always recruited in a Warband with Fuwa Kaidan.</characteristic>
       </costs>
     </selectionEntry>
     <selectionEntry id="99be-071c-688e-9b6d" name="Small Rat Swarm" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="a111-8656-5c05-7415" value="0.0">
+          <conditions>
+            <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5073-f00b-a8f6-5e3b" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="3782-d418-0b47-97d8" type="max"/>
       </constraints>
@@ -5942,6 +6806,13 @@ This terrain is always recruited in a Warband with Fuwa Kaidan.</characteristic>
       </costs>
     </selectionEntry>
     <selectionEntry id="6d6b-2449-631f-053f" name="Armoured Kairai" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="a111-8656-5c05-7415" value="0.0">
+          <conditions>
+            <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5073-f00b-a8f6-5e3b" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d295-f0f6-e044-6769" type="max"/>
       </constraints>
@@ -6057,6 +6928,18 @@ Due to the cost increment per model, the cost needs to decrement once to offset 
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup id="ef93-ecd4-88c1-9224" name="Enhancements" hidden="false" collective="false" import="true">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5073-f00b-a8f6-5e3b" type="instanceOf"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5073-f00b-a8f6-5e3b" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <selectionEntries>
         <selectionEntry id="1d2a-58d3-0444-8105" name="Fearsome Presence" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
