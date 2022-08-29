@@ -13,7 +13,7 @@ Bushido
 
 * [Overview][]
 * [Bushido][]
-* [Bugs][]
+* [Bugs, Errors, and Suggestions][]
 * [Links][]
 
 ## Overview ##
@@ -43,8 +43,9 @@ Think of each root entry as a card. This means that you only ever select one of 
 ### Ordered for Battle and Strategic Deployment ###
 <img src="https://media.discordapp.net/attachments/697113940848672808/999362996600061972/IMG_20220720_180849.jpg" width="25%"/><img src="https://media.discordapp.net/attachments/697113940848672808/999362996885266534/IMG_20220720_180908.jpg" width="25%"/><img src="https://media.discordapp.net/attachments/697113940848672808/999362997472464957/IMG_20220720_180931.jpg" width="25%"/><img src="https://media.discordapp.net/attachments/697113940848672808/999362997787054080/IMG_20220720_181039.jpg" width="25%"/>
 
-## Bugs, Errors, & Suggestions ##
-[Bugs]: #bugs
+## Bugs, Errors, and Suggestions ##
+[Bugs, Errors, and Suggestions]: #bugs-errors-and-suggestions
+
 Great, thank you! Please [report a bug][bug report] - you can also suggest enhancements and raise other issues there.
 Alternatively, use the Battlescribe channel in the [Bushido Discord][] server to discuss the catalogue development.
 
