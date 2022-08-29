@@ -18,23 +18,21 @@ Bushido
 
 ## Overview ##
 [Overview]: #overview
-
 BSData organisation created this project. It's a GitHub repository of datafiles.
 Maintained by community, in no way endorsed by BattleScribe or any other company/publisher.
 
 These datafiles contain all the profile information publicly available for [GCT Studios][]' Bushido tabletop miniatures skirmish game.
 Check out the development roadmap on [Trello][].
 
-If you want to help develop - cool! We need you! Take a look at [Getting Started wiki][].
+If you want to help develop - cool! We need you! Take a look at [our homepage][BSData.net]
 
 ### How to get the datafiles ###
-
 Visit the [BattleScribe homepage][BattleScribe] and install the mobile or desktop app on the platform of your choice.
 Data files are hosted on AppSpot. Take a look: [BattleScribe Data on Appspot][].
 Android and PC users are recommended to use the [BSData Gallery][] data-updating method to avoid AppSpot stability issues.
 
 ## The Battlescribe Bushido repository ##
-[Bushido]: #bushido
+[Bushido]: #bushido 
 Think of each root entry as a card. This means that you only ever select one of almost any card. Multiple-model cards, when added, will usually have one model automatically nested within them. To add a second model, you will need to go into that card's options and add one. Their equipment will then be nested within each model.
 
 ### Looking for Enhancements on multi-model cards? ###
@@ -72,8 +70,7 @@ Alternatively, use the Battlescribe channel in the [Bushido Discord][] server to
 [Bushido Wiki]: http://bushidothegame.wikidot.com/
 
 [BSData Gallery]: https://github.com/BSData/wh40k/issues/1706
-[Report it on Appspot]: http://battlescribedata.appspot.com/#/repo/bushido
 [bug report]: https://github.com/BSData/bushido/issues/new/choose
 [BattleScribe]: http://www.battlescribe.net/
 [BattleScribe Data on Appspot]: http://battlescribedata.appspot.com/#/repos
-[Getting Started wiki]: https://github.com/BSData/catalogue-development/wiki/Getting-Started#contributing
+[BSData.net]: https://www.bsdata.net/
