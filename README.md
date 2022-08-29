@@ -20,11 +20,12 @@ Bushido
 [Overview]: #overview
 BSData organisation created this project. It's a GitHub repository of datafiles.
 Maintained by community, in no way endorsed by BattleScribe or any other company/publisher.
+If you want to help develop - cool! We need you! Take a look at [our homepage][BSData.net]
 
 These datafiles contain all the profile information publicly available for [GCT Studios][]' Bushido tabletop miniatures skirmish game.
 Check out the development roadmap on [Trello][].
 
-If you want to help develop - cool! We need you! Take a look at [our homepage][BSData.net]
+<img src="https://gctstudios.com/sites/default/files/styles/uc_product_full/public/products/bushido_risen_sun_rulebook_promo.jpg?itok=9PW8lkWe" />
 
 ### How to get the datafiles ###
 Visit the [BattleScribe homepage][BattleScribe] and install the mobile or desktop app on the platform of your choice.
