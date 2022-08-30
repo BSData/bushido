@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="1ac7-2939-2874-7530" name="Cult of Yurei" revision="19" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="10" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="1ac7-2939-2874-7530" name="Cult of Yurei" revision="20" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="10" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="5048-3a52-5689-6d0b" name="Drain Spirit" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -2222,7 +2222,7 @@ If this model is removed from play, also remove any Friendly Envy from play.</ch
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="18.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="ea2d-dde3-7a66-76b8" name="The Penanngalan" hidden="false" collective="false" import="true" type="model">
+    <selectionEntry id="ea2d-dde3-7a66-76b8" name="The Penanggalan" hidden="false" collective="false" import="true" type="model">
       <modifiers>
         <modifier type="set" field="hidden" value="true">
           <conditionGroups>
@@ -2239,7 +2239,7 @@ If this model is removed from play, also remove any Friendly Envy from play.</ch
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="true" id="fbee-1189-73be-bdbf" type="max"/>
       </constraints>
       <profiles>
-        <profile id="77d6-4b78-59cf-fd78" name="The Penanngalan" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+        <profile id="77d6-4b78-59cf-fd78" name="The Penanggalan" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
           <characteristics>
             <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
             <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
@@ -2258,7 +2258,7 @@ If this model is removed from play, also remove any Friendly Envy from play.</ch
       <infoGroups>
         <infoGroup id="5753-6d8f-53ee-0f95" name="Traits" hidden="false">
           <profiles>
-            <profile id="5c31-089a-bf2f-17eb" name="The Penanngalan" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+            <profile id="5c31-089a-bf2f-17eb" name="The Penanggalan" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
               <characteristics>
                 <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Dodge (1), Fear (6), Jump Up, Willpower (1)</characteristic>
               </characteristics>
@@ -2294,7 +2294,7 @@ If this model is removed from play, also remove any Friendly Envy from play.</ch
         </infoGroup>
         <infoGroup id="ad51-ce17-0fd4-dd20" name="Unique Effects" hidden="false">
           <profiles>
-            <profile id="db05-8f4b-57ef-a01b" name="The Penanngalan" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+            <profile id="db05-8f4b-57ef-a01b" name="The Penanggalan" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
               <characteristics>
                 <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">During the End Phase if this model is in BtB with a non-Soulless model it Held, this model gains Regenerate (2) and the Held model suffers two Wounds ignoring Tough.</characteristic>
               </characteristics>
@@ -5279,12 +5279,12 @@ No model may be chosen more than once.</characteristic>
       <modifiers>
         <modifier type="set" field="ea4d-9530-0f19-8326" value="1.0">
           <conditions>
-            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3bf5-62ee-efbf-2baf" type="atLeast"/>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f42b-9d5d-1409-3b88" type="atLeast"/>
           </conditions>
         </modifier>
         <modifier type="set" field="hidden" value="true">
           <conditions>
-            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3bf5-62ee-efbf-2baf" type="lessThan"/>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f42b-9d5d-1409-3b88" type="lessThan"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -5685,9 +5685,14 @@ This terrain is always recruited in a Warband with Fuwa Kaidan.</characteristic>
     <selectionEntry id="2f97-4707-3a8e-4c17" name="Armoured Kairai (reference)" hidden="true" collective="false" import="true" type="unit">
       <modifiers>
         <modifier type="set" field="hidden" value="false">
-          <conditions>
-            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b49b-6987-598a-9b9c" type="atLeast"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b49b-6987-598a-9b9c" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a984-cccb-756d-a253" type="atLeast"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <constraints>
@@ -5801,9 +5806,14 @@ This terrain is always recruited in a Warband with Fuwa Kaidan.</characteristic>
     <selectionEntry id="4629-d333-7138-b074" name="Kairai Farmers (reference)" hidden="true" collective="false" import="true" type="unit">
       <modifiers>
         <modifier type="set" field="hidden" value="false">
-          <conditions>
-            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b49b-6987-598a-9b9c" type="atLeast"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b49b-6987-598a-9b9c" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a984-cccb-756d-a253" type="atLeast"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <constraints>
@@ -5909,9 +5919,14 @@ This terrain is always recruited in a Warband with Fuwa Kaidan.</characteristic>
     <selectionEntry id="770d-b09f-1539-1b70" name="Karai Militia (reference)" hidden="true" collective="false" import="true" type="unit">
       <modifiers>
         <modifier type="set" field="hidden" value="false">
-          <conditions>
-            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b49b-6987-598a-9b9c" type="atLeast"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b49b-6987-598a-9b9c" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a984-cccb-756d-a253" type="atLeast"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <constraints>
@@ -6020,9 +6035,14 @@ This terrain is always recruited in a Warband with Fuwa Kaidan.</characteristic>
     <selectionEntry id="44f0-51e8-6529-fb2e" name="Karai Villagers (reference)" hidden="true" collective="false" import="true" type="unit">
       <modifiers>
         <modifier type="set" field="hidden" value="false">
-          <conditions>
-            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b49b-6987-598a-9b9c" type="atLeast"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b49b-6987-598a-9b9c" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a984-cccb-756d-a253" type="atLeast"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <constraints>
@@ -6131,9 +6151,14 @@ This terrain is always recruited in a Warband with Fuwa Kaidan.</characteristic>
     <selectionEntry id="5de2-9fea-5f77-3b87" name="Kusatta Karai (reference)" hidden="true" collective="false" import="true" type="unit">
       <modifiers>
         <modifier type="set" field="hidden" value="false">
-          <conditions>
-            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b49b-6987-598a-9b9c" type="atLeast"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b49b-6987-598a-9b9c" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a984-cccb-756d-a253" type="atLeast"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <constraints>
@@ -6249,9 +6274,14 @@ When this model is reduced to 0 Wounds remove it from play and each model within
     <selectionEntry id="f04c-0cab-6974-8342" name="Risen Karai (reference)" hidden="true" collective="false" import="true" type="unit">
       <modifiers>
         <modifier type="set" field="hidden" value="false">
-          <conditions>
-            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b49b-6987-598a-9b9c" type="atLeast"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b49b-6987-598a-9b9c" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a984-cccb-756d-a253" type="atLeast"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <constraints>
@@ -6416,9 +6446,14 @@ In the End Phase, if this model is not in BtB with another Kairai this model bec
     <selectionEntry id="bdd6-cc25-6b98-8d3e" name="Small Rat Swarms (reference)" hidden="true" collective="false" import="true" type="unit">
       <modifiers>
         <modifier type="set" field="hidden" value="false">
-          <conditions>
-            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8fdc-0d2c-2ca8-deee" type="atLeast"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8fdc-0d2c-2ca8-deee" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4582-a96b-a921-a81e" type="atLeast"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <constraints>
@@ -6902,7 +6937,7 @@ Due to the cost increment per model, the cost needs to decrement once to offset 
       <profiles>
         <profile id="a1ea-6bb7-d7e5-6b95" name="Ijimyo&apos;s Masks" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
           <characteristics>
-            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">Attached Modells) gain Fear (6).
+            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">Attached Models gain Fear (6).
 X= The number of models recruited on the profile card; this card may be bought for as many models as there are Wound Tracks on the Attached card.
 
 Requirement [Kairai, Burakumin]</characteristic>
