@@ -103,7 +103,7 @@ Until the end of the game, whenever you win a Tactical Test, choose 2 Prefecture
         </selectionEntry>
       </selectionEntries>
       <costs>
-        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0.0"/>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="1c4e-2aa6-2d32-f0d4" name="Blood of the Dragon" hidden="false" collective="false" import="true" type="upgrade">
@@ -1774,7 +1774,7 @@ Until the end of the game, whenever you win a Tactical Test, choose 2 Prefecture
             <profile id="254e-8d66-cd37-7f78" name="Unique Effects" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
               <characteristics>
                 <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">This model can be recruited into any Prefecture Theme that does not specifically restrict it.
-This model cannot be healed.</characteristic>
+This model cannot be Healed.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -3705,7 +3705,7 @@ Remove all Reload Markers from models within 4&quot; of a Friendly Gunso model.<
       <profiles>
         <profile id="ac84-4cc3-9b4c-0b05" name="Sudden Alacrity" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
           <characteristics>
-            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">Discard 5 Pass Tokens, add 1 Activation Counter to a Prefecture model.</characteristic>
+            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">Discard 5 Pass Tokens, add 1 Activation Counter to a Friendly non-Unique Ashigaru model.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -4541,9 +4541,11 @@ Max 3 in play.</characteristic>
                   <conditions>
                     <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c382-9ab3-9924-e30a" type="instanceOf"/>
                     <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d7c5-a2b9-4696-fd33" type="instanceOf"/>
-                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6639-615e-f1ab-bc64" type="instanceOf"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e12a-f782-3281-7444" type="notInstanceOf"/>
                     <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7435-856f-ece2-fe58" type="instanceOf"/>
                     <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f62f-dd0b-4f06-06a6" type="instanceOf"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6639-615e-f1ab-bc64" type="instanceOf"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="216a-c1c3-66df-b497" type="notInstanceOf"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -4557,7 +4559,9 @@ Max 3 in play.</characteristic>
             <profile id="1e85-5f06-d165-054f" name="Patient Dragon" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
               <characteristics>
                 <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">Attached model gains:
-Whenever this model performs a Wait Action, its Controller gains 2 Pass Tokens and this model gains Tactician (+1) for the next Tactical Test.</characteristic>
+Whenever this model performs a Wait Action, its Controller gains 2 Pass Tokens and this model gains Tactician (+1) for the next Tactical Test.
+
+Requirement [Samurai, Teishin]</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -5006,7 +5010,7 @@ Friendly Faction Samurai models gain Charging Bonus [Fearless] when they begin t
                 <profile id="fc4c-f2be-8e6c-13a9" name="Takashi Clan Armour" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
                   <characteristics>
                     <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">Attached model gains Armour (3) and Fearless.
-Enemy Damage Rolls against the Attached model are ignored if the individual dice values of the Damage Roll are the same number.</characteristic>
+Attached model ignores Enemy Damage Rolls if the individual dice values of the Damage Roll are the same number.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>

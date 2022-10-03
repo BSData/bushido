@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="8335-cda4-b21f-cef1" name="Library-Traits" revision="4" battleScribeVersion="2.03" library="true" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="3" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="8335-cda4-b21f-cef1" name="Library-Traits" revision="4" battleScribeVersion="2.03" library="true" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="10" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="f322-702a-ff62-b37e" name="Armour" hidden="false"/>
     <categoryEntry id="a678-8869-7918-cb24" name="Blood of Orochi" hidden="false"/>
@@ -267,7 +267,7 @@ This model may not gain markers of [Descriptor]. If a model gains the Immune tra
     </rule>
     <rule id="d34b-724f-6fc8-7420" name="Immovable" hidden="false">
       <description>
-This model may not be moved or placed except when making a Walk, Run or Charge or by using a rule on a friendly card. This model cannot gain Prone Markers.</description>
+This model may not be Moved or Placed except when making a Disengage, Melee, Run, Walk, or Charge or by using a rule on a Friendly card. This model cannot gain Prone Markers. This model does not rotate at the start of a Melee Exchange, or when performing a Scenario Action.</description>
     </rule>
     <rule id="6659-a776-d836-a2fb" name="Impenetrable Defence" hidden="false">
       <description>
@@ -472,6 +472,36 @@ If a model has both Strong and Weak traits, the effects of both are cancelled.</
     <rule id="f980-8d03-ad19-afe3" name="Willpower" hidden="false">
       <description>(X)
 This model modifies the result by X when calculating its final result in Opposed Ki tests when it is the Activating model.</description>
+    </rule>
+    <rule id="fea7-5e14-69c6-01b8" name="Terrain: Difficult" hidden="false">
+      <description>Can moved through but each inch counts as 2 inches moved for any movement whilst within the Terrain element for models making a Walk, Melee, Run, or Charge.
+If Enhancing terrain has a sheer drop, this is usually Difficult terrain. Being pushed, Slammed or Thrown from Huge Enhancing terrain leaves a model Prone, and after any Damage Roll, the Damage is not halved.</description>
+    </rule>
+    <rule id="77e1-8d49-8101-0e5e" name="Terrain: Destructible" hidden="false">
+      <description>A model in base contact with this terrain and not in an Enemy ZoC can declare a Wait action and spend 2Ki to remove it from the table.</description>
+    </rule>
+    <rule id="9ba6-e7d2-94fa-e538" name="Terrain: Impassable" hidden="false">
+      <description>Cannot be moved through.</description>
+    </rule>
+    <rule id="567a-a96f-f084-c381" name="Terrain: Normal" hidden="false">
+      <description>No effect to movement.</description>
+    </rule>
+    <rule id="3501-dd37-bcf7-255e" name="Terrain: Ideal" hidden="false">
+      <description>While making a Walk, Run or Charge, if a model crosses Ideal Terrain at any point then it can add an extra 2” to its total move distance.</description>
+    </rule>
+    <rule id="4e78-77b6-a72f-e0fa" name="Terrain: Clear" hidden="false">
+      <description>No effect on LoS.</description>
+    </rule>
+    <rule id="1d3a-039b-75e0-feb2" name="Terrain: Blocking" hidden="false">
+      <description>No LoS can be drawn through any part of the Terrain element that is considered Blocking.
+If any Los is blocked to the target by Blocking terrain (Assuming there is a clear LoS past the terrain) then the target benefits from Cover if it is within 1” of the terrain piece.</description>
+    </rule>
+    <rule id="2dfc-0b49-2390-4d85" name="Terrain: Obscuring" hidden="false">
+      <description>If any Line of Sight to any part of a target’s base is drawn through Obscuring terrain, then the target benefits from cover if it is within 1” of the terrain piece.</description>
+    </rule>
+    <rule id="859f-3494-9e73-a36e" name="Terrain: Enhancing" hidden="false">
+      <description>Models on hilly terrain or otherwise elevated gain Reach on their Melee Weapons for melee exchanges where a non-Cloudwalk opponent did not begin its activation on the same terrain as they hold the high ground.
+In addition, they ignore models and terrain smaller than the Enhancing terrain for LoS (Though such terrain can still provide cover if a LoS passes through them).</description>
     </rule>
   </sharedRules>
 </catalogue>

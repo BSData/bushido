@@ -56,7 +56,7 @@ X cannot be greater than 3.</characteristic>
       <profiles>
         <profile id="40c2-13a8-5d5d-6d03" name="Ravenous Hunger" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
           <characteristics>
-            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">When a Friendly Oni or Onisho model uses the &apos;Consume Soul&apos; Ki Feat it gains an activation Counter.</characteristic>
+            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">When one Friendly Oni or Onisho model uses the &apos;Consume Soul&apos; Ki Feat it gains an Activation Counter. Then Discard this card.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -4119,7 +4119,7 @@ On a successful ranged attack the Target gains a Stunned marker.</characteristic
         <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1a7b-86a4-c920-130e" type="min"/>
       </constraints>
       <profiles>
-        <profile id="901d-e774-0e66-31ae" name="Bakemono Horde" hidden="true" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
+        <profile id="901d-e774-0e66-31ae" name="Bakemono Horde &quot;Out of the Underworld&quot;" hidden="true" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
           <characteristics>
             <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">• When a Bakemono would generate Ki Tokens (or otherwise gain Ki Tokens)  instead place those Ki Tokens on this card.
 • Whenever a Bakemono model would spend Ki Tokens you may spend them from this card to pay for Ki Feats, Boosts or other effects.
@@ -4347,9 +4347,11 @@ Kemono &amp; Ushi are considered the same model when creating a Warband.</charac
       <infoGroups>
         <infoGroup id="5614-4e11-6acc-8bed" name="Unique Effects" hidden="false">
           <profiles>
-            <profile id="2d29-a34a-7730-1b9e" name="Xi-Han &amp; Zoo" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+            <profile id="2d29-a34a-7730-1b9e" name="Reiji Kinoko" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
               <characteristics>
-                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">Xi-Han and Zoo are considered the same model when creating a Warband.</characteristic>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">When Reiji Kinoko expires during the End Phase, replace this model with the Xi-Han model.
+Recover or Inflict Wounds so that Xi-Han’s profile has the same number of Wounds marked as Zoo.
+Transfer State Markers, Enhancements and any Tokens to Zoo’s profile card.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -4416,9 +4418,10 @@ Kemono &amp; Ushi are considered the same model when creating a Warband.</charac
         <profile id="6ccb-0bd1-a676-0419" name="Mushroom-Crazed Lunatics" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
           <characteristics>
             <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">• Models in this Warband gain Banzai!
-• Models in this Warband may only declare Run or Charge Actions.
+• Models in this Warband do not suffer the Melee Penalty for having Run this turn.
+• Models in this Warband may only declare Melee, Run, or Charge Actions.
   (If no Action choice is legal then the model loses all Activation Counters and ends its Action immediately.)
-• Discard this Theme when a model declares any action other than Charge, or you may choose to discard this card in any Starting Phase.
+• Discard this Theme when a model performs any Action other than Melee, Run, or Charge; or you may choose to Discard this card in any Starting Phase.
 
 Restriction [Bakemono]</characteristic>
           </characteristics>
@@ -4716,8 +4719,7 @@ Permitted [Oni, Onisho]</characteristic>
           <profiles>
             <profile id="d687-a41d-a788-ff86" name="Deep Horn" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
               <characteristics>
-                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">The first time you use the &apos;Summon from the Shadows&apos; Ki Feat each turn, do not mark the Once Per Turn checkbox.
-(This will allow you to use the Ki Feat twice in one turn.)</characteristic>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">You may use the &apos;Summon from the Shadows&apos; Ki Feat twice a turn instead of once a turn.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -6732,7 +6734,7 @@ Restriction [Bakemono]</characteristic>
                   <conditionGroups>
                     <conditionGroup type="and">
                       <conditions>
-                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9b14-5558-cfeb-ee1c" type="instanceOf"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="373c-333e-9a1f-f881" type="instanceOf"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
@@ -6751,10 +6753,10 @@ Restriction [Bakemono]</characteristic>
                 <profile id="b2d9-5325-ce92-edf0" name="Crimson Sky Mushroom" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
                   <characteristics>
                     <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">Attached model cannot be Healed.
-Double the Attached model&apos;s Melee Pool, and it gains +2 Melee Weapon Strength.
-Every End Phase mark 1 Wound Box of the Attached model.
+Double the Attached model&apos;s Melee Pool, and it gains +2 Strength to its Melee Weapons.
+Every End Phase mark 1 Wound Box on the Attached model.
 
-Requirement [Bakemono model in a Warband with a Bakemono Shugenja]</characteristic>
+Requirement [Raider model in a Warband with a Bakemono Shugenja]</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -7145,7 +7147,7 @@ X cannot be greater than 3.</characteristic>
             <characteristic name="Limitation" typeId="6fc9-5d13-2687-b2a5"/>
             <characteristic name="Description" typeId="f804-b969-00da-2123">Replace this model with the Zoo model.
 Recover or Inflict Wounds so that Zoo’s profile card has the same number of Wounds marked as Xi-Han.
-Transfer State Markers, Enhancements, and any tokens to Zoo’s profile card, Zoo gains an Impetuous Marker.
+Transfer State Markers, Enhancements, and any Tokens to Zoo’s profile card, Zoo gains an Impetuous Marker.
 
 When this effect expires in the End Phase, replace Zoo with Xi-Han.
 Recover or Inflict Wounds so that Xi-Han’s profile has the same number of Wounds marked as Zoo.
