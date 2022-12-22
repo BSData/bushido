@@ -61,7 +61,7 @@ Once both numbers have been used, Discard this card.</characteristic>
       <modifiers>
         <modifier type="set" field="name" value="Delicious Rice Ball Barricades">
           <conditions>
-            <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ac91-73ee-4cc8-f014" type="greaterThan"/>
+            <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ac91-73ee-4cc8-f014" type="atLeast"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -73,7 +73,7 @@ Once both numbers have been used, Discard this card.</characteristic>
           <modifiers>
             <modifier type="set" field="name" value="Delicious Rice Ball Barricades">
               <conditions>
-                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ac91-73ee-4cc8-f014" type="greaterThan"/>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ac91-73ee-4cc8-f014" type="atLeast"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -2883,6 +2883,13 @@ If this model becomes Prone, it loses all Ki tokens and gains a Spirit Block Mar
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="f2d6-8699-3511-98b0" name="Silverback A" hidden="false" collective="false" import="true" type="model">
+          <modifiers>
+            <modifier type="set" field="a111-8656-5c05-7415" value="12.0">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="685b-176a-7b13-c5c1" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8cea-2ab7-dc9d-e946" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ebe6-9e95-6370-2f37" type="min"/>
@@ -2913,6 +2920,13 @@ If this model becomes Prone, it loses all Ki tokens and gains a Spirit Block Mar
           </costs>
         </selectionEntry>
         <selectionEntry id="b28b-d7cb-a681-6052" name="Silverback B" hidden="false" collective="false" import="true" type="model">
+          <modifiers>
+            <modifier type="set" field="a111-8656-5c05-7415" value="12.0">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="685b-176a-7b13-c5c1" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c67e-2b73-f50e-2392" type="max"/>
           </constraints>
@@ -3067,6 +3081,11 @@ If this model becomes Prone, it loses all Ki tokens and gains a Spirit Block Mar
             <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="90d7-5fe5-0a05-1bea" type="atLeast"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="a111-8656-5c05-7415" value="2.0">
+          <conditions>
+            <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9469-3354-2779-eeab" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4f69-5463-0b8e-d4a8" type="max"/>
@@ -3090,6 +3109,17 @@ Against Durable models, instead of making a Damage Roll, always cause 1 Damage (
       <categoryLinks>
         <categoryLink id="144d-9f72-d720-246d" name="New CategoryLink" hidden="false" targetId="278f-9379-320a-1a7a" primary="true"/>
       </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="9469-3354-2779-eeab" name="Balance Changes Public Beta (Cost)" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6102-afed-4ff0-5e90" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1b42-2819-c655-dfd5" type="max"/>
+          </constraints>
+          <costs>
+            <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="3.0"/>
       </costs>
@@ -7861,6 +7891,7 @@ Requirement [Hozumi Maha]</characteristic>
                 <condition field="selections" scope="primary-catalogue" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4213-717c-2228-e731" type="notInstanceOf"/>
                 <condition field="selections" scope="primary-catalogue" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d4b0-a54e-a48b-88a5" type="notInstanceOf"/>
                 <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0e4a-a40c-14eb-2f4f" type="lessThan"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4750-f234-49e4-79c1" type="lessThan"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -7940,6 +7971,11 @@ Requirement [Kiyozumi Haiboku]</characteristic>
               </conditions>
             </conditionGroup>
           </conditionGroups>
+        </modifier>
+        <modifier type="set" field="a111-8656-5c05-7415" value="12.0">
+          <conditions>
+            <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b3c0-5fbf-c689-51bd" type="atLeast"/>
+          </conditions>
         </modifier>
       </modifiers>
       <constraints>
@@ -8021,6 +8057,17 @@ Requirement [Kiyozumi Haiboku]</characteristic>
         <categoryLink id="ecde-e582-bf75-7269" name="Kiyozumi" hidden="false" targetId="4a1c-ccdf-9b9a-58a0" primary="false"/>
         <categoryLink id="984e-4d2b-2038-1f27" name="Shisai" hidden="false" targetId="a485-b6b0-b58e-a3a1" primary="false"/>
       </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="b3c0-5fbf-c689-51bd" name="Balance Changes Public Beta (Cost)" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5792-b0a5-9a91-f202" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7065-8b47-18c7-876e" type="max"/>
+          </constraints>
+          <costs>
+            <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
       <entryLinks>
         <entryLink id="f78c-f9cd-e205-f2f3" name="Enhancements" hidden="false" collective="false" import="true" targetId="f486-4498-03e3-c397" type="selectionEntryGroup"/>
       </entryLinks>
@@ -8342,6 +8389,7 @@ Requirement [Kiyozumi Haiboku]</characteristic>
                 <condition field="selections" scope="primary-catalogue" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0cac-b8ad-fb7f-ef84" type="notInstanceOf"/>
                 <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4750-f234-49e4-79c1" type="lessThan"/>
                 <condition field="selections" scope="primary-catalogue" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2276-2df6-78a7-841d" type="notInstanceOf"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0e4a-a40c-14eb-2f4f" type="lessThan"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>

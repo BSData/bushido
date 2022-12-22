@@ -284,12 +284,26 @@
   <selectionEntries>
     <selectionEntry id="c3af-4e72-f6eb-87bc" name="Dummy Card" hidden="false" collective="false" import="true" type="unit">
       <selectionEntries>
-        <selectionEntry id="7395-879f-3d0e-e976" name="Rice Cost" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="7395-879f-3d0e-e976" name="Increase Rice Cost" hidden="false" collective="false" import="true" type="upgrade">
           <costs>
             <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1.0"/>
           </costs>
         </selectionEntry>
+        <selectionEntry id="80ad-e4c3-194d-0ea2" name="Decrease Rice Cost" hidden="false" collective="false" import="true" type="upgrade">
+          <costs>
+            <cost name=" Rice" typeId="a111-8656-5c05-7415" value="-1.0"/>
+          </costs>
+        </selectionEntry>
       </selectionEntries>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="685b-176a-7b13-c5c1" name="Balance Changes Public Beta (rice cost changes only, as of 22/12/22)" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f844-aa02-34c3-8284" type="min"/>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="df11-7b4d-5153-c319" type="max"/>
+      </constraints>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0.0"/>
       </costs>

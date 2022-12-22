@@ -3732,6 +3732,11 @@ Permitted [Monks, up to 1 Sōhei, Construct, Kami, Ronin Kami]</characteristic>
             <condition field="selections" scope="a8c9-ae78-6fc0-1ff5" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3473-2978-59d5-a5c2" type="atLeast"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="a111-8656-5c05-7415" value="17.0">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d093-61fb-e625-8d24" type="max"/>
@@ -6983,6 +6988,13 @@ Requirement [Followers of Inari Theme]</characteristic>
       </costs>
     </selectionEntry>
     <selectionEntry id="2d4b-c276-7066-fc26" name="Monkey" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="a111-8656-5c05-7415" value="2.0">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="18cb-7f8c-07a7-f77a" type="max"/>
       </constraints>
@@ -7194,6 +7206,11 @@ Requirement [Monk, Element: Void]</characteristic>
             <modifier type="set" field="hidden" value="false">
               <conditions>
                 <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c35b-ba4c-507c-8ce8" type="instanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="a111-8656-5c05-7415" value="2.0">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="equalTo"/>
               </conditions>
             </modifier>
           </modifiers>

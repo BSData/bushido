@@ -1724,6 +1724,11 @@ Models that fail gain Vengeance [Rokuro] until the action is resolved.</characte
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="set" field="a111-8656-5c05-7415" value="12.0">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="true" id="eee3-ae8b-c6be-c3bc" type="max"/>
@@ -7193,6 +7198,17 @@ This may not cause the model to exceed its maximum Ki Statistic.</characteristic
                   </conditions>
                 </modifier>
               </modifiers>
+              <modifierGroups>
+                <modifierGroup>
+                  <conditions>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="equalTo"/>
+                  </conditions>
+                  <modifiers>
+                    <modifier type="set" field="a111-8656-5c05-7415" value="1.0"/>
+                    <modifier type="set" field="1f2e-ab0e-7540-ccb8" value="3.0"/>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
               <constraints>
                 <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1f2e-ab0e-7540-ccb8" type="max"/>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="723c-926d-f75c-4b6b" type="max"/>

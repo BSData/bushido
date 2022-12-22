@@ -230,6 +230,16 @@
             <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="98a6-e76a-f99b-a1d3" type="atLeast"/>
           </conditions>
         </modifier>
+        <modifier type="decrement" field="a111-8656-5c05-7415" value="1.0">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="equalTo"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="98a6-e76a-f99b-a1d3" type="atLeast"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e81a-ef05-4702-5d4d" type="max"/>
@@ -525,6 +535,16 @@
               <conditions>
                 <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="60d5-9a39-f05d-dced" type="equalTo"/>
                 <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9e87-2e30-e7c8-47d4" type="atLeast"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="decrement" field="a111-8656-5c05-7415" value="1.0">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="equalTo"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="98a6-e76a-f99b-a1d3" type="atLeast"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -1413,6 +1433,16 @@ At any point during the turn when a Player would make a dice roll, before dice a
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="decrement" field="a111-8656-5c05-7415" value="1.0">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="equalTo"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="98a6-e76a-f99b-a1d3" type="atLeast"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="180c-0b26-0477-1720" type="max"/>
@@ -1708,6 +1738,16 @@ This model cannot declare Run or Charge Actions. When this model is Killed, repl
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="decrement" field="a111-8656-5c05-7415" value="1.0">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="equalTo"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="98a6-e76a-f99b-a1d3" type="atLeast"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="eb5b-b6c7-31e5-a6d0" type="max"/>
@@ -1805,6 +1845,16 @@ When this model declares use of it&apos;s Bodyguard it gains Fearless until the 
             <conditionGroup type="or">
               <conditions>
                 <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="60d5-9a39-f05d-dced" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="decrement" field="a111-8656-5c05-7415" value="1.0">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="equalTo"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="98a6-e76a-f99b-a1d3" type="atLeast"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -2427,6 +2477,11 @@ Kyu: In the final turn of the game, while this model is in play, every time a mo
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="set" field="a111-8656-5c05-7415" value="16.0">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="520c-7ce2-2ff3-eca7" type="max"/>
@@ -2618,6 +2673,11 @@ Kyu: In the final turn of the game, while this model is in play, every time a mo
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="set" field="a111-8656-5c05-7415" value="13.0">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3950-b229-13ed-0cc0" type="max"/>
@@ -2714,6 +2774,16 @@ Kyu: In the final turn of the game, while this model is in play, every time a mo
             <conditionGroup type="or">
               <conditions>
                 <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="60d5-9a39-f05d-dced" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="decrement" field="a111-8656-5c05-7415" value="1.0">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="equalTo"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="98a6-e76a-f99b-a1d3" type="atLeast"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -3935,6 +4005,18 @@ Whenever an Effect causes dice to be re-rolled, this model gains 1 Ki Token.</ch
       </categoryLinks>
     </entryLink>
     <entryLink id="6368-82b0-f4e7-0ebd" name="Lua" hidden="true" collective="false" import="true" targetId="f8cf-8680-1f4a-2deb" type="selectionEntry">
+      <modifiers>
+        <modifier type="decrement" field="a111-8656-5c05-7415" value="1.0">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="equalTo"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="98a6-e76a-f99b-a1d3" type="atLeast"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
       <modifierGroups>
         <modifierGroup>
           <conditionGroups>
