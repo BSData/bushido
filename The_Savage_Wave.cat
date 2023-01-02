@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="0b85-0901-eb64-b84b" name="The Savage Wave" revision="19" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="10" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="0b85-0901-eb64-b84b" name="The Savage Wave" revision="19" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="11" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="5048-3a52-5689-6d0b" name="Ambush" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -3901,7 +3901,7 @@ This model automatically passes Fear Tests caused by Small Based models.</charac
     </selectionEntry>
     <selectionEntry id="4cb6-d647-87ed-6ce2" name="Deep Mushrooms" hidden="true" collective="false" import="true" type="upgrade">
       <modifiers>
-        <modifier type="set" field="5244-0642-3fb5-07a0" value="0">
+        <modifier type="set" field="5244-0642-3fb5-07a0" value="0.0">
           <conditions>
             <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0c22-e9ca-a3de-e706" type="equalTo"/>
           </conditions>
@@ -6059,6 +6059,82 @@ Oni and Onisho models, except Kijo models, activating within 4&quot;&quot; of th
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0.0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="1298-9f50-af2e-65be" name="Gathering in the Dark" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d82f-1edd-bde2-c6e6" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="0b7c-91f5-8d9e-7950" name="Gathering in the Dark" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
+          <characteristics>
+            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">Play in the Starting Phase.
+Until the End Phase whenever an Opponent spends a Pass Token, add 1 Ki Token to the Bakemono Horde Card.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="bfe0-c27d-3549-c2af" name="New CategoryLink" hidden="false" targetId="d360-71aa-ca22-ba3c" primary="true"/>
+        <categoryLink id="4f0d-d9d6-eb08-6caf" name="Cycle: Weeping Sky" hidden="false" targetId="6da0-b320-b958-dc82" primary="false"/>
+      </categoryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="7735-1a18-c06d-8e3e" name="Impending Doom" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0c22-e9ca-a3de-e706" type="atLeast"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="def7-43bf-d39b-db3c" value="0.0">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0c22-e9ca-a3de-e706" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="def7-43bf-d39b-db3c" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="d534-8d51-51fe-01a3" name="Impending Doom" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
+          <characteristics>
+            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">Play in the Starting Phase.
+Choose one of the following:
+• Choose a model, that model gains an additional one of its Markers, Counters orTokens of your choice, excluding Activation Counters and Ammo Tokens.
+• Choose a model, that model removes one of its Markers, Counters or Tokens of your choice, excluding Activation Counters and Ammo Tokens.
+
+Requirement [Warband with a Shugenja model]</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="233e-e84f-e676-35c9" name="New CategoryLink" hidden="false" targetId="d360-71aa-ca22-ba3c" primary="true"/>
+        <categoryLink id="7e96-d7b7-d40c-9842" name="Cycle: Weeping Sky" hidden="false" targetId="6da0-b320-b958-dc82" primary="false"/>
+      </categoryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="34a1-1350-497b-e3f4" name="Spoiled Rations" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7299-c78c-0798-b3a9" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="7715-56ed-86e4-60ea" name="Spoiled Rations" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
+          <characteristics>
+            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">Play in the Starting Phase.
+Until the End Phase Enemy models gain Indomitable (-1) to a minimum of 0.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="b49d-ef0c-85e9-cb98" name="New CategoryLink" hidden="false" targetId="d360-71aa-ca22-ba3c" primary="true"/>
+        <categoryLink id="a6ad-13c1-9c29-5f80" name="Cycle: Weeping Sky" hidden="false" targetId="6da0-b320-b958-dc82" primary="false"/>
+      </categoryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2.0"/>
+      </costs>
+    </selectionEntry>
   </selectionEntries>
   <entryLinks>
     <entryLink id="0cf0-b06d-7082-467a" name="Baichi" hidden="false" collective="false" import="true" targetId="d998-94b8-fd53-f8ce" type="selectionEntry">
@@ -6571,6 +6647,35 @@ Restriction [Horde Bakemono]</characteristic>
           </categoryLinks>
           <costs>
             <cost name=" Rice" typeId="a111-8656-5c05-7415" value="-1.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="9767-74c0-aa29-40eb" name="Battle Hungry" hidden="true" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3507-42ea-bf26-b23d" type="instanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1842-ce6d-45fb-290a" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="841e-fee8-616e-32a8" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="7ee4-c5b8-9d73-0120" name="Battle Hungry" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
+              <characteristics>
+                <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">When the Attached model places all its Melee dice into Attack during a Melee Exchange, any Wounds taken by the Attached model are halved until the end of the Melee Exchange.
+
+Requirement [Onisho]</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <categoryLinks>
+            <categoryLink id="1cba-c7d5-0efa-9756" name="New CategoryLink" hidden="false" targetId="17cf-d9a9-c7c1-bcb6" primary="true"/>
+            <categoryLink id="c581-60d3-af93-7036" name="Cycle: Weeping Sky" hidden="false" targetId="6da0-b320-b958-dc82" primary="false"/>
+          </categoryLinks>
+          <costs>
+            <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>

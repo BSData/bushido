@@ -264,6 +264,7 @@
     </categoryEntry>
     <categoryEntry id="5073-f00b-a8f6-5e3b" name="Reference Cards" hidden="false"/>
     <categoryEntry id="7cb4-8adf-0e10-c1ea" name="Faction Test Cards" hidden="false"/>
+    <categoryEntry id="6da0-b320-b958-dc82" name="Cycle: Weeping Sky" hidden="false"/>
   </categoryEntries>
   <forceEntries>
     <forceEntry id="2150-40b1-52f8-4a8a" name="Risen Sun" hidden="true">

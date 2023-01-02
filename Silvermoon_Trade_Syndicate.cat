@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="6a8f-b352-80c6-855f" name="Silvermoon Trade Syndicate" revision="18" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="10" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="6a8f-b352-80c6-855f" name="Silvermoon Trade Syndicate" revision="18" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="11" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="5048-3a52-5689-6d0b" name="Bought Loyalty" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -44,7 +44,8 @@
       <profiles>
         <profile id="55d8-406c-7564-a37f" name="Kiss From a Rose" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
           <characteristics>
-            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">Play during the Starting Phase. A non-Soulless Enemy model in BtB with a Friendly Rose model must make a Ki Challenge Test (5) or gain 1 Control Marker.</characteristic>
+            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">Play during the Starting Phase.
+A non-Soulless Enemy model in BtB with a Friendly Rose model must make a Ki Challenge Test (5) or gain 1 Control Marker.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -3898,6 +3899,26 @@ Whenever an Effect causes dice to be re-rolled, this model gains 1 Ki Token.</ch
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="13.0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="fb86-d2c0-5918-4c9a" name="Underhanded Ploy" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a380-8f2c-d558-9630" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="5a04-acb0-08e1-e940" name="Underhanded Ploy" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
+          <characteristics>
+            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">Play after an Enemy model succeeds at a Challenge Test.
+That model must retake that test.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="bfc4-041c-d7cd-cb64" name="New CategoryLink" hidden="false" targetId="d360-71aa-ca22-ba3c" primary="true"/>
+        <categoryLink id="04d5-1c8c-0fc8-b264" name="Cycle: Weeping Sky" hidden="false" targetId="6da0-b320-b958-dc82" primary="false"/>
+      </categoryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2.0"/>
+      </costs>
+    </selectionEntry>
   </selectionEntries>
   <entryLinks>
     <entryLink id="7ae5-b29d-c5eb-c5c7" name="Kappa" hidden="false" collective="false" import="true" targetId="34f2-cc79-8047-6138" type="selectionEntry">
@@ -4432,6 +4453,125 @@ Whenever an Effect causes dice to be re-rolled, this model gains 1 Ki Token.</ch
           </profiles>
           <categoryLinks>
             <categoryLink id="3df9-7f13-ec2a-981d" name="New CategoryLink" hidden="false" targetId="17cf-d9a9-c7c1-bcb6" primary="true"/>
+          </categoryLinks>
+          <costs>
+            <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="2369-6883-c06e-803e" name="Bronze Lion Tattoo" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="38c2-663a-aa2e-8d30" type="instanceOf"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="dd57-4bab-fa7b-f75c" type="notInstanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" field="hidden" value="true">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c382-9ab3-9924-e30a" type="instanceOf"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d7c5-a2b9-4696-fd33" type="instanceOf"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6639-615e-f1ab-bc64" type="instanceOf"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7435-856f-ece2-fe58" type="instanceOf"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0b0f-53a8-7e80-f525" type="instanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="dfdc-5eaf-3032-98b5" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3730-ede5-ce3e-f5cf" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="e6c2-8523-5914-7fd6" name="Bronze Lion Tattoo" hidden="false" typeId="bd15-7ead-9268-3576" typeName="Special Card (Ki Feat)">
+              <characteristics>
+                <characteristic name="Description" typeId="17eb-17e2-4df4-5c5d">Attached model gains Leadership [Shatei](1/4&quot;).
+Once per game the Attached model may use the Inspiration Ki Feat.
+
+Requirement [Shatei]
+Exclusion [Rose]</characteristic>
+                <characteristic name="Name" typeId="27c7-1649-f16e-8eaa">Inspiration</characteristic>
+                <characteristic name="Cost" typeId="e410-b220-64e5-7953">2</characteristic>
+                <characteristic name="Timing" typeId="b9bf-562a-fe26-cb29">Active</characteristic>
+                <characteristic name="Subject" typeId="47b8-f739-9d50-2e45">Target 6&quot;</characteristic>
+                <characteristic name="Limitation" typeId="870e-79e4-80ee-c0cc">Once Per Turn</characteristic>
+                <characteristic name="Ki Feat Description" typeId="3886-242b-fb70-5c88">Target Friendly Faction model with a Rice Cost of less than this model gains +1 to its Melee Pool or Ranged Pool until the End Phase.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="67c2-34e7-406f-ebdf" name="Leadership" hidden="false" targetId="8ec4-bfdc-8c03-f631" type="rule"/>
+          </infoLinks>
+          <categoryLinks>
+            <categoryLink id="220e-cb27-6abc-43ea" name="New CategoryLink" hidden="false" targetId="17cf-d9a9-c7c1-bcb6" primary="true"/>
+            <categoryLink id="ffca-c782-1117-14bb" name="Cycle: Weeping Sky" hidden="false" targetId="6da0-b320-b958-dc82" primary="false"/>
+          </categoryLinks>
+          <costs>
+            <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="d73b-6c51-b29f-0243" name="Lookout" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a7de-f4b9-3cad-e3a6" type="notInstanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="roster" value="4.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="24cb-6b3c-93a8-eec1" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3ccb-4149-7f34-3962" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="2485-3684-2c22-0cda" name="Lookout" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
+              <characteristics>
+                <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">Other Friendly models within 6&quot; of the Attached model cannot be Surprised.
+
+Requirement [Urchin]</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <categoryLinks>
+            <categoryLink id="e3ba-fe6a-cd3a-7427" name="New CategoryLink" hidden="false" targetId="17cf-d9a9-c7c1-bcb6" primary="true"/>
+            <categoryLink id="058d-93ee-2a09-594a" name="Cycle: Weeping Sky" hidden="false" targetId="6da0-b320-b958-dc82" primary="false"/>
+          </categoryLinks>
+          <costs>
+            <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="133c-7c52-77bc-fc13" name="Oda&apos;s Tutelage" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="48d9-12ca-aeef-7295" type="notInstanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="e975-4c86-979f-1db3" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4e58-4590-6a48-d9e2" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="cdb1-b2d2-d57f-fe62" name="Oda&apos;s Tutelage" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
+              <characteristics>
+                <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">Attached model&apos;s Melee Weapons gain Grapple Defence (0).
+
+Requirement [Buto]</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="2b71-0753-15aa-6c57" name="Grapple Defence" hidden="false" targetId="6e8d-d1c4-dc69-6558" type="rule"/>
+          </infoLinks>
+          <categoryLinks>
+            <categoryLink id="a137-cd0b-97ce-ee9c" name="New CategoryLink" hidden="false" targetId="17cf-d9a9-c7c1-bcb6" primary="true"/>
+            <categoryLink id="9fc2-5478-35ed-53cc" name="Cycle: Weeping Sky" hidden="false" targetId="6da0-b320-b958-dc82" primary="false"/>
           </categoryLinks>
           <costs>
             <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1.0"/>

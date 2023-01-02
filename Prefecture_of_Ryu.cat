@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="0cac-b8ad-fb7f-ef84" name="Prefecture of Ryu" revision="19" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="10" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="0cac-b8ad-fb7f-ef84" name="Prefecture of Ryu" revision="19" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="11" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="8688-cd6e-bcbe-2cbb" name="Ima" hidden="false"/>
     <categoryEntry id="65a8-4392-a95b-115b" name="Takashi" hidden="false"/>
@@ -4211,6 +4211,36 @@ Max 3 in play.</characteristic>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0.0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="68f0-578d-3350-5723" name="Crush the Uprising" hidden="true" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="e12a-f782-3281-7444" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f773-8cee-1294-4177" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="6028-3e0c-6b1d-87ce" name="Crush the Uprising" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
+          <characteristics>
+            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">Play in the Starting Phase.
+One Enemy model with the highest Rice Cost in the Warband gains a Death Sentence Marker.
+If a Death Sentence Marker is removed from an Enemy model this turn, gain one Scenario Point.
+
+Requirement [Warband including a Samurai]</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="4b18-d9c9-5119-49e7" name="New CategoryLink" hidden="false" targetId="d360-71aa-ca22-ba3c" primary="true"/>
+        <categoryLink id="0f19-ba17-0de8-5207" name="Cycle: Weeping Sky" hidden="false" targetId="6da0-b320-b958-dc82" primary="false"/>
+      </categoryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="3.0"/>
+      </costs>
+    </selectionEntry>
   </selectionEntries>
   <entryLinks>
     <entryLink id="d149-3ea0-90df-a450" name="Ancestor Spirit" hidden="false" collective="false" import="true" targetId="a8a8-fc30-a7e2-2913" type="selectionEntry">
@@ -4839,6 +4869,97 @@ Friendly Faction Samurai models gain Charging Bonus [Fearless] when they begin t
           </categoryLinks>
           <costs>
             <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="bf7b-0e80-b6a3-95b4" name="Daimyo of the Takashi" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="57c6-2296-2324-068c" type="notInstanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="da74-7873-3e2f-daf9" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cfca-00bf-6b7b-476a" type="max"/>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bb0e-4293-dcc4-8d37" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="c106-92c7-273f-6cfb" name="Daimyo of the Takashi" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
+              <characteristics>
+                <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">Attached model gains the Daimyo Type and the Ki Statistic 3/10/-</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <categoryLinks>
+            <categoryLink id="49aa-372b-5a87-5a26" name="New CategoryLink" hidden="false" targetId="17cf-d9a9-c7c1-bcb6" primary="true"/>
+            <categoryLink id="79ef-77fa-35c4-4207" name="Cycle: Weeping Sky" hidden="false" targetId="6da0-b320-b958-dc82" primary="false"/>
+          </categoryLinks>
+          <costs>
+            <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="89a1-d1f4-7f6d-fb2f" name="Lightning Pace" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e12a-f782-3281-7444" type="notInstanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="bcb0-81cd-4d8d-1d09" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ce1c-6c39-6665-238e" type="max"/>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a81d-6086-dde8-1a1d" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="0a9d-6998-7e77-2fd6" name="Lightning Pace" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
+              <characteristics>
+                <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">Once per Starting Phase, after pass tokens are generated, you may spend a Pass Token to Walk this model 1&quot;.
+
+Requirement [Samurai]</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <categoryLinks>
+            <categoryLink id="b206-5166-906f-c0f6" name="New CategoryLink" hidden="false" targetId="17cf-d9a9-c7c1-bcb6" primary="true"/>
+            <categoryLink id="2564-5918-070c-906c" name="Cycle: Weeping Sky" hidden="false" targetId="6da0-b320-b958-dc82" primary="false"/>
+          </categoryLinks>
+          <costs>
+            <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="4848-1ae8-afee-3cde" name="Sojutsu Technique" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="441b-7ddf-7abe-7623" type="notInstanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="6285-6e01-9763-d979" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8a8f-4741-a4f5-fee0" type="max"/>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="46c7-f728-63b8-77fd" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="1afb-c44f-be8e-cb6b" name="Sojutsu Technique" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
+              <characteristics>
+                <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">While within 8&quot; of the Attached model, the Yari weapons of Friendly Ashigaru using Push Special Abilities gains Brutal (1) until the end of the current activation.
+
+Requirement [Hiromasa]</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="4579-0e87-77b9-3564" name="Brutal" hidden="false" targetId="5d95-975e-a72c-25f3" type="rule"/>
+          </infoLinks>
+          <categoryLinks>
+            <categoryLink id="618f-e68f-1ca9-890a" name="New CategoryLink" hidden="false" targetId="17cf-d9a9-c7c1-bcb6" primary="true"/>
+            <categoryLink id="d821-ef93-0be9-4614" name="Cycle: Weeping Sky" hidden="false" targetId="6da0-b320-b958-dc82" primary="false"/>
+          </categoryLinks>
+          <costs>
+            <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>

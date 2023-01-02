@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="d2c8-91e9-1a97-89b4" name="Minimoto Clan" revision="20" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="10" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="d2c8-91e9-1a97-89b4" name="Minimoto Clan" revision="20" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="11" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="6b68-2575-cc8f-c08f" name="Armour 3+" hidden="false"/>
   </categoryEntries>
@@ -2282,6 +2282,46 @@ This model may be recruited into any Minimoto Theme that does not restrict it.
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0.0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="c4af-b07d-f76f-c8b6" name="Implacable Advance" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="431e-762d-20c3-f28f" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="8ec2-158f-7361-c4ec" name="Implacable Advance" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
+          <characteristics>
+            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">Play in the Starting Phase.
+All Friendly Minimoto models remove all Prone Markers and until the End Phase, roll an additional dice during Move and Size Tests.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="7975-a12c-8cc2-c81a" name="New CategoryLink" hidden="false" targetId="d360-71aa-ca22-ba3c" primary="true"/>
+        <categoryLink id="f23b-6cba-52b9-4d6d" name="Cycle: Weeping Sky" hidden="false" targetId="6da0-b320-b958-dc82" primary="false"/>
+      </categoryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="3cf0-919e-4071-58c8" name="Into the Darkness" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="158b-dc36-b7d0-ff07" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="b4ea-383c-ea25-d754" name="Into the Darkness" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
+          <characteristics>
+            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">Play in the Starting Phase.
+Until the End Phase, all Ki Feats from Communal cards cost one additional Ki Token to use.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="9ed1-457f-188a-3d09" name="New CategoryLink" hidden="false" targetId="d360-71aa-ca22-ba3c" primary="true"/>
+        <categoryLink id="637b-e925-a71b-6210" name="Cycle: Weeping Sky" hidden="false" targetId="6da0-b320-b958-dc82" primary="false"/>
+      </categoryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1.0"/>
+      </costs>
+    </selectionEntry>
   </selectionEntries>
   <entryLinks>
     <entryLink id="7750-2ede-a509-e6c0" name="Golden Sentinel" hidden="false" collective="false" import="true" targetId="49fb-d207-3a25-9327" type="selectionEntry">
@@ -2721,6 +2761,57 @@ Requirement [Ashigaru]</characteristic>
           <categoryLinks>
             <categoryLink id="f537-4d5e-027a-891b" name="Enhancement Cards" hidden="false" targetId="17cf-d9a9-c7c1-bcb6" primary="false"/>
             <categoryLink id="cc80-af48-c55b-7338" name="Cycle: Risen Sun" hidden="false" targetId="a745-0548-80c8-ece4" primary="false"/>
+          </categoryLinks>
+          <costs>
+            <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="a20c-ea74-396a-21a3" name="Aspect of the Bear" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4d37-d99f-6edf-729f" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="aa4b-2242-3f98-96c5" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="e333-b025-25cc-f54f" name="Aspect of the Bear" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
+              <characteristics>
+                <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">This model counts as two models except when an Enemy model wishes to move into BtB with it.
+(Whenever you need to count models, this model is two models)
+In a Melee Exchange with this model, the Enemy, model is considered to be in BtB with one additional Friendly model for Melee Assist Penalties.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <categoryLinks>
+            <categoryLink id="88de-4289-0496-0c7f" name="New CategoryLink" hidden="false" targetId="17cf-d9a9-c7c1-bcb6" primary="true"/>
+            <categoryLink id="32b7-5120-97cd-3082" name="Cycle: Weeping Sky" hidden="false" targetId="6da0-b320-b958-dc82" primary="false"/>
+          </categoryLinks>
+          <costs>
+            <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="13b6-2956-23e5-e263" name="Peacock&apos;s Influence" hidden="true" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0c22-e9ca-a3de-e706" type="instanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4008-cfd1-43be-5b00" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d8c8-6df2-92b2-3a89" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="091e-4a7f-e5e8-f946" name="Peacock&apos;s Influence" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
+              <characteristics>
+                <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">The Attached model gains Melee Boost (3) and Ranged Boost (3).
+
+Requirement [Shugenja]</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <categoryLinks>
+            <categoryLink id="7db0-e32c-9748-fe1a" name="New CategoryLink" hidden="false" targetId="17cf-d9a9-c7c1-bcb6" primary="true"/>
+            <categoryLink id="1a5b-48f3-2a4e-7b82" name="Cycle: Weeping Sky" hidden="false" targetId="6da0-b320-b958-dc82" primary="false"/>
           </categoryLinks>
           <costs>
             <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1.0"/>

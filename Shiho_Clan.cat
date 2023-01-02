@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="2276-2df6-78a7-841d" name="Shiho Clan" revision="18" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="10" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="2276-2df6-78a7-841d" name="Shiho Clan" revision="18" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="11" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="7fa5-7ef0-59c5-f657" name="Tanaka" hidden="false"/>
   </categoryEntries>
@@ -2719,6 +2719,26 @@ This model&apos;s Dai Kyu Ranged Weapon gains Reload (+1) and this model does no
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="13.0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="01b1-3329-b0a4-9881" name="Lay of the Land" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2972-8866-98f8-0454" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="c5ad-e9c5-f2b1-b274" name="Lay of the Land" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
+          <characteristics>
+            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">Play before Deploying any terrain recruited by a Warband.
+You may decide the order recruited terrain (Friendly and Enemy) is Deployed.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="ba9c-50a8-7ebb-6a9e" name="Event Cards" hidden="false" targetId="d360-71aa-ca22-ba3c" primary="true"/>
+        <categoryLink id="4071-a55e-821c-43cd" name="Cycle: Weeping Sky" hidden="false" targetId="6da0-b320-b958-dc82" primary="false"/>
+      </categoryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1.0"/>
+      </costs>
+    </selectionEntry>
   </selectionEntries>
   <entryLinks>
     <entryLink id="5cd8-ec39-5a8f-a160" name="Giant Eagle" hidden="false" collective="false" import="true" targetId="f25f-493d-4123-b0ee" type="selectionEntry">
@@ -2729,6 +2749,7 @@ This model&apos;s Dai Kyu Ranged Weapon gains Reload (+1) and this model does no
               <conditions>
                 <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c7de-19d4-64dd-911f" type="atLeast"/>
                 <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="966b-fc6b-359e-5c30" type="atLeast"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="7ef8-7f43-f951-237e" type="atLeast"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -3094,6 +3115,7 @@ This model&apos;s Dai Kyu Ranged Weapon gains Reload (+1) and this model does no
             <conditionGroup type="or">
               <conditions>
                 <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f5-1986-098c-0729" type="atLeast"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="7ef8-7f43-f951-237e" type="atLeast"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -3513,6 +3535,53 @@ Requirement [Ashigaru]</characteristic>
           </categoryLinks>
           <costs>
             <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="e9a0-cc94-3fee-24da" name="Distaff Wolf" hidden="true" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4e48-1ed5-3567-b991" type="instanceOf"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e12a-f782-3281-7444" type="instanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" field="hidden" value="true">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c382-9ab3-9924-e30a" type="instanceOf"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d7c5-a2b9-4696-fd33" type="instanceOf"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6639-615e-f1ab-bc64" type="instanceOf"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7435-856f-ece2-fe58" type="instanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2d10-7c65-5366-a261" type="max"/>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="faf1-68e3-f2a9-1267" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="1526-9f73-dd3b-51cb" name="Distaff Wolf" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
+              <characteristics>
+                <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">Attached model gains the Loyal Type.
+Attached model and Friendly Loyal Samurai models with a Rice Cost of less than the Attached model reduce the cost of their Melee Pool Ki Boost by one.
+
+Requirement [Wolf &amp; Samurai]</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <categoryLinks>
+            <categoryLink id="b636-c32b-2605-9cd1" name="Enhancement Cards" hidden="false" targetId="17cf-d9a9-c7c1-bcb6" primary="false"/>
+            <categoryLink id="74c8-f3b2-6214-0219" name="Cycle: Weeping Sky" hidden="false" targetId="6da0-b320-b958-dc82" primary="false"/>
+          </categoryLinks>
+          <costs>
+            <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -4013,6 +4082,80 @@ Requirement [Loyal &amp; Samurai]</characteristic>
               </categoryLinks>
               <costs>
                 <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="7ef8-7f43-f951-237e" name="Falconer&apos;s Glove" hidden="true" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="false">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9126-f480-c2df-fbaf" type="instanceOf"/>
+                        <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e043-1202-31ec-f2d4" type="instanceOf"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="89d0-f5d1-857d-6339" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="80e8-6f93-73a5-660b" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="5fdd-4bf0-89af-8491" name="Falconer&apos;s Glove" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
+                  <characteristics>
+                    <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">If Attached model is included in your Warband you may also include Ronin Birds.
+This Card may be Attached to Ronin Falconer models in a Shiho Warband.
+
+Requirement [Falconer, Hiroto, Ronin Falconer]</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <categoryLinks>
+                <categoryLink id="282f-f665-7ff7-3db5" name="Equipment Cards" hidden="false" targetId="5bcd-fe93-a8ea-0164" primary="false"/>
+                <categoryLink id="4864-8fde-eb2f-c1c1" name="Cycle: Weeping Sky" hidden="false" targetId="6da0-b320-b958-dc82" primary="false"/>
+              </categoryLinks>
+              <costs>
+                <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="4eea-c800-152f-c713" name="Straw Hat" hidden="true" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="false">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e12a-f782-3281-7444" type="instanceOf"/>
+                        <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f476-156e-8599-9253" type="instanceOf"/>
+                        <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9126-f480-c2df-fbaf" type="notInstanceOf"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="03e0-d6dd-8f60-8d3c" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bf52-cec7-764f-0dcb" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="3f99-5f35-8d10-5b0c" name="Straw Hat" page="" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
+                  <characteristics>
+                    <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">Attached model gains Disguised (2).
+
+Requirement [Loyal &amp; Samurai]
+Exclusion [Hiroto]</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <infoLinks>
+                <infoLink id="96ba-4157-4cf6-583a" name="Disguise" hidden="false" targetId="1a0f-020f-3805-07f3" type="rule"/>
+              </infoLinks>
+              <categoryLinks>
+                <categoryLink id="1603-92ce-79b8-5a03" name="Equipment Cards" hidden="false" targetId="5bcd-fe93-a8ea-0164" primary="false"/>
+                <categoryLink id="2b8c-9c21-81dc-b821" name="Cycle: Weeping Sky" hidden="false" targetId="6da0-b320-b958-dc82" primary="false"/>
+              </categoryLinks>
+              <costs>
+                <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>

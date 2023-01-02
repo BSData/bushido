@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="1ac7-2939-2874-7530" name="Cult of Yurei" revision="23" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="10" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="1ac7-2939-2874-7530" name="Cult of Yurei" revision="23" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="11" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="5048-3a52-5689-6d0b" name="Drain Spirit" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -6599,6 +6599,85 @@ In the End Phase, if this model is not in BtB with another Kairai this model bec
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0.0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="81c4-3ff1-e52e-0f1e" name="Grave Misfortune" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8198-a722-e182-888d" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="3f98-db45-b9b1-ce40" name="Grave Misfortune" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
+          <characteristics>
+            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">Play in the Starting Phase of turn 4.
+Until the End Phase, when resolving a Test, any dice your Opponent rolls that have a value of 4 are treated as a value of 1 instead.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="931f-8c5d-a0d7-cbc8" name="New CategoryLink" hidden="false" targetId="d360-71aa-ca22-ba3c" primary="true"/>
+        <categoryLink id="f724-6571-8504-fd81" name="Cycle: Weeping Sky" hidden="false" targetId="6da0-b320-b958-dc82" primary="false"/>
+      </categoryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="dbeb-53aa-405b-4f49" name="Grievous Sins" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="abc1-93da-2f5a-dab4" type="greaterThan"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8e5d-42e6-96b6-c034" type="lessThan"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="73b9-764f-3893-785f" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="59c5-4430-f686-e045" name="Grievous Sins" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
+          <characteristics>
+            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">Play during Deployment.
+Recruit any one Orphan model that is not currently recruited into this Warband.
+
+Requirement [Ikiryo]
+Exclusion [Death &amp; Decay theme]</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="daef-c636-a225-8e65" name="New CategoryLink" hidden="false" targetId="d360-71aa-ca22-ba3c" primary="true"/>
+        <categoryLink id="1996-dd1f-0538-bdff" name="Cycle: Weeping Sky" hidden="false" targetId="6da0-b320-b958-dc82" primary="false"/>
+      </categoryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="17.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="2a83-1fd1-fdbd-93ba" name="Pariah&apos;s Voice" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="21e7-2a7f-e1ca-3382" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="015d-120e-f9b5-8e78" name="Pariah&apos;s Voice" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
+          <characteristics>
+            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">Play in the Starting Phase.
+Until the End Phase, while a Friendly Burakumin model is using an Opposed Ki Feat, the Target gains Spirit (-1).
+During the End Phase you may decide the order States are resolved.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="1435-cb02-ee56-50cc" name="Spirit" hidden="false" targetId="a9ba-9904-7d29-7bcb" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="25a5-34a7-54ff-27b9" name="New CategoryLink" hidden="false" targetId="d360-71aa-ca22-ba3c" primary="true"/>
+        <categoryLink id="74c0-7299-97e2-2ca7" name="Cycle: Weeping Sky" hidden="false" targetId="6da0-b320-b958-dc82" primary="false"/>
+      </categoryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2.0"/>
+      </costs>
+    </selectionEntry>
   </selectionEntries>
   <entryLinks>
     <entryLink id="5358-9c72-b23c-c2e3" name="Baichi" hidden="false" collective="false" import="true" targetId="d998-94b8-fd53-f8ce" type="selectionEntry">
@@ -7128,6 +7207,44 @@ Restriction [Warbands with the &apos;We Three meet Again&apos; Theme card]</char
             <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1.0"/>
           </costs>
         </selectionEntry>
+        <selectionEntry id="289c-e4f5-b2ea-d68c" name="The Iron Wheel" hidden="true" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2c0c-5408-38bd-e570" type="instanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0ab5-6538-df33-1807" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="89f3-79df-92eb-7ce5" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="48c1-ac70-51be-f746" name="Iron Wheel" hidden="false" typeId="e3e5-fd2b-c549-aa9f" typeName="Special Card (Melee Weapon)">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="6ea7-0195-5369-2e8f">+1</characteristic>
+                <characteristic name="Traits" typeId="5aef-50d8-65f8-28c7">Fire (1/2)</characteristic>
+                <characteristic name="Specials" typeId="11a1-1998-fe0a-3211">Push Defence (0)</characteristic>
+                <characteristic name="Unique Effects" typeId="a97f-eed7-2b8b-2e6b">Attached model gains +1 Melee Pool and Endurance.
+Replace the Flaming Wheel melee weapon with the Iron Wheel melee weapon.
+
+Requirement [Wanyudo]</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="8379-8cc9-51e1-d51a" name="Fire" hidden="false" targetId="2422-40b7-254f-f6f1" type="rule"/>
+            <infoLink id="9a3d-b366-2f84-41ad" name="Push Defence" hidden="false" targetId="74fc-a971-d9c2-278c" type="rule"/>
+            <infoLink id="a5a1-6b73-c1f4-0b5c" name="Endurance" hidden="false" targetId="7fdc-d150-9641-1235" type="rule"/>
+          </infoLinks>
+          <categoryLinks>
+            <categoryLink id="7a40-99b1-af8f-4ba8" name="Faction Enhancement Cards" hidden="false" targetId="17cf-d9a9-c7c1-bcb6" primary="false"/>
+            <categoryLink id="ed5a-b4c8-3d3d-95a3" name="Cycle: Weeping Sky" hidden="false" targetId="6da0-b320-b958-dc82" primary="false"/>
+          </categoryLinks>
+          <costs>
+            <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1.0"/>
+          </costs>
+        </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="f1a1-b6ab-a0f8-41e0" name="Equipment" hidden="false" collective="false" import="true">
@@ -7262,7 +7379,7 @@ Restriction [Burakumin]</characteristic>
             <entryLink id="5fb5-3394-50de-1493" name="Kintoki&apos;s Salt" hidden="false" collective="false" import="true" targetId="f7e6-106d-e876-9d34" type="selectionEntry"/>
             <entryLink id="6268-293f-af86-9160" name="Takero&apos;s Tanto" hidden="false" collective="false" import="true" targetId="50f4-7511-f889-9f40" type="selectionEntry"/>
             <entryLink id="808e-23e7-b25f-cf84" name="Vial of Raijin&apos;s Breath" hidden="false" collective="false" import="true" targetId="9b29-1f89-46d2-0329" type="selectionEntry"/>
-            <entryLink id="0beb-0b69-cd97-74c1" name="!DRAFT Demon-Face Mask" hidden="false" collective="false" import="true" targetId="2437-81ed-3b75-d23b" type="selectionEntry"/>
+            <entryLink id="0beb-0b69-cd97-74c1" name="Demon-Face Mask" hidden="false" collective="false" import="true" targetId="2437-81ed-3b75-d23b" type="selectionEntry"/>
             <entryLink id="4218-6759-4b98-52eb" name="!DRAFT Minimoto Steel Helm" hidden="false" collective="false" import="true" targetId="38b5-a50d-24f0-4435" type="selectionEntry"/>
             <entryLink id="44a1-cc0e-3a83-d4a2" name="!DRAFT Obscure Charm" hidden="false" collective="false" import="true" targetId="74be-1ece-8b7d-739d" type="selectionEntry"/>
             <entryLink id="b058-8cd1-05b8-1258" name="!DRAFT Triangle Knife" hidden="false" collective="false" import="true" targetId="fcc9-c236-babe-2239" type="selectionEntry"/>

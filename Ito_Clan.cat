@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="302b-66f1-a875-3b63" name="Ito Clan" revision="18" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="10" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="302b-66f1-a875-3b63" name="Ito Clan" revision="18" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="11" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="46b2-47c2-4c55-2e3a" name="Kinu" hidden="false"/>
     <categoryEntry id="273a-b61b-c7f8-76fd" name="Itsunagi" hidden="false"/>
@@ -3893,6 +3893,35 @@ This model is not required to allocate at least as many dice to Defence as Attac
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="13.0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="5e89-cfde-3d0c-fdf9" name="Shrine to Orochi" hidden="false" collective="false" import="true" type="model">
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="55b4-de43-aee7-9fb4" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="d13c-11ad-919b-03a7" name="Shrine to Orochi" hidden="false" typeId="6fa2-988d-fc04-c751" typeName="Special Card (Terrain)">
+          <characteristics>
+            <characteristic name="Base" typeId="c40b-3106-986d-4db5">30mm</characteristic>
+            <characteristic name="Passage" typeId="3df8-6a47-0c4d-73e7">Impassable</characteristic>
+            <characteristic name="Visibility" typeId="9858-c2c1-b6fc-b75c">Blocking</characteristic>
+            <characteristic name="Size" typeId="000a-cf92-4d1e-c934">Small</characteristic>
+            <characteristic name="Traits" typeId="eaef-482b-c5d3-866e">Destructible</characteristic>
+            <characteristic name="Description" typeId="9cfa-9bd0-0b1b-9c06">This terrain must be Deployed within 3&quot; of the centreline.
+This terrain must not be Deployed within 6&quot; of a table edge or completely within a Scenario Zone.
+This terrain is considered to be a Friendly Ito Shisai model for Unique Effects.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="ca5e-a3b1-4c78-eeef" name="Shisai" hidden="false" targetId="546e-cfe9-013a-91a6" type="infoGroup"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="76d3-273d-00c1-0da4" name="New CategoryLink" hidden="false" targetId="bbd2-e0c8-797a-3f03" primary="true"/>
+        <categoryLink id="4b26-5580-8440-fc22" name="Cycle: Weeping Sky" hidden="false" targetId="6da0-b320-b958-dc82" primary="false"/>
+      </categoryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2.0"/>
+      </costs>
+    </selectionEntry>
   </selectionEntries>
   <entryLinks>
     <entryLink id="a128-3c72-cd19-3719" name="Ancestor Spirit" hidden="false" collective="false" import="true" targetId="a8a8-fc30-a7e2-2913" type="selectionEntry">
@@ -4345,6 +4374,104 @@ This model is not required to allocate at least as many dice to Defence as Attac
           </categoryLinks>
           <costs>
             <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="6487-9d83-80da-6db0" name="Messiah of the Serpent" hidden="true" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="273a-b61b-c7f8-76fd" type="instanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="57b5-a31f-a61e-6a47" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="19ab-7582-938e-4e3c" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="d05d-ad85-07f6-61ad" name="Messiah of the Serpent" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
+              <characteristics>
+                <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">While this model has maximum Ki Tokens, when it would mark Wounds, it may instead remove one Ki Token for each Wound that would be marked.
+Once all Ki Tokens have been used this way, any remaining Wounds are marked as normal.
+
+Requirement [Ito Itsunagi]</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <categoryLinks>
+            <categoryLink id="7fa7-4eef-9bbf-74b0" name="New CategoryLink" hidden="false" targetId="17cf-d9a9-c7c1-bcb6" primary="true"/>
+            <categoryLink id="06a5-ae02-f25e-f674" name="Cycle: Weeping Sky" hidden="false" targetId="6da0-b320-b958-dc82" primary="false"/>
+          </categoryLinks>
+          <costs>
+            <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="a137-4138-650b-875c" name="Takuya&apos;s Will" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4a93-c65f-712c-809b" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f6d9-08fa-d515-e2d4" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="c328-8b15-eb1a-9e38" name="Takuya&apos;s Will" hidden="false" typeId="bd15-7ead-9268-3576" typeName="Special Card (Ki Feat)">
+              <characteristics>
+                <characteristic name="Description" typeId="17eb-17e2-4df4-5c5d">Attached model gains the following Ki Feat:</characteristic>
+                <characteristic name="Name" typeId="27c7-1649-f16e-8eaa">Orochi&apos;s Visage</characteristic>
+                <characteristic name="Cost" typeId="e410-b220-64e5-7953">2</characteristic>
+                <characteristic name="Timing" typeId="b9bf-562a-fe26-cb29">Instant</characteristic>
+                <characteristic name="Subject" typeId="47b8-f739-9d50-2e45">Personal</characteristic>
+                <characteristic name="Limitation" typeId="870e-79e4-80ee-c0cc"/>
+                <characteristic name="Ki Feat Description" typeId="3886-242b-fb70-5c88">This model gains Fear (6) and Terror until the end of the current activation.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="acec-f02b-47da-d1a8" name="Impetuous" hidden="false" targetId="4b80-3180-0b04-fb11" type="rule"/>
+          </infoLinks>
+          <categoryLinks>
+            <categoryLink id="be5b-74fd-909c-ad1d" name="New CategoryLink" hidden="false" targetId="17cf-d9a9-c7c1-bcb6" primary="true"/>
+            <categoryLink id="6c19-90de-3acf-3a18" name="Cycle: Weeping Sky" hidden="false" targetId="6da0-b320-b958-dc82" primary="false"/>
+          </categoryLinks>
+          <costs>
+            <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="6c3b-c8c2-ec6f-f066" name="The Serpent&apos;s Kiss" hidden="true" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="46b2-47c2-4c55-2e3a" type="instanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b5b7-b90f-2fa5-3593" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dd71-6aee-0e1d-7e5e" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="6124-b180-5dca-0239" name="The Serpent&apos;s Kiss" hidden="false" typeId="bd15-7ead-9268-3576" typeName="Special Card (Ki Feat)">
+              <characteristics>
+                <characteristic name="Description" typeId="17eb-17e2-4df4-5c5d">Attached model gains the Embrace the Coil Ki Feat.
+Requirement [Ito Kinu]</characteristic>
+                <characteristic name="Name" typeId="27c7-1649-f16e-8eaa">Embrace the Coil</characteristic>
+                <characteristic name="Cost" typeId="e410-b220-64e5-7953">2</characteristic>
+                <characteristic name="Timing" typeId="b9bf-562a-fe26-cb29">Simple</characteristic>
+                <characteristic name="Subject" typeId="47b8-f739-9d50-2e45">Target 8&quot; Opposed</characteristic>
+                <characteristic name="Limitation" typeId="870e-79e4-80ee-c0cc">Not in BtB</characteristic>
+                <characteristic name="Ki Feat Description" typeId="3886-242b-fb70-5c88">Choose an Izu Serpent model that is not currently in play.
+Summon and Deploy the chosen Izu Serpent model in BtB with the Target model, ignoring the usual Btb restriction on Deploying a model.
+The Target gains a State Marker depending on the Izu Serpent chosen:
+• Asp: Poison (2) Marker
+• Boa Constrictor: Immobilised Marker
+• Cobra: Blind Marker</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <categoryLinks>
+            <categoryLink id="a977-9d45-6420-38be" name="New CategoryLink" hidden="false" targetId="17cf-d9a9-c7c1-bcb6" primary="true"/>
+            <categoryLink id="11a0-37e3-15e6-f03b" name="Cycle: Weeping Sky" hidden="false" targetId="6da0-b320-b958-dc82" primary="false"/>
+          </categoryLinks>
+          <costs>
+            <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>

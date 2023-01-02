@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="b4d7-0e2a-728f-20cf" name="Kage Kaze Zoku" revision="16" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="10" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="b4d7-0e2a-728f-20cf" name="Kage Kaze Zoku" revision="16" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="11" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="33d5-3364-f1d4-a94c" name="Lockdown" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -2492,6 +2492,115 @@ Friendly Bleeding Moon models gain Sixth Sense until the End Phase.</characteris
       </categoryLinks>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="b183-31d6-142b-c6e2" name="Jigoku Berry Tincture" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2f11-9e07-69f6-41de" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="b96c-6214-a0b9-865d" name="Jigoku Berry Tincture" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
+          <characteristics>
+            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">Play When an Enemy model begins a Melee Exchange with a Friendly Ninja you own.
+The Ninja gains Lightning Reflexes, Feint (1), and its Melee Weapons gain Combo Attack (0) and Strong.
+
+Remove the Ninja from play when the current activation is complete.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="e5ee-a4e7-5f28-e0dc" name="Lightning Reflexes" hidden="false" targetId="efd4-dc31-6523-9c79" type="rule"/>
+        <infoLink id="1467-ac99-f391-6659" name="Feint" hidden="false" targetId="38b0-4d97-3c4c-8d96" type="rule"/>
+        <infoLink id="a160-03a8-afb7-4b83" name="Combo Attack " hidden="false" targetId="78ab-6a94-be24-8f74" type="rule"/>
+        <infoLink id="61ef-8313-ac97-a1fa" name="Strong" hidden="false" targetId="00b5-3637-d48a-807e" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="609a-02af-49e0-d3e0" name="New CategoryLink" hidden="false" targetId="d360-71aa-ca22-ba3c" primary="true"/>
+        <categoryLink id="d68c-5402-50a7-4569" name="Cycle: Weeping Sky" hidden="false" targetId="6da0-b320-b958-dc82" primary="false"/>
+      </categoryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="aa4f-ccc5-9ac7-7c55" name="Know Your Enemy" hidden="true" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="f423-abc7-6e32-6e8c" type="lessThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8041-99c5-f3f3-7a04" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="41db-5c5a-524f-9d94" name="Know Your Enemy" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
+          <characteristics>
+            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">During this Melee Exchange, your Opponent must reveal their dice allocation before you choose yours, then both roll.
+
+Requirement [Scouting Mission theme]</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="db4b-f27a-1ad9-d704" name="New CategoryLink" hidden="false" targetId="d360-71aa-ca22-ba3c" primary="true"/>
+        <categoryLink id="a7c7-ef66-407b-4f74" name="Cycle: Weeping Sky" hidden="false" targetId="6da0-b320-b958-dc82" primary="false"/>
+      </categoryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="af60-bbcf-fcc6-c114" name="Shinigami&apos;s Due" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d013-ae78-3af0-d1db" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="bf22-145b-a5fc-8b6d" name="Shinigami&apos;s Due" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
+          <characteristics>
+            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">Play in the Starting Phase.
+Models may not Heal this turn.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="1f36-48e7-dc28-850f" name="New CategoryLink" hidden="false" targetId="d360-71aa-ca22-ba3c" primary="true"/>
+        <categoryLink id="8d27-1036-cb81-ac61" name="Cycle: Weeping Sky" hidden="false" targetId="6da0-b320-b958-dc82" primary="false"/>
+      </categoryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="6230-e5d6-de30-e919" name="Umbral Assassin" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="70cc-ef54-f1d8-9837" type="lessThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="af72-732f-7302-6178" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="39b2-bbe8-662c-0451" name="Umbral Assassin" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
+          <characteristics>
+            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">Play any time except when a model is activating.
+Choose a Friendly Ninja model.
+That Ninja Targets an Enemy model within 6&quot;.
+Resolve a Melee Exchange between the Ninja and the Target model, ignoring requirements to be in BtB.
+That Ninja model has the Initiative. Do not Move the models or Turn them to face each other. Neither model is Surprised.
+Models may not use Special Abilities for the duration of this Exchange.
+
+Requirement [Assassination Mission theme]</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="1df6-0032-e233-001c" name="New CategoryLink" hidden="false" targetId="d360-71aa-ca22-ba3c" primary="true"/>
+        <categoryLink id="2c2a-8bea-6f03-55d5" name="Cycle: Weeping Sky" hidden="false" targetId="6da0-b320-b958-dc82" primary="false"/>
+      </categoryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="3.0"/>
       </costs>
     </selectionEntry>
   </selectionEntries>

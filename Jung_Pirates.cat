@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="d615-aef7-31d5-367d" name="Jung Pirates" revision="17" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="10" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="d615-aef7-31d5-367d" name="Jung Pirates" revision="17" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="11" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="258a-e1a8-8db1-9635" name="Ki&lt;2" hidden="true"/>
     <categoryEntry id="f6c9-50fa-a9d3-e9f3" name="Ranged Weapon" hidden="true"/>
@@ -3157,6 +3157,59 @@ This model begins the game with 2 Reload Markers.</characteristic>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="16.0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="0257-cb09-4ec1-745a" name="Razor Shoals" hidden="false" collective="false" import="true" type="model">
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8864-6b12-13ba-735f" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="0047-af4b-d515-d373" name="Razor Shoals" hidden="false" typeId="6fa2-988d-fc04-c751" typeName="Special Card (Terrain)">
+          <characteristics>
+            <characteristic name="Base" typeId="c40b-3106-986d-4db5">Card</characteristic>
+            <characteristic name="Passage" typeId="3df8-6a47-0c4d-73e7">Normal</characteristic>
+            <characteristic name="Visibility" typeId="9858-c2c1-b6fc-b75c">Clear</characteristic>
+            <characteristic name="Size" typeId="000a-cf92-4d1e-c934">Zero</characteristic>
+            <characteristic name="Traits" typeId="eaef-482b-c5d3-866e"/>
+            <characteristic name="Description" typeId="9cfa-9bd0-0b1b-9c06">When a non-Cloudwalk, non-lntangible Enemy model makes a Walk, Run or Charge action starting or entering this terrain element, that model gains a Bleed (1) Marker.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="7295-7ffd-cab3-c467" name="New CategoryLink" hidden="false" targetId="bbd2-e0c8-797a-3f03" primary="true"/>
+        <categoryLink id="6b5e-912e-19de-4cba" name="Cycle: Weeping Sky" hidden="false" targetId="6da0-b320-b958-dc82" primary="false"/>
+      </categoryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="953b-aea1-7609-219d" name="Weapons Cache" hidden="false" collective="false" import="true" type="model">
+      <constraints>
+        <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="31a8-55cf-5b1a-4859" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="ceff-9be5-a6f4-9546" name="Weapons Cache" hidden="false" typeId="6fa2-988d-fc04-c751" typeName="Special Card (Terrain)">
+          <characteristics>
+            <characteristic name="Base" typeId="c40b-3106-986d-4db5">30mm</characteristic>
+            <characteristic name="Passage" typeId="3df8-6a47-0c4d-73e7">Impassable</characteristic>
+            <characteristic name="Visibility" typeId="9858-c2c1-b6fc-b75c">Blocking</characteristic>
+            <characteristic name="Size" typeId="000a-cf92-4d1e-c934">Small</characteristic>
+            <characteristic name="Traits" typeId="eaef-482b-c5d3-866e">Destructible</characteristic>
+            <characteristic name="Description" typeId="9cfa-9bd0-0b1b-9c06">During Deployment, place 3 Loot Tokens on this card.
+A model in BtB with this Terrain Element at the end of its activation may choose one of the following once per activation:
+• Remove a Loot Token to add an Ammo Token to that model.
+• Remove a Loot Token from this card to remove a Reload Marker on that model.
+• Remove a Loot Token on this card to attach a Permitted Enhancement - Equipment card to the model. The card must cost 1 Rice or fewer.
+This terrain element must be placed within 6&quot; of the centreline and not within 3&quot; of a board edge.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="a1b1-eb67-1d63-44df" name="New CategoryLink" hidden="false" targetId="bbd2-e0c8-797a-3f03" primary="true"/>
+        <categoryLink id="fabe-20d5-7df8-50d1" name="Cycle: Weeping Sky" hidden="false" targetId="6da0-b320-b958-dc82" primary="false"/>
+      </categoryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2.0"/>
+      </costs>
+    </selectionEntry>
   </selectionEntries>
   <entryLinks>
     <entryLink id="7c58-4740-ab52-3330" name="Koshimori Yukio" hidden="false" collective="false" import="true" targetId="de1e-de2d-1044-bf56" type="selectionEntry">
@@ -3632,6 +3685,85 @@ Note: there is currently no way to automatically check for this.</characteristic
           </categoryLinks>
           <costs>
             <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="3ff4-cb09-9268-88dc" name="Drunk!" hidden="true" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5bf8-7b73-412a-f654" type="instanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="24d3-568b-d3ea-9743" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="478b-1532-7ef3-7312" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="ecc7-a3d5-78c1-8046" name="Drunk!" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
+              <characteristics>
+                <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">Attached model gains Immune [Stunned] and Unstable.
+While Attached model has no marked Wound boxes, it gains Fearless and Dodge (1).
+
+Requirement [Kaizoku]</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="5ee2-b864-9895-b867" name="Fearless" hidden="false" targetId="5d6f-1746-9080-aca5" type="rule"/>
+            <infoLink id="9489-a046-1b46-f4bb" name="Dodge " hidden="false" targetId="14d5-d459-5d8a-c73e" type="rule"/>
+            <infoLink id="0f15-b4c4-71f4-b8f3" name="Adept" hidden="false" targetId="6fc1-6672-95ed-c4e7" type="rule"/>
+            <infoLink id="fdda-b33e-17d6-18eb" name="Unstable" hidden="false" targetId="24e3-1e7e-40b5-e16c" type="rule"/>
+          </infoLinks>
+          <categoryLinks>
+            <categoryLink id="2475-f3e0-348d-fb0a" name="Cycle: Weeping Sky" hidden="false" targetId="6da0-b320-b958-dc82" primary="false"/>
+            <categoryLink id="93d4-80d9-2947-a982" name="New CategoryLink" hidden="false" targetId="17cf-d9a9-c7c1-bcb6" primary="false"/>
+          </categoryLinks>
+          <costs>
+            <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="dbc7-9b13-6a20-0c36" name="Irreverence" hidden="true" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0c22-e9ca-a3de-e706" type="notInstanceOf"/>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="6639-615e-f1ab-bc64" type="lessThan"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="040f-fdf2-2d4f-eb0e" type="notInstanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="473d-2481-67e5-1059" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a37c-522b-ddca-65d7" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="26e3-2919-01d3-3764" name="Irreverence" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
+              <characteristics>
+                <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">Kami selecting or Targeting the Attached model must first succeed at a Ki Challenge Test (5).
+If they fail, their action is considered resolved and the Kami loses an Activation Counter.
+
+Requirement [Warband without any Kami, Shugenja, or Jung Mari]
+Exclusion [Queen of the Waves theme]</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="b50a-41d3-a5e0-01c0" name="Fearless" hidden="false" targetId="5d6f-1746-9080-aca5" type="rule"/>
+            <infoLink id="0e99-2fbd-fdf7-7beb" name="Dodge " hidden="false" targetId="14d5-d459-5d8a-c73e" type="rule"/>
+            <infoLink id="6faf-e370-7c8d-0414" name="Adept" hidden="false" targetId="6fc1-6672-95ed-c4e7" type="rule"/>
+            <infoLink id="f3cd-36cb-e071-e36c" name="Unstable" hidden="false" targetId="24e3-1e7e-40b5-e16c" type="rule"/>
+          </infoLinks>
+          <categoryLinks>
+            <categoryLink id="a91d-2626-99a2-5f17" name="Cycle: Weeping Sky" hidden="false" targetId="6da0-b320-b958-dc82" primary="false"/>
+            <categoryLink id="b8b8-0347-f503-d1ba" name="New CategoryLink" hidden="false" targetId="17cf-d9a9-c7c1-bcb6" primary="false"/>
+          </categoryLinks>
+          <costs>
+            <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
