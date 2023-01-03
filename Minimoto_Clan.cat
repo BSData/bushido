@@ -122,16 +122,56 @@
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="append" field="name" value="(public beta)">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <profiles>
         <profile id="542a-2c8b-0b6a-1427" name="Garrison of the Damned" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <characteristics>
             <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">• Minimoto Ashigaru models in the Warband gain Indomitable (+1).
 • Every time an Enemy model is removed from play as a result of a Melee Exchange, the Friendly model in the exchange gains 1 Ki Token.
 • During turn 1 models in this Warband gain Sixth Sense.</characteristic>
           </characteristics>
         </profile>
+        <profile id="e82d-1a4b-0e34-eba2" name="Garrison of the Damned" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="lessThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <characteristics>
+            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">• Minimoto Ashigaru models in the Warband gain Indomitable (+1).
+• Every time an Enemy model is removed from play as a result of a Melee Exchange, the Friendly model in the exchange gains 1 Ki Token.
+• During turn 1 models in this Warband gain Sixth Sense.
+• While a Friendly Minimoto model has marked Wound Boxes, it gains Immune [Blind, Control].</characteristic>
+          </characteristics>
+        </profile>
       </profiles>
+      <infoLinks>
+        <infoLink id="fced-682d-95d3-db2a" name="Sixth Sense" hidden="false" targetId="ec49-3908-f1d1-8de2" type="rule"/>
+        <infoLink id="688b-9034-6e44-a45a" name="Indomitable " hidden="false" targetId="3beb-6f28-e7c4-a236" type="rule"/>
+        <infoLink id="0976-bbd2-46cd-defc" name="Immune" hidden="false" targetId="ea08-b25e-0ea8-af73" type="rule">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="lessThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </infoLink>
+      </infoLinks>
       <categoryLinks>
         <categoryLink id="34ba-ee16-e71c-1683" name="New CategoryLink" hidden="false" targetId="477a-e693-0888-08f7" primary="true"/>
       </categoryLinks>
@@ -471,6 +511,11 @@
             <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="append" field="name" value="(public beta)">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8351-8bab-36aa-b635" type="max"/>
@@ -510,6 +555,13 @@
           </infoLinks>
         </infoGroup>
         <infoGroup id="b97e-ff4f-473a-2bd2" name="Melee Weapon" hidden="false">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <profiles>
             <profile id="8c95-a55f-579f-3ee5" name="Tetsubo" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
               <characteristics>
@@ -529,6 +581,30 @@
           <infoLinks>
             <infoLink id="50b2-2c26-999d-72e0" name="Military Training" hidden="false" targetId="308c-6600-0817-c51e" type="infoGroup"/>
             <infoLink id="be31-9fb1-c887-1e4c" name="Veteran" hidden="false" targetId="f386-e304-3104-3952" type="infoGroup"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="53cc-41d9-17b2-c63e" name="Melee Weapon" hidden="false">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="lessThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <profiles>
+            <profile id="a349-5d7b-94c6-1e4c" name="Tetsubo" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+2</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e"/>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Push Attack (0), Sweep Attack (1), Powerful Attack (1)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="5d9b-54c6-d2dc-c5d7" name="Sweep Attack" hidden="false" targetId="bcbd-fab2-c8e2-6ff7" type="rule"/>
+            <infoLink id="3133-dded-1fb3-6839" name="Powerful Attack" hidden="false" targetId="d56a-058d-95d9-5b60" type="rule"/>
+            <infoLink id="42b3-079c-b2ee-4f31" name="Push Attack" hidden="false" targetId="6c26-94ba-6b96-9e1b" type="rule"/>
           </infoLinks>
         </infoGroup>
       </infoGroups>
@@ -558,6 +634,11 @@
               </conditions>
             </conditionGroup>
           </conditionGroups>
+        </modifier>
+        <modifier type="append" field="name" value="(public beta)">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
+          </conditions>
         </modifier>
       </modifiers>
       <constraints>
@@ -597,6 +678,13 @@
         </infoGroup>
         <infoGroup id="98d0-55c6-e57a-a2a0" name="Unique Effects" hidden="false"/>
         <infoGroup id="54af-eceb-bf4c-5b1b" name="Melee Weapon" hidden="false">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <profiles>
             <profile id="7fcd-b3b8-beb6-4710" name="Tetsubo" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
               <characteristics>
@@ -617,6 +705,30 @@
           <infoLinks>
             <infoLink id="f3b3-4b6c-9214-8fa6" name="Mountain Stance" hidden="false" targetId="0fff-fe61-e22c-7ecf" type="infoGroup"/>
             <infoLink id="3a59-0b98-7653-465d" name="Conditioning" hidden="false" targetId="cfb0-9811-b7d2-c2c4" type="infoGroup"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="2bb6-5bd9-185b-da1f" name="Melee Weapon" hidden="false">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="lessThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <profiles>
+            <profile id="8142-9109-b70c-dfef" name="Tetsubo" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+2</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e"/>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Powerful Attack (1), Push Attack (0), Sweep Attack (0)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="f065-6942-a317-d1aa" name="Sweep Attack" hidden="false" targetId="bcbd-fab2-c8e2-6ff7" type="rule"/>
+            <infoLink id="7583-14eb-ca3f-cf15" name="Push Attack" hidden="false" targetId="6c26-94ba-6b96-9e1b" type="rule"/>
+            <infoLink id="97ee-7e22-a985-53e3" name="Powerful Attack" hidden="false" targetId="d56a-058d-95d9-5b60" type="rule"/>
           </infoLinks>
         </infoGroup>
       </infoGroups>
@@ -724,6 +836,13 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="039b-fb50-9974-0605" name="Minimoto Yuji" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="append" field="name" value="(public beta)">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2f31-82f7-2451-b501" type="max"/>
       </constraints>
@@ -764,6 +883,13 @@
           </infoLinks>
         </infoGroup>
         <infoGroup id="dc96-5680-82e9-58b8" name="Melee Weapon" hidden="false">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <profiles>
             <profile id="b1ef-ae68-af16-737d" name="Tetsubo" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
               <characteristics>
@@ -796,6 +922,30 @@
             <infoLink id="a2a9-3fac-92d3-5b01" name="Powerful Attack" hidden="false" targetId="d56a-058d-95d9-5b60" type="rule"/>
           </infoLinks>
         </infoGroup>
+        <infoGroup id="5b45-79ec-c3be-ffd5" name="Melee Weapon" hidden="false">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="lessThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <profiles>
+            <profile id="a25f-83a8-aa95-66d1" name="Tetsubo" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+3</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e"/>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Push Attack (0), Stun Attack (0), Sweep Attack (0)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="1981-c2f1-f72f-9014" name="Push Attack" hidden="false" targetId="6c26-94ba-6b96-9e1b" type="rule"/>
+            <infoLink id="94fb-7c55-c380-5be7" name="Stun Attack" hidden="false" targetId="ae27-975e-6c4b-d84e" type="rule"/>
+            <infoLink id="aae4-49e5-4c57-d892" name="Sweep Attack" hidden="false" targetId="bcbd-fab2-c8e2-6ff7" type="rule"/>
+          </infoLinks>
+        </infoGroup>
       </infoGroups>
       <categoryLinks>
         <categoryLink id="4938-88be-50c7-260b" name="Faction: Minimoto Clan" hidden="false" targetId="7ad5-75e1-6134-ca44" primary="false"/>
@@ -826,6 +976,11 @@
         <modifier type="set" field="a111-8656-5c05-7415" value="13.0">
           <conditions>
             <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="append" field="name" value="(public beta)">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -1023,6 +1178,11 @@
             <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="append" field="name" value="(public beta)">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a0d9-775e-7e62-27ec" type="max"/>
@@ -1090,8 +1250,30 @@
               </characteristics>
             </profile>
             <profile id="0c98-c0fb-848c-be75" name="Unique Effects" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <characteristics>
                 <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">If this model Charges, the Target gains a Prone Marker when this model enters BtB.
+This model may be recruited into any Minimoto Theme that does not restrict it.</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="37ca-4da1-463a-6d80" name="Unique Effects" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="lessThan"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">If this model Charges, the Target gains a Prone Marker when this model enters BtB.
+When this model declares a Charge Action, this model may Move through Destructible terrain; if you do, remove the terrain from the battlefield.
+
 This model may be recruited into any Minimoto Theme that does not restrict it.</characteristic>
               </characteristics>
             </profile>
@@ -1489,30 +1671,48 @@ This model may declare a Charge Action while in BtB with an Enemy model.</charac
             <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="append" field="name" value="(public beta)">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="550b-7c7a-4dab-d5cd" type="max"/>
       </constraints>
       <profiles>
-        <profile id="eb61-5c1c-3c93-6c42" name="Masaema Yama" hidden="false" typeId="6ea2-0f74-4852-4a98" typeName="Character Profile &amp; Traits">
+        <profile id="eb61-5c1c-3c93-6c42" name="Masaema Yama" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
           <characteristics>
-            <characteristic name="Melee Pool" typeId="8409-8d55-ce45-a33b">3</characteristic>
-            <characteristic name="Melee Boost" typeId="6a36-e826-18f3-0b25">3</characteristic>
-            <characteristic name="Ranged Pool" typeId="7a01-37c0-4741-672c">3</characteristic>
-            <characteristic name="Ranged Boost" typeId="ff66-ea54-d863-5c17"/>
-            <characteristic name="Move" typeId="af89-242d-625f-9bff">4</characteristic>
-            <characteristic name="Move Boost" typeId="62a6-8125-f293-5c76"/>
-            <characteristic name="Ki" typeId="8b76-2b4b-066e-a0c5">1</characteristic>
-            <characteristic name="Ki Boost" typeId="c34e-f8ae-0984-37ac"/>
-            <characteristic name="Ki Cap" typeId="2e88-c65e-4e45-d4c4">6</characteristic>
-            <characteristic name="Wounds" typeId="a1dc-c2c1-e2d2-ca98">7 OOOOO OO</characteristic>
-            <characteristic name="Size &amp; Base" typeId="6af2-e777-20ce-e060">Small 30mm</characteristic>
-            <characteristic name="Traits" typeId="e742-1b02-09cf-fd97">Armour (3), Bear Stands Alone, Indomitable (1). Last Stand, Resistance (2), Steadfast</characteristic>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">3</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">1</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">6</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">7 OOOOO OO</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
           </characteristics>
         </profile>
       </profiles>
       <infoGroups>
         <infoGroup id="51c8-a5b7-3a53-5ad2" name="Traits" hidden="false">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <profiles>
+            <profile id="38dc-3532-95b9-cba3" name="Masaema Yama" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Armour (3), Bear Stands Alone, Indomitable (1). Last Stand, Resistance (2), Steadfast</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
           <infoLinks>
             <infoLink id="af92-74ca-426c-8b08" name="Resistance " hidden="false" targetId="7e3f-9dc3-cacb-469f" type="rule"/>
             <infoLink id="82d2-f02f-2b52-85dd" name="Last Stand" hidden="false" targetId="54e7-a381-1c38-dd0e" type="rule"/>
@@ -1541,6 +1741,47 @@ This model may declare a Charge Action while in BtB with an Enemy model.</charac
         <infoGroup id="59ec-d141-95c7-63b5" name="Ki Feats" hidden="false">
           <infoLinks>
             <infoLink id="ef75-8346-02c6-5e92" name="Rally" hidden="false" targetId="d11a-2a0d-5984-5688" type="infoGroup"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="3f7e-e347-8adc-b5db" name="Unique Effects" hidden="false">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="lessThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <profiles>
+            <profile id="0814-11e8-bbb0-7b70" name="Unique Effects" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">This model begins the game with 2 Ki Tokens.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </infoGroup>
+        <infoGroup id="4f36-1c84-d78f-7a8f" name="Traits" hidden="false">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="lessThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <profiles>
+            <profile id="5bc6-509c-e08d-c860" name="Masaema Yama" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Armour (3), Bear Stands Alone, Indomitable (1). Last Stand, Leadership [Ashigaru](1/6”), Resistance (2), Steadfast</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="982f-e08c-401a-e649" name="Resistance " hidden="false" targetId="7e3f-9dc3-cacb-469f" type="rule"/>
+            <infoLink id="dbaa-7794-ee7c-89da" name="Last Stand" hidden="false" targetId="54e7-a381-1c38-dd0e" type="rule"/>
+            <infoLink id="9d51-9b65-edfe-1dc9" name="Armour" hidden="false" targetId="8615-1c63-2242-5746" type="rule"/>
+            <infoLink id="5f93-a84d-8ac8-0444" name="Bear Stands Alone" hidden="false" targetId="40cc-86cf-58d8-8799" type="rule"/>
+            <infoLink id="8442-a909-3b3c-4ab6" name="Indomitable " hidden="false" targetId="3beb-6f28-e7c4-a236" type="rule"/>
+            <infoLink id="caea-bee0-fa50-5e4e" name="Steadfast" hidden="false" targetId="95e7-3178-c29b-013c" type="rule"/>
+            <infoLink id="9f03-2fe7-068a-7520" name="Leadership" hidden="false" targetId="8ec4-bfdc-8c03-f631" type="rule"/>
           </infoLinks>
         </infoGroup>
       </infoGroups>
@@ -1873,6 +2114,13 @@ This model may declare a Charge Action while in BtB with an Enemy model.</charac
       </costs>
     </selectionEntry>
     <selectionEntry id="ee8e-e7db-7b2c-e34f" name="Yuyokuma" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="append" field="name" value="(public beta)">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2f6e-c074-da21-6c47" type="max"/>
       </constraints>
@@ -1931,6 +2179,13 @@ This model may declare a Charge Action while in BtB with an Enemy model.</charac
           </infoLinks>
         </infoGroup>
         <infoGroup id="fe32-6b36-b1dc-8ed9" name="Unique Effects" hidden="false">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <profiles>
             <profile id="9326-a3e9-db21-2297" name="Bear&apos;s Awe" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
               <characteristics>
@@ -1939,7 +2194,7 @@ This model may declare a Charge Action while in BtB with an Enemy model.</charac
             </profile>
             <profile id="4b9a-4dec-977c-e317" name="Unique Effects" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
               <characteristics>
-                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">Unless this model is Surprised or Exhausted, at the start of any Melee Exchange involving this model, the Enemy model gains a Prone Marker if it did not perform a Stand Up action, or use the Jump Up trait, this activation.
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">Unless this model is Surprised or Exhausted, at the start of any Melee Exchange involving this model, the Enemy model gains a Prone Marker if it did not perform a Stand Up action, or use the Jump Up trait this activation.
 This model may be recruited into any Minimoto Theme that does not restrict it.
 </characteristic>
               </characteristics>
@@ -1947,6 +2202,7 @@ This model may be recruited into any Minimoto Theme that does not restrict it.
           </profiles>
           <infoLinks>
             <infoLink id="0b60-48ad-6098-47dd" name="Blizzard" hidden="false" targetId="49bf-eafe-cfd5-12fc" type="profile"/>
+            <infoLink id="8f13-35dd-5b04-7de2" name="Terror" hidden="false" targetId="ad7a-5dea-fee4-fb49" type="rule"/>
           </infoLinks>
         </infoGroup>
         <infoGroup id="4541-9b31-cba1-c530" name="Melee Weapon" hidden="false">
@@ -1966,6 +2222,36 @@ This model may be recruited into any Minimoto Theme that does not restrict it.
             <infoLink id="3e38-46d9-3f73-695d" name="Powerful Attack" hidden="false" targetId="d56a-058d-95d9-5b60" type="rule"/>
             <infoLink id="2240-03f2-67c0-0d85" name="Stun Attack" hidden="false" targetId="ae27-975e-6c4b-d84e" type="rule"/>
             <infoLink id="8314-b94e-d3e2-99a9" name="Charging Bonus" hidden="false" targetId="d747-f7f2-ea6f-5ceb" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="ca05-2b82-93ff-d52c" name="Unique Effects" hidden="false">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="lessThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <profiles>
+            <profile id="6764-aaed-1034-c5e9" name="Bear&apos;s Awe" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">While this model has at least 4 marked Wound boxes, it gains Strong &amp; Terror.</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="b3d3-c437-21e6-748b" name="Unique Effects" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">Unless this model is Surprised or Exhausted, at the start of any Melee Exchange involving this model, the Enemy model gains a Prone Marker if it did not perform a Stand Up action, or use the Jump Up trait this activation.
+This model may move through Destructible terrain; if you do, remove the terrain from the battlefield.
+
+This model may be recruited into any Minimoto Theme that does not restrict it.
+</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="082a-70ea-d97c-400a" name="Blizzard" hidden="false" targetId="49bf-eafe-cfd5-12fc" type="profile"/>
+            <infoLink id="c48b-3d31-a38b-07c5" name="Strong" hidden="false" targetId="00b5-3637-d48a-807e" type="rule"/>
+            <infoLink id="7a36-77e1-72aa-5efd" name="Terror" hidden="false" targetId="ad7a-5dea-fee4-fb49" type="rule"/>
           </infoLinks>
         </infoGroup>
       </infoGroups>

@@ -1905,7 +1905,7 @@ A model may only gain one Fire Marker per activation as a result of this Ki Feat
             <characteristic name="Cost" typeId="a126-54d9-0a27-f4b6">1</characteristic>
             <characteristic name="Timing" typeId="f8a8-8a3e-ef58-4c61">Active</characteristic>
             <characteristic name="Subject" typeId="4ac8-2bb1-0c84-f088">Personal</characteristic>
-            <characteristic name="Limitation" typeId="6fc9-5d13-2687-b2a5"></characteristic>
+            <characteristic name="Limitation" typeId="6fc9-5d13-2687-b2a5"/>
             <characteristic name="Description" typeId="f804-b969-00da-2123">At the end of an activation in which this model declared a Charge action and caused Wounds in a Melee Exchange it gains an Activation Counter.</characteristic>
           </characteristics>
         </profile>
@@ -2001,12 +2001,36 @@ This model gains a Reload Marker.
     <infoGroup id="f9f6-70d7-5ef3-f711" name="Hold the Line!" hidden="false">
       <profiles>
         <profile id="8188-4c3c-cf02-6412" name="Hold the Line!" hidden="false" typeId="993a-e62a-7922-0ccb" typeName="Ki Feat">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <characteristics>
             <characteristic name="Cost" typeId="a126-54d9-0a27-f4b6">1</characteristic>
             <characteristic name="Timing" typeId="f8a8-8a3e-ef58-4c61">Instant</characteristic>
             <characteristic name="Subject" typeId="4ac8-2bb1-0c84-f088">Personal</characteristic>
             <characteristic name="Limitation" typeId="6fc9-5d13-2687-b2a5">Once Per Turn</characteristic>
             <characteristic name="Description" typeId="f804-b969-00da-2123">During an Enemy model’s activation, when that model moves into BtB with another Friendly Ashigaru model,  this model can move up to its Move in inches to attempt to get into BtB with that Enemy model.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="16ec-3434-d76f-6884" name="Hold the Line! (public beta)" hidden="false" typeId="993a-e62a-7922-0ccb" typeName="Ki Feat">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="lessThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <characteristics>
+            <characteristic name="Cost" typeId="a126-54d9-0a27-f4b6">1</characteristic>
+            <characteristic name="Timing" typeId="f8a8-8a3e-ef58-4c61">Instant</characteristic>
+            <characteristic name="Subject" typeId="4ac8-2bb1-0c84-f088">Pulse 4&quot;</characteristic>
+            <characteristic name="Limitation" typeId="6fc9-5d13-2687-b2a5">Not in BtB</characteristic>
+            <characteristic name="Description" typeId="f804-b969-00da-2123">During an Enemy model’s activation, when that model moves into BtB with another Friendly Ashigaru model in the Pulse, move this model into BtB with that Enemy model by the shortest route.
+If it is not possible to put this model in BtB with the Enemy model this feat cannot be used.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -3055,6 +3079,19 @@ X is equal to the number of Ki Tokens on the Kami.</characteristic>
       <infoLinks>
         <infoLink id="9f8a-7b1c-78c2-bbdf" name="Spirit" hidden="false" targetId="a9ba-9904-7d29-7bcb" type="rule"/>
       </infoLinks>
+    </infoGroup>
+    <infoGroup id="0321-d8fe-7736-2471" name="Long Throw" hidden="false">
+      <profiles>
+        <profile id="b489-231e-28cc-0d2c" name="Long Throw" hidden="false" typeId="993a-e62a-7922-0ccb" typeName="Ki Feat">
+          <characteristics>
+            <characteristic name="Cost" typeId="a126-54d9-0a27-f4b6">2</characteristic>
+            <characteristic name="Timing" typeId="f8a8-8a3e-ef58-4c61">Active</characteristic>
+            <characteristic name="Subject" typeId="4ac8-2bb1-0c84-f088">Special</characteristic>
+            <characteristic name="Limitation" typeId="6fc9-5d13-2687-b2a5">Not in BtB</characteristic>
+            <characteristic name="Description" typeId="f804-b969-00da-2123">This model&apos;s Ranged Weapon&apos;s Range Bands become 3/6/9 until the End Phase.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
     </infoGroup>
   </sharedInfoGroups>
   <catalogueLinks>

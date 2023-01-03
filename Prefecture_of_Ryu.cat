@@ -508,6 +508,11 @@ Until the end of the game, whenever you win a Tactical Test, choose 2 Prefecture
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="append" field="name" value="(public beta)">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e7d4-9288-1484-e179" type="max"/>
@@ -533,6 +538,7 @@ Until the end of the game, whenever you win a Tactical Test, choose 2 Prefecture
         <infoGroup id="5689-57f2-0a84-09c2" name="Ki Feats" hidden="false">
           <infoLinks>
             <infoLink id="8c41-36ff-20aa-9512" name="Iaijutsu" hidden="false" targetId="ba0c-49f7-cee1-9585" type="infoGroup"/>
+            <infoLink id="678d-dfd9-53b9-9c17" name="Takashi Koryu" hidden="false" targetId="68e1-0df2-ee7d-84b2" type="infoGroup"/>
           </infoLinks>
         </infoGroup>
         <infoGroup id="090c-5a31-499d-c4f6" name="Traits" hidden="false">
@@ -1169,6 +1175,11 @@ Until the end of the game, whenever you win a Tactical Test, choose 2 Prefecture
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="append" field="name" value="(public beta)">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8c51-df8e-b2b0-e72c" type="max"/>
@@ -1349,6 +1360,11 @@ Until the end of the game, whenever you win a Tactical Test, choose 2 Prefecture
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="append" field="name" value="(public beta)">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5c69-9fa3-9bd5-1613" type="max"/>
@@ -1378,6 +1394,13 @@ Until the end of the game, whenever you win a Tactical Test, choose 2 Prefecture
           </infoLinks>
         </infoGroup>
         <infoGroup id="c497-66cf-d083-9c07" name="Traits" hidden="false">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <profiles>
             <profile id="eaac-f749-174f-7bc8" name="Jin" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
               <characteristics>
@@ -1392,6 +1415,13 @@ Until the end of the game, whenever you win a Tactical Test, choose 2 Prefecture
           </infoLinks>
         </infoGroup>
         <infoGroup id="cc99-8a8f-a470-4a28" name="Melee Weapon" hidden="false">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <profiles>
             <profile id="ad05-ce85-f9a5-336a" name="Yari" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
               <characteristics>
@@ -1405,6 +1435,52 @@ Until the end of the game, whenever you win a Tactical Test, choose 2 Prefecture
           <infoLinks>
             <infoLink id="93de-b7af-ae87-faf7" name="Reach" hidden="false" targetId="e28e-d5dd-a262-1101" type="rule"/>
             <infoLink id="5cb1-1ad2-f648-9201" name="Push Attack" hidden="false" targetId="6c26-94ba-6b96-9e1b" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="979a-c14f-c663-ed57" name="Traits" hidden="false">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="lessThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <profiles>
+            <profile id="91be-1643-b482-4bfc" name="Jin" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Armour (2), Bravery, Endurance, Steadfast</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="a603-f71f-15d3-11bc" name="Armour" hidden="false" targetId="8615-1c63-2242-5746" type="rule"/>
+            <infoLink id="c11d-60a7-5204-26b7" name="Bravery" hidden="false" targetId="f9b2-38d2-7cda-de6e" type="rule"/>
+            <infoLink id="96c0-437e-5a56-e6ac" name="Steadfast" hidden="false" targetId="95e7-3178-c29b-013c" type="rule"/>
+            <infoLink id="0cab-c8b1-f0bd-3f9e" name="Endurance" hidden="false" targetId="7fdc-d150-9641-1235" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="2599-d0ce-cb20-9cf0" name="Melee Weapon" hidden="false">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="lessThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <profiles>
+            <profile id="0213-3c2a-2954-4140" name="Yari" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+0</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Reach</characteristic>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Push Attack (0), Push Defence (0)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="45bb-ecbd-e50d-38f0" name="Reach" hidden="false" targetId="e28e-d5dd-a262-1101" type="rule"/>
+            <infoLink id="cd68-56fa-71af-563c" name="Push Attack" hidden="false" targetId="6c26-94ba-6b96-9e1b" type="rule"/>
+            <infoLink id="9808-050a-0ad1-75f0" name="Push Defence" hidden="false" targetId="74fc-a971-d9c2-278c" type="rule"/>
           </infoLinks>
         </infoGroup>
       </infoGroups>
@@ -1888,6 +1964,11 @@ This model cannot be Healed.</characteristic>
               </conditions>
             </conditionGroup>
           </conditionGroups>
+        </modifier>
+        <modifier type="append" field="name" value="(public beta)">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
+          </conditions>
         </modifier>
       </modifiers>
       <constraints>
