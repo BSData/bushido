@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="4213-717c-2228-e731" name="Temple of Ro-Kan" revision="21" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="10" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="4213-717c-2228-e731" name="Temple of Ro-Kan" revision="21" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="11" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="5048-3a52-5689-6d0b" name="Spiritual Harmony" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -6478,6 +6478,26 @@ Requirement [Followers of Inari Theme]</characteristic>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0.0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="8671-c3da-e2dc-a8e1" name="Gathering for Inari" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cbae-d95e-49f4-7195" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="c9cd-f3dd-f69f-bfaf" name="Gathering for Inari" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
+          <characteristics>
+            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">Play in the Starting Phase.
+Until the End Phase, whenever an Opponent spends a Pass Token; a Friendly, non-Animal, Villager model Heals one Wound.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="7a48-1956-0f77-e248" name="New CategoryLink" hidden="false" targetId="d360-71aa-ca22-ba3c" primary="true"/>
+        <categoryLink id="3d66-0bc5-a168-0515" name="Cycle: Weeping Sky" hidden="false" targetId="6da0-b320-b958-dc82" primary="false"/>
+      </categoryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1.0"/>
+      </costs>
+    </selectionEntry>
   </selectionEntries>
   <entryLinks>
     <entryLink id="0f32-6304-1fad-6541" name="Ashinaga Tenaga" hidden="false" collective="false" import="true" targetId="e7ea-c376-aac2-5726" type="selectionEntry">
@@ -7190,6 +7210,89 @@ Requirement [Monk, Element: Void]</characteristic>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1.0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="5a6d-a5fd-7f6d-9177" name="Earthly Tether" hidden="true" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f159-311b-201e-65c5" type="instanceOf"/>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7ec6-dce9-29e5-a209" type="equalTo"/>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="760e-95d4-349a-cb3c" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7379-3296-315e-62b2" type="instanceOf"/>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="65b2-664f-9065-3e67" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b476-288d-ebaa-1cd0" type="max"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="839f-9170-296c-0413" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="b88b-c106-79c1-8ae6" name="Earthly Tether" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
+          <characteristics>
+            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">While in BtB with the Attached model, Friendly models gain Immovable.
+
+Requirement [Element[Earth], Element[Metal]]
+Exclusion [Master, Unsui]</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="b641-8363-0429-f143" name="Immovable" hidden="false" targetId="d34b-724f-6fc8-7420" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="4bf1-f618-8eeb-5f01" name="New CategoryLink" hidden="false" targetId="17cf-d9a9-c7c1-bcb6" primary="true"/>
+        <categoryLink id="f11d-09c0-179b-7e4c" name="Cycle: Weeping Sky" hidden="false" targetId="6da0-b320-b958-dc82" primary="false"/>
+      </categoryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="5e6c-b1d9-d5e7-8a19" name="Let Go" hidden="true" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="18b7-00de-cec4-40ca" type="instanceOf"/>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f38d-d916-8836-28cd" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f2e1-ba2e-3738-cc1f" type="max"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0cdb-311e-2c50-d2e4" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="c26c-612f-a3cd-7c28" name="Let Go" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
+          <characteristics>
+            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">You may discard this card to remove all non-Reload State Markers from the Attached model.
+
+Requirement [Element[Void]]</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="49d9-cfb2-e734-0a9d" name="New CategoryLink" hidden="false" targetId="17cf-d9a9-c7c1-bcb6" primary="true"/>
+        <categoryLink id="35f0-c60c-37da-3335" name="Cycle: Weeping Sky" hidden="false" targetId="6da0-b320-b958-dc82" primary="false"/>
+      </categoryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1.0"/>
+      </costs>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup id="d716-36e8-af1d-0a1f" name="Enhancements" hidden="false" collective="false" import="true">
@@ -7367,7 +7470,7 @@ This model&apos;s Melee Pool cannot be reduced by States.</characteristic>
           <profiles>
             <profile id="d67b-3af2-528d-552d" name="Student of Master Akari" hidden="false" typeId="bd15-7ead-9268-3576" typeName="Special Card (Ki Feat)">
               <characteristics>
-                <characteristic name="Description" typeId="17eb-17e2-4df4-5c5d">Attached model gains Element [Wind] and the following Ki Feat:</characteristic>
+                <characteristic name="Description" typeId="17eb-17e2-4df4-5c5d">Attached model gains Element [Wind] and the Mantis Stance Ki Feat.</characteristic>
                 <characteristic name="Name" typeId="27c7-1649-f16e-8eaa">Mantis Stance</characteristic>
                 <characteristic name="Cost" typeId="e410-b220-64e5-7953">2</characteristic>
                 <characteristic name="Timing" typeId="b9bf-562a-fe26-cb29">Active</characteristic>
@@ -7531,7 +7634,7 @@ When this model performs a Focus Action it gains Channel (6/6&quot;) until the e
           <profiles>
             <profile id="3e08-f728-480a-4dfd" name="Student of Master Po" hidden="false" typeId="bd15-7ead-9268-3576" typeName="Special Card (Ki Feat)">
               <characteristics>
-                <characteristic name="Description" typeId="17eb-17e2-4df4-5c5d">Attached model gains Element [Metal] and the following Ki Feat.</characteristic>
+                <characteristic name="Description" typeId="17eb-17e2-4df4-5c5d">Attached model gains Element [Metal] and the Wasp Punch Ki Feat.</characteristic>
                 <characteristic name="Name" typeId="27c7-1649-f16e-8eaa">Wasp Punch</characteristic>
                 <characteristic name="Cost" typeId="e410-b220-64e5-7953">2</characteristic>
                 <characteristic name="Timing" typeId="b9bf-562a-fe26-cb29">Instant</characteristic>
@@ -7857,6 +7960,8 @@ If it fails, its Activation ends and it loses one Activation Counter.</character
         <entryLink id="7112-d1a7-7a98-92dd" name="Man of the People" hidden="false" collective="false" import="true" targetId="f306-2092-6d16-77ea" type="selectionEntry"/>
         <entryLink id="e05d-668f-b92e-5144" name="Plans Made, Bargains Kept" hidden="false" collective="false" import="true" targetId="472f-7192-8d65-aea1" type="selectionEntry"/>
         <entryLink id="4be6-238a-642b-f4ae" name="True Love" hidden="false" collective="false" import="true" targetId="8690-885b-08be-8353" type="selectionEntry"/>
+        <entryLink id="c7e3-a5b0-be5d-2294" name="Earthly Tether" hidden="false" collective="false" import="true" targetId="5a6d-a5fd-7f6d-9177" type="selectionEntry"/>
+        <entryLink id="a59a-ab3e-3fc8-d232" name="Let Go" hidden="false" collective="false" import="true" targetId="5e6c-b1d9-d5e7-8a19" type="selectionEntry"/>
       </entryLinks>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
