@@ -2,16 +2,47 @@
 <catalogue id="6a8f-b352-80c6-855f" name="Silvermoon Trade Syndicate" revision="18" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="11" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="5048-3a52-5689-6d0b" name="Bought Loyalty" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="append" field="name" value="(public beta)">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="83c8-9fcd-9b27-a489" type="max"/>
       </constraints>
       <profiles>
-        <profile id="6762-bb60-0452-6ccb" name="Bought Loyalty" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
+        <profile id="b64d-9173-20c2-dc83" name="Bought Loyalty" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <characteristics>
             <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">Play when an Enemy non-Insignificant, non-Soulless model declares an action. That model must make a Ki Challenge Test (6). If it fails then its activation ends and it loses an Activation Counter.</characteristic>
           </characteristics>
         </profile>
+        <profile id="9bf4-8b54-151f-5e52" name="Bought Loyalty" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="lessThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <characteristics>
+            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">Play when an Enemy non-Insignificant, non-Soulless model declares an action. That model must make a Ki Challenge Test (6). If it fails then its activation ends and it loses an Activation Counter.
+
+This is a Trap effect. Only one Trap effect may be declared once per activation.</characteristic>
+          </characteristics>
+        </profile>
       </profiles>
+      <infoLinks>
+        <infoLink id="b165-b786-cc90-27a1" name="Trap" hidden="false" targetId="6ef1-a206-e5d4-b3ab" type="rule"/>
+      </infoLinks>
       <categoryLinks>
         <categoryLink id="0537-13cd-ff3a-7baa" name="New CategoryLink" hidden="false" targetId="d360-71aa-ca22-ba3c" primary="true"/>
       </categoryLinks>
@@ -241,6 +272,11 @@ A non-Soulless Enemy model in BtB with a Friendly Rose model must make a Ki Chal
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="append" field="name" value="(public beta)">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e81a-ef05-4702-5d4d" type="max"/>
@@ -338,6 +374,11 @@ A non-Soulless Enemy model in BtB with a Friendly Rose model must make a Ki Chal
               </conditions>
             </conditionGroup>
           </conditionGroups>
+        </modifier>
+        <modifier type="append" field="name" value="(public beta)">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
+          </conditions>
         </modifier>
       </modifiers>
       <constraints>
@@ -438,6 +479,11 @@ A non-Soulless Enemy model in BtB with a Friendly Rose model must make a Ki Chal
               </conditions>
             </conditionGroup>
           </conditionGroups>
+        </modifier>
+        <modifier type="append" field="name" value="(public beta)">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
+          </conditions>
         </modifier>
       </modifiers>
       <constraints>
@@ -1097,6 +1143,11 @@ At any point during the turn when a Player would make a dice roll, before dice a
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="append" field="name" value="(public beta)">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="true" id="7515-2fe5-408d-7b97" type="max"/>
@@ -1315,6 +1366,11 @@ At any point during the turn when a Player would make a dice roll, before dice a
               </conditions>
             </conditionGroup>
           </conditionGroups>
+        </modifier>
+        <modifier type="append" field="name" value="(public beta)">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
+          </conditions>
         </modifier>
       </modifiers>
       <constraints>
@@ -2483,6 +2539,11 @@ Kyu: In the final turn of the game, while this model is in play, every time a mo
             <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="append" field="name" value="(public beta)">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="520c-7ce2-2ff3-eca7" type="max"/>
@@ -2677,6 +2738,11 @@ Kyu: In the final turn of the game, while this model is in play, every time a mo
         <modifier type="set" field="a111-8656-5c05-7415" value="13.0">
           <conditions>
             <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="append" field="name" value="(public beta)">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -3126,6 +3192,11 @@ While within 2&quot; of this model, Fire Kami models gain Aggressive and Brutal 
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="append" field="name" value="(public beta)">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7975-49fd-9b71-bfbc" type="max"/>
@@ -3298,6 +3369,11 @@ While within 2&quot; of this model, Fire Kami models gain Aggressive and Brutal 
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="append" field="name" value="(public beta)">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <profiles>
         <profile id="98af-6617-12c9-2099" name="Yokozuna&apos;s Revenge" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
@@ -3396,6 +3472,11 @@ While within 2&quot; of this model, Fire Kami models gain Aggressive and Brutal 
               </conditions>
             </conditionGroup>
           </conditionGroups>
+        </modifier>
+        <modifier type="append" field="name" value="(public beta)">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
+          </conditions>
         </modifier>
       </modifiers>
       <constraints>
@@ -4371,6 +4452,11 @@ That model must retake that test.</characteristic>
                 </conditionGroup>
               </conditionGroups>
             </modifier>
+            <modifier type="append" field="name" value="(public beta)">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
+              </conditions>
+            </modifier>
           </modifiers>
           <constraints>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="58d2-d705-f6a8-fd11" type="max"/>
@@ -4738,6 +4824,11 @@ Once per test this model may re-roll 1s before determining the final result.</ch
                 <modifier type="decrement" field="a111-8656-5c05-7415" value="1.0">
                   <conditions>
                     <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="90d7-5fe5-0a05-1bea" type="atLeast"/>
+                  </conditions>
+                </modifier>
+                <modifier type="append" field="name" value="(public beta)">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
                   </conditions>
                 </modifier>
               </modifiers>
