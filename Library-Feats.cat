@@ -1752,11 +1752,35 @@ This model then makes a Ranged Attack against each other model (Friendly or Enem
     <infoGroup id="d7e4-efaf-4188-d483" name="Spirit Absolution" hidden="false">
       <profiles>
         <profile id="095e-1722-a3e5-bd66" name="Spirit Absolution" hidden="false" typeId="993a-e62a-7922-0ccb" typeName="Ki Feat">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <characteristics>
             <characteristic name="Cost" typeId="a126-54d9-0a27-f4b6">2</characteristic>
             <characteristic name="Timing" typeId="f8a8-8a3e-ef58-4c61">Simple</characteristic>
             <characteristic name="Subject" typeId="4ac8-2bb1-0c84-f088">Target 6&quot;</characteristic>
             <characteristic name="Limitation" typeId="6fc9-5d13-2687-b2a5">Not in BtB</characteristic>
+            <characteristic name="Description" typeId="f804-b969-00da-2123">This model loses Soulless, Slow, Tough, and Rise. This effect expires in the End Phase.
+Target model not in BtB with a Friendly model gains an Impetous Marker, must declare a Walk action as its next activation, and must move directly towards this model with its full Move Statistic, changing facing so that this model is in LoS. If unable to perform a Walk action, it may activate without restriction.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="4cb0-d07c-ca34-3819" name="Spirit Absolution" hidden="false" typeId="993a-e62a-7922-0ccb" typeName="Ki Feat">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="lessThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <characteristics>
+            <characteristic name="Cost" typeId="a126-54d9-0a27-f4b6">2</characteristic>
+            <characteristic name="Timing" typeId="f8a8-8a3e-ef58-4c61">Simple</characteristic>
+            <characteristic name="Subject" typeId="4ac8-2bb1-0c84-f088">Target 6&quot;</characteristic>
+            <characteristic name="Limitation" typeId="6fc9-5d13-2687-b2a5">Not in BtB, Once Per Turn</characteristic>
             <characteristic name="Description" typeId="f804-b969-00da-2123">This model loses Soulless, Slow, Tough, and Rise. This effect expires in the End Phase.
 Target model not in BtB with a Friendly model gains an Impetous Marker, must declare a Walk action as its next activation, and must move directly towards this model with its full Move Statistic, changing facing so that this model is in LoS. If unable to perform a Walk action, it may activate without restriction.</characteristic>
           </characteristics>
