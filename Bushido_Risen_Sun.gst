@@ -219,7 +219,6 @@
     <categoryEntry id="6eac-b6fc-ac09-4d64" name="The Imperial March" hidden="false"/>
     <categoryEntry id="69a2-397e-9d7b-a47d" name="Communal Cards" hidden="false"/>
     <categoryEntry id="875a-48b1-3c9f-0a14" name="Faction: Silvermoon Trade Syndicate" hidden="false"/>
-    <categoryEntry id="4a43-1cd1-cfb2-f5cd" name="Risen Sun Cycle" hidden="false"/>
     <categoryEntry id="a745-0548-80c8-ece4" name="Cycle: Risen Sun" hidden="false"/>
     <categoryEntry id="b254-2810-6b62-66d9" name="Brotherhood" hidden="false"/>
     <categoryEntry id="3df8-0340-a4a1-a8be" name="Ronin Terrain Cards" hidden="false">
@@ -265,6 +264,7 @@
     <categoryEntry id="5073-f00b-a8f6-5e3b" name="Reference Cards" hidden="false"/>
     <categoryEntry id="7cb4-8adf-0e10-c1ea" name="Faction Test Cards" hidden="false"/>
     <categoryEntry id="6da0-b320-b958-dc82" name="Cycle: Weeping Sky" hidden="false"/>
+    <categoryEntry id="d190-d7ff-d350-6425" name="Trap" hidden="false"/>
   </categoryEntries>
   <forceEntries>
     <forceEntry id="2150-40b1-52f8-4a8a" name="Risen Sun" hidden="true">
@@ -300,7 +300,7 @@
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="685b-176a-7b13-c5c1" name="Balance Changes Public Beta (rice cost changes only, as of 22/12/22)" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="685b-176a-7b13-c5c1" name="Balance Changes Public Beta (as of 03/01/23)" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f844-aa02-34c3-8284" type="min"/>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="df11-7b4d-5153-c319" type="max"/>

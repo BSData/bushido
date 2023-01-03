@@ -798,6 +798,11 @@ This model may only make one Ranged Attack with the Kusari per activation
             <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="append" field="name" value="(public beta)">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="112a-1f61-0a2a-9a77" type="max"/>
@@ -822,6 +827,13 @@ This model may only make one Ranged Attack with the Kusari per activation
       <infoGroups>
         <infoGroup id="4e10-8647-675b-5ceb" name="Ki Feats" hidden="false"/>
         <infoGroup id="fad7-112a-eefd-2ef0" name="Melee Weapon" hidden="false">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <profiles>
             <profile id="ab42-b109-6e67-ba97" name="Ninjato" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
               <characteristics>
@@ -864,6 +876,29 @@ This model may only make one Ranged Attack with the Kusari per activation
             <infoLink id="8ca1-7dd9-549f-7a5c" name="Camouflage" hidden="false" targetId="9010-4983-c98c-1751" type="rule"/>
             <infoLink id="ad62-8bde-7340-5ccf" name="Lightfooted" hidden="false" targetId="57d2-cd57-07f9-addf" type="rule"/>
             <infoLink id="0886-5bc0-b7b6-c168" name="Dodge " hidden="false" targetId="14d5-d459-5d8a-c73e" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="e42c-5e2d-ea5a-3e02" name="Melee Weapon" hidden="false">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="lessThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <profiles>
+            <profile id="4383-7c18-6d83-1ea2" name="Ninjato" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+0</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e"/>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Sidestep Defence (0), Counterstrike Defence (0)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="13b7-c562-f9e0-a456" name="Sidestep Defence " hidden="false" targetId="753c-6c3b-64d7-203c" type="rule"/>
+            <infoLink id="1048-babd-625c-afc0" name="Counterstrike Defence " hidden="false" targetId="136e-4c77-dc59-4c6e" type="rule"/>
           </infoLinks>
         </infoGroup>
       </infoGroups>
@@ -1393,6 +1428,13 @@ This model may only make one Ranged Attack with the Kusari per activation
       </costs>
     </selectionEntry>
     <selectionEntry id="a16e-011e-bfb5-e557" name="Kerasu" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="append" field="name" value="(public beta)">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ca82-ec1f-5304-c7ea" type="max"/>
       </constraints>
@@ -1453,6 +1495,13 @@ This model may only make one Ranged Attack with the Kusari per activation
           </infoLinks>
         </infoGroup>
         <infoGroup id="aec9-45af-f202-b271" name="Traits" hidden="false">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <profiles>
             <profile id="e480-cfc4-4229-a6b3" name="Kerasu" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
               <characteristics>
@@ -1466,6 +1515,30 @@ This model may only make one Ranged Attack with the Kusari per activation
             <infoLink id="6ca0-84be-9419-e96c" name="Camouflage" hidden="false" targetId="9010-4983-c98c-1751" type="rule"/>
             <infoLink id="c48e-50cf-718c-91f2" name="Lightfooted" hidden="false" targetId="57d2-cd57-07f9-addf" type="rule"/>
             <infoLink id="7a63-0d9d-0606-b05f" name="Feint" hidden="false" targetId="38b0-4d97-3c4c-8d96" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="37ef-d9bb-ae40-0c47" name="Traits" hidden="false">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="lessThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <profiles>
+            <profile id="2e08-c14d-2fd1-1681" name="Kerasu" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Armour (1), Assassin, Camouflage (2&quot;), Feint (1), Lightfooted, Split Attack</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="5fe0-92f1-f2d2-4715" name="Assassin" hidden="false" targetId="ef59-928b-2550-f0a3" type="rule"/>
+            <infoLink id="9e42-a171-945d-9733" name="Armour" hidden="false" targetId="8615-1c63-2242-5746" type="rule"/>
+            <infoLink id="4177-5941-ecaa-64b7" name="Camouflage" hidden="false" targetId="9010-4983-c98c-1751" type="rule"/>
+            <infoLink id="a0e2-f20d-be26-2eda" name="Lightfooted" hidden="false" targetId="57d2-cd57-07f9-addf" type="rule"/>
+            <infoLink id="f761-10b6-ffc4-7e83" name="Feint" hidden="false" targetId="38b0-4d97-3c4c-8d96" type="rule"/>
+            <infoLink id="a52f-e1e5-dd6b-c2f8" name="Split Attack" hidden="false" targetId="92d0-d4fe-e58e-7535" type="rule"/>
           </infoLinks>
         </infoGroup>
       </infoGroups>

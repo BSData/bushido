@@ -366,6 +366,11 @@ Permitted [Acolyte, Jade Mamba, models with Blood of Orochi, Snake]</characteris
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="append" field="name" value="(public beta)">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1562-2a50-6177-8e8d" type="max"/>
@@ -428,9 +433,43 @@ Permitted [Acolyte, Jade Mamba, models with Blood of Orochi, Snake]</characteris
         </infoGroup>
         <infoGroup id="2855-2fb0-ed52-0196" name="Ki Feats" hidden="false">
           <infoLinks>
-            <infoLink id="26b3-a7ae-e323-c24f" name="Umbrella Block" hidden="false" targetId="0005-2a79-5638-daa2" type="infoGroup"/>
-            <infoLink id="51a9-d7ab-4393-4512" name="Do-Kote" hidden="false" targetId="7c80-7e85-fc45-381a" type="infoGroup"/>
+            <infoLink id="26b3-a7ae-e323-c24f" name="Umbrella Block" hidden="false" targetId="0005-2a79-5638-daa2" type="infoGroup">
+              <modifiers>
+                <modifier type="set" field="hidden" value="false">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </infoLink>
+            <infoLink id="51a9-d7ab-4393-4512" name="Do-Kote" hidden="false" targetId="7c80-7e85-fc45-381a" type="infoGroup">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </infoLink>
             <infoLink id="fd09-35ea-68ce-657c" name="Cobra Strike" hidden="false" targetId="172c-d546-50a5-c020" type="infoGroup"/>
+            <infoLink id="4dfb-4ceb-be8f-763c" name="Escape" hidden="true" targetId="b7ac-c02d-fe10-2c6c" type="infoGroup">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </infoLink>
+            <infoLink id="dce0-c164-3658-6d17" name="Kote Men" hidden="true" targetId="2d1a-3485-f620-dcd8" type="infoGroup">
+              <modifiers>
+                <modifier type="set" field="hidden" value="false">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </infoLink>
           </infoLinks>
         </infoGroup>
         <infoGroup id="4070-a257-d18d-e27b" name="Unique Effects" hidden="false">
@@ -443,6 +482,27 @@ Permitted [Acolyte, Jade Mamba, models with Blood of Orochi, Snake]</characteris
           </profiles>
           <infoLinks>
             <infoLink id="8e0e-7239-4183-3af1" name="Kurouma Koryu" hidden="false" targetId="3ba5-1837-b036-ca3d" type="infoGroup"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="a1e2-f7c1-6d92-83ac" name="Traits" hidden="true">
+          <profiles>
+            <profile id="6525-690c-0303-6efb" name="Ito Itsunagi" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Dodge (1), Evasive, Fearless, Feint (1), Indomitable (1), Parry (1), Prowess [Melee](1), Ranged Defence (2), Resistance (1), Split Attack</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="20bf-9a13-b1af-523d" name="Dodge " hidden="false" targetId="14d5-d459-5d8a-c73e" type="rule"/>
+            <infoLink id="9ee8-fb95-7e6e-2cee" name="Fearless" hidden="false" targetId="5d6f-1746-9080-aca5" type="rule"/>
+            <infoLink id="744e-0283-70dd-9d77" name="Indomitable " hidden="false" targetId="3beb-6f28-e7c4-a236" type="rule"/>
+            <infoLink id="6f72-364e-0060-aa69" name="Ranged Defence " hidden="false" targetId="9b8d-9ca9-e25d-3988" type="rule"/>
+            <infoLink id="76ab-cc42-d498-4b1f" name="Prowess " hidden="false" targetId="75ef-327a-cd08-a248" type="rule"/>
+            <infoLink id="77eb-2b03-1eb2-63ba" name="Resistance " hidden="false" targetId="7e3f-9dc3-cacb-469f" type="rule"/>
+            <infoLink id="49a6-79ac-808b-dc64" name="Split Attack" hidden="false" targetId="92d0-d4fe-e58e-7535" type="rule"/>
+            <infoLink id="92e0-31b4-d9f6-4456" name="Evasive" hidden="false" targetId="b0f8-d197-536b-c8fc" type="rule"/>
+            <infoLink id="1cdc-11c4-818c-0810" name="Parry" hidden="false" targetId="c7c2-b36e-7952-c79b" type="rule"/>
+            <infoLink id="f42b-848f-9fb4-f431" name="Feint" hidden="false" targetId="38b0-4d97-3c4c-8d96" type="rule"/>
           </infoLinks>
         </infoGroup>
       </infoGroups>
@@ -1537,6 +1597,13 @@ This model&apos;s weapons gains Poison (1/1)</characteristic>
       </costs>
     </selectionEntry>
     <selectionEntry id="9c71-e1f1-54a9-95af" name="Jade Mamba Guard" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="append" field="name" value="(public beta)">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e2cb-a4e4-0a08-bcc7" type="max"/>
       </constraints>
@@ -1841,12 +1908,46 @@ This model may only Channel to models with the Blood of Orochi trait.</character
             <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="append" field="name" value="(public beta)">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1149-bf2f-ab66-2ab7" type="max"/>
       </constraints>
       <profiles>
         <profile id="c4aa-3a44-fe34-92c2" name="Kyou" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">2</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">5</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">2</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c">3</characteristic>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">6</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">5 OOOOO</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="e0c9-3a90-b552-d43d" name="Kyou" hidden="true" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <characteristics>
             <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
             <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
@@ -2228,6 +2329,11 @@ This model may only Channel to models with the Blood of Orochi trait.</character
         <modifier type="set" field="a111-8656-5c05-7415" value="18.0">
           <conditions>
             <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="append" field="name" value="(public beta)">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -3253,6 +3359,11 @@ This model may only Channel to models with the Blood of Orochi trait.</character
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="append" field="name" value="(public beta)">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a63a-6598-306f-4965" type="max"/>
@@ -3276,6 +3387,13 @@ This model may only Channel to models with the Blood of Orochi trait.</character
       </profiles>
       <infoGroups>
         <infoGroup id="ed53-595a-7af5-78fe" name="Melee Weapon" hidden="false">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <profiles>
             <profile id="94fa-0ec8-cfe3-5e37" name="Dagger" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
               <characteristics>
@@ -3310,6 +3428,13 @@ This model may only Channel to models with the Blood of Orochi trait.</character
           </infoLinks>
         </infoGroup>
         <infoGroup id="3a88-2140-de8b-2669" name="Traits" hidden="false">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <profiles>
             <profile id="5268-68d9-8dce-918c" name="Ishi" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
               <characteristics>
@@ -3329,6 +3454,48 @@ This model may only Channel to models with the Blood of Orochi trait.</character
               </characteristics>
             </profile>
           </profiles>
+        </infoGroup>
+        <infoGroup id="98bb-16bd-483f-2bf0" name="Melee Weapon" hidden="true">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <profiles>
+            <profile id="08de-a1df-b837-cadf" name="Dagger" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+0</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e"/>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Sidestep Defence (0)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="d954-ef86-b6a3-6d2e" name="Sidestep Defence " hidden="false" targetId="753c-6c3b-64d7-203c" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="e7da-cba5-5368-c83d" name="Traits" hidden="true">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <profiles>
+            <profile id="57c1-bbf7-51fd-c457" name="Ishi" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Assassin, Lightfooted</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="df92-da8a-761c-93d0" name="Assassin" hidden="false" targetId="ef59-928b-2550-f0a3" type="rule"/>
+            <infoLink id="c352-869f-c4b7-de7b" name="Lightfooted" hidden="false" targetId="57d2-cd57-07f9-addf" type="rule"/>
+          </infoLinks>
         </infoGroup>
       </infoGroups>
       <categoryLinks>
@@ -4867,12 +5034,36 @@ No model may be affected more than once by this Ki Feat in a turn.</characterist
     <infoGroup id="22ee-abf4-17a0-a33f" name="Tail Whip" hidden="false">
       <profiles>
         <profile id="d597-f96a-2516-6137" name="Tail Whip" hidden="false" typeId="993a-e62a-7922-0ccb" typeName="Ki Feat">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <characteristics>
             <characteristic name="Cost" typeId="a126-54d9-0a27-f4b6">2</characteristic>
             <characteristic name="Timing" typeId="f8a8-8a3e-ef58-4c61">Instant</characteristic>
             <characteristic name="Subject" typeId="4ac8-2bb1-0c84-f088">Target BtB</characteristic>
             <characteristic name="Limitation" typeId="6fc9-5d13-2687-b2a5"/>
             <characteristic name="Description" typeId="f804-b969-00da-2123">During an Enemy model&apos;s activationin which it enters BtB with this model, that Enemy model gains a Stunned Marker.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="7c94-de55-d39a-eddb" name="Tail Whip (public beta)" hidden="true" typeId="993a-e62a-7922-0ccb" typeName="Ki Feat">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <characteristics>
+            <characteristic name="Cost" typeId="a126-54d9-0a27-f4b6">2</characteristic>
+            <characteristic name="Timing" typeId="f8a8-8a3e-ef58-4c61">Instant</characteristic>
+            <characteristic name="Subject" typeId="4ac8-2bb1-0c84-f088">Target BtB</characteristic>
+            <characteristic name="Limitation" typeId="6fc9-5d13-2687-b2a5"/>
+            <characteristic name="Description" typeId="f804-b969-00da-2123">During an Enemy model’s activation in which it enters BtB with this model or a Friendly Faction Shisai model in BtB with this model, that Enemy model gains a Stunned Marker.
+A model may only gain one Stunned Marker per activation as a result of this Ki Feat.</characteristic>
           </characteristics>
         </profile>
       </profiles>

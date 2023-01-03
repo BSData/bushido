@@ -1729,6 +1729,11 @@ Models that fail gain Vengeance [Rokuro] until the action is resolved.</characte
             <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="append" field="name" value="(public beta)">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="true" id="eee3-ae8b-c6be-c3bc" type="max"/>
@@ -1767,6 +1772,13 @@ Models that fail gain Vengeance [Rokuro] until the action is resolved.</characte
           </infoLinks>
         </infoGroup>
         <infoGroup id="edd0-eede-ae80-ccee" name="Traits" hidden="false">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <profiles>
             <profile id="4b92-3a68-b085-2108" name="Shinji" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
               <characteristics>
@@ -1786,6 +1798,29 @@ Models that fail gain Vengeance [Rokuro] until the action is resolved.</characte
           <infoLinks>
             <infoLink id="829b-a289-591a-c90f" name="Lurker" hidden="false" targetId="3ace-c140-e71e-edb2" type="infoGroup"/>
             <infoLink id="5e39-b80c-a421-55c8" name="Shadow Walk" hidden="false" targetId="26dc-6aae-4be0-6e22" type="infoGroup"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="a6e1-232a-3e70-e38e" name="Traits" hidden="true">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <profiles>
+            <profile id="34e2-a076-a80f-9215" name="Shinji" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Co-ordinated Attack [Rat], Cowardly, Dodge (1), Jump Up, Lightfooted</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="e4e1-2313-348c-c1dc" name="Jump Up" hidden="false" targetId="1575-e12f-4ca3-c557" type="rule"/>
+            <infoLink id="cb1d-bbca-1d81-532b" name="Cowardly" hidden="false" targetId="c8d8-d1c7-905b-f971" type="rule"/>
+            <infoLink id="b0a8-5a6e-a036-61a3" name="Lightfooted" hidden="false" targetId="57d2-cd57-07f9-addf" type="rule"/>
+            <infoLink id="24a6-4318-76bd-3d63" name="Dodge " hidden="false" targetId="14d5-d459-5d8a-c73e" type="rule"/>
+            <infoLink id="1763-55d0-399c-80fa" name="Co-ordinated Attack" hidden="false" targetId="2337-7bcc-c1f2-f2bd" type="rule"/>
           </infoLinks>
         </infoGroup>
       </infoGroups>
@@ -3144,6 +3179,17 @@ When this model is reduced to 0 Wounds remove it from play and each model within
           </conditionGroups>
         </modifier>
       </modifiers>
+      <modifierGroups>
+        <modifierGroup>
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
+          </conditions>
+          <modifiers>
+            <modifier type="append" field="name" value="(public beta)"/>
+            <modifier type="add" field="category" value="f434-17e6-174c-b4f6"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
       <constraints>
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="true" id="2285-c98d-5a01-dcf9" type="max"/>
       </constraints>
@@ -3643,12 +3689,24 @@ During the End Phase you may remove a Friendly Rat model in BtB with this model 
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="append" field="name" value="(public beta)">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="true" id="0b1c-863d-aa63-ab18" type="max"/>
       </constraints>
       <infoGroups>
         <infoGroup id="a9b7-d657-4649-0776" name="Melee Weapon" hidden="false">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <profiles>
             <profile id="e125-cbb3-3245-1886" name="Bite" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
               <characteristics>
@@ -3665,6 +3723,13 @@ During the End Phase you may remove a Friendly Rat model in BtB with this model 
           </infoLinks>
         </infoGroup>
         <infoGroup id="911a-e55f-7474-ba30" name="Traits" hidden="false">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <profiles>
             <profile id="9506-3a3f-1b7b-9f51" name="Plague Rat" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
               <characteristics>
@@ -3678,6 +3743,55 @@ During the End Phase you may remove a Friendly Rat model in BtB with this model 
             <infoLink id="6184-8ace-e2ab-a481" name="Insignificant" hidden="false" targetId="1614-d86c-ef8a-c095" type="rule"/>
             <infoLink id="f157-d543-686d-4e65" name="Lightfooted" hidden="false" targetId="57d2-cd57-07f9-addf" type="rule"/>
             <infoLink id="bc5a-4b2d-4db5-d3c2" name="Tiny" hidden="false" targetId="335c-7f6f-9ca0-cb93" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="f0ff-a438-c109-b2f6" name="Traits" hidden="true">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <profiles>
+            <profile id="18cf-bfee-073a-66bb" name="Plague Rat" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Camouflage (2&quot;), Evasive, Insignificant, Light Footed, Tiny</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="3f6b-bc82-60ab-6e1a" name="Camouflage" hidden="false" targetId="9010-4983-c98c-1751" type="rule"/>
+            <infoLink id="938f-e4dd-f680-4447" name="Evasive" hidden="false" targetId="b0f8-d197-536b-c8fc" type="rule"/>
+            <infoLink id="d29d-19c9-ec39-26fc" name="Insignificant" hidden="false" targetId="1614-d86c-ef8a-c095" type="rule"/>
+            <infoLink id="0456-bee2-e375-9a87" name="Lightfooted" hidden="false" targetId="57d2-cd57-07f9-addf" type="rule"/>
+            <infoLink id="e970-0927-f0c6-fcd6" name="Tiny" hidden="false" targetId="335c-7f6f-9ca0-cb93" type="rule"/>
+            <infoLink id="f1c8-78cc-ac9f-6d5b" name="Co-ordinated Attack" hidden="false" targetId="2337-7bcc-c1f2-f2bd" type="rule"/>
+            <infoLink id="8328-996c-4574-08ab" name="Group" hidden="false" targetId="4c02-03a1-ae7b-7821" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="0b12-be6f-9561-3df4" name="Melee Weapon" hidden="true">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <profiles>
+            <profile id="9990-34cc-cc46-eb74" name="Bite" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">-2</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Disease (2), Poison (1/1)</characteristic>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Sidestep Defence (0)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="704c-e1f8-7194-da94" name="Disease" hidden="false" targetId="3163-f043-5504-dc45" type="rule"/>
+            <infoLink id="24f5-09e4-6d24-1e45" name="Poison " hidden="false" targetId="7290-85f4-42cf-0b75" type="rule"/>
+            <infoLink id="5024-b5ca-a6b5-0b41" name="Sidestep Defence " hidden="false" targetId="753c-6c3b-64d7-203c" type="rule"/>
           </infoLinks>
         </infoGroup>
       </infoGroups>
@@ -3776,6 +3890,17 @@ During the End Phase you may remove a Friendly Rat model in BtB with this model 
           </conditionGroups>
         </modifier>
       </modifiers>
+      <modifierGroups>
+        <modifierGroup>
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
+          </conditions>
+          <modifiers>
+            <modifier type="append" field="name" value="(public beta)"/>
+            <modifier type="add" field="category" value="f434-17e6-174c-b4f6"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
       <constraints>
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="true" id="6da3-202b-f122-4acf" type="max"/>
       </constraints>
@@ -3897,14 +4022,41 @@ During the End Phase you may remove a Friendly Rat model in BtB with this model 
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="append" field="name" value="(public beta)">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <profiles>
         <profile id="2e78-1e8f-3f3b-8625" name="Things That Go Bump in the Night" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <characteristics>
             <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">• Burakumin begin the game with 1 Ki Token
 • Automatically win the Tactical Test for turn 4;  Enemy models cannot use Ki Boosts until the End Phase
 
-Permitted Burakumin, Yokai]</characteristic>
+Permitted [Burakumin, Yokai]</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="a7f1-3168-44a1-ddcb" name="Things That Go Bump in the Night" hidden="true" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <characteristics>
+            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">• Burakumin begin the game with 1 Ki Token
+• Automatically win the Tactical Test for turn 4;  Enemy models cannot use Ki Boosts until the End Phase
+
+Permitted [Cult Models, Ronin Models]</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -4993,6 +5145,11 @@ When this card has 5 or more Ki Tokens on it, remove this Profane Idol from play
             <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="07f1-1f68-612b-2b36" type="atLeast"/>
           </conditions>
         </modifier>
+        <modifier type="append" field="name" value="(public beta)">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0128-82e3-2ed8-485b" type="max"/>
@@ -5105,9 +5262,21 @@ No model may be chosen more than once.</characteristic>
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="append" field="name" value="(public beta)">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <profiles>
         <profile id="7170-0766-eb7d-9463" name="Hikari" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <characteristics>
             <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">2</characteristic>
             <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
@@ -5116,6 +5285,28 @@ No model may be chosen more than once.</characteristic>
             <characteristic name="Move" typeId="91b7-833e-fd8e-a620">3</characteristic>
             <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
             <characteristic name="Ki" typeId="3969-9568-a914-6854">0</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">*</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">5 OOOOO</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="a9f0-6648-d2b0-25dd" name="Hikari" hidden="true" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">2</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">0</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">3</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">2</characteristic>
             <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
             <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">*</characteristic>
             <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">5 OOOOO</characteristic>
@@ -5713,6 +5904,17 @@ This terrain is always recruited in a Warband with Fuwa Kaidan.</characteristic>
           </conditionGroups>
         </modifier>
       </modifiers>
+      <modifierGroups>
+        <modifierGroup>
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
+          </conditions>
+          <modifiers>
+            <modifier type="append" field="name" value="(public beta)"/>
+            <modifier type="add" field="category" value="f434-17e6-174c-b4f6"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
       <constraints>
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="true" id="e583-35f9-ec64-ae9c" type="max"/>
       </constraints>
@@ -5947,6 +6149,17 @@ This terrain is always recruited in a Warband with Fuwa Kaidan.</characteristic>
           </conditionGroups>
         </modifier>
       </modifiers>
+      <modifierGroups>
+        <modifierGroup>
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
+          </conditions>
+          <modifiers>
+            <modifier type="append" field="name" value="(public beta)"/>
+            <modifier type="add" field="category" value="f434-17e6-174c-b4f6"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
       <constraints>
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="true" id="37b4-feb8-3e03-37fb" type="max"/>
       </constraints>
@@ -6827,6 +7040,11 @@ During the End Phase you may decide the order States are resolved.</characterist
             <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5073-f00b-a8f6-5e3b" type="instanceOf"/>
           </conditions>
         </modifier>
+        <modifier type="add" field="category" value="f434-17e6-174c-b4f6">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="c86a-a2c9-78d8-10b2" type="max"/>
@@ -6942,6 +7160,11 @@ During the End Phase you may decide the order States are resolved.</characterist
         <modifier type="set" field="a111-8656-5c05-7415" value="0.0">
           <conditions>
             <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5073-f00b-a8f6-5e3b" type="instanceOf"/>
+          </conditions>
+        </modifier>
+        <modifier type="add" field="category" value="f434-17e6-174c-b4f6">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -7323,6 +7546,7 @@ This may not cause the model to exceed its maximum Ki Statistic.</characteristic
                   <modifiers>
                     <modifier type="set" field="a111-8656-5c05-7415" value="1.0"/>
                     <modifier type="set" field="1f2e-ab0e-7540-ccb8" value="3.0"/>
+                    <modifier type="append" field="name" value="(public beta)"/>
                   </modifiers>
                 </modifierGroup>
               </modifierGroups>
@@ -8029,8 +8253,31 @@ Choose a Friendly model within 6, that model gains an Activation Counter.</chara
     <infoGroup id="7aaa-c89f-f4fe-f68d" name="Chaos Bolt" hidden="false">
       <profiles>
         <profile id="244e-f253-568b-2a7b" name="Chaos Bolt" hidden="false" typeId="993a-e62a-7922-0ccb" typeName="Ki Feat">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <characteristics>
             <characteristic name="Cost" typeId="a126-54d9-0a27-f4b6">2</characteristic>
+            <characteristic name="Timing" typeId="f8a8-8a3e-ef58-4c61">Simple</characteristic>
+            <characteristic name="Subject" typeId="4ac8-2bb1-0c84-f088">Target 6&quot; Opposed Ki Test</characteristic>
+            <characteristic name="Limitation" typeId="6fc9-5d13-2687-b2a5"/>
+            <characteristic name="Description" typeId="f804-b969-00da-2123">Target model gains a Poison 1, Bleed 1 and Fire 1 Marker.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="dfec-0b77-2ebe-462f" name="Chaos Bolt" hidden="true" typeId="993a-e62a-7922-0ccb" typeName="Ki Feat">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <characteristics>
+            <characteristic name="Cost" typeId="a126-54d9-0a27-f4b6">3</characteristic>
             <characteristic name="Timing" typeId="f8a8-8a3e-ef58-4c61">Simple</characteristic>
             <characteristic name="Subject" typeId="4ac8-2bb1-0c84-f088">Target 6&quot; Opposed Ki Test</characteristic>
             <characteristic name="Limitation" typeId="6fc9-5d13-2687-b2a5"/>

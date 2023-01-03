@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="67f3-e3c0-9b54-71fa" name="Kinshi Temple" revision="5" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="10" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="67f3-e3c0-9b54-71fa" name="Kinshi Temple" revision="5" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="11" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="096c-e1e9-7274-9439" name="Master Shi" hidden="false" collective="false" import="true" type="model">
       <constraints>
@@ -221,6 +221,13 @@ This model then gains an ability based on the types of Kami Wounded:
       </costs>
     </selectionEntry>
     <selectionEntry id="3cc6-0c2b-8bbb-8a62" name="Batsu" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="append" field="name" value="(public beta)">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4b0e-d998-f3c4-5116" type="max"/>
       </constraints>
@@ -243,6 +250,13 @@ This model then gains an ability based on the types of Kami Wounded:
       </profiles>
       <infoGroups>
         <infoGroup id="787d-ddbc-14c9-9901" name="Traits" hidden="false">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <profiles>
             <profile id="2fd4-b520-0a19-9e42" name="Batsu" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
               <characteristics>
@@ -304,6 +318,29 @@ When this model deals Damage in a Melee Exchange, once the activation is complet
               </characteristics>
             </profile>
           </profiles>
+        </infoGroup>
+        <infoGroup id="9769-0c74-6169-d13d" name="Traits" hidden="false">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="lessThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <profiles>
+            <profile id="d020-40eb-f50a-a94e" name="Batsu" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Immune [Fire], Jump Up, Kata, Ranged Defence (1), Vengeance [Monk]</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="b66b-4c2a-3481-3b75" name="Kata" hidden="false" targetId="7283-1e6d-cb9c-f1c8" type="rule"/>
+            <infoLink id="3957-affc-532d-98de" name="Ranged Defence " hidden="true" targetId="9b8d-9ca9-e25d-3988" type="rule"/>
+            <infoLink id="5f90-09ae-3358-4577" name="Jump Up" hidden="false" targetId="1575-e12f-4ca3-c557" type="rule"/>
+            <infoLink id="00e5-a237-80ed-d4fb" name="Vengeance" hidden="false" targetId="6779-0aac-2f51-f67e" type="rule"/>
+            <infoLink id="ecd4-88c9-76bf-9b00" name="Immune" hidden="false" targetId="ea08-b25e-0ea8-af73" type="rule"/>
+          </infoLinks>
         </infoGroup>
       </infoGroups>
       <categoryLinks>
@@ -680,6 +717,18 @@ This model treats Master Enos as having the traits Fear (6) and Terror.</charact
       </costs>
     </selectionEntry>
     <selectionEntry id="f00c-509a-7183-8a02" name="Zenith of the Void" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="f00c-509a-7183-8a02" type="lessThan"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="477a-e693-0888-08f7" type="atLeast"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="f450-6a1d-ab80-b985" name="Zenith of the Void" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
           <characteristics>
@@ -1166,25 +1215,178 @@ Models may not end any Movement or be Placed on top of these Terrain elements.</
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="14.0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="ecb4-9578-acca-a48b" name="Everything and Nothing" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="ecb4-9578-acca-a48b" type="lessThan"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="477a-e693-0888-08f7" type="atLeast"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <profiles>
+        <profile id="2a84-62bb-0e4c-6c15" name="Everything and Nothing" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
+          <characteristics>
+            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">• When a Ronin model is Killed, Replace it with a Void Rift. This can be used to Deploy a Replacing Void Rift in Base to Base or a ZoC.
+• When a Ronin model performs a Scenario Action, remove one fewer Activation Counters at the end of the action.
+• Whenever a VP is scored, Deploy a Void Rift terrain in Base to Base with a Friendly model. This can be used to Deploy a Void Rift in Base to Base or a ZOC.
+
+Permitted [Kinshi Temple models, Ronin models]</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="dae6-a14e-b9c5-1749" name="Theme Cards" hidden="false" targetId="477a-e693-0888-08f7" primary="true"/>
+        <categoryLink id="dd13-fc10-590d-f4af" name="Faction: Kinshi Temple" hidden="false" targetId="943d-6b70-d85b-fb7b" primary="false"/>
+        <categoryLink id="5fc9-e9f6-b446-82f1" name="Cycle: Weeping Sky" hidden="false" targetId="6da0-b320-b958-dc82" primary="false"/>
+      </categoryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0.0"/>
+      </costs>
+    </selectionEntry>
   </selectionEntries>
   <entryLinks>
-    <entryLink id="087b-879a-43a1-bacf" name="Tenbatsu" hidden="false" collective="false" import="true" targetId="7785-a709-ad57-73e4" type="selectionEntry"/>
-    <entryLink id="bb43-f30c-4f7f-de66" name="Kami of the Empty Mind" hidden="false" collective="false" import="true" targetId="456d-02e7-13bd-ca0e" type="selectionEntry"/>
-    <entryLink id="1ff7-6dec-67b4-9e1e" name="Kami of Blighted Earth" hidden="false" collective="false" import="true" targetId="d5b6-fdca-2021-922e" type="selectionEntry"/>
-    <entryLink id="7d3a-fdeb-dad8-4d12" name="Kami of Choking Fog" hidden="false" collective="false" import="true" targetId="f3c3-0154-adbf-aa05" type="selectionEntry"/>
-    <entryLink id="41ae-fb97-99e2-500b" name="Taiyo" hidden="true" collective="false" import="true" targetId="90d7-5fe5-0a05-1bea" type="selectionEntry"/>
-    <entryLink id="323c-731a-e823-5955" name="Ryokeen" hidden="true" collective="false" import="true" targetId="f97b-84fa-27d7-b73b" type="selectionEntry"/>
-    <entryLink id="ffb5-6bdc-eaf0-c1b1" name="Kiyozumi Sadaka" hidden="true" collective="false" import="true" targetId="7728-72dd-3889-91b2" type="selectionEntry"/>
-    <entryLink id="d61d-f7f0-ee68-56e7" name="Kiyozumi Kicho" hidden="true" collective="false" import="true" targetId="7b8f-61a1-2d88-60f2" type="selectionEntry"/>
-    <entryLink id="bf2b-bc02-242b-5d6e" name="Kiyozumi Hinadori" hidden="true" collective="false" import="true" targetId="07f2-8804-f10d-7bbb" type="selectionEntry"/>
-    <entryLink id="1443-0721-fe07-07c5" name="Kiyozumi Haiboku" hidden="true" collective="false" import="true" targetId="91b9-5dcc-298c-0bfb" type="selectionEntry"/>
-    <entryLink id="9e21-6de9-8376-8bf1" name="Kenmeina" hidden="true" collective="false" import="true" targetId="b896-0ea7-fb05-1ecc" type="selectionEntry"/>
-    <entryLink id="4384-a8b6-ee40-35d3" name="Hozumi Maha" hidden="false" collective="false" import="true" targetId="09da-574e-599a-3226" type="selectionEntry"/>
-    <entryLink id="7cc3-7562-9a89-cdff" name="Hozumi Koga" hidden="true" collective="false" import="true" targetId="2b64-ba79-8ea1-4098" type="selectionEntry"/>
-    <entryLink id="b478-5048-c0fe-d82f" name="Hozumi Daihanji" hidden="true" collective="false" import="true" targetId="2195-17c7-b68c-0111" type="selectionEntry"/>
+    <entryLink id="087b-879a-43a1-bacf" name="Tenbatsu" hidden="false" collective="false" import="true" targetId="7785-a709-ad57-73e4" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="ecb4-9578-acca-a48b" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink id="bb43-f30c-4f7f-de66" name="Kami of the Empty Mind" hidden="false" collective="false" import="true" targetId="456d-02e7-13bd-ca0e" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="ecb4-9578-acca-a48b" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink id="1ff7-6dec-67b4-9e1e" name="Kami of Blighted Earth" hidden="false" collective="false" import="true" targetId="d5b6-fdca-2021-922e" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="ecb4-9578-acca-a48b" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink id="7d3a-fdeb-dad8-4d12" name="Kami of Choking Fog" hidden="false" collective="false" import="true" targetId="f3c3-0154-adbf-aa05" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="ecb4-9578-acca-a48b" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink id="41ae-fb97-99e2-500b" name="Taiyo" hidden="true" collective="false" import="true" targetId="90d7-5fe5-0a05-1bea" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="ecb4-9578-acca-a48b" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink id="323c-731a-e823-5955" name="Ryokeen" hidden="true" collective="false" import="true" targetId="f97b-84fa-27d7-b73b" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="ecb4-9578-acca-a48b" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink id="ffb5-6bdc-eaf0-c1b1" name="Kiyozumi Sadaka" hidden="true" collective="false" import="true" targetId="7728-72dd-3889-91b2" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="ecb4-9578-acca-a48b" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink id="d61d-f7f0-ee68-56e7" name="Kiyozumi Kicho" hidden="true" collective="false" import="true" targetId="7b8f-61a1-2d88-60f2" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="ecb4-9578-acca-a48b" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink id="bf2b-bc02-242b-5d6e" name="Kiyozumi Hinadori" hidden="true" collective="false" import="true" targetId="07f2-8804-f10d-7bbb" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="ecb4-9578-acca-a48b" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink id="1443-0721-fe07-07c5" name="Kiyozumi Haiboku" hidden="true" collective="false" import="true" targetId="91b9-5dcc-298c-0bfb" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="ecb4-9578-acca-a48b" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink id="9e21-6de9-8376-8bf1" name="Kenmeina" hidden="true" collective="false" import="true" targetId="b896-0ea7-fb05-1ecc" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="ecb4-9578-acca-a48b" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink id="4384-a8b6-ee40-35d3" name="Hozumi Maha" hidden="false" collective="false" import="true" targetId="09da-574e-599a-3226" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="ecb4-9578-acca-a48b" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink id="7cc3-7562-9a89-cdff" name="Hozumi Koga" hidden="true" collective="false" import="true" targetId="2b64-ba79-8ea1-4098" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="ecb4-9578-acca-a48b" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink id="b478-5048-c0fe-d82f" name="Hozumi Daihanji" hidden="true" collective="false" import="true" targetId="2195-17c7-b68c-0111" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="ecb4-9578-acca-a48b" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
     <entryLink id="c817-8a67-2afd-f90c" name="The Hozumi Family" hidden="false" collective="false" import="true" targetId="4750-f234-49e4-79c1" type="selectionEntry"/>
     <entryLink id="dc23-b5b6-c0ef-6483" name="The Kiyozumi Family" hidden="false" collective="false" import="true" targetId="0e4a-a40c-14eb-2f4f" type="selectionEntry"/>
-    <entryLink id="129b-bedf-09bc-7146" name="The Dark Pilgrim" hidden="false" collective="false" import="true" targetId="1ada-6f0c-8123-5aab" type="selectionEntry"/>
+    <entryLink id="129b-bedf-09bc-7146" name="The Dark Pilgrim" hidden="false" collective="false" import="true" targetId="1ada-6f0c-8123-5aab" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="ecb4-9578-acca-a48b" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
     <entryLink id="0b42-5fb9-8754-2f32" name="Kodai" hidden="false" collective="false" import="true" targetId="1c52-10dc-2bf8-938b" type="selectionEntry">
       <categoryLinks>
         <categoryLink id="c4a5-21c9-fa45-7b76" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
@@ -1217,6 +1419,11 @@ Models may not end any Movement or be Placed on top of these Terrain elements.</
           </repeats>
         </modifier>
         <modifier type="append" field="name" value=" (reference)"/>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="ecb4-9578-acca-a48b" type="atLeast"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <categoryLinks>
         <categoryLink id="a2e4-5e7a-b897-52d3" name="New CategoryLink" hidden="false" targetId="5073-f00b-a8f6-5e3b" primary="true"/>
