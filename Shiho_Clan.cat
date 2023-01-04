@@ -758,6 +758,13 @@ This model gains Fearless when declaring actions Targeting or Selecting a model 
           </infoLinks>
         </infoGroup>
         <infoGroup id="e5ed-eb5f-b552-d851" name="Melee Weapon" hidden="false">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <profiles>
             <profile id="1185-341b-739e-3e7c" name="No-Dachi" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
               <characteristics>
@@ -776,6 +783,30 @@ This model gains Fearless when declaring actions Targeting or Selecting a model 
         <infoGroup id="34e4-f8b4-bf43-9c69" name="Unique Effects" hidden="false">
           <infoLinks>
             <infoLink id="35db-265b-4e5d-f42d" name="Killing Blow" hidden="false" targetId="6374-b4ae-6cc5-4908" type="profile"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="30e7-d199-d5af-da5a" name="Melee Weapon" hidden="false">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="lessThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <profiles>
+            <profile id="5778-b1ce-a551-514e" name="No-Dachi" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+2</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Reach</characteristic>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Powerful Attack (1), Sidestep Defence (0)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="636a-5162-8156-3f53" name="Reach" hidden="false" targetId="e28e-d5dd-a262-1101" type="rule"/>
+            <infoLink id="1962-f940-58f3-b140" name="Sidestep Defence " hidden="false" targetId="753c-6c3b-64d7-203c" type="rule"/>
+            <infoLink id="943c-7903-d096-979e" name="Powerful Attack" hidden="false" targetId="d56a-058d-95d9-5b60" type="rule"/>
           </infoLinks>
         </infoGroup>
       </infoGroups>
@@ -1260,23 +1291,13 @@ When a model performs a Wait Action to Destroy this Terrain, it need not spend 2
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2379-f077-1de3-5d39" type="min"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="f5cd-3db3-365a-7cb0" type="max"/>
           </constraints>
-          <profiles>
-            <profile id="12a2-4e1e-fed5-a856" name="Heimin A" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
-              <characteristics>
-                <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">2</characteristic>
-                <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
-                <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">2</characteristic>
-                <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
-                <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
-                <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
-                <characteristic name="Ki" typeId="3969-9568-a914-6854">1</characteristic>
-                <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
-                <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">6</characteristic>
-                <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">4 OOOO</characteristic>
-                <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
+          <infoLinks>
+            <infoLink id="6a5f-7a0f-672a-9ece" name="Heimin" hidden="false" targetId="6809-41b2-2abc-7558" type="profile">
+              <modifiers>
+                <modifier type="append" field="name" value="A"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
         </entryLink>
         <entryLink id="9d93-be08-4025-78ad" name="Heimin" hidden="false" collective="false" import="true" targetId="bcc0-d49e-e6f8-4c5c" type="selectionEntry">
           <modifiers>
@@ -1285,23 +1306,13 @@ When a model performs a Wait Action to Destroy this Terrain, it need not spend 2
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d507-60a0-714b-4d1f" type="max"/>
           </constraints>
-          <profiles>
-            <profile id="412c-e9d6-ddb1-4a20" name="Heimin B" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
-              <characteristics>
-                <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">2</characteristic>
-                <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
-                <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">2</characteristic>
-                <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
-                <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
-                <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
-                <characteristic name="Ki" typeId="3969-9568-a914-6854">1</characteristic>
-                <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
-                <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">6</characteristic>
-                <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">4 OOOO</characteristic>
-                <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
+          <infoLinks>
+            <infoLink id="669b-c12c-5d59-0c41" name="Heimin" hidden="false" targetId="6809-41b2-2abc-7558" type="profile">
+              <modifiers>
+                <modifier type="append" field="name" value="B"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
         </entryLink>
         <entryLink id="8b24-409f-2c91-a143" name="Heimin" hidden="false" collective="false" import="true" targetId="bcc0-d49e-e6f8-4c5c" type="selectionEntry">
           <modifiers>
@@ -1310,23 +1321,13 @@ When a model performs a Wait Action to Destroy this Terrain, it need not spend 2
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="489b-3f03-c609-2302" type="max"/>
           </constraints>
-          <profiles>
-            <profile id="ba3e-5a1e-0d24-d5ff" name="Heimin C" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
-              <characteristics>
-                <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">2</characteristic>
-                <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
-                <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">2</characteristic>
-                <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
-                <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
-                <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
-                <characteristic name="Ki" typeId="3969-9568-a914-6854">1</characteristic>
-                <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
-                <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">6</characteristic>
-                <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">4 OOOO</characteristic>
-                <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
+          <infoLinks>
+            <infoLink id="1acf-c946-dc62-7b14" name="Heimin" hidden="false" targetId="6809-41b2-2abc-7558" type="profile">
+              <modifiers>
+                <modifier type="append" field="name" value="C"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
         </entryLink>
       </entryLinks>
       <costs>
@@ -1681,6 +1682,13 @@ When a model performs a Wait Action to Destroy this Terrain, it need not spend 2
       </constraints>
       <profiles>
         <profile id="1174-7d95-1b39-62c7" name="The Shiho Return" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <characteristics>
             <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">Friendly models that are Elsewhere are ignored when calculating Pass Tokens.
 • During the first turn of the game, models in this Warband gain Endurance and do not suffer the melee penalty for having Run.
@@ -1688,6 +1696,22 @@ When a model performs a Wait Action to Destroy this Terrain, it need not spend 2
 
 Permitted [Samurai, Ronin Kami, Eagles]
 </characteristic>
+          </characteristics>
+        </profile>
+        <profile id="1fbc-cec3-f42d-f624" name="The Shiho Return" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="lessThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <characteristics>
+            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">Friendly models that are Elsewhere are ignored when calculating Pass Tokens.
+• During the first turn of the game, models in this Warband gain Endurance and do not suffer the melee penalty for having Run.
+• Once per game, in a Starting Phase when a model is Deployed using the Flank rules, each Enemy model must perform a Ki Challenge Test(5). If it fails, you may change that model&apos;s facing.
+
+Permitted [Samurai, Eagles, Ronin Kami, Ronin Eagles]</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -1758,8 +1782,8 @@ Exclusion [Ronin Special Cards]</characteristic>
             <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">• Loyal models gain Leadership [Ronin] (1/6&quot;).
 • Ronin models gain Scout (1/1&quot;).
 • After recruiting the Warband to the correct Rice Cost, choose another 15 Rice of cards as Reserves. These are not added to the main list but kept separate. The Warband with and without Reserves must be legal.
-Before Deployment you may switch cards in the Reserves with cards in the main list, the main list must remain legal. Show the new list to your Opponent before the game.
-In a timed event, you have 5 minutes to make substitutions.
+  Before Deployment you may switch cards in the Reserves with cards in the main list, the main list must remain legal. Show the new list to your Opponent before the game.
+  In a timed event, you have 5 minutes to make substitutions.
 
 Permitted [Shiho Faction models, Ronin models]
 Exclusion [Ronin Special Cards]</characteristic>
@@ -2741,6 +2765,13 @@ This model&apos;s Dai Kyu Ranged Weapon gains Reload (+1) and this model does no
       </profiles>
       <infoGroups>
         <infoGroup id="cb61-3fd6-35e8-4e70" name="Traits" hidden="false">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <profiles>
             <profile id="06f9-96f3-aa24-1ffc" name="Yoshitaka" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
               <characteristics>
@@ -2766,6 +2797,43 @@ This model&apos;s Dai Kyu Ranged Weapon gains Reload (+1) and this model does no
                 <characteristic name="Traits" typeId="39e3-f945-7956-ad4e"/>
                 <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d"/>
                 <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+        </infoGroup>
+        <infoGroup id="35c6-f111-1d50-c776" name="Traits" hidden="false">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="lessThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <profiles>
+            <profile id="09e4-3d90-d3a0-3e0a" name="Yoshitaka" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Vengeance [Takashi], Virtue (6&quot;)</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="f5aa-1050-ddb6-412b" name="Virtue" hidden="false" targetId="57d7-cc96-ce93-9258" type="rule"/>
+            <infoLink id="2898-3e0a-4628-66cc" name="Vengeance" hidden="false" targetId="6779-0aac-2f51-f67e" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="d0bd-4252-9df3-8d32" name="Unique Effects" hidden="false">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="lessThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <profiles>
+            <profile id="760b-afe0-fd19-2d88" name="Unique Effects" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">While this model is in play, when a Friendly Loyal model spends a Virtue Token, you may choose one of the following effects:
+• This model may increase a Statistic by 1 until the current test or movement is resolved. This is considered to be a Ki Boost.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -2813,10 +2881,16 @@ You may decide the order recruited terrain (Friendly and Enemy) is Deployed.</ch
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c7de-19d4-64dd-911f" type="atLeast"/>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="966b-fc6b-359e-5c30" type="atLeast"/>
                 <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="7ef8-7f43-f951-237e" type="atLeast"/>
               </conditions>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="fb4a-18a7-5b40-74ec" type="lessThan"/>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="477a-e693-0888-08f7" type="atLeast"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </conditionGroup>
           </conditionGroups>
         </modifier>
@@ -3143,13 +3217,37 @@ You may decide the order recruited terrain (Friendly and Enemy) is Deployed.</ch
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f5-1986-098c-0729" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c7de-19d4-64dd-911f" type="lessThan"/>
                 <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9126-f480-c2df-fbaf" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="fb4a-18a7-5b40-74ec" type="lessThan"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
         </modifier>
       </modifiers>
+      <modifierGroups>
+        <modifierGroup>
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="477a-e693-0888-08f7" type="atLeast"/>
+          </conditions>
+          <modifiers>
+            <modifier type="add" field="category" value="53b4-db5e-0527-0759"/>
+            <modifier type="set-primary" field="category" value="0ca8-2040-37f2-a1e0"/>
+            <modifier type="remove" field="category" value="9fba-f50b-c8f7-8396"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
+      <entryLinks>
+        <entryLink id="b2cf-34cb-2df6-b0d5" name="Enhancements" hidden="false" collective="false" import="true" targetId="8a7c-6251-523e-a67c" type="selectionEntryGroup">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="477a-e693-0888-08f7" type="lessThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
+      </entryLinks>
     </entryLink>
     <entryLink id="5323-3a6e-0ae8-414a" name="Brotherhood" hidden="false" collective="false" import="true" targetId="9402-edcc-93a2-aef1" type="selectionEntry"/>
     <entryLink id="97bf-558f-3853-c62d" name="Eldest Brother" hidden="true" collective="false" import="true" targetId="294d-a0fa-f437-2fca" type="selectionEntry">
@@ -3182,6 +3280,7 @@ You may decide the order recruited terrain (Friendly and Enemy) is Deployed.</ch
               <conditions>
                 <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f5-1986-098c-0729" type="atLeast"/>
                 <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="7ef8-7f43-f951-237e" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c7de-19d4-64dd-911f" type="atLeast"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -3426,7 +3525,9 @@ You may decide the order recruited terrain (Friendly and Enemy) is Deployed.</ch
           <profiles>
             <profile id="d343-ad61-162f-c690" name="Improper Conduct" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
               <characteristics>
-                <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">Attached model gains Assassin when involved in a Melee Exchange.</characteristic>
+                <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">Attached model gains Assassin when involved in a Melee Exchange.
+
+Requirement [Loyal &amp; Samurai]</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -3522,6 +3623,33 @@ Requirement [Loyal &amp; Samurai]</characteristic>
           </constraints>
           <profiles>
             <profile id="7ed9-227b-972d-36aa" name="Lord of the Jwar Isles" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="lessThan"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <characteristics>
+                <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">When an Enemy model that is not a Samurai or Ashigaru declares an action which will either...
+• bring it into BtB with the Attached model or
+• Targets the Attached model with a Ranged Attack or Ki Feat
+...it must make a Challenge (5) Ki Test.
+If the Enemy model is successful resolve the Action as normal.
+lf unsuccessful its activation ends before any movement and it removes an Activation Counter, then discard this card.
+This is a Trap effect.
+
+Requirement [Loyal &amp; Samurai]</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="e537-a4c4-d0c1-98fb" name="Lord of the Jwar Isles" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <characteristics>
                 <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">When an Enemy non-Samurai, non-Ashigaru model declares an action which will either...
 • bring it into BtB with the Attached model or
@@ -3534,8 +3662,12 @@ Requirement [Loyal &amp; Samurai]</characteristic>
               </characteristics>
             </profile>
           </profiles>
+          <infoLinks>
+            <infoLink id="5b0c-7448-c720-7c1d" name="Trap" hidden="false" targetId="6ef1-a206-e5d4-b3ab" type="rule"/>
+          </infoLinks>
           <categoryLinks>
             <categoryLink id="fe10-aba0-cd75-0d13" name="New CategoryLink" hidden="false" targetId="17cf-d9a9-c7c1-bcb6" primary="true"/>
+            <categoryLink id="7e71-ebb0-b52a-b7e6" name="Trap" hidden="false" targetId="d190-d7ff-d350-6425" primary="false"/>
           </categoryLinks>
           <costs>
             <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1.0"/>
@@ -4139,10 +4271,35 @@ Requirement [Loyal &amp; Samurai]
               </constraints>
               <profiles>
                 <profile id="1589-31c0-ac38-c6fd" name="Shiho Clan Armour" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
+                  <modifiers>
+                    <modifier type="set" field="hidden" value="true">
+                      <conditions>
+                        <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="lessThan"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
                   <characteristics>
                     <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">• Attached model gains Armour (2).
 • Enemy Damage Rolls on the Attached model are ignored if the individual dice values of the Damage Roll are the same number.
 • Attached model provides Cover as if it were a terrain element.
+• If the Attached model is Targeted by a Ranged Attack, the Enemy model gains double Reload Markers (if any).
+• The Attached model loses Flank, Booted and cannot be used to replace a model with the Uncloak Ki Feat.
+
+Requirement [Loyal &amp; Samurai]</characteristic>
+                  </characteristics>
+                </profile>
+                <profile id="cca6-333b-5564-0914" name="Shiho Clan Armour" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
+                  <modifiers>
+                    <modifier type="set" field="hidden" value="true">
+                      <conditions>
+                        <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                  <characteristics>
+                    <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">• Attached model gains Armour (2).
+• Enemy Damage Rolls on the Attached model are ignored if the individual dice values of the Damage Roll are the same number.
+• Attached model provides Cover to Friendly models as if it were a terrain element.
 • If the Attached model is Targeted by a Ranged Attack, the Enemy model gains double Reload Markers (if any).
 • The Attached model loses Flank, Booted and cannot be used to replace a model with the Uncloak Ki Feat.
 
@@ -4497,6 +4654,21 @@ Exclusion [Hiroto]</characteristic>
     <profile id="03b4-0274-07e0-8a00" name="Open Rebellion" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
       <characteristics>
         <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">This model may only be recruited into a Warband using the Open Rebellion theme.</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="6809-41b2-2abc-7558" name="Heimin" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+      <characteristics>
+        <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">2</characteristic>
+        <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+        <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">2</characteristic>
+        <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+        <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
+        <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+        <characteristic name="Ki" typeId="3969-9568-a914-6854">1</characteristic>
+        <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+        <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">6</characteristic>
+        <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">4 OOOO</characteristic>
+        <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>

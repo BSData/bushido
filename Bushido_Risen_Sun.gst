@@ -265,6 +265,8 @@
     <categoryEntry id="7cb4-8adf-0e10-c1ea" name="Faction Test Cards" hidden="false"/>
     <categoryEntry id="6da0-b320-b958-dc82" name="Cycle: Weeping Sky" hidden="false"/>
     <categoryEntry id="d190-d7ff-d350-6425" name="Trap" hidden="false"/>
+    <categoryEntry id="a614-eb85-43c8-7869" name="Filters" hidden="false"/>
+    <categoryEntry id="728d-5909-6312-6d40" name="Additional Rules" hidden="false"/>
   </categoryEntries>
   <forceEntries>
     <forceEntry id="2150-40b1-52f8-4a8a" name="Risen Sun" hidden="true">

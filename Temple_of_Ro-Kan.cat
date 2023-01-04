@@ -90,15 +90,50 @@ If activated, the model must declare an action permitted while in BtB.</characte
       </constraints>
       <profiles>
         <profile id="ec57-5b4b-d020-55e3" name="Pungi Pit Trap" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <characteristics>
             <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">Play when an Enemy model without the Intangible or Cloudwalk traits declares any action in which it will Move.
 That model makes a Move Challenge Test (8).
 If unsuccessful, the current activation ends, the model suffers a Success Level 2 Damage Roll and its action is considered resolved.</characteristic>
           </characteristics>
         </profile>
+        <profile id="a00d-7ff8-2801-a8cd" name="Pungi Pit Trap" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="lessThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <characteristics>
+            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">Play when an Enemy model without the Cloudwalk or Intangible traits declares any Action in which it will move.
+The model makes a Move Challenge Test (8).
+If unsuccessful, the current activation ends, the model suffers a success level 2 Damage Roll, it loses an Activation Counter and its action is considered resolved.
+
+This is a Trap effect.</characteristic>
+          </characteristics>
+        </profile>
       </profiles>
+      <infoLinks>
+        <infoLink id="ff5b-aaf4-0573-d42b" name="Trap" hidden="false" targetId="6ef1-a206-e5d4-b3ab" type="rule">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="lessThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </infoLink>
+      </infoLinks>
       <categoryLinks>
         <categoryLink id="9c79-c0f3-a865-aaae" name="New CategoryLink" hidden="false" targetId="d360-71aa-ca22-ba3c" primary="true"/>
+        <categoryLink id="0cca-a42c-7b65-706f" name="Trap" hidden="false" targetId="d190-d7ff-d350-6425" primary="false"/>
       </categoryLinks>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2.0"/>
@@ -122,15 +157,50 @@ If unsuccessful, the current activation ends, the model suffers a Success Level 
       </constraints>
       <profiles>
         <profile id="e1cc-4665-7b84-633f" name="Rope Trap" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <characteristics>
             <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">Play when an Enemy model without the Intangible trait declares any action in which it will Move.
 That model makes a Size Challenge Test (6).
 If unsuccessful, the current activation ends, the model gains an Immobilised Marker, and its action is considered resolved.</characteristic>
           </characteristics>
         </profile>
+        <profile id="05e7-0338-8fb2-70b2" name="Rope Trap" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="lessThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <characteristics>
+            <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">Play when an Enemy model without the Intangible traits declares any Action in which it will move.
+The model makes a Size Challenge Test (6).
+If unsuccessful, the current activation ends, the model gains an Immobilised Marker, it loses an Activation Counter and its action is considered resolved.
+
+This is a Trap effect.</characteristic>
+          </characteristics>
+        </profile>
       </profiles>
+      <infoLinks>
+        <infoLink id="c52c-424e-9837-8743" name="Trap" hidden="false" targetId="6ef1-a206-e5d4-b3ab" type="rule">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="lessThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </infoLink>
+      </infoLinks>
       <categoryLinks>
         <categoryLink id="69a9-13ea-0df5-ee1b" name="New CategoryLink" hidden="false" targetId="d360-71aa-ca22-ba3c" primary="true"/>
+        <categoryLink id="b57d-c691-ba1d-a7c5" name="Trap" hidden="false" targetId="d190-d7ff-d350-6425" primary="false"/>
       </categoryLinks>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1.0"/>
@@ -877,7 +947,7 @@ Immediately distribute 4 additional Ki Tokens to non-Soulles models in the Warba
             </conditionGroup>
           </conditionGroups>
         </modifier>
-        <modifier type="append" field="name" value="(public beta)">
+        <modifier type="set" field="name" value="Twin Shisa (public beta)">
           <conditions>
             <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
           </conditions>
@@ -928,8 +998,40 @@ Immediately distribute 4 additional Ki Tokens to non-Soulles models in the Warba
         <infoGroup id="c414-947a-47d6-8268" name="Unique Effects" hidden="false">
           <profiles>
             <profile id="7ecb-fde9-8ecb-0099" name="Shisa" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <characteristics>
                 <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">Whenever a Shisa model gains or loses Activation Counters, the other Shisa also gains or loses the same number of Counters.
+
+This model cannot be Healed.</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="7824-0b19-be00-0f9e" name="Shisa" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="lessThan"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">Twin Shisa do not gain Activation Counters during the Starting Phase.
+During the Starting Phase, place 2 Activation Counters on this card.
+
+Twin Shisa share a single Activation Counter pool.
+When a Twin Shisa would gain or remove an Activation Counter, instead place or remove those Activation Counters on this card.
+Either Twin Shisa may spend Activation Counters from this card to pay for actions.
+
+These models are only considered Exhausted while there are no Activation Counters on this card.
+
+Twin Shisa share a single Ki Pool.
+When a Twin Shisa would gain Ki Tokens, instead place those Ki Tokens on this card.
+Either Twin Shisa may spend Ki Tokens from this card to pay for Ki Feats, Boosts, and other effects.
 
 This model cannot be Healed.</characteristic>
               </characteristics>
@@ -957,23 +1059,13 @@ This model cannot be Healed.</characteristic>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="15e2-1acc-4270-6982" type="min"/>
           </constraints>
-          <profiles>
-            <profile id="39bd-603c-7689-d24c" name="Shisa A" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
-              <characteristics>
-                <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
-                <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
-                <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">-</characteristic>
-                <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
-                <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
-                <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
-                <characteristic name="Ki" typeId="3969-9568-a914-6854">0</characteristic>
-                <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
-                <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">6</characteristic>
-                <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">3 OOO</characteristic>
-                <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
+          <infoLinks>
+            <infoLink id="7b19-5878-8805-5670" name="Shisa" hidden="false" targetId="4e2d-d43f-364e-1325" type="profile">
+              <modifiers>
+                <modifier type="append" field="name" value="A"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
         </entryLink>
         <entryLink id="e6b5-38bd-64e5-da9a" name="Shisa" hidden="false" collective="false" import="true" targetId="8c38-17e1-00bc-75d6" type="selectionEntry">
           <modifiers>
@@ -982,23 +1074,13 @@ This model cannot be Healed.</characteristic>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8226-7be1-01ac-4c33" type="min"/>
           </constraints>
-          <profiles>
-            <profile id="a50a-d655-5f3f-c1fa" name="Shisa B" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
-              <characteristics>
-                <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
-                <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
-                <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">-</characteristic>
-                <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
-                <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
-                <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
-                <characteristic name="Ki" typeId="3969-9568-a914-6854">0</characteristic>
-                <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
-                <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">6</characteristic>
-                <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">3 OOO</characteristic>
-                <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
+          <infoLinks>
+            <infoLink id="a026-aa1c-1395-f15b" name="Shisa" hidden="false" targetId="4e2d-d43f-364e-1325" type="profile">
+              <modifiers>
+                <modifier type="append" field="name" value="B"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
         </entryLink>
       </entryLinks>
       <costs>
@@ -2258,158 +2340,6 @@ When Deploying this model you must choose to Deploy either the Kota - Fox Form m
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="21.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="ceaa-5384-e9af-9153" name="Koji&apos;s Pack" hidden="false" collective="false" import="true" type="model">
-      <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="44e6-4155-6b9b-2521" type="atLeast"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-        <modifier type="append" field="name" value="(public beta)">
-          <conditions>
-            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-      <constraints>
-        <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="true" id="d976-35da-8820-75b6" type="max"/>
-      </constraints>
-      <infoGroups>
-        <infoGroup id="9d41-eb0c-1bbd-428b" name="Traits" hidden="false">
-          <profiles>
-            <profile id="93bc-ba32-e544-16eb" name="Monkey" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
-              <characteristics>
-                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Aloof, Co-ordinated Attack [Monkey, Koji], Dodge (1), Group, Insignificant, Lightfooted, Sacrifice [Monkey, Koji](3&quot;), Scout (0/4&quot;), Tiny, Weak</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <infoLinks>
-            <infoLink id="c259-d68d-28d2-1d97" name="Aloof" hidden="false" targetId="5101-70fc-eca4-d99b" type="rule"/>
-            <infoLink id="7fd1-2236-3200-1cdc" name="Co-ordinated Attack" hidden="false" targetId="2337-7bcc-c1f2-f2bd" type="rule"/>
-            <infoLink id="8fa2-bd36-b806-de95" name="Dodge " hidden="false" targetId="14d5-d459-5d8a-c73e" type="rule"/>
-            <infoLink id="6698-8592-0b29-1939" name="Group" hidden="false" targetId="4c02-03a1-ae7b-7821" type="rule"/>
-            <infoLink id="7d00-10b9-3c49-adaf" name="Insignificant" hidden="false" targetId="1614-d86c-ef8a-c095" type="rule"/>
-            <infoLink id="3880-8379-759a-70e7" name="Lightfooted" hidden="false" targetId="57d2-cd57-07f9-addf" type="rule"/>
-            <infoLink id="dc55-22c8-867a-2f20" name="Sacrifice" hidden="false" targetId="28a8-7487-2fb6-e942" type="rule"/>
-            <infoLink id="d505-63c7-4679-890e" name="Scout" hidden="false" targetId="8c82-d05a-f63b-1841" type="rule"/>
-            <infoLink id="fd9c-1097-6b89-cecb" name="Tiny" hidden="false" targetId="335c-7f6f-9ca0-cb93" type="rule"/>
-            <infoLink id="b60a-b2aa-4187-bbe6" name="Weak" hidden="false" targetId="6a0c-59fb-ff0e-aced" type="rule"/>
-          </infoLinks>
-        </infoGroup>
-        <infoGroup id="41a6-eab0-10a5-b944" name="Melee Weapon" hidden="false">
-          <profiles>
-            <profile id="22d7-a399-f1bc-236e" name="Bite" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
-              <characteristics>
-                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">-2</characteristic>
-                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e"/>
-                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Sidestep Defence (0)</characteristic>
-                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
-              </characteristics>
-            </profile>
-          </profiles>
-          <infoLinks>
-            <infoLink id="a385-45d8-5fcb-9b6a" name="Sidestep Defence " hidden="false" targetId="753c-6c3b-64d7-203c" type="rule"/>
-          </infoLinks>
-        </infoGroup>
-        <infoGroup id="2493-3c01-6033-4380" name="Unique Effects" hidden="false">
-          <profiles>
-            <profile id="fd29-523a-1175-c493" name="Monkeys" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
-              <characteristics>
-                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">Friendly models within 2&quot; of this model gain Sixth Sense.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <infoLinks>
-            <infoLink id="42d7-79e5-9b88-34fa" name="Sixth Sense" hidden="false" targetId="ec49-3908-f1d1-8de2" type="rule"/>
-          </infoLinks>
-        </infoGroup>
-      </infoGroups>
-      <categoryLinks>
-        <categoryLink id="413f-667d-2ec3-9e9a" name="Animal" hidden="false" targetId="c382-9ab3-9924-e30a" primary="false"/>
-        <categoryLink id="a700-9918-8960-0c76" name="Faction: Temple of Rokan" hidden="false" targetId="3186-3d3a-a105-887b" primary="false"/>
-        <categoryLink id="1314-0aeb-0b81-b9b5" name="Monkey" hidden="false" targetId="c203-3b44-733b-95d0" primary="false"/>
-        <categoryLink id="f9a7-5f91-3c80-e110" name="Non-Unique" hidden="false" targetId="d181-219d-3add-d47b" primary="false"/>
-        <categoryLink id="c308-b69c-b878-755d" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
-      </categoryLinks>
-      <entryLinks>
-        <entryLink id="9da6-9bfa-09a0-d098" name="Monkey" hidden="false" collective="false" import="true" targetId="2d4b-c276-7066-fc26" type="selectionEntry">
-          <modifiers>
-            <modifier type="append" field="name" value="A"/>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fc61-72e9-d52d-30eb" type="min"/>
-          </constraints>
-          <profiles>
-            <profile id="a153-d92b-e37c-fe82" name="Monkey A" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
-              <characteristics>
-                <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">1</characteristic>
-                <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277"/>
-                <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">1</characteristic>
-                <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
-                <characteristic name="Move" typeId="91b7-833e-fd8e-a620">5</characteristic>
-                <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
-                <characteristic name="Ki" typeId="3969-9568-a914-6854">1</characteristic>
-                <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
-                <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">0</characteristic>
-                <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">2 OO</characteristic>
-                <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Tiny 30mm</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-        </entryLink>
-        <entryLink id="681a-6452-f07c-d7d2" name="Monkey" hidden="false" collective="false" import="true" targetId="2d4b-c276-7066-fc26" type="selectionEntry">
-          <modifiers>
-            <modifier type="append" field="name" value="B"/>
-          </modifiers>
-          <profiles>
-            <profile id="d50a-e54a-db61-b982" name="Monkey B" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
-              <characteristics>
-                <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">1</characteristic>
-                <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277"/>
-                <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">1</characteristic>
-                <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
-                <characteristic name="Move" typeId="91b7-833e-fd8e-a620">5</characteristic>
-                <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
-                <characteristic name="Ki" typeId="3969-9568-a914-6854">1</characteristic>
-                <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
-                <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">0</characteristic>
-                <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">2 OO</characteristic>
-                <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Tiny 30mm</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-        </entryLink>
-        <entryLink id="39af-b95c-917f-40df" name="Monkey" hidden="false" collective="false" import="true" targetId="2d4b-c276-7066-fc26" type="selectionEntry">
-          <modifiers>
-            <modifier type="append" field="name" value="C"/>
-          </modifiers>
-          <profiles>
-            <profile id="686a-8d2e-ac86-9268" name="Monkey C" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
-              <characteristics>
-                <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">1</characteristic>
-                <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277"/>
-                <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">1</characteristic>
-                <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
-                <characteristic name="Move" typeId="91b7-833e-fd8e-a620">5</characteristic>
-                <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
-                <characteristic name="Ki" typeId="3969-9568-a914-6854">1</characteristic>
-                <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
-                <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">0</characteristic>
-                <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">2 OO</characteristic>
-                <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Tiny 30mm</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-        </entryLink>
-      </entryLinks>
-      <costs>
-        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0.0"/>
-      </costs>
-    </selectionEntry>
     <selectionEntry id="17bf-5172-f1ad-8a5c" name="Koji" hidden="false" collective="false" import="true" type="model">
       <modifiers>
         <modifier type="set" field="hidden" value="true">
@@ -2512,6 +2442,30 @@ When Deploying this model you must choose to Deploy either the Kota - Fox Form m
           <infoLinks>
             <infoLink id="01b2-e783-ac55-562f" name="Wind Disciple" hidden="false" targetId="b961-56bd-c441-246d" type="infoGroup"/>
             <infoLink id="d936-26f3-db49-5c46" name="Kata" hidden="false" targetId="7283-1e6d-cb9c-f1c8" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="c3b7-00dd-b232-429f" name="Traits" hidden="false">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="lessThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <profiles>
+            <profile id="9890-ac0c-7ce5-3f5c" name="Koji" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Co-ordinated Attack [Monkey], Jump Up, Leadership [Monkey](2/6&quot;), Pack (3/6&quot;), Scout (1/4&quot;), Tiny</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="3c0b-6639-82ea-a2ba" name="Co-ordinated Attack" hidden="false" targetId="2337-7bcc-c1f2-f2bd" type="rule"/>
+            <infoLink id="6b16-1627-967e-41eb" name="Jump Up" hidden="false" targetId="1575-e12f-4ca3-c557" type="rule"/>
+            <infoLink id="aaf0-5000-2f80-eccc" name="Leadership" hidden="false" targetId="8ec4-bfdc-8c03-f631" type="rule"/>
+            <infoLink id="8968-72c7-0cc2-40c9" name="Scout" hidden="false" targetId="8c82-d05a-f63b-1841" type="rule"/>
+            <infoLink id="0a27-1616-5739-c3fc" name="Tiny" hidden="false" targetId="335c-7f6f-9ca0-cb93" type="rule"/>
+            <infoLink id="3824-a55f-9289-a2be" name="Pack" hidden="false" targetId="fa30-1c51-e091-9444" type="rule"/>
           </infoLinks>
         </infoGroup>
       </infoGroups>
@@ -2867,14 +2821,26 @@ When Deploying this model you must choose to Deploy either the Kota - Fox Form m
             <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
           </conditions>
         </modifier>
+        <modifier type="remove" field="category" value="9389-c90b-a833-f68d">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="true" id="4731-113f-3fcb-c42c" type="max"/>
       </constraints>
       <infoGroups>
         <infoGroup id="0ff6-db4b-b7ce-e9f9" name="Traits" hidden="false">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <profiles>
-            <profile id="eb9f-eddb-6efc-0370" name="Kawa no Rojin A" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+            <profile id="eb9f-eddb-6efc-0370" name="Kawa no Rojin" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
               <characteristics>
                 <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Bravery, Cavalry (2&quot;), Charging Bonus [Fear (6), Slam Attack (0)], Immovable, Steadfast, Tireless, Tough (1)</characteristic>
               </characteristics>
@@ -2894,7 +2860,7 @@ When Deploying this model you must choose to Deploy either the Kota - Fox Form m
         </infoGroup>
         <infoGroup id="eba0-ef17-dbc9-86ff" name="Melee Weapon" hidden="false">
           <profiles>
-            <profile id="4cc9-cf00-d8c3-7167" name="Horn" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+            <profile id="4cc9-cf00-d8c3-7167" name="Horns" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
               <characteristics>
                 <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+2</characteristic>
                 <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Brutal (1), Sharp (1)</characteristic>
@@ -2910,6 +2876,13 @@ When Deploying this model you must choose to Deploy either the Kota - Fox Form m
           </infoLinks>
         </infoGroup>
         <infoGroup id="b0f7-967d-1229-5a40" name="Unique Effects" hidden="false">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <profiles>
             <profile id="1ea3-b64b-687b-2613" name="Kawa no Rojin" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
               <characteristics>
@@ -2935,6 +2908,69 @@ During Ki Generation 1 Friendly Villager within 6&quot; may gain a Ki Token.</ch
             <infoLink id="ca92-1c84-4468-25a7" name="Tough" hidden="false" targetId="5613-a6cf-495a-229f" type="rule"/>
           </infoLinks>
         </infoGroup>
+        <infoGroup id="00b8-e0d6-6092-43d2" name="Traits" hidden="false">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="lessThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <profiles>
+            <profile id="54db-95ee-a47b-390f" name="Kawa no Rojin" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Aloof, Charging Bonus [Fear (6), Slam Attack (0)], Group, Immovable, Tireless, Tough (1), Virtue (6”)</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="dbcc-f877-27f8-4fb0" name="Aloof" hidden="false" targetId="5101-70fc-eca4-d99b" type="rule"/>
+            <infoLink id="c8f8-4590-85ff-9348" name="Charging Bonus" hidden="false" targetId="d747-f7f2-ea6f-5ceb" type="rule"/>
+            <infoLink id="f9c1-d5b9-8e31-2319" name="Group" hidden="false" targetId="4c02-03a1-ae7b-7821" type="rule"/>
+            <infoLink id="ae29-d2fc-46e9-9730" name="Immovable" hidden="false" targetId="d34b-724f-6fc8-7420" type="rule"/>
+            <infoLink id="0a2e-5e2f-290e-4de6" name="Virtue" hidden="false" targetId="57d7-cc96-ce93-9258" type="rule"/>
+            <infoLink id="422b-9ecc-e7e3-e851" name="Tireless" hidden="false" targetId="5829-35f3-dd19-1290" type="rule"/>
+            <infoLink id="1122-9a86-3c15-eb61" name="Tough" hidden="false" targetId="5613-a6cf-495a-229f" type="rule"/>
+            <infoLink id="6ef2-456c-64c3-890c" name="Fear" hidden="false" targetId="3586-4583-7f10-1f31" type="rule"/>
+            <infoLink id="aa3a-bb3b-2fab-e565" name="Slam Attack" hidden="false" targetId="5d05-b0ce-d7db-9def" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="bc8b-1ca3-bcfb-a6f3" name="Unique Effects" hidden="false">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="lessThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <profiles>
+            <profile id="4b42-e22b-103d-7459" name="Kawa no Rojin" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">During Ki Generation, one Friendly Villager within 6” of this model may gain an additional Ki Token.
+
+During the Starting Phase, this model gains a Luck Token.
+Whenever a Friendly model within 6” makes a Fear Test, Attack Roll, Defence Roll, Damage Roll or Opposed Ki Test this model may spend the token to reroll one of the dice.
+
+When this model declares a Charge Action, this model may Move through Destructible terrain; if you do, remove the terrain from the battlefield.</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="a317-3ff4-1fe0-dba3" name="Virtue" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">While this model is in play, when a Friendly Villager model spends a Virtue Token you may choose one of the following effects until the End Phase:
+• The model gains Tireless
+• The model gains Last Stand
+• The model gains Fearless
+• The model gains Tough (1)</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="a343-3c9f-156d-757e" name="Fearless" hidden="false" targetId="5d6f-1746-9080-aca5" type="rule"/>
+            <infoLink id="fe5b-8fac-0260-60cd" name="Tireless" hidden="false" targetId="5829-35f3-dd19-1290" type="rule"/>
+            <infoLink id="262f-0bb5-766f-2d35" name="Last Stand" hidden="false" targetId="54e7-a381-1c38-dd0e" type="rule"/>
+            <infoLink id="4bb9-fc8e-3d0d-3620" name="Tough" hidden="false" targetId="5613-a6cf-495a-229f" type="rule"/>
+          </infoLinks>
+        </infoGroup>
       </infoGroups>
       <categoryLinks>
         <categoryLink id="b9eb-88e9-b38e-885f" name="Animal" hidden="false" targetId="c382-9ab3-9924-e30a" primary="false"/>
@@ -2953,45 +2989,25 @@ During Ki Generation 1 Friendly Villager within 6&quot; may gain a Ki Token.</ch
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0393-8427-9e74-f0a0" type="min"/>
           </constraints>
-          <profiles>
-            <profile id="0cab-5f54-17a0-f8cd" name="Kawa no Rojin A" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
-              <characteristics>
-                <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
-                <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277"/>
-                <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">1</characteristic>
-                <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
-                <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
-                <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
-                <characteristic name="Ki" typeId="3969-9568-a914-6854">2</characteristic>
-                <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
-                <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">0</characteristic>
-                <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">8 OOOOO OOO</characteristic>
-                <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Large 50mm</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
+          <infoLinks>
+            <infoLink id="ea9d-f875-927b-8041" name="Kawa no Rojin" hidden="false" targetId="f08c-534a-7e16-4f40" type="profile">
+              <modifiers>
+                <modifier type="append" field="name" value="A"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
         </entryLink>
         <entryLink id="d982-9122-3e01-cf41" name="Kawa no Rojin" hidden="false" collective="false" import="true" targetId="29d1-45df-07ea-a6a7" type="selectionEntry">
           <modifiers>
             <modifier type="append" field="name" value="B"/>
           </modifiers>
-          <profiles>
-            <profile id="b14a-25b8-409d-3b17" name="Kawa no Rojin B" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
-              <characteristics>
-                <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
-                <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277"/>
-                <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">1</characteristic>
-                <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
-                <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
-                <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
-                <characteristic name="Ki" typeId="3969-9568-a914-6854">2</characteristic>
-                <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
-                <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">0</characteristic>
-                <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">8 OOOOO OOO</characteristic>
-                <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Large 50mm</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
+          <infoLinks>
+            <infoLink id="71cd-09c4-e64f-b320" name="Kawa no Rojin" hidden="false" targetId="f08c-534a-7e16-4f40" type="profile">
+              <modifiers>
+                <modifier type="append" field="name" value="B"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
         </entryLink>
       </entryLinks>
       <costs>
@@ -3778,8 +3794,37 @@ Permitted [Monks, up to 1 Sōhei, Construct, Kami, Ronin Kami]</characteristic>
       </constraints>
       <profiles>
         <profile id="de21-2f5b-3113-d0c0" name="Saruka" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <characteristics>
             <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">2</characteristic>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">3</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33">2</characteristic>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac">2</characteristic>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">2</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c">2</characteristic>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">6</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">6 OOOOO O</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="a289-51a0-05a3-cc25" name="Saruka" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="lessThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">4</characteristic>
             <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">2</characteristic>
             <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">3</characteristic>
             <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33">2</characteristic>
@@ -3888,10 +3933,39 @@ Permitted [Monks, up to 1 Sōhei, Construct, Kami, Ronin Kami]</characteristic>
       </constraints>
       <profiles>
         <profile id="4b9a-2e51-51de-b03d" name="Yim" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <characteristics>
             <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
             <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">2</characteristic>
             <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">3</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">2</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c">2</characteristic>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">6</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">7 OOOOO OO</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="ac35-bb2f-63ef-25be" name="Yim" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="lessThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">4</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">2</characteristic>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">4</characteristic>
             <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
             <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
             <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
@@ -4338,6 +4412,13 @@ If it does, it loses the Monk type and gains an ability based on the type of Kam
       </constraints>
       <profiles>
         <profile id="0d6c-65da-31e6-3cc4" name="Animal Trap" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <characteristics>
             <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">Play when an Enemy model without the Intangible or Cloudwalk traits declares any action in which it will Move.
 That model makes a Ki Challenge Test (6).
@@ -4346,10 +4427,40 @@ If unsuccessful, the current activation ends, the model gains Unstable until the
 Requirement [Warbands with at least 1 &quot;Villager, Hunter&quot; model.]</characteristic>
           </characteristics>
         </profile>
+        <profile id="deec-e67c-6357-b39c" name="Animal Trap" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="lessThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <characteristics>
+            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">Play when an Enemy model without the Intangible or Cloudwalk traits declares any action in which it will Move.
+The model makes a Ki Challenge Test (6).
+If unsuccessful, the current activation ends, the model gains Unstable until the End Phase, it loses an Activation Counter and its action is considered resolved.
+
+This is a Trap effect.
+
+Requirement [Warbands with at least 1 &quot;Villager, Hunter&quot; model.]</characteristic>
+          </characteristics>
+        </profile>
       </profiles>
+      <infoLinks>
+        <infoLink id="4458-b126-7e9c-495c" name="Trap" hidden="false" targetId="6ef1-a206-e5d4-b3ab" type="rule">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="lessThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </infoLink>
+      </infoLinks>
       <categoryLinks>
         <categoryLink id="592e-208a-5139-6672" name="New CategoryLink" hidden="false" targetId="d360-71aa-ca22-ba3c" primary="true"/>
         <categoryLink id="fbcc-8898-ff71-76ed" name="Cycle: Risen Sun" hidden="false" targetId="a745-0548-80c8-ece4" primary="false"/>
+        <categoryLink id="d915-2096-7a95-d82a" name="Trap" hidden="false" targetId="d190-d7ff-d350-6425" primary="false"/>
       </categoryLinks>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1.0"/>
@@ -6377,162 +6488,6 @@ Requirement [Followers of Inari Theme]</characteristic>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="7530-a6a4-4768-f9c1" name="Koji&apos;s Pack" hidden="true" collective="false" import="true" type="model">
-      <modifiers>
-        <modifier type="set" field="hidden" value="false">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2af4-e298-ee7f-b85f" type="atLeast"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-        <modifier type="append" field="name" value="(public beta)">
-          <conditions>
-            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-      <constraints>
-        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="true" id="9158-9196-a711-a67c" type="max"/>
-      </constraints>
-      <infoGroups>
-        <infoGroup id="581d-3d53-e7a3-9304" name="Traits" hidden="false">
-          <profiles>
-            <profile id="f8e5-fd6f-90ef-661a" name="Monkey" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
-              <characteristics>
-                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Aloof, Co-ordinated Attack [Monkey, Koji], Dodge (1), Group, Insignificant, Lightfooted, Sacrifice [Monkey, Koji](3&quot;), Scout (0/4&quot;), Tiny, Weak</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <infoLinks>
-            <infoLink id="de63-837f-dafa-a118" name="Aloof" hidden="false" targetId="5101-70fc-eca4-d99b" type="rule"/>
-            <infoLink id="cf39-3b59-71e0-10c2" name="Co-ordinated Attack" hidden="false" targetId="2337-7bcc-c1f2-f2bd" type="rule"/>
-            <infoLink id="8a1a-62f9-d86c-05af" name="Dodge " hidden="false" targetId="14d5-d459-5d8a-c73e" type="rule"/>
-            <infoLink id="9574-450d-c525-9063" name="Group" hidden="false" targetId="4c02-03a1-ae7b-7821" type="rule"/>
-            <infoLink id="7930-9376-eea7-f65d" name="Insignificant" hidden="false" targetId="1614-d86c-ef8a-c095" type="rule"/>
-            <infoLink id="72b9-34c5-f88a-43c7" name="Lightfooted" hidden="false" targetId="57d2-cd57-07f9-addf" type="rule"/>
-            <infoLink id="0554-e145-10d4-ef2b" name="Sacrifice" hidden="false" targetId="28a8-7487-2fb6-e942" type="rule"/>
-            <infoLink id="4464-a19b-8285-4bee" name="Scout" hidden="false" targetId="8c82-d05a-f63b-1841" type="rule"/>
-            <infoLink id="df86-deed-333d-3baa" name="Tiny" hidden="false" targetId="335c-7f6f-9ca0-cb93" type="rule"/>
-            <infoLink id="6ae2-fab7-0bb3-87d0" name="Weak" hidden="false" targetId="6a0c-59fb-ff0e-aced" type="rule"/>
-          </infoLinks>
-        </infoGroup>
-        <infoGroup id="05ae-d795-7bb6-4adc" name="Melee Weapon" hidden="false">
-          <profiles>
-            <profile id="df5f-e466-266a-34de" name="Bite" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
-              <characteristics>
-                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">-2</characteristic>
-                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e"/>
-                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Sidestep Defence (0)</characteristic>
-                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
-              </characteristics>
-            </profile>
-          </profiles>
-          <infoLinks>
-            <infoLink id="8601-e477-c124-8855" name="Sidestep Defence " hidden="false" targetId="753c-6c3b-64d7-203c" type="rule"/>
-          </infoLinks>
-        </infoGroup>
-        <infoGroup id="c77f-2a60-fa3a-d4ea" name="Unique Effects" hidden="false">
-          <profiles>
-            <profile id="0128-5bc2-f4ae-837b" name="Monkeys" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
-              <characteristics>
-                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">Friendly models within 2&quot; of this model gain Sixth Sense.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <infoLinks>
-            <infoLink id="4de2-32d9-5c97-ac4e" name="Sixth Sense" hidden="false" targetId="ec49-3908-f1d1-8de2" type="rule"/>
-          </infoLinks>
-        </infoGroup>
-      </infoGroups>
-      <categoryLinks>
-        <categoryLink id="416c-6bac-1659-c3c9" name="Animal" hidden="false" targetId="c382-9ab3-9924-e30a" primary="false"/>
-        <categoryLink id="ff2f-fe29-0b0d-e580" name="Faction: Temple of Rokan" hidden="false" targetId="3186-3d3a-a105-887b" primary="false"/>
-        <categoryLink id="0a4f-9898-061a-c765" name="Monkey" hidden="false" targetId="c203-3b44-733b-95d0" primary="false"/>
-        <categoryLink id="4cd5-a722-1ea5-296e" name="Non-Unique" hidden="false" targetId="d181-219d-3add-d47b" primary="false"/>
-        <categoryLink id="6e79-7cfd-f1b8-ce7f" name="New CategoryLink" hidden="false" targetId="5073-f00b-a8f6-5e3b" primary="true"/>
-        <categoryLink id="fa2b-d8b6-bcee-dc14" name="Faction Profile Cards" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="false"/>
-      </categoryLinks>
-      <entryLinks>
-        <entryLink id="1fce-085c-5b75-4646" name="Monkey" hidden="false" collective="false" import="true" targetId="2d4b-c276-7066-fc26" type="selectionEntry">
-          <modifiers>
-            <modifier type="append" field="name" value="A"/>
-            <modifier type="set" field="a111-8656-5c05-7415" value="0.0"/>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ee41-c25b-5ec3-4c8b" type="min"/>
-          </constraints>
-          <profiles>
-            <profile id="9703-a31a-b26c-508a" name="Monkey A" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
-              <characteristics>
-                <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">1</characteristic>
-                <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277"/>
-                <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">1</characteristic>
-                <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
-                <characteristic name="Move" typeId="91b7-833e-fd8e-a620">5</characteristic>
-                <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
-                <characteristic name="Ki" typeId="3969-9568-a914-6854">1</characteristic>
-                <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
-                <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">0</characteristic>
-                <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">2 OO</characteristic>
-                <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Tiny 30mm</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-        </entryLink>
-        <entryLink id="74f7-8756-182d-715c" name="Monkey" hidden="false" collective="false" import="true" targetId="2d4b-c276-7066-fc26" type="selectionEntry">
-          <modifiers>
-            <modifier type="append" field="name" value="B"/>
-            <modifier type="set" field="a111-8656-5c05-7415" value="0.0"/>
-          </modifiers>
-          <profiles>
-            <profile id="2630-2488-26da-8493" name="Monkey B" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
-              <characteristics>
-                <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">1</characteristic>
-                <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277"/>
-                <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">1</characteristic>
-                <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
-                <characteristic name="Move" typeId="91b7-833e-fd8e-a620">5</characteristic>
-                <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
-                <characteristic name="Ki" typeId="3969-9568-a914-6854">1</characteristic>
-                <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
-                <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">0</characteristic>
-                <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">2 OO</characteristic>
-                <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Tiny 30mm</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-        </entryLink>
-        <entryLink id="1b43-6a43-5447-b50a" name="Monkey" hidden="false" collective="false" import="true" targetId="2d4b-c276-7066-fc26" type="selectionEntry">
-          <modifiers>
-            <modifier type="append" field="name" value="C"/>
-            <modifier type="set" field="a111-8656-5c05-7415" value="0.0"/>
-          </modifiers>
-          <profiles>
-            <profile id="4b57-ee71-4c57-10eb" name="Monkey C" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
-              <characteristics>
-                <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">1</characteristic>
-                <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277"/>
-                <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">1</characteristic>
-                <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
-                <characteristic name="Move" typeId="91b7-833e-fd8e-a620">5</characteristic>
-                <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
-                <characteristic name="Ki" typeId="3969-9568-a914-6854">1</characteristic>
-                <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
-                <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">0</characteristic>
-                <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">2 OO</characteristic>
-                <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Tiny 30mm</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-        </entryLink>
-      </entryLinks>
-      <costs>
-        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0.0"/>
-      </costs>
-    </selectionEntry>
     <selectionEntry id="8671-c3da-e2dc-a8e1" name="Gathering for Inari" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cbae-d95e-49f4-7195" type="max"/>
@@ -7030,6 +6985,24 @@ Until the End Phase, whenever an Opponent spends a Pass Token; a Friendly, non-A
         <categoryLink id="7790-4708-b236-3b52" name="Ronin Profile Cards" hidden="false" targetId="9fba-f50b-c8f7-8396" primary="false"/>
       </categoryLinks>
     </entryLink>
+    <entryLink id="83ca-452a-9979-30d5" name="Koji&apos;s Pack" hidden="false" collective="false" import="true" targetId="b1ee-5df8-0cb8-171c" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="b744-9370-2407-4461" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="1ecd-3574-2d50-b0c9" name="Koji&apos;s Pack" hidden="false" collective="false" import="true" targetId="b1ee-5df8-0cb8-171c" type="selectionEntry">
+      <modifiers>
+        <modifier type="append" field="name" value="(reference card)"/>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="2af4-e298-ee7f-b85f" type="lessThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="e4d9-162b-857d-91ef" name="New CategoryLink" hidden="false" targetId="5073-f00b-a8f6-5e3b" primary="true"/>
+      </categoryLinks>
+    </entryLink>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="fdb3-04df-ec18-16cd" name="Fisherman" hidden="false" collective="false" import="true" type="model">
@@ -7047,6 +7020,13 @@ Until the End Phase, whenever an Opponent spends a Pass Token; a Friendly, non-A
       </costs>
     </selectionEntry>
     <selectionEntry id="29d1-45df-07ea-a6a7" name="Kawa no Rojin" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="remove" field="category" value="9389-c90b-a833-f68d">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="aa14-761c-81da-ea0c" type="max"/>
       </constraints>
@@ -7060,25 +7040,6 @@ Until the End Phase, whenever an Opponent spends a Pass Token; a Friendly, non-A
       </entryLinks>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="14.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="2d4b-c276-7066-fc26" name="Monkey" hidden="false" collective="false" import="true" type="model">
-      <modifiers>
-        <modifier type="set" field="a111-8656-5c05-7415" value="2.0">
-          <conditions>
-            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-      <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="18cb-7f8c-07a7-f77a" type="max"/>
-      </constraints>
-      <categoryLinks>
-        <categoryLink id="fb35-7ece-4aa3-d910" name="Animal" hidden="false" targetId="c382-9ab3-9924-e30a" primary="false"/>
-        <categoryLink id="5661-7e67-aab9-a72c" name="Insignificant" hidden="false" targetId="0b0f-53a8-7e80-f525" primary="false"/>
-      </categoryLinks>
-      <costs>
-        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="94bc-fcf8-7a11-ef4b" name="Okishisa" hidden="false" collective="false" import="true" type="model">
@@ -7108,6 +7069,13 @@ Until the End Phase, whenever an Opponent spends a Pass Token; a Friendly, non-A
       </costs>
     </selectionEntry>
     <selectionEntry id="8c38-17e1-00bc-75d6" name="Shisa" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="name" value="Twin Shisa">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="ee36-1b2c-3644-dbb0" type="max"/>
       </constraints>
@@ -7348,6 +7316,362 @@ Requirement [Element[Void]]</characteristic>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1.0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="b1ee-5df8-0cb8-171c" name="Koji&apos;s Pack" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="44e6-4155-6b9b-2521" type="atLeast"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="append" field="name" value="(public beta)">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="true" id="9d0f-ac78-82bd-cac2" type="max"/>
+      </constraints>
+      <infoGroups>
+        <infoGroup id="6c40-ce00-463c-d1fa" name="Traits" hidden="false">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <profiles>
+            <profile id="b28f-3e7b-4889-ad82" name="Monkey" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Co-ordinated Attack [Monkey, Koji], Dodge (1), Group, Insignificant, Lightfooted, Sacrifice [Monkey, Koji](3&quot;), Scout (0/4&quot;), Tiny, Weak</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="2314-77e4-63f3-a3d6" name="Co-ordinated Attack" hidden="false" targetId="2337-7bcc-c1f2-f2bd" type="rule"/>
+            <infoLink id="50d3-b2e8-33bb-1228" name="Dodge " hidden="false" targetId="14d5-d459-5d8a-c73e" type="rule"/>
+            <infoLink id="c0ae-9cd2-7298-03c0" name="Group" hidden="false" targetId="4c02-03a1-ae7b-7821" type="rule"/>
+            <infoLink id="30cc-7c16-61e2-bfa4" name="Insignificant" hidden="false" targetId="1614-d86c-ef8a-c095" type="rule"/>
+            <infoLink id="47c0-9541-7cab-b6b5" name="Lightfooted" hidden="false" targetId="57d2-cd57-07f9-addf" type="rule"/>
+            <infoLink id="f0f2-a4b5-0550-eff0" name="Sacrifice" hidden="false" targetId="28a8-7487-2fb6-e942" type="rule"/>
+            <infoLink id="f9b1-a164-3790-4922" name="Scout" hidden="false" targetId="8c82-d05a-f63b-1841" type="rule"/>
+            <infoLink id="ffbc-634b-13eb-f083" name="Tiny" hidden="false" targetId="335c-7f6f-9ca0-cb93" type="rule"/>
+            <infoLink id="e8a2-4cda-2869-7afe" name="Weak" hidden="false" targetId="6a0c-59fb-ff0e-aced" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="e7ed-f0d1-2fb1-b6f7" name="Melee Weapon" hidden="false">
+          <profiles>
+            <profile id="6037-9cd8-5a9e-5c7e" name="Bite" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">-2</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e"/>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Sidestep Defence (0)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="2c1c-16a9-efac-ce3c" name="Sidestep Defence " hidden="false" targetId="753c-6c3b-64d7-203c" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="8eb8-fbe8-07d0-9241" name="Unique Effects" hidden="false">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <profiles>
+            <profile id="db6f-7e34-4ee0-1381" name="Monkeys" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">Friendly models within 2&quot; of this model gain Sixth Sense.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="f117-73f8-1fbc-b480" name="Sixth Sense" hidden="false" targetId="ec49-3908-f1d1-8de2" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="00b3-4ae1-fe54-0483" name="Unique Effects" hidden="false">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="lessThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <profiles>
+            <profile id="8bde-48da-c20c-238b" name="Monkeys" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">This card represents three different models, each with their own abilities.  A Warband may not recruit multiples of the same Monkey.
+
+While within 3” of this model, other models cannot be Surprised.
+
+Koji’s Pack models may be included in any Themed Warband that permits Koji.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </infoGroup>
+        <infoGroup id="ec58-8774-038f-cb1b" name="Traits" hidden="false">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="lessThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <profiles>
+            <profile id="9b29-ec04-1fb9-ce9e" name="Monkey" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Co-ordinated Attack [Monkey, Koji], Dodge (1), Group, Insignificant, Lightfooted, Pack (0/0”), Sacrifice [Monkey, Koji](3&quot;), Scout (0/4&quot;), Tiny, Weak</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="6fb1-588c-d4c6-e9f8" name="Co-ordinated Attack" hidden="false" targetId="2337-7bcc-c1f2-f2bd" type="rule"/>
+            <infoLink id="0b62-5452-055b-d33a" name="Dodge " hidden="false" targetId="14d5-d459-5d8a-c73e" type="rule"/>
+            <infoLink id="34a4-fdac-5a39-80c9" name="Group" hidden="false" targetId="4c02-03a1-ae7b-7821" type="rule"/>
+            <infoLink id="2821-7142-c9dd-d437" name="Insignificant" hidden="false" targetId="1614-d86c-ef8a-c095" type="rule"/>
+            <infoLink id="ce04-aa97-07e0-88ec" name="Lightfooted" hidden="false" targetId="57d2-cd57-07f9-addf" type="rule"/>
+            <infoLink id="908f-915e-1989-eb73" name="Sacrifice" hidden="false" targetId="28a8-7487-2fb6-e942" type="rule"/>
+            <infoLink id="ba70-4a69-b096-f4f7" name="Scout" hidden="false" targetId="8c82-d05a-f63b-1841" type="rule"/>
+            <infoLink id="7983-6730-8e6d-4866" name="Tiny" hidden="false" targetId="335c-7f6f-9ca0-cb93" type="rule"/>
+            <infoLink id="7c44-19ce-9a4d-2c50" name="Weak" hidden="false" targetId="6a0c-59fb-ff0e-aced" type="rule"/>
+            <infoLink id="698f-2f84-61bd-a9c1" name="Pack" hidden="false" targetId="fa30-1c51-e091-9444" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+      </infoGroups>
+      <categoryLinks>
+        <categoryLink id="c0c5-5cee-3f80-9d82" name="Animal" hidden="false" targetId="c382-9ab3-9924-e30a" primary="false"/>
+        <categoryLink id="0bab-5dab-17f5-dd1d" name="Faction: Temple of Rokan" hidden="false" targetId="3186-3d3a-a105-887b" primary="false"/>
+        <categoryLink id="489a-d232-2dd7-0d33" name="Monkey" hidden="false" targetId="c203-3b44-733b-95d0" primary="false"/>
+        <categoryLink id="a89a-ca47-cc8e-6091" name="Non-Unique" hidden="false" targetId="d181-219d-3add-d47b" primary="false"/>
+        <categoryLink id="34cb-eff5-829f-50e7" name="Insignificant" hidden="false" targetId="0b0f-53a8-7e80-f525" primary="false"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="8dda-09f9-ddb0-37ac" name="Lita" hidden="false" collective="false" import="true" type="model">
+          <modifiers>
+            <modifier type="set" field="a111-8656-5c05-7415" value="0.0">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5073-f00b-a8f6-5e3b" type="instanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <modifierGroups>
+            <modifierGroup>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="ancestor" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5073-f00b-a8f6-5e3b" type="notInstanceOf"/>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="lessThan"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+              <modifiers>
+                <modifier type="decrement" field="a111-8656-5c05-7415" value="1.0"/>
+                <modifier type="set" field="d1f9-1ab6-c327-146e" value="1.0"/>
+                <modifier type="set" field="name" value="Monkey A"/>
+              </modifiers>
+            </modifierGroup>
+          </modifierGroups>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="dcd9-6a29-2ccb-02a7" type="max"/>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d1f9-1ab6-c327-146e" type="min"/>
+          </constraints>
+          <infoGroups>
+            <infoGroup id="e810-1d5c-2906-b201" name="Unique Effects" hidden="false">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="lessThan"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <profiles>
+                <profile id="0e2b-0d37-4d82-e97d" name="Lita" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+                  <characteristics>
+                    <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">Enemy models in BtB with this model increase the cost of all Ki Feats and Special Attacks and Defences by 1.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </infoGroup>
+          </infoGroups>
+          <infoLinks>
+            <infoLink id="e46c-1927-7209-f0fd" name="Monkey" hidden="false" targetId="867e-a4a6-68a7-dd65" type="profile">
+              <modifiers>
+                <modifier type="set" field="name" value="Lita">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
+                  </conditions>
+                </modifier>
+                <modifier type="append" field="name" value="A">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="lessThan"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
+          <categoryLinks>
+            <categoryLink id="f56b-7ff4-da86-3958" name="Animal" hidden="false" targetId="c382-9ab3-9924-e30a" primary="false"/>
+            <categoryLink id="f109-991c-757c-2957" name="Insignificant" hidden="false" targetId="0b0f-53a8-7e80-f525" primary="false"/>
+            <categoryLink id="3334-cdc5-9432-e138" name="Monkey" hidden="false" targetId="c203-3b44-733b-95d0" primary="false"/>
+          </categoryLinks>
+          <costs>
+            <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="4ef1-d501-fde2-abad" name="Joji" hidden="false" collective="false" import="true" type="model">
+          <modifiers>
+            <modifier type="set" field="a111-8656-5c05-7415" value="0.0">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5073-f00b-a8f6-5e3b" type="instanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <modifierGroups>
+            <modifierGroup>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="ancestor" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5073-f00b-a8f6-5e3b" type="notInstanceOf"/>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="lessThan"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+              <modifiers>
+                <modifier type="decrement" field="a111-8656-5c05-7415" value="1.0"/>
+                <modifier type="set" field="name" value="Monkey B"/>
+              </modifiers>
+            </modifierGroup>
+          </modifierGroups>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="8899-6a3a-4aab-e26c" type="max"/>
+          </constraints>
+          <infoGroups>
+            <infoGroup id="3641-bccb-f747-bf80" name="Unique Effects" hidden="false">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="lessThan"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <profiles>
+                <profile id="b614-d0c2-938a-9adf" name="Joji" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+                  <characteristics>
+                    <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">Enemy models in BtB with this model treat melee dice with a value of 6 as a value of 5 instead.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </infoGroup>
+          </infoGroups>
+          <infoLinks>
+            <infoLink id="d6e8-640f-1c4a-bbbe" name="Monkey" hidden="false" targetId="867e-a4a6-68a7-dd65" type="profile">
+              <modifiers>
+                <modifier type="set" field="name" value="Joji">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
+                  </conditions>
+                </modifier>
+                <modifier type="append" field="name" value="B">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="lessThan"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
+          <categoryLinks>
+            <categoryLink id="a645-a111-7166-1e4e" name="Animal" hidden="false" targetId="c382-9ab3-9924-e30a" primary="false"/>
+            <categoryLink id="6a71-14b6-5914-97e0" name="Insignificant" hidden="false" targetId="0b0f-53a8-7e80-f525" primary="false"/>
+            <categoryLink id="2fb1-e191-93a9-35eb" name="Monkey" hidden="false" targetId="c203-3b44-733b-95d0" primary="false"/>
+          </categoryLinks>
+          <costs>
+            <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="27f6-1390-22ed-307b" name="Maku" hidden="false" collective="false" import="true" type="model">
+          <modifiers>
+            <modifier type="set" field="a111-8656-5c05-7415" value="0.0">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5073-f00b-a8f6-5e3b" type="instanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <modifierGroups>
+            <modifierGroup>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="ancestor" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5073-f00b-a8f6-5e3b" type="notInstanceOf"/>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="lessThan"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+              <modifiers>
+                <modifier type="decrement" field="a111-8656-5c05-7415" value="1.0"/>
+                <modifier type="set" field="name" value="Monkey C"/>
+              </modifiers>
+            </modifierGroup>
+          </modifierGroups>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="f466-cdee-43f5-f233" type="max"/>
+          </constraints>
+          <infoGroups>
+            <infoGroup id="fe8c-92b7-a006-fa5c" name="Unique Effects" hidden="false">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="lessThan"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <profiles>
+                <profile id="53d4-2882-488d-9b69" name="Maku" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+                  <characteristics>
+                    <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">Models using the Flank Trait may not be deployed within 3” of this model unless this would leave no valid deployment.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </infoGroup>
+          </infoGroups>
+          <infoLinks>
+            <infoLink id="0390-72a1-ee19-a37c" name="Monkey" hidden="false" targetId="867e-a4a6-68a7-dd65" type="profile">
+              <modifiers>
+                <modifier type="set" field="name" value="Maku">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
+                  </conditions>
+                </modifier>
+                <modifier type="append" field="name" value="C">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="lessThan"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
+          <categoryLinks>
+            <categoryLink id="931a-6561-da5d-9a4a" name="Animal" hidden="false" targetId="c382-9ab3-9924-e30a" primary="false"/>
+            <categoryLink id="1c45-1de9-30f2-e712" name="Insignificant" hidden="false" targetId="0b0f-53a8-7e80-f525" primary="false"/>
+            <categoryLink id="7dcf-9b51-445f-3f34" name="Monkey" hidden="false" targetId="c203-3b44-733b-95d0" primary="false"/>
+          </categoryLinks>
+          <costs>
+            <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0.0"/>
+      </costs>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup id="d716-36e8-af1d-0a1f" name="Enhancements" hidden="false" collective="false" import="true">
@@ -7383,89 +7707,210 @@ Requirement [Element[Void]]</characteristic>
           </constraints>
           <profiles>
             <profile id="bb34-645a-3c5e-c4c1" name="One With Creation" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <characteristics>
                 <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">At the start of each Melee Exchange, before Initiative is determined, you may choose 1 of the following profiles to use instead of Master Koju: Deer or Tiger.
 Wounds are still inflicted to Master Koju in the Melee Exchange.
 Effects and States on Master Koju are ignored while using these profiles.</characteristic>
               </characteristics>
             </profile>
+            <profile id="162e-432d-f67b-5450" name="One With Creation" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="lessThan"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <characteristics>
+                <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">At the start of each Melee Exchange, before Initiative is determined, you may choose one of the following options to use this profile instead of Master Koju. 
+You may use Ki Feats on Master Koju’s card, Wounds are still inflicted to Master Koju and Master Koju loses any Activation Counters for the Melee Exchange but the rest of Master Koju’s card, including Traits, States and Effects on Master Koju are ignored while using these profiles.</characteristic>
+              </characteristics>
+            </profile>
           </profiles>
           <infoGroups>
-            <infoGroup id="f277-9154-bbf4-a63d" name="Deer" hidden="false">
-              <profiles>
-                <profile id="0b3e-6302-8f1c-de63" name="Deer" hidden="false" typeId="6ea2-0f74-4852-4a98" typeName="Character Profile &amp; Traits">
-                  <characteristics>
-                    <characteristic name="Melee Pool" typeId="8409-8d55-ce45-a33b">3</characteristic>
-                    <characteristic name="Melee Boost" typeId="6a36-e826-18f3-0b25"/>
-                    <characteristic name="Ranged Pool" typeId="7a01-37c0-4741-672c"/>
-                    <characteristic name="Ranged Boost" typeId="ff66-ea54-d863-5c17"/>
-                    <characteristic name="Move" typeId="af89-242d-625f-9bff"/>
-                    <characteristic name="Move Boost" typeId="62a6-8125-f293-5c76"/>
-                    <characteristic name="Ki" typeId="8b76-2b4b-066e-a0c5"/>
-                    <characteristic name="Ki Boost" typeId="c34e-f8ae-0984-37ac"/>
-                    <characteristic name="Ki Cap" typeId="2e88-c65e-4e45-d4c4"/>
-                    <characteristic name="Wounds" typeId="a1dc-c2c1-e2d2-ca98"/>
-                    <characteristic name="Size &amp; Base" typeId="6af2-e777-20ce-e060"/>
-                    <characteristic name="Traits" typeId="e742-1b02-09cf-fd97">Defensive, Impenetrable Defence, Spirit Block</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="1964-8e79-959f-f9a1" name="Deer Hooves" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
-                  <characteristics>
-                    <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">-1</characteristic>
-                    <characteristic name="Traits" typeId="39e3-f945-7956-ad4e"/>
-                    <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Sidestep Defence (0)</characteristic>
-                    <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
-                  </characteristics>
-                </profile>
-                <profile id="49bf-e9b5-d98a-af2f" name="Deer" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
-                  <characteristics>
-                    <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">If this model suffers Damage in a Melee Exchange, it gainns Regenerate (1) until the End Phase.
+            <infoGroup id="6de7-ea51-21c7-6d0a" name="Profiles" hidden="false">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <infoGroups>
+                <infoGroup id="e81c-2072-5c4a-39f0" name="Tiger" hidden="false">
+                  <profiles>
+                    <profile id="036c-9a98-a274-e73a" name="Tiger" hidden="false" typeId="6ea2-0f74-4852-4a98" typeName="Character Profile &amp; Traits">
+                      <characteristics>
+                        <characteristic name="Melee Pool" typeId="8409-8d55-ce45-a33b">3</characteristic>
+                        <characteristic name="Melee Boost" typeId="6a36-e826-18f3-0b25"/>
+                        <characteristic name="Ranged Pool" typeId="7a01-37c0-4741-672c"/>
+                        <characteristic name="Ranged Boost" typeId="ff66-ea54-d863-5c17"/>
+                        <characteristic name="Move" typeId="af89-242d-625f-9bff"/>
+                        <characteristic name="Move Boost" typeId="62a6-8125-f293-5c76"/>
+                        <characteristic name="Ki" typeId="8b76-2b4b-066e-a0c5"/>
+                        <characteristic name="Ki Boost" typeId="c34e-f8ae-0984-37ac"/>
+                        <characteristic name="Ki Cap" typeId="2e88-c65e-4e45-d4c4"/>
+                        <characteristic name="Wounds" typeId="a1dc-c2c1-e2d2-ca98"/>
+                        <characteristic name="Size &amp; Base" typeId="6af2-e777-20ce-e060"/>
+                        <characteristic name="Traits" typeId="e742-1b02-09cf-fd97">Aggressive</characteristic>
+                      </characteristics>
+                    </profile>
+                    <profile id="af45-f0a2-9495-c71c" name="Tiger Bite" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+                      <characteristics>
+                        <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+2</characteristic>
+                        <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Bleed (1/1), Sharp (1)</characteristic>
+                        <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d"/>
+                        <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+                      </characteristics>
+                    </profile>
+                    <profile id="a11a-2fd0-efde-96ef" name="Tiger Unique Effects" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+                      <characteristics>
+                        <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">This model&apos;s Melee Pool cannot be reduced by States.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <infoLinks>
+                    <infoLink id="425c-7c94-aece-08a8" name="Aggressive" hidden="false" targetId="a445-e041-8d5f-aa28" type="rule"/>
+                    <infoLink id="f7fa-8c98-e4de-faf8" name="Bleed" hidden="false" targetId="ac4a-e540-4fe3-126a" type="rule"/>
+                    <infoLink id="533a-0841-4090-3491" name="Sharp " hidden="false" targetId="6092-9fb5-5196-d1eb" type="rule"/>
+                  </infoLinks>
+                </infoGroup>
+                <infoGroup id="057f-d40a-fd6a-ff50" name="Deer" hidden="false">
+                  <profiles>
+                    <profile id="6fcc-b44a-4e5b-299e" name="Deer" hidden="false" typeId="6ea2-0f74-4852-4a98" typeName="Character Profile &amp; Traits">
+                      <characteristics>
+                        <characteristic name="Melee Pool" typeId="8409-8d55-ce45-a33b">3</characteristic>
+                        <characteristic name="Melee Boost" typeId="6a36-e826-18f3-0b25"/>
+                        <characteristic name="Ranged Pool" typeId="7a01-37c0-4741-672c"/>
+                        <characteristic name="Ranged Boost" typeId="ff66-ea54-d863-5c17"/>
+                        <characteristic name="Move" typeId="af89-242d-625f-9bff"/>
+                        <characteristic name="Move Boost" typeId="62a6-8125-f293-5c76"/>
+                        <characteristic name="Ki" typeId="8b76-2b4b-066e-a0c5"/>
+                        <characteristic name="Ki Boost" typeId="c34e-f8ae-0984-37ac"/>
+                        <characteristic name="Ki Cap" typeId="2e88-c65e-4e45-d4c4"/>
+                        <characteristic name="Wounds" typeId="a1dc-c2c1-e2d2-ca98"/>
+                        <characteristic name="Size &amp; Base" typeId="6af2-e777-20ce-e060"/>
+                        <characteristic name="Traits" typeId="e742-1b02-09cf-fd97">Defensive, Impenetrable Defence</characteristic>
+                      </characteristics>
+                    </profile>
+                    <profile id="1500-55a8-89cc-67a6" name="Deer Hooves" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+                      <characteristics>
+                        <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">-1</characteristic>
+                        <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Spirit Block</characteristic>
+                        <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Sidestep Defence (0)</characteristic>
+                        <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+                      </characteristics>
+                    </profile>
+                    <profile id="6097-bfc8-483b-8f09" name="Deer Unique Effects" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+                      <characteristics>
+                        <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">If this model suffers Damage in a Melee Exchange, it gainns Regenerate (1) until the End Phase.
 This model&apos;s Melee Pool cannot be reduced by States.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <infoLinks>
-                <infoLink id="2196-d2d3-0d4b-1584" name="Defensive" hidden="false" targetId="c6e1-0904-b78f-7933" type="rule"/>
-                <infoLink id="d704-2488-0e36-c6f7" name="Impenetrable Defence" hidden="false" targetId="6659-a776-d836-a2fb" type="rule"/>
-                <infoLink id="565d-c428-75b2-cc12" name="Regenerate" hidden="false" targetId="74c4-617e-8405-3e46" type="rule"/>
-                <infoLink id="f5ae-025b-5c63-8a4c" name="Spirit" hidden="false" targetId="a9ba-9904-7d29-7bcb" type="rule"/>
-              </infoLinks>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <infoLinks>
+                    <infoLink id="a788-a2c2-5333-b4cc" name="Defensive" hidden="false" targetId="c6e1-0904-b78f-7933" type="rule"/>
+                    <infoLink id="9e56-588f-1199-70bc" name="Impenetrable Defence" hidden="false" targetId="6659-a776-d836-a2fb" type="rule"/>
+                    <infoLink id="eab6-93b9-fddd-64b9" name="Regenerate" hidden="false" targetId="74c4-617e-8405-3e46" type="rule"/>
+                    <infoLink id="4894-f058-077c-4662" name="Spirit" hidden="false" targetId="a9ba-9904-7d29-7bcb" type="rule"/>
+                  </infoLinks>
+                </infoGroup>
+              </infoGroups>
             </infoGroup>
-            <infoGroup id="eed4-0f78-2b43-5e96" name="Tiger" hidden="false">
-              <profiles>
-                <profile id="2b69-a43e-c018-5cba" name="Tiger" hidden="false" typeId="6ea2-0f74-4852-4a98" typeName="Character Profile &amp; Traits">
-                  <characteristics>
-                    <characteristic name="Melee Pool" typeId="8409-8d55-ce45-a33b">3</characteristic>
-                    <characteristic name="Melee Boost" typeId="6a36-e826-18f3-0b25"/>
-                    <characteristic name="Ranged Pool" typeId="7a01-37c0-4741-672c"/>
-                    <characteristic name="Ranged Boost" typeId="ff66-ea54-d863-5c17"/>
-                    <characteristic name="Move" typeId="af89-242d-625f-9bff"/>
-                    <characteristic name="Move Boost" typeId="62a6-8125-f293-5c76"/>
-                    <characteristic name="Ki" typeId="8b76-2b4b-066e-a0c5"/>
-                    <characteristic name="Ki Boost" typeId="c34e-f8ae-0984-37ac"/>
-                    <characteristic name="Ki Cap" typeId="2e88-c65e-4e45-d4c4"/>
-                    <characteristic name="Wounds" typeId="a1dc-c2c1-e2d2-ca98"/>
-                    <characteristic name="Size &amp; Base" typeId="6af2-e777-20ce-e060"/>
-                    <characteristic name="Traits" typeId="e742-1b02-09cf-fd97">Aggressive</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="7822-8572-7103-461e" name="Tiger Bite" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
-                  <characteristics>
-                    <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+2</characteristic>
-                    <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Bleed (1/1), Sharp (1)</characteristic>
-                    <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d"/>
-                    <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
-                  </characteristics>
-                </profile>
-                <profile id="302e-8fa2-db58-6ffd" name="Tiger" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
-                  <characteristics>
-                    <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">This model&apos;s Melee Pool cannot be reduced by States.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <infoLinks>
-                <infoLink id="9499-d8bc-a73a-d74a" name="Aggressive" hidden="false" targetId="a445-e041-8d5f-aa28" type="rule"/>
-              </infoLinks>
+            <infoGroup id="3f09-29b6-9fd6-53ad" name="Profiles" hidden="false">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="lessThan"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <infoGroups>
+                <infoGroup id="fea5-13f6-d1dd-579c" name="Tiger" hidden="false">
+                  <profiles>
+                    <profile id="fde2-7c16-dd9d-92d9" name="Tiger" hidden="false" typeId="6ea2-0f74-4852-4a98" typeName="Character Profile &amp; Traits">
+                      <characteristics>
+                        <characteristic name="Melee Pool" typeId="8409-8d55-ce45-a33b">3</characteristic>
+                        <characteristic name="Melee Boost" typeId="6a36-e826-18f3-0b25"/>
+                        <characteristic name="Ranged Pool" typeId="7a01-37c0-4741-672c"/>
+                        <characteristic name="Ranged Boost" typeId="ff66-ea54-d863-5c17"/>
+                        <characteristic name="Move" typeId="af89-242d-625f-9bff"/>
+                        <characteristic name="Move Boost" typeId="62a6-8125-f293-5c76"/>
+                        <characteristic name="Ki" typeId="8b76-2b4b-066e-a0c5"/>
+                        <characteristic name="Ki Boost" typeId="c34e-f8ae-0984-37ac"/>
+                        <characteristic name="Ki Cap" typeId="2e88-c65e-4e45-d4c4"/>
+                        <characteristic name="Wounds" typeId="a1dc-c2c1-e2d2-ca98"/>
+                        <characteristic name="Size &amp; Base" typeId="6af2-e777-20ce-e060"/>
+                        <characteristic name="Traits" typeId="e742-1b02-09cf-fd97">Aggressive</characteristic>
+                      </characteristics>
+                    </profile>
+                    <profile id="be71-b380-718c-221a" name="Tiger Bite" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+                      <characteristics>
+                        <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+2</characteristic>
+                        <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Aggressive, Bleed (1/1), Sharp (1)</characteristic>
+                        <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d"/>
+                        <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+                      </characteristics>
+                    </profile>
+                    <profile id="c55b-2e0b-64e1-0091" name="Tiger Unique Effects" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+                      <characteristics>
+                        <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">If the Enemy model suffers damage in a Melee Exchange with this profile, that Enemy model becomes Prone.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <infoLinks>
+                    <infoLink id="dbca-3b23-3db1-f4dc" name="Sharp " hidden="false" targetId="6092-9fb5-5196-d1eb" type="rule"/>
+                    <infoLink id="b841-4d59-0cb0-2ccb" name="Bleed" hidden="false" targetId="ac4a-e540-4fe3-126a" type="rule"/>
+                    <infoLink id="e2b9-73ef-2b64-7efd" name="Aggressive" hidden="false" targetId="a445-e041-8d5f-aa28" type="rule"/>
+                  </infoLinks>
+                </infoGroup>
+                <infoGroup id="be45-6beb-5b9d-825d" name="Deer" hidden="false">
+                  <profiles>
+                    <profile id="3f4d-b23f-32d5-1414" name="Deer" hidden="false" typeId="6ea2-0f74-4852-4a98" typeName="Character Profile &amp; Traits">
+                      <characteristics>
+                        <characteristic name="Melee Pool" typeId="8409-8d55-ce45-a33b">3</characteristic>
+                        <characteristic name="Melee Boost" typeId="6a36-e826-18f3-0b25"/>
+                        <characteristic name="Ranged Pool" typeId="7a01-37c0-4741-672c"/>
+                        <characteristic name="Ranged Boost" typeId="ff66-ea54-d863-5c17"/>
+                        <characteristic name="Move" typeId="af89-242d-625f-9bff"/>
+                        <characteristic name="Move Boost" typeId="62a6-8125-f293-5c76"/>
+                        <characteristic name="Ki" typeId="8b76-2b4b-066e-a0c5"/>
+                        <characteristic name="Ki Boost" typeId="c34e-f8ae-0984-37ac"/>
+                        <characteristic name="Ki Cap" typeId="2e88-c65e-4e45-d4c4"/>
+                        <characteristic name="Wounds" typeId="a1dc-c2c1-e2d2-ca98"/>
+                        <characteristic name="Size &amp; Base" typeId="6af2-e777-20ce-e060"/>
+                        <characteristic name="Traits" typeId="e742-1b02-09cf-fd97">Defensive, Impenetrable Defence</characteristic>
+                      </characteristics>
+                    </profile>
+                    <profile id="cfc8-1df0-0b3b-b979" name="Deer Hooves" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+                      <characteristics>
+                        <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">-1</characteristic>
+                        <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Spirit Block</characteristic>
+                        <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Sidestep Defence (0)</characteristic>
+                        <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+                      </characteristics>
+                    </profile>
+                    <profile id="4ee7-68b8-7aad-f555" name="Deer Unique Effects" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+                      <characteristics>
+                        <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">If Master Koju suffers Damage as a result of a Melee Exchange while using this Profile, she gains Regenerate (1) until the End Phase.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <infoLinks>
+                    <infoLink id="db8a-347e-a88e-ca93" name="Defensive" hidden="false" targetId="c6e1-0904-b78f-7933" type="rule"/>
+                    <infoLink id="3d69-148c-012f-a80a" name="Impenetrable Defence" hidden="false" targetId="6659-a776-d836-a2fb" type="rule"/>
+                    <infoLink id="ec47-b00b-9ac7-59de" name="Regenerate" hidden="false" targetId="74c4-617e-8405-3e46" type="rule"/>
+                    <infoLink id="01ea-a423-4095-4a5c" name="Spirit" hidden="false" targetId="a9ba-9904-7d29-7bcb" type="rule"/>
+                  </infoLinks>
+                </infoGroup>
+              </infoGroups>
             </infoGroup>
           </infoGroups>
           <categoryLinks>
@@ -8066,6 +8511,51 @@ If it fails, its Activation ends and it loses one Activation Counter.</character
     <profile id="fe79-0c86-35c8-5a3a" name="Unsui" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
       <characteristics>
         <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">While within 2&quot; of a Friendly non-Unsui Monk, this model gains Kata and may use non-Exceptional Special Attacks or Defences on that model&apos;s Melee Weapons as if they were on this model&apos;s Melee Weapons. The cost for the Special Attack or Defence becomes (1).</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="4e2d-d43f-364e-1325" name="Shisa" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+      <characteristics>
+        <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
+        <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+        <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">-</characteristic>
+        <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+        <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
+        <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+        <characteristic name="Ki" typeId="3969-9568-a914-6854">0</characteristic>
+        <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+        <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">6</characteristic>
+        <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">3 OOO</characteristic>
+        <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="f08c-534a-7e16-4f40" name="Kawa no Rojin" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+      <characteristics>
+        <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
+        <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277"/>
+        <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">1</characteristic>
+        <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+        <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
+        <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+        <characteristic name="Ki" typeId="3969-9568-a914-6854">2</characteristic>
+        <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+        <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">0</characteristic>
+        <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">8 OOOOO OOO</characteristic>
+        <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Large 50mm</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="867e-a4a6-68a7-dd65" name="Monkey" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+      <characteristics>
+        <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">1</characteristic>
+        <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277"/>
+        <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">1</characteristic>
+        <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+        <characteristic name="Move" typeId="91b7-833e-fd8e-a620">5</characteristic>
+        <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+        <characteristic name="Ki" typeId="3969-9568-a914-6854">1</characteristic>
+        <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+        <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">0</characteristic>
+        <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">2 OO</characteristic>
+        <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Tiny 30mm</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>
