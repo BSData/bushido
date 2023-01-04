@@ -3661,7 +3661,9 @@ When this model declares a Charge Action, this model may Move through Destructib
           <characteristics>
             <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">• Once per game, all Villagers gain Fearless and Last Stand until the End Phase
 • Friendly Villager models gain Steadfast
-• Each Starting Phase gain one permitted Event - Trap card of which you currently have none</characteristic>
+• Each Starting Phase gain one permitted Event - Trap card of which you currently have none.
+
+Permitted [Animal, Villager, Kami, Yokai, Ronin Kami, Ronin Villager, Ronin Yokai]</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -6828,7 +6830,15 @@ Until the End Phase, whenever an Opponent spends a Pass Token; a Friendly, non-A
         </modifier>
       </modifiers>
     </entryLink>
-    <entryLink id="bd03-352a-f2ab-43cc" name="Taiyo" hidden="false" collective="false" import="true" targetId="90d7-5fe5-0a05-1bea" type="selectionEntry"/>
+    <entryLink id="bd03-352a-f2ab-43cc" name="Taiyo" hidden="false" collective="false" import="true" targetId="90d7-5fe5-0a05-1bea" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1a12-f47f-8f23-0777" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
     <entryLink id="07da-0f54-ea58-c348" name="The Hozumi Family" hidden="false" collective="false" import="true" targetId="4750-f234-49e4-79c1" type="selectionEntry"/>
     <entryLink id="303b-1989-4db9-a5a0" name="The Kiyozumi Family" hidden="false" collective="false" import="true" targetId="0e4a-a40c-14eb-2f4f" type="selectionEntry"/>
     <entryLink id="474e-a21f-b345-0b89" name="Kami of Evening Flame" hidden="true" collective="false" import="true" targetId="c4fd-a8c6-2b3d-e5a4" type="selectionEntry">
