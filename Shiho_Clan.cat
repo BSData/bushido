@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="2276-2df6-78a7-841d" name="Shiho Clan" revision="18" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="11" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="2276-2df6-78a7-841d" name="Shiho Clan" revision="19" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="12" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="7fa5-7ef0-59c5-f657" name="Tanaka" hidden="false"/>
   </categoryEntries>
@@ -983,6 +983,7 @@ This model gains Fearless when declaring actions Targeting or Selecting a model 
             <modifier type="set" field="hidden" value="false"/>
             <modifier type="add" field="category" value="b254-2810-6b62-66d9"/>
             <modifier type="set-primary" field="category" value="9fba-f50b-c8f7-8396"/>
+            <modifier type="remove" field="category" value="0ca8-2040-37f2-a1e0"/>
           </modifiers>
         </modifierGroup>
       </modifierGroups>
@@ -2854,6 +2855,13 @@ This model&apos;s Dai Kyu Ranged Weapon gains Reload (+1) and this model does no
       </costs>
     </selectionEntry>
     <selectionEntry id="01b1-3329-b0a4-9881" name="Lay of the Land" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="a745-0548-80c8-ece4" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2972-8866-98f8-0454" type="max"/>
       </constraints>
@@ -3740,14 +3748,14 @@ Requirement [Ashigaru]</characteristic>
             <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="e9a0-cc94-3fee-24da" name="Distaff Wolf" hidden="true" collective="false" import="true" type="upgrade">
+        <selectionEntry id="e9a0-cc94-3fee-24da" name="Distaff Wolf" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
-            <modifier type="set" field="hidden" value="false">
+            <modifier type="set" field="hidden" value="true">
               <conditionGroups>
-                <conditionGroup type="and">
+                <conditionGroup type="or">
                   <conditions>
-                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4e48-1ed5-3567-b991" type="instanceOf"/>
-                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e12a-f782-3281-7444" type="instanceOf"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4e48-1ed5-3567-b991" type="notInstanceOf"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e12a-f782-3281-7444" type="notInstanceOf"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -3763,6 +3771,11 @@ Requirement [Ashigaru]</characteristic>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
+            </modifier>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="a745-0548-80c8-ece4" type="atLeast"/>
+              </conditions>
             </modifier>
           </modifiers>
           <constraints>
@@ -4317,17 +4330,22 @@ Requirement [Loyal &amp; Samurai]</characteristic>
                 <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="7ef8-7f43-f951-237e" name="Falconer&apos;s Glove" hidden="true" collective="false" import="true" type="upgrade">
+            <selectionEntry id="7ef8-7f43-f951-237e" name="Falconer&apos;s Glove" hidden="false" collective="false" import="true" type="upgrade">
               <modifiers>
-                <modifier type="set" field="hidden" value="false">
+                <modifier type="set" field="hidden" value="true">
                   <conditionGroups>
-                    <conditionGroup type="or">
+                    <conditionGroup type="and">
                       <conditions>
-                        <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9126-f480-c2df-fbaf" type="instanceOf"/>
-                        <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e043-1202-31ec-f2d4" type="instanceOf"/>
+                        <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9126-f480-c2df-fbaf" type="notInstanceOf"/>
+                        <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e043-1202-31ec-f2d4" type="notInstanceOf"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
+                </modifier>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="a745-0548-80c8-ece4" type="atLeast"/>
+                  </conditions>
                 </modifier>
               </modifiers>
               <constraints>
@@ -4352,18 +4370,27 @@ Requirement [Falconer, Hiroto, Ronin Falconer]</characteristic>
                 <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="4eea-c800-152f-c713" name="Straw Hat" hidden="true" collective="false" import="true" type="upgrade">
+            <selectionEntry id="4eea-c800-152f-c713" name="Straw Hat" hidden="false" collective="false" import="true" type="upgrade">
               <modifiers>
-                <modifier type="set" field="hidden" value="false">
+                <modifier type="set" field="hidden" value="true">
                   <conditionGroups>
-                    <conditionGroup type="and">
+                    <conditionGroup type="or">
                       <conditions>
-                        <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e12a-f782-3281-7444" type="instanceOf"/>
-                        <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f476-156e-8599-9253" type="instanceOf"/>
-                        <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9126-f480-c2df-fbaf" type="notInstanceOf"/>
+                        <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e12a-f782-3281-7444" type="notInstanceOf"/>
+                        <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f476-156e-8599-9253" type="notInstanceOf"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
+                </modifier>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="a745-0548-80c8-ece4" type="atLeast"/>
+                  </conditions>
+                </modifier>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9126-f480-c2df-fbaf" type="instanceOf"/>
+                  </conditions>
                 </modifier>
               </modifiers>
               <constraints>
