@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="0b85-0901-eb64-b84b" name="The Savage Wave" revision="19" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="11" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="0b85-0901-eb64-b84b" name="The Savage Wave" revision="20" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="12" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="5048-3a52-5689-6d0b" name="Ambush" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -1977,7 +1977,7 @@ Exclusion [Animal, Cavalry]</characteristic>
             </profile>
           </profiles>
         </entryLink>
-        <entryLink id="1562-bd8c-e1d2-c557" name="Bakemono Boomers" hidden="false" collective="false" import="true" targetId="11b7-f913-1160-ee25" type="selectionEntry">
+        <entryLink id="1562-bd8c-e1d2-c557" name="Bakemono Boomer" hidden="false" collective="false" import="true" targetId="11b7-f913-1160-ee25" type="selectionEntry">
           <modifiers>
             <modifier type="append" field="name" value="A"/>
           </modifiers>
@@ -2002,7 +2002,7 @@ Exclusion [Animal, Cavalry]</characteristic>
             </profile>
           </profiles>
         </entryLink>
-        <entryLink id="c8d7-2eb0-1ad0-9580" name="!DRAFT!CYCLE Endless Numbers" hidden="false" collective="false" import="true" targetId="a7a7-4971-6952-2ed5" type="selectionEntry"/>
+        <entryLink id="c8d7-2eb0-1ad0-9580" name="Endless Numbers" hidden="false" collective="false" import="true" targetId="a7a7-4971-6952-2ed5" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0.0"/>
@@ -3010,6 +3010,11 @@ Restriction [Bakemono]</characteristic>
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="6da0-b320-b958-dc82" type="atLeast"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <profiles>
         <profile id="ec0f-31e5-fcc7-b6cf" name="Wrath of the Red Sun" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
@@ -3322,6 +3327,13 @@ Permitted [Oni, Onisho]</characteristic>
       </costs>
     </selectionEntry>
     <selectionEntry id="1298-9f50-af2e-65be" name="Gathering in the Dark" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="a745-0548-80c8-ece4" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d82f-1edd-bde2-c6e6" type="max"/>
       </constraints>
@@ -3343,14 +3355,19 @@ Until the End Phase whenever an Opponent spends a Pass Token, add 1 Ki Token to 
     </selectionEntry>
     <selectionEntry id="7735-1a18-c06d-8e3e" name="Impending Doom" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
-        <modifier type="set" field="hidden" value="false">
-          <conditions>
-            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0c22-e9ca-a3de-e706" type="atLeast"/>
-          </conditions>
-        </modifier>
         <modifier type="set" field="def7-43bf-d39b-db3c" value="0.0">
           <conditions>
-            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0c22-e9ca-a3de-e706" type="equalTo"/>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="0c22-e9ca-a3de-e706" type="lessThan"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="0c22-e9ca-a3de-e706" type="lessThan"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="a745-0548-80c8-ece4" type="atLeast"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -3378,6 +3395,13 @@ Requirement [Warband with a Shugenja model]</characteristic>
       </costs>
     </selectionEntry>
     <selectionEntry id="34a1-1350-497b-e3f4" name="Spoiled Rations" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="a745-0548-80c8-ece4" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7299-c78c-0798-b3a9" type="max"/>
       </constraints>
@@ -4037,15 +4061,15 @@ Until the End Phase Enemy models gain Indomitable (-1) to a minimum of 0.</chara
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="6.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="a7a7-4971-6952-2ed5" name="Endless Numbers" hidden="true" collective="false" import="true" type="upgrade">
+    <selectionEntry id="a7a7-4971-6952-2ed5" name="Endless Numbers" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
-        <modifier type="set" field="hidden" value="false">
+        <modifier type="set" field="hidden" value="true">
           <conditionGroups>
             <conditionGroup type="and">
               <conditions>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9b14-5558-cfeb-ee1c" type="instanceOf"/>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="afd4-8041-e359-223c" type="notInstanceOf"/>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ee85-6e6f-01a0-cc94" type="notInstanceOf"/>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9b14-5558-cfeb-ee1c" type="notInstanceOf"/>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="afd4-8041-e359-223c" type="instanceOf"/>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ee85-6e6f-01a0-cc94" type="instanceOf"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -4063,6 +4087,11 @@ Until the End Phase Enemy models gain Indomitable (-1) to a minimum of 0.</chara
         <modifier type="decrement" field="a111-8656-5c05-7415" value="3.0">
           <conditions>
             <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="atLeast"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="6da0-b320-b958-dc82" type="atLeast"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -5926,11 +5955,16 @@ Restriction [Horde Bakemono]</characteristic>
             <cost name=" Rice" typeId="a111-8656-5c05-7415" value="-1.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="9767-74c0-aa29-40eb" name="Battle Hungry" hidden="true" collective="false" import="true" type="upgrade">
+        <selectionEntry id="9767-74c0-aa29-40eb" name="Battle Hungry" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
-            <modifier type="set" field="hidden" value="false">
+            <modifier type="set" field="hidden" value="true">
               <conditions>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3507-42ea-bf26-b23d" type="instanceOf"/>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3507-42ea-bf26-b23d" type="notInstanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="a745-0548-80c8-ece4" type="atLeast"/>
               </conditions>
             </modifier>
           </modifiers>
