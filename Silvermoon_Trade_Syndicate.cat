@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="6a8f-b352-80c6-855f" name="Silvermoon Trade Syndicate" revision="20" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="13" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="6a8f-b352-80c6-855f" name="Silvermoon Trade Syndicate" revision="21" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="13" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="5048-3a52-5689-6d0b" name="Bought Loyalty" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -4375,6 +4375,100 @@ That model must retake that test.</characteristic>
       </categoryLinks>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="ebdf-4dc3-11b9-d7cc" name="Tomo" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="98a6-e76a-f99b-a1d3" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6dab-a253-4a30-5331" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="fb24-9353-ae0f-6639" name="Tomo" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">1</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277"/>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">1</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">3</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">1</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">6</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">6 OOOOO O</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="5951-c668-786d-640c" name="Ki Feats" hidden="false">
+          <infoLinks>
+            <infoLink id="5444-ea97-68c4-d695" name="Kill or Cure" hidden="false" targetId="bce0-a685-42ce-e11d" type="infoGroup"/>
+            <infoLink id="82f2-3044-8104-ff42" name="Cauterise" hidden="false" targetId="abe3-80f6-b3b2-d58a" type="infoGroup"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="cf80-160b-fe57-8776" name="Traits" hidden="false">
+          <profiles>
+            <profile id="a2b8-3a5e-85eb-1075" name="Tomo" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Cowardly, Fear (4), Heal (2), Leech (1/4&quot;)</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="21c8-ee5f-3ee3-3121" name="Cowardly" hidden="false" targetId="c8d8-d1c7-905b-f971" type="rule"/>
+            <infoLink id="49f0-61e2-816d-51ce" name="Fear" hidden="false" targetId="3586-4583-7f10-1f31" type="rule"/>
+            <infoLink id="7972-71b0-335a-4501" name="Heal" hidden="false" targetId="bd98-52d2-3a66-08e7" type="rule"/>
+            <infoLink id="18df-c7ae-e89a-515b" name="Leech" hidden="false" targetId="bab1-710b-4f90-7c2f" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="2933-f528-3e2e-f03e" name="Melee Weapon" hidden="false">
+          <profiles>
+            <profile id="bd5d-78d7-39de-5fa2" name="Surgical Tools" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+0</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Bleed (1/1)</characteristic>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d"/>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="9648-7a58-74a6-8e81" name="Combo Attack " hidden="false" targetId="78ab-6a94-be24-8f74" type="rule"/>
+            <infoLink id="9d2b-a055-6c56-befa" name="Sweep Attack" hidden="false" targetId="bcbd-fab2-c8e2-6ff7" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="2796-4506-cb2c-0ace" name="Unique Effects" hidden="false">
+          <profiles>
+            <profile id="4b34-48ca-2b2d-497b" name="Tomo" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">At the start of this model&apos;s activation, if this model has Ki Tokens equal to its maximum Ki you may ignore the &apos;Once Per Turn&apos; box for the Kill or Cure Ki Feat.
+If the box is filled in, you may still use the Ki Feat.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </infoGroup>
+      </infoGroups>
+      <categoryLinks>
+        <categoryLink id="f37c-2aa4-89b3-3131" name="Faction: Silvermoon Trade Syndicate" hidden="false" targetId="875a-48b1-3c9f-0a14" primary="false"/>
+        <categoryLink id="c87e-e118-b476-4c03" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
+        <categoryLink id="0f82-bf43-5532-e1c3" name="Shatei" hidden="false" targetId="dd57-4bab-fa7b-f75c" primary="false"/>
+        <categoryLink id="e1ee-feec-a0a8-55d6" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="fa74-7196-e2f4-f900" name="Enhancements" hidden="false" collective="false" import="true" targetId="37a1-1d53-ef45-026d" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="7.0"/>
       </costs>
     </selectionEntry>
   </selectionEntries>
