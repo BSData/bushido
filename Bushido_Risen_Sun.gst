@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="62e4-ab79-1c4c-9ffe" name="Bushido: Risen Sun" revision="13" battleScribeVersion="2.03" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="62e4-ab79-1c4c-9ffe" name="Bushido: Risen Sun" revision="14" battleScribeVersion="2.03" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <costTypes>
     <costType id="a111-8656-5c05-7415" name=" Rice" defaultCostLimit="-1.0" hidden="false"/>
   </costTypes>
@@ -303,9 +303,12 @@
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="685b-176a-7b13-c5c1" name="Balance Changes Public Beta (as of 05/01/23)" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="685b-176a-7b13-c5c1" name="Balance Changes Jan23" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="f844-aa02-34c3-8284" value="0.0"/>
+      </modifiers>
       <constraints>
-        <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f844-aa02-34c3-8284" type="min"/>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f844-aa02-34c3-8284" type="min"/>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="df11-7b4d-5153-c319" type="max"/>
       </constraints>
       <categoryLinks>
