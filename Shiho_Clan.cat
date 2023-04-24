@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="2276-2df6-78a7-841d" name="Shiho Clan" revision="22" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="14" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="2276-2df6-78a7-841d" name="Shiho Clan" revision="23" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="14" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="7fa5-7ef0-59c5-f657" name="Tanaka" hidden="false"/>
   </categoryEntries>
@@ -982,6 +982,7 @@ This model gains Fearless when declaring actions Targeting or Selecting a model 
             <conditionGroup type="or">
               <conditions>
                 <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="fb4a-18a7-5b40-74ec" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="f616-46d8-5907-fafd" type="atLeast"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -993,7 +994,11 @@ This model gains Fearless when declaring actions Targeting or Selecting a model 
             <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9402-edcc-93a2-aef1" type="atLeast"/>
           </conditions>
           <modifiers>
-            <modifier type="set" field="hidden" value="false"/>
+            <modifier type="set" field="hidden" value="false">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="f616-46d8-5907-fafd" type="lessThan"/>
+              </conditions>
+            </modifier>
             <modifier type="add" field="category" value="b254-2810-6b62-66d9"/>
             <modifier type="set-primary" field="category" value="9fba-f50b-c8f7-8396"/>
             <modifier type="remove" field="category" value="0ca8-2040-37f2-a1e0"/>
@@ -3358,6 +3363,15 @@ You may decide the order recruited terrain (Friendly and Enemy) is Deployed.</ch
               </conditions>
             </conditionGroup>
           </conditionGroups>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink id="c221-5eb4-86e4-33b0" name="Hiroto, Drunken Master" hidden="true" collective="false" import="true" targetId="f616-46d8-5907-fafd" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="9126-f480-c2df-fbaf" type="atLeast"/>
+          </conditions>
         </modifier>
       </modifiers>
     </entryLink>
