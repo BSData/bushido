@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="b489-b304-948d-52d0" name="Library-Ronin" revision="32" battleScribeVersion="2.03" library="true" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="14" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="b489-b304-948d-52d0" name="Library-Ronin" revision="33" battleScribeVersion="2.03" library="true" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="14" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="4e24-3a7e-77bc-dfed" name="Balance" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -1390,26 +1390,10 @@ This model cannot declare Melee or Charge Actions Targeting Imperial models.</ch
         <modifier type="set" field="hidden" value="false">
           <conditionGroups>
             <conditionGroup type="or">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="294d-a0fa-f437-2fca" type="atLeast"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="9402-edcc-93a2-aef1" type="atLeast"/>
-                  </conditions>
-                </conditionGroup>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition field="selections" scope="primary-category" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="53b4-db5e-0527-0759" type="notInstanceOf"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9402-edcc-93a2-aef1" type="atLeast"/>
-                  </conditions>
-                </conditionGroup>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition field="selections" scope="primary-category" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="53b4-db5e-0527-0759" type="notInstanceOf"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="294d-a0fa-f437-2fca" type="atLeast"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="294d-a0fa-f437-2fca" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9402-edcc-93a2-aef1" type="atLeast"/>
+              </conditions>
             </conditionGroup>
           </conditionGroups>
         </modifier>
@@ -5893,7 +5877,7 @@ This model can only be recruited into a Warband that contains all three Blood Br
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="370e-e02b-d9ee-8b80" name="Magamata" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="370e-e02b-d9ee-8b80" name="Magatama" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
         <modifier type="decrement" field="a111-8656-5c05-7415" value="1.0">
           <conditions>
@@ -5908,7 +5892,6 @@ This model can only be recruited into a Warband that contains all three Blood Br
                 <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d7c5-a2b9-4696-fd33" type="instanceOf"/>
                 <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6639-615e-f1ab-bc64" type="instanceOf"/>
                 <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7435-856f-ece2-fe58" type="instanceOf"/>
-                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f322-702a-ff62-b37e" type="notInstanceOf"/>
                 <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="6da0-b320-b958-dc82" type="atLeast"/>
               </conditions>
             </conditionGroup>
@@ -5920,7 +5903,7 @@ This model can only be recruited into a Warband that contains all three Blood Br
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="68e8-9e8b-1f78-7eb6" type="max"/>
       </constraints>
       <profiles>
-        <profile id="3f3a-becf-d562-fe91" name="Magamata" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
+        <profile id="3f3a-becf-d562-fe91" name="Magatama" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
           <characteristics>
             <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">When Attached model uses a Target Ki Feat with a Range value, you may spend 1 additional Ki to extend the range of the feat by 2&quot;.</characteristic>
           </characteristics>
@@ -9822,7 +9805,7 @@ The model making the attack gains a Stunned Marker.</characteristic>
           <profiles>
             <profile id="31a4-47d0-b569-1d98" name="Bird Strike" hidden="false" typeId="7e20-258e-bf92-18f9" typeName="Ranged Weapon">
               <characteristics>
-                <characteristic name="Ranged Weapon Strength" typeId="15aa-b6bd-6923-271f">+1</characteristic>
+                <characteristic name="Ranged Weapon Strength" typeId="15aa-b6bd-6923-271f">+0</characteristic>
                 <characteristic name="Range Bands" typeId="be6a-50c6-d691-e2e9">-/10/-</characteristic>
                 <characteristic name="Traits" typeId="3410-4428-ef91-eb61">Sharp (1)</characteristic>
                 <characteristic name="Specials" typeId="cdaf-b6ac-89d4-39ef">Combo Attack (1)</characteristic>
@@ -9852,9 +9835,9 @@ This model can make only one Bird Strike Ranged Attack per turn.</characteristic
           <profiles>
             <profile id="a72c-dcf1-4cde-ff34" name="Plainsmen Falconer A" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
               <characteristics>
-                <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
-                <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
-                <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">2</characteristic>
+                <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">2</characteristic>
+                <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277"/>
+                <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">3</characteristic>
                 <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
                 <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
                 <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
@@ -9886,9 +9869,9 @@ This model can make only one Bird Strike Ranged Attack per turn.</characteristic
           <profiles>
             <profile id="3a39-e982-8414-c8ae" name="Plainsmen Falconer B" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
               <characteristics>
-                <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
-                <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
-                <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">2</characteristic>
+                <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">2</characteristic>
+                <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277"/>
+                <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">3</characteristic>
                 <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
                 <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
                 <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
@@ -9943,7 +9926,7 @@ This model can make only one Bird Strike Ranged Attack per turn.</characteristic
             <entryLink id="354d-c1ca-128c-e656" name="!DRAFT Triangle Knife" hidden="false" collective="false" import="true" targetId="fcc9-c236-babe-2239" type="selectionEntry"/>
             <entryLink id="8681-93b9-d5fd-b03f" name="!DRAFT Obscure Charm" hidden="false" collective="false" import="true" targetId="74be-1ece-8b7d-739d" type="selectionEntry"/>
             <entryLink id="c2df-dba9-220d-ea07" name="!DRAFT Minimoto Steel Helm" hidden="false" collective="false" import="true" targetId="38b5-a50d-24f0-4435" type="selectionEntry"/>
-            <entryLink id="ceb7-4191-ca05-c9c2" name="!DRAFT Magamata" hidden="false" collective="false" import="true" targetId="370e-e02b-d9ee-8b80" type="selectionEntry"/>
+            <entryLink id="ceb7-4191-ca05-c9c2" name="Magamata" hidden="false" collective="false" import="true" targetId="370e-e02b-d9ee-8b80" type="selectionEntry"/>
             <entryLink id="f918-1c00-becb-75dd" name="Wolf Heart Talisman" hidden="false" collective="false" import="true" targetId="a56e-8e8e-97b4-ec73" type="selectionEntry"/>
             <entryLink id="176c-b90b-2290-222d" name="The Eagle Banner" hidden="false" collective="false" import="true" targetId="010e-1205-db10-6a2d" type="selectionEntry"/>
             <entryLink id="f34f-b5d2-77ad-f3ed" name="Hand Cannon" hidden="false" collective="false" import="true" targetId="3009-1a3c-223d-cae2" type="selectionEntry"/>

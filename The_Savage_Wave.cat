@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="0b85-0901-eb64-b84b" name="The Savage Wave" revision="23" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="14" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="0b85-0901-eb64-b84b" name="The Savage Wave" revision="24" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="14" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="5048-3a52-5689-6d0b" name="Ambush" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -1108,7 +1108,7 @@ Exclusion [Animal, Cavalry]</characteristic>
             <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
           </conditions>
           <modifiers>
-            <modifier type="set" field="a111-8656-5c05-7415" value="26.0"/>
+            <modifier type="decrement" field="a111-8656-5c05-7415" value="2.0"/>
             <modifier type="add" field="category" value="0c22-e9ca-a3de-e706"/>
           </modifiers>
         </modifierGroup>
@@ -3611,9 +3611,9 @@ Until the End Phase Enemy models gain Indomitable (-1) to a minimum of 0.</chara
     <entryLink id="51f0-d277-37a1-c542" name="The Dark Pilgrim" hidden="false" collective="false" import="true" targetId="1ada-6f0c-8123-5aab" type="selectionEntry"/>
     <entryLink id="53c7-c178-8019-f0de" name="Bobata, the Bell Ringer" hidden="false" collective="false" import="true" targetId="26cb-bcf5-6db2-8cc6" type="selectionEntry">
       <modifiers>
-        <modifier type="set" field="a111-8656-5c05-7415" value="26.0">
+        <modifier type="decrement" field="a111-8656-5c05-7415" value="1.0">
           <conditions>
-            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="equalTo"/>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
           </conditions>
         </modifier>
         <modifier type="decrement" field="a111-8656-5c05-7415" value="1.0">
@@ -3649,17 +3649,12 @@ Until the End Phase Enemy models gain Indomitable (-1) to a minimum of 0.</chara
             <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="bd75-31a1-5a23-cd2d" type="atLeast"/>
           </conditions>
         </modifier>
-      </modifiers>
-      <modifierGroups>
-        <modifierGroup>
+        <modifier type="decrement" field="a111-8656-5c05-7415" value="2.0">
           <conditions>
             <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
           </conditions>
-          <modifiers>
-            <modifier type="set" field="a111-8656-5c05-7415" value="27.0"/>
-          </modifiers>
-        </modifierGroup>
-      </modifierGroups>
+        </modifier>
+      </modifiers>
       <categoryLinks>
         <categoryLink id="0116-d7ac-fffe-0551" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
       </categoryLinks>
@@ -3681,6 +3676,13 @@ Until the End Phase Enemy models gain Indomitable (-1) to a minimum of 0.</chara
       </categoryLinks>
     </entryLink>
     <entryLink id="7fb1-1c8b-01e4-0106" name="Kemono, the Savage" hidden="false" collective="false" import="true" targetId="5466-549f-2eb8-3488" type="selectionEntry">
+      <modifiers>
+        <modifier type="decrement" field="a111-8656-5c05-7415" value="1.0">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="bd75-31a1-5a23-cd2d" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <categoryLinks>
         <categoryLink id="9cc8-e742-7ddf-d16e" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
       </categoryLinks>
@@ -3721,9 +3723,9 @@ Until the End Phase Enemy models gain Indomitable (-1) to a minimum of 0.</chara
     </entryLink>
     <entryLink id="8eb4-6806-01ae-83e3" name="Waka, the Rampager" hidden="false" collective="false" import="true" targetId="b6ad-c2e9-f23f-fb87" type="selectionEntry">
       <modifiers>
-        <modifier type="set" field="a111-8656-5c05-7415" value="23.0">
+        <modifier type="increment" field="a111-8656-5c05-7415" value="1.0">
           <conditions>
-            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="equalTo"/>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
           </conditions>
         </modifier>
         <modifier type="decrement" field="a111-8656-5c05-7415" value="1.0">
@@ -3767,22 +3769,17 @@ Until the End Phase Enemy models gain Indomitable (-1) to a minimum of 0.</chara
     </entryLink>
     <entryLink id="4f51-576a-6acd-1819" name="Zuba, the All-Seeing" hidden="false" collective="false" import="true" targetId="39c4-4369-b6ab-b22e" type="selectionEntry">
       <modifiers>
+        <modifier type="decrement" field="a111-8656-5c05-7415" value="2.0">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
+          </conditions>
+        </modifier>
         <modifier type="decrement" field="a111-8656-5c05-7415" value="1.0">
           <conditions>
             <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="bd75-31a1-5a23-cd2d" type="atLeast"/>
           </conditions>
         </modifier>
       </modifiers>
-      <modifierGroups>
-        <modifierGroup>
-          <conditions>
-            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
-          </conditions>
-          <modifiers>
-            <modifier type="set" field="a111-8656-5c05-7415" value="25.0"/>
-          </modifiers>
-        </modifierGroup>
-      </modifierGroups>
       <categoryLinks>
         <categoryLink id="9298-afcd-24c8-42e9" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
       </categoryLinks>
@@ -3891,6 +3888,9 @@ Until the End Phase Enemy models gain Indomitable (-1) to a minimum of 0.</chara
       <categoryLinks>
         <categoryLink id="4764-c9cb-0f0d-c58b" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
       </categoryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="24.0"/>
+      </costs>
     </entryLink>
     <entryLink id="60d5-cbed-ca1a-206f" name="Yusha, the Vindictive" hidden="false" collective="false" import="true" targetId="165e-ed76-9abf-725d" type="selectionEntry">
       <modifiers>
@@ -3903,6 +3903,9 @@ Until the End Phase Enemy models gain Indomitable (-1) to a minimum of 0.</chara
       <categoryLinks>
         <categoryLink id="fccd-a47b-69ad-5e11" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
       </categoryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="22.0"/>
+      </costs>
     </entryLink>
     <entryLink id="e136-9118-0cbe-99b8" name="Onyomi" hidden="false" collective="false" import="true" targetId="6aa6-e4fa-03c6-8b06" type="selectionEntry">
       <modifiers>
@@ -4514,11 +4517,6 @@ This model may move through Destructible terrain; if you do, remove the terrain 
             </conditionGroup>
           </conditionGroups>
         </modifier>
-        <modifier type="decrement" field="a111-8656-5c05-7415" value="1.0">
-          <conditions>
-            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="bd75-31a1-5a23-cd2d" type="atLeast"/>
-          </conditions>
-        </modifier>
       </modifiers>
       <modifierGroups>
         <modifierGroup>
@@ -4714,7 +4712,7 @@ Kemono &amp; Ushi are considered the same model when creating a Warband.</charac
         </infoGroup>
         <infoGroup id="d5ad-f858-c676-6b1c" name="Traits" hidden="false">
           <profiles>
-            <profile id="2a20-5639-d9a9-0e07" name="Ushi, The Sadistic" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+            <profile id="ca73-515e-5f56-fbeb" name="Ushi, The Sadistic" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
               <characteristics>
                 <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Aware, Fear (6), Indomitable (2), Oni Rage, Strong [Melee], Tough (1), Willpower</characteristic>
               </characteristics>
@@ -5706,9 +5704,6 @@ Oni and Onisho models, except Kijo models, activating within 4&quot;&quot; of th
       <entryLinks>
         <entryLink id="f998-92a4-0493-2bdd" name="Enhancements" hidden="false" collective="false" import="true" targetId="74e6-2485-1c0a-4227" type="selectionEntryGroup"/>
       </entryLinks>
-      <costs>
-        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="24.0"/>
-      </costs>
     </selectionEntry>
     <selectionEntry id="165e-ed76-9abf-725d" name="Yusha, the Vindictive" hidden="false" collective="false" import="true" type="model">
       <modifiers>
@@ -5821,9 +5816,6 @@ Oni and Onisho models, except Kijo models, activating within 4&quot;&quot; of th
       <entryLinks>
         <entryLink id="ec48-4c81-c94d-2d5a" name="Enhancements" hidden="false" collective="false" import="true" targetId="74e6-2485-1c0a-4227" type="selectionEntryGroup"/>
       </entryLinks>
-      <costs>
-        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="22.0"/>
-      </costs>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
