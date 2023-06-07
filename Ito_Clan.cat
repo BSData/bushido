@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="302b-66f1-a875-3b63" name="Ito Clan" revision="22" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="14" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="302b-66f1-a875-3b63" name="Ito Clan" revision="23" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="14" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="46b2-47c2-4c55-2e3a" name="Kinu" hidden="false"/>
     <categoryEntry id="273a-b61b-c7f8-76fd" name="Itsunagi" hidden="false"/>
@@ -4164,12 +4164,112 @@ When this model&apos;s Last Stand trait is triggered, the nearest Friendly Shuge
         <categoryLink id="3dca-79fd-c960-6a06" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
         <categoryLink id="d7c8-e740-0204-18de" name="Faction: Ito Clan" hidden="false" targetId="957c-dfd0-81d7-38ce" primary="false"/>
         <categoryLink id="9071-a208-d8a1-2a1d" name="Abomination" hidden="false" targetId="9147-4da6-a4d7-c68b" primary="false"/>
+        <categoryLink id="b9c7-5104-f8c7-fdae" name="Brutal" hidden="false" targetId="f62f-dd0b-4f06-06a6" primary="false"/>
       </categoryLinks>
       <entryLinks>
         <entryLink id="9d3e-6a04-e516-d75a" name="Enhancements" hidden="false" collective="false" import="true" targetId="c1b7-60f5-a313-5345" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="10.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="8e46-e9a4-9683-6bde" name="Ito Mamushi" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9ca6-7a62-7b68-47a2" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1944-8d93-c9c2-de80" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="37b0-5c05-8d30-9484" name="Ito Mamushi" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">4</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">4</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33">3</characteristic>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">5</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac">2</characteristic>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">2</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c">3</characteristic>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">6</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">5 OOOOO</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="eaea-74da-8fe0-e788" name="Traits" hidden="false">
+          <profiles>
+            <profile id="48b4-9ec0-86eb-15a9" name="Ito Mamushi" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Armour (2), Blood of Orochi (1), Feint (1), Jump Up, Prowess [Melee](1), Ranged Defence (1), Resistance (1)</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="5a16-8dcc-92e4-e8fb" name="Armour" hidden="false" targetId="8615-1c63-2242-5746" type="rule"/>
+            <infoLink id="5139-a5d7-7779-5b17" name="Blood of Orochi" hidden="false" targetId="7a5a-2e8e-4a81-c48f" type="rule"/>
+            <infoLink id="9654-a813-cc13-c110" name="Jump Up" hidden="false" targetId="1575-e12f-4ca3-c557" type="rule"/>
+            <infoLink id="20bf-c59f-2fea-6fba" name="Resistance " hidden="false" targetId="7e3f-9dc3-cacb-469f" type="rule"/>
+            <infoLink id="7da7-ff82-1cfa-4af3" name="Prowess " hidden="false" targetId="75ef-327a-cd08-a248" type="rule"/>
+            <infoLink id="b71b-0a98-a59c-773b" name="Feint" hidden="false" targetId="38b0-4d97-3c4c-8d96" type="rule"/>
+            <infoLink id="c217-7da9-2b71-0647" name="Ranged Defence " hidden="false" targetId="9b8d-9ca9-e25d-3988" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="5bf5-1e56-6b31-aaa4" name="Melee Weapon" hidden="false">
+          <profiles>
+            <profile id="823d-341d-8dcd-9bc4" name="Yari" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+1</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Reach</characteristic>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Sidestep Defence (0), Sweep Defence (1)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="3cc8-839b-48f5-f4bb" name="Reach" hidden="false" targetId="e28e-d5dd-a262-1101" type="rule"/>
+            <infoLink id="f6a1-a0ab-32fa-a58b" name="Sweep Defence" hidden="false" targetId="5338-2d8f-f189-062d" type="rule"/>
+            <infoLink id="46a9-eb7a-f249-9e70" name="Sidestep Defence " hidden="false" targetId="753c-6c3b-64d7-203c" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="250f-7937-bcf7-3f56" name="Ki Feats" hidden="false">
+          <infoLinks>
+            <infoLink id="d642-ec49-53f3-e1c3" name="Rain of Blows" hidden="false" targetId="4759-f742-375f-6fea" type="infoGroup"/>
+            <infoLink id="7d42-fd8b-a374-03a6" name="Warning Rattle" hidden="false" targetId="63ea-0d62-123a-3ae1" type="infoGroup"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="2e14-b675-191b-4cd3" name="Unique Effects" hidden="false">
+          <profiles>
+            <profile id="006b-fe76-5750-646c" name="Unique Effects" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">This model begins the game with 2 Ki Tokens.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </infoGroup>
+      </infoGroups>
+      <categoryLinks>
+        <categoryLink id="6d47-fac6-dcca-4b75" name="Profile Cards" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
+        <categoryLink id="e7ab-6031-98e7-9f7e" name="Blood of Orochi" hidden="false" targetId="a678-8869-7918-cb24" primary="false"/>
+        <categoryLink id="a0df-a3be-8c1d-41a1" name="Hebimimman" hidden="false" targetId="683a-eb26-1ee8-43d1" primary="false"/>
+        <categoryLink id="8f00-7553-a4b0-f1ba" name="Samurai" hidden="false" targetId="e12a-f782-3281-7444" primary="false"/>
+        <categoryLink id="a4fa-a946-68bf-2fdb" name="Armoured" hidden="false" targetId="f322-702a-ff62-b37e" primary="false"/>
+        <categoryLink id="f0d6-641c-57f3-3abc" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="fbe7-baed-be2c-468a" name="Enhancements" hidden="false" collective="false" import="true" targetId="c1b7-60f5-a313-5345" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="22.0"/>
       </costs>
     </selectionEntry>
   </selectionEntries>
@@ -4474,7 +4574,7 @@ When this model&apos;s Last Stand trait is triggered, the nearest Friendly Shuge
           <modifiers>
             <modifier type="set" field="hidden" value="false">
               <conditionGroups>
-                <conditionGroup type="and">
+                <conditionGroup type="or">
                   <conditions>
                     <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a678-8869-7918-cb24" type="instanceOf"/>
                     <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="683a-eb26-1ee8-43d1" type="instanceOf"/>

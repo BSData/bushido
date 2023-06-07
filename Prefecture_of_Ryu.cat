@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="0cac-b8ad-fb7f-ef84" name="Prefecture of Ryu" revision="24" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="14" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="0cac-b8ad-fb7f-ef84" name="Prefecture of Ryu" revision="25" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="14" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="8688-cd6e-bcbe-2cbb" name="Ima" hidden="false"/>
     <categoryEntry id="65a8-4392-a95b-115b" name="Takashi" hidden="false"/>
@@ -4403,6 +4403,98 @@ When this model gains Ki from the Channel Trait, it also gains a Virtue Token.</
       </entryLinks>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="17.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="5deb-4f36-17bb-b751" name="Ryuko" hidden="false" collective="false" import="true" type="model">
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dc5e-5fc2-dc48-853d" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="6d01-6376-c8b6-f8e7" name="Ryuko" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">3</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">2</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">8</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">6 OOOOO O</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="7a1c-f8f7-c88f-a216" name="Ki Feats" hidden="false">
+          <infoLinks>
+            <infoLink id="db7d-da81-0541-cd28" name="Dragon&apos;s Focus" hidden="false" targetId="667b-a27e-c4f9-7cfa" type="infoGroup"/>
+            <infoLink id="1d4b-1d5f-ad29-2e49" name="Dragon&apos;s Awe" hidden="false" targetId="3c5c-2e9f-193c-b2b3" type="infoGroup"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="8a6d-df08-a0ab-1ad2" name="Traits" hidden="false">
+          <profiles>
+            <profile id="855a-6952-9032-2ac8" name="Ryuko" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Armour (3), Bravery, Channel (1/4&quot;), Prowess [Melee](1)</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="def6-8421-2c9e-37ae" name="Armour" hidden="false" targetId="8615-1c63-2242-5746" type="rule"/>
+            <infoLink id="613a-a5b5-bb40-bc11" name="Bravery" hidden="false" targetId="f9b2-38d2-7cda-de6e" type="rule"/>
+            <infoLink id="279b-cf06-86c4-26d0" name="Channel" hidden="false" targetId="69af-3098-e21e-7734" type="rule"/>
+            <infoLink id="b30c-f81c-da56-f858" name="Prowess " hidden="false" targetId="75ef-327a-cd08-a248" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="d02e-1ceb-fb05-8d56" name="Melee Weapon" hidden="false">
+          <profiles>
+            <profile id="5d11-de76-a899-8b82" name="Katana" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+1</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e"/>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Powerful Attack (1), Forceback Defence (0), Sweep Defence (1)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="0de8-a9e7-4174-98e7" name="Forceback Defence" hidden="false" targetId="7958-6321-b322-4e72" type="rule"/>
+            <infoLink id="5efa-d856-985f-9e69" name="Sweep Defence" hidden="false" targetId="5338-2d8f-f189-062d" type="rule"/>
+            <infoLink id="a261-ea11-b62b-796f" name="Powerful Attack" hidden="false" targetId="d56a-058d-95d9-5b60" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="53ef-1027-2f9b-f8ed" name="Unique Effects" hidden="false">
+          <profiles>
+            <profile id="b16c-9a4c-e8a4-fdeb" name="Ryuko" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">This model may only choose a Friendly Shisai model for its Channel Trait.
+When this model gains Ki from the Channel Trait, it also gains a Virtue Token.</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="b2e2-8ede-44be-e8cd" name="Virtue" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">While this model is in play, when a Friendly Shisai model spends a Virtue Token it may choose the following effect:
+• This model gains Parry (1) until the current activation is complete.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </infoGroup>
+      </infoGroups>
+      <categoryLinks>
+        <categoryLink id="6b03-ea79-075e-5a31" name="Faction: Prefecture of Ryu" hidden="false" targetId="7532-4f60-381d-2941" primary="false"/>
+        <categoryLink id="2c19-8500-e375-1155" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
+        <categoryLink id="77c3-e6f1-bbc9-1a06" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
+        <categoryLink id="3fed-fc08-6401-ea5b" name="Samurai" hidden="false" targetId="e12a-f782-3281-7444" primary="false"/>
+        <categoryLink id="abb9-538e-c1d7-cbfc" name="Armoured" hidden="false" targetId="f322-702a-ff62-b37e" primary="false"/>
+        <categoryLink id="d438-d386-2aff-5f11" name="Shisai" hidden="false" targetId="a485-b6b0-b58e-a3a1" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="8068-7ea4-e5ac-fce1" name="Enhancements" hidden="false" collective="false" import="true" targetId="3dad-1423-9b3c-86a7" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="15.0"/>
       </costs>
     </selectionEntry>
   </selectionEntries>
