@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="0b85-0901-eb64-b84b" name="The Savage Wave" revision="24" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="14" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="0b85-0901-eb64-b84b" name="The Savage Wave" revision="25" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="14" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="5048-3a52-5689-6d0b" name="Ambush" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -3599,7 +3599,15 @@ Until the End Phase Enemy models gain Indomitable (-1) to a minimum of 0.</chara
     <entryLink id="463c-1e3f-6c85-390f" name="The Kiyozumi Family" hidden="false" collective="false" import="true" targetId="0e4a-a40c-14eb-2f4f" type="selectionEntry"/>
     <entryLink id="c415-b466-2f34-5d92" name="The Hozumi Family" hidden="false" collective="false" import="true" targetId="4750-f234-49e4-79c1" type="selectionEntry"/>
     <entryLink id="d6c5-efc7-4b6c-5d0b" name="Taiyo" hidden="true" collective="false" import="true" targetId="90d7-5fe5-0a05-1bea" type="selectionEntry"/>
-    <entryLink id="4dcf-c806-7eea-f9a6" name="Ryokeen" hidden="false" collective="false" import="true" targetId="f97b-84fa-27d7-b73b" type="selectionEntry"/>
+    <entryLink id="4dcf-c806-7eea-f9a6" name="Ryokeen" hidden="false" collective="false" import="true" targetId="f97b-84fa-27d7-b73b" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d14c-bf06-fc37-16e2" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
     <entryLink id="ad1c-a78f-bbb5-2381" name="Kiyozumi Sadaka" hidden="false" collective="false" import="true" targetId="7728-72dd-3889-91b2" type="selectionEntry"/>
     <entryLink id="d2b3-8de9-218d-8c79" name="Kiyozumi Kicho" hidden="true" collective="false" import="true" targetId="7b8f-61a1-2d88-60f2" type="selectionEntry"/>
     <entryLink id="bf49-c5a9-5cc6-3b60" name="Kiyozumi Hinadori" hidden="true" collective="false" import="true" targetId="07f2-8804-f10d-7bbb" type="selectionEntry"/>
@@ -5704,6 +5712,9 @@ Oni and Onisho models, except Kijo models, activating within 4&quot;&quot; of th
       <entryLinks>
         <entryLink id="f998-92a4-0493-2bdd" name="Enhancements" hidden="false" collective="false" import="true" targetId="74e6-2485-1c0a-4227" type="selectionEntryGroup"/>
       </entryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="165e-ed76-9abf-725d" name="Yusha, the Vindictive" hidden="false" collective="false" import="true" type="model">
       <modifiers>
@@ -5816,6 +5827,9 @@ Oni and Onisho models, except Kijo models, activating within 4&quot;&quot; of th
       <entryLinks>
         <entryLink id="ec48-4c81-c94d-2d5a" name="Enhancements" hidden="false" collective="false" import="true" targetId="74e6-2485-1c0a-4227" type="selectionEntryGroup"/>
       </entryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0.0"/>
+      </costs>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
