@@ -1,31 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="6a8f-b352-80c6-855f" name="Silvermoon Trade Syndicate" revision="25" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="14" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="6a8f-b352-80c6-855f" name="Silvermoon Trade Syndicate" revision="26" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="14" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="5048-3a52-5689-6d0b" name="Bought Loyalty" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="83c8-9fcd-9b27-a489" type="max"/>
       </constraints>
       <profiles>
-        <profile id="b64d-9173-20c2-dc83" name="Bought Loyalty" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <characteristics>
-            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">Play when an Enemy non-Insignificant, non-Soulless model declares an action. That model must make a Ki Challenge Test (6). If it fails then its activation ends and it loses an Activation Counter.</characteristic>
-          </characteristics>
-        </profile>
         <profile id="9bf4-8b54-151f-5e52" name="Bought Loyalty" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="lessThan"/>
-              </conditions>
-            </modifier>
-          </modifiers>
           <characteristics>
             <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">Play when an Enemy non-Insignificant, non-Soulless model declares an action. That model must make a Ki Challenge Test (6). If it fails then its activation ends and it loses an Activation Counter.
 
@@ -257,14 +238,9 @@ A non-Soulless Enemy model in BtB with a Friendly Rose model must make a Ki Chal
           </conditions>
         </modifier>
         <modifier type="decrement" field="a111-8656-5c05-7415" value="1.0">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="equalTo"/>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="98a6-e76a-f99b-a1d3" type="atLeast"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="98a6-e76a-f99b-a1d3" type="atLeast"/>
+          </conditions>
         </modifier>
       </modifiers>
       <constraints>
@@ -305,31 +281,6 @@ A non-Soulless Enemy model in BtB with a Friendly Rose model must make a Ki Chal
             <infoLink id="ae4c-b72a-8602-8bbd" name="Mocking Blow" hidden="false" targetId="7157-536c-a535-ed31" type="infoGroup"/>
           </infoLinks>
         </infoGroup>
-        <infoGroup id="8547-8d5d-6ae1-de1e" name="Traits" hidden="false">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <profiles>
-            <profile id="07cc-6e26-65a5-fe89" name="Yokozuna Akashi" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
-              <characteristics>
-                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Aware, Endurance, Fear (4), Fearless, Fortune, Immovable, Tough (1)</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <infoLinks>
-            <infoLink id="9fa9-6e81-fa5b-6624" name="Aware" hidden="false" targetId="ff4a-6b14-09dd-2343" type="rule"/>
-            <infoLink id="d657-c7b2-e9da-0d94" name="Endurance" hidden="false" targetId="7fdc-d150-9641-1235" type="rule"/>
-            <infoLink id="0543-c3e8-73f5-89f2" name="Fear" hidden="false" targetId="3586-4583-7f10-1f31" type="rule"/>
-            <infoLink id="72ea-9575-434c-8675" name="Fearless" hidden="false" targetId="5d6f-1746-9080-aca5" type="rule"/>
-            <infoLink id="2cb5-d56e-bad7-7c53" name="Fortune" hidden="false" targetId="abf1-1c0e-4717-77e2" type="rule"/>
-            <infoLink id="6f4e-38b9-8cdf-7804" name="Immovable" hidden="false" targetId="d34b-724f-6fc8-7420" type="rule"/>
-            <infoLink id="89b6-2f44-0d97-b685" name="Tough" hidden="false" targetId="5613-a6cf-495a-229f" type="rule"/>
-          </infoLinks>
-        </infoGroup>
         <infoGroup id="2124-2f28-b8c8-486b" name="Melee Weapon" hidden="false">
           <profiles>
             <profile id="6f0e-688a-45b2-2be5" name="Jumo" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
@@ -347,13 +298,6 @@ A non-Soulless Enemy model in BtB with a Friendly Rose model must make a Ki Chal
           </infoLinks>
         </infoGroup>
         <infoGroup id="212c-f5ca-4c8b-0c48" name="Traits" hidden="false">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="lessThan"/>
-              </conditions>
-            </modifier>
-          </modifiers>
           <profiles>
             <profile id="edc7-5a71-2dcd-2f08" name="Yokozuna Akashi" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
               <characteristics>
@@ -404,37 +348,8 @@ A non-Soulless Enemy model in BtB with a Friendly Rose model must make a Ki Chal
       </constraints>
       <profiles>
         <profile id="fed6-7e8f-43ac-b148" name="Wasupu" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="lessThan"/>
-              </conditions>
-            </modifier>
-          </modifiers>
           <characteristics>
             <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">2</characteristic>
-            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
-            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">3</characteristic>
-            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33">3</characteristic>
-            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
-            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
-            <characteristic name="Ki" typeId="3969-9568-a914-6854">1</characteristic>
-            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
-            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">6</characteristic>
-            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">6 OOOOO O</characteristic>
-            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="1cf9-3971-ddb9-4b8c" name="Wasupu" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <characteristics>
-            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
             <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
             <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">3</characteristic>
             <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33">3</characteristic>
@@ -456,25 +371,8 @@ A non-Soulless Enemy model in BtB with a Friendly Rose model must make a Ki Chal
         </infoGroup>
         <infoGroup id="6b51-600c-c7f4-d599" name="Ki Feats" hidden="false">
           <infoLinks>
-            <infoLink id="db42-3565-d9ce-be64" name="Vital Strike" hidden="false" targetId="b7d9-de45-36d9-334f" type="infoGroup">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </infoLink>
             <infoLink id="19f7-a38a-5527-e1a6" name="Strafe" hidden="false" targetId="cd8a-6cd0-bb5b-6017" type="infoGroup"/>
-            <infoLink id="270d-d5b5-b8fe-a7a5" name="Sneak" hidden="false" targetId="d40d-ee12-12cc-1e78" type="infoGroup">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="lessThan"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </infoLink>
+            <infoLink id="270d-d5b5-b8fe-a7a5" name="Sneak" hidden="false" targetId="d40d-ee12-12cc-1e78" type="infoGroup"/>
           </infoLinks>
         </infoGroup>
         <infoGroup id="a76b-654d-f610-0d37" name="Ranged Weapon" hidden="false">
@@ -549,36 +447,7 @@ A non-Soulless Enemy model in BtB with a Friendly Rose model must make a Ki Chal
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="80fb-89f9-24ad-1b8b" type="max"/>
       </constraints>
       <profiles>
-        <profile id="09dd-a39d-7ffb-feac" name="Tsubaki" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <characteristics>
-            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
-            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
-            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">2</characteristic>
-            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
-            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">5</characteristic>
-            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
-            <characteristic name="Ki" typeId="3969-9568-a914-6854">2</characteristic>
-            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
-            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">6</characteristic>
-            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">5 OOOOO</characteristic>
-            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
-          </characteristics>
-        </profile>
         <profile id="3730-58dc-c20f-48e0" name="Tsubaki" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="lessThan"/>
-              </conditions>
-            </modifier>
-          </modifiers>
           <characteristics>
             <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
             <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
@@ -598,38 +467,7 @@ A non-Soulless Enemy model in BtB with a Friendly Rose model must make a Ki Chal
         <infoGroup id="b3b7-a2da-68ec-ff0d" name="Ki Feats" hidden="false">
           <infoLinks>
             <infoLink id="158b-75d9-2ce3-686b" name="Seduction" hidden="false" targetId="3fe7-9816-3a75-4619" type="infoGroup"/>
-            <infoLink id="1a1d-5254-4a86-1b9d" name="Agility" hidden="false" targetId="956d-d945-1bf2-9884" type="infoGroup">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="lessThan"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </infoLink>
-          </infoLinks>
-        </infoGroup>
-        <infoGroup id="04ca-532f-3041-8daf" name="Traits" hidden="false">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <profiles>
-            <profile id="4085-13c0-221f-cecf" name="Tsubaki" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
-              <characteristics>
-                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Disguise (5), Dodge (1), Evasive, Jump Up, Lightfooted</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <infoLinks>
-            <infoLink id="1018-2f63-dd8f-24fc" name="Disguise" hidden="false" targetId="1a0f-020f-3805-07f3" type="rule"/>
-            <infoLink id="a23b-151d-4185-0143" name="Dodge " hidden="false" targetId="14d5-d459-5d8a-c73e" type="rule"/>
-            <infoLink id="872e-7575-9d50-51ed" name="Evasive" hidden="false" targetId="b0f8-d197-536b-c8fc" type="rule"/>
-            <infoLink id="9cfe-f647-c217-9e1a" name="Jump Up" hidden="false" targetId="1575-e12f-4ca3-c557" type="rule"/>
-            <infoLink id="204a-1ea3-6025-8e3a" name="Lightfooted" hidden="false" targetId="57d2-cd57-07f9-addf" type="rule"/>
+            <infoLink id="1a1d-5254-4a86-1b9d" name="Agility" hidden="false" targetId="956d-d945-1bf2-9884" type="infoGroup"/>
           </infoLinks>
         </infoGroup>
         <infoGroup id="5d34-c73e-6ffc-e581" name="Melee Weapon" hidden="false">
@@ -647,37 +485,7 @@ A non-Soulless Enemy model in BtB with a Friendly Rose model must make a Ki Chal
             <infoLink id="aa14-ea1d-f45f-2d65" name="Sidestep Defence " hidden="false" targetId="753c-6c3b-64d7-203c" type="rule"/>
           </infoLinks>
         </infoGroup>
-        <infoGroup id="fe31-4673-0e77-e9a1" name="Ranged Weapon" hidden="false">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <profiles>
-            <profile id="7632-fe60-91f5-bf78" name="Blinding Powder" hidden="false" typeId="7e20-258e-bf92-18f9" typeName="Ranged Weapon">
-              <characteristics>
-                <characteristic name="Ranged Weapon Strength" typeId="15aa-b6bd-6923-271f">Special</characteristic>
-                <characteristic name="Range Bands" typeId="be6a-50c6-d691-e2e9">-/3/-</characteristic>
-                <characteristic name="Traits" typeId="3410-4428-ef91-eb61">Ammo (1)</characteristic>
-                <characteristic name="Specials" typeId="cdaf-b6ac-89d4-39ef"/>
-                <characteristic name="Unique Effects" typeId="3bf8-6525-f003-4990">On a successful Attack with this weapon, instead of a Damage Roll, centre a 1&quot; Pulse on the target; all models within the Pulse gain one Blind Marker.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <infoLinks>
-            <infoLink id="b56e-d6e8-2832-f4f9" name="Ammo" hidden="false" targetId="765d-18a5-7170-9b56" type="rule"/>
-          </infoLinks>
-        </infoGroup>
         <infoGroup id="124b-832f-13bc-9394" name="Traits" hidden="false">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="lessThan"/>
-              </conditions>
-            </modifier>
-          </modifiers>
           <profiles>
             <profile id="a506-f7ac-612d-c908" name="Tsubaki" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
               <characteristics>
@@ -695,13 +503,6 @@ A non-Soulless Enemy model in BtB with a Friendly Rose model must make a Ki Chal
           </infoLinks>
         </infoGroup>
         <infoGroup id="dfc6-d877-a053-8da4" name="Ranged Weapon" hidden="false">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="lessThan"/>
-              </conditions>
-            </modifier>
-          </modifiers>
           <profiles>
             <profile id="6795-7f3e-a53e-e330" name="Blinding Powder" hidden="false" typeId="7e20-258e-bf92-18f9" typeName="Ranged Weapon">
               <characteristics>
@@ -745,14 +546,9 @@ A non-Soulless Enemy model in BtB with a Friendly Rose model must make a Ki Chal
           </conditionGroups>
         </modifier>
         <modifier type="decrement" field="a111-8656-5c05-7415" value="1.0">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="equalTo"/>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="98a6-e76a-f99b-a1d3" type="atLeast"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="98a6-e76a-f99b-a1d3" type="atLeast"/>
+          </conditions>
         </modifier>
       </modifiers>
       <constraints>
@@ -1318,28 +1114,6 @@ At any point during the turn when a Player would make a dice roll, before dice a
             <infoLink id="2334-9a1c-5388-80b0" name="Fear" hidden="false" targetId="3586-4583-7f10-1f31" type="rule"/>
           </infoLinks>
         </infoGroup>
-        <infoGroup id="b5c9-982c-c14f-5ab0" name="Traits" hidden="false">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <profiles>
-            <profile id="2813-3880-d660-1443" name="Pit Dog" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
-              <characteristics>
-                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Insignificant, Lightfooted, Tiny, Tough (1)</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <infoLinks>
-            <infoLink id="3d12-161c-5615-217d" name="Tough" hidden="false" targetId="5613-a6cf-495a-229f" type="rule"/>
-            <infoLink id="3a05-7f20-c44a-a249" name="Tiny" hidden="false" targetId="335c-7f6f-9ca0-cb93" type="rule"/>
-            <infoLink id="61ac-c129-0468-43b5" name="Lightfooted" hidden="false" targetId="57d2-cd57-07f9-addf" type="rule"/>
-            <infoLink id="7aec-1985-810a-fa94" name="Insignificant" hidden="false" targetId="1614-d86c-ef8a-c095" type="rule"/>
-          </infoLinks>
-        </infoGroup>
         <infoGroup id="7941-5d07-54d1-5bbf" name="Melee Weapon" hidden="false">
           <profiles>
             <profile id="db53-f0d7-d68e-2f45" name="Bite" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
@@ -1353,13 +1127,6 @@ At any point during the turn when a Player would make a dice roll, before dice a
           </profiles>
         </infoGroup>
         <infoGroup id="a6cc-ea07-7ad3-a173" name="Traits" hidden="false">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="lessThan"/>
-              </conditions>
-            </modifier>
-          </modifiers>
           <profiles>
             <profile id="f747-74dc-db84-73dc" name="Pit Dog" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
               <characteristics>
@@ -1564,30 +1331,6 @@ At any point during the turn when a Player would make a dice roll, before dice a
             </profile>
           </profiles>
         </infoGroup>
-        <infoGroup id="922c-d616-ed15-b9bd" name="Traits" hidden="false">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <profiles>
-            <profile id="2035-9142-26ec-c2d8" name="Okkete San" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
-              <characteristics>
-                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Bravery, Dodge (1), Insignificant, Lightfooted, Last Stand, Tiny</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <infoLinks>
-            <infoLink id="6b02-849d-efcf-ca3c" name="Bravery" hidden="false" targetId="f9b2-38d2-7cda-de6e" type="rule"/>
-            <infoLink id="e040-7bfe-7022-0e42" name="Dodge " hidden="false" targetId="14d5-d459-5d8a-c73e" type="rule"/>
-            <infoLink id="e27c-f117-683d-4362" name="Insignificant" hidden="false" targetId="1614-d86c-ef8a-c095" type="rule"/>
-            <infoLink id="156a-9bb4-0eec-03d7" name="Lightfooted" hidden="false" targetId="57d2-cd57-07f9-addf" type="rule"/>
-            <infoLink id="e802-5177-ab72-44aa" name="Last Stand" hidden="false" targetId="54e7-a381-1c38-dd0e" type="rule"/>
-            <infoLink id="ad3a-db71-1c03-2a0e" name="Tiny" hidden="false" targetId="335c-7f6f-9ca0-cb93" type="rule"/>
-          </infoLinks>
-        </infoGroup>
         <infoGroup id="a2f4-c3cf-a75b-352f" name="Melee Weapon" hidden="false">
           <profiles>
             <profile id="7adf-d4cd-7a65-b542" name="Peck" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
@@ -1601,13 +1344,6 @@ At any point during the turn when a Player would make a dice roll, before dice a
           </profiles>
         </infoGroup>
         <infoGroup id="1027-5ddf-2468-8f2f" name="Traits" hidden="false">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="lessThan"/>
-              </conditions>
-            </modifier>
-          </modifiers>
           <profiles>
             <profile id="481f-76c7-5b93-2430" name="Okkete San" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
               <characteristics>
@@ -1701,14 +1437,9 @@ At any point during the turn when a Player would make a dice roll, before dice a
           </conditionGroups>
         </modifier>
         <modifier type="decrement" field="a111-8656-5c05-7415" value="1.0">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="equalTo"/>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="98a6-e76a-f99b-a1d3" type="atLeast"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="98a6-e76a-f99b-a1d3" type="atLeast"/>
+          </conditions>
         </modifier>
       </modifiers>
       <constraints>
@@ -2006,14 +1737,9 @@ This model cannot declare Run or Charge Actions. When this model is Killed, repl
           </conditionGroups>
         </modifier>
         <modifier type="decrement" field="a111-8656-5c05-7415" value="1.0">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="equalTo"/>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="98a6-e76a-f99b-a1d3" type="atLeast"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="98a6-e76a-f99b-a1d3" type="atLeast"/>
+          </conditions>
         </modifier>
       </modifiers>
       <constraints>
@@ -2118,14 +1844,9 @@ When this model declares use of it&apos;s Bodyguard it gains Fearless until the 
           </conditionGroups>
         </modifier>
         <modifier type="decrement" field="a111-8656-5c05-7415" value="1.0">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="equalTo"/>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="98a6-e76a-f99b-a1d3" type="atLeast"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="98a6-e76a-f99b-a1d3" type="atLeast"/>
+          </conditions>
         </modifier>
       </modifiers>
       <constraints>
@@ -2747,46 +2468,12 @@ Kyu: In the final turn of the game, while this model is in play, every time a mo
             </conditionGroup>
           </conditionGroups>
         </modifier>
-        <modifier type="set" field="a111-8656-5c05-7415" value="16.0">
-          <conditions>
-            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="equalTo"/>
-          </conditions>
-        </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="520c-7ce2-2ff3-eca7" type="max"/>
       </constraints>
       <profiles>
-        <profile id="6001-cddf-469e-96de" name="Hanami" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <characteristics>
-            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
-            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">2</characteristic>
-            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">3</characteristic>
-            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
-            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">5</characteristic>
-            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
-            <characteristic name="Ki" typeId="3969-9568-a914-6854">2</characteristic>
-            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c">2</characteristic>
-            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">8</characteristic>
-            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">5 OOOOO</characteristic>
-            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
-          </characteristics>
-        </profile>
         <profile id="ef89-996e-aab8-2434" name="Hanami" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="lessThan"/>
-              </conditions>
-            </modifier>
-          </modifiers>
           <characteristics>
             <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
             <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">2</characteristic>
@@ -2843,13 +2530,6 @@ Kyu: In the final turn of the game, while this model is in play, every time a mo
           </infoLinks>
         </infoGroup>
         <infoGroup id="a7e8-bdec-3d4d-d051" name="Unique Effects" hidden="false">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="lessThan"/>
-              </conditions>
-            </modifier>
-          </modifiers>
           <profiles>
             <profile id="015a-fab1-046f-e93b" name="Unique Effects" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
               <characteristics>
@@ -2889,7 +2569,7 @@ While this model is in play, Friendly Rose models reduce the cost of any  Boosts
         <entryLink id="ecd8-b071-65fc-0ef7" name="Enhancements" hidden="false" collective="false" import="true" targetId="37a1-1d53-ef45-026d" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
-        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="20.0"/>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="16.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="1cc5-2ea4-7140-5409" name="Hakushi" hidden="false" collective="false" import="true" type="model">
@@ -3007,11 +2687,6 @@ While this model is in play, Friendly Rose models reduce the cost of any  Boosts
             </conditionGroup>
           </conditionGroups>
         </modifier>
-        <modifier type="set" field="a111-8656-5c05-7415" value="13.0">
-          <conditions>
-            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="equalTo"/>
-          </conditions>
-        </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3950-b229-13ed-0cc0" type="max"/>
@@ -3038,26 +2713,6 @@ While this model is in play, Friendly Rose models reduce the cost of any  Boosts
           <infoLinks>
             <infoLink id="2ea3-144a-f4fc-6d1c" name="Dirty Fighting" hidden="false" targetId="b399-d8d0-47b1-00ee" type="infoGroup"/>
             <infoLink id="6c59-2483-1afa-87f9" name="Mighty Blow" hidden="false" targetId="a9dd-2f09-5bc9-3498" type="infoGroup"/>
-          </infoLinks>
-        </infoGroup>
-        <infoGroup id="e9c8-cddb-1ef1-66e3" name="Traits" hidden="false">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <profiles>
-            <profile id="9b58-df3f-8e0f-97f2" name="Giichi" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
-              <characteristics>
-                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Armour (1), Bravery</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <infoLinks>
-            <infoLink id="3667-addd-74ce-cdab" name="Armour" hidden="false" targetId="8615-1c63-2242-5746" type="rule"/>
-            <infoLink id="7ac7-7757-2d79-be6f" name="Bravery" hidden="false" targetId="f9b2-38d2-7cda-de6e" type="rule"/>
           </infoLinks>
         </infoGroup>
         <infoGroup id="6d1c-a83f-e2d1-7705" name="Melee Weapon" hidden="false">
@@ -3093,13 +2748,6 @@ While this model is in play, Friendly Rose models reduce the cost of any  Boosts
           </infoLinks>
         </infoGroup>
         <infoGroup id="50aa-c20f-e7e9-a7ad" name="Traits" hidden="false">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="lessThan"/>
-              </conditions>
-            </modifier>
-          </modifiers>
           <profiles>
             <profile id="5351-de47-74a6-e6e3" name="Giichi" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
               <characteristics>
@@ -3126,7 +2774,7 @@ While this model is in play, Friendly Rose models reduce the cost of any  Boosts
         <entryLink id="134d-6259-12a0-9ba5" name="Enhancements" hidden="false" collective="false" import="true" targetId="37a1-1d53-ef45-026d" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
-        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="16.0"/>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="13.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="a1ea-3729-a666-278c" name="Fitiaumua" hidden="false" collective="false" import="true" type="model">
@@ -3141,14 +2789,9 @@ While this model is in play, Friendly Rose models reduce the cost of any  Boosts
           </conditionGroups>
         </modifier>
         <modifier type="decrement" field="a111-8656-5c05-7415" value="1.0">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="equalTo"/>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="98a6-e76a-f99b-a1d3" type="atLeast"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="98a6-e76a-f99b-a1d3" type="atLeast"/>
+          </conditions>
         </modifier>
       </modifiers>
       <constraints>
@@ -3517,25 +3160,6 @@ While within 2&quot; of this model, Fire Kami models gain Aggressive and Brutal 
             <infoLink id="32c0-cb2f-d8b3-6409" name="Madamada" hidden="false" targetId="36a3-fd78-c4ff-fc32" type="infoGroup"/>
           </infoLinks>
         </infoGroup>
-        <infoGroup id="fb1b-9345-ba3d-181b" name="Traits" hidden="false">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <profiles>
-            <profile id="11c1-8299-ba0c-46cc" name="Shonosuke" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
-              <characteristics>
-                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Immune [Control]</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <infoLinks>
-            <infoLink id="7cc6-aa6a-6d22-de71" name="Immune" hidden="false" targetId="ea08-b25e-0ea8-af73" type="rule"/>
-          </infoLinks>
-        </infoGroup>
         <infoGroup id="5e49-6887-2ab8-e473" name="Melee Weapon" hidden="false">
           <profiles>
             <profile id="f022-1c49-2413-d03b" name="Tantō" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
@@ -3549,13 +3173,6 @@ While within 2&quot; of this model, Fire Kami models gain Aggressive and Brutal 
           </profiles>
         </infoGroup>
         <infoGroup id="4fe0-2c0f-fcdb-e026" name="Traits" hidden="false">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="lessThan"/>
-              </conditions>
-            </modifier>
-          </modifiers>
           <profiles>
             <profile id="ba7e-c710-1c9c-2573" name="Shonosuke" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
               <characteristics>
@@ -3689,30 +3306,7 @@ While within 2&quot; of this model, Fire Kami models gain Aggressive and Brutal 
         </modifier>
       </modifiers>
       <profiles>
-        <profile id="98af-6617-12c9-2099" name="Yokozuna&apos;s Revenge" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <characteristics>
-            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">• During Deployment nominate an Enemy model. Yokozuna Akashi gains Aggressive, +1 Melee Strength Modifier, and Sharp (1) while resolving Melee Exchanges with that model
-• Each turn the first failed Opposed Ki Test for an Enemy Ki Feat is ignored. The Friendly model is considered to have succeeded and the Enemy model failed instead
-• Friendly models gain Bodyguard [Yokozuna Akashi](3&quot;) and Co-ordinated Attack [Yokozuna Akashi]
-• This Theme may recruit Lua as a Ronin model
-• Warbands using this theme must recruit Yokozuna Akashi</characteristic>
-          </characteristics>
-        </profile>
         <profile id="bd89-4f1f-c7e7-4075" name="Yokozuna&apos;s Revenge" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="lessThan"/>
-              </conditions>
-            </modifier>
-          </modifiers>
           <characteristics>
             <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">• During Deployment, nominate an Enemy model to be the Antagonist. Yokozuna Akashi gains Vengeance [Antagonist].
 • Buto models cost -1 Rice to recruit into this warband.
@@ -3731,15 +3325,7 @@ Exclusion [Oda]</characteristic>
         <infoLink id="3b59-4f87-d2fe-b7b6" name="Co-ordinated Attack" hidden="false" targetId="2337-7bcc-c1f2-f2bd" type="rule"/>
         <infoLink id="e7b5-9a31-a731-734b" name="Aggressive" hidden="false" targetId="a445-e041-8d5f-aa28" type="rule"/>
         <infoLink id="02a9-7b5d-aed7-94e5" name="Sharp " hidden="false" targetId="6092-9fb5-5196-d1eb" type="rule"/>
-        <infoLink id="1557-34c1-259a-676b" name="Vengeance" hidden="false" targetId="6779-0aac-2f51-f67e" type="rule">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="lessThan"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </infoLink>
+        <infoLink id="1557-34c1-259a-676b" name="Vengeance" hidden="false" targetId="6779-0aac-2f51-f67e" type="rule"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="9f80-a8b0-ea8a-4c9a" name="New CategoryLink" hidden="false" targetId="477a-e693-0888-08f7" primary="true"/>
@@ -3841,31 +3427,6 @@ Exclusion [Oda]</characteristic>
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8fd1-0a1a-254d-9238" type="max"/>
       </constraints>
       <infoGroups>
-        <infoGroup id="702a-f63a-8851-56f0" name="Traits" hidden="false">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <profiles>
-            <profile id="1af9-4766-060a-552f" name="Wakasu Akuma" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
-              <characteristics>
-                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Dodge (2), Immune [Poison], Insignificant, Lightning Reflexes, Tiny, Ranged Defence (2), Weak</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <infoLinks>
-            <infoLink id="c5a6-648b-0663-f088" name="Dodge " hidden="false" targetId="14d5-d459-5d8a-c73e" type="rule"/>
-            <infoLink id="34bc-75ce-cd49-910b" name="Immune" hidden="false" targetId="ea08-b25e-0ea8-af73" type="rule"/>
-            <infoLink id="b17d-33ed-20d5-1782" name="Insignificant" hidden="false" targetId="1614-d86c-ef8a-c095" type="rule"/>
-            <infoLink id="20c1-5b88-4e16-8e81" name="Lightning Reflexes" hidden="false" targetId="efd4-dc31-6523-9c79" type="rule"/>
-            <infoLink id="919a-3b89-956b-5196" name="Tiny" hidden="false" targetId="335c-7f6f-9ca0-cb93" type="rule"/>
-            <infoLink id="d269-b3dd-c5f0-b96b" name="Ranged Defence " hidden="false" targetId="9b8d-9ca9-e25d-3988" type="rule"/>
-            <infoLink id="c9ff-3cd0-f974-b4bf" name="Weak" hidden="false" targetId="6a0c-59fb-ff0e-aced" type="rule"/>
-          </infoLinks>
-        </infoGroup>
         <infoGroup id="7e10-5326-7437-3f4b" name="Melee Weapon" hidden="false">
           <profiles>
             <profile id="17de-0a30-e79c-1fb2" name="Bite" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
@@ -3879,13 +3440,6 @@ Exclusion [Oda]</characteristic>
           </profiles>
         </infoGroup>
         <infoGroup id="090d-3f71-b360-0ad1" name="Traits" hidden="false">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="lessThan"/>
-              </conditions>
-            </modifier>
-          </modifiers>
           <profiles>
             <profile id="71d1-3700-2241-ce3d" name="Wakasu Akuma" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
               <characteristics>
@@ -4582,14 +4136,9 @@ If the box is filled in, you may still use the Ki Feat.</characteristic>
     <entryLink id="6368-82b0-f4e7-0ebd" name="Lua" hidden="true" collective="false" import="true" targetId="f8cf-8680-1f4a-2deb" type="selectionEntry">
       <modifiers>
         <modifier type="decrement" field="a111-8656-5c05-7415" value="1.0">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="equalTo"/>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="98a6-e76a-f99b-a1d3" type="atLeast"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="98a6-e76a-f99b-a1d3" type="atLeast"/>
+          </conditions>
         </modifier>
       </modifiers>
       <modifierGroups>
@@ -4597,7 +4146,7 @@ If the box is filled in, you may still use the Ki Feat.</characteristic>
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="98a6-e76a-f99b-a1d3" type="equalTo"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="98a6-e76a-f99b-a1d3" type="atLeast"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -4931,26 +4480,7 @@ If the box is filled in, you may still use the Ki Feat.</characteristic>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6343-f44c-b5a8-6d7c" type="max"/>
           </constraints>
           <profiles>
-            <profile id="09f5-0c31-7569-4f8f" name="Disguised" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <characteristics>
-                <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">The Attached model begins the game with a Disguise (5) Marker.</characteristic>
-              </characteristics>
-            </profile>
             <profile id="43eb-0f9e-0583-616d" name="Disguised" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="lessThan"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
               <characteristics>
                 <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">The Attached modelgains Disguise (5).
 
@@ -5336,26 +4866,7 @@ Once per test this model may re-roll 1s before determining the final result.</ch
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="34a5-420f-12df-5cb6" type="max"/>
               </constraints>
               <profiles>
-                <profile id="5ca0-b15b-980e-4aa4" name="Tamano-no-Mae&apos;s Veil" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
-                  <modifiers>
-                    <modifier type="set" field="hidden" value="true">
-                      <conditions>
-                        <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
-                      </conditions>
-                    </modifier>
-                  </modifiers>
-                  <characteristics>
-                    <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">When Attached model makes a Wait Action, while out of BtB and LoS of all Enemy models it may gain a Disguise (5) Marker.</characteristic>
-                  </characteristics>
-                </profile>
                 <profile id="7682-4dc7-ccb3-d830" name="Tamano-no-Mae&apos;s Veil" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
-                  <modifiers>
-                    <modifier type="set" field="hidden" value="true">
-                      <conditions>
-                        <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="lessThan"/>
-                      </conditions>
-                    </modifier>
-                  </modifiers>
                   <characteristics>
                     <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">When the Attached model performs a Wait Action, it may gain a Disguise Marker with a value equal to its Disguise trait.
 
@@ -5480,31 +4991,7 @@ Requirement [Rose]</characteristic>
     </infoGroup>
     <infoGroup id="d2e3-e059-32ba-8374" name="Kiss of the Rose" hidden="false">
       <profiles>
-        <profile id="f7cb-68a9-9a85-d131" name="Kiss of the Rose" hidden="false" typeId="993a-e62a-7922-0ccb" typeName="Ki Feat">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <characteristics>
-            <characteristic name="Cost" typeId="a126-54d9-0a27-f4b6">1</characteristic>
-            <characteristic name="Timing" typeId="f8a8-8a3e-ef58-4c61">Instant</characteristic>
-            <characteristic name="Subject" typeId="4ac8-2bb1-0c84-f088">Target BtB</characteristic>
-            <characteristic name="Limitation" typeId="6fc9-5d13-2687-b2a5">Once Per Turn</characteristic>
-            <characteristic name="Description" typeId="f804-b969-00da-2123">During a non-Soulless, Enemy model’s activation in which it enters BtB with this model, that Enemy model gains a Control Marker.
-No Melee Exchange takes place, this model does not lose an Activation Counter.</characteristic>
-          </characteristics>
-        </profile>
         <profile id="eba5-3419-c813-6649" name="Kiss of the Rose" hidden="false" typeId="993a-e62a-7922-0ccb" typeName="Ki Feat">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="lessThan"/>
-              </conditions>
-            </modifier>
-          </modifiers>
           <characteristics>
             <characteristic name="Cost" typeId="a126-54d9-0a27-f4b6">1</characteristic>
             <characteristic name="Timing" typeId="f8a8-8a3e-ef58-4c61">Instant</characteristic>

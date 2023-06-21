@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="b4d7-0e2a-728f-20cf" name="Kage Kaze Zoku" revision="23" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="14" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="b4d7-0e2a-728f-20cf" name="Kage Kaze Zoku" revision="24" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="14" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="33d5-3364-f1d4-a94c" name="Lockdown" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -797,11 +797,6 @@ This model may only make one Ranged Attack with the Kusari per activation
             </conditionGroup>
           </conditionGroups>
         </modifier>
-        <modifier type="set" field="a111-8656-5c05-7415" value="13.0">
-          <conditions>
-            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="equalTo"/>
-          </conditions>
-        </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="112a-1f61-0a2a-9a77" type="max"/>
@@ -825,28 +820,6 @@ This model may only make one Ranged Attack with the Kusari per activation
       </profiles>
       <infoGroups>
         <infoGroup id="4e10-8647-675b-5ceb" name="Ki Feats" hidden="false"/>
-        <infoGroup id="fad7-112a-eefd-2ef0" name="Melee Weapon" hidden="false">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <profiles>
-            <profile id="ab42-b109-6e67-ba97" name="Ninjato" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
-              <characteristics>
-                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+0</characteristic>
-                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e"/>
-                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Sidestep Defence (0)</characteristic>
-                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
-              </characteristics>
-            </profile>
-          </profiles>
-          <infoLinks>
-            <infoLink id="1361-a405-6059-550a" name="Sidestep Defence " hidden="false" targetId="753c-6c3b-64d7-203c" type="rule"/>
-          </infoLinks>
-        </infoGroup>
         <infoGroup id="478a-bbbf-5515-1665" name="Unique Effects" hidden="false">
           <profiles>
             <profile id="3f18-221d-d7d9-f853" name="Start of Activation" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
@@ -878,13 +851,6 @@ This model may only make one Ranged Attack with the Kusari per activation
           </infoLinks>
         </infoGroup>
         <infoGroup id="e42c-5e2d-ea5a-3e02" name="Melee Weapon" hidden="false">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="lessThan"/>
-              </conditions>
-            </modifier>
-          </modifiers>
           <profiles>
             <profile id="4383-7c18-6d83-1ea2" name="Ninjato" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
               <characteristics>
@@ -912,7 +878,7 @@ This model may only make one Ranged Attack with the Kusari per activation
         <entryLink id="e58a-7fa7-2d6d-483a" name="Enhancements" hidden="false" collective="false" import="true" targetId="b18f-16ea-bed1-4709" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
-        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="15.0"/>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="13.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="fb64-dbda-5838-3ddb" name="Ujimushi" hidden="false" collective="false" import="true" type="model">
@@ -1526,37 +1492,7 @@ This model may only make one Ranged Attack with the Kusari per activation
             <infoLink id="2169-1475-ad66-564f" name="Fear" hidden="false" targetId="3586-4583-7f10-1f31" type="rule"/>
           </infoLinks>
         </infoGroup>
-        <infoGroup id="aec9-45af-f202-b271" name="Traits" hidden="false">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <profiles>
-            <profile id="e480-cfc4-4229-a6b3" name="Kerasu" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
-              <characteristics>
-                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Armour (1), Assassin, Camouflage (2&quot;), Feint (1), Lightfooted</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <infoLinks>
-            <infoLink id="34cc-a02c-eb42-c4be" name="Assassin" hidden="false" targetId="ef59-928b-2550-f0a3" type="rule"/>
-            <infoLink id="2263-54af-a714-9521" name="Armour" hidden="false" targetId="8615-1c63-2242-5746" type="rule"/>
-            <infoLink id="6ca0-84be-9419-e96c" name="Camouflage" hidden="false" targetId="9010-4983-c98c-1751" type="rule"/>
-            <infoLink id="c48e-50cf-718c-91f2" name="Lightfooted" hidden="false" targetId="57d2-cd57-07f9-addf" type="rule"/>
-            <infoLink id="7a63-0d9d-0606-b05f" name="Feint" hidden="false" targetId="38b0-4d97-3c4c-8d96" type="rule"/>
-          </infoLinks>
-        </infoGroup>
         <infoGroup id="37ef-d9bb-ae40-0c47" name="Traits" hidden="false">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="lessThan"/>
-              </conditions>
-            </modifier>
-          </modifiers>
           <profiles>
             <profile id="2e08-c14d-2fd1-1681" name="Kerasu" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
               <characteristics>
@@ -4072,7 +4008,7 @@ Requirement [House Long Shadow Theme]</characteristic>
         <categoryLink id="7164-166f-cdba-29a8" name="New CategoryLink" hidden="false" targetId="d360-71aa-ca22-ba3c" primary="true"/>
       </categoryLinks>
       <costs>
-        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2.0"/>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="6cca-5494-e046-df7f" name="Unseen Assailant" hidden="false" collective="false" import="true" type="upgrade">
@@ -4454,7 +4390,6 @@ Requirement [House Long Shadow Theme]</characteristic>
                         <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d7c5-a2b9-4696-fd33" type="instanceOf"/>
                         <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6639-615e-f1ab-bc64" type="instanceOf"/>
                         <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7435-856f-ece2-fe58" type="instanceOf"/>
-                        <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="2bf8-b13c-a906-baea" type="lessThan"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>

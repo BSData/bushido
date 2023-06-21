@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="1ac7-2939-2874-7530" name="Cult of Yurei" revision="26" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="14" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="1ac7-2939-2874-7530" name="Cult of Yurei" revision="27" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="14" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="5048-3a52-5689-6d0b" name="Drain Spirit" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -1726,11 +1726,6 @@ Models that fail gain Vengeance [Rokuro] until the action is resolved.</characte
             </conditionGroup>
           </conditionGroups>
         </modifier>
-        <modifier type="set" field="a111-8656-5c05-7415" value="12.0">
-          <conditions>
-            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="equalTo"/>
-          </conditions>
-        </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="true" id="eee3-ae8b-c6be-c3bc" type="max"/>
@@ -1768,43 +1763,13 @@ Models that fail gain Vengeance [Rokuro] until the action is resolved.</characte
             <infoLink id="4f5e-9ec8-b813-0ac2" name="Sidestep Defence " hidden="false" targetId="753c-6c3b-64d7-203c" type="rule"/>
           </infoLinks>
         </infoGroup>
-        <infoGroup id="edd0-eede-ae80-ccee" name="Traits" hidden="false">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <profiles>
-            <profile id="4b92-3a68-b085-2108" name="Shinji" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
-              <characteristics>
-                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Cowardly, Dodge (1), Fear (4), Lightfooted, Spirit (-1)</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <infoLinks>
-            <infoLink id="f9fe-aa43-0334-accf" name="Fear" hidden="false" targetId="3586-4583-7f10-1f31" type="rule"/>
-            <infoLink id="c49e-5191-9de5-4658" name="Cowardly" hidden="false" targetId="c8d8-d1c7-905b-f971" type="rule"/>
-            <infoLink id="6f60-345e-6214-39a6" name="Lightfooted" hidden="false" targetId="57d2-cd57-07f9-addf" type="rule"/>
-            <infoLink id="68db-7c02-c64b-c873" name="Dodge " hidden="false" targetId="14d5-d459-5d8a-c73e" type="rule"/>
-            <infoLink id="73e8-d886-228f-7e8d" name="Spirit" hidden="false" targetId="a9ba-9904-7d29-7bcb" type="rule"/>
-          </infoLinks>
-        </infoGroup>
         <infoGroup id="bf7d-4f27-5c1e-6e94" name="Ki Feats" hidden="false">
           <infoLinks>
             <infoLink id="829b-a289-591a-c90f" name="Lurker" hidden="false" targetId="3ace-c140-e71e-edb2" type="infoGroup"/>
             <infoLink id="5e39-b80c-a421-55c8" name="Shadow Walk" hidden="false" targetId="26dc-6aae-4be0-6e22" type="infoGroup"/>
           </infoLinks>
         </infoGroup>
-        <infoGroup id="a6e1-232a-3e70-e38e" name="Traits" hidden="true">
-          <modifiers>
-            <modifier type="set" field="hidden" value="false">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
-              </conditions>
-            </modifier>
-          </modifiers>
+        <infoGroup id="a6e1-232a-3e70-e38e" name="Traits" hidden="false">
           <profiles>
             <profile id="34e2-a076-a80f-9215" name="Shinji" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
               <characteristics>
@@ -1833,7 +1798,7 @@ Models that fail gain Vengeance [Rokuro] until the action is resolved.</characte
         <entryLink id="9cfa-3d69-7687-be6a" name="Enhancements" hidden="false" collective="false" import="true" targetId="ef93-ecd4-88c1-9224" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
-        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="15.0"/>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="12.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="609b-0413-7c94-c5f0" name="Senbo" hidden="false" collective="false" import="true" type="model">
@@ -3171,16 +3136,6 @@ When this model is reduced to 0 Wounds remove it from play and each model within
           </conditionGroups>
         </modifier>
       </modifiers>
-      <modifierGroups>
-        <modifierGroup>
-          <conditions>
-            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
-          </conditions>
-          <modifiers>
-            <modifier type="add" field="category" value="f434-17e6-174c-b4f6"/>
-          </modifiers>
-        </modifierGroup>
-      </modifierGroups>
       <constraints>
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="true" id="2285-c98d-5a01-dcf9" type="max"/>
       </constraints>
@@ -3229,6 +3184,7 @@ When this model is reduced to 0 Wounds remove it from play and each model within
         <categoryLink id="05ca-321f-2280-214c" name="Kairai" hidden="false" targetId="26f6-e547-6d94-8b70" primary="false"/>
         <categoryLink id="0c8c-3fb2-1b32-9650" name="Non-Unique" hidden="false" targetId="d181-219d-3add-d47b" primary="false"/>
         <categoryLink id="324a-fbeb-103d-d8ff" name="Soulless" hidden="false" targetId="0abe-c3e6-4300-478f" primary="false"/>
+        <categoryLink id="863f-8bb0-e969-060b" name="Ashigaru" hidden="false" targetId="f434-17e6-174c-b4f6" primary="false"/>
       </categoryLinks>
       <entryLinks>
         <entryLink id="668d-585e-f368-dc89" name="Kairai Militia" hidden="false" collective="false" import="true" targetId="fc14-87e3-3096-84d7" type="selectionEntry">
@@ -3681,60 +3637,7 @@ During the End Phase you may remove a Friendly Rat model in BtB with this model 
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="true" id="0b1c-863d-aa63-ab18" type="max"/>
       </constraints>
       <infoGroups>
-        <infoGroup id="a9b7-d657-4649-0776" name="Melee Weapon" hidden="false">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <profiles>
-            <profile id="e125-cbb3-3245-1886" name="Bite" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
-              <characteristics>
-                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">-2</characteristic>
-                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Poison (1/1)</characteristic>
-                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Sidestep Defence (0)</characteristic>
-                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
-              </characteristics>
-            </profile>
-          </profiles>
-          <infoLinks>
-            <infoLink id="34fe-4927-4502-a257" name="Sidestep Defence " hidden="false" targetId="753c-6c3b-64d7-203c" type="rule"/>
-            <infoLink id="0247-946e-fb40-ae2b" name="Poison " hidden="false" targetId="7290-85f4-42cf-0b75" type="rule"/>
-          </infoLinks>
-        </infoGroup>
-        <infoGroup id="911a-e55f-7474-ba30" name="Traits" hidden="false">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <profiles>
-            <profile id="9506-3a3f-1b7b-9f51" name="Plague Rat" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
-              <characteristics>
-                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Camouflage (2&quot;), Evasive, Insignificant, Light Footed, Tiny</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <infoLinks>
-            <infoLink id="acc3-8d52-8192-7eed" name="Camouflage" hidden="false" targetId="9010-4983-c98c-1751" type="rule"/>
-            <infoLink id="d83c-630f-ab47-3608" name="Evasive" hidden="false" targetId="b0f8-d197-536b-c8fc" type="rule"/>
-            <infoLink id="6184-8ace-e2ab-a481" name="Insignificant" hidden="false" targetId="1614-d86c-ef8a-c095" type="rule"/>
-            <infoLink id="f157-d543-686d-4e65" name="Lightfooted" hidden="false" targetId="57d2-cd57-07f9-addf" type="rule"/>
-            <infoLink id="bc5a-4b2d-4db5-d3c2" name="Tiny" hidden="false" targetId="335c-7f6f-9ca0-cb93" type="rule"/>
-          </infoLinks>
-        </infoGroup>
-        <infoGroup id="f0ff-a438-c109-b2f6" name="Traits" hidden="true">
-          <modifiers>
-            <modifier type="set" field="hidden" value="false">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
-              </conditions>
-            </modifier>
-          </modifiers>
+        <infoGroup id="f0ff-a438-c109-b2f6" name="Traits" hidden="false">
           <profiles>
             <profile id="18cf-bfee-073a-66bb" name="Plague Rat" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
               <characteristics>
@@ -3752,14 +3655,7 @@ During the End Phase you may remove a Friendly Rat model in BtB with this model 
             <infoLink id="8328-996c-4574-08ab" name="Group" hidden="false" targetId="4c02-03a1-ae7b-7821" type="rule"/>
           </infoLinks>
         </infoGroup>
-        <infoGroup id="0b12-be6f-9561-3df4" name="Melee Weapon" hidden="true">
-          <modifiers>
-            <modifier type="set" field="hidden" value="false">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
-              </conditions>
-            </modifier>
-          </modifiers>
+        <infoGroup id="0b12-be6f-9561-3df4" name="Melee Weapon" hidden="false">
           <profiles>
             <profile id="9990-34cc-cc46-eb74" name="Bite" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
               <characteristics>
@@ -3871,16 +3767,6 @@ During the End Phase you may remove a Friendly Rat model in BtB with this model 
           </conditionGroups>
         </modifier>
       </modifiers>
-      <modifierGroups>
-        <modifierGroup>
-          <conditions>
-            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
-          </conditions>
-          <modifiers>
-            <modifier type="add" field="category" value="f434-17e6-174c-b4f6"/>
-          </modifiers>
-        </modifierGroup>
-      </modifierGroups>
       <constraints>
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="true" id="6da3-202b-f122-4acf" type="max"/>
       </constraints>
@@ -3931,6 +3817,7 @@ During the End Phase you may remove a Friendly Rat model in BtB with this model 
         <categoryLink id="f81c-511c-5cd3-e038" name="Non-Unique" hidden="false" targetId="d181-219d-3add-d47b" primary="false"/>
         <categoryLink id="ad60-dad1-259d-050c" name="Soulless" hidden="false" targetId="0abe-c3e6-4300-478f" primary="false"/>
         <categoryLink id="8308-6987-58d2-d5fa" name="Armour" hidden="false" targetId="f322-702a-ff62-b37e" primary="false"/>
+        <categoryLink id="2469-568f-7725-615b" name="Ashigaru" hidden="false" targetId="f434-17e6-174c-b4f6" primary="false"/>
       </categoryLinks>
       <entryLinks>
         <entryLink id="0e7e-8c30-19b4-f7d3" name="Armoured Kairai" hidden="false" collective="false" import="true" targetId="6d6b-2449-631f-053f" type="selectionEntry">
@@ -4004,29 +3891,7 @@ During the End Phase you may remove a Friendly Rat model in BtB with this model 
         </modifier>
       </modifiers>
       <profiles>
-        <profile id="2e78-1e8f-3f3b-8625" name="Things That Go Bump in the Night" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <characteristics>
-            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">• Burakumin begin the game with 1 Ki Token
-• Automatically win the Tactical Test for turn 4;  Enemy models cannot use Ki Boosts until the End Phase
-
-Permitted [Burakumin, Yokai]</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="a7f1-3168-44a1-ddcb" name="Things That Go Bump in the Night" hidden="true" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
-          <modifiers>
-            <modifier type="set" field="hidden" value="false">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
-              </conditions>
-            </modifier>
-          </modifiers>
+        <profile id="a7f1-3168-44a1-ddcb" name="Things That Go Bump in the Night" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
           <characteristics>
             <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">• Burakumin begin the game with 1 Ki Token
 • Automatically win the Tactical Test for turn 4;  Enemy models cannot use Ki Boosts until the End Phase
@@ -5247,36 +5112,7 @@ No model may be chosen more than once.</characteristic>
         </modifier>
       </modifiers>
       <profiles>
-        <profile id="7170-0766-eb7d-9463" name="Hikari" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <characteristics>
-            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">2</characteristic>
-            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
-            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">0</characteristic>
-            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
-            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">3</characteristic>
-            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
-            <characteristic name="Ki" typeId="3969-9568-a914-6854">0</characteristic>
-            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
-            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">*</characteristic>
-            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">5 OOOOO</characteristic>
-            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="a9f0-6648-d2b0-25dd" name="Hikari" hidden="true" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
-          <modifiers>
-            <modifier type="set" field="hidden" value="false">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
-              </conditions>
-            </modifier>
-          </modifiers>
+        <profile id="a9f0-6648-d2b0-25dd" name="Hikari" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
           <characteristics>
             <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">2</characteristic>
             <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
@@ -5786,16 +5622,17 @@ No model may be chosen more than once.</characteristic>
           <profiles>
             <profile id="1d0e-5644-0149-f830" name="Fuwa Kaidan" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
               <characteristics>
-                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Durable, Fear (6), Intangible, Kami, Soulless</characteristic>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Durable, Fear (6), Insignificant, Intangible, Kami, Soulless</characteristic>
               </characteristics>
             </profile>
           </profiles>
           <infoLinks>
             <infoLink id="b7c3-dee6-c131-d611" name="Fear" hidden="false" targetId="3586-4583-7f10-1f31" type="rule"/>
-            <infoLink id="ea09-ccb4-82bc-dace" name="Intangible" hidden="false" targetId="7f5c-c63d-f96f-65af" type="rule"/>
+            <infoLink id="ea09-ccb4-82bc-dace" name="Insignificant" hidden="false" targetId="1614-d86c-ef8a-c095" type="rule"/>
             <infoLink id="cfaa-9a9a-0c28-ad72" name="Kami" hidden="false" targetId="50d4-ec7a-9763-1b4d" type="rule"/>
             <infoLink id="2353-29ff-c014-2da7" name="Durable" hidden="false" targetId="3612-7e19-3cb9-72d0" type="rule"/>
             <infoLink id="f4c3-21d2-a65a-9553" name="Soulless" hidden="false" targetId="af31-aad0-fcea-9590" type="rule"/>
+            <infoLink id="e0f7-7a4d-07e9-1d66" name="Intangible" hidden="false" targetId="7f5c-c63d-f96f-65af" type="rule"/>
           </infoLinks>
         </infoGroup>
         <infoGroup id="2494-af59-4536-511f" name="Ranged Weapon" hidden="false">
@@ -5888,16 +5725,6 @@ This terrain is always recruited in a Warband with Fuwa Kaidan.</characteristic>
           </conditionGroups>
         </modifier>
       </modifiers>
-      <modifierGroups>
-        <modifierGroup>
-          <conditions>
-            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
-          </conditions>
-          <modifiers>
-            <modifier type="add" field="category" value="f434-17e6-174c-b4f6"/>
-          </modifiers>
-        </modifierGroup>
-      </modifierGroups>
       <constraints>
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="true" id="e583-35f9-ec64-ae9c" type="max"/>
       </constraints>
@@ -5949,6 +5776,7 @@ This terrain is always recruited in a Warband with Fuwa Kaidan.</characteristic>
         <categoryLink id="a0b4-323f-d1d9-5df1" name="Soulless" hidden="false" targetId="0abe-c3e6-4300-478f" primary="false"/>
         <categoryLink id="e09e-b3a2-3c10-2c66" name="Armour" hidden="false" targetId="f322-702a-ff62-b37e" primary="false"/>
         <categoryLink id="34c2-70ef-2553-b06b" name="New CategoryLink" hidden="false" targetId="5073-f00b-a8f6-5e3b" primary="true"/>
+        <categoryLink id="ca82-f5f3-716c-f774" name="Ashigaru" hidden="false" targetId="f434-17e6-174c-b4f6" primary="false"/>
       </categoryLinks>
       <entryLinks>
         <entryLink id="2f62-6b03-94f9-637a" name="Armoured Kairai" hidden="false" collective="false" import="true" targetId="6d6b-2449-631f-053f" type="selectionEntry">
@@ -5983,6 +5811,9 @@ This terrain is always recruited in a Warband with Fuwa Kaidan.</characteristic>
           <modifiers>
             <modifier type="append" field="name" value="B"/>
           </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="28ae-3d01-4c21-5610" type="min"/>
+          </constraints>
           <profiles>
             <profile id="4919-8fe2-5c09-6795" name="Armoured Kairai B" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
               <characteristics>
@@ -6096,6 +5927,9 @@ This terrain is always recruited in a Warband with Fuwa Kaidan.</characteristic>
           <modifiers>
             <modifier type="append" field="name" value="B"/>
           </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ea67-d15c-8e92-0b01" type="min"/>
+          </constraints>
           <profiles>
             <profile id="c46e-dfb1-64ce-3969" name="Kairai Farmer B" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
               <characteristics>
@@ -6132,16 +5966,6 @@ This terrain is always recruited in a Warband with Fuwa Kaidan.</characteristic>
           </conditionGroups>
         </modifier>
       </modifiers>
-      <modifierGroups>
-        <modifierGroup>
-          <conditions>
-            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
-          </conditions>
-          <modifiers>
-            <modifier type="add" field="category" value="f434-17e6-174c-b4f6"/>
-          </modifiers>
-        </modifierGroup>
-      </modifierGroups>
       <constraints>
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="true" id="37b4-feb8-3e03-37fb" type="max"/>
       </constraints>
@@ -6191,6 +6015,7 @@ This terrain is always recruited in a Warband with Fuwa Kaidan.</characteristic>
         <categoryLink id="c017-e7e8-d259-e8a2" name="Non-Unique" hidden="false" targetId="d181-219d-3add-d47b" primary="false"/>
         <categoryLink id="6642-a44b-0d79-2fdd" name="Soulless" hidden="false" targetId="0abe-c3e6-4300-478f" primary="false"/>
         <categoryLink id="62be-b5ca-273f-c28f" name="New CategoryLink" hidden="false" targetId="5073-f00b-a8f6-5e3b" primary="true"/>
+        <categoryLink id="b94d-9050-b749-7e5f" name="Ashigaru" hidden="false" targetId="f434-17e6-174c-b4f6" primary="false"/>
       </categoryLinks>
       <entryLinks>
         <entryLink id="4bc0-3b66-cebf-d74a" name="Kairai Militia" hidden="false" collective="false" import="true" targetId="fc14-87e3-3096-84d7" type="selectionEntry">
@@ -6222,6 +6047,9 @@ This terrain is always recruited in a Warband with Fuwa Kaidan.</characteristic>
           <modifiers>
             <modifier type="append" field="name" value="B"/>
           </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="99ab-50ad-57d8-6e4d" type="min"/>
+          </constraints>
           <profiles>
             <profile id="90aa-af67-b49f-096d" name="Kairai Militia B" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
               <characteristics>
@@ -6338,6 +6166,9 @@ This terrain is always recruited in a Warband with Fuwa Kaidan.</characteristic>
           <modifiers>
             <modifier type="append" field="name" value="B"/>
           </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="12dc-20e8-a4f2-a346" type="min"/>
+          </constraints>
           <profiles>
             <profile id="ba54-b24c-37a4-6cd1" name="Kairai Villager B" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
               <characteristics>
@@ -6461,6 +6292,9 @@ When this model is reduced to 0 Wounds remove it from play and each model within
           <modifiers>
             <modifier type="append" field="name" value="B"/>
           </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="eb98-46e5-e989-8515" type="min"/>
+          </constraints>
           <profiles>
             <profile id="15f3-2f92-3f7b-db61" name="Kusatta Kairai B" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
               <characteristics>
@@ -6588,6 +6422,9 @@ In the End Phase, if this model is not in BtB with another Kairai this model bec
           <modifiers>
             <modifier type="append" field="name" value="B"/>
           </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d662-0ab2-6dc8-e312" type="min"/>
+          </constraints>
           <profiles>
             <profile id="46aa-8395-15b2-3a80" name="Risen Kairai B" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
               <characteristics>
@@ -6610,6 +6447,9 @@ In the End Phase, if this model is not in BtB with another Kairai this model bec
           <modifiers>
             <modifier type="append" field="name" value="C"/>
           </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a7c5-4831-313e-7bff" type="min"/>
+          </constraints>
           <profiles>
             <profile id="cb7a-b659-9fb8-ee41" name="Risen Kairai C" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
               <characteristics>
@@ -6632,6 +6472,9 @@ In the End Phase, if this model is not in BtB with another Kairai this model bec
           <modifiers>
             <modifier type="append" field="name" value="D"/>
           </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7229-f62e-1064-bda6" type="min"/>
+          </constraints>
           <profiles>
             <profile id="0e7f-b849-bc67-7fd8" name="Risen Kairai D" hidden="false" typeId="6ea2-0f74-4852-4a98" typeName="Character Profile &amp; Traits">
               <characteristics>
@@ -6749,6 +6592,9 @@ In the End Phase, if this model is not in BtB with another Kairai this model bec
           <modifiers>
             <modifier type="append" field="name" value="B"/>
           </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9ecb-a1ac-0981-23f0" type="min"/>
+          </constraints>
           <profiles>
             <profile id="a80c-5e1d-93fe-74ac" name="Small Rat Swarm B" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
               <characteristics>
@@ -6771,6 +6617,9 @@ In the End Phase, if this model is not in BtB with another Kairai this model bec
           <modifiers>
             <modifier type="append" field="name" value="C"/>
           </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bee8-ea08-72ec-d14f" type="min"/>
+          </constraints>
           <profiles>
             <profile id="fb1a-e7f9-f9f4-7162" name="Small Rat Swarm C" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
               <characteristics>
@@ -7248,11 +7097,6 @@ During the End Phase you may decide the order States are resolved.</characterist
             <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5073-f00b-a8f6-5e3b" type="instanceOf"/>
           </conditions>
         </modifier>
-        <modifier type="add" field="category" value="f434-17e6-174c-b4f6">
-          <conditions>
-            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
-          </conditions>
-        </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="c86a-a2c9-78d8-10b2" type="max"/>
@@ -7260,6 +7104,7 @@ During the End Phase you may decide the order States are resolved.</characterist
       <categoryLinks>
         <categoryLink id="b2ab-a25c-0f45-4068" name="Kairai" hidden="false" targetId="26f6-e547-6d94-8b70" primary="false"/>
         <categoryLink id="d7ec-8da6-d81c-3e1b" name="Soulless" hidden="false" targetId="0abe-c3e6-4300-478f" primary="false"/>
+        <categoryLink id="1580-f537-e881-62a2" name="Ashigaru" hidden="false" targetId="f434-17e6-174c-b4f6" primary="false"/>
       </categoryLinks>
       <entryLinks>
         <entryLink id="6536-612b-cc11-d062" name="Enhancements" hidden="false" collective="false" import="true" targetId="ef93-ecd4-88c1-9224" type="selectionEntryGroup"/>
@@ -7370,11 +7215,6 @@ During the End Phase you may decide the order States are resolved.</characterist
             <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5073-f00b-a8f6-5e3b" type="instanceOf"/>
           </conditions>
         </modifier>
-        <modifier type="add" field="category" value="f434-17e6-174c-b4f6">
-          <conditions>
-            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
-          </conditions>
-        </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d295-f0f6-e044-6769" type="max"/>
@@ -7383,6 +7223,7 @@ During the End Phase you may decide the order States are resolved.</characterist
         <categoryLink id="8c9e-6748-0b0e-9b21" name="Kairai" hidden="false" targetId="26f6-e547-6d94-8b70" primary="false"/>
         <categoryLink id="bfc8-55fc-4dfe-3688" name="Armour" hidden="false" targetId="f322-702a-ff62-b37e" primary="false"/>
         <categoryLink id="f23d-1733-b414-36eb" name="Soulless" hidden="false" targetId="0abe-c3e6-4300-478f" primary="false"/>
+        <categoryLink id="d5e1-ec24-be1f-1a00" name="Ashigaru" hidden="false" targetId="f434-17e6-174c-b4f6" primary="false"/>
       </categoryLinks>
       <entryLinks>
         <entryLink id="4f88-ae61-d888-a0dd" name="Enhancements" hidden="false" collective="false" import="true" targetId="ef93-ecd4-88c1-9224" type="selectionEntryGroup"/>
@@ -7559,14 +7400,28 @@ The second result is kept (unless another effect also causes a re-roll) even if 
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="895c-d27c-aad6-5f06" type="max"/>
           </constraints>
           <profiles>
-            <profile id="942a-9266-ef6e-6aa1" name="New Moon" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
+            <profile id="942a-9266-ef6e-6aa1" name="Moontouched Hair" hidden="false" typeId="814b-7c22-0b45-9acc" typeName="Special Card (Ranged Weapon)">
               <characteristics>
-                <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">When this model makes an Attack with an Entangling weapon or a Grapple Attack, the Attack causes full Damage Roll (Strength +0) in addition to its normal effects.
+                <characteristic name="Ranged Weapon Strength" typeId="a0cf-2be6-a776-363b">+0</characteristic>
+                <characteristic name="Range Bands" typeId="ea30-733c-e9dd-5c75">2/3/4</characteristic>
+                <characteristic name="Traits" typeId="a28d-cbd1-005e-e623">Entangling, Lightweight</characteristic>
+                <characteristic name="Specials" typeId="55e0-9b2f-ad58-9c57"/>
+                <characteristic name="Unique Effects" typeId="76c8-d87b-83b3-3e58"/>
+              </characteristics>
+            </profile>
+            <profile id="2d89-a68e-028e-2b12" name="New Moon" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">Replace the Enchanted Hair ranged weapon with Moontouched Hair.
+When this model makes an Attack with an Entangling weapon or a Grapple Attack, the Attack can cause damage in addition to normal effects.
 
 Requirement [The Harionago]</characteristic>
               </characteristics>
             </profile>
           </profiles>
+          <infoLinks>
+            <infoLink id="8b63-6d7b-82dd-dac8" name="Entangling" hidden="false" targetId="d042-1190-eabb-e835" type="rule"/>
+            <infoLink id="2f2b-18e1-1173-30dc" name="Lightweight" hidden="false" targetId="c75c-7124-2b1f-a4d9" type="rule"/>
+          </infoLinks>
           <categoryLinks>
             <categoryLink id="23e4-c281-10f8-3ba1" name="New CategoryLink" hidden="false" targetId="17cf-d9a9-c7c1-bcb6" primary="true"/>
             <categoryLink id="e178-2756-b5fd-897f" name="Cycle: Risen Sun" hidden="false" targetId="a745-0548-80c8-ece4" primary="false"/>
@@ -7749,26 +7604,8 @@ This may not cause the model to exceed its maximum Ki Statistic.</characteristic
               </costs>
             </selectionEntry>
             <selectionEntry id="155a-4505-5a91-9242" name="Violence Fetish" hidden="false" collective="false" import="true" type="upgrade">
-              <modifiers>
-                <modifier type="decrement" field="a111-8656-5c05-7415" value="1.0">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="90d7-5fe5-0a05-1bea" type="atLeast"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <modifierGroups>
-                <modifierGroup>
-                  <conditions>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="equalTo"/>
-                  </conditions>
-                  <modifiers>
-                    <modifier type="set" field="a111-8656-5c05-7415" value="1.0"/>
-                    <modifier type="set" field="1f2e-ab0e-7540-ccb8" value="3.0"/>
-                  </modifiers>
-                </modifierGroup>
-              </modifierGroups>
               <constraints>
-                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1f2e-ab0e-7540-ccb8" type="max"/>
+                <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1f2e-ab0e-7540-ccb8" type="max"/>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="723c-926d-f75c-4b6b" type="max"/>
               </constraints>
               <profiles>
@@ -7784,7 +7621,7 @@ Restriction [Burakumin]</characteristic>
                 <categoryLink id="8b1f-f65c-73d1-8080" name="New CategoryLink" hidden="false" targetId="5bcd-fe93-a8ea-0164" primary="true"/>
               </categoryLinks>
               <costs>
-                <cost name=" Rice" typeId="a111-8656-5c05-7415" value="3.0"/>
+                <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="69cc-b8db-2ba5-3fdd" name="Sacrificial Knife" hidden="false" collective="false" import="true" type="upgrade">
@@ -8473,30 +8310,7 @@ Choose a Friendly model within 6, that model gains an Activation Counter.</chara
     </infoGroup>
     <infoGroup id="7aaa-c89f-f4fe-f68d" name="Chaos Bolt" hidden="false">
       <profiles>
-        <profile id="244e-f253-568b-2a7b" name="Chaos Bolt" hidden="false" typeId="993a-e62a-7922-0ccb" typeName="Ki Feat">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <characteristics>
-            <characteristic name="Cost" typeId="a126-54d9-0a27-f4b6">2</characteristic>
-            <characteristic name="Timing" typeId="f8a8-8a3e-ef58-4c61">Simple</characteristic>
-            <characteristic name="Subject" typeId="4ac8-2bb1-0c84-f088">Target 6&quot; Opposed Ki Test</characteristic>
-            <characteristic name="Limitation" typeId="6fc9-5d13-2687-b2a5"/>
-            <characteristic name="Description" typeId="f804-b969-00da-2123">Target model gains a Poison 1, Bleed 1 and Fire 1 Marker.</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="dfec-0b77-2ebe-462f" name="Chaos Bolt" hidden="true" typeId="993a-e62a-7922-0ccb" typeName="Ki Feat">
-          <modifiers>
-            <modifier type="set" field="hidden" value="false">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
-              </conditions>
-            </modifier>
-          </modifiers>
+        <profile id="dfec-0b77-2ebe-462f" name="Chaos Bolt" hidden="false" typeId="993a-e62a-7922-0ccb" typeName="Ki Feat">
           <characteristics>
             <characteristic name="Cost" typeId="a126-54d9-0a27-f4b6">3</characteristic>
             <characteristic name="Timing" typeId="f8a8-8a3e-ef58-4c61">Simple</characteristic>

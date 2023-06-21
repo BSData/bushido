@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="d615-aef7-31d5-367d" name="Jung Pirates" revision="21" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="14" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="d615-aef7-31d5-367d" name="Jung Pirates" revision="22" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="14" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="258a-e1a8-8db1-9635" name="Ki&lt;2" hidden="true"/>
     <categoryEntry id="f6c9-50fa-a9d3-e9f3" name="Ranged Weapon" hidden="true"/>
@@ -144,13 +144,6 @@ If Jung Mari is recruited into this Warband, This card gains x2 Max.</characteri
       </costs>
     </selectionEntry>
     <selectionEntry id="e38b-e7d5-5119-15fe" name="Yori" hidden="false" collective="false" import="true" type="model">
-      <modifiers>
-        <modifier type="set" field="a111-8656-5c05-7415" value="11.0">
-          <conditions>
-            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7925-33e8-114a-8c93" type="max"/>
       </constraints>
@@ -240,7 +233,7 @@ If Jung Mari is recruited into this Warband, This card gains x2 Max.</characteri
         <entryLink id="59fc-3b28-d230-c379" name="Enhancements" hidden="false" collective="false" import="true" targetId="2327-1257-a4b4-df32" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
-        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="13.0"/>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="11.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="c1e8-5331-bfe5-fa97" name="Tetsuso" hidden="false" collective="false" import="true" type="model">
@@ -365,39 +358,10 @@ If Jung Mari is recruited into this Warband, This card gains x2 Max.</characteri
         </profile>
       </profiles>
       <infoGroups>
-        <infoGroup id="17b2-5fe0-794f-bd94" name="Traits" hidden="false">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <profiles>
-            <profile id="e572-b0e9-bd97-dcc0" name="Taru" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
-              <characteristics>
-                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Bravery, Jump Up, Range Defence (1)</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <infoLinks>
-            <infoLink id="5303-74cd-a981-46ae" name="Jump Up" hidden="false" targetId="1575-e12f-4ca3-c557" type="rule"/>
-            <infoLink id="c7d0-727a-588e-43cb" name="Ranged Defence " hidden="false" targetId="9b8d-9ca9-e25d-3988" type="rule"/>
-            <infoLink id="d0d1-1184-60f2-2568" name="Bravery" hidden="false" targetId="f9b2-38d2-7cda-de6e" type="rule"/>
-          </infoLinks>
-        </infoGroup>
         <infoGroup id="ebc9-577c-0509-7e89" name="Ki Feats" hidden="false">
           <infoLinks>
             <infoLink id="7961-d886-2817-085d" name="Tornado" hidden="false" targetId="f727-7c31-78e0-2384" type="infoGroup"/>
-            <infoLink id="89b8-91ca-166f-5d43" name="Dirty Fighting" hidden="false" targetId="b399-d8d0-47b1-00ee" type="infoGroup">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="lessThan"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </infoLink>
+            <infoLink id="89b8-91ca-166f-5d43" name="Dirty Fighting" hidden="false" targetId="b399-d8d0-47b1-00ee" type="infoGroup"/>
           </infoLinks>
         </infoGroup>
         <infoGroup id="425d-e661-7764-85a0" name="Melee Weapons" hidden="false">
@@ -453,13 +417,6 @@ If this model has no Ammo Tokens on its Net Weapon it loses the Net Weapon.</cha
           </profiles>
         </infoGroup>
         <infoGroup id="5cdb-52b0-eca8-6ec1" name="Traits" hidden="false">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="lessThan"/>
-              </conditions>
-            </modifier>
-          </modifiers>
           <profiles>
             <profile id="a330-fcc1-4128-9704" name="Taru" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
               <characteristics>
@@ -674,36 +631,7 @@ If this model has no Ammo Tokens on its Net Weapon it loses the Net Weapon.</cha
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7050-c95d-7eae-e90f" type="max"/>
       </constraints>
       <profiles>
-        <profile id="04c7-75b8-96f3-ade2" name="Ryota" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <characteristics>
-            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
-            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
-            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">1</characteristic>
-            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
-            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
-            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
-            <characteristic name="Ki" typeId="3969-9568-a914-6854">1</characteristic>
-            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
-            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">6</characteristic>
-            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">7 OOOOO OO</characteristic>
-            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
-          </characteristics>
-        </profile>
         <profile id="e680-0f7d-f431-461b" name="Ryota" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="lessThan"/>
-              </conditions>
-            </modifier>
-          </modifiers>
           <characteristics>
             <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
             <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
@@ -954,30 +882,14 @@ If this model has no Ammo Tokens on its Net Weapon it loses the Net Weapon.</cha
           </profiles>
           <infoLinks>
             <infoLink id="fdbc-dc07-980f-4213" name="Scout" hidden="false" targetId="8c82-d05a-f63b-1841" type="rule"/>
-            <infoLink id="5d60-ab2b-cc53-aa98" name="Sidearm" hidden="false" targetId="9a84-5d0d-4a80-b77e" type="profile">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="lessThan"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </infoLink>
+            <infoLink id="5d60-ab2b-cc53-aa98" name="Sidearm" hidden="false" targetId="9a84-5d0d-4a80-b77e" type="profile"/>
           </infoLinks>
         </infoGroup>
         <infoGroup id="c250-030f-e917-995e" name="Ki Feat" hidden="false">
           <infoLinks>
             <infoLink id="b38f-f717-33fd-ef9f" name="Rally" hidden="false" targetId="d11a-2a0d-5984-5688" type="infoGroup"/>
             <infoLink id="9e4f-7512-c55d-7cd8" name="Provoke" hidden="false" targetId="e35f-0c22-72f8-c4ac" type="infoGroup"/>
-            <infoLink id="4e48-5f2b-e292-02cd" name="Admirable" hidden="false" targetId="4483-a302-988b-aa33" type="infoGroup">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="lessThan"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </infoLink>
+            <infoLink id="4e48-5f2b-e292-02cd" name="Admirable" hidden="false" targetId="4483-a302-988b-aa33" type="infoGroup"/>
           </infoLinks>
         </infoGroup>
         <infoGroup id="3b2d-fc69-315f-2a15" name="Ranged Weapon" hidden="false">
@@ -2366,13 +2278,6 @@ When this model is removed from play by an Enemy attack or effect, all models in
       </costs>
     </selectionEntry>
     <selectionEntry id="231f-8fdb-da69-ea81" name="Jori" hidden="false" collective="false" import="true" type="model">
-      <modifiers>
-        <modifier type="set" field="a111-8656-5c05-7415" value="13.0">
-          <conditions>
-            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6836-3e67-8f6f-f17b" type="max"/>
       </constraints>
@@ -2457,7 +2362,7 @@ When this model is removed from play by an Enemy attack or effect, all models in
         <entryLink id="f8b9-2f8a-610b-d4b2" name="Enhancements" hidden="false" collective="false" import="true" targetId="2327-1257-a4b4-df32" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
-        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="16.0"/>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="13.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="c5c5-e4bd-f92f-0797" name="Shanghai" hidden="false" collective="false" import="true" type="upgrade">
@@ -2479,43 +2384,11 @@ When this model is removed from play by an Enemy attack or effect, all models in
       </costs>
     </selectionEntry>
     <selectionEntry id="cb9a-d1cf-3c7d-7928" name="Ebb and Flow" hidden="false" collective="false" import="true" type="upgrade">
-      <modifierGroups>
-        <modifierGroup>
-          <conditions>
-            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="equalTo"/>
-          </conditions>
-          <modifiers>
-            <modifier type="set" field="a111-8656-5c05-7415" value="2.0"/>
-            <modifier type="set" field="9685-02cd-73d7-2925" value="2.0"/>
-          </modifiers>
-        </modifierGroup>
-      </modifierGroups>
       <constraints>
-        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9685-02cd-73d7-2925" type="max"/>
+        <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9685-02cd-73d7-2925" type="max"/>
       </constraints>
       <profiles>
-        <profile id="936d-e39c-e813-6b2b" name="Ebb and Flow" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <characteristics>
-            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">Play after declaring an Activating model.
-Move a Friendly, Small model up to 2&quot; toward an Enemy table edge.
-At the end of this activation, move that model 2&quot; directly toward the opposite table edge.</characteristic>
-          </characteristics>
-        </profile>
         <profile id="4649-b09c-929c-5877" name="Ebb and Flow" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="lessThan"/>
-              </conditions>
-            </modifier>
-          </modifiers>
           <characteristics>
             <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">Play after declaring an Activating model.
 Move a friendly, small model up to 2” toward an enemy table edge (Any edge which touches an enemy deployment zone).
@@ -2527,7 +2400,7 @@ At the end of this activation, move that model 2” directly toward the opposite
         <categoryLink id="b2ca-7b1c-8876-6401" name="New CategoryLink" hidden="false" targetId="d360-71aa-ca22-ba3c" primary="true"/>
       </categoryLinks>
       <costs>
-        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="3.0"/>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="843d-db96-732e-cf8c" name="Conclave of Captains" hidden="false" collective="false" import="true" type="upgrade">
@@ -3810,33 +3683,7 @@ This terrain element must be placed within 6&quot; of the centreline and not wit
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="07ab-676c-6919-1fa5" type="max"/>
           </constraints>
           <profiles>
-            <profile id="0026-13f9-5984-bf38" name="Taunt" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <characteristics>
-                <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">Attatched model gains:
-During the Starting Phase, Target an Enemy model in LoS and within 12&quot;.
-Make an Opposed Ki Test against the Target model.
-If succesful the Target model gains Aggressive until the End Phase.
-
-
-Requirement (Highest Rice Cost in Warband)
-Note: there is currently no way to automatically check for this.</characteristic>
-              </characteristics>
-            </profile>
-            <profile id="63b3-30c1-c03a-04ed" name="Taunt" hidden="true" typeId="bd15-7ead-9268-3576" typeName="Special Card (Ki Feat)">
-              <modifiers>
-                <modifier type="set" field="hidden" value="false">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
+            <profile id="63b3-30c1-c03a-04ed" name="Taunt" hidden="false" typeId="bd15-7ead-9268-3576" typeName="Special Card (Ki Feat)">
               <characteristics>
                 <characteristic name="Description" typeId="17eb-17e2-4df4-5c5d">Attached model gains the Taunt Ki Feat.
 Requirement [Highest Rice Cost in the Warband]</characteristic>
@@ -4475,30 +4322,7 @@ Active</characteristic>
     </infoGroup>
     <infoGroup id="9ddc-b2c7-7b26-f663" name="Katakuchi" hidden="false">
       <profiles>
-        <profile id="c6cd-0459-d4c7-6373" name="Katakuchi" hidden="false" typeId="993a-e62a-7922-0ccb" typeName="Ki Feat">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <characteristics>
-            <characteristic name="Cost" typeId="a126-54d9-0a27-f4b6">1</characteristic>
-            <characteristic name="Timing" typeId="f8a8-8a3e-ef58-4c61">Active</characteristic>
-            <characteristic name="Subject" typeId="4ac8-2bb1-0c84-f088">Target BtB</characteristic>
-            <characteristic name="Limitation" typeId="6fc9-5d13-2687-b2a5"/>
-            <characteristic name="Description" typeId="f804-b969-00da-2123">This model and Target Friendly model gain Aggressive, Fearless and Unstable until the End Phase. This feat cannot be used if this model has no Ammo Tokens.</characteristic>
-          </characteristics>
-        </profile>
         <profile id="32e3-e8f0-e7bb-6ab6" name="Katakuchi" hidden="false" typeId="993a-e62a-7922-0ccb" typeName="Ki Feat">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="lessThan"/>
-              </conditions>
-            </modifier>
-          </modifiers>
           <characteristics>
             <characteristic name="Cost" typeId="a126-54d9-0a27-f4b6">1</characteristic>
             <characteristic name="Timing" typeId="f8a8-8a3e-ef58-4c61">Active</characteristic>
@@ -4513,15 +4337,7 @@ This Ki feat cannot be used if this model has no Ammo Tokens.</characteristic>
         <infoLink id="eaec-01a7-81c0-0c3a" name="Fearless" hidden="false" targetId="5d6f-1746-9080-aca5" type="rule"/>
         <infoLink id="33ba-f3cc-0f9d-47dd" name="Aggressive" hidden="false" targetId="a445-e041-8d5f-aa28" type="rule"/>
         <infoLink id="237d-7042-0033-2ec9" name="Unstable" hidden="false" targetId="24e3-1e7e-40b5-e16c" type="rule"/>
-        <infoLink id="7302-f173-fd16-7d7e" name="Resistance " hidden="false" targetId="7e3f-9dc3-cacb-469f" type="rule">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="lessThan"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </infoLink>
+        <infoLink id="7302-f173-fd16-7d7e" name="Resistance " hidden="false" targetId="7e3f-9dc3-cacb-469f" type="rule"/>
       </infoLinks>
     </infoGroup>
     <infoGroup id="f5fe-e86b-62cc-31ae" name="Same&apos;s Warning" hidden="false">

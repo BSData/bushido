@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="b489-b304-948d-52d0" name="Library-Ronin" revision="33" battleScribeVersion="2.03" library="true" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="14" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="b489-b304-948d-52d0" name="Library-Ronin" revision="34" battleScribeVersion="2.03" library="true" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="14" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="4e24-3a7e-77bc-dfed" name="Balance" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -1860,46 +1860,12 @@ Enemy models consider the area within 2&quot; of this model a [Normal, Obscurrin
             </conditionGroup>
           </conditionGroups>
         </modifier>
-        <modifier type="append" field="name" value="rev1">
-          <conditions>
-            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
-          </conditions>
-        </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="9df8-a67b-feaf-2822" type="max"/>
       </constraints>
       <profiles>
-        <profile id="f26b-064a-abe4-7ebd" name="Kami of Evening Flame" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <characteristics>
-            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">2</characteristic>
-            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277"/>
-            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">2</characteristic>
-            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
-            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">6</characteristic>
-            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac">1</characteristic>
-            <characteristic name="Ki" typeId="3969-9568-a914-6854">0</characteristic>
-            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
-            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">2</characteristic>
-            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">Special</characteristic>
-            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="3e94-29e1-4515-36b2" name="Kami of Evening Flame" hidden="true" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
-          <modifiers>
-            <modifier type="set" field="hidden" value="false">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
-              </conditions>
-            </modifier>
-          </modifiers>
+        <profile id="3e94-29e1-4515-36b2" name="Kami of Evening Flame" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
           <characteristics>
             <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">2</characteristic>
             <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277"/>
@@ -1967,37 +1933,7 @@ Enemy models consider the area within 2&quot; of this model a [Normal, Obscurrin
             <infoLink id="2707-27bc-9277-3f2d" name="Fire" hidden="false" targetId="2422-40b7-254f-f6f1" type="rule"/>
           </infoLinks>
         </infoGroup>
-        <infoGroup id="988e-0c7e-9379-2cc7" name="Unique Effects" hidden="false">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <profiles>
-            <profile id="da98-a4fc-030b-d618" name="Kami of Evening Flame" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
-              <characteristics>
-                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">When this model suffers Wounds in a Melee Exchange, the Attacker gains a Fire (2) Marker.</characteristic>
-              </characteristics>
-            </profile>
-            <profile id="b61d-44bd-5837-afef" name="Starting Phase" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
-              <characteristics>
-                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">During the Starting Phase choose 1 of the following effects:
-• Remove this model from play and all models within 2&quot; gain a Fire (2) Marker
-• 1 model in BtB gains +1 Strength and Fire (1/1) until the End Phase</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-        </infoGroup>
-        <infoGroup id="c3a7-990d-3e51-d527" name="Unique Effects" hidden="true">
-          <modifiers>
-            <modifier type="set" field="hidden" value="false">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
-              </conditions>
-            </modifier>
-          </modifiers>
+        <infoGroup id="c3a7-990d-3e51-d527" name="Unique Effects" hidden="false">
           <profiles>
             <profile id="9b28-c0e2-d563-f906" name="Kami of Evening Flame" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
               <characteristics>
@@ -2057,11 +1993,6 @@ Enemy models consider the area within 2&quot; of this model a [Normal, Obscurrin
             </conditionGroup>
           </conditionGroups>
         </modifier>
-        <modifier type="append" field="name" value="rev1">
-          <conditions>
-            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
-          </conditions>
-        </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="9b8b-4b8c-502c-095a" type="max"/>
@@ -2116,44 +2047,8 @@ Enemy models consider the area within 2&quot; of this model a [Normal, Obscurrin
             <infoLink id="9f9a-50a2-6920-bfdb" name="Sharp " hidden="false" targetId="6092-9fb5-5196-d1eb" type="rule"/>
           </infoLinks>
         </infoGroup>
-        <infoGroup id="cdf7-ef07-83ee-775e" name="Unique Effects" hidden="false">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <profiles>
-            <profile id="9808-f170-58a7-fa71" name="Kami of Reflection" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
-              <characteristics>
-                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">When this model suffers Wounds in a Melee Exchange, the Attacker suffers 1 Wound ignoring Tough.
-This model does not gain Slow from Blizzard.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-        </infoGroup>
-        <infoGroup id="dc98-dabe-4b5e-8678" name="Ki Feats" hidden="false">
-          <infoLinks>
-            <infoLink id="c9e2-fb7e-e177-4b91" name="Ki Mirror" hidden="false" targetId="e9ec-9d86-cdce-ef5f" type="infoGroup">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </infoLink>
-          </infoLinks>
-        </infoGroup>
-        <infoGroup id="395b-fef5-968b-fb56" name="Unique Effects" hidden="true">
-          <modifiers>
-            <modifier type="set" field="hidden" value="false">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
-              </conditions>
-            </modifier>
-          </modifiers>
+        <infoGroup id="dc98-dabe-4b5e-8678" name="Ki Feats" hidden="false"/>
+        <infoGroup id="395b-fef5-968b-fb56" name="Unique Effects" hidden="false">
           <profiles>
             <profile id="8786-3c1a-2ea6-fb40" name="Kami of Reflection" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
               <characteristics>
@@ -3275,11 +3170,6 @@ If this model becomes Prone, it loses all Ki tokens and gains a Spirit Block Mar
             </conditionGroup>
           </conditionGroups>
         </modifier>
-        <modifier type="append" field="name" value="rev1">
-          <conditions>
-            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
-          </conditions>
-        </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5cc1-2780-b4b2-4a2a" type="max"/>
@@ -3302,40 +3192,7 @@ If this model becomes Prone, it loses all Ki tokens and gains a Spirit Block Mar
             <infoLink id="caa4-f74e-c446-9b4e" name="Powerful Attack" hidden="false" targetId="d56a-058d-95d9-5b60" type="rule"/>
           </infoLinks>
         </infoGroup>
-        <infoGroup id="dba6-bec4-7990-c552" name="Traits" hidden="false">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <profiles>
-            <profile id="51d2-4829-8fe9-feb8" name="Silverback" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
-              <characteristics>
-                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Aloof, Aggressive, Bodyguard [Aiko](3&quot;), Bravery, Charging Bonus [Slam Attack (0)], Fear (5), Resistance (1), Tough (1)</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <infoLinks>
-            <infoLink id="b8cc-2875-64d6-f5f2" name="Resistance " hidden="false" targetId="7e3f-9dc3-cacb-469f" type="rule"/>
-            <infoLink id="8b85-0246-054f-21eb" name="Fear" hidden="false" targetId="3586-4583-7f10-1f31" type="rule"/>
-            <infoLink id="5567-ef31-92d4-1662" name="Bravery" hidden="false" targetId="f9b2-38d2-7cda-de6e" type="rule"/>
-            <infoLink id="a3a3-91b4-1f64-2433" name="Bodyguard" hidden="false" targetId="0286-6d10-a236-e0c3" type="rule"/>
-            <infoLink id="7f47-3dea-9d73-24bd" name="Aloof" hidden="false" targetId="5101-70fc-eca4-d99b" type="rule"/>
-            <infoLink id="ae45-a3be-6161-e9a0" name="Charging Bonus" hidden="false" targetId="d747-f7f2-ea6f-5ceb" type="rule"/>
-            <infoLink id="1dc2-444b-7fe1-5ef8" name="Aggressive" hidden="false" targetId="a445-e041-8d5f-aa28" type="rule"/>
-            <infoLink id="e69f-2e9a-6697-0fba" name="Tough" hidden="false" targetId="5613-a6cf-495a-229f" type="rule"/>
-          </infoLinks>
-        </infoGroup>
-        <infoGroup id="ec75-d265-76e9-0c0e" name="Traits" hidden="true">
-          <modifiers>
-            <modifier type="set" field="hidden" value="false">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
-              </conditions>
-            </modifier>
-          </modifiers>
+        <infoGroup id="ec75-d265-76e9-0c0e" name="Traits" hidden="false">
           <profiles>
             <profile id="8c7d-37dc-76c5-fa4d" name="Silverback" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
               <characteristics>
@@ -3361,13 +3218,6 @@ If this model becomes Prone, it loses all Ki tokens and gains a Spirit Block Mar
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="f2d6-8699-3511-98b0" name="Silverback A" hidden="false" collective="false" import="true" type="model">
-          <modifiers>
-            <modifier type="set" field="a111-8656-5c05-7415" value="12.0">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="685b-176a-7b13-c5c1" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8cea-2ab7-dc9d-e946" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ebe6-9e95-6370-2f37" type="min"/>
@@ -3394,17 +3244,10 @@ If this model becomes Prone, it loses all Ki tokens and gains a Spirit Block Mar
             <categoryLink id="1444-6c0b-d667-7e33" name="Brutal" hidden="false" targetId="f62f-dd0b-4f06-06a6" primary="false"/>
           </categoryLinks>
           <costs>
-            <cost name=" Rice" typeId="a111-8656-5c05-7415" value="10.0"/>
+            <cost name=" Rice" typeId="a111-8656-5c05-7415" value="12.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="b28b-d7cb-a681-6052" name="Silverback B" hidden="false" collective="false" import="true" type="model">
-          <modifiers>
-            <modifier type="set" field="a111-8656-5c05-7415" value="12.0">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="685b-176a-7b13-c5c1" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c67e-2b73-f50e-2392" type="max"/>
           </constraints>
@@ -3430,7 +3273,7 @@ If this model becomes Prone, it loses all Ki tokens and gains a Spirit Block Mar
             <categoryLink id="4be3-7f74-7094-03d0" name="Brutal" hidden="false" targetId="f62f-dd0b-4f06-06a6" primary="false"/>
           </categoryLinks>
           <costs>
-            <cost name=" Rice" typeId="a111-8656-5c05-7415" value="10.0"/>
+            <cost name=" Rice" typeId="a111-8656-5c05-7415" value="12.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -3559,16 +3402,6 @@ If this model becomes Prone, it loses all Ki tokens and gains a Spirit Block Mar
             <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="90d7-5fe5-0a05-1bea" type="atLeast"/>
           </conditions>
         </modifier>
-        <modifier type="set" field="a111-8656-5c05-7415" value="2.0">
-          <conditions>
-            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="equalTo"/>
-          </conditions>
-        </modifier>
-        <modifier type="append" field="name" value="rev1">
-          <conditions>
-            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
-          </conditions>
-        </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4f69-5463-0b8e-d4a8" type="max"/>
@@ -3593,7 +3426,7 @@ Against Durable models, instead of making a Damage Roll, always cause 1 Damage (
         <categoryLink id="144d-9f72-d720-246d" name="New CategoryLink" hidden="false" targetId="278f-9379-320a-1a7a" primary="true"/>
       </categoryLinks>
       <costs>
-        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="3.0"/>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="9714-955e-1643-e45e" name="Temo" hidden="false" collective="false" import="true" type="model">
@@ -4531,11 +4364,6 @@ While this model is in play, other models with marked Wound boxes gain +1 Melee 
             </conditionGroup>
           </conditionGroups>
         </modifier>
-        <modifier type="append" field="name" value="rev1">
-          <conditions>
-            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
-          </conditions>
-        </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9594-b5f8-29e9-696b" type="max"/>
@@ -5202,11 +5030,6 @@ This model can only be recruited into a Warband that contains all three Blood Br
             </conditionGroup>
           </conditionGroups>
         </modifier>
-        <modifier type="append" field="name" value="rev1">
-          <conditions>
-            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
-          </conditions>
-        </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="2266-4ba4-e060-35c5" type="max"/>
@@ -5214,26 +5037,7 @@ This model can only be recruited into a Warband that contains all three Blood Br
       <infoGroups>
         <infoGroup id="5262-2cc2-6ce5-26bf" name="Traits" hidden="false">
           <profiles>
-            <profile id="b82f-05da-fbc3-777c" name="Giant Eagle" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <characteristics>
-                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Aloof, Cloudwalk, Flank, Ranged Defence (1)</characteristic>
-              </characteristics>
-            </profile>
-            <profile id="ae94-d6f0-7c64-2976" name="Giant Eagle" hidden="true" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
-              <modifiers>
-                <modifier type="set" field="hidden" value="false">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
+            <profile id="ae94-d6f0-7c64-2976" name="Giant Eagle" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
               <characteristics>
                 <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Aloof, Cloudwalk, Flank, Ranged Defence (2)</characteristic>
               </characteristics>
@@ -5244,42 +5048,12 @@ This model can only be recruited into a Warband that contains all three Blood Br
             <infoLink id="c140-5406-7436-702b" name="Aloof" hidden="false" targetId="5101-70fc-eca4-d99b" type="rule"/>
             <infoLink id="a901-4e63-1376-a410" name="Cloudwalk" hidden="false" targetId="538c-1266-626b-fcc9" type="rule"/>
             <infoLink id="e135-33a0-32e0-59ac" name="Ranged Defence " hidden="false" targetId="9b8d-9ca9-e25d-3988" type="rule"/>
-            <infoLink id="543e-2e87-cb81-94f6" name="Group" hidden="true" targetId="4c02-03a1-ae7b-7821" type="rule">
-              <modifiers>
-                <modifier type="set" field="hidden" value="false">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </infoLink>
+            <infoLink id="543e-2e87-cb81-94f6" name="Group" hidden="false" targetId="4c02-03a1-ae7b-7821" type="rule"/>
           </infoLinks>
         </infoGroup>
         <infoGroup id="6118-980a-72f4-59fa" name="Melee Weapon" hidden="false">
           <profiles>
-            <profile id="51ee-5a21-b2ae-d3c1" name="Talons" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <characteristics>
-                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">-1</characteristic>
-                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Charging Bonus [Sharp (2)]</characteristic>
-                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d"/>
-                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
-              </characteristics>
-            </profile>
-            <profile id="ab43-3fcb-d8e4-04b3" name="Talons" hidden="true" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
-              <modifiers>
-                <modifier type="set" field="hidden" value="false">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
+            <profile id="ab43-3fcb-d8e4-04b3" name="Talons" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
               <characteristics>
                 <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+2</characteristic>
                 <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Charging Bonus [Sharp (2)]</characteristic>
@@ -5288,48 +5062,16 @@ This model can only be recruited into a Warband that contains all three Blood Br
               </characteristics>
             </profile>
           </profiles>
-          <infoGroups>
-            <infoGroup id="47f6-067c-232d-1dae" name="New InfoGroup" hidden="true">
-              <modifiers>
-                <modifier type="set" field="hidden" value="false">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <infoLinks>
-                <infoLink id="a107-e6ad-2bed-54d2" name="Combo Attack " hidden="false" targetId="78ab-6a94-be24-8f74" type="rule"/>
-                <infoLink id="2c21-50d4-6329-a27f" name="Throw Attack" hidden="false" targetId="e4a9-1967-fb91-ce07" type="rule"/>
-                <infoLink id="93c4-101e-3b4c-9592" name="Sidestep Defence " hidden="false" targetId="753c-6c3b-64d7-203c" type="rule"/>
-              </infoLinks>
-            </infoGroup>
-          </infoGroups>
           <infoLinks>
             <infoLink id="c124-5443-ea35-a481" name="Sharp " hidden="false" targetId="6092-9fb5-5196-d1eb" type="rule"/>
+            <infoLink id="058a-6900-e45b-a03b" name="Combo Attack " hidden="false" targetId="78ab-6a94-be24-8f74" type="rule"/>
+            <infoLink id="660b-6ee7-a321-2e75" name="Sidestep Defence " hidden="false" targetId="753c-6c3b-64d7-203c" type="rule"/>
+            <infoLink id="df85-37d4-a1b9-1315" name="Throw Attack" hidden="false" targetId="e4a9-1967-fb91-ce07" type="rule"/>
           </infoLinks>
         </infoGroup>
         <infoGroup id="9ab1-c990-ad9c-43a9" name="Unique Effects" hidden="false">
           <profiles>
-            <profile id="d7e6-b234-5f40-e0be" name="Unique Effects" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <characteristics>
-                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">This model may be recruited into any Shiho Theme that does not specifically restrict it.</characteristic>
-              </characteristics>
-            </profile>
-            <profile id="4380-ebc6-faed-8314" name="Unique Effects" hidden="true" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
-              <modifiers>
-                <modifier type="set" field="hidden" value="false">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
+            <profile id="4380-ebc6-faed-8314" name="Unique Effects" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
               <characteristics>
                 <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">This model may be recruited into any Descension or Shiho Theme that does not specifically restrict it.</characteristic>
               </characteristics>
@@ -5354,36 +5096,7 @@ This model can only be recruited into a Warband that contains all three Blood Br
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5f6b-2ab2-e4a9-c596" type="min"/>
           </constraints>
           <profiles>
-            <profile id="f4b6-2c66-3465-8406" name="Giant Eagle A" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <characteristics>
-                <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
-                <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277"/>
-                <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">0</characteristic>
-                <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
-                <characteristic name="Move" typeId="91b7-833e-fd8e-a620">6</characteristic>
-                <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
-                <characteristic name="Ki" typeId="3969-9568-a914-6854">1</characteristic>
-                <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
-                <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">0</characteristic>
-                <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">5 OOOOO</characteristic>
-                <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Large 50mm</characteristic>
-              </characteristics>
-            </profile>
-            <profile id="5cce-243d-9b32-e82f" name="Giant Eagle A" hidden="true" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
-              <modifiers>
-                <modifier type="set" field="hidden" value="false">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
+            <profile id="5cce-243d-9b32-e82f" name="Giant Eagle A" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
               <characteristics>
                 <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
                 <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277"/>
@@ -5408,14 +5121,7 @@ This model can only be recruited into a Warband that contains all three Blood Br
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0d5c-ec57-8215-eab7" type="max"/>
           </constraints>
           <profiles>
-            <profile id="f431-5975-339f-4801" name="Giant Eagle B" hidden="true" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
-              <modifiers>
-                <modifier type="set" field="hidden" value="false">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
+            <profile id="f431-5975-339f-4801" name="Giant Eagle B" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
               <characteristics>
                 <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
                 <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277"/>
@@ -5424,28 +5130,6 @@ This model can only be recruited into a Warband that contains all three Blood Br
                 <characteristic name="Move" typeId="91b7-833e-fd8e-a620">6</characteristic>
                 <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
                 <characteristic name="Ki" typeId="3969-9568-a914-6854">2</characteristic>
-                <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
-                <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">0</characteristic>
-                <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">5 OOOOO</characteristic>
-                <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Large 50mm</characteristic>
-              </characteristics>
-            </profile>
-            <profile id="2504-cb62-97f9-5563" name="Giant Eagle B" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <characteristics>
-                <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
-                <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277"/>
-                <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">0</characteristic>
-                <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
-                <characteristic name="Move" typeId="91b7-833e-fd8e-a620">6</characteristic>
-                <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
-                <characteristic name="Ki" typeId="3969-9568-a914-6854">1</characteristic>
                 <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
                 <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">0</characteristic>
                 <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">5 OOOOO</characteristic>
@@ -6083,11 +5767,6 @@ Note: there is currently no simple way to automatically check for this.</charact
             </conditionGroup>
           </conditionGroups>
         </modifier>
-        <modifier type="append" field="name" value="rev1">
-          <conditions>
-            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
-          </conditions>
-        </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="972a-2d9b-3e00-d725" type="max"/>
@@ -6201,39 +5880,11 @@ When this model uses a non- Ki Boost Ki Feat it gains a Control Marker after the
             </conditionGroup>
           </conditionGroups>
         </modifier>
-        <modifier type="append" field="name" value="rev1">
-          <conditions>
-            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
-          </conditions>
-        </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7b33-abda-80aa-3d08" type="max"/>
       </constraints>
       <infoGroups>
-        <infoGroup id="0b87-e309-8e4e-6302" name="Traits" hidden="false">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <profiles>
-            <profile id="06eb-1abe-18b6-0b3f" name="Lone Swordsman" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
-              <characteristics>
-                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Armour (2), Co-ordinated Attack [Lone Swordsmen], Group, Hatred [Tengu], Prowess [Melee](1)</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <infoLinks>
-            <infoLink id="f577-15a0-a4b5-2b3a" name="Armour" hidden="false" targetId="8615-1c63-2242-5746" type="rule"/>
-            <infoLink id="d027-252e-1203-32da" name="Co-ordinated Attack" hidden="false" targetId="2337-7bcc-c1f2-f2bd" type="rule"/>
-            <infoLink id="e142-8b04-bb84-781c" name="Group" hidden="false" targetId="4c02-03a1-ae7b-7821" type="rule"/>
-            <infoLink id="6b7c-7f49-d80f-7bdf" name="Hatred" hidden="false" targetId="7e1f-e126-b487-828b" type="rule"/>
-            <infoLink id="436b-84db-16e1-0d3e" name="Prowess " hidden="false" targetId="75ef-327a-cd08-a248" type="rule"/>
-          </infoLinks>
-        </infoGroup>
         <infoGroup id="ec95-2359-204e-c92c" name="Melee Weapon" hidden="false">
           <profiles>
             <profile id="0158-07d2-e267-d100" name="Katana" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
@@ -6254,31 +5905,7 @@ When this model uses a non- Ki Boost Ki Feat it gains a Control Marker after the
         </infoGroup>
         <infoGroup id="8ff6-b0f6-551b-93f6" name="Unique Effects" hidden="false">
           <profiles>
-            <profile id="d49a-d16b-0647-252a" name="Linked" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <characteristics>
-                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">If this model is Killed, instead put the model Elsewhere. In the Starting Phase, place any Lone Swordsman that are Elsewhere into play with no marked
-damage boxes, in BtB with a Lone Swordsmen model. If both Lone Swordsmen are Elsewhere at the same time, remove them from play.
-These models must always declare the same action unless one of them performs a Charge.
-When a Lone Swordsman would generate Ki Tokens (or otherwise gain Ki Tokens), instead place those Ki Tokens on this card.
-Either Lone Swordsman model may spend Ki Tokens from this card to pay for Ki Feats, Boosts or other effects.
-This model cannot have Enhancement cards Attached.</characteristic>
-              </characteristics>
-            </profile>
-            <profile id="7978-35e0-eacb-9eb5" name="Linked" hidden="true" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
-              <modifiers>
-                <modifier type="set" field="hidden" value="false">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
+            <profile id="7978-35e0-eacb-9eb5" name="Linked" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
               <characteristics>
                 <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">If this model is Killed, instead put the model Elsewhere.
 In the Starting Phase, Deploy any Lone Swordsmen that are Elsewhere into play with no marked Wound boxes, in BtB with a Lone Swordsman model.
@@ -6302,14 +5929,7 @@ This model cannot have Enhancement cards attached.</characteristic>
             <infoLink id="62ac-5124-415a-cb68" name="Practised Manoeuvres" hidden="false" targetId="9b3f-dcf3-388c-dc19" type="infoGroup"/>
           </infoLinks>
         </infoGroup>
-        <infoGroup id="2116-417e-9cc4-112f" name="Traits" hidden="true">
-          <modifiers>
-            <modifier type="set" field="hidden" value="false">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
-              </conditions>
-            </modifier>
-          </modifiers>
+        <infoGroup id="2116-417e-9cc4-112f" name="Traits" hidden="false">
           <profiles>
             <profile id="e4fd-9f53-c761-b96e" name="Lone Swordsman" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
               <characteristics>
@@ -6456,11 +6076,6 @@ This model cannot have Enhancement cards attached.</characteristic>
             </conditionGroup>
           </conditionGroups>
         </modifier>
-        <modifier type="append" field="name" value="rev1">
-          <conditions>
-            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
-          </conditions>
-        </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="46cd-d259-089c-75b4" type="max"/>
@@ -6540,36 +6155,7 @@ This model may use Fire Spin despite the Stupid trait.</characteristic>
             <infoLink id="58ad-605e-bd46-a54a" name="Grapple Attack" hidden="false" targetId="1b9a-c71d-0a30-8d0d" type="rule"/>
           </infoLinks>
         </infoGroup>
-        <infoGroup id="6572-a304-ab88-e3b6" name="Traits" hidden="false">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <profiles>
-            <profile id="e486-9b9d-fa48-50c8" name="Khendish" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
-              <characteristics>
-                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Intimidate, Strong, Stupid, Vengeance [Prefecture]</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <infoLinks>
-            <infoLink id="b8f8-d2dd-e061-bb39" name="Stupid" hidden="false" targetId="4251-8743-3f5e-8781" type="rule"/>
-            <infoLink id="45d8-9cc4-bc44-5b84" name="Vengeance" hidden="false" targetId="6779-0aac-2f51-f67e" type="rule"/>
-            <infoLink id="2a10-b236-4b33-0b7c" name="Intimidate" hidden="false" targetId="f57d-b137-75c8-7329" type="rule"/>
-            <infoLink id="2703-9073-bd1e-34c0" name="Strong" hidden="false" targetId="00b5-3637-d48a-807e" type="rule"/>
-          </infoLinks>
-        </infoGroup>
-        <infoGroup id="f508-3fda-f90f-9e5d" name="Traits" hidden="true">
-          <modifiers>
-            <modifier type="set" field="hidden" value="false">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
-              </conditions>
-            </modifier>
-          </modifiers>
+        <infoGroup id="f508-3fda-f90f-9e5d" name="Traits" hidden="false">
           <profiles>
             <profile id="846c-ae70-21f4-8bb8" name="Khendish" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
               <characteristics>
@@ -6768,11 +6354,6 @@ When Targeting a non-Soulless model, this model&apos;s Ranged Weapons gain Entan
             </conditionGroup>
           </conditionGroups>
         </modifier>
-        <modifier type="append" field="name" value="rev1">
-          <conditions>
-            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
-          </conditions>
-        </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="db8e-f5e0-f28a-b8aa" type="max"/>
@@ -6846,14 +6427,7 @@ While in a Melee Exchange with this model, Enemy models lose Rise and Last Stand
 This model may always recruit the Eagle Banner Enhancement - Equipment card.</characteristic>
               </characteristics>
             </profile>
-            <profile id="2406-e90d-845c-fa21" name="Still Loyal" hidden="true" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
-              <modifiers>
-                <modifier type="set" field="hidden" value="false">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
+            <profile id="2406-e90d-845c-fa21" name="Still Loyal" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
               <characteristics>
                 <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">This model may be recruited into Shiho Themes as if it were a Faction model.
 If recruited into a Shiho Theme, this model is considered a Shiho model and may have Shiho Faction Enhancements attached to it.</characteristic>
@@ -6941,11 +6515,6 @@ Requirement [Tru&apos;pah]</characteristic>
             </conditionGroup>
           </conditionGroups>
         </modifier>
-        <modifier type="append" field="name" value="rev1">
-          <conditions>
-            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
-          </conditions>
-        </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3e28-5433-9000-547b" type="max"/>
@@ -7004,26 +6573,7 @@ Requirement [Tru&apos;pah]</characteristic>
         </infoGroup>
         <infoGroup id="f773-da71-cd0a-18e6" name="Unique Effects" hidden="false">
           <profiles>
-            <profile id="7081-e6a7-1158-1d16" name="Unique Effects" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <characteristics>
-                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">This model may be included in The Imperial March Theme. If it is, this model begins the game with 2 Ki.</characteristic>
-              </characteristics>
-            </profile>
-            <profile id="b8fb-41f7-6bcc-ee88" name="Fates Entwined" hidden="true" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
-              <modifiers>
-                <modifier type="set" field="hidden" value="false">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
+            <profile id="b8fb-41f7-6bcc-ee88" name="Fates Entwined" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
               <characteristics>
                 <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">This model may be included in The Imperial March theme; if it is this model begins the game with 2 Ki.
 Other than Fates Entwined, this model cannot gain Ki except during Ki Generation.</characteristic>
@@ -8813,16 +8363,6 @@ Requirement [Kiyozumi Haiboku]</characteristic>
             </conditionGroup>
           </conditionGroups>
         </modifier>
-        <modifier type="set" field="a111-8656-5c05-7415" value="12.0">
-          <conditions>
-            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
-          </conditions>
-        </modifier>
-        <modifier type="append" field="name" value="rev1">
-          <conditions>
-            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
-          </conditions>
-        </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8f75-069e-4bac-d58c" type="max"/>
@@ -8907,7 +8447,7 @@ Requirement [Kiyozumi Haiboku]</characteristic>
         <entryLink id="f78c-f9cd-e205-f2f3" name="Enhancements" hidden="false" collective="false" import="true" targetId="f486-4498-03e3-c397" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
-        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="17.0"/>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="12.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="7728-72dd-3889-91b2" name="Kiyozumi Sadaka" hidden="false" collective="false" import="true" type="model">
@@ -9685,11 +9225,6 @@ If this model is Elsewhere, it may use this feat. Replace a Friendly Ronin Lesse
             </conditionGroup>
           </conditionGroups>
         </modifier>
-        <modifier type="append" field="name" value="rev1">
-          <conditions>
-            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
-          </conditions>
-        </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e293-f6a7-82c8-ddb0" type="max"/>
@@ -9697,38 +9232,7 @@ If this model is Elsewhere, it may use this feat. Replace a Friendly Ronin Lesse
         <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="e352-b46c-2234-5b83" type="min"/>
       </constraints>
       <profiles>
-        <profile id="4182-5385-bdbe-dd70" name="Spark of Life" hidden="false" typeId="bd15-7ead-9268-3576" typeName="Special Card (Ki Feat)">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <characteristics>
-            <characteristic name="Description" typeId="17eb-17e2-4df4-5c5d">• The Attached model gains one additional Ki Token during Ki generation.
-• If a Friendly model is Killed while within 6&quot;, you may return it to play with one wound box unmarked in BtB with the Attached model and discard this card.
-• Attached model can be recruited into the Descension faction.
-Requirement [Grey Pilgrim]
-• Attached model gains the following Ki Feat:</characteristic>
-            <characteristic name="Name" typeId="27c7-1649-f16e-8eaa">Shield of Light</characteristic>
-            <characteristic name="Cost" typeId="e410-b220-64e5-7953">X</characteristic>
-            <characteristic name="Timing" typeId="b9bf-562a-fe26-cb29">Instant</characteristic>
-            <characteristic name="Subject" typeId="47b8-f739-9d50-2e45">Pulse 3&quot;</characteristic>
-            <characteristic name="Limitation" typeId="870e-79e4-80ee-c0cc">Once Per Turn</characteristic>
-            <characteristic name="Ki Feat Description" typeId="3886-242b-fb70-5c88">When a Friendly Model within the Pulse is successfully attacked in a Melee Exchange, before the Damage Roll spend X Ki Tokens. X may not be greater than 3.
-For each Ki Token spent, prevent one Wound.
-The model making the attack gains a Stunned Marker.</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="6cf5-bfee-d2aa-1259" name="Spark of Life rev1" hidden="true" typeId="bd15-7ead-9268-3576" typeName="Special Card (Ki Feat)">
-          <modifiers>
-            <modifier type="set" field="hidden" value="false">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
-              </conditions>
-            </modifier>
-          </modifiers>
+        <profile id="6cf5-bfee-d2aa-1259" name="Spark of Life" hidden="false" typeId="bd15-7ead-9268-3576" typeName="Special Card (Ki Feat)">
           <characteristics>
             <characteristic name="Description" typeId="17eb-17e2-4df4-5c5d">• The Attached model gains one additional Ki Token during Ki generation.
 • If a Friendly model is Killed while within 6&quot;, you may return it to play with one wound box unmarked in BtB with the Attached model and discard this card.
@@ -10014,32 +9518,7 @@ This model can make only one Bird Strike Ranged Attack per turn.</characteristic
     </infoGroup>
     <infoGroup id="4d9e-7b65-bfd3-81e6" name="Swift Executor" hidden="false">
       <profiles>
-        <profile id="f4db-cb51-b13c-b5dc" name="Swift Executor" hidden="false" typeId="993a-e62a-7922-0ccb" typeName="Ki Feat">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <characteristics>
-            <characteristic name="Cost" typeId="a126-54d9-0a27-f4b6">2</characteristic>
-            <characteristic name="Timing" typeId="f8a8-8a3e-ef58-4c61">Simple</characteristic>
-            <characteristic name="Subject" typeId="4ac8-2bb1-0c84-f088">Personal</characteristic>
-            <characteristic name="Limitation" typeId="6fc9-5d13-2687-b2a5">No Movement, Not in BtB, Once Per Turn</characteristic>
-            <characteristic name="Description" typeId="f804-b969-00da-2123">This model loses Insignificant until the end of this activation.
-This Model makes a Walk then a Simple Scenario Action.
-This Scenario Action does not remove an Activation Counter.</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="4861-8edb-3d32-57d4" name="Swift Executor rev1" hidden="true" typeId="993a-e62a-7922-0ccb" typeName="Ki Feat">
-          <modifiers>
-            <modifier type="set" field="hidden" value="false">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
-              </conditions>
-            </modifier>
-          </modifiers>
+        <profile id="4861-8edb-3d32-57d4" name="Swift Executor" hidden="false" typeId="993a-e62a-7922-0ccb" typeName="Ki Feat">
           <characteristics>
             <characteristic name="Cost" typeId="a126-54d9-0a27-f4b6">2</characteristic>
             <characteristic name="Timing" typeId="f8a8-8a3e-ef58-4c61">Active</characteristic>
@@ -10158,30 +9637,7 @@ If there is no other legal Target then the Enemy model&apos;s action ends. Remov
     </infoGroup>
     <infoGroup id="8d63-5c23-75fd-cb4a" name="Sister&apos;s Succour" hidden="false">
       <profiles>
-        <profile id="17c0-194e-ea7b-c439" name="Sister&apos;s Succour" hidden="false" typeId="993a-e62a-7922-0ccb" typeName="Ki Feat">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <characteristics>
-            <characteristic name="Cost" typeId="a126-54d9-0a27-f4b6">2</characteristic>
-            <characteristic name="Timing" typeId="f8a8-8a3e-ef58-4c61">Instant</characteristic>
-            <characteristic name="Subject" typeId="4ac8-2bb1-0c84-f088">Personal</characteristic>
-            <characteristic name="Limitation" typeId="6fc9-5d13-2687-b2a5">Not in BtB</characteristic>
-            <characteristic name="Description" typeId="f804-b969-00da-2123">During an Enemy model&apos;s activation, when that model moves into BtB with another Princess model, this model can move up to its Move in inches to attempt to get into BtB with that model.</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="37b0-0f44-dc51-9762" name="Sister&apos;s Succour rev1" hidden="true" typeId="993a-e62a-7922-0ccb" typeName="Ki Feat">
-          <modifiers>
-            <modifier type="set" field="hidden" value="false">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
-              </conditions>
-            </modifier>
-          </modifiers>
+        <profile id="37b0-0f44-dc51-9762" name="Sister&apos;s Succour" hidden="false" typeId="993a-e62a-7922-0ccb" typeName="Ki Feat">
           <characteristics>
             <characteristic name="Cost" typeId="a126-54d9-0a27-f4b6">2</characteristic>
             <characteristic name="Timing" typeId="f8a8-8a3e-ef58-4c61">Instant</characteristic>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="b586-d588-5153-3d1d" name="Library-Feats" revision="22" battleScribeVersion="2.03" library="true" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="14" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="b586-d588-5153-3d1d" name="Library-Feats" revision="23" battleScribeVersion="2.03" library="true" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="14" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedInfoGroups>
     <infoGroup id="172c-d546-50a5-c020" name="Cobra Strike" hidden="false">
       <profiles>
@@ -302,7 +302,7 @@ This Warband may use this Ki Feat only once per turn.</characteristic>
         <profile id="8cd4-fd79-7f18-25c9" name="Mutation" hidden="false" typeId="993a-e62a-7922-0ccb" typeName="Ki Feat">
           <characteristics>
             <characteristic name="Cost" typeId="a126-54d9-0a27-f4b6">2</characteristic>
-            <characteristic name="Timing" typeId="f8a8-8a3e-ef58-4c61">Active</characteristic>
+            <characteristic name="Timing" typeId="f8a8-8a3e-ef58-4c61">Instant</characteristic>
             <characteristic name="Subject" typeId="4ac8-2bb1-0c84-f088">Personal</characteristic>
             <characteristic name="Limitation" typeId="6fc9-5d13-2687-b2a5">Once Per Turn</characteristic>
             <characteristic name="Description" typeId="f804-b969-00da-2123">This model gains one of the following until the End Phase:
@@ -476,13 +476,6 @@ This model may only use this Feat once per Melee Exchange.</characteristic>
     <infoGroup id="235f-b0c6-371b-3625" name="Snare" hidden="false">
       <profiles>
         <profile id="5eec-2296-8ffb-6e89" name="Snare" hidden="false" typeId="993a-e62a-7922-0ccb" typeName="Ki Feat">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="lessThan"/>
-              </conditions>
-            </modifier>
-          </modifiers>
           <characteristics>
             <characteristic name="Cost" typeId="a126-54d9-0a27-f4b6">2</characteristic>
             <characteristic name="Timing" typeId="f8a8-8a3e-ef58-4c61">Instant</characteristic>
@@ -495,35 +488,9 @@ If it fails the model may not Move; if it was declaring an action, it loses an A
 This is a Trap effect.</characteristic>
           </characteristics>
         </profile>
-        <profile id="4357-79de-c0f8-9ab4" name="Snare" hidden="false" typeId="993a-e62a-7922-0ccb" typeName="Ki Feat">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <characteristics>
-            <characteristic name="Cost" typeId="a126-54d9-0a27-f4b6">2</characteristic>
-            <characteristic name="Timing" typeId="f8a8-8a3e-ef58-4c61">Instant</characteristic>
-            <characteristic name="Subject" typeId="4ac8-2bb1-0c84-f088">Pulse 12&quot;</characteristic>
-            <characteristic name="Limitation" typeId="6fc9-5d13-2687-b2a5"/>
-            <characteristic name="Description" typeId="f804-b969-00da-2123">When an Enemy model without Cloudwalk or Intangible, and not in BtB with a Friendly model, declares a Move in the Pulse, that model must make a Move Challenge Test (X).
-X is 8 for models declaring a Run or Charge Action. X is 7 otherwise.
-If it fails the model may not Move; if it was declaring an action, it loses an Activation Counter and its action is considered resolved.</characteristic>
-          </characteristics>
-        </profile>
       </profiles>
       <infoLinks>
-        <infoLink id="d289-17e9-3aed-1ed7" name="Trap" hidden="false" targetId="6ef1-a206-e5d4-b3ab" type="rule">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="lessThan"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </infoLink>
+        <infoLink id="d289-17e9-3aed-1ed7" name="Trap" hidden="false" targetId="6ef1-a206-e5d4-b3ab" type="rule"/>
       </infoLinks>
     </infoGroup>
     <infoGroup id="2893-af1c-7a29-2411" name="Mountain Gale" hidden="false">
@@ -577,7 +544,7 @@ If it fails the model may not Move; if it was declaring an action, it loses an A
             <characteristic name="Timing" typeId="f8a8-8a3e-ef58-4c61">Active</characteristic>
             <characteristic name="Subject" typeId="4ac8-2bb1-0c84-f088">Personal</characteristic>
             <characteristic name="Limitation" typeId="6fc9-5d13-2687-b2a5"/>
-            <characteristic name="Description" typeId="f804-b969-00da-2123">This model&apos;s weapons gain Pierce (2) until the current action is resolved.</characteristic>
+            <characteristic name="Description" typeId="f804-b969-00da-2123">This model&apos;s Melee Weapons gain Pierce (2) until the current action is resolved.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -1609,30 +1576,7 @@ If unable to perform a Walk Action, it may activate without restriction.</charac
     </infoGroup>
     <infoGroup id="0686-8f68-873c-61d5" name="Martyr" hidden="false">
       <profiles>
-        <profile id="e7dd-3004-c30a-3d88" name="Martyr" hidden="false" typeId="993a-e62a-7922-0ccb" typeName="Ki Feat">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <characteristics>
-            <characteristic name="Cost" typeId="a126-54d9-0a27-f4b6">X+1</characteristic>
-            <characteristic name="Timing" typeId="f8a8-8a3e-ef58-4c61">Simple</characteristic>
-            <characteristic name="Subject" typeId="4ac8-2bb1-0c84-f088">Pulse X&quot;</characteristic>
-            <characteristic name="Limitation" typeId="6fc9-5d13-2687-b2a5">Not in BtB</characteristic>
-            <characteristic name="Description" typeId="f804-b969-00da-2123">Move X non-Prone, non-Held, non-Reloading State Markers from a Friendly model to this model.</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="15ef-f412-d151-8c02" name="Martyr" hidden="true" typeId="993a-e62a-7922-0ccb" typeName="Ki Feat">
-          <modifiers>
-            <modifier type="set" field="hidden" value="false">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
-              </conditions>
-            </modifier>
-          </modifiers>
+        <profile id="15ef-f412-d151-8c02" name="Martyr" hidden="false" typeId="993a-e62a-7922-0ccb" typeName="Ki Feat">
           <characteristics>
             <characteristic name="Cost" typeId="a126-54d9-0a27-f4b6">X+1</characteristic>
             <characteristic name="Timing" typeId="f8a8-8a3e-ef58-4c61">Simple</characteristic>
@@ -1756,31 +1700,7 @@ This model then makes a Ranged Attack against each other model (Friendly or Enem
     </infoGroup>
     <infoGroup id="d7e4-efaf-4188-d483" name="Spirit Absolution" hidden="false">
       <profiles>
-        <profile id="095e-1722-a3e5-bd66" name="Spirit Absolution" hidden="false" typeId="993a-e62a-7922-0ccb" typeName="Ki Feat">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <characteristics>
-            <characteristic name="Cost" typeId="a126-54d9-0a27-f4b6">2</characteristic>
-            <characteristic name="Timing" typeId="f8a8-8a3e-ef58-4c61">Simple</characteristic>
-            <characteristic name="Subject" typeId="4ac8-2bb1-0c84-f088">Target 6&quot;</characteristic>
-            <characteristic name="Limitation" typeId="6fc9-5d13-2687-b2a5">Not in BtB</characteristic>
-            <characteristic name="Description" typeId="f804-b969-00da-2123">This model loses Soulless, Slow, Tough, and Rise. This effect expires in the End Phase.
-Target model not in BtB with a Friendly model gains an Impetous Marker, must declare a Walk action as its next activation, and must move directly towards this model with its full Move Statistic, changing facing so that this model is in LoS. If unable to perform a Walk action, it may activate without restriction.</characteristic>
-          </characteristics>
-        </profile>
         <profile id="4cb0-d07c-ca34-3819" name="Spirit Absolution" hidden="false" typeId="993a-e62a-7922-0ccb" typeName="Ki Feat">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="lessThan"/>
-              </conditions>
-            </modifier>
-          </modifiers>
           <characteristics>
             <characteristic name="Cost" typeId="a126-54d9-0a27-f4b6">2</characteristic>
             <characteristic name="Timing" typeId="f8a8-8a3e-ef58-4c61">Simple</characteristic>
@@ -1847,30 +1767,7 @@ If another model is contacted by models being moved by this feat, it must make a
     </infoGroup>
     <infoGroup id="d16b-dcc5-fbd8-273c" name="Flame Whip" hidden="false">
       <profiles>
-        <profile id="df33-faf3-5931-0171" name="Flame Whip" hidden="false" typeId="993a-e62a-7922-0ccb" typeName="Ki Feat">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <characteristics>
-            <characteristic name="Cost" typeId="a126-54d9-0a27-f4b6">2</characteristic>
-            <characteristic name="Timing" typeId="f8a8-8a3e-ef58-4c61">Instant</characteristic>
-            <characteristic name="Subject" typeId="4ac8-2bb1-0c84-f088">Target BtB</characteristic>
-            <characteristic name="Limitation" typeId="6fc9-5d13-2687-b2a5"/>
-            <characteristic name="Description" typeId="f804-b969-00da-2123">During an Enemy model&apos;s Activation in which it enters BtB with this model, that Enemy model gains a Fire (2) Marker.</characteristic>
-          </characteristics>
-        </profile>
         <profile id="75aa-e145-4993-571f" name="Flame Whip" hidden="false" typeId="993a-e62a-7922-0ccb" typeName="Ki Feat">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="lessThan"/>
-              </conditions>
-            </modifier>
-          </modifiers>
           <characteristics>
             <characteristic name="Cost" typeId="a126-54d9-0a27-f4b6">2</characteristic>
             <characteristic name="Timing" typeId="f8a8-8a3e-ef58-4c61">Instant</characteristic>
@@ -1929,23 +1826,7 @@ A model may only gain one Fire Marker per activation as a result of this Ki Feat
     </infoGroup>
     <infoGroup id="8b08-d664-5dd6-3f16" name="Second Wind" hidden="false">
       <profiles>
-        <profile id="5f2e-750b-5e1e-c65e" name="Second Wind" hidden="false" typeId="993a-e62a-7922-0ccb" typeName="Ki Feat">
-          <characteristics>
-            <characteristic name="Cost" typeId="a126-54d9-0a27-f4b6">1</characteristic>
-            <characteristic name="Timing" typeId="f8a8-8a3e-ef58-4c61">Active</characteristic>
-            <characteristic name="Subject" typeId="4ac8-2bb1-0c84-f088">Personal</characteristic>
-            <characteristic name="Limitation" typeId="6fc9-5d13-2687-b2a5"/>
-            <characteristic name="Description" typeId="f804-b969-00da-2123">At the end of an activation in which this model declared a Charge action and caused Wounds in a Melee Exchange it gains an Activation Counter.</characteristic>
-          </characteristics>
-        </profile>
         <profile id="0f92-c1f0-e904-4178" name="Second Wind" hidden="false" typeId="993a-e62a-7922-0ccb" typeName="Ki Feat">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="lessThan"/>
-              </conditions>
-            </modifier>
-          </modifiers>
           <characteristics>
             <characteristic name="Cost" typeId="a126-54d9-0a27-f4b6">1</characteristic>
             <characteristic name="Timing" typeId="f8a8-8a3e-ef58-4c61">Active</characteristic>
@@ -2029,30 +1910,7 @@ This model gains a Reload Marker.
     </infoGroup>
     <infoGroup id="f9f6-70d7-5ef3-f711" name="Hold the Line!" hidden="false">
       <profiles>
-        <profile id="8188-4c3c-cf02-6412" name="Hold the Line!" hidden="false" typeId="993a-e62a-7922-0ccb" typeName="Ki Feat">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <characteristics>
-            <characteristic name="Cost" typeId="a126-54d9-0a27-f4b6">1</characteristic>
-            <characteristic name="Timing" typeId="f8a8-8a3e-ef58-4c61">Instant</characteristic>
-            <characteristic name="Subject" typeId="4ac8-2bb1-0c84-f088">Personal</characteristic>
-            <characteristic name="Limitation" typeId="6fc9-5d13-2687-b2a5">Once Per Turn</characteristic>
-            <characteristic name="Description" typeId="f804-b969-00da-2123">During an Enemy model’s activation, when that model moves into BtB with another Friendly Ashigaru model,  this model can move up to its Move in inches to attempt to get into BtB with that Enemy model.</characteristic>
-          </characteristics>
-        </profile>
         <profile id="16ec-3434-d76f-6884" name="Hold the Line!" hidden="false" typeId="993a-e62a-7922-0ccb" typeName="Ki Feat">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="lessThan"/>
-              </conditions>
-            </modifier>
-          </modifiers>
           <characteristics>
             <characteristic name="Cost" typeId="a126-54d9-0a27-f4b6">1</characteristic>
             <characteristic name="Timing" typeId="f8a8-8a3e-ef58-4c61">Instant</characteristic>
@@ -2066,37 +1924,7 @@ If it is not possible to put this model in BtB with the Enemy model this feat ca
     </infoGroup>
     <infoGroup id="5d86-b783-7f8a-6c13" name="Uncloak" hidden="false">
       <profiles>
-        <profile id="243b-5293-2412-daf6" name="Uncloak" hidden="false" typeId="993a-e62a-7922-0ccb" typeName="Ki Feat">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <characteristics>
-            <characteristic name="Cost" typeId="a126-54d9-0a27-f4b6">2</characteristic>
-            <characteristic name="Timing" typeId="f8a8-8a3e-ef58-4c61">Instant</characteristic>
-            <characteristic name="Subject" typeId="4ac8-2bb1-0c84-f088">Personal</characteristic>
-            <characteristic name="Limitation" typeId="6fc9-5d13-2687-b2a5"/>
-            <characteristic name="Description" typeId="f804-b969-00da-2123">Use this feat...
-• in the Starting Phase or
-• when this model is Targeted by an Enemy effect or
-• an Enemy model declares an action or resolves an effect that will bring it into BtB with this model
-...while this model is undamaged.
-Replace this model with a Loyal Samurai you own that is currently Elsewhere, and remove this model from play.
-If the Enemy model initiated a Melee Exchange, it is now Surprised.
-Transfer State Markers and Activation Counters to the Samurai&apos;s profile card.</characteristic>
-          </characteristics>
-        </profile>
         <profile id="fdf6-9f2a-02a6-8d89" name="Uncloak" hidden="false" typeId="993a-e62a-7922-0ccb" typeName="Ki Feat">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="lessThan"/>
-              </conditions>
-            </modifier>
-          </modifiers>
           <characteristics>
             <characteristic name="Cost" typeId="a126-54d9-0a27-f4b6">2</characteristic>
             <characteristic name="Timing" typeId="f8a8-8a3e-ef58-4c61">Instant</characteristic>
@@ -2118,32 +1946,7 @@ Transfer State Markers, Activation Counters and any tokens to the Samurai’s pr
     </infoGroup>
     <infoGroup id="1e29-6c96-7f87-8500" name="Deference" hidden="false">
       <profiles>
-        <profile id="4aaf-99bd-f215-0f5b" name="Deference" hidden="false" typeId="993a-e62a-7922-0ccb" typeName="Ki Feat">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <characteristics>
-            <characteristic name="Cost" typeId="a126-54d9-0a27-f4b6">1</characteristic>
-            <characteristic name="Timing" typeId="f8a8-8a3e-ef58-4c61">Instant</characteristic>
-            <characteristic name="Subject" typeId="4ac8-2bb1-0c84-f088">Personal</characteristic>
-            <characteristic name="Limitation" typeId="6fc9-5d13-2687-b2a5"/>
-            <characteristic name="Description" typeId="f804-b969-00da-2123">When an Enemy non-Samurai, non-Ashigaru model declares an action which will either bring it into BtB with this model, or Targets this model with a Ranged Attack or Ki Feat, it must make a Challenge (5) Ki Test.
-If the Enemy model is successful resolve the Action as normal.
-If unsuccessful its activation ends before any movement and it removes an Activation Counter.</characteristic>
-          </characteristics>
-        </profile>
         <profile id="94f1-6fd5-e0cb-c6ef" name="Deference" hidden="false" typeId="993a-e62a-7922-0ccb" typeName="Ki Feat">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="lessThan"/>
-              </conditions>
-            </modifier>
-          </modifiers>
           <characteristics>
             <characteristic name="Cost" typeId="a126-54d9-0a27-f4b6">1</characteristic>
             <characteristic name="Timing" typeId="f8a8-8a3e-ef58-4c61">Instant</characteristic>
@@ -2158,15 +1961,7 @@ This is a Trap effect.</characteristic>
         </profile>
       </profiles>
       <infoLinks>
-        <infoLink id="5413-d748-0792-693f" name="Trap" hidden="false" targetId="6ef1-a206-e5d4-b3ab" type="rule">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="lessThan"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </infoLink>
+        <infoLink id="5413-d748-0792-693f" name="Trap" hidden="false" targetId="6ef1-a206-e5d4-b3ab" type="rule"/>
       </infoLinks>
     </infoGroup>
     <infoGroup id="56d6-c6b9-8fda-f12d" name="Keirō" hidden="false">
@@ -2466,30 +2261,7 @@ Then Summon and Deploy an available non-Unique, non-Rinsho, Horde Bakemono in Bt
     </infoGroup>
     <infoGroup id="641b-dc3f-5da6-5d76" name="Sound the Advance!" hidden="false">
       <profiles>
-        <profile id="0c07-060b-8583-00a8" name="Sound the Advance!" hidden="false" typeId="993a-e62a-7922-0ccb" typeName="Ki Feat">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <characteristics>
-            <characteristic name="Cost" typeId="a126-54d9-0a27-f4b6">3</characteristic>
-            <characteristic name="Timing" typeId="f8a8-8a3e-ef58-4c61">Simple</characteristic>
-            <characteristic name="Subject" typeId="4ac8-2bb1-0c84-f088">Pulse 8&quot;</characteristic>
-            <characteristic name="Limitation" typeId="6fc9-5d13-2687-b2a5">Not in BtB, Once Per Game</characteristic>
-            <characteristic name="Description" typeId="f804-b969-00da-2123">Friendly Loyal models in the Pulse gain Fear (6) until the End Phase.</characteristic>
-          </characteristics>
-        </profile>
         <profile id="b243-6187-3c6a-9766" name="Sound the Advance!" hidden="false" typeId="993a-e62a-7922-0ccb" typeName="Ki Feat">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="lessThan"/>
-              </conditions>
-            </modifier>
-          </modifiers>
           <characteristics>
             <characteristic name="Cost" typeId="a126-54d9-0a27-f4b6">2</characteristic>
             <characteristic name="Timing" typeId="f8a8-8a3e-ef58-4c61">Simple</characteristic>
@@ -2522,30 +2294,7 @@ This model automatically wins Tie Breaks on Tactical Tests until the End Phase.<
     </infoGroup>
     <infoGroup id="7fb1-4a96-217e-1e82" name="Quick March" hidden="false">
       <profiles>
-        <profile id="d35b-541a-3732-09ee" name="Quick March" hidden="false" typeId="993a-e62a-7922-0ccb" typeName="Ki Feat">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <characteristics>
-            <characteristic name="Cost" typeId="a126-54d9-0a27-f4b6">3</characteristic>
-            <characteristic name="Timing" typeId="f8a8-8a3e-ef58-4c61">Simple</characteristic>
-            <characteristic name="Subject" typeId="4ac8-2bb1-0c84-f088">Aura 4&quot;</characteristic>
-            <characteristic name="Limitation" typeId="6fc9-5d13-2687-b2a5">Not in BtB, Once Per Game</characteristic>
-            <characteristic name="Description" typeId="f804-b969-00da-2123">All Friendly Ashigaru within the Aura ignore the melee penalty for having Run.</characteristic>
-          </characteristics>
-        </profile>
         <profile id="2c85-1c5e-a6fe-d25c" name="Quick March" hidden="false" typeId="993a-e62a-7922-0ccb" typeName="Ki Feat">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="lessThan"/>
-              </conditions>
-            </modifier>
-          </modifiers>
           <characteristics>
             <characteristic name="Cost" typeId="a126-54d9-0a27-f4b6">1</characteristic>
             <characteristic name="Timing" typeId="f8a8-8a3e-ef58-4c61">Simple</characteristic>
@@ -2854,31 +2603,7 @@ The additional dice may be Attack or Defence and the removed dice must be of the
     </infoGroup>
     <infoGroup id="110f-4b8c-3fba-6118" name="Tidal Flow" hidden="false">
       <profiles>
-        <profile id="f246-5c7b-ba86-e526" name="Tidal Flow" hidden="false" typeId="993a-e62a-7922-0ccb" typeName="Ki Feat">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <characteristics>
-            <characteristic name="Cost" typeId="a126-54d9-0a27-f4b6">2</characteristic>
-            <characteristic name="Timing" typeId="f8a8-8a3e-ef58-4c61">Active</characteristic>
-            <characteristic name="Subject" typeId="4ac8-2bb1-0c84-f088">Personal</characteristic>
-            <characteristic name="Limitation" typeId="6fc9-5d13-2687-b2a5"/>
-            <characteristic name="Description" typeId="f804-b969-00da-2123">Use this Ki Feat at the start of any activation, Move this model up to 4&quot; toward an Enemy table edge.
-At the end of this activation, Move this model 4&quot; directly toward the opposite table edge.</characteristic>
-          </characteristics>
-        </profile>
         <profile id="34c0-8e74-5645-ca43" name="Tidal Flow" hidden="false" typeId="993a-e62a-7922-0ccb" typeName="Ki Feat">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="lessThan"/>
-              </conditions>
-            </modifier>
-          </modifiers>
           <characteristics>
             <characteristic name="Cost" typeId="a126-54d9-0a27-f4b6">2</characteristic>
             <characteristic name="Timing" typeId="f8a8-8a3e-ef58-4c61">Active</characteristic>
@@ -3391,7 +3116,7 @@ If it fails, the Target is Killed.</characteristic>
             <characteristic name="Timing" typeId="f8a8-8a3e-ef58-4c61">Active</characteristic>
             <characteristic name="Subject" typeId="4ac8-2bb1-0c84-f088">Personal</characteristic>
             <characteristic name="Limitation" typeId="6fc9-5d13-2687-b2a5"/>
-            <characteristic name="Description" typeId="f804-b969-00da-2123">This model&apos;s Ranged Weapon gains Brutal (1) and a Reload Marker.</characteristic>
+            <characteristic name="Description" typeId="f804-b969-00da-2123">This model&apos;s Ranged Weapon gains Brutal (1) and Reload (+1).</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -3442,32 +3167,7 @@ Models cannot be pplaced into an Enemy ZoC.</characteristic>
     </infoGroup>
     <infoGroup id="b1bb-61f2-a7cc-65f7" name="Slipstream" hidden="false">
       <profiles>
-        <profile id="d946-1484-4018-41d4" name="Slipstream" hidden="false" typeId="993a-e62a-7922-0ccb" typeName="Ki Feat">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <characteristics>
-            <characteristic name="Cost" typeId="a126-54d9-0a27-f4b6">2</characteristic>
-            <characteristic name="Timing" typeId="f8a8-8a3e-ef58-4c61">Active</characteristic>
-            <characteristic name="Subject" typeId="4ac8-2bb1-0c84-f088">Personal</characteristic>
-            <characteristic name="Limitation" typeId="6fc9-5d13-2687-b2a5">Not in BtB, Once Per Turn</characteristic>
-            <characteristic name="Description" typeId="f804-b969-00da-2123">When this model Runs this activation, it may Move through other Friendly models.
-It may not end its Move occupying the same area as an Impassable Terrain element or another model.
-Any model moved through can Move 1&quot; directly towards this model&apos;s final position.</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="b1ed-0b3a-5fc0-78af" name="Slipstream rev1" hidden="true" typeId="993a-e62a-7922-0ccb" typeName="Ki Feat">
-          <modifiers>
-            <modifier type="set" field="hidden" value="false">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
-              </conditions>
-            </modifier>
-          </modifiers>
+        <profile id="b1ed-0b3a-5fc0-78af" name="Slipstream" hidden="false" typeId="993a-e62a-7922-0ccb" typeName="Ki Feat">
           <characteristics>
             <characteristic name="Cost" typeId="a126-54d9-0a27-f4b6">2</characteristic>
             <characteristic name="Timing" typeId="f8a8-8a3e-ef58-4c61">Active</characteristic>
@@ -3482,30 +3182,7 @@ Any model moved through can Move 1&quot;.</characteristic>
     </infoGroup>
     <infoGroup id="4123-28a0-3fba-52fb" name="Voice of the Wind" hidden="false">
       <profiles>
-        <profile id="649b-5fe2-5bfa-50f8" name="Voice of the Wind" hidden="false" typeId="993a-e62a-7922-0ccb" typeName="Ki Feat">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <characteristics>
-            <characteristic name="Cost" typeId="a126-54d9-0a27-f4b6">2</characteristic>
-            <characteristic name="Timing" typeId="f8a8-8a3e-ef58-4c61">Active</characteristic>
-            <characteristic name="Subject" typeId="4ac8-2bb1-0c84-f088">Target 6&quot;</characteristic>
-            <characteristic name="Limitation" typeId="6fc9-5d13-2687-b2a5"/>
-            <characteristic name="Description" typeId="f804-b969-00da-2123">Place Target Model within 1&quot; of its current location. If the Target model is an Enemy, you must first succeed in an Opposed Ki Test with the Target model.</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="eb6c-491a-5806-f591" name="Voice of the Wind rev1" hidden="true" typeId="993a-e62a-7922-0ccb" typeName="Ki Feat">
-          <modifiers>
-            <modifier type="set" field="hidden" value="false">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
-              </conditions>
-            </modifier>
-          </modifiers>
+        <profile id="eb6c-491a-5806-f591" name="Voice of the Wind" hidden="false" typeId="993a-e62a-7922-0ccb" typeName="Ki Feat">
           <characteristics>
             <characteristic name="Cost" typeId="a126-54d9-0a27-f4b6">2</characteristic>
             <characteristic name="Timing" typeId="f8a8-8a3e-ef58-4c61">Active</characteristic>
@@ -3685,6 +3362,23 @@ Remove the Frightened Marker in the End Phase.</characteristic>
       </profiles>
       <infoLinks>
         <infoLink id="7ba5-b144-02e7-b471" name="Believer" hidden="false" targetId="d41e-8717-2e5c-38db" type="rule"/>
+      </infoLinks>
+    </infoGroup>
+    <infoGroup id="78ce-1540-d8ab-0db4" name="Rage" hidden="false">
+      <profiles>
+        <profile id="ee7d-664f-f109-2a90" name="Rage" hidden="false" typeId="993a-e62a-7922-0ccb" typeName="Ki Feat">
+          <characteristics>
+            <characteristic name="Cost" typeId="a126-54d9-0a27-f4b6">1</characteristic>
+            <characteristic name="Timing" typeId="f8a8-8a3e-ef58-4c61">Instant</characteristic>
+            <characteristic name="Subject" typeId="4ac8-2bb1-0c84-f088">Personal</characteristic>
+            <characteristic name="Limitation" typeId="6fc9-5d13-2687-b2a5">Once Per Turn</characteristic>
+            <characteristic name="Description" typeId="f804-b969-00da-2123">Use this Ki Feat during the Starting Phase.
+This model gains a Berserk Marker and gains Strong until the End Phase.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="9a97-16b5-20b9-75c7" name="Strong" hidden="false" targetId="00b5-3637-d48a-807e" type="rule"/>
       </infoLinks>
     </infoGroup>
   </sharedInfoGroups>

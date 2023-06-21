@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="2276-2df6-78a7-841d" name="Shiho Clan" revision="23" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="14" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="2276-2df6-78a7-841d" name="Shiho Clan" revision="24" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="14" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="7fa5-7ef0-59c5-f657" name="Tanaka" hidden="false"/>
   </categoryEntries>
@@ -767,42 +767,12 @@ This model gains Fearless when declaring actions Targeting or Selecting a model 
             <infoLink id="78ce-37a7-6718-a716" name="Umbrella Block" hidden="false" targetId="0005-2a79-5638-daa2" type="infoGroup"/>
           </infoLinks>
         </infoGroup>
-        <infoGroup id="e5ed-eb5f-b552-d851" name="Melee Weapon" hidden="false">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <profiles>
-            <profile id="1185-341b-739e-3e7c" name="No-Dachi" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
-              <characteristics>
-                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+2</characteristic>
-                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e"/>
-                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Powerful Attack (1), Sidestep Defence (0)</characteristic>
-                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
-              </characteristics>
-            </profile>
-          </profiles>
-          <infoLinks>
-            <infoLink id="4f4c-1867-36b6-0fdd" name="Powerful Attack" hidden="false" targetId="d56a-058d-95d9-5b60" type="rule"/>
-            <infoLink id="eded-2114-7f79-d396" name="Sidestep Defence " hidden="false" targetId="753c-6c3b-64d7-203c" type="rule"/>
-          </infoLinks>
-        </infoGroup>
         <infoGroup id="34e4-f8b4-bf43-9c69" name="Unique Effects" hidden="false">
           <infoLinks>
             <infoLink id="35db-265b-4e5d-f42d" name="Killing Blow" hidden="false" targetId="6374-b4ae-6cc5-4908" type="profile"/>
           </infoLinks>
         </infoGroup>
         <infoGroup id="30e7-d199-d5af-da5a" name="Melee Weapon" hidden="false">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="lessThan"/>
-              </conditions>
-            </modifier>
-          </modifiers>
           <profiles>
             <profile id="5778-b1ce-a551-514e" name="No-Dachi" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
               <characteristics>
@@ -1680,31 +1650,7 @@ When a model performs a Wait Action to Destroy this Terrain, it need not spend 2
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d444-ced6-1b95-5a4c" type="max"/>
       </constraints>
       <profiles>
-        <profile id="1174-7d95-1b39-62c7" name="The Shiho Return" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <characteristics>
-            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">Friendly models that are Elsewhere are ignored when calculating Pass Tokens.
-• During the first turn of the game, models in this Warband gain Endurance and do not suffer the melee penalty for having Run.
-• Once per game, in a Starting Phase when a model is Deployed using the Flank rules, each Enemy model must perform a Ki Challenge Test(5). If it fails, you may change that model&apos;s facing.
-
-Permitted [Samurai, Ronin Kami, Eagles]
-</characteristic>
-          </characteristics>
-        </profile>
         <profile id="1fbc-cec3-f42d-f624" name="The Shiho Return" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="lessThan"/>
-              </conditions>
-            </modifier>
-          </modifiers>
           <characteristics>
             <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">Friendly models that are Elsewhere are ignored when calculating Pass Tokens.
 • During the first turn of the game, models in this Warband gain Endurance and do not suffer the melee penalty for having Run.
@@ -1748,30 +1694,7 @@ Permitted [Samurai, Eagles, Ronin Kami, Ronin Eagles]</characteristic>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a940-728a-a7fb-0c6f" type="max"/>
       </constraints>
       <profiles>
-        <profile id="2b96-d6c3-af2e-b2bd" name="The Black Eagle&apos;s Coalition" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <characteristics>
-            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">• Loyal models gain Leadership [Ronin] (1/6&quot;).
-• Ronin models gain Scout (1/1&quot;).
-
-Permitted [Shiho Faction models, Ronin models]
-Exclusion [Ronin Special Cards]</characteristic>
-          </characteristics>
-        </profile>
         <profile id="791e-44e1-9871-386a" name="The Black Eagle&apos;s Coalition" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="lessThan"/>
-              </conditions>
-            </modifier>
-          </modifiers>
           <characteristics>
             <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">• Loyal models gain Leadership [Ronin] (1/6&quot;).
 • Ronin models gain Scout (1/1&quot;).
@@ -2748,25 +2671,6 @@ This model&apos;s Dai Kyu Ranged Weapon gains Reload (+1) and this model does no
         </profile>
       </profiles>
       <infoGroups>
-        <infoGroup id="cb61-3fd6-35e8-4e70" name="Traits" hidden="false">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <profiles>
-            <profile id="06f9-96f3-aa24-1ffc" name="Yoshitaka" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
-              <characteristics>
-                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Vengeance [Takashi]</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <infoLinks>
-            <infoLink id="cf6a-891d-78e8-23d9" name="Vengeance" hidden="false" targetId="6779-0aac-2f51-f67e" type="rule"/>
-          </infoLinks>
-        </infoGroup>
         <infoGroup id="fe25-f937-6c32-42cc" name="Ki Feats" hidden="false">
           <infoLinks>
             <infoLink id="94f2-fd1c-93ed-4374" name="Quick March" hidden="false" targetId="7fb1-4a96-217e-1e82" type="infoGroup"/>
@@ -2786,13 +2690,6 @@ This model&apos;s Dai Kyu Ranged Weapon gains Reload (+1) and this model does no
           </profiles>
         </infoGroup>
         <infoGroup id="35c6-f111-1d50-c776" name="Traits" hidden="false">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="lessThan"/>
-              </conditions>
-            </modifier>
-          </modifiers>
           <profiles>
             <profile id="09e4-3d90-d3a0-3e0a" name="Yoshitaka" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
               <characteristics>
@@ -2806,13 +2703,6 @@ This model&apos;s Dai Kyu Ranged Weapon gains Reload (+1) and this model does no
           </infoLinks>
         </infoGroup>
         <infoGroup id="d0bd-4252-9df3-8d32" name="Unique Effects" hidden="false">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="lessThan"/>
-              </conditions>
-            </modifier>
-          </modifiers>
           <profiles>
             <profile id="760b-afe0-fd19-2d88" name="Unique Effects" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
               <characteristics>
@@ -3631,13 +3521,6 @@ Requirement [Loyal &amp; Samurai]</characteristic>
           </constraints>
           <profiles>
             <profile id="7ed9-227b-972d-36aa" name="Lord of the Jwar Isles" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="lessThan"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
               <characteristics>
                 <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">When an Enemy model that is not a Samurai or Ashigaru declares an action which will either...
 • bring it into BtB with the Attached model or
@@ -3646,25 +3529,6 @@ Requirement [Loyal &amp; Samurai]</characteristic>
 If the Enemy model is successful resolve the Action as normal.
 lf unsuccessful its activation ends before any movement and it removes an Activation Counter, then discard this card.
 This is a Trap effect.
-
-Requirement [Loyal &amp; Samurai]</characteristic>
-              </characteristics>
-            </profile>
-            <profile id="e537-a4c4-d0c1-98fb" name="Lord of the Jwar Isles" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <characteristics>
-                <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">When an Enemy non-Samurai, non-Ashigaru model declares an action which will either...
-• bring it into BtB with the Attached model or
-• Targets the Attached model with a Ranged Attack or Ki Feat
-...it must make a Challenge (5) Ki Test.
-If the Enemy model is successful resolve the Action as normal.
-lf unsuccessful its activation ends before any movement and it removes an Activation Counter, then discard this card.
 
 Requirement [Loyal &amp; Samurai]</characteristic>
               </characteristics>
@@ -4279,35 +4143,10 @@ Requirement [Loyal &amp; Samurai]
               </constraints>
               <profiles>
                 <profile id="1589-31c0-ac38-c6fd" name="Shiho Clan Armour" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
-                  <modifiers>
-                    <modifier type="set" field="hidden" value="true">
-                      <conditions>
-                        <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="lessThan"/>
-                      </conditions>
-                    </modifier>
-                  </modifiers>
                   <characteristics>
                     <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">• Attached model gains Armour (2).
 • Enemy Damage Rolls on the Attached model are ignored if the individual dice values of the Damage Roll are the same number.
 • Attached model provides Cover as if it were a terrain element.
-• If the Attached model is Targeted by a Ranged Attack, the Enemy model gains double Reload Markers (if any).
-• The Attached model loses Flank, Booted and cannot be used to replace a model with the Uncloak Ki Feat.
-
-Requirement [Loyal &amp; Samurai]</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="cca6-333b-5564-0914" name="Shiho Clan Armour" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
-                  <modifiers>
-                    <modifier type="set" field="hidden" value="true">
-                      <conditions>
-                        <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="685b-176a-7b13-c5c1" type="atLeast"/>
-                      </conditions>
-                    </modifier>
-                  </modifiers>
-                  <characteristics>
-                    <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">• Attached model gains Armour (2).
-• Enemy Damage Rolls on the Attached model are ignored if the individual dice values of the Damage Roll are the same number.
-• Attached model provides Cover to Friendly models as if it were a terrain element.
 • If the Attached model is Targeted by a Ranged Attack, the Enemy model gains double Reload Markers (if any).
 • The Attached model loses Flank, Booted and cannot be used to replace a model with the Uncloak Ki Feat.
 
