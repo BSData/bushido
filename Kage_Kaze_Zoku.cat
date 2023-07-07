@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="b4d7-0e2a-728f-20cf" name="Kage Kaze Zoku" revision="24" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="14" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="b4d7-0e2a-728f-20cf" name="Kage Kaze Zoku" revision="25" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="15" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="33d5-3364-f1d4-a94c" name="Lockdown" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -4072,9 +4072,9 @@ Requirement [House Long Shadow lheme]</characteristic>
       <modifiers>
         <modifier type="set" field="hidden" value="false">
           <conditionGroups>
-            <conditionGroup type="or">
+            <conditionGroup type="and">
               <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="2df8-d6d5-06f1-08db" type="lessThan"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="cfa1-27b2-4dc3-ce16" type="lessThan"/>
                 <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4c67-f393-7598-a82d" type="lessThan"/>
               </conditions>
             </conditionGroup>
@@ -4086,9 +4086,9 @@ Requirement [House Long Shadow lheme]</characteristic>
       <modifiers>
         <modifier type="set" field="hidden" value="false">
           <conditionGroups>
-            <conditionGroup type="or">
+            <conditionGroup type="and">
               <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="2df8-d6d5-06f1-08db" type="lessThan"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="cfa1-27b2-4dc3-ce16" type="lessThan"/>
                 <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4c67-f393-7598-a82d" type="lessThan"/>
               </conditions>
             </conditionGroup>
@@ -4099,7 +4099,7 @@ Requirement [House Long Shadow lheme]</characteristic>
         <entryLink id="726f-6791-4034-b89b" name="Enhancements" hidden="false" collective="false" import="true" targetId="b18f-16ea-bed1-4709" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
-    <entryLink id="945a-04e5-f976-96e9" name="Two Lone Swordsmen" hidden="false" collective="false" import="true" targetId="29e4-7f5e-593d-2445" type="selectionEntry">
+    <entryLink id="945a-04e5-f976-96e9" name="Two Lone Swordsmen" hidden="false" collective="false" import="true" targetId="c5be-e9e5-ee8d-39de" type="selectionEntry">
       <modifiers>
         <modifier type="set" field="hidden" value="false">
           <conditions>
@@ -4107,9 +4107,6 @@ Requirement [House Long Shadow lheme]</characteristic>
           </conditions>
         </modifier>
       </modifiers>
-      <entryLinks>
-        <entryLink id="8907-8a3b-b769-d1dd" name="Enhancements" hidden="false" collective="false" import="true" targetId="b18f-16ea-bed1-4709" type="selectionEntryGroup"/>
-      </entryLinks>
     </entryLink>
     <entryLink id="5b98-d241-4887-f017" name="Brotherhood" hidden="false" collective="false" import="true" targetId="9402-edcc-93a2-aef1" type="selectionEntry"/>
     <entryLink id="ba8e-3f33-0e2b-83e2" name="Khendish" hidden="true" collective="false" import="true" targetId="dc54-b54e-1428-7c3e" type="selectionEntry"/>
@@ -4130,9 +4127,17 @@ Requirement [House Long Shadow lheme]</characteristic>
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="2df8-d6d5-06f1-08db" type="lessThan"/>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4c67-f393-7598-a82d" type="lessThan"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4e1c-43c9-596d-ef16" type="atLeast"/>
               </conditions>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5a4f-6e3e-0e2b-3e81" type="atLeast"/>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="cfa1-27b2-4dc3-ce16" type="lessThan"/>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4c67-f393-7598-a82d" type="lessThan"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </conditionGroup>
           </conditionGroups>
         </modifier>
@@ -4170,6 +4175,187 @@ Requirement [House Long Shadow lheme]</characteristic>
       </categoryLinks>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="11.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="c5be-e9e5-ee8d-39de" name="Two Lone Swordsmen" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="f616-46d8-5907-fafd" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="9402-edcc-93a2-aef1" type="atLeast"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="b94d-f7cb-a84c-4077" type="equalTo"/>
+              </conditions>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="477a-e693-0888-08f7" type="atLeast"/>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="f616-46d8-5907-fafd" type="lessThan"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="daab-39db-7276-a962" type="max"/>
+      </constraints>
+      <infoGroups>
+        <infoGroup id="d39c-05c4-415a-bc3b" name="Melee Weapon" hidden="false">
+          <profiles>
+            <profile id="6ae6-bfa9-d01b-e529" name="Katana" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+1</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Pierce (1), Reach</characteristic>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Counterstrike Defence (1), Sidestep Attack (0)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="4e6b-4f7e-3359-e539" name="Pierce " hidden="false" targetId="39e4-14d7-5533-6e67" type="rule"/>
+            <infoLink id="9721-a5ba-d15b-57f3" name="Reach" hidden="false" targetId="e28e-d5dd-a262-1101" type="rule"/>
+            <infoLink id="2e59-22e6-4122-fb8d" name="Counterstrike Defence " hidden="false" targetId="136e-4c77-dc59-4c6e" type="rule"/>
+            <infoLink id="c53a-b5db-0424-4875" name="Sidestep Attack " hidden="false" targetId="070d-a69d-0b46-27dc" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="7045-3654-8866-1917" name="Unique Effects" hidden="false">
+          <profiles>
+            <profile id="debe-7675-1e2b-597a" name="Linked" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">If this model is Killed, instead put the model Elsewhere.
+In the Starting Phase, Deploy any Lone Swordsmen that are Elsewhere into play with no marked Wound boxes, in BtB with a Lone Swordsman model.
+If both Lone Swordsmen are Elsewhere at the same time, remove them from play.
+
+These models must always declare the same action unless one of them performs a Charge, Stand Up or Wait actions.
+
+When a Lone Swordsman model would generate Ki Tokens (or otherwise gain Ki Tokens) instead place those Ki Tokens on this card.
+Either Lone Swordsman model may spend Ki Tokens from this card to pay for Ki Feats, Boosts, or other effects.
+
+This model cannot have Enhancement cards attached.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="aef9-4933-1bee-d58a" name="Brotherhood" hidden="false" targetId="cf85-5dd9-be99-6042" type="profile"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="1b57-5e66-24af-d7b4" name="Ki Feats" hidden="false">
+          <infoLinks>
+            <infoLink id="59d9-3d05-8465-e767" name="Practised Manoeuvres" hidden="false" targetId="9b3f-dcf3-388c-dc19" type="infoGroup"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="a068-c9e3-7c6f-5307" name="Traits" hidden="false">
+          <profiles>
+            <profile id="0c30-fa44-8af5-7a65" name="Lone Swordsman" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Armour (2), Co-ordinated Attack [Lone Swordsmen], Fearless, Group, Hatred [Tengu], Prowess [Melee](1)</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="4934-6f73-9c11-e902" name="Armour" hidden="false" targetId="8615-1c63-2242-5746" type="rule"/>
+            <infoLink id="0a6a-77ee-56db-118f" name="Co-ordinated Attack" hidden="false" targetId="2337-7bcc-c1f2-f2bd" type="rule"/>
+            <infoLink id="5108-1d65-8b28-f164" name="Group" hidden="false" targetId="4c02-03a1-ae7b-7821" type="rule"/>
+            <infoLink id="74f7-99ac-1b6a-8a9b" name="Hatred" hidden="false" targetId="7e1f-e126-b487-828b" type="rule"/>
+            <infoLink id="8720-7951-907e-30d6" name="Prowess " hidden="false" targetId="75ef-327a-cd08-a248" type="rule"/>
+            <infoLink id="52a4-5dc8-1031-3f49" name="Fearless" hidden="false" targetId="5d6f-1746-9080-aca5" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+      </infoGroups>
+      <categoryLinks>
+        <categoryLink id="2a61-5490-726e-514f" name="New CategoryLink" hidden="false" targetId="9fba-f50b-c8f7-8396" primary="true"/>
+        <categoryLink id="2e91-0180-312f-50d1" name="Samurai" hidden="false" targetId="e12a-f782-3281-7444" primary="false"/>
+        <categoryLink id="890b-e9a8-7462-22c6" name="Unknown" hidden="false" targetId="681b-423e-83dd-d9bd" primary="false"/>
+        <categoryLink id="a835-5758-514c-e0b0" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
+        <categoryLink id="0706-002d-ccc8-1216" name="Armour" hidden="false" targetId="f322-702a-ff62-b37e" primary="false"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="fdf3-8876-5d8b-5954" name="Lone Swordsman A" hidden="false" collective="false" import="true" type="model">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3b6e-8583-a707-5749" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4d47-df39-4ba2-f07e" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="6c77-a28a-e555-97af" name="Lone Swordsman A" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+              <characteristics>
+                <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
+                <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+                <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">3</characteristic>
+                <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33">3</characteristic>
+                <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
+                <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac">3</characteristic>
+                <characteristic name="Ki" typeId="3969-9568-a914-6854">1</characteristic>
+                <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c">3</characteristic>
+                <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">*</characteristic>
+                <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">5</characteristic>
+                <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <categoryLinks>
+            <categoryLink id="fd8f-068e-12ea-3c58" name="New CategoryLink" hidden="false" targetId="9fba-f50b-c8f7-8396" primary="true"/>
+            <categoryLink id="cedb-b729-be73-1b67" name="Unknown" hidden="false" targetId="681b-423e-83dd-d9bd" primary="false"/>
+            <categoryLink id="8ce0-5eb1-3ade-0b8b" name="Samurai" hidden="false" targetId="e12a-f782-3281-7444" primary="false"/>
+            <categoryLink id="9460-ee23-03ac-4149" name="Armour" hidden="false" targetId="f322-702a-ff62-b37e" primary="false"/>
+            <categoryLink id="c08a-a55d-fe97-afeb" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
+          </categoryLinks>
+          <entryLinks>
+            <entryLink id="8e7e-9ee8-ed1a-4723" name="Enhancements" hidden="false" collective="false" import="true" targetId="b18f-16ea-bed1-4709" type="selectionEntryGroup"/>
+          </entryLinks>
+          <costs>
+            <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="0d24-34a3-c0fa-9270" name="Lone Swordsman B" hidden="false" collective="false" import="true" type="model">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="85fd-3b9c-be8d-9943" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e44e-88e0-9184-3697" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="e361-8531-69bb-f938" name="Lone Swordsman B" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+              <characteristics>
+                <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
+                <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+                <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">3</characteristic>
+                <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33">3</characteristic>
+                <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
+                <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac">3</characteristic>
+                <characteristic name="Ki" typeId="3969-9568-a914-6854">1</characteristic>
+                <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c">3</characteristic>
+                <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">*</characteristic>
+                <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">5</characteristic>
+                <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <categoryLinks>
+            <categoryLink id="787c-938d-cdec-ca68" name="New CategoryLink" hidden="false" targetId="9fba-f50b-c8f7-8396" primary="true"/>
+            <categoryLink id="90a4-b40e-8e4c-c3a6" name="Unknown" hidden="false" targetId="681b-423e-83dd-d9bd" primary="false"/>
+            <categoryLink id="7181-9de8-810e-ffb9" name="Samurai" hidden="false" targetId="e12a-f782-3281-7444" primary="false"/>
+            <categoryLink id="630c-86bb-ca24-3062" name="Armour" hidden="false" targetId="f322-702a-ff62-b37e" primary="false"/>
+            <categoryLink id="fea1-23a2-fbc9-3263" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
+          </categoryLinks>
+          <entryLinks>
+            <entryLink id="ad66-1b1e-48cc-ce8f" name="Enhancements" hidden="false" collective="false" import="true" targetId="b18f-16ea-bed1-4709" type="selectionEntryGroup"/>
+          </entryLinks>
+          <costs>
+            <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="25.0"/>
       </costs>
     </selectionEntry>
   </sharedSelectionEntries>
@@ -4355,8 +4541,15 @@ Requirement [House Long Shadow Theme]</characteristic>
                         <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d7c5-a2b9-4696-fd33" type="instanceOf"/>
                         <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6639-615e-f1ab-bc64" type="instanceOf"/>
                         <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7435-856f-ece2-fe58" type="instanceOf"/>
-                        <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="2bf8-b13c-a906-baea" type="lessThan"/>
                       </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4e1c-43c9-596d-ef16" type="lessThan"/>
+                            <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9fba-f50b-c8f7-8396" type="instanceOf"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
                     </conditionGroup>
                   </conditionGroups>
                 </modifier>
@@ -4391,6 +4584,14 @@ Requirement [House Long Shadow Theme]</characteristic>
                         <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6639-615e-f1ab-bc64" type="instanceOf"/>
                         <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7435-856f-ece2-fe58" type="instanceOf"/>
                       </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4e1c-43c9-596d-ef16" type="lessThan"/>
+                            <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9fba-f50b-c8f7-8396" type="instanceOf"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
                     </conditionGroup>
                   </conditionGroups>
                 </modifier>
@@ -4427,8 +4628,15 @@ Requirement [House Long Shadow Theme]</characteristic>
                         <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d7c5-a2b9-4696-fd33" type="instanceOf"/>
                         <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6639-615e-f1ab-bc64" type="instanceOf"/>
                         <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7435-856f-ece2-fe58" type="instanceOf"/>
-                        <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="2bf8-b13c-a906-baea" type="lessThan"/>
                       </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4e1c-43c9-596d-ef16" type="lessThan"/>
+                            <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9fba-f50b-c8f7-8396" type="instanceOf"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
                     </conditionGroup>
                   </conditionGroups>
                 </modifier>
@@ -4472,6 +4680,14 @@ If unsuccessful, the model&apos;s movement and activation immediately ends.</cha
                         <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6639-615e-f1ab-bc64" type="instanceOf"/>
                         <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7435-856f-ece2-fe58" type="instanceOf"/>
                       </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4e1c-43c9-596d-ef16" type="lessThan"/>
+                            <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9fba-f50b-c8f7-8396" type="instanceOf"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
                     </conditionGroup>
                   </conditionGroups>
                 </modifier>
@@ -4508,8 +4724,15 @@ If unsuccessful, the model&apos;s movement and activation immediately ends.</cha
                         <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d7c5-a2b9-4696-fd33" type="instanceOf"/>
                         <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6639-615e-f1ab-bc64" type="instanceOf"/>
                         <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7435-856f-ece2-fe58" type="instanceOf"/>
-                        <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="2bf8-b13c-a906-baea" type="lessThan"/>
                       </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4e1c-43c9-596d-ef16" type="lessThan"/>
+                            <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9fba-f50b-c8f7-8396" type="instanceOf"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
                     </conditionGroup>
                   </conditionGroups>
                 </modifier>
@@ -4705,7 +4928,32 @@ Requirement [House Long Shadow Theme]</characteristic>
         <entryLink id="5d61-6269-9d4d-e2fb" name="!DRAFT!CYCLE Prayer Scroll" hidden="false" collective="false" import="true" targetId="bb42-702b-ab84-a9f9" type="selectionEntry"/>
         <entryLink id="a64e-386c-7381-c3e2" name="!DRAFT!CYCLE Pacifism" hidden="false" collective="false" import="true" targetId="6bf3-9dca-b4c5-6a3e" type="selectionEntry"/>
         <entryLink id="9b37-75a4-7192-7428" name="Fujin&apos;s Charm" hidden="false" collective="false" import="true" targetId="5110-9b07-a9dd-d71e" type="selectionEntry"/>
-        <entryLink id="28eb-d787-e006-46a8" name="Accepted into the Shadow" hidden="false" collective="false" import="true" targetId="5a4f-6e3e-0e2b-3e81" type="selectionEntry"/>
+        <entryLink id="28eb-d787-e006-46a8" name="Accepted into the Shadow" hidden="false" collective="false" import="true" targetId="5a4f-6e3e-0e2b-3e81" type="selectionEntry">
+          <modifierGroups>
+            <modifierGroup>
+              <modifiers>
+                <modifier type="set" field="015e-41c8-a27f-7bda" value="1.0">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7b8f-61a1-2d88-60f2" type="instanceOf"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6c2d-b743-18d7-2779" type="atLeast"/>
+                            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f423-abc7-6e32-6e8c" type="atLeast"/>
+                            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="70cc-ef54-f1d8-9837" type="atLeast"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+            </modifierGroup>
+          </modifierGroups>
+        </entryLink>
         <entryLink id="7848-22b6-a7f7-faab" name="Broken Spirit" hidden="false" collective="false" import="true" targetId="66cd-f1c0-8da8-e6d9" type="selectionEntry"/>
         <entryLink id="0ded-e084-7e7b-1457" name="Inducted into the Miko" hidden="false" collective="false" import="true" targetId="0ceb-eea9-97e0-8726" type="selectionEntry"/>
         <entryLink id="9d95-a3e1-b359-a7e9" name="Iron Will" hidden="false" collective="false" import="true" targetId="2944-c703-8038-d0f4" type="selectionEntry"/>
