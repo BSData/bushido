@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="6a8f-b352-80c6-855f" name="Silvermoon Trade Syndicate" revision="26" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="15" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="6a8f-b352-80c6-855f" name="Silvermoon Trade Syndicate" revision="27" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="15" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="5048-3a52-5689-6d0b" name="Bought Loyalty" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -4027,6 +4027,116 @@ If the box is filled in, you may still use the Ki Feat.</characteristic>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="7.0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="76f9-d7d4-3d4a-3f56" name="Lama&apos;a" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="60d5-9a39-f05d-dced" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="decrement" field="a111-8656-5c05-7415" value="1.0">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="98a6-e76a-f99b-a1d3" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7315-0206-4562-1d10" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="6ced-4644-56f8-cb49" name="Lama&apos;a" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">2</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">2</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">6</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">10 OOOOO OOOOO</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Medium 40mm</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="ab73-3d62-7fff-6f0d" name="Ki Feats" hidden="false">
+          <infoLinks>
+            <infoLink id="15e3-0c82-04d8-4ff8" name="Distraction" hidden="false" targetId="67dc-8faf-a547-262a" type="infoGroup"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="b025-fdf1-3682-b34d" name="Traits" hidden="false">
+          <profiles>
+            <profile id="14c5-8b75-bb0f-ed9f" name="Lama&apos;a" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Bravery, Endurance, Fear (4), Fortune, Immune [Prone], Intimidate, Steadfast, Tough (1)</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="9af1-00db-1143-d877" name="Bravery" hidden="false" targetId="f9b2-38d2-7cda-de6e" type="rule"/>
+            <infoLink id="d1c9-109f-5a71-5d89" name="Fear" hidden="false" targetId="3586-4583-7f10-1f31" type="rule"/>
+            <infoLink id="9614-d96e-b277-2719" name="Fortune" hidden="false" targetId="abf1-1c0e-4717-77e2" type="rule"/>
+            <infoLink id="c705-608e-8986-f22a" name="Immune" hidden="false" targetId="ea08-b25e-0ea8-af73" type="rule"/>
+            <infoLink id="46a3-2b0f-2739-207c" name="Intimidate" hidden="false" targetId="f57d-b137-75c8-7329" type="rule"/>
+            <infoLink id="d683-b2e6-440b-45bf" name="Steadfast" hidden="false" targetId="95e7-3178-c29b-013c" type="rule"/>
+            <infoLink id="0f42-75ff-4d5a-a70d" name="Tough" hidden="false" targetId="5613-a6cf-495a-229f" type="rule"/>
+            <infoLink id="0f01-b01f-1c5d-2449" name="Endurance" hidden="false" targetId="7fdc-d150-9641-1235" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="7591-f39c-99f3-2658" name="Melee Weapon" hidden="false">
+          <profiles>
+            <profile id="dfaf-e38b-08f5-22a6" name="Satsumata" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+2</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Reach</characteristic>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Grapple Attack (0), Push Attack (0), Grapple Defence (0)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="6372-9bb6-e5bd-dc95" name="Reach" hidden="false" targetId="e28e-d5dd-a262-1101" type="rule"/>
+            <infoLink id="9c9c-072c-9929-ba5d" name="Grapple Attack" hidden="false" targetId="1b9a-c71d-0a30-8d0d" type="rule"/>
+            <infoLink id="9641-de5b-7d63-ca2b" name="Grapple Defence" hidden="false" targetId="6e8d-d1c4-dc69-6558" type="rule"/>
+            <infoLink id="2600-5750-ddc1-72ec" name="Push Attack" hidden="false" targetId="6c26-94ba-6b96-9e1b" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="8976-10ad-e62c-e137" name="Unique Effects" hidden="false">
+          <profiles>
+            <profile id="ca9b-5bed-4af3-adc9" name="Team" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">While a Friendly Brother Zandaka is in play, this model ignores the BtB restriction when using its Distraction Ki Feat.</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="a7cd-c0e9-fac4-5180" name="Consider The Consequences" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">Before making a Ranged Attack against this model or Brother Zandaka, the Activating model must make a Fear Test using this model&apos;s Fear Trait for the Challenge Number.
+If it fails the Fear Test, that model&apos;s activation ends. Regardless of the action declared, remove one Activation Counter.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </infoGroup>
+      </infoGroups>
+      <categoryLinks>
+        <categoryLink id="4df2-25f3-c25b-dd59" name="Faction: Silvermoon Trade Syndicate" hidden="false" targetId="875a-48b1-3c9f-0a14" primary="false"/>
+        <categoryLink id="cf62-04c1-0ed6-1ede" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
+        <categoryLink id="9e7c-c579-d84d-1897" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
+        <categoryLink id="0b83-724a-d569-3843" name="Buto" hidden="false" targetId="48d9-12ca-aeef-7295" primary="false"/>
+        <categoryLink id="12ef-255b-1d80-ad72" name="Three Moons" hidden="false" targetId="879e-955d-2dc4-16b1" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="e4a9-8ed0-fd77-c876" name="Enhancements" hidden="false" collective="false" import="true" targetId="37a1-1d53-ef45-026d" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="17.0"/>
+      </costs>
+    </selectionEntry>
   </selectionEntries>
   <entryLinks>
     <entryLink id="7ae5-b29d-c5eb-c5c7" name="Kappa" hidden="false" collective="false" import="true" targetId="34f2-cc79-8047-6138" type="selectionEntry">
@@ -4946,7 +5056,6 @@ Requirement [Rose]</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>
-
   <catalogueLinks>
     <catalogueLink id="0010-319a-e539-0162" name="Library_Ronin" targetId="b489-b304-948d-52d0" type="catalogue" importRootEntries="true"/>
   </catalogueLinks>

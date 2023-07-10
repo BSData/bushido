@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="4213-717c-2228-e731" name="Temple of Ro-Kan" revision="27" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="15" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="4213-717c-2228-e731" name="Temple of Ro-Kan" revision="28" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="15" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="5048-3a52-5689-6d0b" name="Spiritual Harmony" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -6462,6 +6462,122 @@ Permitted [Masters]</characteristic>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0.0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="613e-e408-554d-44d0" name="Kami of the Summer Storm" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="33ea-e647-b8c5-2267" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ffd8-72ee-dab5-a006" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="44e6-4155-6b9b-2521" type="atLeast"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d03f-d8e3-534b-7be7" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="f905-fb41-cd05-56eb" name="Kami of the Summer Storm" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">1</characteristic>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">3</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33">1</characteristic>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">7</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">0</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">5</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">Special</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="8bbb-a347-9098-ff54" name="Traits" hidden="false">
+          <profiles>
+            <profile id="cc64-ea0e-2431-8d1f" name="Kami of the Summer Storm" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Agile, Cloudwalk, Durable, Insignificant, Kami, Lightning Reflexes, Ranged Defence (2), Soulless</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="fde0-d57a-9f16-ccee" name="Durable" hidden="false" targetId="3612-7e19-3cb9-72d0" type="rule"/>
+            <infoLink id="acdd-4727-59bf-54be" name="Insignificant" hidden="false" targetId="1614-d86c-ef8a-c095" type="rule"/>
+            <infoLink id="dc91-8fd7-5ed7-d9ec" name="Kami" hidden="false" targetId="50d4-ec7a-9763-1b4d" type="rule"/>
+            <infoLink id="35e4-6372-7de5-96cf" name="Soulless" hidden="false" targetId="af31-aad0-fcea-9590" type="rule"/>
+            <infoLink id="e555-7b3c-b4a3-5d55" name="Agile" hidden="false" targetId="6a46-2f07-1725-11b2" type="rule"/>
+            <infoLink id="e105-ca46-c3d2-f1c3" name="Cloudwalk" hidden="false" targetId="538c-1266-626b-fcc9" type="rule"/>
+            <infoLink id="1a4e-7bfe-8e08-9bd3" name="Lightning Reflexes" hidden="false" targetId="efd4-dc31-6523-9c79" type="rule"/>
+            <infoLink id="af94-3ad2-4c3f-9b2e" name="Evasive" hidden="false" targetId="b0f8-d197-536b-c8fc" type="rule"/>
+            <infoLink id="70e0-b749-6ca1-4c29" name="Ranged Defence " hidden="false" targetId="9b8d-9ca9-e25d-3988" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="29f4-3ecf-da02-b082" name="Unique Effects" hidden="false">
+          <profiles>
+            <profile id="7e2a-8b92-a618-7dcf" name="Kami of the Summer Storm" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">Each time this model makes a successful Ranged Attack it must use its Raijin&apos;s Rage feat if it has more than two Ki Tokens and a valid Target.
+
+When this model makes a successful Ranged or Melee Attack, the enemy model gains a Stunned Marker.
+
+When this model would make a Damage Roll for a successful Melee or Ranged attack, instead place the Enemy model anywhere within 1&quot; of its current location.
+
+Whenever another model on the Battlefield is Placed by an effect not on this card, this model gains 1 Ki Token.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </infoGroup>
+        <infoGroup id="0252-98ac-6ee8-ec72" name="Melee Weapon" hidden="false">
+          <profiles>
+            <profile id="8742-f30f-f5c9-5261" name="Wind Buffet" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">Special</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e"/>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d"/>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+        </infoGroup>
+        <infoGroup id="142a-ab06-d206-f6cd" name="Ranged Weapon" hidden="false">
+          <profiles>
+            <profile id="2ad9-c3a0-e4f6-b99b" name="Wind Blast" hidden="false" typeId="7e20-258e-bf92-18f9" typeName="Ranged Weapon">
+              <characteristics>
+                <characteristic name="Ranged Weapon Strength" typeId="15aa-b6bd-6923-271f">Special</characteristic>
+                <characteristic name="Range Bands" typeId="be6a-50c6-d691-e2e9">2/3/4</characteristic>
+                <characteristic name="Traits" typeId="3410-4428-ef91-eb61">Lightweight</characteristic>
+                <characteristic name="Specials" typeId="cdaf-b6ac-89d4-39ef">Combo Attack (0)</characteristic>
+                <characteristic name="Unique Effects" typeId="3bf8-6525-f003-4990">This model&apos;s Melee Attacks do no Damage. On a successful Ranged Attack Place the Target anywhere within 1&quot; of its current location but not into an Enemy model&apos;s ZoC.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="77d7-9af0-e166-05dc" name="Lightfooted" hidden="false" targetId="57d2-cd57-07f9-addf" type="rule"/>
+            <infoLink id="e193-cf89-0149-b252" name="Combo Attack " hidden="false" targetId="78ab-6a94-be24-8f74" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="70f1-3d03-3c2b-e9ad" name="Ki Feats" hidden="false">
+          <infoLinks>
+            <infoLink id="3ae9-6a75-cc01-a455" name="Raijin&apos;s Rage" hidden="false" targetId="5c2a-b145-5f25-28d4" type="infoGroup"/>
+          </infoLinks>
+        </infoGroup>
+      </infoGroups>
+      <categoryLinks>
+        <categoryLink id="812f-e11c-e78c-3d64" name="Non-Unique" hidden="false" targetId="d181-219d-3add-d47b" primary="false"/>
+        <categoryLink id="90cb-57b3-1518-6639" name="Kami" hidden="false" targetId="6639-615e-f1ab-bc64" primary="false"/>
+        <categoryLink id="17d3-1a69-0736-91ca" name="Ronin Profile Cards" hidden="false" targetId="9fba-f50b-c8f7-8396" primary="true"/>
+        <categoryLink id="e618-c29d-ebd5-7d11" name="Element: Wind" hidden="false" targetId="3184-d389-7218-d304" primary="false"/>
+        <categoryLink id="09ee-4c5a-8d33-21c5" name="Minor" hidden="false" targetId="d45e-8b05-fa4c-e6c9" primary="false"/>
+      </categoryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="16.0"/>
+      </costs>
+    </selectionEntry>
   </selectionEntries>
   <entryLinks>
     <entryLink id="0f32-6304-1fad-6541" name="Ashinaga Tenaga" hidden="false" collective="false" import="true" targetId="e7ea-c376-aac2-5726" type="selectionEntry">
@@ -6804,11 +6920,7 @@ Permitted [Masters]</characteristic>
             </conditionGroup>
           </conditionGroups>
         </modifier>
-        <modifier type="decrement" field="a111-8656-5c05-7415" value="8.0">
-          <repeats>
-            <repeat field="selections" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
-          </repeats>
-        </modifier>
+        <modifier type="append" field="name" value="(reference)"/>
       </modifiers>
       <categoryLinks>
         <categoryLink id="9f14-8632-7170-69ab" name="New CategoryLink" hidden="false" targetId="5073-f00b-a8f6-5e3b" primary="true"/>
@@ -6826,11 +6938,7 @@ Permitted [Masters]</characteristic>
             </conditionGroup>
           </conditionGroups>
         </modifier>
-        <modifier type="decrement" field="a111-8656-5c05-7415" value="8.0">
-          <repeats>
-            <repeat field="selections" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
-          </repeats>
-        </modifier>
+        <modifier type="append" field="name" value="(reference)"/>
       </modifiers>
       <categoryLinks>
         <categoryLink id="f9bb-b5f6-2918-b571" name="New CategoryLink" hidden="false" targetId="5073-f00b-a8f6-5e3b" primary="true"/>
@@ -6848,11 +6956,7 @@ Permitted [Masters]</characteristic>
             </conditionGroup>
           </conditionGroups>
         </modifier>
-        <modifier type="decrement" field="a111-8656-5c05-7415" value="8.0">
-          <repeats>
-            <repeat field="selections" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
-          </repeats>
-        </modifier>
+        <modifier type="append" field="name" value="(reference)"/>
       </modifiers>
       <categoryLinks>
         <categoryLink id="9212-e2d6-6b4e-7658" name="New CategoryLink" hidden="false" targetId="5073-f00b-a8f6-5e3b" primary="true"/>
@@ -6870,11 +6974,7 @@ Permitted [Masters]</characteristic>
             </conditionGroup>
           </conditionGroups>
         </modifier>
-        <modifier type="decrement" field="a111-8656-5c05-7415" value="8.0">
-          <repeats>
-            <repeat field="selections" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
-          </repeats>
-        </modifier>
+        <modifier type="append" field="name" value="(reference)"/>
       </modifiers>
       <categoryLinks>
         <categoryLink id="78e5-1857-3ced-76c1" name="New CategoryLink" hidden="false" targetId="5073-f00b-a8f6-5e3b" primary="true"/>
@@ -6892,11 +6992,7 @@ Permitted [Masters]</characteristic>
             </conditionGroup>
           </conditionGroups>
         </modifier>
-        <modifier type="decrement" field="a111-8656-5c05-7415" value="8.0">
-          <repeats>
-            <repeat field="selections" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
-          </repeats>
-        </modifier>
+        <modifier type="append" field="name" value="(reference)"/>
       </modifiers>
       <categoryLinks>
         <categoryLink id="2573-a068-ea96-e814" name="New CategoryLink" hidden="false" targetId="5073-f00b-a8f6-5e3b" primary="true"/>
@@ -6914,11 +7010,7 @@ Permitted [Masters]</characteristic>
             </conditionGroup>
           </conditionGroups>
         </modifier>
-        <modifier type="decrement" field="a111-8656-5c05-7415" value="8.0">
-          <repeats>
-            <repeat field="selections" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
-          </repeats>
-        </modifier>
+        <modifier type="append" field="name" value="(reference)"/>
       </modifiers>
       <categoryLinks>
         <categoryLink id="ad4c-6a15-0f4f-9ce0" name="New CategoryLink" hidden="false" targetId="5073-f00b-a8f6-5e3b" primary="true"/>
@@ -6936,11 +7028,7 @@ Permitted [Masters]</characteristic>
             </conditionGroup>
           </conditionGroups>
         </modifier>
-        <modifier type="decrement" field="a111-8656-5c05-7415" value="8.0">
-          <repeats>
-            <repeat field="selections" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
-          </repeats>
-        </modifier>
+        <modifier type="append" field="name" value="(reference)"/>
       </modifiers>
       <categoryLinks>
         <categoryLink id="49f9-1651-75af-3097" name="New CategoryLink" hidden="false" targetId="5073-f00b-a8f6-5e3b" primary="true"/>
@@ -6963,6 +7051,42 @@ Permitted [Masters]</characteristic>
       </modifiers>
       <categoryLinks>
         <categoryLink id="e4d9-162b-857d-91ef" name="New CategoryLink" hidden="false" targetId="5073-f00b-a8f6-5e3b" primary="true"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="894d-84eb-fe49-16d6" name="Kami of the Empty Mind" hidden="false" collective="false" import="true" targetId="456d-02e7-13bd-ca0e" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1a12-f47f-8f23-0777" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c81b-cb45-9579-b5dd" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2af4-e298-ee7f-b85f" type="atLeast"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="c04c-c749-17f9-cf45" name="New CategoryLink" hidden="false" targetId="9fba-f50b-c8f7-8396" primary="true"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="62dd-49c4-fea2-a13a" name="Kami of the Empty Mind" hidden="true" collective="false" import="true" targetId="456d-02e7-13bd-ca0e" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c81b-cb45-9579-b5dd" type="atLeast"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="append" field="name" value="(reference)"/>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="3dff-3aee-bb31-d258" name="New CategoryLink" hidden="false" targetId="9fba-f50b-c8f7-8396" primary="false"/>
+        <categoryLink id="196c-30ee-084d-8e24" name="New CategoryLink" hidden="false" targetId="5073-f00b-a8f6-5e3b" primary="true"/>
       </categoryLinks>
     </entryLink>
   </entryLinks>
@@ -8288,7 +8412,6 @@ If it fails, its Activation ends and it loses one Activation Counter.</character
       </characteristics>
     </profile>
   </sharedProfiles>
-
   <catalogueLinks>
     <catalogueLink id="2ab1-e129-aca6-3c7d" name="Library_Ronin" targetId="b489-b304-948d-52d0" type="catalogue" importRootEntries="true"/>
   </catalogueLinks>

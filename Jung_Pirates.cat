@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="d615-aef7-31d5-367d" name="Jung Pirates" revision="22" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="15" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="d615-aef7-31d5-367d" name="Jung Pirates" revision="23" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="15" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="258a-e1a8-8db1-9635" name="Ki&lt;2" hidden="true"/>
     <categoryEntry id="f6c9-50fa-a9d3-e9f3" name="Ranged Weapon" hidden="true"/>
@@ -3289,6 +3289,112 @@ This terrain element must be placed within 6&quot; of the centreline and not wit
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="12.0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="edd9-82b1-a9aa-e11b" name="Renishi" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4e07-8c38-7f78-6e5d" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1b47-eda0-6ebd-dc1a" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="843d-db96-732e-cf8c" type="atLeast"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="eed0-3078-ddd4-6baa" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="47e5-ce67-fccf-f2e9" name="Renishi" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">1</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">5</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac">3</characteristic>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">2</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">8</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">10 OOOOO OOOOO</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Large 50mm</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="8c52-2c8c-50e9-c2ef" name="Retaliation" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+          <characteristics>
+            <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">When this model suffers Wounds in a Melee Exchange, after the activation is complete, the Attacker gains a Bleed (1) Marker.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="1a02-10bc-5228-55d8" name="Traits" hidden="false">
+          <profiles>
+            <profile id="3dd2-74a8-4444-2a44" name="Renishi" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Armour (3), Bravery, Courage (1), Fear (5), Immune [Prone], Lightfooted</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="984c-4bce-19bf-eae2" name="Immune" hidden="false" targetId="ea08-b25e-0ea8-af73" type="rule"/>
+            <infoLink id="57af-1e9f-d3ac-0b91" name="Fear" hidden="false" targetId="3586-4583-7f10-1f31" type="rule"/>
+            <infoLink id="03ae-daef-ca42-3e5d" name="Lightfooted" hidden="false" targetId="57d2-cd57-07f9-addf" type="rule"/>
+            <infoLink id="1cef-fdfb-8a25-b648" name="Armour" hidden="false" targetId="8615-1c63-2242-5746" type="rule"/>
+            <infoLink id="6c2d-03e5-2832-aa1d" name="Bravery" hidden="false" targetId="f9b2-38d2-7cda-de6e" type="rule"/>
+            <infoLink id="75f8-b259-882f-0056" name="Courage" hidden="false" targetId="2c5f-d52f-24ba-7927" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="2d0d-6ecc-172b-c7ac" name="Ki Feats" hidden="false">
+          <infoLinks>
+            <infoLink id="1dd8-bd4d-e972-d902" name="Mutation" hidden="false" targetId="8179-8061-a013-cbab" type="infoGroup"/>
+            <infoLink id="85a0-9fd1-6326-590f" name="Scuttle" hidden="false" targetId="0de9-65e4-5127-2bd3" type="infoGroup"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="a873-7f8b-3001-1fc4" name="Melee Weapons" hidden="false">
+          <profiles>
+            <profile id="e3f3-3b63-6af1-1139" name="Claw" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+2</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e"/>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Critical Attack (1), Sidestep Attack (0)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+            <profile id="fdc3-17f9-4583-3d87" name="Anchor" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+1</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Brutal (1)</characteristic>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Drag Attack (0), Sidestep Defence (0)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="bd10-1bcb-b962-c597" name="Sidestep Defence " hidden="false" targetId="753c-6c3b-64d7-203c" type="rule"/>
+            <infoLink id="65cc-297c-836e-d3d5" name="Brutal" hidden="false" targetId="5d95-975e-a72c-25f3" type="rule"/>
+            <infoLink id="07b9-d24b-a908-2cf7" name="Drag Attack" hidden="false" targetId="9902-026d-4637-cc7d" type="rule"/>
+            <infoLink id="8eb2-25d8-142f-de28" name="Sidestep Attack " hidden="false" targetId="070d-a69d-0b46-27dc" type="rule"/>
+            <infoLink id="90db-1071-23c9-6f83" name="Reach" hidden="false" targetId="e28e-d5dd-a262-1101" type="rule"/>
+            <infoLink id="b7f1-3509-6d98-c400" name="Critical Attack" hidden="false" targetId="7ec7-56ae-79e3-423e" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+      </infoGroups>
+      <categoryLinks>
+        <categoryLink id="e79e-1f14-0909-3035" name="Faction: Jung Pirates" hidden="false" targetId="76df-04fb-ea1f-77ab" primary="false"/>
+        <categoryLink id="84ad-94ea-cebb-942a" name="Kanimiman" hidden="false" targetId="b1f3-c9f3-71c7-4965" primary="false"/>
+        <categoryLink id="f1d1-1b2d-da83-9f6f" name="Lightfooted" hidden="false" targetId="7fe9-7663-a22c-5ffa" primary="false"/>
+        <categoryLink id="4ddc-06e4-3aab-f7d5" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
+        <categoryLink id="1293-9a66-85de-09d0" name="Armour" hidden="false" targetId="f322-702a-ff62-b37e" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="cb68-e8eb-bd31-3ebf" name="Enhancements" hidden="false" collective="false" import="true" targetId="2327-1257-a4b4-df32" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="22.0"/>
+      </costs>
+    </selectionEntry>
   </selectionEntries>
   <entryLinks>
     <entryLink id="7c58-4740-ab52-3330" name="Koshimori Yukio" hidden="false" collective="false" import="true" targetId="de1e-de2d-1044-bf56" type="selectionEntry">
@@ -3567,6 +3673,38 @@ This terrain element must be placed within 6&quot; of the centreline and not wit
     <entryLink id="9975-82c1-481f-0bbf" name="The Hozumi Family" hidden="false" collective="false" import="true" targetId="4750-f234-49e4-79c1" type="selectionEntry"/>
     <entryLink id="ff9e-ba87-b6da-1097" name="The Kiyozumi Family" hidden="false" collective="false" import="true" targetId="0e4a-a40c-14eb-2f4f" type="selectionEntry"/>
     <entryLink id="3bf1-3b6c-5c33-d886" name="The Dark Pilgrim" hidden="false" collective="false" import="true" targetId="1ada-6f0c-8123-5aab" type="selectionEntry"/>
+    <entryLink id="2b69-8345-5039-e96d" name="Kami of Choking Fog" hidden="true" collective="false" import="true" targetId="f3c3-0154-adbf-aa05" type="selectionEntry">
+      <modifierGroups>
+        <modifierGroup>
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5902-ac4e-658c-7cf5" type="atLeast"/>
+          </conditions>
+          <modifiers>
+            <modifier type="append" field="name" value="(reference)"/>
+            <modifier type="set" field="hidden" value="false"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
+      <categoryLinks>
+        <categoryLink id="572e-bfcb-1727-05cc" name="New CategoryLink" hidden="false" targetId="5073-f00b-a8f6-5e3b" primary="true"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="b090-bbb8-4b6f-676e" name="Kami of the Strong West Wind" hidden="true" collective="false" import="true" targetId="9404-f1fd-c785-168c" type="selectionEntry">
+      <modifierGroups>
+        <modifierGroup>
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5902-ac4e-658c-7cf5" type="atLeast"/>
+          </conditions>
+          <modifiers>
+            <modifier type="append" field="name" value="(reference)"/>
+            <modifier type="set" field="hidden" value="false"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
+      <categoryLinks>
+        <categoryLink id="5fab-4a98-e0d8-b65f" name="New CategoryLink" hidden="false" targetId="5073-f00b-a8f6-5e3b" primary="true"/>
+      </categoryLinks>
+    </entryLink>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="a382-7e2d-9df9-d700" name="Korusea" hidden="false" collective="false" import="true" type="model">
@@ -4182,8 +4320,6 @@ Exclusion [Queen of the Waves theme]</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>
-  <sharedInfoGroups>
-  </sharedInfoGroups>
   <catalogueLinks>
     <catalogueLink id="1479-8a5b-5a0e-128e" name="Library_Ronin" targetId="b489-b304-948d-52d0" type="catalogue" importRootEntries="true"/>
   </catalogueLinks>

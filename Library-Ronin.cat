@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="b489-b304-948d-52d0" name="Library-Ronin" revision="35" battleScribeVersion="2.03" library="true" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="15" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="b489-b304-948d-52d0" name="Library-Ronin" revision="36" battleScribeVersion="2.03" library="true" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="15" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="4e24-3a7e-77bc-dfed" name="Balance" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -1680,8 +1680,12 @@ This model cannot declare Melee or Charge Actions Targeting Imperial models.</ch
           <profiles>
             <profile id="14b5-6f84-827f-7b84" name="Kami of Blighted Earth" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
               <characteristics>
-                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">When this model suffers Wounds from a Melee Attack, the Attacking model gains 1 Spirit Block Marker.
-Enemy models consider the area within 2&quot; of this model a [Clear, Difficult, Zero] terrain element.</characteristic>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">Enemy models consider the area within 2&quot; of this model a [Clear, Difficult, Zero] terrain element.</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="cf48-e78b-8060-dfe9" name="Retaliation" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">When this model suffers Wounds from a Melee Attack, the Attacking model gains 1 Spirit Block Marker.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -1697,6 +1701,13 @@ Enemy models consider the area within 2&quot; of this model a [Clear, Difficult,
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="1952-8826-33ad-a5f2" name="Kami of Blighted Earth A" hidden="false" collective="false" import="true" type="model">
+          <modifiers>
+            <modifier type="set" field="a111-8656-5c05-7415" value="0.0">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5073-f00b-a8f6-5e3b" type="instanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2250-d094-5a0e-aa1f" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0d1d-d57c-b3de-6216" type="min"/>
@@ -1706,6 +1717,13 @@ Enemy models consider the area within 2&quot; of this model a [Clear, Difficult,
           </costs>
         </selectionEntry>
         <selectionEntry id="ea4a-c0f4-127c-2827" name="Kami of Blighted Earth B" hidden="false" collective="false" import="true" type="model">
+          <modifiers>
+            <modifier type="set" field="a111-8656-5c05-7415" value="0.0">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5073-f00b-a8f6-5e3b" type="instanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="68e8-4b4f-dd6e-7d6d" type="max"/>
           </constraints>
@@ -1777,8 +1795,7 @@ Enemy models consider the area within 2&quot; of this model a [Clear, Difficult,
           <profiles>
             <profile id="83b1-98bc-d5ed-296f" name="Kami of Choking Fog" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
               <characteristics>
-                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">When this model suffers Wounds from a Melee Attack, the Attacking model gains 1 Stunned Marker.
-Enemy models consider the area within 2&quot; of this model a [Normal, Obscurring, Huge] terrain element.</characteristic>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">Enemy models consider the area within 2&quot; of this model a [Normal, Obscurring, Huge] terrain element.</characteristic>
               </characteristics>
             </profile>
             <profile id="a1c3-7773-832d-4bf6" name="Starting Phase" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
@@ -1786,6 +1803,11 @@ Enemy models consider the area within 2&quot; of this model a [Normal, Obscurrin
                 <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">During the Starting Phase choose 1 of the following effects:
 • Remove this model from play and 1 Enemy model within 2&quot; gains a Blind Marker
 • 1 Enemy model within 2&quot; gains a Stunned Marker</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="72f5-36dd-df30-7e4c" name="Retaliation" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">When this model suffers Wounds from a Melee Attack, the Attacking model gains 1 Stunned Marker.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -1826,6 +1848,13 @@ Enemy models consider the area within 2&quot; of this model a [Normal, Obscurrin
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="d2cd-48a9-f3af-f48d" name="Kami of Choking Fog A" hidden="false" collective="false" import="true" type="model">
+          <modifiers>
+            <modifier type="set" field="a111-8656-5c05-7415" value="0.0">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5073-f00b-a8f6-5e3b" type="instanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c990-d5c7-2fb4-e2d9" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="86aa-a896-0748-1c6a" type="min"/>
@@ -1835,6 +1864,13 @@ Enemy models consider the area within 2&quot; of this model a [Normal, Obscurrin
           </costs>
         </selectionEntry>
         <selectionEntry id="7246-3f46-48af-3d1a" name="Kami of Choking Fog B" hidden="false" collective="false" import="true" type="model">
+          <modifiers>
+            <modifier type="set" field="a111-8656-5c05-7415" value="0.0">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5073-f00b-a8f6-5e3b" type="instanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3260-3fad-1b35-efb1" type="max"/>
           </constraints>
@@ -1935,9 +1971,9 @@ Enemy models consider the area within 2&quot; of this model a [Normal, Obscurrin
         </infoGroup>
         <infoGroup id="c3a7-990d-3e51-d527" name="Unique Effects" hidden="false">
           <profiles>
-            <profile id="9b28-c0e2-d563-f906" name="Kami of Evening Flame" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+            <profile id="9b28-c0e2-d563-f906" name="Retaliation" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
               <characteristics>
-                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">After any Melee Exchange in which this model suffers damage, at the end of the Activation, the opposing model gains a Fire (2) Marker.</characteristic>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">After any Melee Exchange in which this model suffers Damage, at the end of the Activation, the opposing model gains a Fire (2) Marker.</characteristic>
               </characteristics>
             </profile>
             <profile id="1f4a-9812-384b-2506" name="Starting Phase" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
@@ -1959,6 +1995,13 @@ Enemy models consider the area within 2&quot; of this model a [Normal, Obscurrin
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="c8f8-7c04-19d0-fe24" name="Kami of Evening Flame A" hidden="false" collective="false" import="true" type="model">
+          <modifiers>
+            <modifier type="set" field="a111-8656-5c05-7415" value="0.0">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5073-f00b-a8f6-5e3b" type="instanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="77c3-77f1-cdef-5675" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8b86-82c9-f076-df4c" type="min"/>
@@ -1968,6 +2011,13 @@ Enemy models consider the area within 2&quot; of this model a [Normal, Obscurrin
           </costs>
         </selectionEntry>
         <selectionEntry id="174a-f34e-8594-762f" name="Kami of Evening Flame B" hidden="false" collective="false" import="true" type="model">
+          <modifiers>
+            <modifier type="set" field="a111-8656-5c05-7415" value="0.0">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5073-f00b-a8f6-5e3b" type="instanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="80d6-db58-d68f-d57d" type="max"/>
           </constraints>
@@ -2050,20 +2100,23 @@ Enemy models consider the area within 2&quot; of this model a [Normal, Obscurrin
         <infoGroup id="dc98-dabe-4b5e-8678" name="Ki Feats" hidden="false"/>
         <infoGroup id="395b-fef5-968b-fb56" name="Unique Effects" hidden="false">
           <profiles>
-            <profile id="8786-3c1a-2ea6-fb40" name="Kami of Reflection" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+            <profile id="8786-3c1a-2ea6-fb40" name="Retaliation" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
               <characteristics>
-                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">When this model suffers Wounds in a Melee Exchange, at the end of the Exchange the attacker suffers one Wound ignoring Tough.
-
-During the Starting Phase you may choose one of the following:
-• Remove this model from play and all models gain Cover and Slow until the End Phase.  This is a Blizzard.
-• Up to 1 Friendly model in BtB gains a Mirror Token.
-
-This model does not gain Slow from Blizzard.</characteristic>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">When this model suffers Wounds in a Melee Exchange, at the end of the Exchange the attacker suffers one Wound ignoring Tough.</characteristic>
               </characteristics>
             </profile>
-            <profile id="42fa-9246-1af1-cc28" name="Mirror Token" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+            <profile id="42fa-9246-1af1-cc28" name="Starting Phase" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
               <characteristics>
-                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">When a model with a Mirror Token becomes the Target of an Enemy Ki Feat you may spend the Mirror Token to cause the Ki Feat to instead Target the model using the Ki Feat as if that model were the original Target (ignoring restrictions).</characteristic>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">During the Starting Phase you may choose one of the following:
+• Remove this model from play and all models gain Cover and Slow until the End Phase.  This is a Blizzard.
+• Up to 1 Friendly model in BtB gains a Mirror Token.</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="8e0e-dedf-6200-e9f3" name="Kami of Reflection" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">When a model with a Mirror Token becomes the Target of an Enemy Ki Feat you may spend the Mirror Token to cause the Ki Feat to instead Target the model using the Ki Feat as if that model were the original Target (ignoring restrictions).
+
+This model does not gain Slow from Blizzard.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -2078,6 +2131,13 @@ This model does not gain Slow from Blizzard.</characteristic>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="ea7b-1e5c-8df4-a66a" name="Kami of Reflection A" hidden="false" collective="false" import="true" type="model">
+          <modifiers>
+            <modifier type="set" field="a111-8656-5c05-7415" value="0.0">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5073-f00b-a8f6-5e3b" type="instanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="097a-b0d4-fc1a-9105" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9a9c-3c06-e25c-c8c1" type="min"/>
@@ -2087,6 +2147,13 @@ This model does not gain Slow from Blizzard.</characteristic>
           </costs>
         </selectionEntry>
         <selectionEntry id="49fb-345a-1bf8-d1d7" name="Kami of Reflection B" hidden="false" collective="false" import="true" type="model">
+          <modifiers>
+            <modifier type="set" field="a111-8656-5c05-7415" value="0.0">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5073-f00b-a8f6-5e3b" type="instanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="789b-725e-28f1-75d6" type="max"/>
           </constraints>
@@ -2187,6 +2254,13 @@ This model does not gain Slow from Blizzard.</characteristic>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="bd05-c9b1-af72-7332" name="Kami of Sapping Silt A" hidden="false" collective="false" import="true" type="model">
+          <modifiers>
+            <modifier type="set" field="a111-8656-5c05-7415" value="0.0">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5073-f00b-a8f6-5e3b" type="instanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cb4e-4c7b-269d-6bb1" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cffd-9d3b-4278-27b3" type="min"/>
@@ -2196,6 +2270,13 @@ This model does not gain Slow from Blizzard.</characteristic>
           </costs>
         </selectionEntry>
         <selectionEntry id="4c24-a624-e71a-6ea9" name="Kami of Sapping Silt B" hidden="false" collective="false" import="true" type="model">
+          <modifiers>
+            <modifier type="set" field="a111-8656-5c05-7415" value="0.0">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5073-f00b-a8f6-5e3b" type="instanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="29e2-f333-6b29-949e" type="max"/>
           </constraints>
@@ -2277,7 +2358,7 @@ This model does not gain Slow from Blizzard.</characteristic>
         </infoGroup>
         <infoGroup id="ad42-2b2f-cd3b-ef47" name="Unique Effects" hidden="false">
           <profiles>
-            <profile id="5c15-9651-0594-edd8" name="Kami of the Eternal Earth" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+            <profile id="5c15-9651-0594-edd8" name="Retaliation" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
               <characteristics>
                 <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">When this model suffers Wounds in a Melee Exchange, the Attacker suffers 1 Wound ignoring Tough.</characteristic>
               </characteristics>
@@ -2301,6 +2382,13 @@ This model does not gain Slow from Blizzard.</characteristic>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="0215-2abe-3bf9-0117" name="Kami of the Eternal Earth A" hidden="false" collective="false" import="true" type="model">
+          <modifiers>
+            <modifier type="set" field="a111-8656-5c05-7415" value="0.0">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5073-f00b-a8f6-5e3b" type="instanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="66ce-1efa-1a5b-f7dc" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="86c8-77d0-12df-7ff7" type="min"/>
@@ -2310,6 +2398,13 @@ This model does not gain Slow from Blizzard.</characteristic>
           </costs>
         </selectionEntry>
         <selectionEntry id="db5d-a7ae-0d3a-121a" name="Kami of the Eternal Earth B" hidden="false" collective="false" import="true" type="model">
+          <modifiers>
+            <modifier type="set" field="a111-8656-5c05-7415" value="0.0">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5073-f00b-a8f6-5e3b" type="instanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cfbd-bf74-bee5-b228" type="max"/>
           </constraints>
@@ -2395,7 +2490,7 @@ This model does not gain Slow from Blizzard.</characteristic>
         </infoGroup>
         <infoGroup id="14a0-ed6b-3a26-dcf5" name="Unique Effects" hidden="false">
           <profiles>
-            <profile id="77db-a15a-5d21-9446" name="Kami of the Morning Dew" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+            <profile id="77db-a15a-5d21-9446" name="Retaliation" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
               <characteristics>
                 <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">When this model suffers Wounds in a Melee Exchange, the Attacker gains Slow until the End Phase.</characteristic>
               </characteristics>
@@ -2423,6 +2518,13 @@ This model does not gain Slow from Blizzard.</characteristic>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="5007-8773-3ee8-46aa" name="Kami of the Morning Dew A" hidden="false" collective="false" import="true" type="model">
+          <modifiers>
+            <modifier type="set" field="a111-8656-5c05-7415" value="0.0">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5073-f00b-a8f6-5e3b" type="instanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4dd9-327f-b0ad-ced5" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4f77-30fe-6b53-e8be" type="min"/>
@@ -2432,6 +2534,13 @@ This model does not gain Slow from Blizzard.</characteristic>
           </costs>
         </selectionEntry>
         <selectionEntry id="05fa-b67e-1648-1fb2" name="Kami of the Morning Dew B" hidden="false" collective="false" import="true" type="model">
+          <modifiers>
+            <modifier type="set" field="a111-8656-5c05-7415" value="0.0">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5073-f00b-a8f6-5e3b" type="instanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9d20-dbbf-cd3e-010e" type="max"/>
           </constraints>
@@ -2502,7 +2611,7 @@ This model does not gain Slow from Blizzard.</characteristic>
         </infoGroup>
         <infoGroup id="358e-31c6-3493-23d8" name="Unique Effects" hidden="false">
           <profiles>
-            <profile id="33cb-3e01-0aa0-c580" name="Kami of the Strong West Wind" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+            <profile id="33cb-3e01-0aa0-c580" name="Retaliation" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
               <characteristics>
                 <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">When this model suffers Wounds, after the current activation resolves, place it within 2&quot; of its current location.</characteristic>
               </characteristics>
@@ -2539,7 +2648,8 @@ This model does not gain Slow from Blizzard.</characteristic>
                 <characteristic name="Range Bands" typeId="be6a-50c6-d691-e2e9">2/3/4</characteristic>
                 <characteristic name="Traits" typeId="3410-4428-ef91-eb61"/>
                 <characteristic name="Specials" typeId="cdaf-b6ac-89d4-39ef"/>
-                <characteristic name="Unique Effects" typeId="3bf8-6525-f003-4990">This model&apos;s Melee Attacks do no Damage. On a successful Ranged Attack Place the Target anywhere within 1&quot; of its current location but not into an Enemy model&apos;s ZoC.</characteristic>
+                <characteristic name="Unique Effects" typeId="3bf8-6525-f003-4990">Models hit by this model&apos;s Ranged Attack suffer no Damage.
+On a successful Ranged Attack Place the Target anywhere within 1&quot; of its current location but not into an Enemy model&apos;s ZoC.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -2554,6 +2664,13 @@ This model does not gain Slow from Blizzard.</characteristic>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="02fa-0223-60f0-3fff" name="Kami of the Strong West Wind A" hidden="false" collective="false" import="true" type="model">
+          <modifiers>
+            <modifier type="set" field="a111-8656-5c05-7415" value="0.0">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5073-f00b-a8f6-5e3b" type="instanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9fa6-4815-5b76-758e" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0c17-cd7f-c149-a876" type="min"/>
@@ -2563,6 +2680,13 @@ This model does not gain Slow from Blizzard.</characteristic>
           </costs>
         </selectionEntry>
         <selectionEntry id="fc00-6839-11fd-e3a0" name="Kami of the Strong West Wind B" hidden="false" collective="false" import="true" type="model">
+          <modifiers>
+            <modifier type="set" field="a111-8656-5c05-7415" value="0.0">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5073-f00b-a8f6-5e3b" type="instanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fc10-be8e-68ed-9c19" type="max"/>
           </constraints>
@@ -5316,7 +5440,7 @@ This model can only be recruited into a Warband that contains all three Blood Br
         </infoGroup>
         <infoGroup id="4f47-baa3-a4b1-3fc9" name="Unique Effects" hidden="false">
           <profiles>
-            <profile id="09ea-5899-3c3a-b6e3" name="Kami of Tempered Iron" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+            <profile id="09ea-5899-3c3a-b6e3" name="Retaliation" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
               <characteristics>
                 <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">When this model suffers Wounds in a Melee Exchange, the Attacker is pushed directly away from this model until it leaves this model&apos;s ZoC.</characteristic>
               </characteristics>
@@ -5340,6 +5464,13 @@ This model can only be recruited into a Warband that contains all three Blood Br
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="6b26-cfca-7721-90be" name="Kami of Tempered Iron A" hidden="false" collective="false" import="true" type="model">
+          <modifiers>
+            <modifier type="set" field="a111-8656-5c05-7415" value="0.0">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5073-f00b-a8f6-5e3b" type="instanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8699-f0d8-2e45-c0c6" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9e6b-ad8f-7c8a-057f" type="min"/>
@@ -5349,6 +5480,13 @@ This model can only be recruited into a Warband that contains all three Blood Br
           </costs>
         </selectionEntry>
         <selectionEntry id="f149-3eb8-2dfd-84bd" name="Kami of Tempered Iron B" hidden="false" collective="false" import="true" type="model">
+          <modifiers>
+            <modifier type="set" field="a111-8656-5c05-7415" value="0.0">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5073-f00b-a8f6-5e3b" type="instanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ebdb-73c7-f916-52a4" type="max"/>
           </constraints>
@@ -6680,7 +6818,7 @@ Permitted [ Hiroto]</characteristic>
             <profile id="90db-6343-393c-dc41" name="Vortex" hidden="false" typeId="7e20-258e-bf92-18f9" typeName="Ranged Weapon">
               <characteristics>
                 <characteristic name="Ranged Weapon Strength" typeId="15aa-b6bd-6923-271f">Special</characteristic>
-                <characteristic name="Range Bands" typeId="be6a-50c6-d691-e2e9">-/2-6</characteristic>
+                <characteristic name="Range Bands" typeId="be6a-50c6-d691-e2e9">-/2/6</characteristic>
                 <characteristic name="Traits" typeId="3410-4428-ef91-eb61"/>
                 <characteristic name="Specials" typeId="cdaf-b6ac-89d4-39ef"/>
                 <characteristic name="Unique Effects" typeId="3bf8-6525-f003-4990"/>
@@ -6690,19 +6828,24 @@ Permitted [ Hiroto]</characteristic>
         </infoGroup>
         <infoGroup id="004c-ed99-418c-3e94" name="Unique Effects" hidden="true">
           <profiles>
-            <profile id="bd4b-7c36-053e-1435" name="Kami of the Empty Mind" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+            <profile id="bd4b-7c36-053e-1435" name="Retaliation" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
               <characteristics>
-                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">When this model suffers Wounds from a Melee Attack, after the Damage is resolved the attacking model gains a Spirit Block Marker.
-When this model hits with a Melee or Ranged Attack, instead of rolling Damage remove a Ki Token from the model and place it on this model.
-This model cannot have more than 2 Ki Tokens; any Ki Tokens in excess of this model&apos;s Ki Statistic may be given to 1 model in BtB.
-When this model is Killed, you may add 2 Counters to the &lt;&lt;&gt;&gt; Communal Card if you have recruited it into your Warband.</characteristic>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">When this model suffers Wounds from a Melee attack, after the Melee Exchange is resolved the attacking model gains a Spirit Block Marker.</characteristic>
               </characteristics>
             </profile>
             <profile id="1d3e-457d-93f7-9952" name="Starting Phase" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
               <characteristics>
                 <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">During the Starting Phase choose 1 of the following:
-• Remove this model from play and choose 1 model in BtB. That model&apos;s Melee Weapons gain Sharp (1), Pierce (1), and Brutal (+1) until the End Phase.
-• Choose 1 model in BtB. That model&apos;s Melee Weapons gain Sharp (1), and Pierce (1).</characteristic>
+• Remove this model from play. If you do remove all Ki Tokens from non-Soulless models within 2&quot;.
+• Remove 1 Ki Token from an Enemy model within 6&quot; and place it on this model, any Ki Tokens in excess of this model&apos;s Ki Statistic may be given to 1 model in BtB.</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="23f8-04b0-024d-4030" name="Kami of the Empty Mind" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">When this model makes a successful Melee or Ranged attack, instead of rolling Damage remove a Ki Token from the model and place it on this model.
+This model cannot have more than 2 Ki Tokens, any Ki Tokens in excess of this model&apos;s Ki Statistic may be given to 1 model in Btb.
+
+When this model is Killed, you may add 1 Counter to the Blessings of the Void Communal Card if you have recruited it into your Warband.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -6723,6 +6866,7 @@ When this model is Killed, you may add 2 Counters to the &lt;&lt;&gt;&gt; Commun
             <infoLink id="d329-80a5-1628-9d78" name="Dodge " hidden="false" targetId="14d5-d459-5d8a-c73e" type="rule"/>
             <infoLink id="567c-bf45-c1f7-92bb" name="Agile" hidden="false" targetId="6a46-2f07-1725-11b2" type="rule"/>
             <infoLink id="cc8d-aa74-266a-36c0" name="Cloudwalk" hidden="false" targetId="538c-1266-626b-fcc9" type="rule"/>
+            <infoLink id="ef89-58aa-65dc-ac47" name="Intangible" hidden="false" targetId="7f5c-c63d-f96f-65af" type="rule"/>
           </infoLinks>
         </infoGroup>
       </infoGroups>
@@ -6736,14 +6880,9 @@ When this model is Killed, you may add 2 Counters to the &lt;&lt;&gt;&gt; Commun
       <selectionEntries>
         <selectionEntry id="9ff2-77af-2d3a-a03e" name="Kami of the Empty Mind A" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
-            <modifier type="set" field="9f27-709c-a232-c102" value="0.0">
+            <modifier type="set" field="a111-8656-5c05-7415" value="0.0">
               <conditions>
                 <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5073-f00b-a8f6-5e3b" type="instanceOf"/>
-              </conditions>
-            </modifier>
-            <modifier type="set" field="a111-8656-5c05-7415" value="8.0">
-              <conditions>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5073-f00b-a8f6-5e3b" type="notInstanceOf"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -6752,7 +6891,7 @@ When this model is Killed, you may add 2 Counters to the &lt;&lt;&gt;&gt; Commun
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9f27-709c-a232-c102" type="min"/>
           </constraints>
           <costs>
-            <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0.0"/>
+            <cost name=" Rice" typeId="a111-8656-5c05-7415" value="8.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="3436-4874-2761-1635" name="Kami of the Empty Mind B" hidden="false" collective="false" import="true" type="upgrade">
@@ -6765,6 +6904,7 @@ When this model is Killed, you may add 2 Counters to the &lt;&lt;&gt;&gt; Commun
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f7c5-e2a2-0263-c863" type="max"/>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6c57-66f8-3276-4f86" type="min"/>
           </constraints>
           <costs>
             <cost name=" Rice" typeId="a111-8656-5c05-7415" value="8.0"/>
@@ -8864,7 +9004,7 @@ Requirement [Kiyozumi Sadaka]</characteristic>
         </infoGroup>
         <infoGroup id="c699-32bf-2d57-1396" name="Unique Effects" hidden="false">
           <profiles>
-            <profile id="de6b-daa5-52a7-7f7d" name="Unique Effects" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+            <profile id="de6b-daa5-52a7-7f7d" name="Mercenary" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
               <characteristics>
                 <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">If this model gains any Ki using its Leech trait then Enemy models cannot declare the use of Special Defences in Melee Exchanges with this model until the End Phase.</characteristic>
               </characteristics>
@@ -8981,7 +9121,7 @@ Requirement (Kenmeina)</characteristic>
         </infoGroup>
         <infoGroup id="faf4-9bfb-fe5b-60fe" name="Unique Effects" hidden="false">
           <profiles>
-            <profile id="785f-8679-0c23-116f" name="Unique Effects" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+            <profile id="785f-8679-0c23-116f" name="Mercenary" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
               <characteristics>
                 <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">If this model gains any Ki using its Leech trait then it gains Bravery until the End Phase.</characteristic>
               </characteristics>
