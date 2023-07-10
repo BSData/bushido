@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="0b85-0901-eb64-b84b" name="The Savage Wave" revision="26" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="15" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="0b85-0901-eb64-b84b" name="The Savage Wave" revision="27" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="15" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="5048-3a52-5689-6d0b" name="Ambush" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -1502,7 +1502,7 @@ Exclusion [Animal, Cavalry]</characteristic>
             <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
             <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">8</characteristic>
             <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">8 OOOOO OOO</characteristic>
-            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Medium 30mm</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Medium 40mm</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -3336,7 +3336,7 @@ Until the End Phase Enemy models gain Indomitable (-1) to a minimum of 0.</chara
             <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
             <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">8</characteristic>
             <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">8 OOOOO OOO</characteristic>
-            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Medium 30mm</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Medium 40mm</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -3921,6 +3921,38 @@ When this model is Killed, Enemy models in BtB gain a Poison (1) Marker.</charac
       </modifiers>
       <categoryLinks>
         <categoryLink id="21bc-a593-0213-83a3" name="New CategoryLink" hidden="false" targetId="5073-f00b-a8f6-5e3b" primary="true"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="2c9b-faa0-5fe8-559d" name="Kami of the Strong West Wind" hidden="true" collective="false" import="true" targetId="9404-f1fd-c785-168c" type="selectionEntry">
+      <modifierGroups>
+        <modifierGroup>
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5902-ac4e-658c-7cf5" type="atLeast"/>
+          </conditions>
+          <modifiers>
+            <modifier type="append" field="name" value="(reference)"/>
+            <modifier type="set" field="hidden" value="false"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
+      <categoryLinks>
+        <categoryLink id="549c-3b07-1c8d-e4d0" name="New CategoryLink" hidden="false" targetId="5073-f00b-a8f6-5e3b" primary="true"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="57c9-35ea-ea5b-e07c" name="Kami of Choking Fog" hidden="true" collective="false" import="true" targetId="f3c3-0154-adbf-aa05" type="selectionEntry">
+      <modifierGroups>
+        <modifierGroup>
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5902-ac4e-658c-7cf5" type="atLeast"/>
+          </conditions>
+          <modifiers>
+            <modifier type="append" field="name" value="(reference)"/>
+            <modifier type="set" field="hidden" value="false"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
+      <categoryLinks>
+        <categoryLink id="40bc-2c78-1a58-e22d" name="New CategoryLink" hidden="false" targetId="5073-f00b-a8f6-5e3b" primary="true"/>
       </categoryLinks>
     </entryLink>
   </entryLinks>
@@ -4943,15 +4975,7 @@ Whenever a Friendly model within 6” makes a Fear Test, Attack Roll, Defence Ro
         <entryLink id="da6e-87ef-8b20-1d24" name="Bakemono Archer" hidden="false" collective="false" import="true" targetId="1798-6533-32b0-0f26" type="selectionEntry">
           <modifiers>
             <modifier type="append" field="name" value="B"/>
-            <modifier type="set" field="6eed-2728-43bb-4cdf" value="1.0">
-              <conditions>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5073-f00b-a8f6-5e3b" type="instanceOf"/>
-              </conditions>
-            </modifier>
           </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6eed-2728-43bb-4cdf" type="min"/>
-          </constraints>
           <profiles>
             <profile id="dadc-fc94-ac04-051b" name="Bakemono Archer B" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
               <characteristics>
@@ -5029,15 +5053,7 @@ Whenever a Friendly model within 6” makes a Fear Test, Attack Roll, Defence Ro
         <entryLink id="66ce-38dc-a311-901a" name="Bakemono Beater" hidden="false" collective="false" import="true" targetId="9932-6942-c8a3-7d72" type="selectionEntry">
           <modifiers>
             <modifier type="append" field="name" value="B"/>
-            <modifier type="set" field="fa8f-f2f0-1efb-57c4" value="1.0">
-              <conditions>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5073-f00b-a8f6-5e3b" type="instanceOf"/>
-              </conditions>
-            </modifier>
           </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fa8f-f2f0-1efb-57c4" type="min"/>
-          </constraints>
           <profiles>
             <profile id="f877-e7c3-ff07-a274" name="Bakemono Beater B" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
               <characteristics>
@@ -5143,15 +5159,7 @@ Whenever a Friendly model within 6” makes a Fear Test, Attack Roll, Defence Ro
         <entryLink id="fbc7-f71d-9f60-d5dd" name="Bakemono Bushi" hidden="false" collective="false" import="true" targetId="7e77-1608-8841-c507" type="selectionEntry">
           <modifiers>
             <modifier type="append" field="name" value="B"/>
-            <modifier type="set" field="d57d-ff12-1a96-3c8b" value="1.0">
-              <conditions>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5073-f00b-a8f6-5e3b" type="instanceOf"/>
-              </conditions>
-            </modifier>
           </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d57d-ff12-1a96-3c8b" type="min"/>
-          </constraints>
           <profiles>
             <profile id="7dfb-3e05-3387-3c4a" name="Bakemono Bushi B" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
               <characteristics>
@@ -5262,15 +5270,7 @@ Whenever a Friendly model within 6” makes a Fear Test, Attack Roll, Defence Ro
         <entryLink id="0286-8783-bb08-dafb" name="Bakemono Raider" hidden="false" collective="false" import="true" targetId="373c-333e-9a1f-f881" type="selectionEntry">
           <modifiers>
             <modifier type="append" field="name" value="B"/>
-            <modifier type="set" field="c89b-ba5e-cbd7-600c" value="1.0">
-              <conditions>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5073-f00b-a8f6-5e3b" type="instanceOf"/>
-              </conditions>
-            </modifier>
           </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c89b-ba5e-cbd7-600c" type="min"/>
-          </constraints>
           <profiles>
             <profile id="3f8e-1b70-65f1-97a8" name="Bakemono Raider B" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
               <characteristics>
@@ -5376,15 +5376,7 @@ Whenever a Friendly model within 6” makes a Fear Test, Attack Roll, Defence Ro
         <entryLink id="f5bd-0980-0722-dca3" name="Bakemono Spearman" hidden="false" collective="false" import="true" targetId="d985-3a04-866a-57a9" type="selectionEntry">
           <modifiers>
             <modifier type="append" field="name" value="B"/>
-            <modifier type="set" field="e6a0-44f8-b6b6-5590" value="1.0">
-              <conditions>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5073-f00b-a8f6-5e3b" type="instanceOf"/>
-              </conditions>
-            </modifier>
           </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e6a0-44f8-b6b6-5590" type="min"/>
-          </constraints>
           <profiles>
             <profile id="ab85-f280-78da-a4eb" name="Bakemono Spearman B" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
               <characteristics>
