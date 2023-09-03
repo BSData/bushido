@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="4213-717c-2228-e731" name="Temple of Ro-Kan" revision="28" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="15" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="4213-717c-2228-e731" name="Temple of Ro-Kan" revision="29" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="16" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="5048-3a52-5689-6d0b" name="Spiritual Harmony" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -895,7 +895,7 @@ Immediately distribute 4 additional Ki Tokens to non-Soulles models in the Warba
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="21.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="7bfe-1461-3eb4-ac0e" name="Twin Shisa" hidden="false" collective="false" import="true" type="model">
+    <selectionEntry id="7bfe-1461-3eb4-ac0e" name="Twin Shisa" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
         <modifier type="set" field="hidden" value="true">
           <conditionGroups>
@@ -1246,7 +1246,7 @@ This model cannot be Healed.</characteristic>
         </infoGroup>
         <infoGroup id="f842-ed6d-f125-f9df" name="Ki Feats" hidden="false">
           <infoLinks>
-            <infoLink id="7a2b-3428-4c43-d6a1" name="Binding Roots" hidden="false" targetId="a506-8ea1-2ce0-47a4" type="infoGroup"/>
+            <infoLink id="7a2b-3428-4c43-d6a1" name="Binding Roots" hidden="false" targetId="80b9-ab3d-e2b7-b6f0" type="infoGroup"/>
             <infoLink id="4607-ea43-72c8-818a" name="Regrowth" hidden="false" targetId="3e7f-72a5-2db2-4109" type="infoGroup"/>
           </infoLinks>
         </infoGroup>
@@ -6475,6 +6475,11 @@ Permitted [Masters]</characteristic>
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ffd8-72ee-dab5-a006" type="atLeast"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d03f-d8e3-534b-7be7" type="max"/>
@@ -6570,12 +6575,143 @@ Whenever another model on the Battlefield is Placed by an effect not on this car
       <categoryLinks>
         <categoryLink id="812f-e11c-e78c-3d64" name="Non-Unique" hidden="false" targetId="d181-219d-3add-d47b" primary="false"/>
         <categoryLink id="90cb-57b3-1518-6639" name="Kami" hidden="false" targetId="6639-615e-f1ab-bc64" primary="false"/>
-        <categoryLink id="17d3-1a69-0736-91ca" name="Ronin Profile Cards" hidden="false" targetId="9fba-f50b-c8f7-8396" primary="true"/>
         <categoryLink id="e618-c29d-ebd5-7d11" name="Element: Wind" hidden="false" targetId="3184-d389-7218-d304" primary="false"/>
         <categoryLink id="09ee-4c5a-8d33-21c5" name="Minor" hidden="false" targetId="d45e-8b05-fa4c-e6c9" primary="false"/>
+        <categoryLink id="4a82-271e-1100-56ae" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
       </categoryLinks>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="16.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="2ed9-3fdd-2d6b-97eb" name="Kaiyō &amp; Mangetsu" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1a12-f47f-8f23-0777" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="33ea-e647-b8c5-2267" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="44e6-4155-6b9b-2521" type="atLeast"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ffd8-72ee-dab5-a006" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bf49-3a55-6ae3-30ce" type="max"/>
+      </constraints>
+      <infoGroups>
+        <infoGroup id="0327-aaa4-e609-e5d8" name="Traits" hidden="false">
+          <profiles>
+            <profile id="5160-8b3e-2272-0575" name="Kaiyō &amp; Mangetsu" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Agile, Cloudwalk, Group, Insignificant, Kami, Soulless</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="5704-953d-29aa-b7ef" name="Agile" hidden="false" targetId="6a46-2f07-1725-11b2" type="rule"/>
+            <infoLink id="cdca-36c6-cbd5-9097" name="Cloudwalk" hidden="false" targetId="538c-1266-626b-fcc9" type="rule"/>
+            <infoLink id="ef56-87b3-5872-204e" name="Group" hidden="false" targetId="4c02-03a1-ae7b-7821" type="rule"/>
+            <infoLink id="4bca-39a9-ec7a-e635" name="Kami" hidden="false" targetId="50d4-ec7a-9763-1b4d" type="rule"/>
+            <infoLink id="7643-7cef-9460-5c85" name="Insignificant" hidden="false" targetId="1614-d86c-ef8a-c095" type="rule"/>
+            <infoLink id="8b1d-25c7-be32-e325" name="Soulless" hidden="false" targetId="af31-aad0-fcea-9590" type="rule"/>
+            <infoLink id="bf27-f54e-8ea0-4344" name="Tiny" hidden="false" targetId="335c-7f6f-9ca0-cb93" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="9780-18bb-48eb-cbca" name="Melee Weapon" hidden="false">
+          <profiles>
+            <profile id="fee4-6dc8-275b-f6ec" name="Splash!" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">Special</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e"></characteristic>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d"></characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="6e1f-0d30-dfee-f47f" name="Pierce " hidden="false" targetId="39e4-14d7-5533-6e67" type="rule"/>
+            <infoLink id="7762-b3c8-bef4-86d0" name="Combo Attack " hidden="false" targetId="78ab-6a94-be24-8f74" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="8c1f-5002-81fe-d263" name="Unique Effects" hidden="false">
+          <profiles>
+            <profile id="b846-de88-dbec-fde4" name="Kaiyō" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">While this model is in play, when a Friendly Villager model within 6&quot; would generate Ki Tokens (or otherwise gain Ki Tokens) instead place those Ki Tokens on this card.
+This model has the Virtue (2&quot;) Trait.</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="83bf-a0af-fea3-2d9d" name="Mangetsu" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">Mangetsu: Whenever a Friendly Villager model within 6&quot; would spend Ki Tokens you may spend them from this card to pay for Ki Feats, Boosts or other effects.
+This model has the Heal (2) Trait.</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="0a56-72fc-45d3-372b" name="Kaiyō &amp; Mangetsu" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">This card represents two unique models, each with their own unique abilities.
+
+Kaiyo &amp; Mangetsu share a single Ki Pool.
+When Kaiyo or Mangetsu would generate Ki Tokens (Or otherwise gain Ki Tokens) instead place those Ki Tokens on this card.
+
+This model cannot have Enhancement cards attached.
+
+This profile card begins the game with 5 Ki Tokens, instead of its Maximum Ki Tokens from its Kami Trait.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="225b-21a9-64a7-1211" name="Heal" hidden="false" targetId="bd98-52d2-3a66-08e7" type="rule"/>
+            <infoLink id="d4dd-1619-b6df-f977" name="Virtue" hidden="false" targetId="57d7-cc96-ce93-9258" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="c650-0f32-82c2-52f2" name="Ki Feats" hidden="false">
+          <infoLinks>
+            <infoLink id="768d-767e-66c2-1167" name="Vitality" hidden="false" targetId="c1e2-9229-c77a-e46e" type="infoGroup"/>
+          </infoLinks>
+        </infoGroup>
+      </infoGroups>
+      <categoryLinks>
+        <categoryLink id="4b6a-8823-d34b-873a" name="Construct" hidden="false" targetId="d7c5-a2b9-4696-fd33" primary="false"/>
+        <categoryLink id="557b-8800-da5c-0e30" name="Faction: Temple of Rokan" hidden="false" targetId="3186-3d3a-a105-887b" primary="false"/>
+        <categoryLink id="d505-e566-ac7d-f6f8" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
+        <categoryLink id="960e-9476-55b1-128b" name="New CategoryLink" hidden="false" targetId="d181-219d-3add-d47b" primary="false"/>
+        <categoryLink id="b790-57a6-cdcc-e7f2" name="Armour" hidden="false" targetId="f322-702a-ff62-b37e" primary="false"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="2e79-19b4-084f-bfc9" name="Kaiyō" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6a00-d4c7-0e14-26b1" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cb38-cdfb-66cd-1a9b" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="3651-f755-a839-ee81" name="Kaiyō" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+              <characteristics>
+                <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">1</characteristic>
+                <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277"/>
+                <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">1</characteristic>
+                <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+                <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
+                <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+                <characteristic name="Ki" typeId="3969-9568-a914-6854">0</characteristic>
+                <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+                <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">∞</characteristic>
+                <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29"/>
+                <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b"/>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+      </selectionEntries>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="12.0"/>
       </costs>
     </selectionEntry>
   </selectionEntries>

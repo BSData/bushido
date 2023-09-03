@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="b586-d588-5153-3d1d" name="Library-Feats" revision="24" battleScribeVersion="2.03" library="true" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="15" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="b586-d588-5153-3d1d" name="Library-Feats" revision="25" battleScribeVersion="2.03" library="true" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="16" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedInfoGroups>
     <infoGroup id="57e7-9fb3-3c54-8ea8" name="Blessing of the Kami" hidden="false">
       <profiles>
@@ -309,19 +309,6 @@
         <infoLink id="8ee7-8c67-32a2-c541" name="Fire" hidden="false" targetId="2422-40b7-254f-f6f1" type="rule"/>
         <infoLink id="2f5b-1dee-7deb-c8c7" name="Lightweight" hidden="false" targetId="c75c-7124-2b1f-a4d9" type="rule"/>
       </infoLinks>
-    </infoGroup>
-    <infoGroup id="a506-8ea1-2ce0-47a4" name="Binding Roots" hidden="false">
-      <profiles>
-        <profile id="da04-5b50-863c-6c47" name="Binding Roots" hidden="false" typeId="993a-e62a-7922-0ccb" typeName="Ki Feat">
-          <characteristics>
-            <characteristic name="Cost" typeId="a126-54d9-0a27-f4b6">X+1</characteristic>
-            <characteristic name="Timing" typeId="f8a8-8a3e-ef58-4c61">Simple</characteristic>
-            <characteristic name="Subject" typeId="4ac8-2bb1-0c84-f088">Pulse 3&quot;</characteristic>
-            <characteristic name="Limitation" typeId="6fc9-5d13-2687-b2a5">Not in BtB</characteristic>
-            <characteristic name="Description" typeId="f804-b969-00da-2123">Choose up to X Enemy models within the Pulse’s area of effect. Each model chosen becomes Immobilised.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
     </infoGroup>
     <infoGroup id="3e7f-72a5-2db2-4109" name="Regrowth" hidden="false">
       <profiles>
@@ -1007,6 +994,9 @@ If this model was in a Melee Exchange, the Kami can neither be damaged nor deal 
           </characteristics>
         </profile>
       </profiles>
+      <infoLinks>
+        <infoLink id="5fb5-8fce-0d5c-6d6f" name="Resistance " hidden="false" targetId="7e3f-9dc3-cacb-469f" type="rule"/>
+      </infoLinks>
     </infoGroup>
     <infoGroup id="8d57-5047-99ba-71cf" name="Dashuhua" hidden="false">
       <profiles>
@@ -3457,22 +3447,6 @@ This Ranged Attack is considered to be in the Medium Range Band and ignores Rang
       </profiles>
       <infoLinks>
         <infoLink id="f23c-7969-3cea-a89a" name="Immovable" hidden="false" targetId="d34b-724f-6fc8-7420" type="rule"/>
-      </infoLinks>
-    </infoGroup>
-    <infoGroup id="6934-faff-0962-5ba6" name="Conditioning" hidden="false">
-      <profiles>
-        <profile id="9798-b2a5-d4a0-4bfd" name="Conditioning" hidden="false" typeId="993a-e62a-7922-0ccb" typeName="Ki Feat">
-          <characteristics>
-            <characteristic name="Cost" typeId="a126-54d9-0a27-f4b6">1</characteristic>
-            <characteristic name="Timing" typeId="f8a8-8a3e-ef58-4c61">Instant</characteristic>
-            <characteristic name="Subject" typeId="4ac8-2bb1-0c84-f088">Personal</characteristic>
-            <characteristic name="Limitation" typeId="6fc9-5d13-2687-b2a5"/>
-            <characteristic name="Description" typeId="f804-b969-00da-2123">This model gains Resistance (2) until the end of the current activation.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <infoLinks>
-        <infoLink id="7e17-2162-8fa2-3b9b" name="Resistance " hidden="false" targetId="7e3f-9dc3-cacb-469f" type="rule"/>
       </infoLinks>
     </infoGroup>
     <infoGroup id="a9dd-2f09-5bc9-3498" name="Mighty Blow" hidden="false">
@@ -6388,6 +6362,61 @@ X is equal to the number of Ki Tokens on this model after paying for this Ki Fea
           </characteristics>
         </profile>
       </profiles>
+    </infoGroup>
+    <infoGroup id="cc8f-228f-6b54-903e" name="Binding Shadows" hidden="false">
+      <profiles>
+        <profile id="af71-5126-1c91-b6d5" name="Binding Shadows" hidden="false" typeId="993a-e62a-7922-0ccb" typeName="Ki Feat">
+          <characteristics>
+            <characteristic name="Cost" typeId="a126-54d9-0a27-f4b6">2</characteristic>
+            <characteristic name="Timing" typeId="f8a8-8a3e-ef58-4c61">Instant</characteristic>
+            <characteristic name="Subject" typeId="4ac8-2bb1-0c84-f088">Target BtB</characteristic>
+            <characteristic name="Limitation" typeId="6fc9-5d13-2687-b2a5"/>
+            <characteristic name="Description" typeId="f804-b969-00da-2123">During an Enemy model&apos;s activation in which it enters BtB with this model, that Enemy model gains an Immobilised Marker at the end of the current Activation.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </infoGroup>
+    <infoGroup id="34ee-5158-4fb5-b325" name="Ophidian Arrow" hidden="false">
+      <profiles>
+        <profile id="bf3e-4281-c630-f394" name="Ophidian Arrow" hidden="false" typeId="993a-e62a-7922-0ccb" typeName="Ki Feat">
+          <characteristics>
+            <characteristic name="Cost" typeId="a126-54d9-0a27-f4b6">3</characteristic>
+            <characteristic name="Timing" typeId="f8a8-8a3e-ef58-4c61">Simple</characteristic>
+            <characteristic name="Subject" typeId="4ac8-2bb1-0c84-f088">Personal</characteristic>
+            <characteristic name="Limitation" typeId="6fc9-5d13-2687-b2a5">No Move, Not in BtB</characteristic>
+            <characteristic name="Description" typeId="f804-b969-00da-2123">Make a Ranged Attack, ignoring Reload Markers and the Reload Trait.
+On a successful attack, choose an Izu Serpent model that is not currently in play.
+Before you make the Damage Roll, the Target suffers the following in addition to the Ranged Damage roll:
+• Asp: Poison (2) Marker
+• Boa Constrictor: Immobilised Marker
+• Cobra: Blind Marker
+
+Once the attack is resolved, if the attack was successful, Deploy the chosen Izu Serpent model in BtB with the Target model, ignoring the usual BtB restriction on Deploying a model.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </infoGroup>
+    <infoGroup id="1113-4143-36c0-a1fd" name="Ancestral Guidance" hidden="false">
+      <profiles>
+        <profile id="815c-7183-3e97-7530" name="Ancestral Guidance" hidden="false" typeId="993a-e62a-7922-0ccb" typeName="Ki Feat">
+          <characteristics>
+            <characteristic name="Cost" typeId="a126-54d9-0a27-f4b6">4</characteristic>
+            <characteristic name="Timing" typeId="f8a8-8a3e-ef58-4c61">Complex</characteristic>
+            <characteristic name="Subject" typeId="4ac8-2bb1-0c84-f088">Aura ∞&quot;</characteristic>
+            <characteristic name="Limitation" typeId="6fc9-5d13-2687-b2a5">Once Per Game</characteristic>
+            <characteristic name="Description" typeId="f804-b969-00da-2123">Choose one of the following:
+Takashi Hida: Friendly models in the Aura gain Indomitable (3).
+Takashi Akira: Friendly models in the Aura gain Last Stand.
+Takashi Hiroshi: Friendly Samurai models in the Aura gain Melee Boost (2).
+Takashi Sakura: Friendly Ashigaru models in the Aura gain Adept [Melee](2).</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="9d9b-6fa4-d4b5-fa23" name="Adept" hidden="false" targetId="6fc1-6672-95ed-c4e7" type="rule"/>
+        <infoLink id="faee-23eb-ab61-d806" name="Last Stand" hidden="false" targetId="54e7-a381-1c38-dd0e" type="rule"/>
+        <infoLink id="9440-af5a-edf7-adb6" name="Indomitable " hidden="false" targetId="3beb-6f28-e7c4-a236" type="rule"/>
+      </infoLinks>
     </infoGroup>
   </sharedInfoGroups>
   <catalogueLinks>

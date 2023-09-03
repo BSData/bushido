@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="0b85-0901-eb64-b84b" name="The Savage Wave" revision="27" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="15" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="0b85-0901-eb64-b84b" name="The Savage Wave" revision="28" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="16" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="5048-3a52-5689-6d0b" name="Ambush" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -3381,6 +3381,16 @@ Until the End Phase Enemy models gain Indomitable (-1) to a minimum of 0.</chara
             <infoLink id="bc8c-30a0-3368-c252" name="Choke Hold" hidden="false" targetId="5c8e-25b1-a26e-7979" type="infoGroup"/>
           </infoLinks>
         </infoGroup>
+        <infoGroup id="0523-aa92-68c0-a1d9" name="Unique Effects" hidden="false">
+          <profiles>
+            <profile id="5803-dc9f-85a1-96cd" name="Yasei" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">When this model declares a Charge Action, this model may Move through Destructible terrain; if it does, remove the terrain from the battlefield.
+When this model makes a Damage Roll as a result of a Melee Exchange, add one to the number of Wounds inflicted.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </infoGroup>
       </infoGroups>
       <categoryLinks>
         <categoryLink id="c546-7d2a-8971-0285" name="Faction: The Savage Wave" hidden="false" targetId="c920-0951-5d96-5693" primary="false"/>
@@ -3490,6 +3500,128 @@ When this model is Killed, Enemy models in BtB gain a Poison (1) Marker.</charac
       </entryLinks>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="7.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="1b63-4edb-f49c-51df" name="Tsuta" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d14c-bf06-fc37-16e2" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2125-1289-3bb1-15c1" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="bd75-31a1-5a23-cd2d" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="bec1-2154-3ab5-7979" type="atLeast"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3d74-3204-02b7-34cb" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="6888-b58c-63fc-0f91" name="Tsuta" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">3</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">1</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">6</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">8 OOOOO OOO</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Medium 40mm</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="f0ff-bdec-ca95-3a4e" name="Traits" hidden="false">
+          <profiles>
+            <profile id="faf1-e4b6-3baa-6675" name="Tsuta" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Aggressive, Armour (1), Bravery, Fear (5), Tough (1)</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="5747-1826-b533-0444" name="Bravery" hidden="false" targetId="f9b2-38d2-7cda-de6e" type="rule"/>
+            <infoLink id="92c7-e1bb-d1b5-ee89" name="Fear" hidden="false" targetId="3586-4583-7f10-1f31" type="rule"/>
+            <infoLink id="513b-4f25-0b83-3f94" name="Tough" hidden="false" targetId="5613-a6cf-495a-229f" type="rule"/>
+            <infoLink id="847c-3b2a-49a9-8aa1" name="Aggressive" hidden="false" targetId="a445-e041-8d5f-aa28" type="rule"/>
+            <infoLink id="436c-be11-5668-8de9" name="Armour" hidden="false" targetId="8615-1c63-2242-5746" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="fb76-f30b-e103-6a14" name="Melee Weapon" hidden="false">
+          <profiles>
+            <profile id="3e89-1d4a-a158-38ef" name="Fists" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+1</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e"/>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Grapple Attack (1), Stun Attack (1)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="10b5-6304-d00e-2e97" name="Stun Attack" hidden="false" targetId="ae27-975e-6c4b-d84e" type="rule"/>
+            <infoLink id="8551-1ace-7097-b0d9" name="Grapple Attack" hidden="false" targetId="1b9a-c71d-0a30-8d0d" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="c3d8-18ee-4118-4fdd" name="Ki Feats" hidden="false">
+          <infoLinks>
+            <infoLink id="646e-d111-75ab-c24b" name="Consume Soul" hidden="false" targetId="85bd-ac0d-842c-3097" type="infoGroup"/>
+            <infoLink id="0ae4-6fba-5f99-c347" name="Idolise" hidden="false" targetId="1fc9-1c80-6504-6e24" type="infoGroup"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="1976-8d4a-37f4-17c9" name="Ranged Weapon" hidden="false">
+          <profiles>
+            <profile id="635e-5607-9eef-ef5a" name="Spiked Balls" hidden="false" typeId="7e20-258e-bf92-18f9" typeName="Ranged Weapon">
+              <characteristics>
+                <characteristic name="Ranged Weapon Strength" typeId="15aa-b6bd-6923-271f">+3</characteristic>
+                <characteristic name="Range Bands" typeId="be6a-50c6-d691-e2e9">3/6/9</characteristic>
+                <characteristic name="Traits" typeId="3410-4428-ef91-eb61">Ammo (2), Bleed (1/1)</characteristic>
+                <characteristic name="Specials" typeId="cdaf-b6ac-89d4-39ef">Sweep Attack (1)</characteristic>
+                <characteristic name="Unique Effects" typeId="3bf8-6525-f003-4990">When a model is Damaged by this Weapon, reduce its Move statistic by its Armour Trait&apos;s value until the End Phase.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="967b-f811-1e82-3e84" name="Stun Attack" hidden="false" targetId="ae27-975e-6c4b-d84e" type="rule"/>
+            <infoLink id="c824-7654-4f0d-70a8" name="Grapple Attack" hidden="false" targetId="1b9a-c71d-0a30-8d0d" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="9963-f440-49ae-af98" name="Unique Effects" hidden="false">
+          <profiles>
+            <profile id="916f-676d-1340-2fad" name="Tsuta" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">When this model declares a Wait Action and spends 2 Ki Tokens to remove Destructible terrain:
+If it currently has no Ammo Tokens, this model will also gain 1 Ammo Token and may immediately make a Ranged Attack.</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="6f98-a480-3bf0-18db" name="Idolise" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">This model may only Target Oni or Onisho with its Idolise Ki Feat.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </infoGroup>
+      </infoGroups>
+      <categoryLinks>
+        <categoryLink id="368e-8c49-d90b-9ba8" name="Faction: The Savage Wave" hidden="false" targetId="c920-0951-5d96-5693" primary="false"/>
+        <categoryLink id="e43f-52e8-dcdd-cb5e" name="Onisho" hidden="false" targetId="3507-42ea-bf26-b23d" primary="false"/>
+        <categoryLink id="92bb-b9b8-3205-a8fb" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
+        <categoryLink id="0b4f-4216-3611-75ab" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
+        <categoryLink id="fd23-fd2f-abc8-19f6" name="Kijo" hidden="false" targetId="cb8b-ca36-e256-96c7" primary="false"/>
+        <categoryLink id="a06c-8bb6-5fed-0cca" name="Armour" hidden="false" targetId="f322-702a-ff62-b37e" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="acf1-e35d-c9a9-b126" name="Enhancements" hidden="false" collective="false" import="true" targetId="74e6-2485-1c0a-4227" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="14.0"/>
       </costs>
     </selectionEntry>
   </selectionEntries>

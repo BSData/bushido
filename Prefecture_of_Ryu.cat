@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="0cac-b8ad-fb7f-ef84" name="Prefecture of Ryu" revision="26" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="15" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="0cac-b8ad-fb7f-ef84" name="Prefecture of Ryu" revision="27" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="16" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="8688-cd6e-bcbe-2cbb" name="Ima" hidden="false"/>
     <categoryEntry id="65a8-4392-a95b-115b" name="Takashi" hidden="false"/>
@@ -4439,6 +4439,116 @@ When this model gains Ki from the Channel Trait, it also gains a Virtue Token.</
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="15.0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="566e-49df-357d-b40f" name="Tatsuo" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1c4e-2aa6-2d32-f0d4" type="equalTo"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="07e0-41f1-b800-70ad" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="614b-293a-f4ab-712a" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="2238-4ca3-3332-6078" name="Tatsuo" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">2</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277"/>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">2</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">2</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c">3</characteristic>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">8</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">5 OOOOO</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="a406-d8b7-efd1-8da0" name="Ki Feats" hidden="false">
+          <infoLinks>
+            <infoLink id="3769-ecc4-59fa-c536" name="Idolise" hidden="false" targetId="1fc9-1c80-6504-6e24" type="infoGroup"/>
+            <infoLink id="9c53-876f-01df-0a41" name="Ancestral Guidance" hidden="false" targetId="1113-4143-36c0-a1fd" type="infoGroup"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="1687-4f1f-b88a-caae" name="Traits" hidden="false">
+          <profiles>
+            <profile id="af9c-a55b-f86b-031c" name="Tatsuo" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Channel (2/6&quot;), Virtue (8&quot;)</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="bfa0-175a-52f6-aa43" name="Virtue" hidden="false" targetId="57d7-cc96-ce93-9258" type="rule"/>
+            <infoLink id="560a-0359-8f88-b650" name="Channel" hidden="false" targetId="69af-3098-e21e-7734" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="4a40-2bcb-20a5-074e" name="Melee Weapon" hidden="false">
+          <profiles>
+            <profile id="b342-0038-4327-b0ad" name="Unarmed" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">-2</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e"></characteristic>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Push Defence (0)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="9a94-457b-f71c-0aa5" name="Push Defence" hidden="false" targetId="74fc-a971-d9c2-278c" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="6047-3d41-98c1-2a74" name="Unique Effects" hidden="false">
+          <profiles>
+            <profile id="63de-102c-8e5b-fc4d" name="Virtue" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">While this model is in play, when a Friendly Prefecture model spends a Virtue Token you may choose one of the following effects:
+• This model gains Coordinated Attack [Takashi] until the end of the current activation.
+• This model gains Jump Up until the end of the current activation.
+• Enemy models in a Melee Exchange with this model lose Reach until the end of the current activation.
+• This model gains Leadership (+0/+2&quot;) until the end of the current activation.</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="e50b-bd25-f4a0-cced" name="Idolise" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">This model may only target Dragon or Shisai models with its Idolise feat.</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="7137-ae6c-e797-bf3e" name="Channel" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">This model may only choose a Friendly Shisai model for its Channel Trait.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="ba9a-7fab-c98d-ac5c" name="Jump Up" hidden="false" targetId="1575-e12f-4ca3-c557" type="rule"/>
+            <infoLink id="1540-17d5-f5be-b4c4" name="Co-ordinated Attack" hidden="false" targetId="2337-7bcc-c1f2-f2bd" type="rule"/>
+            <infoLink id="5181-067f-25d2-29f7" name="Leadership" hidden="false" targetId="8ec4-bfdc-8c03-f631" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+      </infoGroups>
+      <categoryLinks>
+        <categoryLink id="fe20-cdc6-1730-5d43" name="Faction: Prefecture of Ryu" hidden="false" targetId="7532-4f60-381d-2941" primary="false"/>
+        <categoryLink id="525c-12a2-b100-ad8d" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
+        <categoryLink id="a6a8-d93d-b6ba-f9b8" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
+        <categoryLink id="061e-2554-b283-75d5" name="Shisai" hidden="false" targetId="a485-b6b0-b58e-a3a1" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="fcc0-39cb-7f8d-7899" name="Enhancements" hidden="false" collective="false" import="true" targetId="3dad-1423-9b3c-86a7" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="14.0"/>
+      </costs>
+    </selectionEntry>
   </selectionEntries>
   <entryLinks>
     <entryLink id="d149-3ea0-90df-a450" name="Ancestor Spirit" hidden="false" collective="false" import="true" targetId="a8a8-fc30-a7e2-2913" type="selectionEntry">
@@ -5550,7 +5660,6 @@ This model is considered Medium Size for the purposes of this ability.</characte
       </characteristics>
     </profile>
   </sharedProfiles>
-
   <catalogueLinks>
     <catalogueLink id="2d06-871e-02e4-dc9f" name="Library_Ronin" targetId="b489-b304-948d-52d0" type="catalogue" importRootEntries="true"/>
   </catalogueLinks>

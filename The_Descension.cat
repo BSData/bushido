@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="d4b0-a54e-a48b-88a5" name="The Descension" revision="23" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="15" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="d4b0-a54e-a48b-88a5" name="The Descension" revision="24" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="16" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="093f-43eb-fd72-ead0" name="Move Boost" hidden="false"/>
   </categoryEntries>
@@ -3824,6 +3824,9 @@ Exclusion [Cliff Tribe, Plainsman]</characteristic>
               </characteristics>
             </profile>
           </profiles>
+          <infoLinks>
+            <infoLink id="7436-7a9e-b527-d7f5" name="Sixth Sense" hidden="false" targetId="ec49-3908-f1d1-8de2" type="rule"/>
+          </infoLinks>
         </infoGroup>
       </infoGroups>
       <categoryLinks>
@@ -3840,6 +3843,113 @@ Exclusion [Cliff Tribe, Plainsman]</characteristic>
       </entryLinks>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="14.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="f6af-8d2c-c1d9-6f5b" name="Hotene" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9704-9d38-8681-8266" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="118b-3406-56d9-05d2" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9592-a8de-7eb6-461b" type="atLeast"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="280a-e2f3-72dd-212c" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="c3d7-9cb9-7e50-a33d" name="Hotene" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">3</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">1</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">8</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">6 OOOOO O</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="4239-3b52-230b-738f" name="Traits" hidden="false">
+          <profiles>
+            <profile id="98e5-7997-33cf-526c" name="Hotene" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Armour (1), Fear (3), Immune [Bleed, Fire, Poison], Spirit (I)</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="1f60-8efb-d872-01be" name="Armour" hidden="false" targetId="8615-1c63-2242-5746" type="rule"/>
+            <infoLink id="27e0-9e9d-507f-7554" name="Fear" hidden="false" targetId="3586-4583-7f10-1f31" type="rule"/>
+            <infoLink id="0203-3ca8-4107-b976" name="Immune" hidden="false" targetId="ea08-b25e-0ea8-af73" type="rule"/>
+            <infoLink id="921a-e5a5-dc9e-00f4" name="Spirit" hidden="false" targetId="a9ba-9904-7d29-7bcb" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="c4ba-727e-37c8-e500" name="Ki Feats" hidden="false">
+          <infoLinks>
+            <infoLink id="eed7-13a8-1c6f-8ec1" name="Binding Shadows" hidden="false" targetId="cc8f-228f-6b54-903e" type="infoGroup"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="dec8-a9b5-4cd2-806a" name="Melee Weapon" hidden="false">
+          <profiles>
+            <profile id="4a82-3989-8734-a9e1" name="Polearm" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+0</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Reach</characteristic>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Forceback Attack (0), Push Defence (0)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="d2a1-bf43-1170-1f4e" name="Forceback Attack" hidden="false" targetId="2682-7c66-4163-28f2" type="rule"/>
+            <infoLink id="0f4f-b7b6-b0d2-7007" name="Reach" hidden="false" targetId="e28e-d5dd-a262-1101" type="rule"/>
+            <infoLink id="9e99-e8cb-f77c-5b9b" name="Push Defence" hidden="false" targetId="74fc-a971-d9c2-278c" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="71c3-05c5-9ea9-33f6" name="Unique Effects" hidden="false">
+          <profiles>
+            <profile id="3962-b84c-31ec-c165" name="Cliff Tribe" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">When a Tengu model within 4&quot; is Killed this model gains a Virtue Token.</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="69d2-a8c1-b11e-8338" name="Hotene" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">While this model has a Virtue Token it gains Bravery and Sixth Sense.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="d399-42ad-8b7f-10ee" name="Bravery" hidden="false" targetId="f9b2-38d2-7cda-de6e" type="rule"/>
+            <infoLink id="07d2-b6a0-0b21-333a" name="Sixth Sense" hidden="false" targetId="ec49-3908-f1d1-8de2" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+      </infoGroups>
+      <categoryLinks>
+        <categoryLink id="35cd-5633-3866-9b1f" name="Tribesman" hidden="false" targetId="607a-a497-e3f1-edfe" primary="false"/>
+        <categoryLink id="766a-a33b-81d0-129e" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
+        <categoryLink id="65c6-3f7a-038a-10ea" name="Faction: The Descension" hidden="false" targetId="daaa-d0d2-e66e-0672" primary="false"/>
+        <categoryLink id="a732-7763-2e5c-e126" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
+        <categoryLink id="9c51-4be7-9a6c-b4b0" name="Brutal" hidden="false" targetId="f62f-dd0b-4f06-06a6" primary="false"/>
+        <categoryLink id="f572-fbac-d23f-001c" name="Armour" hidden="false" targetId="f322-702a-ff62-b37e" primary="false"/>
+        <categoryLink id="b3a0-bdcd-8665-52fa" name="Cliff Tribe" hidden="false" targetId="020f-7723-5e32-6ed0" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="17d1-555c-bc7d-07a9" name="Enhancements" hidden="false" collective="false" import="true" targetId="f513-13e0-08f2-0d67" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="12.0"/>
       </costs>
     </selectionEntry>
   </selectionEntries>
