@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="b489-b304-948d-52d0" name="Library-Ronin" revision="36" battleScribeVersion="2.03" library="true" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="16" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="b489-b304-948d-52d0" name="Library-Ronin" revision="37" battleScribeVersion="2.03" library="true" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="16" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="4e24-3a7e-77bc-dfed" name="Balance" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -7936,7 +7936,7 @@ When this model spends Ki Tokens, it may instead remove any number of Ghost Toke
         <infoGroup id="8e11-68db-66b1-b5e2" name="Ki Feats" hidden="false">
           <infoLinks>
             <infoLink id="c25a-432f-5784-0240" name="Encourage" hidden="false" targetId="9ed3-c0e7-9306-529a" type="infoGroup"/>
-            <infoLink id="f8db-ab4c-29bb-ac9b" name="Reputation" hidden="false" targetId="c3f2-d460-703f-c5d4" type="infoGroup"/>
+            <infoLink id="f8db-ab4c-29bb-ac9b" name="Reputation" hidden="false" targetId="9cf7-7bc5-9f76-8e23" type="infoGroup"/>
           </infoLinks>
         </infoGroup>
       </infoGroups>
@@ -9366,7 +9366,7 @@ The model making the attack gains a Stunned Marker.</characteristic>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="d613-98ad-219e-5869" name="Plainsmen Falconers" hidden="false" collective="false" import="true" type="model">
+    <selectionEntry id="d613-98ad-219e-5869" name="Plainsmen Falconers" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
         <modifier type="set" field="hidden" value="true">
           <conditionGroups>
@@ -9512,6 +9512,107 @@ This model can make only one Bird Strike Ranged Attack per turn.</characteristic
       </selectionEntries>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="aa2c-41ac-0a6c-bf8d" name="Zama the Falconer" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="477a-e693-0888-08f7" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9402-edcc-93a2-aef1" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b94d-f7cb-a84c-4077" type="atLeast"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6e3a-74b5-f104-dd1c" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="fa58-ccb8-f6b5-048d" name="Zama the Falconer" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">3</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33">3</characteristic>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">1</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">6</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">6 OOOOO O</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="cf6a-7619-36f5-3561" name="Traits" hidden="false">
+          <profiles>
+            <profile id="3b7e-f108-2401-0bf2" name="Zama the Falconer" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Armour (1), Aware, Command [Bird](2/6&quot;)</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="dda4-dfc5-a064-b5f5" name="Command" hidden="false" targetId="1b83-5421-f050-365a" type="rule"/>
+            <infoLink id="1faa-c022-1795-7d52" name="Aware" hidden="false" targetId="ff4a-6b14-09dd-2343" type="rule"/>
+            <infoLink id="8567-9032-a430-7c32" name="Armour" hidden="false" targetId="8615-1c63-2242-5746" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="8279-a3e6-8db4-37ef" name="Melee Weapon" hidden="false">
+          <profiles>
+            <profile id="e53b-33a9-312a-397c" name="Talwar" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+0</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e"/>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d"/>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+        </infoGroup>
+        <infoGroup id="7172-5bec-c7a3-7369" name="Ki Feats" hidden="false">
+          <infoLinks>
+            <infoLink id="133b-bd1a-f4be-1faa" name="Barb" hidden="false" targetId="bcc1-29cb-8e60-61a7" type="infoGroup"/>
+            <infoLink id="b411-b04a-2ab5-378a" name="Eye Peck" hidden="false" targetId="ab29-bcd2-5798-fff2" type="infoGroup"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="d8fa-fcd7-9ea8-beab" name="Ranged Weapon" hidden="false">
+          <profiles>
+            <profile id="e3ee-bac3-40d5-3ada" name="Bird Strike" hidden="false" typeId="7e20-258e-bf92-18f9" typeName="Ranged Weapon">
+              <characteristics>
+                <characteristic name="Ranged Weapon Strength" typeId="15aa-b6bd-6923-271f">+0</characteristic>
+                <characteristic name="Range Bands" typeId="be6a-50c6-d691-e2e9">-/10/-</characteristic>
+                <characteristic name="Traits" typeId="3410-4428-ef91-eb61">Sharp (1)</characteristic>
+                <characteristic name="Specials" typeId="cdaf-b6ac-89d4-39ef">Combo Attack (0)</characteristic>
+                <characteristic name="Unique Effects" typeId="3bf8-6525-f003-4990">This model does not need LOS for its Bird Strike Ranged Attack and ignores Cover and Tiny modifiers but can never Surprise the Target.
+This model&apos;s Bird Strike Weapon gains Throw Attack (O) against Tiny models.
+This model can make only one Bird Strike Ranged Attack per turn.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="f579-79fc-343e-dbd4" name="Sharp " hidden="false" targetId="6092-9fb5-5196-d1eb" type="rule"/>
+            <infoLink id="b985-2c5b-3e40-3b3d" name="Combo Attack " hidden="false" targetId="78ab-6a94-be24-8f74" type="rule"/>
+            <infoLink id="a2d1-df7e-1423-5d00" name="Throw Attack" hidden="false" targetId="e4a9-1967-fb91-ce07" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+      </infoGroups>
+      <categoryLinks>
+        <categoryLink id="f7db-e9e8-c0a5-7dad" name="New CategoryLink" hidden="false" targetId="9fba-f50b-c8f7-8396" primary="true"/>
+        <categoryLink id="fa4f-8798-de14-b53b" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
+        <categoryLink id="ff3b-5166-c28e-093f" name="Mercenary" hidden="false" targetId="3cf6-ff9a-b96a-cb1f" primary="false"/>
+        <categoryLink id="2c31-d646-f85f-3a29" name="Tribesman" hidden="false" targetId="607a-a497-e3f1-edfe" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="6ec9-820a-be88-651a" name="Enhancements" hidden="false" collective="false" import="true" targetId="f486-4498-03e3-c397" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="16.0"/>
       </costs>
     </selectionEntry>
   </sharedSelectionEntries>

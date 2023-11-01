@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="6a8f-b352-80c6-855f" name="Silvermoon Trade Syndicate" revision="27" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="16" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="6a8f-b352-80c6-855f" name="Silvermoon Trade Syndicate" revision="28" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="16" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="5048-3a52-5689-6d0b" name="Bought Loyalty" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -4135,6 +4135,125 @@ If it fails the Fear Test, that model&apos;s activation ends. Regardless of the 
       </entryLinks>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="17.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="854f-1d5b-c5d2-a647" name="Brother Zendaka" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6ed5-b090-2422-5a4f" type="equalTo"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="98a6-e76a-f99b-a1d3" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="086f-49fd-ed0c-8c16" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="df89-0f6c-2552-85d5" name="Brother Zendaka" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">3</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33">3</characteristic>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">5</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">2</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">6</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">6 OOOOO O</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="24e4-7ba6-3cc6-b66b" name="Ki Feats" hidden="false">
+          <infoLinks>
+            <infoLink id="5ab5-7b56-bf96-410e" name="Pay Your Dues" hidden="false" targetId="4adc-ece8-d38a-0b52" type="infoGroup"/>
+            <infoLink id="f8b9-42c2-0023-183e" name="Territorial" hidden="false" targetId="b577-489b-bb83-15e0" type="infoGroup"/>
+            <infoLink id="73ff-987b-fa96-efcc" name="Reputation" hidden="false" targetId="9cf7-7bc5-9f76-8e23" type="infoGroup"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="d489-d37d-1d6b-356c" name="Melee Weapon" hidden="false">
+          <profiles>
+            <profile id="ca22-cd7e-832f-0892" name="Shiv" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+1</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Chain Weapon (1), Reach</characteristic>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Combo Attack (1), Sidestep Defence (0), Powerful Attack (1)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="479e-bc0a-8cc0-2117" name="Chain Weapon" hidden="false" targetId="84f9-d10e-0e9f-d79c" type="rule"/>
+            <infoLink id="11be-c5aa-a974-3cc6" name="Reach" hidden="false" targetId="e28e-d5dd-a262-1101" type="rule"/>
+            <infoLink id="779b-ddec-c4b7-41bf" name="Sidestep Defence " hidden="false" targetId="753c-6c3b-64d7-203c" type="rule"/>
+            <infoLink id="0b42-fcd5-ab36-d2a4" name="Combo Attack " hidden="false" targetId="78ab-6a94-be24-8f74" type="rule"/>
+            <infoLink id="bc2b-9410-c5ec-846b" name="Powerful Attack" hidden="false" targetId="d56a-058d-95d9-5b60" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="6488-a080-9f7b-5548" name="Ranged Weapon" hidden="false">
+          <profiles>
+            <profile id="d93d-bec8-e552-2611" name="Monologue" hidden="false" typeId="7e20-258e-bf92-18f9" typeName="Ranged Weapon">
+              <characteristics>
+                <characteristic name="Ranged Weapon Strength" typeId="15aa-b6bd-6923-271f">Special</characteristic>
+                <characteristic name="Range Bands" typeId="be6a-50c6-d691-e2e9">-/6/-</characteristic>
+                <characteristic name="Traits" typeId="3410-4428-ef91-eb61"/>
+                <characteristic name="Specials" typeId="cdaf-b6ac-89d4-39ef"/>
+                <characteristic name="Unique Effects" typeId="3bf8-6525-f003-4990">When this model makes a successful Ranged Attack with this weapon the Target model gains a Frightened Marker.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </infoGroup>
+        <infoGroup id="0db9-7330-662c-e98d" name="Traits" hidden="false">
+          <profiles>
+            <profile id="b967-8cd4-6b03-64e0" name="Brother Zendaka" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Assassin, Coordinated Attack [Lama&apos;a], Fearless, Fortune, Strategy [Durable, Mettle (1)], Tactician (1)</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="3327-87fb-6289-56a3" name="Assassin" hidden="false" targetId="ef59-928b-2550-f0a3" type="rule"/>
+            <infoLink id="295d-411e-aefd-1b90" name="Co-ordinated Attack" hidden="false" targetId="2337-7bcc-c1f2-f2bd" type="rule"/>
+            <infoLink id="72d6-7836-d062-bd47" name="Fearless" hidden="false" targetId="5d6f-1746-9080-aca5" type="rule"/>
+            <infoLink id="ff43-2aa8-94f1-6880" name="Fortune" hidden="false" targetId="abf1-1c0e-4717-77e2" type="rule"/>
+            <infoLink id="ca21-f452-b158-0772" name="Strategy" hidden="false" targetId="7c36-9814-c78f-f9d8" type="rule"/>
+            <infoLink id="4bcf-9aae-8b62-d2ca" name="Durable" hidden="false" targetId="3612-7e19-3cb9-72d0" type="rule"/>
+            <infoLink id="5a67-8d20-4d6c-a875" name="Mettle" hidden="false" targetId="9598-efc3-51c7-5811" type="rule"/>
+            <infoLink id="bc22-92ac-f9fb-34ea" name="Tactician" hidden="false" targetId="14dd-c67a-5240-e647" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="6895-65c4-8333-87b2" name="Unique Effects" hidden="false">
+          <profiles>
+            <profile id="eb41-f514-ae29-36ac" name="Unique Effects" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">This model may only be targeted by Enemy models if it is the closest valid target for that Enemy model.
+This model may not have Enhancements Attached to it.</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="0619-ddfc-5168-33db" name="Virtue" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">When a Friendly model spends a Virtue Token you may choose the following effect:
+• Other Friendly Buto models gain Bodyguard [This model](3&quot;) until the end of the current activation.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </infoGroup>
+      </infoGroups>
+      <categoryLinks>
+        <categoryLink id="df9c-abaf-6e09-e7bb" name="Faction: Silvermoon Trade Syndicate" hidden="false" targetId="875a-48b1-3c9f-0a14" primary="false"/>
+        <categoryLink id="9288-d55d-e12e-bed5" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
+        <categoryLink id="79c9-ff8a-4e01-e028" name="Shatei" hidden="false" targetId="dd57-4bab-fa7b-f75c" primary="false"/>
+        <categoryLink id="9349-ab09-f162-0731" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
+      </categoryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="19.0"/>
       </costs>
     </selectionEntry>
   </selectionEntries>

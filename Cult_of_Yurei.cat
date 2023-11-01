@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="1ac7-2939-2874-7530" name="Cult of Yurei" revision="28" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="16" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="1ac7-2939-2874-7530" name="Cult of Yurei" revision="29" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="16" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="5048-3a52-5689-6d0b" name="Drain Spirit" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -6956,16 +6956,15 @@ During the End Phase you may decide the order States are resolved.</characterist
           <profiles>
             <profile id="87f9-4d11-eaea-6915" name="Unarmed" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
               <characteristics>
-                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+1</characteristic>
-                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Reach</characteristic>
-                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Critical Attack (1)</characteristic>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">-2</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e"/>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Sidestep Attack (0)</characteristic>
                 <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
               </characteristics>
             </profile>
           </profiles>
           <infoLinks>
-            <infoLink id="d24b-3334-28e0-e985" name="Reach" hidden="false" targetId="e28e-d5dd-a262-1101" type="rule"/>
-            <infoLink id="8084-085a-0341-e339" name="Critical Attack" hidden="false" targetId="7ec7-56ae-79e3-423e" type="rule"/>
+            <infoLink id="8084-085a-0341-e339" name="Sidestep Attack " hidden="false" targetId="070d-a69d-0b46-27dc" type="rule"/>
           </infoLinks>
         </infoGroup>
         <infoGroup id="1fb7-8a99-057d-f911" name="Ki Feats" hidden="false">
@@ -6986,6 +6985,123 @@ During the End Phase you may decide the order States are resolved.</characterist
       </entryLinks>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="18.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="8f04-0117-03a5-61be" name="Kozo" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="abc1-93da-2f5a-dab4" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="538d-4d36-c07f-9024" type="atLeast"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="true" id="0ae3-3ceb-8a83-3c64" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="07ee-1215-41e1-efeb" name="Kozo" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">3</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">5</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac">3</characteristic>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">2</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">8</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">5 OOOOO</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="1b44-8714-9580-eaa0" name="Traits" hidden="false">
+          <profiles>
+            <profile id="a5ae-40d1-8e2f-4823" name="Kozo" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Armour (1), Assassin, Camouflage (2&quot;), Co-ordinated Attack [Rat], Dodge (1), Jump Up, Lightfooted</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="d85d-4234-0e3b-924c" name="Camouflage" hidden="false" targetId="9010-4983-c98c-1751" type="rule"/>
+            <infoLink id="926c-65fe-b040-1319" name="Armour" hidden="false" targetId="8615-1c63-2242-5746" type="rule"/>
+            <infoLink id="5406-ee8d-74ad-4fb4" name="Co-ordinated Attack" hidden="false" targetId="2337-7bcc-c1f2-f2bd" type="rule"/>
+            <infoLink id="38a7-9bbd-dd8d-438f" name="Dodge " hidden="false" targetId="14d5-d459-5d8a-c73e" type="rule"/>
+            <infoLink id="34bf-abea-224d-d5df" name="Assassin" hidden="false" targetId="ef59-928b-2550-f0a3" type="rule"/>
+            <infoLink id="3cb5-f81e-627e-0bab" name="Jump Up" hidden="false" targetId="1575-e12f-4ca3-c557" type="rule"/>
+            <infoLink id="a383-6338-7666-4ad8" name="Lightfooted" hidden="false" targetId="57d2-cd57-07f9-addf" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="36aa-f7e3-b2b9-e33b" name="Ki Feats" hidden="false">
+          <infoLinks>
+            <infoLink id="ad5d-037f-c178-5bc3" name="Endless Gnawing" hidden="false" targetId="fffc-d99e-0de6-69cb" type="infoGroup"/>
+            <infoLink id="e2b9-c2b2-36f8-2331" name="Shadow Rats" hidden="false" targetId="0206-540d-3b3a-00fc" type="infoGroup"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="7a8d-e6a9-76a2-0704" name="Melee Weapons" hidden="false">
+          <profiles>
+            <profile id="d3ca-8d3a-4521-a6ae" name="Ninjatō" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+1</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e"/>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Sidestep Defence (0), Sweep Attack (0)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+            <profile id="30f8-3acd-d858-19f6" name="Claw" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+0</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Bleed (1/1)</characteristic>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Push Defence (0), Sidestep Attack (0)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="7628-ff66-e026-2d9c" name="Sidestep Attack " hidden="false" targetId="070d-a69d-0b46-27dc" type="rule"/>
+            <infoLink id="bce7-f7d4-ba64-4e38" name="Sidestep Defence " hidden="false" targetId="753c-6c3b-64d7-203c" type="rule"/>
+            <infoLink id="2a31-fd1a-c1b3-b7d7" name="Push Defence" hidden="false" targetId="74fc-a971-d9c2-278c" type="rule"/>
+            <infoLink id="dddd-293d-0bec-2fe8" name="Bleed" hidden="false" targetId="ac4a-e540-4fe3-126a" type="rule"/>
+            <infoLink id="f23d-453d-ef35-1493" name="Sweep Attack" hidden="false" targetId="bcbd-fab2-c8e2-6ff7" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="0e93-d643-36c9-e344" name="Unique Effects" hidden="false">
+          <profiles>
+            <profile id="1e26-f24d-7a80-72f3" name="Unique Effects" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">At the start of this model&apos;s activation choose one of the following:
+• This model&apos;s Weapons gain Poison (1/1) until the end of the activation.
+• This Model&apos;s Melee Weapons gain Disease (1) until the end of the current activation.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="94f5-cbbd-b19f-58ee" name="Poison " hidden="false" targetId="7290-85f4-42cf-0b75" type="rule"/>
+            <infoLink id="0e89-7029-da05-2b6a" name="Disease" hidden="false" targetId="3163-f043-5504-dc45" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+      </infoGroups>
+      <categoryLinks>
+        <categoryLink id="8ea2-70a7-19cf-cb36" name="Faction: Cult of Yurei" hidden="false" targetId="0d0a-4c02-8dce-676b" primary="false"/>
+        <categoryLink id="cbaa-ce7c-16d7-c075" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
+        <categoryLink id="b716-0dd3-c162-b1f8" name="Yokai" hidden="false" targetId="8a19-8c2b-46a8-4086" primary="false"/>
+        <categoryLink id="a465-5e00-d044-8d2b" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
+        <categoryLink id="b2a7-e20b-91c1-5212" name="Nezumi" hidden="false" targetId="aac6-6a8a-d6d3-e074" primary="false"/>
+        <categoryLink id="08e9-8a38-73f2-0e4a" name="Rat" hidden="false" targetId="1b63-9d2c-9724-21b5" primary="false"/>
+        <categoryLink id="bd5f-c0d9-fed5-6c80" name="Armour" hidden="false" targetId="f322-702a-ff62-b37e" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="744d-9919-8a74-6e61" name="Enhancements" hidden="false" collective="false" import="true" targetId="ef93-ecd4-88c1-9224" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="14.0"/>
       </costs>
     </selectionEntry>
   </selectionEntries>
