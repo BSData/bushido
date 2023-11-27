@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="b489-b304-948d-52d0" name="Library-Ronin" revision="38" battleScribeVersion="2.03" library="true" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="16" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="b489-b304-948d-52d0" name="Library-Ronin" revision="39" battleScribeVersion="2.03" library="true" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="17" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="4e24-3a7e-77bc-dfed" name="Balance" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -9462,7 +9462,7 @@ This model can make only one Bird Strike Ranged Attack per turn.</characteristic
       <selectionEntries>
         <selectionEntry id="676b-9a72-81e1-6424" name="Plainsmen Falconer A" hidden="false" collective="false" import="true" type="model">
           <constraints>
-            <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1224-44b8-d9b1-0321" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1224-44b8-d9b1-0321" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="420d-6ae0-909a-3e4a" type="min"/>
           </constraints>
           <profiles>
@@ -9497,7 +9497,7 @@ This model can make only one Bird Strike Ranged Attack per turn.</characteristic
         </selectionEntry>
         <selectionEntry id="8eb7-c6d0-1b21-08d9" name="Plainsmen Falconer B" hidden="false" collective="false" import="true" type="model">
           <constraints>
-            <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d259-da80-a0dd-cabe" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d259-da80-a0dd-cabe" type="max"/>
           </constraints>
           <profiles>
             <profile id="3a39-e982-8414-c8ae" name="Plainsmen Falconer B" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
@@ -9640,9 +9640,14 @@ This model can make only one Bird Strike Ranged Attack per turn.</characteristic
     <selectionEntryGroup id="f486-4498-03e3-c397" name="Enhancements" hidden="false" collective="false" import="true">
       <modifiers>
         <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5073-f00b-a8f6-5e3b" type="instanceOf"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="6be3-5710-4a9e-0c9f" type="atLeast"/>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5073-f00b-a8f6-5e3b" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <selectionEntryGroups>
