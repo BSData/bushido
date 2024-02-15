@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="d4b0-a54e-a48b-88a5" name="The Descension" revision="26" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="17" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="d4b0-a54e-a48b-88a5" name="The Descension" revision="27" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="17" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="093f-43eb-fd72-ead0" name="Move Boost" hidden="false"/>
   </categoryEntries>
@@ -3950,6 +3950,116 @@ Exclusion [Cliff Tribe, Plainsman]</characteristic>
       </entryLinks>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="12.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="2a72-ffb8-43b6-cec1" name="Ojobe" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="efff-019c-1bff-2d6e" type="equalTo"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="118b-3406-56d9-05d2" type="equalTo"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9592-a8de-7eb6-461b" type="atLeast"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1b6e-4731-3264-fb1c" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="d2d6-8521-d039-b49f" name="Ojobe" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">4</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">4</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33">3</characteristic>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">5</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">2</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c">3</characteristic>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">8</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">7 OOOOO OO</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Medium 40mm</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="a678-7d15-2e8b-eab9" name="Ki Feats" hidden="false">
+          <infoLinks>
+            <infoLink id="d648-b396-7876-8aa8" name="Umbrella Block" hidden="false" targetId="0005-2a79-5638-daa2" type="infoGroup"/>
+            <infoLink id="82fd-84d7-eaa7-2dcf" name="Salvation" hidden="false" targetId="1be7-2e14-7a49-943a" type="infoGroup"/>
+            <infoLink id="232d-a447-feeb-84d3" name="Wing Buffet" hidden="false" targetId="f61c-2f62-4738-ad00" type="infoGroup"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="f3e0-e2e2-0dbb-c487" name="Melee Weapon" hidden="false">
+          <profiles>
+            <profile id="f8ce-6d48-d35e-c90f" name="Tonfa" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+2</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Pierce (1)</characteristic>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Combo Attack (0), Counterstrike Defence (0), Sidestep Defence (0)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="a0ba-edac-0531-17db" name="Counterstrike Defence " hidden="false" targetId="136e-4c77-dc59-4c6e" type="rule"/>
+            <infoLink id="26bf-3ab9-2436-a5c8" name="Sidestep Defence " hidden="false" targetId="753c-6c3b-64d7-203c" type="rule"/>
+            <infoLink id="e147-fa40-3d1e-94b7" name="Combo Attack " hidden="false" targetId="78ab-6a94-be24-8f74" type="rule"/>
+            <infoLink id="1e03-fea2-60dc-86d9" name="Pierce " hidden="false" targetId="39e4-14d7-5533-6e67" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="26a1-2ef3-7cd4-bec0" name="Traits" hidden="false">
+          <profiles>
+            <profile id="ffe3-a628-5403-dd6f" name="Ojobe" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Armour (2), Cloudwalk, Courage (2), Dodge (1), Fear (5), Feint (1), Prowess [Attack] (l), Ranged Defence (2), Spirit (1)</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="42cd-f328-c456-8455" name="Armour" hidden="false" targetId="8615-1c63-2242-5746" type="rule"/>
+            <infoLink id="a987-34f0-2228-8b7a" name="Feint" hidden="false" targetId="38b0-4d97-3c4c-8d96" type="rule"/>
+            <infoLink id="166c-4905-409c-7d98" name="Courage" hidden="false" targetId="2c5f-d52f-24ba-7927" type="rule"/>
+            <infoLink id="b6d6-a1dd-05b6-07ae" name="Fear" hidden="false" targetId="3586-4583-7f10-1f31" type="rule"/>
+            <infoLink id="9b8e-3c6f-0dac-688f" name="Prowess " hidden="false" targetId="75ef-327a-cd08-a248" type="rule"/>
+            <infoLink id="9a39-d28a-978e-5b42" name="Spirit" hidden="false" targetId="a9ba-9904-7d29-7bcb" type="rule"/>
+            <infoLink id="322f-9d19-cfe8-4ed3" name="Ranged Defence " hidden="false" targetId="9b8d-9ca9-e25d-3988" type="rule"/>
+            <infoLink id="cbef-9b47-2ed1-faf7" name="Cloudwalk" hidden="false" targetId="538c-1266-626b-fcc9" type="rule"/>
+            <infoLink id="406a-8903-910d-7576" name="Dodge " hidden="false" targetId="14d5-d459-5d8a-c73e" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="2084-0525-d736-a88b" name="Unique Effects" hidden="false">
+          <profiles>
+            <profile id="b8d5-4a46-b0cf-9833" name="Virtue" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">While this model is in play, when a Friendly Bushi model spends a Virtue Token you may choose the following effect:
+• This Model gains Dodge (1) until the end of the current activation.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="741a-1a9d-edcc-8a83" name="Dodge " hidden="false" targetId="14d5-d459-5d8a-c73e" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+      </infoGroups>
+      <categoryLinks>
+        <categoryLink id="d674-7dcd-d090-7a54" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
+        <categoryLink id="498f-ea15-afe4-70e4" name="Faction: The Descension" hidden="false" targetId="daaa-d0d2-e66e-0672" primary="false"/>
+        <categoryLink id="d668-72f8-6761-1db9" name="Bushi" hidden="false" targetId="bd21-7464-7dc8-a907" primary="false"/>
+        <categoryLink id="af78-9419-cecd-412a" name="Kurama" hidden="false" targetId="b35a-7219-4c97-37eb" primary="false"/>
+        <categoryLink id="000f-ffd5-cfdf-488a" name="Tengu" hidden="false" targetId="6da4-f657-173c-c135" primary="false"/>
+        <categoryLink id="de86-f8f7-4c47-399e" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
+        <categoryLink id="6b01-b0cf-c539-ae39" name="Armour" hidden="false" targetId="f322-702a-ff62-b37e" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="8e79-fd14-8dc0-524b" name="Enhancements" hidden="false" collective="false" import="true" targetId="f513-13e0-08f2-0d67" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="21.0"/>
       </costs>
     </selectionEntry>
   </selectionEntries>
