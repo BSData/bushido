@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="4213-717c-2228-e731" name="Temple of Ro-Kan" revision="32" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="16" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="4213-717c-2228-e731" name="Temple of Ro-Kan" revision="33" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="17" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="5048-3a52-5689-6d0b" name="Spiritual Harmony" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -1131,7 +1131,15 @@ This model cannot be Healed.</characteristic>
             <infoLink id="625d-f6db-b43d-1d76" name="Tsunami" hidden="false" targetId="cfb1-aa26-7f9c-a9d9" type="infoGroup"/>
           </infoLinks>
         </infoGroup>
-        <infoGroup id="386e-3b0f-fd78-2335" name="Unique Effects" hidden="false"/>
+        <infoGroup id="386e-3b0f-fd78-2335" name="Tsunami" hidden="false">
+          <profiles>
+            <profile id="54d5-48f7-64e5-93ba" name="Tsunami" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">This model’s Tsunami Ki Feat is Once Per Game.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </infoGroup>
       </infoGroups>
       <categoryLinks>
         <categoryLink id="6836-d907-0ca3-6cbb" name="Element: Water" hidden="false" targetId="8ec2-de25-acb0-7b5a" primary="false"/>
@@ -4541,7 +4549,6 @@ This model may be recruited into any Warband that includes Taiki.</characteristi
         <categoryLink id="21c9-583f-2313-3d96" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
         <categoryLink id="5dd8-6d8a-5ca1-88d7" name="Villager" hidden="false" targetId="9389-c90b-a833-f68d" primary="false"/>
         <categoryLink id="b7bb-3d10-82f0-0772" name="Monk" hidden="false" targetId="57a9-2b8a-3729-1ad8" primary="false"/>
-        <categoryLink id="a6bd-12f0-ccb4-c8a8" name="Taiki" hidden="false" targetId="ed70-8a71-46a4-51ea" primary="false"/>
       </categoryLinks>
       <entryLinks>
         <entryLink id="7181-d461-574a-e030" name="Enhancements" hidden="false" collective="false" import="true" targetId="d716-36e8-af1d-0a1f" type="selectionEntryGroup"/>
@@ -6528,12 +6535,9 @@ Permitted [Masters]</characteristic>
             <profile id="7e2a-8b92-a618-7dcf" name="Kami of the Summer Storm" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
               <characteristics>
                 <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">Each time this model makes a successful Ranged Attack it must use its Raijin&apos;s Rage feat if it has more than two Ki Tokens and a valid Target.
-
-When this model makes a successful Ranged or Melee Attack, the enemy model gains a Stunned Marker.
-
-When this model would make a Damage Roll for a successful Melee or Ranged attack, instead place the Enemy model anywhere within 1&quot; of its current location.
-
-Whenever another model on the Battlefield is Placed by an effect not on this card, this model gains 1 Ki Token.</characteristic>
+When this model makes a successful Ranged or Melee Attack, the enemy model gains a Stunned marker.
+When this model makes a successful Ranged or Melee Attack, instead place the Enemy model anywhere within 1” of its current location at the end of the current Activation.
+Whenever an Enemy model on the Battlefield is Placed by an effect not on this card, this model gains 1 Ki token.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -8266,7 +8270,7 @@ Requirement [Monk]</characteristic>
             <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="4400-4be9-b844-262e" name="Grand Master of the Temple" hidden="true" collective="false" import="true" type="upgrade">
+        <selectionEntry id="4400-4be9-b844-262e" name="Grand Master of the Temple" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
             <modifier type="set" field="hidden" value="false">
               <conditions>
@@ -8283,7 +8287,6 @@ Requirement [Monk]</characteristic>
               <characteristics>
                 <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">Attached model begins the game with a Virtue Token.
 Attached model gains the following:
-• Believer
 • Whenever any model spends a Virtue Token, that model gains 1 Ki Token.
 • While attached model is in play, it gains the &apos;Technique&apos; Virtue (added to profile).
 
@@ -8295,7 +8298,7 @@ Restriction [Master Ekusa]</characteristic>
             <categoryLink id="f019-d144-5fd2-4893" name="Faction Enhancement Cards" hidden="false" targetId="17cf-d9a9-c7c1-bcb6" primary="false"/>
           </categoryLinks>
           <costs>
-            <cost name=" Rice" typeId="a111-8656-5c05-7415" value="4.0"/>
+            <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
