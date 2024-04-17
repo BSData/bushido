@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="b489-b304-948d-52d0" name="Library-Ronin" revision="40" battleScribeVersion="2.03" library="true" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="17" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="b489-b304-948d-52d0" name="Library-Ronin" revision="41" battleScribeVersion="2.03" library="true" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="17" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="4e24-3a7e-77bc-dfed" name="Balance" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -1386,6 +1386,11 @@ This model cannot declare Melee or Charge Actions Targeting Imperial models.</ch
               </conditions>
             </conditionGroup>
           </conditionGroups>
+        </modifier>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="294d-a0fa-f437-2fca" type="atLeast"/>
+          </conditions>
         </modifier>
       </modifiers>
       <constraints>
@@ -5031,6 +5036,16 @@ This model can only be recruited into a Warband that contains all three Blood Br
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f616-46d8-5907-fafd" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9402-edcc-93a2-aef1" type="atLeast"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="52c6-dd89-bf9e-ffd3" type="max"/>
@@ -5872,16 +5887,9 @@ Note: there is currently no simple way to automatically check for this.</charact
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b94d-f7cb-a84c-4077" type="equalTo"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b94d-f7cb-a84c-4077" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="477a-e693-0888-08f7" type="atLeast"/>
               </conditions>
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="477a-e693-0888-08f7" type="atLeast"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f616-46d8-5907-fafd" type="lessThan"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
             </conditionGroup>
           </conditionGroups>
         </modifier>
@@ -5985,16 +5993,9 @@ When this model uses a non- Ki Boost Ki Feat it gains a Control Marker after the
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b94d-f7cb-a84c-4077" type="equalTo"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b94d-f7cb-a84c-4077" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="477a-e693-0888-08f7" type="atLeast"/>
               </conditions>
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="477a-e693-0888-08f7" type="atLeast"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f616-46d8-5907-fafd" type="lessThan"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
             </conditionGroup>
           </conditionGroups>
         </modifier>
@@ -6166,16 +6167,9 @@ This model cannot have Enhancement cards attached.</characteristic>
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b94d-f7cb-a84c-4077" type="equalTo"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b94d-f7cb-a84c-4077" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="477a-e693-0888-08f7" type="atLeast"/>
               </conditions>
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="477a-e693-0888-08f7" type="atLeast"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f616-46d8-5907-fafd" type="lessThan"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
             </conditionGroup>
           </conditionGroups>
         </modifier>
@@ -6307,16 +6301,9 @@ This model may use Fire Spin despite the Stupid trait.</characteristic>
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b94d-f7cb-a84c-4077" type="equalTo"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b94d-f7cb-a84c-4077" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="477a-e693-0888-08f7" type="atLeast"/>
               </conditions>
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="477a-e693-0888-08f7" type="atLeast"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f616-46d8-5907-fafd" type="lessThan"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
             </conditionGroup>
           </conditionGroups>
         </modifier>
@@ -6444,16 +6431,9 @@ When Targeting a non-Soulless model, this model&apos;s Ranged Weapons gain Entan
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b94d-f7cb-a84c-4077" type="equalTo"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b94d-f7cb-a84c-4077" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="477a-e693-0888-08f7" type="atLeast"/>
               </conditions>
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="477a-e693-0888-08f7" type="atLeast"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f616-46d8-5907-fafd" type="lessThan"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
             </conditionGroup>
           </conditionGroups>
         </modifier>

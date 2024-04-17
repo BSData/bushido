@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="6a8f-b352-80c6-855f" name="Silvermoon Trade Syndicate" revision="28" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="16" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="6a8f-b352-80c6-855f" name="Silvermoon Trade Syndicate" revision="29" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="17" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="5048-3a52-5689-6d0b" name="Bought Loyalty" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -4390,13 +4390,37 @@ This model may not have Enhancements Attached to it.</characteristic>
       </entryLinks>
     </entryLink>
     <entryLink id="dfa2-fd6c-a952-cefa" name="The Imperial March" hidden="false" collective="false" import="true" targetId="b94d-f7cb-a84c-4077" type="selectionEntry"/>
-    <entryLink id="e723-4c51-7d3c-0d82" name="Batu" hidden="false" collective="false" import="true" targetId="5e97-28ce-9c1b-6b8b" type="selectionEntry"/>
+    <entryLink id="e723-4c51-7d3c-0d82" name="Batu" hidden="true" collective="false" import="true" targetId="5e97-28ce-9c1b-6b8b" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f616-46d8-5907-fafd" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
     <entryLink id="4e3f-d744-fa42-23b1" name="Khendish" hidden="false" collective="false" import="true" targetId="dc54-b54e-1428-7c3e" type="selectionEntry"/>
     <entryLink id="49fc-9471-264b-1901" name="Two Lone Swordsmen" hidden="false" collective="false" import="true" targetId="29e4-7f5e-593d-2445" type="selectionEntry"/>
     <entryLink id="3a23-47be-9d75-5f39" name="Karu" hidden="false" collective="false" import="true" targetId="556c-88bf-b5ef-d732" type="selectionEntry"/>
     <entryLink id="96d7-fa23-4a43-426e" name="Brotherhood" hidden="false" collective="false" import="true" targetId="9402-edcc-93a2-aef1" type="selectionEntry"/>
-    <entryLink id="ae32-84d6-aa33-1832" name="Tru&apos;pah" hidden="true" collective="false" import="true" targetId="82bb-a55d-5366-baf2" type="selectionEntry"/>
-    <entryLink id="64ba-0376-c2a6-4ef1" name="Shosu" hidden="true" collective="false" import="true" targetId="39f7-4bb9-edb9-bde8" type="selectionEntry"/>
+    <entryLink id="ae32-84d6-aa33-1832" name="Tru&apos;pah" hidden="true" collective="false" import="true" targetId="82bb-a55d-5366-baf2" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f616-46d8-5907-fafd" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink id="64ba-0376-c2a6-4ef1" name="Shosu" hidden="true" collective="false" import="true" targetId="39f7-4bb9-edb9-bde8" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f616-46d8-5907-fafd" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
     <entryLink id="b47d-874a-aec3-e86d" name="Hozumi Daihanji" hidden="true" collective="false" import="true" targetId="2195-17c7-b68c-0111" type="selectionEntry"/>
     <entryLink id="c860-95f3-7d0b-3a8a" name="Hozumi Koga" hidden="true" collective="false" import="true" targetId="2b64-ba79-8ea1-4098" type="selectionEntry"/>
     <entryLink id="a94b-a5dd-2ef1-9575" name="Hozumi Maha" hidden="true" collective="false" import="true" targetId="09da-574e-599a-3226" type="selectionEntry"/>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="0b85-0901-eb64-b84b" name="The Savage Wave" revision="31" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="17" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="0b85-0901-eb64-b84b" name="The Savage Wave" revision="32" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="17" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="5048-3a52-5689-6d0b" name="Ambush" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -3673,24 +3673,9 @@ If it currently has no Ammo Tokens, this model will also gain 1 Ammo Token and m
     <entryLink id="14a6-cb63-91d8-f6d8" name="Hiroto, Drunken Master" hidden="true" collective="false" import="true" targetId="f616-46d8-5907-fafd" type="selectionEntry">
       <modifiers>
         <modifier type="set" field="hidden" value="false">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="477a-e693-0888-08f7" type="atLeast"/>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="294d-a0fa-f437-2fca" type="atLeast"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-        <modifier type="set" field="hidden" value="false">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ff27-a550-2dd1-e2e3" type="atLeast"/>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="294d-a0fa-f437-2fca" type="atLeast"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="294d-a0fa-f437-2fca" type="atLeast"/>
+          </conditions>
         </modifier>
       </modifiers>
       <categoryLinks>
@@ -3745,11 +3730,51 @@ If it currently has no Ammo Tokens, this model will also gain 1 Ammo Token and m
       </categoryLinks>
     </entryLink>
     <entryLink id="cc7a-90d7-31f0-6ac4" name="Brotherhood" hidden="false" collective="false" import="true" targetId="9402-edcc-93a2-aef1" type="selectionEntry"/>
-    <entryLink id="554a-a8ba-5b5d-8156" name="Shosu" hidden="true" collective="false" import="true" targetId="39f7-4bb9-edb9-bde8" type="selectionEntry"/>
-    <entryLink id="7f7f-c65f-657d-c113" name="Two Lone Swordsmen" hidden="true" collective="false" import="true" targetId="29e4-7f5e-593d-2445" type="selectionEntry"/>
-    <entryLink id="3219-9c59-bc95-0813" name="Khendish" hidden="true" collective="false" import="true" targetId="dc54-b54e-1428-7c3e" type="selectionEntry"/>
-    <entryLink id="30db-6366-546d-d109" name="Batu" hidden="true" collective="false" import="true" targetId="5e97-28ce-9c1b-6b8b" type="selectionEntry"/>
-    <entryLink id="be3b-9cd5-e024-3855" name="Tru&apos;pah" hidden="true" collective="false" import="true" targetId="82bb-a55d-5366-baf2" type="selectionEntry"/>
+    <entryLink id="554a-a8ba-5b5d-8156" name="Shosu" hidden="true" collective="false" import="true" targetId="39f7-4bb9-edb9-bde8" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4ff5-0ce5-fd04-3969" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink id="7f7f-c65f-657d-c113" name="Two Lone Swordsmen" hidden="true" collective="false" import="true" targetId="29e4-7f5e-593d-2445" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f616-46d8-5907-fafd" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink id="3219-9c59-bc95-0813" name="Khendish" hidden="true" collective="false" import="true" targetId="dc54-b54e-1428-7c3e" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f616-46d8-5907-fafd" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink id="30db-6366-546d-d109" name="Batu" hidden="true" collective="false" import="true" targetId="5e97-28ce-9c1b-6b8b" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f616-46d8-5907-fafd" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink id="be3b-9cd5-e024-3855" name="Tru&apos;pah" hidden="true" collective="false" import="true" targetId="82bb-a55d-5366-baf2" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f616-46d8-5907-fafd" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
     <entryLink id="463c-1e3f-6c85-390f" name="The Kiyozumi Family" hidden="false" collective="false" import="true" targetId="0e4a-a40c-14eb-2f4f" type="selectionEntry"/>
     <entryLink id="c415-b466-2f34-5d92" name="The Hozumi Family" hidden="false" collective="false" import="true" targetId="4750-f234-49e4-79c1" type="selectionEntry"/>
     <entryLink id="d6c5-efc7-4b6c-5d0b" name="Taiyo" hidden="true" collective="false" import="true" targetId="90d7-5fe5-0a05-1bea" type="selectionEntry"/>

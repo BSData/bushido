@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="1ac7-2939-2874-7530" name="Cult of Yurei" revision="30" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="17" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="1ac7-2939-2874-7530" name="Cult of Yurei" revision="31" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="17" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="5048-3a52-5689-6d0b" name="Drain Spirit" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -7131,28 +7131,6 @@ During the End Phase you may decide the order States are resolved.</characterist
       </categoryLinks>
     </entryLink>
     <entryLink id="5862-cfc7-361a-58de" name="Hiroto, Drunken Master" hidden="true" collective="false" import="true" targetId="f616-46d8-5907-fafd" type="selectionEntry">
-      <modifiers>
-        <modifier type="set" field="hidden" value="false">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ff27-a550-2dd1-e2e3" type="atLeast"/>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="294d-a0fa-f437-2fca" type="atLeast"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-        <modifier type="set" field="hidden" value="false">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="477a-e693-0888-08f7" type="atLeast"/>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="294d-a0fa-f437-2fca" type="atLeast"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
       <categoryLinks>
         <categoryLink id="7e4d-5ced-092a-ef45" name="New CategoryLink" hidden="false" targetId="9fba-f50b-c8f7-8396" primary="true"/>
       </categoryLinks>
@@ -7295,25 +7273,64 @@ During the End Phase you may decide the order States are resolved.</characterist
     <entryLink id="1587-a8be-622a-e11d" name="Two Lone Swordsmen" hidden="false" collective="false" import="true" targetId="29e4-7f5e-593d-2445" type="selectionEntry">
       <modifiers>
         <modifier type="set" field="hidden" value="false">
-          <conditions>
-            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8a75-ceb1-bdf5-c64b" type="atLeast"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f616-46d8-5907-fafd" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8a75-ceb1-bdf5-c64b" type="atLeast"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
     </entryLink>
     <entryLink id="17b9-f6d8-0bf4-08a8" name="Shosu" hidden="false" collective="false" import="true" targetId="39f7-4bb9-edb9-bde8" type="selectionEntry">
       <modifiers>
         <modifier type="set" field="hidden" value="false">
-          <conditions>
-            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8a75-ceb1-bdf5-c64b" type="atLeast"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f616-46d8-5907-fafd" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8a75-ceb1-bdf5-c64b" type="atLeast"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
     </entryLink>
     <entryLink id="7354-de0d-2d3b-4363" name="Brotherhood" hidden="false" collective="false" import="true" targetId="9402-edcc-93a2-aef1" type="selectionEntry"/>
-    <entryLink id="c14c-1924-6d80-092a" name="Batu" hidden="true" collective="false" import="true" targetId="5e97-28ce-9c1b-6b8b" type="selectionEntry"/>
-    <entryLink id="01e4-6918-3638-6749" name="Khendish" hidden="true" collective="false" import="true" targetId="dc54-b54e-1428-7c3e" type="selectionEntry"/>
-    <entryLink id="0bad-9998-2f9b-a504" name="Tru&apos;pah" hidden="true" collective="false" import="true" targetId="82bb-a55d-5366-baf2" type="selectionEntry"/>
+    <entryLink id="c14c-1924-6d80-092a" name="Batu" hidden="true" collective="false" import="true" targetId="5e97-28ce-9c1b-6b8b" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="26f6-e547-6d94-8b70" type="lessThan"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f616-46d8-5907-fafd" type="atLeast"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink id="01e4-6918-3638-6749" name="Khendish" hidden="true" collective="false" import="true" targetId="dc54-b54e-1428-7c3e" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f616-46d8-5907-fafd" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink id="0bad-9998-2f9b-a504" name="Tru&apos;pah" hidden="true" collective="false" import="true" targetId="82bb-a55d-5366-baf2" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f616-46d8-5907-fafd" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
     <entryLink id="7144-cf2f-5cbf-3f0c" name="Hozumi Maha" hidden="false" collective="false" import="true" targetId="09da-574e-599a-3226" type="selectionEntry">
       <modifiers>
         <modifier type="set" field="hidden" value="false">
