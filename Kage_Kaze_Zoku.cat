@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="b4d7-0e2a-728f-20cf" name="Kage Kaze Zoku" revision="31" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="17" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="b4d7-0e2a-728f-20cf" name="Kage Kaze Zoku" revision="32" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="18" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="33d5-3364-f1d4-a94c" name="Lockdown" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -4166,6 +4166,112 @@ Requirement [House Long Shadow lheme]</characteristic>
       </categoryLinks>
       <entryLinks>
         <entryLink id="304b-0492-5cdd-9ba4" name="Enhancements" hidden="false" collective="false" import="true" targetId="b18f-16ea-bed1-4709" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="20.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="8cca-060f-ff1f-5aa9" name="Spectre" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4e1c-43c9-596d-ef16" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4c67-f393-7598-a82d" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="cfa1-27b2-4dc3-ce16" type="atLeast"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2366-3a6e-a125-bd25" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="1b0f-f181-acb8-6541" name="Spectre" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">3</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33">3</characteristic>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac">3</characteristic>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">2</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">8</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">6 OOOOO O</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="5a46-3e3c-8910-fcb2" name="Ki Feats" hidden="false">
+          <infoLinks>
+            <infoLink id="9aaa-2272-8fa1-ecf2" name="Shared Technique" hidden="false" targetId="f0e8-dd05-c80b-cdf4" type="infoGroup"/>
+            <infoLink id="780e-dc28-d3b4-2ee1" name="Shared Defences" hidden="false" targetId="4350-e72d-a324-ce18" type="infoGroup"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="6bcc-ed1f-b836-9364" name="Melee Weapon" hidden="false">
+          <profiles>
+            <profile id="bc39-bc76-5d38-25dd" name="Dual Swords" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+1</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Sharp (1)</characteristic>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Combo Attack (0), Sidestep Defence (0)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="0cdd-1103-ffcd-40a7" name="Dual Attack" hidden="false" targetId="86ff-08dc-dfd1-bce9" type="rule"/>
+            <infoLink id="3bc7-8ef9-e849-2eaf" name="Sidestep Defence " hidden="false" targetId="753c-6c3b-64d7-203c" type="rule"/>
+            <infoLink id="92d9-0a78-a5fa-3c5d" name="Sharp " hidden="false" targetId="6092-9fb5-5196-d1eb" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="bbc0-b5bc-2130-a14f" name="Unique Effects" hidden="false">
+          <profiles>
+            <profile id="0249-aa47-966e-f414" name="Start of Activation" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
+              <characteristics>
+                <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">At the start of this model&apos;s activation choose one of the following:
+• This model gains Intangible until the end of the activation.
+• If a Friendly Phantom is on the Battlefield or Elsewhere, Swap positions of this model with Phantom.
+If Phantom was not recruited into the Warband, remove this model from play and replace it by Summoning and Deploying a Phantom. Then transfer any Activation Counters and Ki Tokens from this card to Phantom&apos;s card.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="1e0d-e35c-44cf-e5ef" name="Intangible" hidden="false" targetId="7f5c-c63d-f96f-65af" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="48ed-b359-7f6a-dde6" name="Traits" hidden="false">
+          <profiles>
+            <profile id="d72e-ef95-bb4e-fda3" name="Phantom" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Armour (1), Assassin, Camouflage (2&quot;), Flank, Lightfooted, Soulless</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="cf67-4515-0a3c-f6ab" name="Assassin" hidden="false" targetId="ef59-928b-2550-f0a3" type="rule"/>
+            <infoLink id="4ece-4e84-736d-70e5" name="Armour" hidden="false" targetId="8615-1c63-2242-5746" type="rule"/>
+            <infoLink id="7968-672b-9853-3357" name="Camouflage" hidden="false" targetId="9010-4983-c98c-1751" type="rule"/>
+            <infoLink id="a05f-c99b-b0ac-a298" name="Lightfooted" hidden="false" targetId="57d2-cd57-07f9-addf" type="rule"/>
+            <infoLink id="7227-21ce-e0c7-dd47" name="Flank" hidden="false" targetId="a847-f02d-7e99-8a66" type="rule"/>
+            <infoLink id="ec18-534f-4bd7-ea93" name="Soulless" hidden="false" targetId="af31-aad0-fcea-9590" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+      </infoGroups>
+      <categoryLinks>
+        <categoryLink id="5238-2b9e-ab6a-39aa" name="Ninja" hidden="false" targetId="dc64-e668-4aac-8ec9" primary="false"/>
+        <categoryLink id="4c0d-10fd-1a9c-86c9" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
+        <categoryLink id="0302-5cc4-afc6-0c33" name="Faction: Kage Kaze Zoku" hidden="false" targetId="3aa4-cadb-b4be-0dc6" primary="false"/>
+        <categoryLink id="8c49-0091-5032-669a" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
+        <categoryLink id="4363-c500-4f99-7dca" name="Armour" hidden="false" targetId="f322-702a-ff62-b37e" primary="false"/>
+        <categoryLink id="f80f-f1df-2e3f-0ff0" name="Unknown" hidden="false" targetId="681b-423e-83dd-d9bd" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="d84a-78b7-7dac-aff5" name="Enhancements" hidden="false" collective="false" import="true" targetId="b18f-16ea-bed1-4709" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="20.0"/>

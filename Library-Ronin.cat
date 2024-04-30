@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="b489-b304-948d-52d0" name="Library-Ronin" revision="41" battleScribeVersion="2.03" library="true" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="17" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="b489-b304-948d-52d0" name="Library-Ronin" revision="42" battleScribeVersion="2.03" library="true" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="18" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="4e24-3a7e-77bc-dfed" name="Balance" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -1128,11 +1128,15 @@ For the first turn of the game, all models lose Cloudwalk and Lightfooted and ma
           <profiles>
             <profile id="a6f2-0ce8-192d-f0dc" name="Golden Sentinel" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
               <characteristics>
-                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">While within 3&quot; of a Friendly Imperial model, this model gains Aware and its Melee Weapons gain Reach.
-This model cannot declare Melee or Charge Actions Targeting Imperial models.</characteristic>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">While within 3&quot; of a Friendly Imperial model, this model gains Aware and its Melee Weapons gain Reach.</characteristic>
               </characteristics>
             </profile>
           </profiles>
+          <infoLinks>
+            <infoLink id="0f68-ea6d-b8fd-1130" name="Imperial" hidden="false" targetId="3e9b-2e75-0e97-a739" type="profile"/>
+            <infoLink id="de19-4388-7ebb-8015" name="Aware" hidden="false" targetId="ff4a-6b14-09dd-2343" type="rule"/>
+            <infoLink id="cebb-fedd-5b3d-8d5d" name="Reach" hidden="false" targetId="e28e-d5dd-a262-1101" type="rule"/>
+          </infoLinks>
         </infoGroup>
         <infoGroup id="be2a-291d-9cd1-8015" name="Ki Feats" hidden="false">
           <infoLinks>
@@ -4556,7 +4560,7 @@ While this model is in play, other models with marked Wound boxes gain +1 Melee 
         <categoryLink id="73fc-2bdc-19f8-a97b" name="New CategoryLink" hidden="false" targetId="9fba-f50b-c8f7-8396" primary="true"/>
       </categoryLinks>
       <entryLinks>
-        <entryLink id="ed6b-8034-fc76-c871" name="Ronin Enhancements" hidden="false" collective="false" import="true" targetId="f486-4498-03e3-c397" type="selectionEntryGroup"/>
+        <entryLink id="ed6b-8034-fc76-c871" name="Enhancements" hidden="false" collective="false" import="true" targetId="f486-4498-03e3-c397" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="16.0"/>
@@ -9595,6 +9599,219 @@ This model can make only one Bird Strike Ranged Attack per turn.</characteristic
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="16.0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="2e04-4ddb-7365-5607" name="Zhongwei" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="477a-e693-0888-08f7" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0f84-8e23-429c-d5c4" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9402-edcc-93a2-aef1" type="atLeast"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="477a-e693-0888-08f7" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0f84-8e23-429c-d5c4" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9402-edcc-93a2-aef1" type="atLeast"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7db0-29bc-2438-cc78" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="88dd-6056-524e-df0f" name="Zhongwei" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">2</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">2</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">6</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">6 OOOOO O</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="d60c-a3b8-56e5-26d8" name="Ki Feats" hidden="false">
+          <infoLinks>
+            <infoLink id="af06-5e18-8e47-7178" name="Veteran" hidden="false" targetId="f386-e304-3104-3952" type="infoGroup"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="48fc-90fc-eb29-e1d7" name="Melee Weapon" hidden="false">
+          <profiles>
+            <profile id="4dd5-7c94-903c-e834" name="Dadao" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+2</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Reach</characteristic>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Push Defence (0)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="560d-69b3-f6e8-a2fb" name="Reach" hidden="false" targetId="e28e-d5dd-a262-1101" type="rule"/>
+            <infoLink id="61cb-a824-7a37-a56c" name="Push Defence" hidden="false" targetId="74fc-a971-d9c2-278c" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="74be-be4a-4624-7227" name="Traits" hidden="false">
+          <profiles>
+            <profile id="bbd4-ae0d-e502-cf46" name="Zhongwei" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Armour (3), Aware, Bravery, Immune [Control]</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="124d-6a8c-49b6-4823" name="Armour" hidden="false" targetId="8615-1c63-2242-5746" type="rule"/>
+            <infoLink id="b708-c1a5-d7ad-c5a5" name="Aware" hidden="false" targetId="ff4a-6b14-09dd-2343" type="rule"/>
+            <infoLink id="1e53-7020-5b3f-85a2" name="Bravery" hidden="false" targetId="f9b2-38d2-7cda-de6e" type="rule"/>
+            <infoLink id="8b9c-ca90-a020-40e6" name="Immune" hidden="false" targetId="ea08-b25e-0ea8-af73" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="4ef2-477c-cb89-78cc" name="Unique Effects" hidden="false">
+          <profiles>
+            <profile id="d4f1-0096-5583-a394" name="Favour of the Unconquered Throne" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">The first time that a model causes Damage to this model in a Melee Exchange or Ranged Attack, after the activation is complete, that model gains a Death Sentence Marker.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="e4ee-f1d3-1ddf-092b" name="Imperial" hidden="false" targetId="3e9b-2e75-0e97-a739" type="profile"/>
+          </infoLinks>
+        </infoGroup>
+      </infoGroups>
+      <categoryLinks>
+        <categoryLink id="4baa-8ec6-8f50-ab68" name="New CategoryLink" hidden="false" targetId="9fba-f50b-c8f7-8396" primary="true"/>
+        <categoryLink id="6575-f570-2025-de9d" name="Imperial" hidden="false" targetId="1a5c-7165-4266-4fbc" primary="false"/>
+        <categoryLink id="739f-c03e-2e64-3a9f" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
+        <categoryLink id="9f8b-3594-1e4e-64a9" name="Armour" hidden="false" targetId="f322-702a-ff62-b37e" primary="false"/>
+        <categoryLink id="df96-bca4-2254-b6d3" name="Faction: Golden Legion" hidden="false" targetId="232b-0ef4-9a9b-3a11" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="aab3-842b-76c8-e26b" name="Enhancements" hidden="false" collective="false" import="true" targetId="f486-4498-03e3-c397" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="12.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="1eb3-cf68-2452-b5de" name="General Wu Shuo" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="477a-e693-0888-08f7" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0f84-8e23-429c-d5c4" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9402-edcc-93a2-aef1" type="atLeast"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="477a-e693-0888-08f7" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0f84-8e23-429c-d5c4" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9402-edcc-93a2-aef1" type="atLeast"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5285-c53f-3126-e56d" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="2272-548f-1453-9cfd" name="General Wu Shuo " hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">3</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33">3</characteristic>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">3</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c">3</characteristic>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">8</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">6 OOOOO O</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="8b9b-5874-d138-c72d" name="Ki Feats" hidden="false">
+          <infoLinks>
+            <infoLink id="5126-c49b-250f-413b" name="Target Priority" hidden="false" targetId="1fdf-c455-caba-8aaf" type="infoGroup"/>
+            <infoLink id="8779-e36a-f9a9-3146" name="Art of War" hidden="false" targetId="3768-dd30-48bb-a6f8" type="infoGroup"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="96ad-c3c7-5703-a0a6" name="Melee Weapon" hidden="false">
+          <profiles>
+            <profile id="2f40-50f3-091a-7071" name="Swords" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+1</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e"></characteristic>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Combo Attack (1), Push Defence (0)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="93cd-6d19-61c5-2453" name="Combo Attack " hidden="false" targetId="78ab-6a94-be24-8f74" type="rule"/>
+            <infoLink id="0a74-aecf-ebae-7b0f" name="Push Defence" hidden="false" targetId="74fc-a971-d9c2-278c" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="b7ed-771a-6dc2-a55a" name="Traits" hidden="false">
+          <profiles>
+            <profile id="fc5d-267c-d161-1d3a" name="General Wu Shuo " hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Armour (3), Bravery, Immune [Control], Prowess [Melee](1)</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="30d8-707a-d532-c669" name="Armour" hidden="false" targetId="8615-1c63-2242-5746" type="rule"/>
+            <infoLink id="21bb-7917-c20d-537d" name="Prowess " hidden="false" targetId="75ef-327a-cd08-a248" type="rule"/>
+            <infoLink id="36dd-f8e4-e95c-6992" name="Bravery" hidden="false" targetId="f9b2-38d2-7cda-de6e" type="rule"/>
+            <infoLink id="4d63-d810-4329-fd0d" name="Immune" hidden="false" targetId="ea08-b25e-0ea8-af73" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="b9ea-c93c-c290-9274" name="Unique Effects" hidden="false">
+          <infoLinks>
+            <infoLink id="62ed-16b8-c302-2000" name="Imperial" hidden="false" targetId="3e9b-2e75-0e97-a739" type="profile"/>
+          </infoLinks>
+        </infoGroup>
+      </infoGroups>
+      <categoryLinks>
+        <categoryLink id="d5e7-f5e7-04ec-cbf7" name="New CategoryLink" hidden="false" targetId="9fba-f50b-c8f7-8396" primary="true"/>
+        <categoryLink id="15bd-dab2-8db0-bfab" name="Imperial" hidden="false" targetId="1a5c-7165-4266-4fbc" primary="false"/>
+        <categoryLink id="b4c6-9f10-3e18-d039" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
+        <categoryLink id="bad5-235c-5fea-3ff0" name="Armour" hidden="false" targetId="f322-702a-ff62-b37e" primary="false"/>
+        <categoryLink id="af87-e40c-c70a-d201" name="Faction: Golden Legion" hidden="false" targetId="232b-0ef4-9a9b-3a11" primary="false"/>
+        <categoryLink id="8966-3d1e-5f26-6ca8" name="Samurai" hidden="false" targetId="e12a-f782-3281-7444" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="dbac-33b7-5110-744e" name="Enhancements" hidden="false" collective="false" import="true" targetId="f486-4498-03e3-c397" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="17.0"/>
+      </costs>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup id="f486-4498-03e3-c397" name="Enhancements" hidden="false" collective="false" import="true">
@@ -9676,6 +9893,11 @@ This model can make only one Bird Strike Ranged Attack per turn.</characteristic
     <profile id="cf85-5dd9-be99-6042" name="Brotherhood" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
       <characteristics>
         <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">This model may be recruited into any Warband that has recruited Hiroto.</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="3e9b-2e75-0e97-a739" name="Imperial" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+      <characteristics>
+        <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">This model cannot declare Melee or Charge actions Targeting Imperial models.</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>

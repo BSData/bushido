@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="2276-2df6-78a7-841d" name="Shiho Clan" revision="32" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="17" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="2276-2df6-78a7-841d" name="Shiho Clan" revision="34" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="18" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="7fa5-7ef0-59c5-f657" name="Tanaka" hidden="false"/>
   </categoryEntries>
@@ -2807,6 +2807,156 @@ You may decide the order recruited terrain (Friendly and Enemy) is Deployed.</ch
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1.0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="0244-153e-db15-02fe" name="Wolf Ryoshi" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9402-edcc-93a2-aef1" type="atLeast"/>
+              </conditions>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="966b-fc6b-359e-5c30" type="atLeast"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5296-667d-835d-fbdb" type="max"/>
+      </constraints>
+      <infoGroups>
+        <infoGroup id="5bdd-f797-8d89-b06a" name="Traits" hidden="false">
+          <profiles>
+            <profile id="8ab0-1922-9939-6cd1" name="Wolf Ryoshi" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Endurance, Group</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="ab3d-77a8-a7ad-6db2" name="Group" hidden="false" targetId="4c02-03a1-ae7b-7821" type="rule"/>
+            <infoLink id="94c6-9f4e-3d94-004b" name="Endurance" hidden="false" targetId="7fdc-d150-9641-1235" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="dae5-97c6-b1dc-1e86" name="Ki Feats" hidden="false">
+          <infoLinks>
+            <infoLink id="bbb5-4867-61b8-5cb1" name="Reposition" hidden="false" targetId="9529-9d51-7ad1-aff2" type="infoGroup"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="a909-142d-d833-76c1" name="Melee Weapon" hidden="false">
+          <profiles>
+            <profile id="1486-ac16-aa94-712e" name="Tantō" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">-1</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e"/>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Sidestep Defence (0)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="367c-9051-3733-ce1f" name="Sidestep Defence " hidden="false" targetId="753c-6c3b-64d7-203c" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="0747-7fa9-db78-cf81" name="Unique Effects" hidden="false">
+          <profiles>
+            <profile id="6acf-75f7-b589-0ad3" name="Unique Effects" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">This model gains Bravery when Targeting or attempting to move into BtB with an Enemy model that is already in BtB with a Friendly model.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="af53-87b5-7b15-e594" name="Bravery" hidden="false" targetId="f9b2-38d2-7cda-de6e" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="8eb5-aab7-0146-65f4" name="Ranged Weapon" hidden="false">
+          <profiles>
+            <profile id="16fd-6329-af8e-44de" name="Dai Kyu" hidden="false" typeId="7e20-258e-bf92-18f9" typeName="Ranged Weapon">
+              <characteristics>
+                <characteristic name="Ranged Weapon Strength" typeId="15aa-b6bd-6923-271f">+1</characteristic>
+                <characteristic name="Range Bands" typeId="be6a-50c6-d691-e2e9">5/10/15</characteristic>
+                <characteristic name="Traits" typeId="3410-4428-ef91-eb61">Reload (1)</characteristic>
+                <characteristic name="Specials" typeId="cdaf-b6ac-89d4-39ef"/>
+                <characteristic name="Unique Effects" typeId="3bf8-6525-f003-4990"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="a3d9-bd19-d119-16bb" name="Reload" hidden="false" targetId="9736-df56-0b62-b1a8" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+      </infoGroups>
+      <categoryLinks>
+        <categoryLink id="48b4-2d99-c8c5-043f" name="Faction: Shiho Clan" hidden="false" targetId="53b4-db5e-0527-0759" primary="false"/>
+        <categoryLink id="b455-7550-0027-ec00" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
+        <categoryLink id="a328-5502-f751-103e" name="Wolf" hidden="false" targetId="4e48-1ed5-3567-b991" primary="false"/>
+        <categoryLink id="b856-79b3-8722-bcd7" name="Non-Unique" hidden="false" targetId="d181-219d-3add-d47b" primary="false"/>
+        <categoryLink id="a037-6b8c-e4d4-b90f" name="Ashigaru" hidden="false" targetId="f434-17e6-174c-b4f6" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="fd41-2e7e-72bf-e9f0" name="Wolf Ryoshi" hidden="false" collective="false" import="true" targetId="fa72-334d-dcd9-f1b2" type="selectionEntry">
+          <modifiers>
+            <modifier type="append" field="name" value="A"/>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b3ff-9da3-1167-3c14" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="e2ab-4c79-3fe0-e1ea" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="020a-d395-f783-7e5f" name="Wolf Ryoshi A" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+              <characteristics>
+                <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">2</characteristic>
+                <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+                <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">2</characteristic>
+                <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33">3</characteristic>
+                <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
+                <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+                <characteristic name="Ki" typeId="3969-9568-a914-6854">1</characteristic>
+                <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+                <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">6</characteristic>
+                <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">6 OOOOO O</characteristic>
+                <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </entryLink>
+        <entryLink id="0cbc-1180-9d8f-8cc9" name="Wolf Ryoshi" hidden="false" collective="false" import="true" targetId="fa72-334d-dcd9-f1b2" type="selectionEntry">
+          <modifiers>
+            <modifier type="append" field="name" value="B"/>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d739-a05f-d447-9e5c" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="91a5-30d6-ff86-a4aa" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="94dd-3265-03a9-0513" name="Wolf Ryoshi B" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+              <characteristics>
+                <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">2</characteristic>
+                <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+                <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">2</characteristic>
+                <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33">3</characteristic>
+                <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
+                <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+                <characteristic name="Ki" typeId="3969-9568-a914-6854">1</characteristic>
+                <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+                <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">6</characteristic>
+                <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">6 OOOOO O</characteristic>
+                <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </entryLink>
+      </entryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="16.0"/>
+      </costs>
+    </selectionEntry>
   </selectionEntries>
   <entryLinks>
     <entryLink id="5cd8-ec39-5a8f-a160" name="Giant Eagle" hidden="false" collective="false" import="true" targetId="f25f-493d-4123-b0ee" type="selectionEntry">
@@ -3382,6 +3532,38 @@ You may decide the order recruited terrain (Friendly and Enemy) is Deployed.</ch
         </modifier>
       </modifiers>
     </entryLink>
+    <entryLink id="6314-66bc-1680-a5d0" name="Zhongwei" hidden="false" collective="false" import="true" targetId="2e04-4ddb-7365-5607" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f5-1986-098c-0729" type="atLeast"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="7d9e-e607-66f0-321e" name="New CategoryLink" hidden="false" targetId="9fba-f50b-c8f7-8396" primary="true"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="e7fe-4c58-d753-7531" name="General Wu Shuo" hidden="false" collective="false" import="true" targetId="1eb3-cf68-2452-b5de" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f5-1986-098c-0729" type="atLeast"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="4dc9-0d5d-0dbc-2b49" name="New CategoryLink" hidden="false" targetId="9fba-f50b-c8f7-8396" primary="true"/>
+      </categoryLinks>
+    </entryLink>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="7784-df09-a292-0749" name="Wolf" hidden="false" collective="false" import="true" type="model">
@@ -3430,6 +3612,17 @@ You may decide the order recruited terrain (Friendly and Enemy) is Deployed.</ch
       </entryLinks>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="14.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="fa72-334d-dcd9-f1b2" name="Wolf Ryoshi" hidden="false" collective="false" import="true" type="model">
+      <categoryLinks>
+        <categoryLink id="2f1b-519a-4a56-7db2" name="Ashigaru" hidden="false" targetId="f434-17e6-174c-b4f6" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="8f37-6d1c-336c-9158" name="Enhancements" hidden="false" collective="false" import="true" targetId="8a7c-6251-523e-a67c" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0.0"/>
       </costs>
     </selectionEntry>
   </sharedSelectionEntries>

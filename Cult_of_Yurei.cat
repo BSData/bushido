@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="1ac7-2939-2874-7530" name="Cult of Yurei" revision="31" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="17" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="1ac7-2939-2874-7530" name="Cult of Yurei" revision="32" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="18" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="5048-3a52-5689-6d0b" name="Drain Spirit" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -7104,6 +7104,487 @@ During the End Phase you may decide the order States are resolved.</characterist
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="14.0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="3821-85c0-0668-e61d" name="Animated Militia" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="477a-e693-0888-08f7" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="538d-4d36-c07f-9024" type="lessThan"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8a75-ceb1-bdf5-c64b" type="lessThan"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="true" id="8aa3-9364-08ee-2ed8" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="f878-4983-4c31-3c26" name="Animated Militia" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+          <characteristics>
+            <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Bodyguard [Shugenja](3&quot;), Durable, Fear (4), Immune [States], Soulless, Regenerate (1)</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="bab2-fefb-c0b4-866c" name="Traits" hidden="false">
+          <infoLinks>
+            <infoLink id="e62f-9b91-07a0-e190" name="Fear" hidden="false" targetId="3586-4583-7f10-1f31" type="rule"/>
+            <infoLink id="daed-cd3a-edc4-8b4b" name="Durable" hidden="false" targetId="3612-7e19-3cb9-72d0" type="rule"/>
+            <infoLink id="8721-08f4-10ad-5e5a" name="Immune" hidden="false" targetId="ea08-b25e-0ea8-af73" type="rule"/>
+            <infoLink id="c184-fb0f-569c-346a" name="Soulless" hidden="false" targetId="af31-aad0-fcea-9590" type="rule"/>
+            <infoLink id="67b4-d041-2a88-b8be" name="Regenerate" hidden="false" targetId="74c4-617e-8405-3e46" type="rule"/>
+            <infoLink id="60b3-880a-e8c3-b564" name="Bodyguard" hidden="false" targetId="0286-6d10-a236-e0c3" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="68ba-fd5d-bca4-cf7e" name="Melee Weapon" hidden="false">
+          <profiles>
+            <profile id="fb68-3fe9-e017-edc1" name="Improvised Weapons" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">-1</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e"/>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d"/>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+        </infoGroup>
+      </infoGroups>
+      <categoryLinks>
+        <categoryLink id="ec86-14c0-f7c4-9195" name="Ashigaru" hidden="false" targetId="f434-17e6-174c-b4f6" primary="false"/>
+        <categoryLink id="b96f-e42a-9211-59c4" name="Gashadokuro" hidden="false" targetId="1d35-1993-a101-542b" primary="false"/>
+        <categoryLink id="b680-494c-7930-ffec" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
+        <categoryLink id="1732-d39d-d47c-b286" name="Non-Unique" hidden="false" targetId="d181-219d-3add-d47b" primary="false"/>
+        <categoryLink id="57a6-6a3d-80e4-2caa" name="Soulless" hidden="false" targetId="0abe-c3e6-4300-478f" primary="false"/>
+        <categoryLink id="ae48-a2c7-3f00-08fe" name="Faction: Cult of Yurei" hidden="false" targetId="0d0a-4c02-8dce-676b" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="1c2f-0561-83b5-21b8" name="Animated Militia" hidden="false" collective="false" import="true" targetId="ace4-22ea-1ece-e45d" type="selectionEntry">
+          <modifiers>
+            <modifier type="append" field="name" value="A"/>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3519-dac7-7e06-4f19" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="aa19-cb1e-7894-f1b9" name="Animated Militia A" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+              <characteristics>
+                <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">2</characteristic>
+                <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277"/>
+                <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">1</characteristic>
+                <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+                <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
+                <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+                <characteristic name="Ki" typeId="3969-9568-a914-6854">0</characteristic>
+                <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+                <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">0</characteristic>
+                <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">3</characteristic>
+                <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <categoryLinks>
+            <categoryLink id="d805-476a-a054-d771" name="Soulless" hidden="false" targetId="0abe-c3e6-4300-478f" primary="false"/>
+          </categoryLinks>
+        </entryLink>
+        <entryLink id="c269-f9e3-d43c-289f" name="Animated Militia" hidden="false" collective="false" import="true" targetId="ace4-22ea-1ece-e45d" type="selectionEntry">
+          <modifiers>
+            <modifier type="append" field="name" value="B"/>
+          </modifiers>
+          <profiles>
+            <profile id="dddb-ada4-a5e0-1e7f" name="Animated Militia B" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+              <characteristics>
+                <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">2</characteristic>
+                <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277"/>
+                <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">1</characteristic>
+                <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+                <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
+                <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+                <characteristic name="Ki" typeId="3969-9568-a914-6854">0</characteristic>
+                <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+                <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">0</characteristic>
+                <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">3</characteristic>
+                <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <categoryLinks>
+            <categoryLink id="4d36-4faf-6538-97fa" name="Soulless" hidden="false" targetId="0abe-c3e6-4300-478f" primary="false"/>
+          </categoryLinks>
+        </entryLink>
+        <entryLink id="3e55-3363-b427-05b1" name="Animated Militia" hidden="false" collective="false" import="true" targetId="ace4-22ea-1ece-e45d" type="selectionEntry">
+          <modifiers>
+            <modifier type="append" field="name" value="C"/>
+          </modifiers>
+          <profiles>
+            <profile id="9443-b382-4650-8388" name="Animated Militia C" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+              <characteristics>
+                <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">2</characteristic>
+                <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277"/>
+                <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">1</characteristic>
+                <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+                <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
+                <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+                <characteristic name="Ki" typeId="3969-9568-a914-6854">0</characteristic>
+                <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+                <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">0</characteristic>
+                <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">3</characteristic>
+                <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <categoryLinks>
+            <categoryLink id="5ddd-093c-b03a-53c7" name="Soulless" hidden="false" targetId="0abe-c3e6-4300-478f" primary="false"/>
+          </categoryLinks>
+        </entryLink>
+        <entryLink id="a7dc-678c-f998-72af" name="Animated Militia" hidden="false" collective="false" import="true" targetId="ace4-22ea-1ece-e45d" type="selectionEntry">
+          <modifiers>
+            <modifier type="append" field="name" value="D"/>
+          </modifiers>
+          <profiles>
+            <profile id="0e3c-ac8f-fdc7-052b" name="Animated Militia D" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+              <characteristics>
+                <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">2</characteristic>
+                <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277"/>
+                <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">1</characteristic>
+                <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+                <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
+                <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+                <characteristic name="Ki" typeId="3969-9568-a914-6854">0</characteristic>
+                <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+                <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">0</characteristic>
+                <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">3</characteristic>
+                <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <categoryLinks>
+            <categoryLink id="2678-dea9-62fc-f61a" name="Soulless" hidden="false" targetId="0abe-c3e6-4300-478f" primary="false"/>
+          </categoryLinks>
+        </entryLink>
+      </entryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="d0e4-5a9c-cdc3-4a14" name="Animated Warriors (reference)" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="477a-e693-0888-08f7" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="538d-4d36-c07f-9024" type="lessThan"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8a75-ceb1-bdf5-c64b" type="lessThan"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="true" id="4b5f-fd6c-19d7-fc4b" type="max"/>
+      </constraints>
+      <infoGroups>
+        <infoGroup id="0bd8-ed81-c41d-151d" name="Traits" hidden="false">
+          <infoLinks>
+            <infoLink id="081d-d375-ea59-1aec" name="Fear" hidden="false" targetId="3586-4583-7f10-1f31" type="rule"/>
+            <infoLink id="83e7-f470-2794-2e8e" name="Durable" hidden="false" targetId="3612-7e19-3cb9-72d0" type="rule"/>
+            <infoLink id="6c66-ecab-1834-1dfc" name="Immune" hidden="false" targetId="ea08-b25e-0ea8-af73" type="rule"/>
+            <infoLink id="df0d-378b-fe35-43b3" name="Soulless" hidden="false" targetId="af31-aad0-fcea-9590" type="rule"/>
+            <infoLink id="5579-5bb1-d6c9-e65e" name="Regenerate" hidden="false" targetId="74c4-617e-8405-3e46" type="rule"/>
+            <infoLink id="57f7-90e4-683c-b571" name="Parry" hidden="false" targetId="c7c2-b36e-7952-c79b" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+      </infoGroups>
+      <categoryLinks>
+        <categoryLink id="0768-1973-9b6d-fd67" name="Ashigaru" hidden="false" targetId="f434-17e6-174c-b4f6" primary="false"/>
+        <categoryLink id="c8ef-b327-2c40-0dca" name="Faction: Cult of Yurei" hidden="false" targetId="0d0a-4c02-8dce-676b" primary="false"/>
+        <categoryLink id="59bd-bb39-c9aa-5bf8" name="Gashadokuro" hidden="false" targetId="1d35-1993-a101-542b" primary="false"/>
+        <categoryLink id="d541-a84c-b7b4-ffd4" name="Non-Unique" hidden="false" targetId="d181-219d-3add-d47b" primary="false"/>
+        <categoryLink id="dd28-9b44-e318-d41b" name="Soulless" hidden="false" targetId="0abe-c3e6-4300-478f" primary="false"/>
+        <categoryLink id="1911-4b4a-e6e6-8d66" name="New CategoryLink" hidden="false" targetId="5073-f00b-a8f6-5e3b" primary="true"/>
+        <categoryLink id="5a1f-11a8-b57f-d15c" name="Faction Profile Cards" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="false"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="d4b7-de2a-3af9-8b1b" name="Gashodokuro Guard" hidden="false" collective="false" import="true" type="model">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="980d-f98f-723f-8aca" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="6989-7086-4dd6-11e5" name="Gashodokuro Guard" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+              <characteristics>
+                <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
+                <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277"/>
+                <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">1</characteristic>
+                <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+                <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
+                <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+                <characteristic name="Ki" typeId="3969-9568-a914-6854">0</characteristic>
+                <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+                <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">0</characteristic>
+                <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">3 OOO</characteristic>
+                <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="ab1a-3c6c-c671-22b8" name="Gashodokuro Guard" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Durable, Fear (4), Immune [States], Soulless, Regenerate (1)</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoGroups>
+            <infoGroup id="1cc1-98a0-a8db-ea60" name="Melee Weapon" hidden="false">
+              <profiles>
+                <profile id="80ba-d2f7-7b5a-30db" name="Naginata" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+                  <characteristics>
+                    <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+0</characteristic>
+                    <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Reach</characteristic>
+                    <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Powerful Attack (1)</characteristic>
+                    <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <infoLinks>
+                <infoLink id="a3c5-55ad-5b2c-cbfc" name="Reach" hidden="false" targetId="e28e-d5dd-a262-1101" type="rule"/>
+                <infoLink id="6fc2-f948-f507-a970" name="Powerful Attack" hidden="false" targetId="d56a-058d-95d9-5b60" type="rule"/>
+              </infoLinks>
+            </infoGroup>
+          </infoGroups>
+          <categoryLinks>
+            <categoryLink id="47af-5658-86dc-ca7a" name="Gashadokuro" hidden="false" targetId="1d35-1993-a101-542b" primary="false"/>
+            <categoryLink id="10d0-e2a7-2e66-4389" name="Soulless" hidden="false" targetId="0abe-c3e6-4300-478f" primary="false"/>
+          </categoryLinks>
+          <entryLinks>
+            <entryLink id="0d4a-219c-6762-c1ea" name="Enhancements" hidden="false" collective="false" import="true" targetId="ef93-ecd4-88c1-9224" type="selectionEntryGroup"/>
+          </entryLinks>
+          <costs>
+            <cost name=" Rice" typeId="a111-8656-5c05-7415" value="10.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="cb90-b609-1be0-4fb2" name="Gashodokuro Soldier" hidden="false" collective="false" import="true" type="model">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a2ed-3b78-b179-98ee" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="6bc4-1f89-0d0b-2a1c" name="Gashodokuro Soldier" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Durable, Fear (4), Immune [States], Parry (1), Soulless, Regenerate (1)</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="b8d8-503d-2d0c-56dd" name="Gashodokuro Soldier" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+              <characteristics>
+                <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
+                <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277"/>
+                <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">1</characteristic>
+                <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+                <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
+                <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+                <characteristic name="Ki" typeId="3969-9568-a914-6854">0</characteristic>
+                <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+                <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">0</characteristic>
+                <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">3 OOO</characteristic>
+                <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoGroups>
+            <infoGroup id="e138-2bb0-1da3-4cfb" name="Melee Weapon" hidden="false">
+              <profiles>
+                <profile id="afcc-477d-2306-6b7f" name="Tachi" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+                  <characteristics>
+                    <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+0</characteristic>
+                    <characteristic name="Traits" typeId="39e3-f945-7956-ad4e"/>
+                    <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d"/>
+                    <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </infoGroup>
+          </infoGroups>
+          <categoryLinks>
+            <categoryLink id="c920-1bbe-d353-2c1a" name="Gashadokuro" hidden="false" targetId="1d35-1993-a101-542b" primary="false"/>
+            <categoryLink id="78e5-7ddf-da19-ae96" name="Soulless" hidden="false" targetId="0abe-c3e6-4300-478f" primary="false"/>
+          </categoryLinks>
+          <entryLinks>
+            <entryLink id="026e-e43f-7afe-6ebd" name="Enhancements" hidden="false" collective="false" import="true" targetId="ef93-ecd4-88c1-9224" type="selectionEntryGroup"/>
+          </entryLinks>
+          <costs>
+            <cost name=" Rice" typeId="a111-8656-5c05-7415" value="10.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="819b-6940-850d-94e2" name="Animated Militia (reference)" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="477a-e693-0888-08f7" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="538d-4d36-c07f-9024" type="lessThan"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8a75-ceb1-bdf5-c64b" type="lessThan"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="true" id="4fa1-e0cb-e928-f4d6" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="56a7-c35b-8811-074e" name="Animated Militia" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+          <characteristics>
+            <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Bodyguard [Shugenja](3&quot;), Durable, Fear (4), Immune [States], Soulless, Regenerate (1)</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="0cba-734a-fa6c-a51e" name="Traits" hidden="false">
+          <infoLinks>
+            <infoLink id="cb91-ba2e-b419-7457" name="Fear" hidden="false" targetId="3586-4583-7f10-1f31" type="rule"/>
+            <infoLink id="efa0-2a73-c372-ad85" name="Durable" hidden="false" targetId="3612-7e19-3cb9-72d0" type="rule"/>
+            <infoLink id="f494-e71d-77f8-5b12" name="Immune" hidden="false" targetId="ea08-b25e-0ea8-af73" type="rule"/>
+            <infoLink id="7129-5d14-3f91-251b" name="Soulless" hidden="false" targetId="af31-aad0-fcea-9590" type="rule"/>
+            <infoLink id="cc2e-fdd3-1305-b551" name="Regenerate" hidden="false" targetId="74c4-617e-8405-3e46" type="rule"/>
+            <infoLink id="c439-cf3f-44e9-39df" name="Bodyguard" hidden="false" targetId="0286-6d10-a236-e0c3" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="b216-7e6e-2ab4-ec3f" name="Melee Weapon" hidden="false">
+          <profiles>
+            <profile id="46df-8d0e-f390-e5a2" name="Improvised Weapons" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">-1</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e"/>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d"/>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+        </infoGroup>
+      </infoGroups>
+      <categoryLinks>
+        <categoryLink id="58ca-89a1-b4ec-1e3c" name="Ashigaru" hidden="false" targetId="f434-17e6-174c-b4f6" primary="false"/>
+        <categoryLink id="c0ca-0bd7-b717-a3d4" name="Gashadokuro" hidden="false" targetId="1d35-1993-a101-542b" primary="false"/>
+        <categoryLink id="edfe-4e38-e590-ce5c" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="false"/>
+        <categoryLink id="75f6-bf68-d457-33ba" name="Non-Unique" hidden="false" targetId="d181-219d-3add-d47b" primary="false"/>
+        <categoryLink id="c97c-35e7-7ec9-0e17" name="Soulless" hidden="false" targetId="0abe-c3e6-4300-478f" primary="false"/>
+        <categoryLink id="47c9-a32f-02c8-aea9" name="Faction: Cult of Yurei" hidden="false" targetId="0d0a-4c02-8dce-676b" primary="false"/>
+        <categoryLink id="1de0-50bf-e1c9-81ab" name="New CategoryLink" hidden="false" targetId="5073-f00b-a8f6-5e3b" primary="true"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="1537-2d38-7ce2-f1f2" name="Animated Militia" hidden="false" collective="false" import="true" targetId="ace4-22ea-1ece-e45d" type="selectionEntry">
+          <modifiers>
+            <modifier type="append" field="name" value="A"/>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7a06-9175-7dd8-be47" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="b09f-2106-97e3-aa45" name="Animated Militia A" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+              <characteristics>
+                <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">2</characteristic>
+                <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277"/>
+                <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">1</characteristic>
+                <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+                <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
+                <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+                <characteristic name="Ki" typeId="3969-9568-a914-6854">0</characteristic>
+                <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+                <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">0</characteristic>
+                <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">3</characteristic>
+                <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <categoryLinks>
+            <categoryLink id="3438-a507-4ff5-8b02" name="Soulless" hidden="false" targetId="0abe-c3e6-4300-478f" primary="false"/>
+          </categoryLinks>
+        </entryLink>
+        <entryLink id="0883-11e5-7e38-e95c" name="Animated Militia" hidden="false" collective="false" import="true" targetId="ace4-22ea-1ece-e45d" type="selectionEntry">
+          <modifiers>
+            <modifier type="append" field="name" value="B"/>
+          </modifiers>
+          <profiles>
+            <profile id="8384-4bfb-5658-0f2c" name="Animated Militia B" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+              <characteristics>
+                <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">2</characteristic>
+                <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277"/>
+                <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">1</characteristic>
+                <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+                <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
+                <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+                <characteristic name="Ki" typeId="3969-9568-a914-6854">0</characteristic>
+                <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+                <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">0</characteristic>
+                <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">3</characteristic>
+                <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <categoryLinks>
+            <categoryLink id="bc08-ec4b-fd00-589b" name="Soulless" hidden="false" targetId="0abe-c3e6-4300-478f" primary="false"/>
+          </categoryLinks>
+        </entryLink>
+        <entryLink id="7416-245b-a1b2-d76d" name="Animated Militia" hidden="false" collective="false" import="true" targetId="ace4-22ea-1ece-e45d" type="selectionEntry">
+          <modifiers>
+            <modifier type="append" field="name" value="C"/>
+          </modifiers>
+          <profiles>
+            <profile id="ae74-aa7b-83df-be5c" name="Animated Militia C" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+              <characteristics>
+                <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">2</characteristic>
+                <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277"/>
+                <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">1</characteristic>
+                <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+                <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
+                <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+                <characteristic name="Ki" typeId="3969-9568-a914-6854">0</characteristic>
+                <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+                <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">0</characteristic>
+                <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">3</characteristic>
+                <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <categoryLinks>
+            <categoryLink id="d47e-35f8-654a-dd7e" name="Soulless" hidden="false" targetId="0abe-c3e6-4300-478f" primary="false"/>
+          </categoryLinks>
+        </entryLink>
+        <entryLink id="94f6-236a-9373-1eb6" name="Animated Militia" hidden="false" collective="false" import="true" targetId="ace4-22ea-1ece-e45d" type="selectionEntry">
+          <modifiers>
+            <modifier type="append" field="name" value="D"/>
+          </modifiers>
+          <profiles>
+            <profile id="58bf-9ead-9b3b-1669" name="Animated Militia D" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+              <characteristics>
+                <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">2</characteristic>
+                <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277"/>
+                <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">1</characteristic>
+                <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+                <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
+                <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+                <characteristic name="Ki" typeId="3969-9568-a914-6854">0</characteristic>
+                <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+                <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">0</characteristic>
+                <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">3</characteristic>
+                <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <categoryLinks>
+            <categoryLink id="268b-502e-aeb6-916b" name="Soulless" hidden="false" targetId="0abe-c3e6-4300-478f" primary="false"/>
+          </categoryLinks>
+        </entryLink>
+      </entryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0.0"/>
+      </costs>
+    </selectionEntry>
   </selectionEntries>
   <entryLinks>
     <entryLink id="5358-9c72-b23c-c2e3" name="Baichi" hidden="false" collective="false" import="true" targetId="d998-94b8-fd53-f8ce" type="selectionEntry">
@@ -7632,6 +8113,29 @@ Due to the cost increment per model, the cost needs to decrement once to offset 
       </categoryLinks>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="ace4-22ea-1ece-e45d" name="Animated Militia" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="a111-8656-5c05-7415" value="0.0">
+          <conditions>
+            <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5073-f00b-a8f6-5e3b" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="8e55-15c1-9e2b-2d5a" type="max"/>
+      </constraints>
+      <categoryLinks>
+        <categoryLink id="045f-58c8-db72-dbc9" name="Soulless" hidden="false" targetId="0abe-c3e6-4300-478f" primary="false"/>
+        <categoryLink id="83ef-f304-8c66-ec91" name="Ashigaru" hidden="false" targetId="f434-17e6-174c-b4f6" primary="false"/>
+        <categoryLink id="e49b-77e0-b859-9bf2" name="Gashadokuro" hidden="false" targetId="1d35-1993-a101-542b" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="c58c-1b38-0fa8-797a" name="Enhancements" hidden="false" collective="false" import="true" targetId="ef93-ecd4-88c1-9224" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="6.0"/>
       </costs>
     </selectionEntry>
   </sharedSelectionEntries>

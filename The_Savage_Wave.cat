@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="0b85-0901-eb64-b84b" name="The Savage Wave" revision="32" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="17" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="0b85-0901-eb64-b84b" name="The Savage Wave" revision="33" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="18" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="5048-3a52-5689-6d0b" name="Ambush" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -4132,6 +4132,34 @@ If it currently has no Ammo Tokens, this model will also gain 1 Ammo Token and m
         <categoryLink id="40bc-2c78-1a58-e22d" name="New CategoryLink" hidden="false" targetId="5073-f00b-a8f6-5e3b" primary="true"/>
       </categoryLinks>
     </entryLink>
+    <entryLink id="232e-d0ac-5c49-9e64" name="Taburo, the Unbreakable" hidden="false" collective="false" import="true" targetId="0944-1aab-85be-ee97" type="selectionEntry">
+      <modifiers>
+        <modifier type="decrement" field="a111-8656-5c05-7415" value="1.0">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="bd75-31a1-5a23-cd2d" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="9cc1-8857-ab8e-9fe2" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
+      </categoryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="25.0"/>
+      </costs>
+    </entryLink>
+    <entryLink id="2bcd-7681-8661-68e5" name="Taburo, the Unbreakable" hidden="false" collective="false" import="true" targetId="0944-1aab-85be-ee97" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="26c7-22c0-fab2-d4c4" type="lessThan"/>
+          </conditions>
+        </modifier>
+        <modifier type="append" field="name" value="(reference card)"/>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="02e7-bb0f-f287-3935" name="New CategoryLink" hidden="false" targetId="5073-f00b-a8f6-5e3b" primary="true"/>
+      </categoryLinks>
+    </entryLink>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="db76-ea05-1047-4ccd" name="Rinsho" hidden="false" collective="false" import="true" type="model">
@@ -5814,6 +5842,101 @@ Oni and Onisho models, except Kijo models, activating within 4&quot;&quot; of th
       </categoryLinks>
       <entryLinks>
         <entryLink id="ec48-4c81-c94d-2d5a" name="Enhancements" hidden="false" collective="false" import="true" targetId="74e6-2485-1c0a-4227" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="0944-1aab-85be-ee97" name="Taburo, the Unbreakable" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d14c-bf06-fc37-16e2" type="equalTo"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2125-1289-3bb1-15c1" type="equalTo"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="bec1-2154-3ab5-7979" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="48e7-d088-8929-323f" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="9f56-2b1c-ae95-ff06" name="Taburo, the Unbreakable" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">3</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">5</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">2</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">6</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">12 OOOOO OOOOO OO</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Large 50mm</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="d01b-4eca-e36f-b3e6" name="Ki Feats" hidden="false">
+          <infoLinks>
+            <infoLink id="1f2d-274e-a995-8a08" name="Consume Soul" hidden="false" targetId="85bd-ac0d-842c-3097" type="infoGroup"/>
+            <infoLink id="c0c4-27b5-db27-60f1" name="Haul" hidden="false" targetId="e35e-4e95-8bee-aa08" type="infoGroup"/>
+            <infoLink id="d4a2-b99f-b4f2-bf73" name="Unmoved" hidden="false" targetId="09ab-7ed1-40f2-f94d" type="infoGroup"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="f25d-1c03-ef28-41bf" name="Traits" hidden="false">
+          <profiles>
+            <profile id="7388-0088-c1bb-1742" name="Taburo, the Unbreakable" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Bravery, Endurance, Fear (6), Indomitable (2), Oni Rage, Regenerate (1), Strong, Tough (1)</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="a3e6-7ed3-2783-3b5c" name="Bravery" hidden="false" targetId="f9b2-38d2-7cda-de6e" type="rule"/>
+            <infoLink id="74fe-f792-6106-b0db" name="Tough" hidden="false" targetId="5613-a6cf-495a-229f" type="rule"/>
+            <infoLink id="762b-8d78-aa00-9965" name="Indomitable " hidden="false" targetId="3beb-6f28-e7c4-a236" type="rule"/>
+            <infoLink id="9812-13bd-fbd6-e4f9" name="Oni Rage" hidden="false" targetId="45cb-e585-e410-95c3" type="rule"/>
+            <infoLink id="5559-222b-50d5-9e3c" name="Strong" hidden="false" targetId="00b5-3637-d48a-807e" type="rule"/>
+            <infoLink id="c05e-5fb5-49f9-6c14" name="Endurance" hidden="false" targetId="7fdc-d150-9641-1235" type="rule"/>
+            <infoLink id="4ab9-7466-a78b-67cf" name="Fear" hidden="false" targetId="3586-4583-7f10-1f31" type="rule"/>
+            <infoLink id="5735-f2fa-fa55-fecf" name="Regenerate" hidden="false" targetId="74c4-617e-8405-3e46" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="5683-8718-d0d8-19bd" name="Melee Weapon" hidden="false">
+          <profiles>
+            <profile id="68d3-3d93-d720-4383" name="Ploughshare" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+2</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Brutal (1), Pierce (3), Reach</characteristic>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Push Attack (0), Slam Attack (1), Sweep Defence (1)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="735d-342b-aa5a-391f" name="Sweep Defence" hidden="false" targetId="5338-2d8f-f189-062d" type="rule"/>
+            <infoLink id="6eb5-d1e1-f897-69ff" name="Push Attack" hidden="false" targetId="6c26-94ba-6b96-9e1b" type="rule"/>
+            <infoLink id="47b8-9881-0b9d-00d5" name="Brutal" hidden="false" targetId="5d95-975e-a72c-25f3" type="rule"/>
+            <infoLink id="59c6-bcf2-e9a3-b9d7" name="Pierce " hidden="false" targetId="39e4-14d7-5533-6e67" type="rule"/>
+            <infoLink id="f3cb-721e-4d95-24ee" name="Reach" hidden="false" targetId="e28e-d5dd-a262-1101" type="rule"/>
+            <infoLink id="a915-73f4-1c61-035a" name="Slam Attack" hidden="false" targetId="5d05-b0ce-d7db-9def" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+      </infoGroups>
+      <categoryLinks>
+        <categoryLink id="2202-3262-814e-c76c" name="Faction: The Savage Wave" hidden="false" targetId="c920-0951-5d96-5693" primary="false"/>
+        <categoryLink id="31df-e183-d1d7-3db6" name="Oni" hidden="false" targetId="4864-a322-cefd-fbfb" primary="false"/>
+        <categoryLink id="87b0-8092-8db0-1b39" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
+        <categoryLink id="afd4-a658-f45e-839e" name="Brutal" hidden="false" targetId="f62f-dd0b-4f06-06a6" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="25c3-5fd9-1fd9-cf17" name="Enhancements" hidden="false" collective="false" import="true" targetId="74e6-2485-1c0a-4227" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0.0"/>
