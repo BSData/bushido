@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="4213-717c-2228-e731" name="Temple of Ro-Kan" revision="36" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="18" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="4213-717c-2228-e731" name="Temple of Ro-Kan" revision="37" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="18" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="5048-3a52-5689-6d0b" name="Spiritual Harmony" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -6594,28 +6594,28 @@ Whenever an Enemy model on the Battlefield is Placed by an effect not on this ca
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1a12-f47f-8f23-0777" type="atLeast"/>
                 <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="33ea-e647-b8c5-2267" type="atLeast"/>
                 <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="44e6-4155-6b9b-2521" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ffd8-72ee-dab5-a006" type="atLeast"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
         </modifier>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ffd8-72ee-dab5-a006" type="atLeast"/>
-          </conditions>
-        </modifier>
       </modifiers>
       <constraints>
-        <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bf49-3a55-6ae3-30ce" type="max"/>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="true" id="bf49-3a55-6ae3-30ce" type="max"/>
       </constraints>
       <infoGroups>
         <infoGroup id="0327-aaa4-e609-e5d8" name="Traits" hidden="false">
           <profiles>
-            <profile id="5160-8b3e-2272-0575" name="Kaiyō &amp; Mangetsu" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+            <profile id="5160-8b3e-2272-0575" name="Kaiyō" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
               <characteristics>
-                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Agile, Cloudwalk, Group, Insignificant, Kami, Soulless</characteristic>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Agile, Cloudwalk, Group, Insignificant, Kami, Soulless, Virtue (2&quot;)</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="1ff9-f693-2c0a-733e" name="Mangetsu" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Agile, Cloudwalk, Group, Heal (2), Insignificant, Kami, Soulless</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -6664,7 +6664,7 @@ This model has the Heal (2) Trait.</characteristic>
                 <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">This card represents two unique models, each with their own unique abilities.
 
 Kaiyo &amp; Mangetsu share a single Ki Pool.
-When Kaiyo or Mangetsu would generate Ki Tokens (Or otherwise gain Ki Tokens) instead place those Ki Tokens on this card.
+When Kaiyo or Mangetsu would generate Ki Tokens (or otherwise gain Ki Tokens) instead place those Ki Tokens on this card.
 
 This model cannot have Enhancement cards attached.
 
@@ -6677,27 +6677,49 @@ This profile card begins the game with 5 Ki Tokens, instead of its Maximum Ki To
             <infoLink id="d4dd-1619-b6df-f977" name="Virtue" hidden="false" targetId="57d7-cc96-ce93-9258" type="rule"/>
           </infoLinks>
         </infoGroup>
-        <infoGroup id="c650-0f32-82c2-52f2" name="Ki Feats" hidden="false">
-          <infoLinks>
-            <infoLink id="768d-767e-66c2-1167" name="Vitality" hidden="false" targetId="c1e2-9229-c77a-e46e" type="infoGroup"/>
-          </infoLinks>
-        </infoGroup>
       </infoGroups>
       <categoryLinks>
-        <categoryLink id="4b6a-8823-d34b-873a" name="Construct" hidden="false" targetId="d7c5-a2b9-4696-fd33" primary="false"/>
         <categoryLink id="557b-8800-da5c-0e30" name="Faction: Temple of Rokan" hidden="false" targetId="3186-3d3a-a105-887b" primary="false"/>
         <categoryLink id="d505-e566-ac7d-f6f8" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
-        <categoryLink id="960e-9476-55b1-128b" name="New CategoryLink" hidden="false" targetId="d181-219d-3add-d47b" primary="false"/>
-        <categoryLink id="b790-57a6-cdcc-e7f2" name="Armour" hidden="false" targetId="f322-702a-ff62-b37e" primary="false"/>
+        <categoryLink id="a7e6-9545-f471-1fe9" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
+        <categoryLink id="acee-2f6c-bd57-9422" name="Kami" hidden="false" targetId="6639-615e-f1ab-bc64" primary="false"/>
+        <categoryLink id="16e2-e598-4331-e525" name="Minor" hidden="false" targetId="d45e-8b05-fa4c-e6c9" primary="false"/>
+        <categoryLink id="069b-3baa-4669-0fd6" name="Soulless" hidden="false" targetId="0abe-c3e6-4300-478f" primary="false"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="2e79-19b4-084f-bfc9" name="Kaiyō" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="2e79-19b4-084f-bfc9" name="Kaiyō" hidden="false" collective="false" import="true" type="model">
           <constraints>
-            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6a00-d4c7-0e14-26b1" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6a00-d4c7-0e14-26b1" type="min"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cb38-cdfb-66cd-1a9b" type="max"/>
           </constraints>
           <profiles>
             <profile id="3651-f755-a839-ee81" name="Kaiyō" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+              <characteristics>
+                <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">1</characteristic>
+                <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277"/>
+                <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">1</characteristic>
+                <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+                <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
+                <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+                <characteristic name="Ki" typeId="3969-9568-a914-6854">0</characteristic>
+                <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+                <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">∞</characteristic>
+                <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29"/>
+                <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="6555-ef03-3381-eb2d" name="Mangetsu" hidden="false" collective="false" import="true" type="model">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3ca7-ff2a-059e-2819" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0094-fc6d-0667-e240" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="d0e9-dacd-5a35-82bf" name="Mangetsu" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
               <characteristics>
                 <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">1</characteristic>
                 <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277"/>
