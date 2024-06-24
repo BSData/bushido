@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="0cac-b8ad-fb7f-ef84" name="Prefecture of Ryu" revision="32" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="18" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="0cac-b8ad-fb7f-ef84" name="Prefecture of Ryu" revision="33" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="18" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="8688-cd6e-bcbe-2cbb" name="Ima" hidden="false"/>
     <categoryEntry id="65a8-4392-a95b-115b" name="Takashi" hidden="false"/>
@@ -1214,7 +1214,7 @@ Until the end of the game, whenever you win a Tactical Test, choose 2 Prefecture
           <infoLinks>
             <infoLink id="279c-a3bd-e917-cd20" name="Armour" hidden="false" targetId="8615-1c63-2242-5746" type="rule"/>
             <infoLink id="2663-53f8-defe-b907" name="Bravery" hidden="false" targetId="f9b2-38d2-7cda-de6e" type="rule"/>
-            <infoLink id="c065-2f57-12c2-2194" name="Co-Ordinated Attack" hidden="false" targetId="2337-7bcc-c1f2-f2bd" type="rule"/>
+            <infoLink id="c065-2f57-12c2-2194" name="Co-ordinated Attack" hidden="false" targetId="2337-7bcc-c1f2-f2bd" type="rule"/>
           </infoLinks>
         </infoGroup>
         <infoGroup id="42ff-7093-6199-da07" name="Melee Weapon" hidden="false">
@@ -3754,7 +3754,7 @@ Remove all Reload Markers from models within 4&quot; of a Friendly Gunso model.<
             <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
             <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
             <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
-            <characteristic name="Ki" typeId="3969-9568-a914-6854">2</characteristic>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">1</characteristic>
             <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
             <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">6</characteristic>
             <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">6 OOOOO O</characteristic>
@@ -4653,6 +4653,117 @@ When this model gains Ki from the Channel Trait, it also gains a Virtue Token.</
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="16.0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="30e0-1377-eb96-741f" name="Eddo Ashigaru" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1c4e-2aa6-2d32-f0d4" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8fae-8ddd-2250-d2bd" type="max"/>
+      </constraints>
+      <infoGroups>
+        <infoGroup id="bcd8-6817-e6ed-d47f" name="Ki Feats" hidden="false">
+          <infoLinks>
+            <infoLink id="08df-d802-8934-3181" name="Phalanx" hidden="false" targetId="923e-3837-4def-0ef9" type="infoGroup"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="d058-ab6d-cc53-2721" name="Traits" hidden="false">
+          <profiles>
+            <profile id="e20e-e7b2-278d-7138" name="Eddo Ashigaru" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Armour (3), Bravery</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="95b1-fdb2-a284-d93e" name="Armour" hidden="false" targetId="8615-1c63-2242-5746" type="rule"/>
+            <infoLink id="e34f-f5de-6343-5b73" name="Bravery" hidden="false" targetId="f9b2-38d2-7cda-de6e" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="0f7b-6fa3-5224-d343" name="Melee Weapon" hidden="false">
+          <profiles>
+            <profile id="2524-1891-a10b-f5da" name="Naginata" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+1</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Reach</characteristic>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Powerful Attack (1)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="647d-509d-e064-9bcc" name="Reach" hidden="false" targetId="e28e-d5dd-a262-1101" type="rule"/>
+            <infoLink id="20a1-242d-4ae4-3d91" name="Powerful Attack" hidden="false" targetId="d56a-058d-95d9-5b60" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+      </infoGroups>
+      <categoryLinks>
+        <categoryLink id="cb97-17e9-5224-5a74" name="Ashigaru" hidden="false" targetId="f434-17e6-174c-b4f6" primary="false"/>
+        <categoryLink id="6cd3-98cf-4f08-d2a4" name="Faction: Prefecture of Ryu" hidden="false" targetId="7532-4f60-381d-2941" primary="false"/>
+        <categoryLink id="a8fa-41ca-b2da-1bc9" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
+        <categoryLink id="4548-ba90-ae5c-77cb" name="Non-Unique" hidden="false" targetId="d181-219d-3add-d47b" primary="false"/>
+        <categoryLink id="8d35-4700-0bec-cff8" name="Armour" hidden="false" targetId="f322-702a-ff62-b37e" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="c8ed-6575-d686-a74f" name="Eddo Ashigaru" hidden="false" collective="false" import="true" targetId="86ce-f650-cbb4-1f2e" type="selectionEntry">
+          <modifiers>
+            <modifier type="append" field="name" value="A"/>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8dd8-2bd5-5249-5dfd" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="dba8-a837-112d-21f0" name="Eddo Ashigaru A" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+              <characteristics>
+                <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
+                <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+                <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">3</characteristic>
+                <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+                <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
+                <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+                <characteristic name="Ki" typeId="3969-9568-a914-6854">1</characteristic>
+                <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+                <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">6</characteristic>
+                <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">6 OOOOO O</characteristic>
+                <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </entryLink>
+        <entryLink id="decc-01da-715e-cd77" name="Eddo Ashigaru" hidden="false" collective="false" import="true" targetId="86ce-f650-cbb4-1f2e" type="selectionEntry">
+          <modifiers>
+            <modifier type="append" field="name" value="B"/>
+          </modifiers>
+          <profiles>
+            <profile id="b856-b34b-471e-4914" name="Eddo Ashigaru B" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+              <characteristics>
+                <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
+                <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+                <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">3</characteristic>
+                <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+                <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
+                <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+                <characteristic name="Ki" typeId="3969-9568-a914-6854">1</characteristic>
+                <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+                <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">6</characteristic>
+                <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">6 OOOOO O</characteristic>
+                <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </entryLink>
+      </entryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0.0"/>
+      </costs>
+    </selectionEntry>
   </selectionEntries>
   <entryLinks>
     <entryLink id="d149-3ea0-90df-a450" name="Ancestor Spirit" hidden="false" collective="false" import="true" targetId="a8a8-fc30-a7e2-2913" type="selectionEntry">
@@ -4920,6 +5031,21 @@ When this model gains Ki from the Channel Trait, it also gains a Virtue Token.</
       </entryLinks>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="18.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="86ce-f650-cbb4-1f2e" name="Eddo Ashigaru" hidden="false" collective="false" import="true" type="model">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d70e-fe4c-2d51-89ca" type="max"/>
+      </constraints>
+      <categoryLinks>
+        <categoryLink id="88e1-853f-092f-33d7" name="Ashigaru" hidden="false" targetId="f434-17e6-174c-b4f6" primary="false"/>
+        <categoryLink id="146e-b8bc-1128-bfbe" name="Armour" hidden="false" targetId="f322-702a-ff62-b37e" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="2b45-2407-240d-2bbc" name="Enhancements" hidden="false" collective="false" import="true" targetId="3dad-1423-9b3c-86a7" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="12.0"/>
       </costs>
     </selectionEntry>
   </sharedSelectionEntries>

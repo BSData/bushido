@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="d615-aef7-31d5-367d" name="Jung Pirates" revision="30" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="18" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="d615-aef7-31d5-367d" name="Jung Pirates" revision="31" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="18" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="258a-e1a8-8db1-9635" name="Ki&lt;2" hidden="true"/>
     <categoryEntry id="f6c9-50fa-a9d3-e9f3" name="Ranged Weapon" hidden="true"/>
@@ -207,7 +207,7 @@ If Jung Mari is recruited into this Warband, This card gains x2 Max.</characteri
                 <characteristic name="Range Bands" typeId="be6a-50c6-d691-e2e9">2/4/6</characteristic>
                 <characteristic name="Traits" typeId="3410-4428-ef91-eb61">Bleed (1/1), Lightweight</characteristic>
                 <characteristic name="Specials" typeId="cdaf-b6ac-89d4-39ef"/>
-                <characteristic name="Unique Effects" typeId="3bf8-6525-f003-4990">If this Attack cause Danage then the Target is moved 1&quot; directly toward this model. This model can only make 1 Thrown Harpoon Attack per turn.</characteristic>
+                <characteristic name="Unique Effects" typeId="3bf8-6525-f003-4990">If this Attack causes Damage then the Target is moved 1&quot; directly toward this model. This model can only make 1 Thrown Harpoon Attack per turn.</characteristic>
               </characteristics>
             </profile>
             <profile id="6bd5-ac27-d9d8-e07f" name="Sake Bottle" hidden="false" typeId="7e20-258e-bf92-18f9" typeName="Ranged Weapon">
@@ -2343,7 +2343,7 @@ When this model is removed from play by an Enemy attack or effect, all models in
                 <characteristic name="Range Bands" typeId="be6a-50c6-d691-e2e9">2/4/6</characteristic>
                 <characteristic name="Traits" typeId="3410-4428-ef91-eb61">Bleed (1/1), Lightweight</characteristic>
                 <characteristic name="Specials" typeId="cdaf-b6ac-89d4-39ef"/>
-                <characteristic name="Unique Effects" typeId="3bf8-6525-f003-4990">If this Attack causes Damage then the Target is moved 1&quot; directly towards this model.  This model can only make one Ranged Harpoon Attack per turn.</characteristic>
+                <characteristic name="Unique Effects" typeId="3bf8-6525-f003-4990">If this Attack causes Damage then the Target is moved 1&quot; directly toward this model. This model can only make 1 Thrown Harpoon Attack per turn.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -3607,6 +3607,122 @@ If this model is included in your Warband you may also include Ronin Kami of Cho
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="15.0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="880c-c28f-bd4e-c69e" name="Whale Hunters" hidden="false" collective="false" import="true" type="unit">
+      <constraints>
+        <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="true" id="7c9f-926f-4343-04f7" type="max"/>
+      </constraints>
+      <infoGroups>
+        <infoGroup id="86dc-f826-ceb2-bed6" name="Ki Feats" hidden="false">
+          <infoLinks>
+            <infoLink id="c853-0a63-07ad-ad2a" name="Game Hunter" hidden="false" targetId="261b-b222-0b24-5c8c" type="infoGroup"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="f5d0-be12-6273-3b04" name="Traits" hidden="false">
+          <profiles>
+            <profile id="617e-0a08-d6ba-a95d" name="Whale Hunters" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Jump Up</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="a38a-1be9-4ed2-ca1d" name="Jump Up" hidden="false" targetId="1575-e12f-4ca3-c557" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="d032-262c-e011-a737" name="Melee Weapon" hidden="false">
+          <profiles>
+            <profile id="d864-5293-2dec-ce15" name="Harpoon" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+0</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Reach, Bleed (1/1)</characteristic>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d"></characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="e222-8fe8-1895-39d6" name="Bleed" hidden="false" targetId="ac4a-e540-4fe3-126a" type="rule"/>
+            <infoLink id="87e4-23c6-27d5-a00b" name="Reach" hidden="false" targetId="e28e-d5dd-a262-1101" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="c4ce-a1cd-187f-bb47" name="Ranged Weapon" hidden="false">
+          <profiles>
+            <profile id="c46f-02d6-e86a-397d" name="Thrown Harpoon" hidden="false" typeId="7e20-258e-bf92-18f9" typeName="Ranged Weapon">
+              <characteristics>
+                <characteristic name="Ranged Weapon Strength" typeId="15aa-b6bd-6923-271f">+0</characteristic>
+                <characteristic name="Range Bands" typeId="be6a-50c6-d691-e2e9">2/4/6</characteristic>
+                <characteristic name="Traits" typeId="3410-4428-ef91-eb61">Bleed (1/1), Lightweight</characteristic>
+                <characteristic name="Specials" typeId="cdaf-b6ac-89d4-39ef"/>
+                <characteristic name="Unique Effects" typeId="3bf8-6525-f003-4990">If this Attack causes Damage then the Target is moved 1&quot; directly toward this model. This model can only make 1 Thrown Harpoon Attack per turn.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="9032-a586-051a-7bbe" name="Lightweight" hidden="false" targetId="c75c-7124-2b1f-a4d9" type="rule"/>
+            <infoLink id="014d-45f9-a239-4ec8" name="Bleed" hidden="false" targetId="ac4a-e540-4fe3-126a" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+      </infoGroups>
+      <categoryLinks>
+        <categoryLink id="246b-a3d9-f89d-201c" name="Faction: Jung Pirates" hidden="false" targetId="76df-04fb-ea1f-77ab" primary="false"/>
+        <categoryLink id="b2f7-a349-58c2-7581" name="Kaizoku" hidden="false" targetId="5bf8-7b73-412a-f654" primary="false"/>
+        <categoryLink id="a580-83d0-0d4c-04c8" name="Ki&lt;2" hidden="false" targetId="258a-e1a8-8db1-9635" primary="false"/>
+        <categoryLink id="d559-a6bb-d859-4bf6" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
+        <categoryLink id="48a6-8796-3427-19b1" name="Non-Unique" hidden="false" targetId="d181-219d-3add-d47b" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="355b-2513-e6b1-8602" name="Whale Hunter" hidden="false" collective="false" import="true" targetId="4266-aadb-19de-4082" type="selectionEntry">
+          <modifiers>
+            <modifier type="append" field="name" value="B"/>
+          </modifiers>
+          <profiles>
+            <profile id="6833-7a57-bc12-0303" name="Whale Hunter B" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+              <characteristics>
+                <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">2</characteristic>
+                <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+                <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">2</characteristic>
+                <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33">3</characteristic>
+                <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
+                <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+                <characteristic name="Ki" typeId="3969-9568-a914-6854">1</characteristic>
+                <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+                <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">6</characteristic>
+                <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">6 OOOOO O</characteristic>
+                <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </entryLink>
+        <entryLink id="8c9e-6a10-dbb7-6c01" name="Whale Hunter" hidden="false" collective="false" import="true" targetId="4266-aadb-19de-4082" type="selectionEntry">
+          <modifiers>
+            <modifier type="append" field="name" value="A"/>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1514-e24e-d182-32f4" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="8074-dc4f-6c18-de41" name="Whale Hunter A" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+              <characteristics>
+                <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">2</characteristic>
+                <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+                <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">2</characteristic>
+                <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33">3</characteristic>
+                <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
+                <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+                <characteristic name="Ki" typeId="3969-9568-a914-6854">1</characteristic>
+                <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+                <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">6</characteristic>
+                <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">6 OOOOO O</characteristic>
+                <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </entryLink>
+      </entryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0.0"/>
+      </costs>
+    </selectionEntry>
   </selectionEntries>
   <entryLinks>
     <entryLink id="7c58-4740-ab52-3330" name="Koshimori Yukio" hidden="false" collective="false" import="true" targetId="de1e-de2d-1044-bf56" type="selectionEntry">
@@ -4008,6 +4124,20 @@ If this model is included in your Warband you may also include Ronin Kami of Cho
       </categoryLinks>
       <entryLinks>
         <entryLink id="4cd1-a488-dff1-c928" name="Enhancements" hidden="false" collective="false" import="true" targetId="2327-1257-a4b4-df32" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="8.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="4266-aadb-19de-4082" name="Whale Hunter" hidden="false" collective="false" import="true" type="model">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="9b97-de94-3478-dc25" type="max"/>
+      </constraints>
+      <categoryLinks>
+        <categoryLink id="7b77-ede6-8374-0ed7" name="Kaizoku" hidden="false" targetId="5bf8-7b73-412a-f654" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="e75f-0b37-be16-448a" name="Enhancements" hidden="false" collective="false" import="true" targetId="2327-1257-a4b4-df32" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="8.0"/>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="b586-d588-5153-3d1d" name="Library-Feats" revision="32" battleScribeVersion="2.03" library="true" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="18" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="b586-d588-5153-3d1d" name="Library-Feats" revision="33" battleScribeVersion="2.03" library="true" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="18" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedInfoGroups>
     <infoGroup id="57e7-9fb3-3c54-8ea8" name="Blessing of the Kami" hidden="false">
       <profiles>
@@ -6912,7 +6912,7 @@ Even if this assist is ignored (e.g. by the Indomitable Trait) this feat can be 
             <characteristic name="Cost" typeId="a126-54d9-0a27-f4b6">1</characteristic>
             <characteristic name="Timing" typeId="f8a8-8a3e-ef58-4c61">Active</characteristic>
             <characteristic name="Subject" typeId="4ac8-2bb1-0c84-f088">Target BtB</characteristic>
-            <characteristic name="Limitation" typeId="6fc9-5d13-2687-b2a5"></characteristic>
+            <characteristic name="Limitation" typeId="6fc9-5d13-2687-b2a5"/>
             <characteristic name="Description" typeId="f804-b969-00da-2123">During an Enemy model&apos;s activation in which it entered into BtB with, or Targets another Fan Dancer model with a Ranged Attack or Ki Feat, but before any Melee Exchange begins, place that Fan Dancer model within 2&quot; of its current location, the Enemy model&apos;s action is then considered resolved.</characteristic>
           </characteristics>
         </profile>
@@ -6933,9 +6933,9 @@ If this model is Killed or removed from play, immediately remove all shadows fro
         </profile>
       </profiles>
     </infoGroup>
-    <infoGroup id="79ae-96cc-560d-9dc6" name="Pulling Your Strings" hidden="false">
+    <infoGroup id="79ae-96cc-560d-9dc6" name="Pulling the Strings" hidden="false">
       <profiles>
-        <profile id="3833-32f9-5834-fd92" name="Pulling Your Strings" hidden="false" typeId="993a-e62a-7922-0ccb" typeName="Ki Feat">
+        <profile id="3833-32f9-5834-fd92" name="Pulling the Strings" hidden="false" typeId="993a-e62a-7922-0ccb" typeName="Ki Feat">
           <characteristics>
             <characteristic name="Cost" typeId="a126-54d9-0a27-f4b6">1</characteristic>
             <characteristic name="Timing" typeId="f8a8-8a3e-ef58-4c61">Simple</characteristic>
@@ -6974,6 +6974,169 @@ If this model is Killed or removed from play, immediately remove all shadows fro
       <infoLinks>
         <infoLink id="7eb3-be5c-57e9-d1a5" name="Regenerate" hidden="false" targetId="74c4-617e-8405-3e46" type="rule"/>
       </infoLinks>
+    </infoGroup>
+    <infoGroup id="b658-8897-145d-9df2" name="Jump Em!" hidden="false">
+      <profiles>
+        <profile id="3717-96f2-2578-0f61" name="Jump Em!" hidden="false" typeId="993a-e62a-7922-0ccb" typeName="Ki Feat">
+          <characteristics>
+            <characteristic name="Cost" typeId="a126-54d9-0a27-f4b6">X</characteristic>
+            <characteristic name="Timing" typeId="f8a8-8a3e-ef58-4c61">Active</characteristic>
+            <characteristic name="Subject" typeId="4ac8-2bb1-0c84-f088">Pulse X&quot;</characteristic>
+            <characteristic name="Limitation" typeId="6fc9-5d13-2687-b2a5">Once Per Game</characteristic>
+            <characteristic name="Description" typeId="f804-b969-00da-2123">This model gains Command [Shatei](X/X&quot;).
+Choose X Friendly Shatei models in the Pulse to gain a Virtue Token.
+Friendly Shatei models on the Battlefield gain Co-ordinated Attack [Shatei].</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="1594-c20b-a6f6-945d" name="Co-ordinated Attack" hidden="false" targetId="2337-7bcc-c1f2-f2bd" type="rule"/>
+        <infoLink id="78c2-b724-a06c-427c" name="Command" hidden="false" targetId="1b83-5421-f050-365a" type="rule"/>
+      </infoLinks>
+    </infoGroup>
+    <infoGroup id="acd6-2dc4-29fe-4ff9" name="Gather Defenders" hidden="false">
+      <profiles>
+        <profile id="fe18-3225-9576-9d71" name="Gather Defenders" hidden="false" typeId="993a-e62a-7922-0ccb" typeName="Ki Feat">
+          <characteristics>
+            <characteristic name="Cost" typeId="a126-54d9-0a27-f4b6">X</characteristic>
+            <characteristic name="Timing" typeId="f8a8-8a3e-ef58-4c61">Simple</characteristic>
+            <characteristic name="Subject" typeId="4ac8-2bb1-0c84-f088">Personal</characteristic>
+            <characteristic name="Limitation" typeId="6fc9-5d13-2687-b2a5">Not in BtB, Once Per Game</characteristic>
+            <characteristic name="Description" typeId="f804-b969-00da-2123">Place this model elsewhere. It gains Flank and returns to play from a friendly table edge next turn using the Flank rules.
+When this model is deployed using Flank gained from this Ki Feat, summon and deploy another non-Unique Villager in BtB with it.
+Mark all but X of the other non-Unique Villager&apos;s Wound boxes.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="6389-0774-2458-1349" name="Flank" hidden="false" targetId="a847-f02d-7e99-8a66" type="rule"/>
+      </infoLinks>
+    </infoGroup>
+    <infoGroup id="923e-3837-4def-0ef9" name="Phalanx" hidden="false">
+      <profiles>
+        <profile id="3a65-2d71-6f3d-fa5f" name="Phalanx" hidden="false" typeId="993a-e62a-7922-0ccb" typeName="Ki Feat">
+          <characteristics>
+            <characteristic name="Cost" typeId="a126-54d9-0a27-f4b6">2</characteristic>
+            <characteristic name="Timing" typeId="f8a8-8a3e-ef58-4c61">Active</characteristic>
+            <characteristic name="Subject" typeId="4ac8-2bb1-0c84-f088">Personal</characteristic>
+            <characteristic name="Limitation" typeId="6fc9-5d13-2687-b2a5">Once Per Turn</characteristic>
+            <characteristic name="Description" typeId="f804-b969-00da-2123">If this model would benefit from a Melee Assist, its Melee Weapons gain Brutal (1) until the end of the current activation.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="ee25-e5bb-07df-8fad" name="Brutal" hidden="false" targetId="5d95-975e-a72c-25f3" type="rule"/>
+      </infoLinks>
+    </infoGroup>
+    <infoGroup id="83b3-9df2-ef39-e3bb" name="Fluster" hidden="false">
+      <profiles>
+        <profile id="16c7-4c0f-5633-beb7" name="Fluster" hidden="false" typeId="993a-e62a-7922-0ccb" typeName="Ki Feat">
+          <characteristics>
+            <characteristic name="Cost" typeId="a126-54d9-0a27-f4b6">2</characteristic>
+            <characteristic name="Timing" typeId="f8a8-8a3e-ef58-4c61">Simple</characteristic>
+            <characteristic name="Subject" typeId="4ac8-2bb1-0c84-f088">Target 8&quot; Opposed</characteristic>
+            <characteristic name="Limitation" typeId="6fc9-5d13-2687-b2a5">Not in BtB</characteristic>
+            <characteristic name="Description" typeId="f804-b969-00da-2123">Target Enemy model gains an Impetuous Marker.
+Until the End Phase, while the Enemy model has any Impetuous Markers, it may not Target, or declare actions that will bring it into BtB with, Friendly Ito models that have any Impetuous Markers.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </infoGroup>
+    <infoGroup id="4509-3457-e8a4-fcbb" name="Riazzur&apos;s Flight" hidden="false">
+      <profiles>
+        <profile id="f478-0784-ff4a-14bb" name="Riazzur&apos;s Flight" hidden="false" typeId="993a-e62a-7922-0ccb" typeName="Ki Feat">
+          <characteristics>
+            <characteristic name="Cost" typeId="a126-54d9-0a27-f4b6">2</characteristic>
+            <characteristic name="Timing" typeId="f8a8-8a3e-ef58-4c61">Active</characteristic>
+            <characteristic name="Subject" typeId="4ac8-2bb1-0c84-f088">Special</characteristic>
+            <characteristic name="Limitation" typeId="6fc9-5d13-2687-b2a5">Once Per Game</characteristic>
+            <characteristic name="Description" typeId="f804-b969-00da-2123">When this model succeeds in a melee attack roll, Place the Enemy model in its Deployment Zone, the Enemy model gains a Prone Marker.
+Make a Damage Roll as normal. Do not apply any of this model&apos;s Special Abilities to this Melee Exchange.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </infoGroup>
+    <infoGroup id="2d66-6819-ed7b-b10a" name="Unapproachable" hidden="false">
+      <profiles>
+        <profile id="12b8-5c26-fd57-b190" name="Unapproachable" hidden="false" typeId="993a-e62a-7922-0ccb" typeName="Ki Feat">
+          <characteristics>
+            <characteristic name="Cost" typeId="a126-54d9-0a27-f4b6">2</characteristic>
+            <characteristic name="Timing" typeId="f8a8-8a3e-ef58-4c61">Active</characteristic>
+            <characteristic name="Subject" typeId="4ac8-2bb1-0c84-f088">Special</characteristic>
+            <characteristic name="Limitation" typeId="6fc9-5d13-2687-b2a5"/>
+            <characteristic name="Description" typeId="f804-b969-00da-2123">Until the end of the current activation, increase the cost of special abilities of Enemy models in a Melee Exchange with this model by 1.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </infoGroup>
+    <infoGroup id="1f64-8958-5d8a-099f" name="Aoi&apos;s Light" hidden="false">
+      <profiles>
+        <profile id="1e04-90bc-3204-04ec" name="Aoi&apos;s Light" hidden="false" typeId="993a-e62a-7922-0ccb" typeName="Ki Feat">
+          <characteristics>
+            <characteristic name="Cost" typeId="a126-54d9-0a27-f4b6">2</characteristic>
+            <characteristic name="Timing" typeId="f8a8-8a3e-ef58-4c61">Active</characteristic>
+            <characteristic name="Subject" typeId="4ac8-2bb1-0c84-f088">Aura 6&quot;</characteristic>
+            <characteristic name="Limitation" typeId="6fc9-5d13-2687-b2a5">Once Per Turn</characteristic>
+            <characteristic name="Description" typeId="f804-b969-00da-2123">Friendly models may ignore any Darkness and Breath of Yurei effects when drawing LoS to models or points within the Aura.
+Enemy models with the Camouflage Trait within the Aura gain Camouflage (+2&quot;).</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </infoGroup>
+    <infoGroup id="0f41-428e-bc05-bfec" name="Illicium" hidden="false">
+      <profiles>
+        <profile id="197f-dc52-8013-979b" name="Illicium" hidden="false" typeId="993a-e62a-7922-0ccb" typeName="Ki Feat">
+          <characteristics>
+            <characteristic name="Cost" typeId="a126-54d9-0a27-f4b6">1</characteristic>
+            <characteristic name="Timing" typeId="f8a8-8a3e-ef58-4c61">Instant</characteristic>
+            <characteristic name="Subject" typeId="4ac8-2bb1-0c84-f088">Pulse 6&quot;</characteristic>
+            <characteristic name="Limitation" typeId="6fc9-5d13-2687-b2a5">Not in BtB, Once Per Turn</characteristic>
+            <characteristic name="Description" typeId="f804-b969-00da-2123">When an Enemy model Targets a Friendly model in the Pulse, you may change the Target to this model instead if this model is a valid Target.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </infoGroup>
+    <infoGroup id="c537-019e-0403-ca2c" name="Slippery" hidden="false">
+      <profiles>
+        <profile id="ed6c-59e2-a124-e63b" name="Slippery" hidden="false" typeId="993a-e62a-7922-0ccb" typeName="Ki Feat">
+          <characteristics>
+            <characteristic name="Cost" typeId="a126-54d9-0a27-f4b6">1</characteristic>
+            <characteristic name="Timing" typeId="f8a8-8a3e-ef58-4c61">Active</characteristic>
+            <characteristic name="Subject" typeId="4ac8-2bb1-0c84-f088">Personal</characteristic>
+            <characteristic name="Limitation" typeId="6fc9-5d13-2687-b2a5"/>
+            <characteristic name="Description" typeId="f804-b969-00da-2123">When this model makes a Disengage Action, it may double its melee pool.
+If it does, this model must allocate all dice to Defence.
+
+This Ki Feat may only be used once per activation.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </infoGroup>
+    <infoGroup id="b8be-356d-eccd-946f" name="Thrash" hidden="false">
+      <profiles>
+        <profile id="e1f8-05ca-bd4b-c4a1" name="Thrash" hidden="false" typeId="993a-e62a-7922-0ccb" typeName="Ki Feat">
+          <characteristics>
+            <characteristic name="Cost" typeId="a126-54d9-0a27-f4b6">2</characteristic>
+            <characteristic name="Timing" typeId="f8a8-8a3e-ef58-4c61">Instant</characteristic>
+            <characteristic name="Subject" typeId="4ac8-2bb1-0c84-f088">Personal</characteristic>
+            <characteristic name="Limitation" typeId="6fc9-5d13-2687-b2a5"/>
+            <characteristic name="Description" typeId="f804-b969-00da-2123">Models in a Melee Exchange with this model lose the Dodge trait until the current action is resolved.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </infoGroup>
+    <infoGroup id="5f4a-25fd-654a-3a32" name="Tokkiko&apos;s Choice" hidden="false">
+      <profiles>
+        <profile id="25e7-dc28-c79a-f8c1" name="Tokkiko&apos;s Choice" hidden="false" typeId="993a-e62a-7922-0ccb" typeName="Ki Feat">
+          <characteristics>
+            <characteristic name="Cost" typeId="a126-54d9-0a27-f4b6">1</characteristic>
+            <characteristic name="Timing" typeId="f8a8-8a3e-ef58-4c61">Instant</characteristic>
+            <characteristic name="Subject" typeId="4ac8-2bb1-0c84-f088">Pulse 6&quot;</characteristic>
+            <characteristic name="Limitation" typeId="6fc9-5d13-2687-b2a5">Not in BtB</characteristic>
+            <characteristic name="Description" typeId="f804-b969-00da-2123">When an Enemy model that is not Soulless in the Pulse is Killed, Replace it with a Friendly Miyakomo&apos;s Echo.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
     </infoGroup>
   </sharedInfoGroups>
   <catalogueLinks>

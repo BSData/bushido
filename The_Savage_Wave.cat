@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="0b85-0901-eb64-b84b" name="The Savage Wave" revision="33" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="18" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="0b85-0901-eb64-b84b" name="The Savage Wave" revision="34" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="18" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="5048-3a52-5689-6d0b" name="Ambush" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -4160,6 +4160,34 @@ If it currently has no Ammo Tokens, this model will also gain 1 Ammo Token and m
         <categoryLink id="02e7-bb0f-f287-3935" name="New CategoryLink" hidden="false" targetId="5073-f00b-a8f6-5e3b" primary="true"/>
       </categoryLinks>
     </entryLink>
+    <entryLink id="a18c-0b48-ef66-3af1" name="Ogai, the Skybreaker" hidden="false" collective="false" import="true" targetId="b6a0-cc50-8682-19d2" type="selectionEntry">
+      <modifiers>
+        <modifier type="decrement" field="a111-8656-5c05-7415" value="1.0">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="bd75-31a1-5a23-cd2d" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="36bd-7ba3-33ea-3cbd" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
+      </categoryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="27.0"/>
+      </costs>
+    </entryLink>
+    <entryLink id="fee3-82be-f960-4648" name="Ogai, the Skybreaker" hidden="false" collective="false" import="true" targetId="b6a0-cc50-8682-19d2" type="selectionEntry">
+      <modifiers>
+        <modifier type="append" field="name" value="(reference card)"/>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="26c7-22c0-fab2-d4c4" type="lessThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="67af-ea8e-e36b-b23a" name="Reference Cards" hidden="false" targetId="5073-f00b-a8f6-5e3b" primary="true"/>
+      </categoryLinks>
+    </entryLink>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="db76-ea05-1047-4ccd" name="Rinsho" hidden="false" collective="false" import="true" type="model">
@@ -5937,6 +5965,113 @@ Oni and Onisho models, except Kijo models, activating within 4&quot;&quot; of th
       </categoryLinks>
       <entryLinks>
         <entryLink id="25c3-5fd9-1fd9-cf17" name="Enhancements" hidden="false" collective="false" import="true" targetId="74e6-2485-1c0a-4227" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="b6a0-cc50-8682-19d2" name="Ogai, the Skybreaker" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d14c-bf06-fc37-16e2" type="equalTo"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2125-1289-3bb1-15c1" type="equalTo"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="bec1-2154-3ab5-7979" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="23ec-d348-2e7b-a2f2" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="29f2-edf8-bce6-c12c" name="Ogai, the Skybreaker" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">2</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">5</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">2</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">6</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">13 OOOOO OOOOO OOO</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Huge 50mm</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="ba8c-e65c-8c39-9521" name="Traits" hidden="false">
+          <profiles>
+            <profile id="a0d7-c123-2d4c-5352" name="Ogai, the Skybreaker" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Armour (1), Endurance, Fear (6), Indomitable (1), Oni Rage, Regenerate (1), Strong, Tough (1)</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="65f6-8830-5126-bef3" name="Armour" hidden="false" targetId="8615-1c63-2242-5746" type="rule"/>
+            <infoLink id="4579-267d-04b3-4436" name="Fear" hidden="false" targetId="3586-4583-7f10-1f31" type="rule"/>
+            <infoLink id="c46c-0b7d-73b2-8003" name="Tough" hidden="false" targetId="5613-a6cf-495a-229f" type="rule"/>
+            <infoLink id="6803-da66-b3a0-1657" name="Indomitable " hidden="false" targetId="3beb-6f28-e7c4-a236" type="rule"/>
+            <infoLink id="5a8d-d7d3-f3f8-ede1" name="Endurance" hidden="false" targetId="7fdc-d150-9641-1235" type="rule"/>
+            <infoLink id="cdd4-ec15-9799-9f6c" name="Oni Rage" hidden="false" targetId="45cb-e585-e410-95c3" type="rule"/>
+            <infoLink id="14f3-e497-390f-464c" name="Strong" hidden="false" targetId="00b5-3637-d48a-807e" type="rule"/>
+            <infoLink id="b3d8-8124-11dd-0cd7" name="Huge" hidden="false" targetId="baca-f5d8-c383-49d2" type="rule"/>
+            <infoLink id="a3ad-cce7-2132-38d1" name="Regenerate" hidden="false" targetId="74c4-617e-8405-3e46" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="c670-7a0c-4eb6-6357" name="Ki Feats" hidden="false">
+          <infoLinks>
+            <infoLink id="9efd-d289-8ac4-94bb" name="Consume Soul" hidden="false" targetId="85bd-ac0d-842c-3097" type="infoGroup"/>
+            <infoLink id="d3ba-b456-c0fd-992a" name="Riazzur&apos;s Flight" hidden="false" targetId="4509-3457-e8a4-fcbb" type="infoGroup"/>
+            <infoLink id="ac68-3a2e-c57a-1db5" name="Unapproachable" hidden="false" targetId="2d66-6819-ed7b-b10a" type="infoGroup"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="2045-4489-b5f6-1095" name="Unique Effects" hidden="false">
+          <profiles>
+            <profile id="df0c-49a1-4063-7823" name="The Skybreaker" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">Successful Special Attacks by this model move Enemy models double distance.
+
+This model may move through Destructible terrain; if you do, remove the terrain from the battlefield.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </infoGroup>
+        <infoGroup id="6f78-b23f-25cc-5f2b" name="Melee Weapon" hidden="false">
+          <profiles>
+            <profile id="daf1-0ad6-e909-b7cd" name="Club" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+3</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Brutal (1), Reach</characteristic>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Powerful Attack (1), Push Attack (0), Slam Attack (1)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="40bf-15da-e7d1-4133" name="Powerful Attack" hidden="false" targetId="d56a-058d-95d9-5b60" type="rule"/>
+            <infoLink id="364e-82ad-0bca-91ff" name="Reach" hidden="false" targetId="e28e-d5dd-a262-1101" type="rule"/>
+            <infoLink id="a0f9-e6e9-b4d2-84f4" name="Brutal" hidden="false" targetId="5d95-975e-a72c-25f3" type="rule"/>
+            <infoLink id="3f9f-abd4-6f8c-077e" name="Slam Attack" hidden="false" targetId="5d05-b0ce-d7db-9def" type="rule"/>
+            <infoLink id="225a-2a2c-c859-16c4" name="Push Attack" hidden="false" targetId="6c26-94ba-6b96-9e1b" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+      </infoGroups>
+      <categoryLinks>
+        <categoryLink id="0426-c920-f498-f7e1" name="Faction: The Savage Wave" hidden="false" targetId="c920-0951-5d96-5693" primary="false"/>
+        <categoryLink id="c07e-e48c-d78c-1715" name="Oni" hidden="false" targetId="4864-a322-cefd-fbfb" primary="false"/>
+        <categoryLink id="cd20-a8ed-dee0-a893" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
+        <categoryLink id="c17f-42ad-71aa-17f4" name="Brutal" hidden="false" targetId="f62f-dd0b-4f06-06a6" primary="false"/>
+        <categoryLink id="184e-7706-a360-1b9f" name="Armour" hidden="false" targetId="f322-702a-ff62-b37e" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="0932-6143-e55e-8213" name="Enhancements" hidden="false" collective="false" import="true" targetId="74e6-2485-1c0a-4227" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0.0"/>
