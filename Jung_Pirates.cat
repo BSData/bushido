@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="d615-aef7-31d5-367d" name="Jung Pirates" revision="32" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="18" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="d615-aef7-31d5-367d" name="Jung Pirates" revision="33" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="18" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="258a-e1a8-8db1-9635" name="Ki&lt;2" hidden="true"/>
     <categoryEntry id="f6c9-50fa-a9d3-e9f3" name="Ranged Weapon" hidden="true"/>
@@ -4066,6 +4066,7 @@ X is equal to the Enemy model&apos;s Armour Trait value.</characteristic>
         <categoryLink id="002e-90cb-cf6f-2c37" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
         <categoryLink id="00a5-4cbe-8b57-7b97" name="Deep" hidden="false" targetId="cf26-f911-0ae1-74d2" primary="false"/>
         <categoryLink id="1468-7a8d-5c7b-ee0e" name="Yokai" hidden="false" targetId="8a19-8c2b-46a8-4086" primary="false"/>
+        <categoryLink id="5c90-c6d7-2c27-58a8" name="Ranged Weapon" hidden="false" targetId="f6c9-50fa-a9d3-e9f3" primary="false"/>
       </categoryLinks>
       <entryLinks>
         <entryLink id="ac6d-7053-786c-1335" name="Enhancements" hidden="false" collective="false" import="true" targetId="2327-1257-a4b4-df32" type="selectionEntryGroup"/>
@@ -4247,6 +4248,11 @@ Requirement [The Deep Theme]</characteristic>
               </conditions>
             </conditionGroup>
           </conditionGroups>
+        </modifier>
+        <modifier type="set" field="a111-8656-5c05-7415" value="0.0">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c0d2-f3cb-e3b1-ffaf" type="atLeast"/>
+          </conditions>
         </modifier>
       </modifiers>
       <constraints>
@@ -4632,6 +4638,7 @@ This model may not declare Ranged Attack Actions.</characteristic>
         <categoryLink id="4b7d-01a1-e4ef-7d76" name="Animal" hidden="false" targetId="c382-9ab3-9924-e30a" primary="false"/>
         <categoryLink id="3a0e-94a8-2841-dad8" name="Eel" hidden="false" targetId="bb1c-4893-a592-7b1a" primary="false"/>
         <categoryLink id="56a9-83bf-96c1-451a" name="Non-Unique" hidden="false" targetId="d181-219d-3add-d47b" primary="false"/>
+        <categoryLink id="b141-0164-244a-dc7d" name="Ranged Weapon" hidden="false" targetId="f6c9-50fa-a9d3-e9f3" primary="false"/>
       </categoryLinks>
       <entryLinks>
         <entryLink id="4a9e-e5a9-d8f1-89e9" name="Enhancements" hidden="false" collective="false" import="true" targetId="2327-1257-a4b4-df32" type="selectionEntryGroup"/>
@@ -4823,6 +4830,7 @@ If the model becomes ineligible before it is chosen as the Activating model then
         <categoryLink id="6e36-e1a6-62ba-a707" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
         <categoryLink id="d684-f785-a1c1-8d21" name="Umimiman" hidden="false" targetId="1232-ee1c-27d6-3b02" primary="false"/>
         <categoryLink id="657b-2bf7-14fe-eee3" name="Deep" hidden="false" targetId="cf26-f911-0ae1-74d2" primary="false"/>
+        <categoryLink id="d17d-43ca-2a88-e1ba" name="Ranged Weapon" hidden="false" targetId="f6c9-50fa-a9d3-e9f3" primary="false"/>
       </categoryLinks>
       <entryLinks>
         <entryLink id="438c-82aa-df49-08e8" name="Enhancements" hidden="false" collective="false" import="true" targetId="2327-1257-a4b4-df32" type="selectionEntryGroup"/>
@@ -4953,6 +4961,7 @@ If the model becomes ineligible before it is chosen as the Activating model then
         <categoryLink id="3dd8-f1a0-3641-4b77" name="Deep" hidden="false" targetId="cf26-f911-0ae1-74d2" primary="false"/>
         <categoryLink id="a524-11e6-cc1e-6f68" name="Kancho" hidden="false" targetId="bcfa-f75d-fc85-80c2" primary="false"/>
         <categoryLink id="bff7-c486-1457-b268" name="Samurai" hidden="false" targetId="e12a-f782-3281-7444" primary="false"/>
+        <categoryLink id="1571-e507-9bbb-42ac" name="Ranged Weapon" hidden="false" targetId="f6c9-50fa-a9d3-e9f3" primary="false"/>
       </categoryLinks>
       <entryLinks>
         <entryLink id="8c89-8258-d20c-20dc" name="Enhancements" hidden="false" collective="false" import="true" targetId="2327-1257-a4b4-df32" type="selectionEntryGroup"/>
@@ -5638,7 +5647,7 @@ If the model becomes ineligible before it is chosen as the Activating model then
         <entryLink id="399b-ec93-ae79-1c1a" name="Knife" hidden="false" collective="false" import="true" targetId="6c13-1e3e-8e36-0585" type="selectionEntry"/>
       </entryLinks>
       <costs>
-        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="7.0"/>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="3.0"/>
       </costs>
     </selectionEntry>
   </sharedSelectionEntries>
