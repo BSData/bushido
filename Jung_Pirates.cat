@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="d615-aef7-31d5-367d" name="Jung Pirates" revision="31" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="18" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="d615-aef7-31d5-367d" name="Jung Pirates" revision="32" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="18" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="258a-e1a8-8db1-9635" name="Ki&lt;2" hidden="true"/>
     <categoryEntry id="f6c9-50fa-a9d3-e9f3" name="Ranged Weapon" hidden="true"/>
@@ -144,6 +144,18 @@ If Jung Mari is recruited into this Warband, This card gains x2 Max.</characteri
       </costs>
     </selectionEntry>
     <selectionEntry id="e38b-e7d5-5119-15fe" name="Yori" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c2b6-0a48-94a3-1c8b" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c0d2-f3cb-e3b1-ffaf" type="atLeast"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7925-33e8-114a-8c93" type="max"/>
       </constraints>
@@ -339,6 +351,18 @@ If Jung Mari is recruited into this Warband, This card gains x2 Max.</characteri
       </costs>
     </selectionEntry>
     <selectionEntry id="eb47-4dad-4304-23ed" name="Taru" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c2b6-0a48-94a3-1c8b" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c0d2-f3cb-e3b1-ffaf" type="atLeast"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="128a-63bd-0377-a0f6" type="max"/>
       </constraints>
@@ -449,6 +473,18 @@ If this model has no Ammo Tokens on its Net Weapon it loses the Net Weapon.</cha
       </costs>
     </selectionEntry>
     <selectionEntry id="b351-8f50-2ee2-8f64" name="Sho" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c2b6-0a48-94a3-1c8b" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c0d2-f3cb-e3b1-ffaf" type="atLeast"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d523-d854-e242-a6ce" type="max"/>
       </constraints>
@@ -713,9 +749,11 @@ If this model has no Ammo Tokens on its Net Weapon it loses the Net Weapon.</cha
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="068d-6ee9-fa4a-a8bf" type="equalTo"/>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1b47-eda0-6ebd-dc1a" type="equalTo"/>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="aaa8-4503-68d2-4665" type="equalTo"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="068d-6ee9-fa4a-a8bf" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1b47-eda0-6ebd-dc1a" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="aaa8-4503-68d2-4665" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c0d2-f3cb-e3b1-ffaf" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c2b6-0a48-94a3-1c8b" type="atLeast"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -798,7 +836,7 @@ If this model has no Ammo Tokens on its Net Weapon it loses the Net Weapon.</cha
         </infoGroup>
         <infoGroup id="4465-19e4-2a36-5c9a" name="Unique Effects" hidden="false">
           <profiles>
-            <profile id="ef6f-a956-1b29-4402" name="Jung Minato" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+            <profile id="ef6f-a956-1b29-4402" name="Kancho" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
               <characteristics>
                 <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">While this model is in play, the Melee Weapons of Kaizoku in this model&apos;s Warband gain Powerful Attack (1).</characteristic>
               </characteristics>
@@ -831,9 +869,11 @@ If this model has no Ammo Tokens on its Net Weapon it loses the Net Weapon.</cha
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4e07-8c38-7f78-6e5d" type="equalTo"/>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="068d-6ee9-fa4a-a8bf" type="equalTo"/>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="aaa8-4503-68d2-4665" type="equalTo"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4e07-8c38-7f78-6e5d" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="068d-6ee9-fa4a-a8bf" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="aaa8-4503-68d2-4665" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c0d2-f3cb-e3b1-ffaf" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c2b6-0a48-94a3-1c8b" type="atLeast"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -880,7 +920,7 @@ If this model has no Ammo Tokens on its Net Weapon it loses the Net Weapon.</cha
         </infoGroup>
         <infoGroup id="1c19-4715-ab74-8994" name="Unique Effects" hidden="false">
           <profiles>
-            <profile id="7339-043f-079e-ba02" name="Jung Mari" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+            <profile id="7339-043f-079e-ba02" name="Kancho" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
               <characteristics>
                 <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">Kaizoku in this model&apos;s Warband gain Scout (0/2&quot;).</characteristic>
               </characteristics>
@@ -952,9 +992,11 @@ If this model has no Ammo Tokens on its Net Weapon it loses the Net Weapon.</cha
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4e07-8c38-7f78-6e5d" type="equalTo"/>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1b47-eda0-6ebd-dc1a" type="equalTo"/>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="aaa8-4503-68d2-4665" type="equalTo"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4e07-8c38-7f78-6e5d" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1b47-eda0-6ebd-dc1a" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="aaa8-4503-68d2-4665" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c0d2-f3cb-e3b1-ffaf" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c2b6-0a48-94a3-1c8b" type="atLeast"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -1007,7 +1049,7 @@ If this model has no Ammo Tokens on its Net Weapon it loses the Net Weapon.</cha
         </infoGroup>
         <infoGroup id="e8e1-d8e3-2d07-9a5b" name="Unique Effects" hidden="false">
           <profiles>
-            <profile id="8462-3274-b12c-e71f" name="Jung Hibiki" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+            <profile id="8462-3274-b12c-e71f" name="Kancho" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
               <characteristics>
                 <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">While this model is in play, Kaizoku models in this model&apos;s Warband gain Evasive and their Melee Weapons gain Sidestep Defence (0).</characteristic>
               </characteristics>
@@ -1181,6 +1223,8 @@ If this model uses its Scout trait, it begins the game Prone with 2 Ki Tokens.</
                 <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4e07-8c38-7f78-6e5d" type="atLeast"/>
                 <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="068d-6ee9-fa4a-a8bf" type="atLeast"/>
                 <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="843d-db96-732e-cf8c" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c0d2-f3cb-e3b1-ffaf" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c2b6-0a48-94a3-1c8b" type="atLeast"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -1261,6 +1305,18 @@ If this model uses its Scout trait, it begins the game Prone with 2 Ki Tokens.</
       </costs>
     </selectionEntry>
     <selectionEntry id="0d30-a23c-e005-dbec" name="Duri" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c2b6-0a48-94a3-1c8b" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c0d2-f3cb-e3b1-ffaf" type="atLeast"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="24f1-c6e2-5825-66e5" type="max"/>
       </constraints>
@@ -1536,13 +1592,13 @@ This model cannot attach the Peg Leg Enhancement card.</characteristic>
           <profiles>
             <profile id="825d-61f9-1212-29bb" name="Itsiro Crab Swarm" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
               <characteristics>
-                <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">x</characteristic>
+                <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">X</characteristic>
                 <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277"/>
                 <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">1</characteristic>
                 <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
                 <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
                 <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
-                <characteristic name="Ki" typeId="3969-9568-a914-6854">x</characteristic>
+                <characteristic name="Ki" typeId="3969-9568-a914-6854">X</characteristic>
                 <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
                 <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">0</characteristic>
                 <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">3 OOO</characteristic>
@@ -1557,7 +1613,7 @@ This model cannot attach the Peg Leg Enhancement card.</characteristic>
                   <characteristics>
                     <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">-2</characteristic>
                     <characteristic name="Traits" typeId="39e3-f945-7956-ad4e"/>
-                    <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Sidesteap Defence (0), Sidestep Attack (0)</characteristic>
+                    <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Sidestep Defence (0), Sidestep Attack (0)</characteristic>
                     <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
                   </characteristics>
                 </profile>
@@ -1792,6 +1848,18 @@ Exclusion [Other Kancho or Juhin than those listed, Kanimiman, Samemiman]</chara
       </costs>
     </selectionEntry>
     <selectionEntry id="587f-04f7-9f48-19e2" name="Korusea" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c2b6-0a48-94a3-1c8b" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c0d2-f3cb-e3b1-ffaf" type="atLeast"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="true" id="09d0-ef88-7d77-0c65" type="max"/>
       </constraints>
@@ -1929,6 +1997,18 @@ If this model has no Ammo Tokens on its Net Weapon it loses the Net Weapon.</cha
       </costs>
     </selectionEntry>
     <selectionEntry id="0163-e7d9-a2a6-113c" name="Kohanin" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c2b6-0a48-94a3-1c8b" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c0d2-f3cb-e3b1-ffaf" type="atLeast"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="true" id="663a-bbb0-dfb5-5b8d" type="max"/>
       </constraints>
@@ -2042,6 +2122,8 @@ If this model has no Ammo Tokens on its Net Weapon it loses the Net Weapon.</cha
                 <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="068d-6ee9-fa4a-a8bf" type="atLeast"/>
                 <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1b47-eda0-6ebd-dc1a" type="atLeast"/>
                 <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="843d-db96-732e-cf8c" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c2b6-0a48-94a3-1c8b" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c0d2-f3cb-e3b1-ffaf" type="atLeast"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -2181,8 +2263,10 @@ Exclusion [Kancho, More than 1 Juhin]</characteristic>
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4e07-8c38-7f78-6e5d" type="equalTo"/>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1b47-eda0-6ebd-dc1a" type="equalTo"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4e07-8c38-7f78-6e5d" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1b47-eda0-6ebd-dc1a" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c0d2-f3cb-e3b1-ffaf" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c2b6-0a48-94a3-1c8b" type="atLeast"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -2295,6 +2379,18 @@ When this model is removed from play by an Enemy attack or effect, all models in
       </costs>
     </selectionEntry>
     <selectionEntry id="231f-8fdb-da69-ea81" name="Jori" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c2b6-0a48-94a3-1c8b" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c0d2-f3cb-e3b1-ffaf" type="atLeast"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6836-3e67-8f6f-f17b" type="max"/>
       </constraints>
@@ -2911,6 +3007,18 @@ This model may not be recruited into a Warband with the Docks of Ryu theme.</cha
       </costs>
     </selectionEntry>
     <selectionEntry id="8290-8093-41cd-5fda" name="Joben" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c2b6-0a48-94a3-1c8b" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c0d2-f3cb-e3b1-ffaf" type="atLeast"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="72c8-b13b-bb8d-17fd" type="max"/>
       </constraints>
@@ -2994,6 +3102,18 @@ This model may not be recruited into a Warband with the Docks of Ryu theme.</cha
       </costs>
     </selectionEntry>
     <selectionEntry id="8092-8b7e-e671-69a9" name="Musa" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c2b6-0a48-94a3-1c8b" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c0d2-f3cb-e3b1-ffaf" type="atLeast"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f3a4-74a8-da4a-b4a3" type="max"/>
       </constraints>
@@ -3066,6 +3186,18 @@ This model may not be recruited into a Warband with the Docks of Ryu theme.</cha
       </costs>
     </selectionEntry>
     <selectionEntry id="a139-c3e7-46d6-998d" name="Taiho" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c2b6-0a48-94a3-1c8b" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c0d2-f3cb-e3b1-ffaf" type="atLeast"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5e9b-fe54-54c9-c521" type="max"/>
       </constraints>
@@ -3236,6 +3368,18 @@ This terrain element must be placed within 6&quot; of the centreline and not wit
       </costs>
     </selectionEntry>
     <selectionEntry id="4fe3-8eeb-3526-dced" name="Kurutta" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c2b6-0a48-94a3-1c8b" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c0d2-f3cb-e3b1-ffaf" type="atLeast"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="346c-1368-2dc0-1a56" type="max"/>
       </constraints>
@@ -3608,6 +3752,18 @@ If this model is included in your Warband you may also include Ronin Kami of Cho
       </costs>
     </selectionEntry>
     <selectionEntry id="880c-c28f-bd4e-c69e" name="Whale Hunters" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c2b6-0a48-94a3-1c8b" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c0d2-f3cb-e3b1-ffaf" type="atLeast"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="true" id="7c9f-926f-4343-04f7" type="max"/>
       </constraints>
@@ -3635,7 +3791,7 @@ If this model is included in your Warband you may also include Ronin Kami of Cho
               <characteristics>
                 <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+0</characteristic>
                 <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Reach, Bleed (1/1)</characteristic>
-                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d"></characteristic>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d"/>
                 <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
               </characteristics>
             </profile>
@@ -3723,6 +3879,1307 @@ If this model is included in your Warband you may also include Ronin Kami of Cho
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0.0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="c2b6-0a48-94a3-1c8b" name="Benthic Servitude" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="477a-e693-0888-08f7" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c2b6-0a48-94a3-1c8b" type="lessThan"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <profiles>
+        <profile id="3a55-4c05-0625-7fec" name="Benthic Servitude" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
+          <characteristics>
+            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">- Once per game, in the Starting Phase declare the use of this ability. All of Keikoku&apos;s Ki Feats (Excluding Boosts) are reduced to Cost: Zero.
+- Ranged Weapons in this Warband that have Strength Sp gain Brutal (1).
+
+Kancho: Keikoku
+Juhin: Mitsukurina
+
+Permitted [Jung models, Ronin Kami, Ronin Yokai]
+Exclusion [Other Kancho or Juhin than those listed, Buto, Kaizoku, Mother of the Pearl]</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="ef94-ffa9-4b90-d20e" name="New CategoryLink" hidden="false" targetId="477a-e693-0888-08f7" primary="true"/>
+      </categoryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="c0d2-f3cb-e3b1-ffaf" name="The Deep" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="477a-e693-0888-08f7" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c0d2-f3cb-e3b1-ffaf" type="lessThan"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <profiles>
+        <profile id="62b3-4c6f-15f5-a30b" name="The Deep" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
+          <characteristics>
+            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">- The Red Pearl Event costs 0 Rice to Recruif to this Warband.
+- Friendly Faction models gain Ranged Defence (+ 1) against Enemy Ranged Attacks.
+- In the Starting Phase, choose a Friendly Deep model. That model gains Terror until the End Phase.
+- Once per game, in the Starting Phase, place a 5&quot; circular [Normal, Clear, Zero] Terrain Element centered on each Friendly [Water Element] Kami on the Battlefield. Enemy models treat this Terrain Element as Diffcult. Models with [Fire Element] lose one Activation Counter if they are in the area of the Terrain Element when it is placed.
+
+Kancho: Jung Keikoku
+Juhin: Mitsukurina
+
+Permitted [Jung models, Ronin Asura, Ronin Kami, Ronin Yokai]
+Exclusion [Other Kancho or Juhin than those listed, Buto, Kaizoku]</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="1b37-68c2-de63-9fda" name="New CategoryLink" hidden="false" targetId="477a-e693-0888-08f7" primary="true"/>
+      </categoryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="a7c3-efce-ae87-2615" name="Mother of Pearl" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="477a-e693-0888-08f7" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c0d2-f3cb-e3b1-ffaf" type="lessThan"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" field="ec62-e62b-5c66-e168" value="0.0">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c0d2-f3cb-e3b1-ffaf" type="lessThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ec62-e62b-5c66-e168" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="b1b6-ead6-0a21-1eb6" name="Mother of Pearl" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">1</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">2</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33">3</characteristic>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">5</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">3</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c">3</characteristic>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">8</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">6 OOOOO O</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Medium 40mm</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="a997-82ae-98ac-de54" name="Ki Feats" hidden="false">
+          <infoLinks>
+            <infoLink id="434c-e42a-fa03-c23b" name="Curse of Doom" hidden="false" targetId="26d5-a9c7-8c60-c30a" type="infoGroup"/>
+            <infoLink id="3fd9-7f52-ceb8-cd80" name="Paralyze" hidden="false" targetId="bc0f-ea4d-8401-4f3c" type="infoGroup"/>
+            <infoLink id="a46b-4adb-cd09-7bfa" name="Tokkiko&apos;s Choice" hidden="false" targetId="5f4a-25fd-654a-3a32" type="infoGroup"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="5c0c-d095-1882-67a7" name="Melee Weapon" hidden="false">
+          <profiles>
+            <profile id="244d-b337-4663-5c17" name="Unarmed" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">Special</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e"/>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Sidestep Defence (0)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="9ec6-29b5-2faa-7593" name="Sidestep Defence " hidden="false" targetId="753c-6c3b-64d7-203c" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="f63e-d780-e1af-fcaa" name="Traits" hidden="false">
+          <profiles>
+            <profile id="2598-557f-cd28-8e24" name="Mother of Pearl" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Fear (5), Fearless, Immune [Prone], Protected [Crab](3&quot;), Vengeance [Red Pearl]</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="d766-f23e-f559-2387" name="Protected" hidden="false" targetId="f2a3-87f0-7f8b-9ebd" type="rule"/>
+            <infoLink id="69b5-c62b-71e4-cbba" name="Vengeance" hidden="false" targetId="6779-0aac-2f51-f67e" type="rule"/>
+            <infoLink id="8e11-dfc6-5899-9d24" name="Immune" hidden="false" targetId="ea08-b25e-0ea8-af73" type="rule"/>
+            <infoLink id="88fc-1e94-9c20-3b81" name="Fear" hidden="false" targetId="3586-4583-7f10-1f31" type="rule"/>
+            <infoLink id="271f-7bd2-e256-3522" name="Fearless" hidden="false" targetId="5d6f-1746-9080-aca5" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="7d68-dd58-1a90-27f3" name="Unique Effects" hidden="false">
+          <profiles>
+            <profile id="a93e-39ad-2933-6676" name="Drown" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">During the End Phase, Enemy models that have Held or Immobilised Markers suffer 2 Wounds.</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="2f3b-6ad6-c0ca-86c5" name="Mother of Pearl" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">If this model is Killed in a Melee Exchange, the opposing model is Replaced by Summoning a Friendly Miyakomo&apos;s Echo into this model&apos;s Warband.
+While this model is in play, models with a Red Pearl Enhancement remove a Doom Token whenever a VP is scored.
+
+This model may only be recruited into a Warband that has recruited The Deep Theme.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </infoGroup>
+        <infoGroup id="4ccd-a294-d9de-be23" name="Ranged Weapon" hidden="false">
+          <profiles>
+            <profile id="a8ed-8db1-a98e-bda8" name="Watery Grave" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+X</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Pierce (X)</characteristic>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d"/>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289">This Weapon&apos;s Pierce Value and Weapon Strength is variable.
+X is equal to the Enemy model&apos;s Armour Trait value.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="399c-70f7-bf16-577e" name="Pierce " hidden="false" targetId="39e4-14d7-5533-6e67" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+      </infoGroups>
+      <categoryLinks>
+        <categoryLink id="43a9-358f-0bba-9fae" name="Faction: Jung Pirates" hidden="false" targetId="76df-04fb-ea1f-77ab" primary="false"/>
+        <categoryLink id="8ef0-c359-aecd-c76f" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
+        <categoryLink id="002e-90cb-cf6f-2c37" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
+        <categoryLink id="00a5-4cbe-8b57-7b97" name="Deep" hidden="false" targetId="cf26-f911-0ae1-74d2" primary="false"/>
+        <categoryLink id="1468-7a8d-5c7b-ee0e" name="Yokai" hidden="false" targetId="8a19-8c2b-46a8-4086" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="ac6d-7053-786c-1335" name="Enhancements" hidden="false" collective="false" import="true" targetId="2327-1257-a4b4-df32" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="19.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="603a-cf5a-9a87-eaa4" name="Carcharin Superiority" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="477a-e693-0888-08f7" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c0d2-f3cb-e3b1-ffaf" type="lessThan"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" field="90f9-3ea0-81a1-12ee" value="0.0">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c0d2-f3cb-e3b1-ffaf" type="lessThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="90f9-3ea0-81a1-12ee" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="afce-9579-f973-1d39" name="Carcharin Superiority" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
+          <characteristics>
+            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">Play in the Starting Phase.
+Friendly Samemiman and Shark models gain Coordinated Attack [Samemiman] until the End Phase.
+This Event may not be played in the same turn as Crustacean Superiority.
+
+Requirement [The Deep theme]</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="fc7f-236c-a43f-43c1" name="Co-ordinated Attack" hidden="false" targetId="2337-7bcc-c1f2-f2bd" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="5de8-605c-88a6-6206" name="New CategoryLink" hidden="false" targetId="d360-71aa-ca22-ba3c" primary="true"/>
+      </categoryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="6a64-3e79-4931-41de" name="Crustacean Superiority" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="477a-e693-0888-08f7" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c0d2-f3cb-e3b1-ffaf" type="lessThan"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" field="d29d-b5c8-0322-6ab7" value="0.0">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c0d2-f3cb-e3b1-ffaf" type="lessThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d29d-b5c8-0322-6ab7" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="c609-514a-310e-4c65" name="Crustacean Superiority" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
+          <characteristics>
+            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">Play in the Starting Phase.
+Friendly Kanimiman and Crab models gain Endurance until the End Phase.
+This Event may not be played in the same turn as Carcharin Superiority.
+
+Requirement [The Deep Theme]</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="2e9c-42ba-7ed3-92dc" name="Endurance" hidden="false" targetId="7fdc-d150-9641-1235" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="7b68-f8e8-88ef-7136" name="New CategoryLink" hidden="false" targetId="d360-71aa-ca22-ba3c" primary="true"/>
+      </categoryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="3.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="cb47-85ce-1192-a249" name="Deep Water" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="477a-e693-0888-08f7" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c0d2-f3cb-e3b1-ffaf" type="lessThan"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" field="9b15-8c02-ad1d-d2e6" value="0.0">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c0d2-f3cb-e3b1-ffaf" type="lessThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9b15-8c02-ad1d-d2e6" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="1985-ba90-33c6-fa59" name="Deep Water" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
+          <characteristics>
+            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">Models other than Kanimimen and Crab models, gain -X to their Move Statistic where X is their Armour Trait Value until the end of the current activation.
+
+Requirement [The Deep Theme]</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="af08-6b6c-92ed-8be1" name="New CategoryLink" hidden="false" targetId="d360-71aa-ca22-ba3c" primary="true"/>
+      </categoryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="c1ea-5677-50de-22be" name="Dive Deep" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="477a-e693-0888-08f7" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c0d2-f3cb-e3b1-ffaf" type="lessThan"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" field="c292-826b-aa3d-7e82" value="0.0">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c0d2-f3cb-e3b1-ffaf" type="lessThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c292-826b-aa3d-7e82" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="6746-e6b7-38a2-1fe0" name="Dive Deep" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
+          <characteristics>
+            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">Play during the Starting Phase.
+Choose a Friendly Deep model, until the End Phase that model cannot declare Melee or Charge actions and gains Camouflage (2&quot;).
+
+Requirement [The Deep Theme]</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="a189-3465-b4fb-0f56" name="Camouflage" hidden="false" targetId="9010-4983-c98c-1751" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="c2f6-58a4-4d51-70e0" name="New CategoryLink" hidden="false" targetId="d360-71aa-ca22-ba3c" primary="true"/>
+      </categoryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="e61c-ac21-1f8e-94a2" name="Red Pearl" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="7587-7c00-f0cc-43f8" value="0.0">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="bcfa-f75d-fc85-80c2" type="lessThan"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c0d2-f3cb-e3b1-ffaf" type="lessThan"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7587-7c00-f0cc-43f8" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="2599-b784-e51d-8e8a" name="Red Pearl" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
+          <characteristics>
+            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">This card is purchased as an Event.
+Before Deployment it must be given to the Opponent, who must Attach the Red Pearl Enhancement card to one of their valid, unique models of your choice (Ignoring Faction).
+
+Requirement [Warbands that have recruited The Deep Theme or a Kancho]</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="7eb5-21c4-949b-100d" name="New CategoryLink" hidden="false" targetId="d360-71aa-ca22-ba3c" primary="true"/>
+      </categoryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="3.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="8ad4-280e-99aa-43e9" name="Red Pearl (opponent)" hidden="true" collective="false" import="true" type="upgrade">
+      <modifierGroups>
+        <modifierGroup>
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e61c-ac21-1f8e-94a2" type="atLeast"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" field="73e7-1fa9-12e1-9532" value="1.0"/>
+            <modifier type="set" field="hidden" value="false"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
+      <constraints>
+        <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="73e7-1fa9-12e1-9532" type="min"/>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d475-aeb3-732d-8571" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="33ac-4cd3-8c39-d4cd" name="Red Pearl" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
+          <characteristics>
+            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">In the Starting Phase, if the Attached model does not have a Death Sentence Marker, Attached model gains a Death Sentence Marker.
+While it has a Death Sentence Marker, Attached model loses the Fear trait and models with the Deep Type gain Banzai! when declaring Charges against the Attached model.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="7100-05f7-3e0b-722f" name="Banzai!" hidden="false" targetId="99b0-606c-1640-3d93" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="866e-a5f9-6dad-4fea" name="Faction Enhancement Cards" hidden="false" targetId="17cf-d9a9-c7c1-bcb6" primary="false"/>
+        <categoryLink id="2845-5f0e-9396-ea1b" name="New CategoryLink" hidden="false" targetId="5073-f00b-a8f6-5e3b" primary="true"/>
+      </categoryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="28e4-7aa0-9a1a-c832" name="Strangling Kelp" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="477a-e693-0888-08f7" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c0d2-f3cb-e3b1-ffaf" type="lessThan"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" field="81f9-a8ac-314c-9881" value="0.0">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c0d2-f3cb-e3b1-ffaf" type="lessThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="81f9-a8ac-314c-9881" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="01b9-d85e-68d0-fff1" name="Strangling Kelp" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
+          <characteristics>
+            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">Play during the Starting Phase.
+Choose any number of Friendly models.
+Those Friendly models apply a Held Marker to any Immobilised Enemy models in BtB with them.
+
+Requirement [The Deep Theme]</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="4ae7-b9cd-290e-ad9f" name="New CategoryLink" hidden="false" targetId="d360-71aa-ca22-ba3c" primary="true"/>
+      </categoryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="fe2b-406b-32ff-4a76" name="Rock Pool" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="dcd5-7c68-025e-08c7" value="0.0">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c0d2-f3cb-e3b1-ffaf" type="lessThan"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="477a-e693-0888-08f7" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c0d2-f3cb-e3b1-ffaf" type="lessThan"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dcd5-7c68-025e-08c7" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="27f4-14ba-1d41-92ca" name="Rock Pool" hidden="true" typeId="6fa2-988d-fc04-c751" typeName="Special Card (Terrain)">
+          <characteristics>
+            <characteristic name="Base" typeId="c40b-3106-986d-4db5">30mm</characteristic>
+            <characteristic name="Passage" typeId="3df8-6a47-0c4d-73e7">Difficult</characteristic>
+            <characteristic name="Visibility" typeId="9858-c2c1-b6fc-b75c">Clear</characteristic>
+            <characteristic name="Size" typeId="000a-cf92-4d1e-c934">Zero</characteristic>
+            <characteristic name="Traits" typeId="eaef-482b-c5d3-866e">Desructible</characteristic>
+            <characteristic name="Description" typeId="9cfa-9bd0-0b1b-9c06">This Terrain Element must be deployed within 6&quot; of the centreline.
+Every time a VP is scored, in the End Phase Summon and Deploy a Friendly Miyakomo&apos;s Echo or Horse Shoe Crab into play in BtB with this Terrain Element, if available.
+
+Requirement [The Deep Theme]</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="bb33-a473-1121-4f18" name="New CategoryLink" hidden="false" targetId="bbd2-e0c8-797a-3f03" primary="true"/>
+      </categoryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="784e-0a01-7866-7ff7" name="Storm Wall" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="e08a-11db-f507-2051" value="0.0">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c0d2-f3cb-e3b1-ffaf" type="lessThan"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="477a-e693-0888-08f7" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c0d2-f3cb-e3b1-ffaf" type="lessThan"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e08a-11db-f507-2051" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="0f86-67dd-8ca8-b288" name="Storm Wall" hidden="true" typeId="6fa2-988d-fc04-c751" typeName="Special Card (Terrain)">
+          <characteristics>
+            <characteristic name="Base" typeId="c40b-3106-986d-4db5">50mm</characteristic>
+            <characteristic name="Passage" typeId="3df8-6a47-0c4d-73e7">Difficult</characteristic>
+            <characteristic name="Visibility" typeId="9858-c2c1-b6fc-b75c">Obscuring</characteristic>
+            <characteristic name="Size" typeId="000a-cf92-4d1e-c934">Huge</characteristic>
+            <characteristic name="Traits" typeId="eaef-482b-c5d3-866e"/>
+            <characteristic name="Description" typeId="9cfa-9bd0-0b1b-9c06">Deploy this Terrain Element on your own half of the Battlefield.
+Models with Cloudwalk treat this Terrain Element as Impassable.
+In the Starting Phase, move this Terrain Element 1&quot;.
+This Terrain Element may never overlap Impassable Terrain.
+
+Requirement [The Deep Theme]</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="7b45-86e0-fb08-f9a2" name="New CategoryLink" hidden="false" targetId="bbd2-e0c8-797a-3f03" primary="true"/>
+      </categoryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="3.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="b97c-1066-fbc0-ed93" name="Tsunami Stones" hidden="false" collective="false" import="true" type="model">
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b597-64bd-96b3-d2fb" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="5a03-c44e-085b-4408" name="Tsunami Stones" hidden="true" typeId="6fa2-988d-fc04-c751" typeName="Special Card (Terrain)">
+          <characteristics>
+            <characteristic name="Base" typeId="c40b-3106-986d-4db5">40mm</characteristic>
+            <characteristic name="Passage" typeId="3df8-6a47-0c4d-73e7">Impassable</characteristic>
+            <characteristic name="Visibility" typeId="9858-c2c1-b6fc-b75c">Blocking</characteristic>
+            <characteristic name="Size" typeId="000a-cf92-4d1e-c934">Medium</characteristic>
+            <characteristic name="Traits" typeId="eaef-482b-c5d3-866e">Destructible</characteristic>
+            <characteristic name="Description" typeId="9cfa-9bd0-0b1b-9c06">This terrain must be deployed within 3&quot; of the centreline.
+While Friendly Kaizoku models are completely within the half of the battlefield (divided by the centreline) containing your deployment area, those models generate one additional Ki Token during Ki Generation.
+
+While Friendly Kaizoku models are completely within the other half of the battlefield, when declaring a Walk, Run or Melee action, those models may gain +1 Move until the end of  the current Activation.
+If they do they must move toward their Deployment area.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="f8c1-b5ec-29c7-c6f1" name="New CategoryLink" hidden="false" targetId="bbd2-e0c8-797a-3f03" primary="true"/>
+      </categoryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="4.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="cdea-76c3-9a43-4dd5" name="Anko" hidden="false" collective="false" import="true" type="model">
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e6cd-d5a3-d784-fb46" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="eb4a-19cc-a40e-cb7d" name="Anko" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">1</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">2</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">6</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">6 OOOOO O</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="8999-0d8b-c3dd-987c" name="Ki Feats" hidden="false">
+          <infoLinks>
+            <infoLink id="a91c-2e61-9104-d2f5" name="Hypnotic Gaze" hidden="false" targetId="366c-5d6c-e430-d8a6" type="infoGroup"/>
+            <infoLink id="79c7-ae1d-6b3c-9847" name="Illicium" hidden="false" targetId="0f41-428e-bc05-bfec" type="infoGroup"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="01b9-ed3c-3697-5393" name="Melee Weapon" hidden="false">
+          <profiles>
+            <profile id="9373-2ba8-1331-7f6e" name="Claws" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+0</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e"/>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Drag Attack (0)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="6213-5555-890c-7e88" name="Drag Attack" hidden="false" targetId="9902-026d-4637-cc7d" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="2056-de27-f8a7-e015" name="Traits" hidden="false">
+          <profiles>
+            <profile id="0e63-060c-5ea4-1de7" name="Anko" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Fear (4), Jump Up, Lightning Reflexes, Vengeance [Red Pearl]</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="2856-3ec0-eb3f-4ed3" name="Vengeance" hidden="false" targetId="6779-0aac-2f51-f67e" type="rule"/>
+            <infoLink id="6e7a-d325-4d27-81ef" name="Lightning Reflexes" hidden="false" targetId="efd4-dc31-6523-9c79" type="rule"/>
+            <infoLink id="045b-7bf6-69d1-2698" name="Fear" hidden="false" targetId="3586-4583-7f10-1f31" type="rule"/>
+            <infoLink id="57c6-ae10-2113-1992" name="Jump Up" hidden="false" targetId="1575-e12f-4ca3-c557" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="146f-34d3-2780-1a5a" name="Unique Effects" hidden="false">
+          <profiles>
+            <profile id="3fdc-2b07-45a2-57d5" name="Anko" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">This model may never gain the Camouflage trait.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </infoGroup>
+      </infoGroups>
+      <categoryLinks>
+        <categoryLink id="9f72-09dc-ef7b-b698" name="Faction: Jung Pirates" hidden="false" targetId="76df-04fb-ea1f-77ab" primary="false"/>
+        <categoryLink id="4061-8551-fb26-5f75" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
+        <categoryLink id="ab3f-9b3a-5075-aab5" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
+        <categoryLink id="9c73-f2eb-2d6b-47b0" name="Umimiman" hidden="false" targetId="1232-ee1c-27d6-3b02" primary="false"/>
+        <categoryLink id="d3f5-de70-d8ff-7099" name="Deep" hidden="false" targetId="cf26-f911-0ae1-74d2" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="3aa7-f7ba-64a0-6163" name="Enhancements" hidden="false" collective="false" import="true" targetId="2327-1257-a4b4-df32" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="13.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="40a0-5cfc-b258-6564" name="Electric Eel" hidden="false" collective="false" import="true" type="model">
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3a3f-bfbb-6de8-cc7e" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="92f3-c248-fbb2-1c32" name="Electric Eel" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277"/>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">3</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">2</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">0</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">7 OOOOO OO</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Large 50mm</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="741e-3b3c-347d-37fa" name="Melee Weapon" hidden="false">
+          <profiles>
+            <profile id="b302-4722-b38f-187b" name="Pharyngeal Jaw" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+1</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Reach</characteristic>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Grapple Attack (1)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="c22b-798d-e588-7fcf" name="Reach" hidden="false" targetId="e28e-d5dd-a262-1101" type="rule"/>
+            <infoLink id="167c-ecdd-5175-31e7" name="Grapple Attack" hidden="false" targetId="1b9a-c71d-0a30-8d0d" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="a1ee-9e2b-ce96-9e67" name="Traits" hidden="false">
+          <profiles>
+            <profile id="bb71-a9fc-04f4-c405" name="Electric Eel" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Agile, Aloof, Aware, Fear (4), Immune [Immobilised, Held], Evasive </characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="8fe1-d7a2-36b6-9350" name="Aware" hidden="false" targetId="ff4a-6b14-09dd-2343" type="rule"/>
+            <infoLink id="899d-8128-a44d-0760" name="Aloof" hidden="false" targetId="5101-70fc-eca4-d99b" type="rule"/>
+            <infoLink id="575d-1e53-220f-b256" name="Fear" hidden="false" targetId="3586-4583-7f10-1f31" type="rule"/>
+            <infoLink id="7340-6ceb-4e92-3f1c" name="Agile" hidden="false" targetId="6a46-2f07-1725-11b2" type="rule"/>
+            <infoLink id="3c73-fca0-9f9a-f616" name="Immune" hidden="false" targetId="ea08-b25e-0ea8-af73" type="rule"/>
+            <infoLink id="07cc-cc55-8371-1ff0" name="Evasive" hidden="false" targetId="b0f8-d197-536b-c8fc" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="1977-4671-5826-0605" name="Unique Effects" hidden="false">
+          <profiles>
+            <profile id="42a7-da91-a24e-cbb6" name="Electric Eel" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">When this model declares a Walk, Run, Melee or Charge Action, once its move is complete it makes a Ranged Attack against each other model (Friendly and Enemy) in Range and LoS, in any order.
+These attacks are not affected by the penalty for having made Ranged Attacks previously in the turn.
+It may perform these Ranged Attacks even while in BtB with an Enemy model or in an Enemy model&apos;s ZoC.
+
+This model may not declare Ranged Attack Actions.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </infoGroup>
+        <infoGroup id="098b-8e81-8a7e-6fa0" name="Ranged Weapon" hidden="false">
+          <profiles>
+            <profile id="301b-3fb9-878b-e47b" name="Call Lightning" hidden="false" typeId="7e20-258e-bf92-18f9" typeName="Ranged Weapon">
+              <characteristics>
+                <characteristic name="Ranged Weapon Strength" typeId="15aa-b6bd-6923-271f">+0</characteristic>
+                <characteristic name="Range Bands" typeId="be6a-50c6-d691-e2e9">-/3/-</characteristic>
+                <characteristic name="Traits" typeId="3410-4428-ef91-eb61">Lightweight</characteristic>
+                <characteristic name="Specials" typeId="cdaf-b6ac-89d4-39ef"/>
+                <characteristic name="Unique Effects" typeId="3bf8-6525-f003-4990">This model may not declare Ranged Attack Actions.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="eefb-3663-5e91-2c1b" name="Lightweight" hidden="false" targetId="c75c-7124-2b1f-a4d9" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+      </infoGroups>
+      <categoryLinks>
+        <categoryLink id="b115-e9b6-e9dd-b0b2" name="Faction: Jung Pirates" hidden="false" targetId="76df-04fb-ea1f-77ab" primary="false"/>
+        <categoryLink id="b3ce-8d90-ccf5-157e" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
+        <categoryLink id="b8ce-54e3-fbe4-f8ad" name="Deep" hidden="false" targetId="cf26-f911-0ae1-74d2" primary="false"/>
+        <categoryLink id="4b7d-01a1-e4ef-7d76" name="Animal" hidden="false" targetId="c382-9ab3-9924-e30a" primary="false"/>
+        <categoryLink id="3a0e-94a8-2841-dad8" name="Eel" hidden="false" targetId="bb1c-4893-a592-7b1a" primary="false"/>
+        <categoryLink id="56a9-83bf-96c1-451a" name="Non-Unique" hidden="false" targetId="d181-219d-3add-d47b" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="4a9e-e5a9-d8f1-89e9" name="Enhancements" hidden="false" collective="false" import="true" targetId="2327-1257-a4b4-df32" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="14.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="5b9d-be54-6455-17c6" name="Fu Ran Ku" hidden="false" collective="false" import="true" type="model">
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1fec-3399-4879-0971" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="f3fa-ec96-f315-da35" name="Fu Ran Ku" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">1</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277"/>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">2</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">0</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">4</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">0</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">4 OOOO</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="1938-95b6-ff7b-aa68" name="Melee Weapon" hidden="false">
+          <profiles>
+            <profile id="4dc5-7541-4775-f4bf" name="Tendril" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">-2</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Poison (3/1)</characteristic>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Grapple Defence (0)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="2488-8d92-ac78-747b" name="Poison " hidden="false" targetId="7290-85f4-42cf-0b75" type="rule"/>
+            <infoLink id="d9c9-edf5-52f9-1fc5" name="Grapple Defence" hidden="false" targetId="6e8d-d1c4-dc69-6558" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="a0ce-5ed5-64a0-5182" name="Traits" hidden="false">
+          <profiles>
+            <profile id="8667-849e-89be-ccc4" name="Fu Ran Ku" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Aware, Cloudwalk, Durable, Endurance, Immune [Control, Stun], Ranged Defence (1), Sixth Sense</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="3293-2d51-5810-f8b1" name="Endurance" hidden="false" targetId="7fdc-d150-9641-1235" type="rule"/>
+            <infoLink id="67dc-77b5-cbbc-adcb" name="Durable" hidden="false" targetId="3612-7e19-3cb9-72d0" type="rule"/>
+            <infoLink id="3414-5e33-783c-8add" name="Aware" hidden="false" targetId="ff4a-6b14-09dd-2343" type="rule"/>
+            <infoLink id="e39a-6db1-9003-a21b" name="Immune" hidden="false" targetId="ea08-b25e-0ea8-af73" type="rule"/>
+            <infoLink id="5619-3bb8-be72-8102" name="Sixth Sense" hidden="false" targetId="ec49-3908-f1d1-8de2" type="rule"/>
+            <infoLink id="4b66-ae32-5732-9327" name="Ranged Defence " hidden="false" targetId="9b8d-9ca9-e25d-3988" type="rule"/>
+            <infoLink id="a433-28e7-9ad3-61a2" name="Cloudwalk" hidden="false" targetId="538c-1266-626b-fcc9" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="9861-da7c-df90-1124" name="Unique Effects" hidden="false">
+          <profiles>
+            <profile id="9051-1209-8b8c-cccc" name="Fu Ran Ku" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">This model cannot gain Scout or Flank.
+This model cannot declare Melee or Charge Actions.
+Enemy models in BtB with this model in the Starting Phase generate one fewer Activation Counters.
+Before or after this model performs any action it may Move 3&quot;.
+Once per activation, when this model Enters BtB with an Enemy model or an Enemy model Enters into BtB with this model, that Enemy model gains an Immobilised Marker after the activation is resolved.</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="06d3-0d3f-e933-f4f0" name="All-knowing" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">In the End Phase, if this model is BtB with any Enemy models, those model&apos;s owners must reveal if those models are their VIM.</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="8080-a9d0-0744-5edb" name="Analyse" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">Enemy models in BtB with this model cannot be nominated to take the Tactical Test.</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="0cf6-6bac-62ed-b81b" name="Conclusion" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">When a Friendly Kancho or Juhin model activates, the opposing player must declare which model they will choose as their next Activating model.
+If the model becomes ineligible before it is chosen as the Activating model then another model can be chosen without restriction.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </infoGroup>
+      </infoGroups>
+      <categoryLinks>
+        <categoryLink id="dd65-8b82-ce7e-0c06" name="Faction: Jung Pirates" hidden="false" targetId="76df-04fb-ea1f-77ab" primary="false"/>
+        <categoryLink id="6d70-d47f-b576-e29c" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
+        <categoryLink id="d6b7-11c3-fcc5-357a" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
+        <categoryLink id="89fb-3798-9da4-9ace" name="Deep" hidden="false" targetId="cf26-f911-0ae1-74d2" primary="false"/>
+        <categoryLink id="d398-6fbf-f3c4-f329" name="Jellyfish" hidden="false" targetId="c823-8a24-353e-35f6" primary="false"/>
+        <categoryLink id="73d7-fc1a-3d32-4f50" name="Unknown" hidden="false" targetId="681b-423e-83dd-d9bd" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="0abb-88fe-983d-9cf8" name="Enhancements" hidden="false" collective="false" import="true" targetId="2327-1257-a4b4-df32" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="10.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="329e-485c-5e03-ffd1" name="Himei" hidden="false" collective="false" import="true" type="model">
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9338-b262-c69d-81b4" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="31c0-21f8-cd14-03a1" name="Himei" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">2</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">2</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33">3</characteristic>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">1</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">6</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">7 OOOOO OO</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Medium 40mm</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="9ed0-7660-84fc-2e59" name="Ki Feats" hidden="false">
+          <infoLinks>
+            <infoLink id="c8bf-fc15-ebf4-e46a" name="War Cry" hidden="false" targetId="41ba-9b65-a711-66e6" type="infoGroup"/>
+            <infoLink id="d2f5-e750-c01c-fd1b" name="Slippery" hidden="false" targetId="c537-019e-0403-ca2c" type="infoGroup"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="cbf8-633f-25bf-dc9e" name="Melee Weapon" hidden="false">
+          <profiles>
+            <profile id="02ae-ab14-51de-e695" name="Claws" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+0</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e"/>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Push Defence (0), Forceback Attack (0)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="f474-d4fd-924a-d07f" name="Forceback Attack" hidden="false" targetId="2682-7c66-4163-28f2" type="rule"/>
+            <infoLink id="2376-be4b-47f4-2b0d" name="Push Defence" hidden="false" targetId="74fc-a971-d9c2-278c" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="a658-4667-1dfe-6f44" name="Traits" hidden="false">
+          <profiles>
+            <profile id="b700-16ca-ede7-0a00" name="Himei" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Fear (4), Jump Up, Lightning Reflexes, Vengeance [Red Pearl]</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="8c28-b93c-6128-546b" name="Vengeance" hidden="false" targetId="6779-0aac-2f51-f67e" type="rule"/>
+            <infoLink id="d914-06d7-dccd-8982" name="Lightning Reflexes" hidden="false" targetId="efd4-dc31-6523-9c79" type="rule"/>
+            <infoLink id="fa2b-837b-bfa5-4b2e" name="Fear" hidden="false" targetId="3586-4583-7f10-1f31" type="rule"/>
+            <infoLink id="98c6-656e-8c5d-ca11" name="Jump Up" hidden="false" targetId="1575-e12f-4ca3-c557" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="844e-f901-8dc6-fc99" name="Ranged Weapon" hidden="false">
+          <profiles>
+            <profile id="8312-ff58-9842-e148" name="Sonic Wave" hidden="false" typeId="7e20-258e-bf92-18f9" typeName="Ranged Weapon">
+              <characteristics>
+                <characteristic name="Ranged Weapon Strength" typeId="15aa-b6bd-6923-271f">Special</characteristic>
+                <characteristic name="Range Bands" typeId="be6a-50c6-d691-e2e9">-/3/-</characteristic>
+                <characteristic name="Traits" typeId="3410-4428-ef91-eb61">Lightweight</characteristic>
+                <characteristic name="Specials" typeId="cdaf-b6ac-89d4-39ef"/>
+                <characteristic name="Unique Effects" typeId="3bf8-6525-f003-4990">When this model makes a successful Ranged Attack, instead of a damage roll, the Target gains a Stunned Marker.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="4a2d-72ac-6f65-226f" name="Lightweight" hidden="false" targetId="c75c-7124-2b1f-a4d9" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+      </infoGroups>
+      <categoryLinks>
+        <categoryLink id="e28a-8b86-bb09-39b6" name="Faction: Jung Pirates" hidden="false" targetId="76df-04fb-ea1f-77ab" primary="false"/>
+        <categoryLink id="9f9f-6a31-9a99-65f4" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
+        <categoryLink id="6e36-e1a6-62ba-a707" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
+        <categoryLink id="d684-f785-a1c1-8d21" name="Umimiman" hidden="false" targetId="1232-ee1c-27d6-3b02" primary="false"/>
+        <categoryLink id="657b-2bf7-14fe-eee3" name="Deep" hidden="false" targetId="cf26-f911-0ae1-74d2" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="438c-82aa-df49-08e8" name="Enhancements" hidden="false" collective="false" import="true" targetId="2327-1257-a4b4-df32" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="10.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="3ed9-402f-d04b-70b4" name="Jung Keikoku" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4e07-8c38-7f78-6e5d" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1b47-eda0-6ebd-dc1a" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="068d-6ee9-fa4a-a8bf" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="aaa8-4503-68d2-4665" type="atLeast"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="43b7-f0e5-5996-a53f" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="81f1-3786-ca1b-049c" name="Jung Keikoku" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">2</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">2</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c">3</characteristic>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">8</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">7 OOOOO OO</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Medium 40mm</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="e356-ed8b-ceac-78ae" name="Ki Feats" hidden="false">
+          <infoLinks>
+            <infoLink id="3d1c-fb5a-3015-4895" name="Lurker" hidden="false" targetId="3ace-c140-e71e-edb2" type="infoGroup"/>
+            <infoLink id="edf4-dfd3-3b8f-9e82" name="Thrash" hidden="false" targetId="ad39-297a-dc9e-c06a" type="infoGroup"/>
+            <infoLink id="9788-c87f-94fc-dd04" name="Inspiration" hidden="false" targetId="99a3-5be0-b64d-ab99" type="infoGroup"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="ffe9-80b0-b3cc-c845" name="Melee Weapon" hidden="false">
+          <profiles>
+            <profile id="305c-11f4-78db-5f0d" name="Tentacles" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+0</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Reach, Chain Weapon (2)</characteristic>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Grapple Attack (0), Grapple Defence (1), Drag Attack (0)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="2398-dddc-c8a3-aa69" name="Reach" hidden="false" targetId="e28e-d5dd-a262-1101" type="rule"/>
+            <infoLink id="3cb2-b596-840f-43fa" name="Chain Weapon" hidden="false" targetId="84f9-d10e-0e9f-d79c" type="rule"/>
+            <infoLink id="97ce-c9d7-b8d8-aa71" name="Drag Attack" hidden="false" targetId="9902-026d-4637-cc7d" type="rule"/>
+            <infoLink id="c3e2-894d-2b7a-1439" name="Grapple Attack" hidden="false" targetId="1b9a-c71d-0a30-8d0d" type="rule"/>
+            <infoLink id="43b6-a0a2-d1a0-baf5" name="Grapple Defence" hidden="false" targetId="6e8d-d1c4-dc69-6558" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="afd8-8709-c5b2-8e4a" name="Traits" hidden="false">
+          <profiles>
+            <profile id="1467-b277-878f-1b3a" name="Jung Keikoku" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Fear (5), Immune [Prone, Stunned, Spirit Block], Indomitable (8), Intangible, Prowess [Melee](1), Tough (1), Vengeance [Red Pearl]</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="5001-3019-dc1f-a7b8" name="Vengeance" hidden="false" targetId="6779-0aac-2f51-f67e" type="rule"/>
+            <infoLink id="c520-ee57-ae10-f223" name="Indomitable " hidden="false" targetId="3beb-6f28-e7c4-a236" type="rule"/>
+            <infoLink id="4e73-9ff6-a600-af89" name="Fear" hidden="false" targetId="3586-4583-7f10-1f31" type="rule"/>
+            <infoLink id="a0fe-bbd8-9460-a5d8" name="Immune" hidden="false" targetId="ea08-b25e-0ea8-af73" type="rule"/>
+            <infoLink id="af85-47ef-2b47-7073" name="Tough" hidden="false" targetId="5613-a6cf-495a-229f" type="rule"/>
+            <infoLink id="743c-fac5-5154-80c3" name="Intangible" hidden="false" targetId="7f5c-c63d-f96f-65af" type="rule"/>
+            <infoLink id="67e2-c6a5-d1bc-8a36" name="Prowess " hidden="false" targetId="75ef-327a-cd08-a248" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="df11-c468-d63f-cb59" name="Unique Effects" hidden="false">
+          <profiles>
+            <profile id="0728-d7e8-a054-3220" name="Kancho" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">Kaizoku in this model&apos;s Warband gain Vengeance [Red Pearl].</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="3387-7fde-c9ed-2580" name="Inspiration" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">This model may only Target Samemiman, Kanimiman and Umimiman models with its Inspiration Feat.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="b130-2a9b-5946-cf91" name="Vengeance" hidden="false" targetId="6779-0aac-2f51-f67e" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="d759-dced-8192-92b3" name="Ranged Weapon" hidden="false">
+          <profiles>
+            <profile id="b110-3704-85dd-e4c5" name="Ink Spray" hidden="false" typeId="7e20-258e-bf92-18f9" typeName="Ranged Weapon">
+              <characteristics>
+                <characteristic name="Ranged Weapon Strength" typeId="15aa-b6bd-6923-271f">Special</characteristic>
+                <characteristic name="Range Bands" typeId="be6a-50c6-d691-e2e9">2/4/6</characteristic>
+                <characteristic name="Traits" typeId="3410-4428-ef91-eb61">Lightweight</characteristic>
+                <characteristic name="Specials" typeId="cdaf-b6ac-89d4-39ef"/>
+                <characteristic name="Unique Effects" typeId="3bf8-6525-f003-4990">Successful Ranged Attacks with this weapon do not cause Damage but the target gains a Blind Marker.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="50fc-0b66-cdb4-9d60" name="Lightweight" hidden="false" targetId="c75c-7124-2b1f-a4d9" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+      </infoGroups>
+      <categoryLinks>
+        <categoryLink id="1eb9-d535-a750-d8d7" name="Faction: Jung Pirates" hidden="false" targetId="76df-04fb-ea1f-77ab" primary="false"/>
+        <categoryLink id="ba51-b0a5-4b65-eaed" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
+        <categoryLink id="a5a8-5bec-652c-e515" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
+        <categoryLink id="b64a-3987-4bd8-5885" name="Umimiman" hidden="false" targetId="1232-ee1c-27d6-3b02" primary="false"/>
+        <categoryLink id="3dd8-f1a0-3641-4b77" name="Deep" hidden="false" targetId="cf26-f911-0ae1-74d2" primary="false"/>
+        <categoryLink id="a524-11e6-cc1e-6f68" name="Kancho" hidden="false" targetId="bcfa-f75d-fc85-80c2" primary="false"/>
+        <categoryLink id="bff7-c486-1457-b268" name="Samurai" hidden="false" targetId="e12a-f782-3281-7444" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="8c89-8258-d20c-20dc" name="Enhancements" hidden="false" collective="false" import="true" targetId="2327-1257-a4b4-df32" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="20.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="2f8a-93e1-48eb-1130" name="Meunagi" hidden="false" collective="false" import="true" type="model">
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="74e6-2cc8-779a-2936" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="a8c8-2742-d830-6996" name="Meunagi" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">2</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">1</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">6</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">6 OOOOO O</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="af4b-4340-ae6d-a9bb" name="Ki Feats" hidden="false">
+          <infoLinks>
+            <infoLink id="9079-f529-b3e1-5871" name="Rend" hidden="false" targetId="7263-4efc-8b05-233b" type="infoGroup"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="4fb5-5f5c-52a6-cf67" name="Melee Weapon" hidden="false">
+          <profiles>
+            <profile id="af50-6e36-0c6a-07e3" name="Concentric Bite" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+1</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Bleed (1/1), Pierce (2), Sharp (2)</characteristic>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Drag Attack (0)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="82b7-d873-60a7-71eb" name="Pierce " hidden="false" targetId="39e4-14d7-5533-6e67" type="rule"/>
+            <infoLink id="4234-305e-8410-3240" name="Bleed" hidden="false" targetId="ac4a-e540-4fe3-126a" type="rule"/>
+            <infoLink id="931a-ebb2-50d2-6c80" name="Sharp " hidden="false" targetId="6092-9fb5-5196-d1eb" type="rule"/>
+            <infoLink id="402b-3230-30ea-bbcd" name="Drag Attack" hidden="false" targetId="9902-026d-4637-cc7d" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="eec8-c3f5-86a5-fff9" name="Traits" hidden="false">
+          <profiles>
+            <profile id="5fa1-4c14-ac3b-b199" name="Meunagi" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Fear (4), Jump Up, Vengeance [Red Pearl]</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="3a5c-b920-f197-e8dd" name="Vengeance" hidden="false" targetId="6779-0aac-2f51-f67e" type="rule"/>
+            <infoLink id="6f20-d01a-e495-37c7" name="Fear" hidden="false" targetId="3586-4583-7f10-1f31" type="rule"/>
+            <infoLink id="7647-39aa-ad5c-6462" name="Jump Up" hidden="false" targetId="1575-e12f-4ca3-c557" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+      </infoGroups>
+      <categoryLinks>
+        <categoryLink id="29ff-1f4e-922a-b914" name="Faction: Jung Pirates" hidden="false" targetId="76df-04fb-ea1f-77ab" primary="false"/>
+        <categoryLink id="b105-ce45-ff27-d84e" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
+        <categoryLink id="5e0d-f5f9-cdbe-369f" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
+        <categoryLink id="ce46-e613-f70b-6e1f" name="Umimiman" hidden="false" targetId="1232-ee1c-27d6-3b02" primary="false"/>
+        <categoryLink id="0749-2fb3-2d03-6e5e" name="Deep" hidden="false" targetId="cf26-f911-0ae1-74d2" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="f152-ef74-fe4f-0541" name="Enhancements" hidden="false" collective="false" import="true" targetId="2327-1257-a4b4-df32" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="13.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="722e-579c-4a12-6203" name="Miyakomo&apos;s Echo" hidden="false" collective="false" import="true" type="unit">
+      <constraints>
+        <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d618-9f8f-43f1-76c4" type="max"/>
+      </constraints>
+      <infoGroups>
+        <infoGroup id="aafb-0a3e-b30d-9332" name="Melee Weapon" hidden="false">
+          <profiles>
+            <profile id="78e4-be47-dfae-2352" name="Claws" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">-2</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e"/>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Sidestep Attack (0), Sidestep Defence (0)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="de0c-3d47-8565-4387" name="Sidestep Attack " hidden="false" targetId="070d-a69d-0b46-27dc" type="rule"/>
+            <infoLink id="b24d-44a1-fe04-3566" name="Sidestep Defence " hidden="false" targetId="753c-6c3b-64d7-203c" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="fb5e-3db9-9c9d-13fe" name="Traits" hidden="false">
+          <profiles>
+            <profile id="8491-1461-8fa3-095c" name="Miyakomo&apos;s Echo" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Armour (3), Dread, Fear (6), Group, Insignificant, Tiny</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="1e78-fc2c-fa86-7ed0" name="Dread" hidden="false" targetId="53bf-4091-3aec-d5ec" type="rule"/>
+            <infoLink id="8bab-3206-2328-977e" name="Fear" hidden="false" targetId="3586-4583-7f10-1f31" type="rule"/>
+            <infoLink id="550b-adcd-854a-22c7" name="Group" hidden="false" targetId="4c02-03a1-ae7b-7821" type="rule"/>
+            <infoLink id="b304-1b67-6b21-0291" name="Armour" hidden="false" targetId="8615-1c63-2242-5746" type="rule"/>
+            <infoLink id="1130-0abb-66f8-0014" name="Insignificant" hidden="false" targetId="1614-d86c-ef8a-c095" type="rule"/>
+            <infoLink id="49ed-ebc4-242a-3d76" name="Tiny" hidden="false" targetId="335c-7f6f-9ca0-cb93" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+      </infoGroups>
+      <categoryLinks>
+        <categoryLink id="3951-e6e8-b66c-dd35" name="Animal" hidden="false" targetId="c382-9ab3-9924-e30a" primary="false"/>
+        <categoryLink id="e1ab-3e69-1689-23d4" name="Crab" hidden="false" targetId="b95d-732d-ec3b-80ef" primary="false"/>
+        <categoryLink id="739a-53d5-c367-f1b7" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
+        <categoryLink id="95bb-dd2d-f7d1-db08" name="Non-Unique" hidden="false" targetId="d181-219d-3add-d47b" primary="false"/>
+        <categoryLink id="6981-1e7f-3ff9-0885" name="Deep" hidden="false" targetId="cf26-f911-0ae1-74d2" primary="false"/>
+        <categoryLink id="b484-eb51-9627-9251" name="Yokai" hidden="false" targetId="8a19-8c2b-46a8-4086" primary="false"/>
+        <categoryLink id="df22-5e48-7e76-e332" name="Armour" hidden="false" targetId="f322-702a-ff62-b37e" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="54bb-771e-3b76-6e8e" name="Miyakomo&apos;s Echo" hidden="false" collective="false" import="true" targetId="79be-f58b-36de-563e" type="selectionEntry">
+          <modifiers>
+            <modifier type="append" field="name" value="A"/>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="87bf-c276-2f2f-7a96" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="ae73-9453-2483-d502" name="Miyakomo&apos;s Echo A" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+              <characteristics>
+                <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">1</characteristic>
+                <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277"/>
+                <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">-</characteristic>
+                <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+                <characteristic name="Move" typeId="91b7-833e-fd8e-a620">3</characteristic>
+                <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+                <characteristic name="Ki" typeId="3969-9568-a914-6854">1</characteristic>
+                <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+                <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">0</characteristic>
+                <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">2 OO</characteristic>
+                <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Tiny 30mm</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </entryLink>
+        <entryLink id="e7fc-1814-9b14-08c1" name="Miyakomo&apos;s Echo" hidden="false" collective="false" import="true" targetId="79be-f58b-36de-563e" type="selectionEntry">
+          <modifiers>
+            <modifier type="append" field="name" value="B"/>
+          </modifiers>
+          <profiles>
+            <profile id="e675-81bb-884f-a9d6" name="Miyakomo&apos;s Echo B" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+              <characteristics>
+                <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">1</characteristic>
+                <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277"/>
+                <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">-</characteristic>
+                <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+                <characteristic name="Move" typeId="91b7-833e-fd8e-a620">3</characteristic>
+                <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+                <characteristic name="Ki" typeId="3969-9568-a914-6854">1</characteristic>
+                <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+                <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">0</characteristic>
+                <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">2 OO</characteristic>
+                <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Tiny 30mm</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </entryLink>
+        <entryLink id="ad25-b7bd-9894-ef84" name="Miyakomo&apos;s Echo" hidden="false" collective="false" import="true" targetId="79be-f58b-36de-563e" type="selectionEntry">
+          <modifiers>
+            <modifier type="append" field="name" value="C"/>
+          </modifiers>
+          <profiles>
+            <profile id="49c0-a47d-c868-4590" name="Miyakomo&apos;s Echo C" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+              <characteristics>
+                <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">1</characteristic>
+                <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277"/>
+                <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">-</characteristic>
+                <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+                <characteristic name="Move" typeId="91b7-833e-fd8e-a620">3</characteristic>
+                <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+                <characteristic name="Ki" typeId="3969-9568-a914-6854">1</characteristic>
+                <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+                <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">0</characteristic>
+                <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">2 OO</characteristic>
+                <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Tiny 30mm</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </entryLink>
+        <entryLink id="e6d7-427d-6c03-48c4" name="Miyakomo&apos;s Echo" hidden="false" collective="false" import="true" targetId="79be-f58b-36de-563e" type="selectionEntry">
+          <modifiers>
+            <modifier type="append" field="name" value="D"/>
+          </modifiers>
+          <profiles>
+            <profile id="0059-559c-3c94-4a98" name="Miyakomo&apos;s Echo D" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+              <characteristics>
+                <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">1</characteristic>
+                <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277"/>
+                <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">-</characteristic>
+                <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+                <characteristic name="Move" typeId="91b7-833e-fd8e-a620">3</characteristic>
+                <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+                <characteristic name="Ki" typeId="3969-9568-a914-6854">1</characteristic>
+                <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+                <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">0</characteristic>
+                <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">2 OO</characteristic>
+                <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Tiny 30mm</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </entryLink>
+      </entryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0.0"/>
+      </costs>
+    </selectionEntry>
   </selectionEntries>
   <entryLinks>
     <entryLink id="7c58-4740-ab52-3330" name="Koshimori Yukio" hidden="false" collective="false" import="true" targetId="de1e-de2d-1044-bf56" type="selectionEntry">
@@ -3766,6 +5223,8 @@ If this model is included in your Warband you may also include Ronin Kami of Cho
                 <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="068d-6ee9-fa4a-a8bf" type="atLeast"/>
                 <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1b47-eda0-6ebd-dc1a" type="atLeast"/>
                 <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="843d-db96-732e-cf8c" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c2b6-0a48-94a3-1c8b" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c0d2-f3cb-e3b1-ffaf" type="atLeast"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -3796,8 +5255,10 @@ If this model is included in your Warband you may also include Ronin Kami of Cho
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4e07-8c38-7f78-6e5d" type="equalTo"/>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1b47-eda0-6ebd-dc1a" type="equalTo"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4e07-8c38-7f78-6e5d" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1b47-eda0-6ebd-dc1a" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c2b6-0a48-94a3-1c8b" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c0d2-f3cb-e3b1-ffaf" type="atLeast"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -3818,8 +5279,10 @@ If this model is included in your Warband you may also include Ronin Kami of Cho
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4e07-8c38-7f78-6e5d" type="equalTo"/>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1b47-eda0-6ebd-dc1a" type="equalTo"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4e07-8c38-7f78-6e5d" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1b47-eda0-6ebd-dc1a" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c2b6-0a48-94a3-1c8b" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c0d2-f3cb-e3b1-ffaf" type="atLeast"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -3859,6 +5322,8 @@ If this model is included in your Warband you may also include Ronin Kami of Cho
                 <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1b47-eda0-6ebd-dc1a" type="atLeast"/>
                 <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="068d-6ee9-fa4a-a8bf" type="atLeast"/>
                 <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="843d-db96-732e-cf8c" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c2b6-0a48-94a3-1c8b" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c0d2-f3cb-e3b1-ffaf" type="atLeast"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -3874,8 +5339,10 @@ If this model is included in your Warband you may also include Ronin Kami of Cho
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4e07-8c38-7f78-6e5d" type="equalTo"/>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1b47-eda0-6ebd-dc1a" type="equalTo"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4e07-8c38-7f78-6e5d" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1b47-eda0-6ebd-dc1a" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c2b6-0a48-94a3-1c8b" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c0d2-f3cb-e3b1-ffaf" type="atLeast"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -3891,7 +5358,9 @@ If this model is included in your Warband you may also include Ronin Kami of Cho
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1b47-eda0-6ebd-dc1a" type="equalTo"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1b47-eda0-6ebd-dc1a" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c0d2-f3cb-e3b1-ffaf" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c2b6-0a48-94a3-1c8b" type="atLeast"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -4048,7 +5517,19 @@ If this model is included in your Warband you may also include Ronin Kami of Cho
     <entryLink id="800e-c142-ece1-9de4" name="Hozumi Maha" hidden="true" collective="false" import="true" targetId="09da-574e-599a-3226" type="selectionEntry"/>
     <entryLink id="9975-82c1-481f-0bbf" name="The Hozumi Family" hidden="false" collective="false" import="true" targetId="4750-f234-49e4-79c1" type="selectionEntry"/>
     <entryLink id="ff9e-ba87-b6da-1097" name="The Kiyozumi Family" hidden="false" collective="false" import="true" targetId="0e4a-a40c-14eb-2f4f" type="selectionEntry"/>
-    <entryLink id="3bf1-3b6c-5c33-d886" name="The Dark Pilgrim" hidden="false" collective="false" import="true" targetId="1ada-6f0c-8123-5aab" type="selectionEntry"/>
+    <entryLink id="3bf1-3b6c-5c33-d886" name="The Dark Pilgrim" hidden="false" collective="false" import="true" targetId="1ada-6f0c-8123-5aab" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c0d2-f3cb-e3b1-ffaf" type="atLeast"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+    </entryLink>
     <entryLink id="2b69-8345-5039-e96d" name="Kami of Choking Fog" hidden="true" collective="false" import="true" targetId="f3c3-0154-adbf-aa05" type="selectionEntry">
       <modifierGroups>
         <modifierGroup>
@@ -4141,6 +5622,23 @@ If this model is included in your Warband you may also include Ronin Kami of Cho
       </entryLinks>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="8.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="79be-f58b-36de-563e" name="Miyakomo&apos;s Echo" hidden="false" collective="false" import="true" type="model">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="80b7-a405-7c56-e956" type="max"/>
+      </constraints>
+      <categoryLinks>
+        <categoryLink id="9cf2-b5da-9566-a667" name="Animal" hidden="false" targetId="c382-9ab3-9924-e30a" primary="false"/>
+        <categoryLink id="265f-554e-11b0-46ec" name="Crab" hidden="false" targetId="b95d-732d-ec3b-80ef" primary="false"/>
+        <categoryLink id="5c71-e933-f448-3589" name="Deep" hidden="false" targetId="cf26-f911-0ae1-74d2" primary="false"/>
+        <categoryLink id="8962-4fc1-f23f-28b5" name="Yokai" hidden="false" targetId="8a19-8c2b-46a8-4086" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="399b-ec93-ae79-1c1a" name="Knife" hidden="false" collective="false" import="true" targetId="6c13-1e3e-8e36-0585" type="selectionEntry"/>
+      </entryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="7.0"/>
       </costs>
     </selectionEntry>
   </sharedSelectionEntries>
@@ -4406,6 +5904,29 @@ Exclusion [Queen of the Waves theme]</characteristic>
           <categoryLinks>
             <categoryLink id="a91d-2626-99a2-5f17" name="Cycle: Weeping Sky" hidden="false" targetId="6da0-b320-b958-dc82" primary="false"/>
             <categoryLink id="b8b8-0347-f503-d1ba" name="New CategoryLink" hidden="false" targetId="17cf-d9a9-c7c1-bcb6" primary="false"/>
+          </categoryLinks>
+          <costs>
+            <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="2e07-456d-0dde-209a" name="Carcinization" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="24d2-233a-989f-7a11" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b40f-0e6d-b8e7-1846" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="b924-a616-c230-ce38" name="Carcinization" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
+              <characteristics>
+                <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">Attached model&apos;s Melee Weapons gain Sidestep Attack (0), Sidestep Defence (0).</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="d519-cfe5-8256-8e71" name="Sidestep Attack " hidden="false" targetId="070d-a69d-0b46-27dc" type="rule"/>
+            <infoLink id="705c-01d1-c082-a776" name="Sidestep Defence " hidden="false" targetId="753c-6c3b-64d7-203c" type="rule"/>
+          </infoLinks>
+          <categoryLinks>
+            <categoryLink id="e279-f8e6-4ae8-baa2" name="New CategoryLink" hidden="false" targetId="17cf-d9a9-c7c1-bcb6" primary="true"/>
           </categoryLinks>
           <costs>
             <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2.0"/>
