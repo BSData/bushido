@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="62e4-ab79-1c4c-9ffe" name="Bushido: Risen Sun" revision="18" battleScribeVersion="2.03" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="62e4-ab79-1c4c-9ffe" name="Bushido: Risen Sun" revision="19" battleScribeVersion="2.03" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <costTypes>
     <costType id="a111-8656-5c05-7415" name=" Rice" defaultCostLimit="-1.0" hidden="false"/>
   </costTypes>
@@ -276,6 +276,7 @@
     <categoryEntry id="728d-5909-6312-6d40" name="Additional Rules" hidden="false"/>
     <categoryEntry id="6be3-5710-4a9e-0c9f" name="Exclude_Ronin_Enhancements" hidden="false"/>
     <categoryEntry id="232b-0ef4-9a9b-3a11" name="Faction: Golden Legion" hidden="false"/>
+    <categoryEntry id="5a76-c3ea-5cb7-471f" name="Faction: The Awoken" hidden="false"/>
   </categoryEntries>
   <forceEntries>
     <forceEntry id="2150-40b1-52f8-4a8a" name="Risen Sun" hidden="true">
