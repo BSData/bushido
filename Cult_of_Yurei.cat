@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="1ac7-2939-2874-7530" name="Cult of Yurei" revision="33" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="19" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="1ac7-2939-2874-7530" name="Cult of Yurei" revision="35" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="19" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="5048-3a52-5689-6d0b" name="Drain Spirit" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -7523,6 +7523,187 @@ During the End Phase you may decide the order States are resolved.</characterist
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0.0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="592b-a7e0-7211-18d4" name="Warui" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="477a-e693-0888-08f7" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="538d-4d36-c07f-9024" type="lessThan"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8a75-ceb1-bdf5-c64b" type="lessThan"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="true" id="f16d-2956-bc47-de83" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="9873-7074-38c2-e0ca" name="Warui" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277"/>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">-</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">0</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">0</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">3 OOO</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="6427-565a-cfab-28e9" name="Traits" hidden="false">
+          <profiles>
+            <profile id="b959-2b20-b07c-e90e" name="Warui" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Dread (1), Durable, Fear (6), Immune [States], Regenerate (1), Soulless</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="feab-b7ca-0575-f62b" name="Fear" hidden="false" targetId="3586-4583-7f10-1f31" type="rule"/>
+            <infoLink id="5bd4-d079-f131-7689" name="Dread" hidden="false" targetId="53bf-4091-3aec-d5ec" type="rule"/>
+            <infoLink id="56df-d99f-1caa-2dab" name="Durable" hidden="false" targetId="3612-7e19-3cb9-72d0" type="rule"/>
+            <infoLink id="e4e7-03b7-39c4-b23b" name="Immune" hidden="false" targetId="ea08-b25e-0ea8-af73" type="rule"/>
+            <infoLink id="0631-e353-5493-a061" name="Soulless" hidden="false" targetId="af31-aad0-fcea-9590" type="rule"/>
+            <infoLink id="5766-47ca-2f7e-b438" name="Regenerate" hidden="false" targetId="74c4-617e-8405-3e46" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="5d89-3171-bebb-b1f3" name="Melee Weapon" hidden="false">
+          <profiles>
+            <profile id="91d6-118c-232d-d01b" name="Rake" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+1</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Reach</characteristic>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d"></characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="7a4f-286b-fa78-ed44" name="Reach" hidden="false" targetId="e28e-d5dd-a262-1101" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="5f0a-572e-2aea-e640" name="Unique Effects" hidden="false">
+          <profiles>
+            <profile id="9c25-c053-4176-cd45" name="Unique Effects" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">When this model is Killed or removed from play by an Enemy effect, you may Replace it by Recruiting and Summoning a valid Kami model and Deploying it with 1 Ki (ignoring the Kami rule for Deployment).
+The Kami may be Deployed in BtB with an Enemy model but if the base will not fit, the Kami cannot be Deployed.
+You may choose a Kami with any Rice Cost including &apos;Su&apos;.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </infoGroup>
+      </infoGroups>
+      <categoryLinks>
+        <categoryLink id="632a-ba1a-a3bb-8bcd" name="Ashigaru" hidden="false" targetId="f434-17e6-174c-b4f6" primary="false"/>
+        <categoryLink id="480a-4bbe-9c58-0313" name="Faction: Cult of Yurei" hidden="false" targetId="0d0a-4c02-8dce-676b" primary="false"/>
+        <categoryLink id="7368-b81f-74eb-109b" name="Gashadokuro" hidden="false" targetId="1d35-1993-a101-542b" primary="false"/>
+        <categoryLink id="2a2d-7c4b-f03e-85d1" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
+        <categoryLink id="045a-5dd1-e892-cc24" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
+        <categoryLink id="6620-9454-9240-d1ce" name="Soulless" hidden="false" targetId="0abe-c3e6-4300-478f" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="05ee-a669-087e-f8c2" name="Enhancements" hidden="false" collective="false" import="true" targetId="ef93-ecd4-88c1-9224" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="14.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="7ec4-a5ad-e085-4a9d" name="The Wraith (reference)" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="592b-a7e0-7211-18d4" type="lessThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="true" id="4725-0bd3-5618-9434" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="30ad-0d30-f8e6-d595" name="The Wraith" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">1</characteristic>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">1</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">5</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac">1</characteristic>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">0</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">10</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">Special</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Huge 50mm</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="b27f-c3b5-72dd-6297" name="Traits" hidden="false">
+          <profiles>
+            <profile id="e250-134d-7867-ef93" name="The Wraith" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Aloof, Armour (2), Aware, Dread (1),Fear (6),  Huge, Immune (Prone), Intangible, Kami, Soulless</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="5768-c1db-ccf2-3237" name="Huge" hidden="false" targetId="baca-f5d8-c383-49d2" type="rule"/>
+            <infoLink id="4935-1d38-d0de-f504" name="Aloof" hidden="false" targetId="5101-70fc-eca4-d99b" type="rule"/>
+            <infoLink id="889d-3eae-cc99-eb90" name="Soulless" hidden="false" targetId="af31-aad0-fcea-9590" type="rule"/>
+            <infoLink id="e877-3aac-d3fb-396b" name="Fear" hidden="false" targetId="3586-4583-7f10-1f31" type="rule"/>
+            <infoLink id="b4b4-291b-9a9d-2d41" name="Armour" hidden="false" targetId="8615-1c63-2242-5746" type="rule"/>
+            <infoLink id="c68e-d330-94cf-4c04" name="Aware" hidden="false" targetId="ff4a-6b14-09dd-2343" type="rule"/>
+            <infoLink id="f729-df07-ac89-2eba" name="Dread" hidden="false" targetId="53bf-4091-3aec-d5ec" type="rule"/>
+            <infoLink id="5f16-b42e-fd61-8f49" name="Intangible" hidden="false" targetId="7f5c-c63d-f96f-65af" type="rule"/>
+            <infoLink id="414d-be4d-015f-f768" name="Immune" hidden="false" targetId="ea08-b25e-0ea8-af73" type="rule"/>
+            <infoLink id="509e-9964-59e3-0720" name="Kami" hidden="false" targetId="50d4-ec7a-9763-1b4d" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="6095-8ce2-9ed9-083d" name="Melee Weapon" hidden="false">
+          <profiles>
+            <profile id="8ba2-454a-0249-37a6" name="Claws" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+1</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Ki Block, Pierce (1), Sharp (1)</characteristic>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d"/>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289">When this model inflicts Wounds through a successful Melee Attack, it gains a number of Ki Tokens equal to the Wounded model’s Ki Statistic.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="8144-36e3-fabd-afbc" name="Ki Block" hidden="false" targetId="d134-7fba-38f0-8896" type="rule"/>
+            <infoLink id="753b-8371-da54-6cef" name="Pierce " hidden="false" targetId="39e4-14d7-5533-6e67" type="rule"/>
+            <infoLink id="0d72-a9af-3ed5-62e2" name="Sharp " hidden="false" targetId="6092-9fb5-5196-d1eb" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="64a3-8bd7-9a4c-0cdd" name="Ki Feats" hidden="false">
+          <infoLinks>
+            <infoLink id="62d9-25b3-a00e-0f77" name="Grasping Shadows" hidden="false" targetId="3c3f-4d6f-9e1e-0c7d" type="infoGroup"/>
+            <infoLink id="76ce-0cd9-b3d7-0793" name="Weight of Shadows" hidden="false" targetId="b305-4df9-6202-388c" type="infoGroup"/>
+          </infoLinks>
+        </infoGroup>
+      </infoGroups>
+      <categoryLinks>
+        <categoryLink id="360c-ddea-2332-dc3e" name="Faction: Cult of Yurei" hidden="false" targetId="0d0a-4c02-8dce-676b" primary="false"/>
+        <categoryLink id="0494-a699-578c-749a" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
+        <categoryLink id="f65c-b155-9a7a-e903" name="Kami" hidden="false" targetId="6639-615e-f1ab-bc64" primary="false"/>
+        <categoryLink id="15e6-fff1-5df9-ee04" name="Major" hidden="false" targetId="55f7-c1ef-44fe-3e0c" primary="false"/>
+        <categoryLink id="26e9-f1dc-d8b0-5d2c" name="Soulless" hidden="false" targetId="0abe-c3e6-4300-478f" primary="false"/>
+        <categoryLink id="c08f-896d-7713-c6f1" name="Armour" hidden="false" targetId="f322-702a-ff62-b37e" primary="false"/>
+        <categoryLink id="8c97-d4d6-9007-9dae" name="New CategoryLink" hidden="false" targetId="5073-f00b-a8f6-5e3b" primary="true"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="de37-4cfe-0475-f715" name="Enhancements" hidden="false" collective="false" import="true" targetId="ef93-ecd4-88c1-9224" type="selectionEntryGroup"/>
+      </entryLinks>
+    </selectionEntry>
   </selectionEntries>
   <entryLinks>
     <entryLink id="5358-9c72-b23c-c2e3" name="Baichi" hidden="false" collective="false" import="true" targetId="d998-94b8-fd53-f8ce" type="selectionEntry">
@@ -7778,6 +7959,75 @@ During the End Phase you may decide the order States are resolved.</characterist
     <entryLink id="694a-e0e5-c332-3722" name="Kiyozumi Hinadori" hidden="true" collective="false" import="true" targetId="07f2-8804-f10d-7bbb" type="selectionEntry"/>
     <entryLink id="d98c-9a5e-93c5-4af9" name="Kiyozumi Kicho" hidden="true" collective="false" import="true" targetId="7b8f-61a1-2d88-60f2" type="selectionEntry"/>
     <entryLink id="cbba-721f-231b-62b4" name="Kiyozumi Sadaka" hidden="true" collective="false" import="true" targetId="7728-72dd-3889-91b2" type="selectionEntry"/>
+    <entryLink id="e6a0-d986-979a-4174" name="Kami of Blighted Earth" hidden="true" collective="false" import="true" targetId="d5b6-fdca-2021-922e" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="592b-a7e0-7211-18d4" type="atLeast"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="decrement" field="a111-8656-5c05-7415" value="8.0">
+          <repeats>
+            <repeat field="selections" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+          </repeats>
+        </modifier>
+        <modifier type="append" field="name" value="(reference)"/>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="d234-4c61-71d9-8757" name="New CategoryLink" hidden="false" targetId="9fba-f50b-c8f7-8396" primary="false"/>
+        <categoryLink id="cea2-a01e-481b-4ee3" name="New CategoryLink" hidden="false" targetId="5073-f00b-a8f6-5e3b" primary="true"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="d754-ddd4-b6e7-5b35" name="Kami of Choking Fog" hidden="true" collective="false" import="true" targetId="f3c3-0154-adbf-aa05" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="592b-a7e0-7211-18d4" type="atLeast"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="decrement" field="a111-8656-5c05-7415" value="8.0">
+          <repeats>
+            <repeat field="selections" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+          </repeats>
+        </modifier>
+        <modifier type="append" field="name" value="(reference)"/>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="88b1-5bdb-5c07-1df2" name="New CategoryLink" hidden="false" targetId="9fba-f50b-c8f7-8396" primary="false"/>
+        <categoryLink id="0895-4b8d-2582-2605" name="New CategoryLink" hidden="false" targetId="5073-f00b-a8f6-5e3b" primary="true"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="0462-748e-637a-943a" name="Kami of Sapping Silt" hidden="true" collective="false" import="true" targetId="a093-bbf2-9bde-add3" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="592b-a7e0-7211-18d4" type="atLeast"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="decrement" field="a111-8656-5c05-7415" value="8.0">
+          <repeats>
+            <repeat field="selections" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+          </repeats>
+        </modifier>
+        <modifier type="append" field="name" value="(reference)"/>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="c81b-7086-ed92-8211" name="New CategoryLink" hidden="false" targetId="9fba-f50b-c8f7-8396" primary="false"/>
+        <categoryLink id="10e5-f213-5626-fad8" name="New CategoryLink" hidden="false" targetId="5073-f00b-a8f6-5e3b" primary="true"/>
+      </categoryLinks>
+    </entryLink>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="9449-ed36-7d0f-1eeb" name="Large Rat Swarm" hidden="false" collective="false" import="true" type="model">
