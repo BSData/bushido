@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="2276-2df6-78a7-841d" name="Shiho Clan" revision="35" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="19" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="2276-2df6-78a7-841d" name="Shiho Clan" revision="36" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="19" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="7fa5-7ef0-59c5-f657" name="Tanaka" hidden="false"/>
   </categoryEntries>
@@ -2944,6 +2944,117 @@ You may decide the order recruited terrain (Friendly and Enemy) is Deployed.</ch
       </entryLinks>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="16.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="0c50-38ad-ad4e-6ea4" name="Shiho Shirak" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="fb4a-18a7-5b40-74ec" type="atLeast"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9126-f480-c2df-fbaf" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="true" childId="f616-46d8-5907-fafd" type="atLeast"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <profiles>
+        <profile id="b304-97cd-91e9-eccb" name="Shiho Shirak" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">2</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">3</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33">3</characteristic>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">2</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">6</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">6 OOOOO O</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="5b52-d616-5ec0-f00e" name="Traits" hidden="false">
+          <profiles>
+            <profile id="7afa-9978-7968-a8b6" name="Shiho Shirak" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Booted, Endurance, Flank, Impetuous (1), Indomitable (1), Prowess [Melee](1), Vengeance [Takashi]</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="d3f3-5cbf-9226-fade" name="Prowess " hidden="false" targetId="75ef-327a-cd08-a248" type="rule"/>
+            <infoLink id="a037-8765-929c-44f3" name="Vengeance" hidden="false" targetId="6779-0aac-2f51-f67e" type="rule"/>
+            <infoLink id="4417-5387-cfb2-2daf" name="Endurance" hidden="false" targetId="7fdc-d150-9641-1235" type="rule"/>
+            <infoLink id="0018-9acb-fad9-6ad4" name="Booted" hidden="false" targetId="90ff-48db-c79d-251c" type="rule"/>
+            <infoLink id="9ca0-9850-2824-ab04" name="Flank" hidden="false" targetId="a847-f02d-7e99-8a66" type="rule"/>
+            <infoLink id="bbf8-fa8c-6a87-fcca" name="Impetuous" hidden="false" targetId="4b80-3180-0b04-fb11" type="rule"/>
+            <infoLink id="29f1-0554-97cd-a6be" name="Indomitable " hidden="false" targetId="3beb-6f28-e7c4-a236" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="6f67-ebf9-5f91-7a24" name="Ki Feats" hidden="false">
+          <infoLinks>
+            <infoLink id="e486-cdc6-b320-c666" name="Eagle&apos;s Warning" hidden="false" targetId="1453-cde8-7ada-84a6" type="infoGroup"/>
+            <infoLink id="27e9-f5dc-36c8-dce9" name="Men-Uchi" hidden="false" targetId="8c38-2883-e942-ef9d" type="infoGroup"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="efc9-8a60-9db9-5dfc" name="Melee Weapon" hidden="false">
+          <profiles>
+            <profile id="49dc-9ed8-af38-f2ed" name="Katana" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+1</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e"/>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Sidestep Attack (0), Sweep Attack (1)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="bb87-e48b-67cd-f790" name="Sidestep Attack " hidden="false" targetId="070d-a69d-0b46-27dc" type="rule"/>
+            <infoLink id="68c2-cb2b-6118-dd4a" name="Sweep Attack" hidden="false" targetId="bcbd-fab2-c8e2-6ff7" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="e01f-a68f-0dbd-cec1" name="Unique Effects" hidden="false">
+          <profiles>
+            <profile id="afb9-94cf-f11b-0392" name="Starting Phase" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">In the Starting Phase this model may choose not to generate Ki.
+If it does so, remove any Impetuous Markers from it.</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="51ea-b736-4cd4-7c0f" name="Lucky Rabbit" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">This model begins the game with one Luck Token.
+Whenever a Friendly model within 6&quot; of a model with a Luck Token makes a Fear Test, Attack Roll, Defence Roll, Damage Roll, or Opposed Ki Test, the model with the Luck Token may spend the Luck Token to re-roll one of the dice.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </infoGroup>
+      </infoGroups>
+      <categoryLinks>
+        <categoryLink id="6102-6a81-5584-2b16" name="Faction: Shiho Clan" hidden="false" targetId="53b4-db5e-0527-0759" primary="false"/>
+        <categoryLink id="4dd4-5352-b743-76d1" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
+        <categoryLink id="f5d1-2cd0-3bf8-c096" name="Samurai" hidden="false" targetId="e12a-f782-3281-7444" primary="false"/>
+        <categoryLink id="6082-c4c7-1ae6-6d12" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
+        <categoryLink id="157c-e6aa-1384-229d" name="Loyal" hidden="false" targetId="f476-156e-8599-9253" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="d797-2de7-74ff-dcb7" name="Enhancements" hidden="false" collective="false" import="true" targetId="8a7c-6251-523e-a67c" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="11.0"/>
       </costs>
     </selectionEntry>
   </selectionEntries>
