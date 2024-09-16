@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="d4b0-a54e-a48b-88a5" name="The Descension" revision="32" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="18" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="d4b0-a54e-a48b-88a5" name="The Descension" revision="33" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="19" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="093f-43eb-fd72-ead0" name="Move Boost" hidden="false"/>
   </categoryEntries>
@@ -651,7 +651,7 @@ Each Friendly Suzume model may be placed within 1&quot; of its current location 
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="13.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="dd40-17f4-38f3-e8cb" name="Hakzabo" hidden="false" collective="false" import="true" type="model">
+    <selectionEntry id="dd40-17f4-38f3-e8cb" name="Hazkabo" hidden="false" collective="false" import="true" type="model">
       <modifiers>
         <modifier type="set" field="hidden" value="true">
           <conditionGroups>
@@ -668,7 +668,7 @@ Each Friendly Suzume model may be placed within 1&quot; of its current location 
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="85f8-489e-eac5-e2c5" type="max"/>
       </constraints>
       <profiles>
-        <profile id="07d5-ece4-669f-b960" name="Hakzabo" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+        <profile id="07d5-ece4-669f-b960" name="Hazkabo" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
           <characteristics>
             <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
             <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
@@ -693,7 +693,7 @@ Each Friendly Suzume model may be placed within 1&quot; of its current location 
         </infoGroup>
         <infoGroup id="c328-1c0c-1be1-cac9" name="Traits" hidden="false">
           <profiles>
-            <profile id="baa4-3416-3354-59c9" name="Hakzabo" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+            <profile id="baa4-3416-3354-59c9" name="Hazkabo" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
               <characteristics>
                 <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Armour (1), Bravery, Dodge (1), Evasive</characteristic>
               </characteristics>
@@ -4114,6 +4114,113 @@ Permitted [Bushi, Koroko, Tribesman]</characteristic>
       </categoryLinks>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="c746-7c35-d9eb-4466" name="Daranibe" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9592-a8de-7eb6-461b" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="bcb4-ecc1-04fc-f3e8" type="atLeast"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="aeee-6896-d99d-7dbb" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="aa70-c8f9-4cf9-bce1" name="Daranibe" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">1</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">5</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac">3</characteristic>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">2</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">6</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">5 OOOOO</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="9a44-7b07-ba7e-4b27" name="Ki Feats" hidden="false">
+          <infoLinks>
+            <infoLink id="934a-7ee7-d73e-53b4" name="Spirit Sprint" hidden="false" targetId="2669-294e-ac54-5070" type="infoGroup"/>
+            <infoLink id="ba37-6400-2990-18ff" name="Tsukkakaru" hidden="false" targetId="8fcb-74be-c338-21ed" type="infoGroup"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="4212-b5fb-0761-3206" name="Traits" hidden="false">
+          <profiles>
+            <profile id="9602-8685-f09c-af89" name="Daranibe" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Bravery, Ranged Defence (1)</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="e4b3-b2d7-d184-b80a" name="Bravery" hidden="false" targetId="f9b2-38d2-7cda-de6e" type="rule"/>
+            <infoLink id="36d9-e54c-1c38-bfdf" name="Ranged Defence " hidden="false" targetId="9b8d-9ca9-e25d-3988" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="71fc-c907-002b-0cc6" name="Unique Effects" hidden="false">
+          <profiles>
+            <profile id="09de-49d0-98a1-b7b9" name="Daranibe" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">Whenever this model is Placed by a Friendly Effect, increase the Place distance by 1&quot;.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="4b45-9cc4-2237-ad28" name="Kakyu" hidden="false" targetId="4063-a8c6-80d6-dac4" type="profile"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="3976-034d-2c8f-0cd2" name="Melee Weapons" hidden="false">
+          <profiles>
+            <profile id="b571-c541-e5ae-537b" name="Staff" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+0</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Reach</characteristic>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Push Defence (0), Sidestep Attack (1)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+            <profile id="32aa-59ce-4919-a4bd" name="Claws" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+1</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Pierce (1)</characteristic>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Combo Attack (1)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="876b-b4af-cf22-88ea" name="Sidestep Attack " hidden="false" targetId="070d-a69d-0b46-27dc" type="rule"/>
+            <infoLink id="709d-f3cb-b6d0-e0bf" name="Push Defence" hidden="false" targetId="74fc-a971-d9c2-278c" type="rule"/>
+            <infoLink id="e085-0c84-84c0-4388" name="Pierce " hidden="false" targetId="39e4-14d7-5533-6e67" type="rule"/>
+            <infoLink id="0203-bfc3-ff8b-e354" name="Combo Attack " hidden="false" targetId="78ab-6a94-be24-8f74" type="rule"/>
+            <infoLink id="095d-3195-7720-478d" name="Reach" hidden="false" targetId="e28e-d5dd-a262-1101" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+      </infoGroups>
+      <categoryLinks>
+        <categoryLink id="580e-ef9f-7942-6115" name="New CategoryLink" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
+        <categoryLink id="a6a4-5d7f-19bb-23ad" name="Faction: The Descension" hidden="false" targetId="daaa-d0d2-e66e-0672" primary="false"/>
+        <categoryLink id="da10-e2cb-0b4c-9bee" name="Tengu" hidden="false" targetId="6da4-f657-173c-c135" primary="false"/>
+        <categoryLink id="ae17-f2c6-097c-cdc7" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
+        <categoryLink id="773b-877a-4139-ec48" name="Kakyu" hidden="false" targetId="3fcb-ecd1-632a-d26e" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="b0db-e398-ed07-6b67" name="Enhancements" hidden="false" collective="false" import="true" targetId="f513-13e0-08f2-0d67" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="14.0"/>
       </costs>
     </selectionEntry>
   </selectionEntries>
