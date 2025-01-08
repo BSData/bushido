@@ -443,7 +443,7 @@ The Ice Patch is considered [Difficult, Clear, Zero] for Enemy models.</characte
             </profile>
           </profiles>
           <infoLinks>
-            <infoLink id="68f5-8a4c-3816-44f2" name="Blizzard" hidden="false" targetId="49bf-eafe-cfd5-12fc" type="profile"/>
+            <infoLink id="68f5-8a4c-3816-44f2" name="Snow Walker" hidden="false" targetId="49bf-eafe-cfd5-12fc" type="profile"/>
             <infoLink id="add4-1254-6b7c-293a" name="Ice Affinity" hidden="false" targetId="1eaa-b9d0-f8e6-f919" type="profile"/>
           </infoLinks>
         </infoGroup>
@@ -1093,7 +1093,7 @@ This model may be recruited into any Minimoto Theme that does not restrict it.</
             </profile>
           </profiles>
           <infoLinks>
-            <infoLink id="c8fb-20e3-0c68-5b4a" name="Blizzard" hidden="false" targetId="49bf-eafe-cfd5-12fc" type="profile"/>
+            <infoLink id="c8fb-20e3-0c68-5b4a" name="Snow Walker" hidden="false" targetId="49bf-eafe-cfd5-12fc" type="profile"/>
           </infoLinks>
         </infoGroup>
       </infoGroups>
@@ -1282,7 +1282,7 @@ This model may be recruited into any Minimoto Theme that does not restrict it.</
         </infoGroup>
         <infoGroup id="1bb7-4a90-1a6b-cca2" name="Unique Effects" hidden="false">
           <infoLinks>
-            <infoLink name="Blizzard" id="3731-8f7f-1412-8510" hidden="false" targetId="49bf-eafe-cfd5-12fc" type="profile"/>
+            <infoLink name="Snow Walker" id="3731-8f7f-1412-8510" hidden="false" targetId="49bf-eafe-cfd5-12fc" type="profile"/>
             <infoLink name="Ice Affinity" id="6a2c-60bf-744d-0c13" hidden="false" targetId="1eaa-b9d0-f8e6-f919" type="profile"/>
           </infoLinks>
         </infoGroup>
@@ -1981,7 +1981,7 @@ This model may be recruited into any Minimoto Theme that does not restrict it.</
             </profile>
           </profiles>
           <infoLinks>
-            <infoLink id="082a-70ea-d97c-400a" name="Blizzard" hidden="false" targetId="49bf-eafe-cfd5-12fc" type="profile"/>
+            <infoLink id="082a-70ea-d97c-400a" name="Snow Walker" hidden="false" targetId="49bf-eafe-cfd5-12fc" type="profile"/>
             <infoLink id="c48b-3d31-a38b-07c5" name="Strong" hidden="false" targetId="00b5-3637-d48a-807e" type="rule"/>
             <infoLink id="7a36-77e1-72aa-5efd" name="Terror" hidden="false" targetId="ad7a-5dea-fee4-fb49" type="rule"/>
           </infoLinks>
@@ -2422,7 +2422,7 @@ Until the End Phase, all Ki Feats from Communal cards cost one additional Ki Tok
             </profile>
           </profiles>
           <infoLinks>
-            <infoLink id="1d81-9dfb-0db1-08bd" name="Blizzard" hidden="false" targetId="49bf-eafe-cfd5-12fc" type="profile"/>
+            <infoLink id="1d81-9dfb-0db1-08bd" name="Snow Walker" hidden="false" targetId="49bf-eafe-cfd5-12fc" type="profile"/>
           </infoLinks>
         </infoGroup>
       </infoGroups>
@@ -2850,7 +2850,7 @@ This is a Blizzard Effect.</characteristic>
             </profile>
           </profiles>
           <infoLinks>
-            <infoLink id="0129-49a4-dd65-47b9" name="Blizzard" hidden="false" targetId="49bf-eafe-cfd5-12fc" type="profile"/>
+            <infoLink id="0129-49a4-dd65-47b9" name="Snow Walker" hidden="false" targetId="49bf-eafe-cfd5-12fc" type="profile"/>
             <infoLink name="Ice Affinity" id="1f9d-6c8a-e875-39cf" hidden="false" targetId="1eaa-b9d0-f8e6-f919" type="profile"/>
           </infoLinks>
         </infoGroup>
@@ -3336,7 +3336,7 @@ Use any relevant traits the model has or Weapon traits the chosen Melee Weapon h
             </profile>
           </profiles>
           <categoryLinks>
-            <categoryLink id="9740-0c34-58b2-2a92" name="Faction Enhancement Cards" hidden="false" targetId="17cf-d9a9-c7c1-bcb6" primary="false"/>
+            <categoryLink id="9740-0c34-58b2-2a92" name="Faction Enhancement Cards" hidden="false" targetId="17cf-d9a9-c7c1-bcb6" primary="true"/>
             <categoryLink id="e8fd-5aa1-731b-2ebe" name="Cycle: Year of the Risen Sun" hidden="false" targetId="a745-0548-80c8-ece4" primary="false"/>
           </categoryLinks>
           <costs>
@@ -3437,6 +3437,54 @@ Requirement [Shugenja]</characteristic>
           <costs>
             <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1"/>
           </costs>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Icicle Mastery" hidden="false" id="1a18-1f78-4764-b1a7">
+          <costs>
+            <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1"/>
+          </costs>
+          <categoryLinks>
+            <categoryLink targetId="17cf-d9a9-c7c1-bcb6" id="0f89-7755-be71-d8b8" primary="true" name="Faction Enhancement Cards"/>
+          </categoryLinks>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="57e0-df1d-b465-ec6e" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e392-33af-281a-9d16" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="notInstanceOf" value="1" field="selections" scope="parent" childId="1768-35aa-a05a-bd26" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <profiles>
+            <profile name="Icicle Mastery" typeId="bd15-7ead-9268-3576" typeName="Special Card (Ki Feat)" hidden="false" id="2146-954e-ee92-876e">
+              <characteristics>
+                <characteristic name="Description" typeId="17eb-17e2-4df4-5c5d">Attached model gains the Ice Manipulation Ki feat.
+
+
+When this model declares a piercing Icicles Ranged Attack, the range to the target may be measured from any Friendly Kami of Reflection.
+This model still needs LoS to the Target.
+
+
+Requirement [Hoshi Machiko]</characteristic>
+                <characteristic name="Name" typeId="27c7-1649-f16e-8eaa">Ice Manipulation</characteristic>
+                <characteristic name="Cost" typeId="e410-b220-64e5-7953">2</characteristic>
+                <characteristic name="Timing" typeId="b9bf-562a-fe26-cb29">Active</characteristic>
+                <characteristic name="Subject" typeId="47b8-f739-9d50-2e45">Personal</characteristic>
+                <characteristic name="Limitation" typeId="870e-79e4-80ee-c0cc">OpT</characteristic>
+                <characteristic name="Ki Feat Description" typeId="3886-242b-fb70-5c88">When this model declares a Ranged Attack Action this model gains +1 Ranged Pool and choose one of the following until the current Ranged Attack Action is resolved:
+• This model ignores Camouflage and Cover
+• This model&apos;s Ranged Weapon gains Pierce (3) and Sharp (3)
+• This model&apos;s Ranged Wea on cannot declare a Special Attack and gains Rapid Fire (3)</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink name="Camouflage" id="c836-3414-803d-be92" hidden="false" type="rule" targetId="9010-4983-c98c-1751"/>
+            <infoLink name="Pierce " id="0c17-a163-2ce8-7942" hidden="false" type="rule" targetId="39e4-14d7-5533-6e67"/>
+            <infoLink name="Sharp " id="507f-23d4-8b31-9dee" hidden="false" type="rule" targetId="6092-9fb5-5196-d1eb"/>
+            <infoLink name="Rapid Fire" id="3c83-7804-5c55-a91a" hidden="false" type="rule" targetId="129c-7864-4cc1-f7bc"/>
+          </infoLinks>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
