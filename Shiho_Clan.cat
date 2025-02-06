@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="2276-2df6-78a7-841d" name="Shiho Clan" revision="37" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="19" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="2276-2df6-78a7-841d" name="Shiho Clan" revision="39" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="19" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <categoryEntries>
     <categoryEntry id="7fa5-7ef0-59c5-f657" name="Tanaka" hidden="false"/>
   </categoryEntries>
@@ -3002,7 +3002,7 @@ You may decide the order recruited terrain (Friendly and Enemy) is Deployed.</ch
             <conditionGroup type="or">
               <conditions>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9126-f480-c2df-fbaf" type="atLeast"/>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="true" childId="f616-46d8-5907-fafd" type="atLeast"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="9402-edcc-93a2-aef1" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -3096,6 +3096,16 @@ Whenever a Friendly model within 6&quot; of a model with a Luck Token makes a Fe
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="11"/>
       </costs>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="9402-edcc-93a2-aef1" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </conditions>
+          <modifiers>
+            <modifier type="add" value="b254-2810-6b62-66d9" field="category"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry id="442b-4e2d-64c9-b479" name="Wolf Spears" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
@@ -3519,7 +3529,6 @@ Whenever a Friendly model within 6&quot; of a model with a Luck Token makes a Fe
               <conditions>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f5-1986-098c-0729" type="atLeast"/>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9126-f480-c2df-fbaf" type="atLeast"/>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="true" childId="f616-46d8-5907-fafd" type="atLeast"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -3534,7 +3543,6 @@ Whenever a Friendly model within 6&quot; of a model with a Luck Token makes a Fe
               <conditions>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f5-1986-098c-0729" type="atLeast"/>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9126-f480-c2df-fbaf" type="atLeast"/>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="true" childId="f616-46d8-5907-fafd" type="atLeast"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -3549,7 +3557,6 @@ Whenever a Friendly model within 6&quot; of a model with a Luck Token makes a Fe
               <conditions>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f5-1986-098c-0729" type="atLeast"/>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9126-f480-c2df-fbaf" type="atLeast"/>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="true" childId="f616-46d8-5907-fafd" type="atLeast"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -3564,7 +3571,6 @@ Whenever a Friendly model within 6&quot; of a model with a Luck Token makes a Fe
               <conditions>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f5-1986-098c-0729" type="atLeast"/>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9126-f480-c2df-fbaf" type="atLeast"/>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="true" childId="f616-46d8-5907-fafd" type="atLeast"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -3579,7 +3585,6 @@ Whenever a Friendly model within 6&quot; of a model with a Luck Token makes a Fe
               <conditions>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9126-f480-c2df-fbaf" type="atLeast"/>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f5-1986-098c-0729" type="atLeast"/>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="true" childId="f616-46d8-5907-fafd" type="atLeast"/>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="966b-fc6b-359e-5c30" type="atLeast"/>
               </conditions>
             </conditionGroup>
@@ -3626,15 +3631,7 @@ Whenever a Friendly model within 6&quot; of a model with a Luck Token makes a Fe
       </entryLinks>
     </entryLink>
     <entryLink id="5323-3a6e-0ae8-414a" name="Brotherhood" hidden="false" collective="false" import="true" targetId="9402-edcc-93a2-aef1" type="selectionEntry"/>
-    <entryLink id="97bf-558f-3853-c62d" name="Eldest Brother" hidden="true" collective="false" import="true" targetId="294d-a0fa-f437-2fca" type="selectionEntry">
-      <modifiers>
-        <modifier type="set" field="hidden" value="false">
-          <conditions>
-            <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="true" childId="9126-f480-c2df-fbaf" type="atLeast"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-    </entryLink>
+    <entryLink id="97bf-558f-3853-c62d" name="Eldest Brother" hidden="true" collective="false" import="true" targetId="294d-a0fa-f437-2fca" type="selectionEntry"/>
     <entryLink id="5c8a-39c9-369b-3f65" name="Ichiro" hidden="false" collective="false" import="true" targetId="1edd-65f3-2fdb-67b9" type="selectionEntry">
       <modifiers>
         <modifier type="set" field="hidden" value="false">
@@ -3748,20 +3745,6 @@ Whenever a Friendly model within 6&quot; of a model with a Luck Token makes a Fe
               </conditions>
             </conditionGroup>
           </conditionGroups>
-        </modifier>
-      </modifiers>
-    </entryLink>
-    <entryLink id="c221-5eb4-86e4-33b0" name="Hiroto, Drunken Master" hidden="true" collective="false" import="true" targetId="f616-46d8-5907-fafd" type="selectionEntry">
-      <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="true" childId="9126-f480-c2df-fbaf" type="atLeast"/>
-          </conditions>
-        </modifier>
-        <modifier type="set" field="hidden" value="false">
-          <conditions>
-            <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="true" childId="294d-a0fa-f437-2fca" type="atLeast"/>
-          </conditions>
         </modifier>
       </modifiers>
     </entryLink>
@@ -4930,6 +4913,5 @@ Exclusion [Hiroto]</characteristic>
   </sharedInfoGroups>
   <catalogueLinks>
     <catalogueLink id="0809-f48a-8f64-4455" name="Library-Ronin" targetId="b489-b304-948d-52d0" type="catalogue" importRootEntries="true"/>
-    <catalogueLink id="0814-2514-9dab-ccf1" name="Library-Playtesting" targetId="a19b-8b81-40a5-05ca" type="catalogue" importRootEntries="true"/>
   </catalogueLinks>
 </catalogue>
