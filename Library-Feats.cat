@@ -972,7 +972,9 @@ If this model was in a Melee Exchange, the Kami can neither be damaged nor deal 
             <characteristic name="Timing" typeId="f8a8-8a3e-ef58-4c61">Active</characteristic>
             <characteristic name="Subject" typeId="4ac8-2bb1-0c84-f088">Target 8&quot;</characteristic>
             <characteristic name="Limitation" typeId="6fc9-5d13-2687-b2a5"/>
-            <characteristic name="Description" typeId="f804-b969-00da-2123">Target model gains Fearless, Durable [Ranged], and Slow until the End Phase. If Target is an Enemy, you must succeed in an Opposed Ki Test.</characteristic>
+            <characteristic name="Description" typeId="f804-b969-00da-2123">Target model gains Fearless, Durable [Ranged], and Slow until the End Phase.
+If Target is an Enemy, you must succeed in an Opposed Ki Test.
+This is considered a Blizzard Effect.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -1006,7 +1008,7 @@ If this model was in a Melee Exchange, the Kami can neither be damaged nor deal 
             <characteristic name="Timing" typeId="f8a8-8a3e-ef58-4c61">Instant</characteristic>
             <characteristic name="Subject" typeId="4ac8-2bb1-0c84-f088">Aura 3&quot;</characteristic>
             <characteristic name="Limitation" typeId="6fc9-5d13-2687-b2a5"/>
-            <characteristic name="Description" typeId="f804-b969-00da-2123">Models in the Aura gain Cover. Enemy models moving into the Aura gain a Fire (2) Marker. This model cannot use this feat if it has no Ammo Tokens.</characteristic>
+            <characteristic name="Description" typeId="f804-b969-00da-2123">Models in the Aura gain Cover. Enemy models Entering the Aura gain a Fire (2) Marker. This model cannot use this feat if it has no Ammo Tokens.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -1057,8 +1059,8 @@ If this model was in a Melee Exchange, the Kami can neither be damaged nor deal 
       <profiles>
         <profile id="39d4-2227-d9f3-db76" name="Blizzard" hidden="false" typeId="993a-e62a-7922-0ccb" typeName="Ki Feat">
           <characteristics>
-            <characteristic name="Cost" typeId="a126-54d9-0a27-f4b6">3</characteristic>
-            <characteristic name="Timing" typeId="f8a8-8a3e-ef58-4c61">Complex</characteristic>
+            <characteristic name="Cost" typeId="a126-54d9-0a27-f4b6">2</characteristic>
+            <characteristic name="Timing" typeId="f8a8-8a3e-ef58-4c61">Simple</characteristic>
             <characteristic name="Subject" typeId="4ac8-2bb1-0c84-f088">Personal</characteristic>
             <characteristic name="Limitation" typeId="6fc9-5d13-2687-b2a5"/>
             <characteristic name="Description" typeId="f804-b969-00da-2123">All models are in Cover and gain Slow until the End Phase.</characteristic>
@@ -1077,7 +1079,8 @@ If this model was in a Melee Exchange, the Kami can neither be damaged nor deal 
             <characteristic name="Timing" typeId="f8a8-8a3e-ef58-4c61">Simple</characteristic>
             <characteristic name="Subject" typeId="4ac8-2bb1-0c84-f088">Target 8&quot; Opposed Ki</characteristic>
             <characteristic name="Limitation" typeId="6fc9-5d13-2687-b2a5">noBtB</characteristic>
-            <characteristic name="Description" typeId="f804-b969-00da-2123">The next time Target model suffers Damage it suffers double the Damage, if that would be enough to Kill the Target. If not, this effect expires immediately.</characteristic>
+            <characteristic name="Description" typeId="f804-b969-00da-2123">The next time target model suffers damage in a melee exchange, it suffers double the damage, ignoring Durable if that would be enough to kill the target.
+If not, this effect expires immediately.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -1359,11 +1362,9 @@ For each Wound prevented the model making the attack suffers 1 Wound, ignoring T
             <characteristic name="Timing" typeId="f8a8-8a3e-ef58-4c61">Active</characteristic>
             <characteristic name="Subject" typeId="4ac8-2bb1-0c84-f088">Special BtB</characteristic>
             <characteristic name="Limitation" typeId="6fc9-5d13-2687-b2a5">noBtB, OpT</characteristic>
-            <characteristic name="Description" typeId="f804-b969-00da-2123">Place the Scorched Earth template in BtB with this model.
-It is a Terrain element [Difficult, Obscuring, Zero].
-Models contacting this Terrain gain a Fire (3) Marker.
-Remove the Terrain element in the End Phase.
-Add 1 Void Counter to the Blessings of the Void Communal Card.</characteristic>
+            <characteristic name="Description" typeId="f804-b969-00da-2123">Place the Scorched Earth template in BtB with this model. It is a terrain element [Destructible][Difficult, Obscuring, Zero].
+Models entering this terrain gain a Fire (3) Marker. Remove the terrain element in the end phase.
+Add one Void Counter to the Communal Card.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -2887,7 +2888,7 @@ This Warband may use this Ki Feat only once per turn.</characteristic>
             <characteristic name="Timing" typeId="f8a8-8a3e-ef58-4c61">Active</characteristic>
             <characteristic name="Subject" typeId="4ac8-2bb1-0c84-f088">Personal</characteristic>
             <characteristic name="Limitation" typeId="6fc9-5d13-2687-b2a5"/>
-            <characteristic name="Description" typeId="f804-b969-00da-2123">This model gains Brutal (2) until the current action is resolved.</characteristic>
+            <characteristic name="Description" typeId="f804-b969-00da-2123">This model’s Melee Weapons gain Brutal (2) until the current action is resolved.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -4469,7 +4470,8 @@ A model may only gain one Fire Marker per activation as a result of this Ki Feat
             <characteristic name="Timing" typeId="f8a8-8a3e-ef58-4c61">Active</characteristic>
             <characteristic name="Subject" typeId="4ac8-2bb1-0c84-f088">Personal</characteristic>
             <characteristic name="Limitation" typeId="6fc9-5d13-2687-b2a5">OpA</characteristic>
-            <characteristic name="Description" typeId="f804-b969-00da-2123">At the end of an activation in which this model declared a Charge action and caused Wounds in a Melee Exchange it gains an Activation Counter.</characteristic>
+            <characteristic name="Description" typeId="f804-b969-00da-2123">At the end of an activation in which this model declared a Charge action and caused Wounds in a Melee Exchange it gains an Activation Counter.
+This Ki Feat can only be used once per activation.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -6067,7 +6069,7 @@ X cannot be greater than 3.</characteristic>
             <characteristic name="Timing" typeId="f8a8-8a3e-ef58-4c61">Simple</characteristic>
             <characteristic name="Subject" typeId="4ac8-2bb1-0c84-f088">Target 8&quot;</characteristic>
             <characteristic name="Limitation" typeId="6fc9-5d13-2687-b2a5">OpG</characteristic>
-            <characteristic name="Description" typeId="f804-b969-00da-2123">Place 4 Doom Tokens on Target model. During the Starting Phase remove a Doom Token. When the last Doom Token is removed the model suffers 7 Wounds.</characteristic>
+            <characteristic name="Description" typeId="f804-b969-00da-2123">Place 4 Doom Tokens on Target model.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -6080,7 +6082,7 @@ X cannot be greater than 3.</characteristic>
             <characteristic name="Timing" typeId="f8a8-8a3e-ef58-4c61">Simple</characteristic>
             <characteristic name="Subject" typeId="4ac8-2bb1-0c84-f088">Special</characteristic>
             <characteristic name="Limitation" typeId="6fc9-5d13-2687-b2a5">OpG</characteristic>
-            <characteristic name="Description" typeId="f804-b969-00da-2123">Deploy any Oni or Onisho model that was not recruited by the Warband into play, exhausted, within 3” of this model with 3 Control Markers on it.  If the summoned model ever has zero Control Markers, remove it from play.</characteristic>
+            <characteristic name="Description" typeId="f804-b969-00da-2123">Summon and Deploy any Oni or Onisho model that was not recruited into the Warband within 3” of this model with 2 Darkness Counters and 2 Ki Tokens on it. Mark wound boxes until the Summoned model has 7 unmarked boxes remaining.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -7576,10 +7578,7 @@ That model gains Insignificant until the end of their next activation.</characte
             <characteristic name="Timing" typeId="f8a8-8a3e-ef58-4c61">Instant</characteristic>
             <characteristic name="Subject" typeId="4ac8-2bb1-0c84-f088">Special</characteristic>
             <characteristic name="Limitation" typeId="6fc9-5d13-2687-b2a5">OpG</characteristic>
-            <characteristic name="Description" typeId="f804-b969-00da-2123">Play in the Main Phase.
-Remove Prone Markers from Friendly models.
-Friendly Models cannot be Surprised for the Current Activation.
-Until the End Phase, Friendly Models Deploying gain one Activation Counter.</characteristic>
+            <characteristic name="Description" typeId="f804-b969-00da-2123">Friendly Models remove Prone Markers and cannot be surprised for the rest of the current activation. Friendly Models that were Deployed this turn or are later Deployed this turn gain one Activation Counter.</characteristic>
           </characteristics>
         </profile>
       </profiles>

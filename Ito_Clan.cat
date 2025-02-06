@@ -138,9 +138,11 @@ This effect ends if all Poison Markers are removed from the Enemy model.</charac
       <profiles>
         <profile id="a259-d456-6bb3-a6e9" name="The Blessed" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
           <characteristics>
-            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">• Friendly Shisai gain double Ki Tokens on the Ki Generation step of the first turn.
-• Each turn choose 1 Friendly Hebimmiman model. That model may be given up to 3 Blood of Orochi Tokens in the Starting Phase instead of 2.
-• During Deployment you may assign a Virtue Token to up to 2 Friendly Faction models.
+            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">- Friendly Shisai gain double Ki Tokens on the Ki Generation step of the first turn.
+- Each turn choose 1 Friendly Hebimmiman model. That model may be given up to 3 Blood of Orochi Tokens in the Starting Phase instead of 2.
+- During Deployment you may assign a Virtue Token to up to 2 Friendly Faction models.
+- When a Friendly model would apply a Poison Marker to a model that has Immune [Poison], instead apply a Fire Marker of the same Value.
+
 Permitted [Acolyte, Jade Mamba, models with Blood of Orochi, Snake]</characteristic>
           </characteristics>
         </profile>
@@ -477,9 +479,12 @@ Permitted [Acolyte, Jade Mamba, models with Blood of Orochi, Snake]</characteris
       <profiles>
         <profile id="d326-d075-c0c5-c4d3" name="Lords of Izu" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
           <characteristics>
-            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">• In the End Phase Poison Damage ignores the Tough trait.
-• During Deployment 1 Ito Samurai gains Leadership [Friendly](+1/6&quot;) until the end of the game.
-• In the Starting Phase add 2 Blood of Orochi Tokens to the pool.
+            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">- Friendly Faction Samurai gain the Impetuous (0) trait.
+- In the End Phase Poison Damage ignores the Tough trait.
+- During Deployment 1 Ito Samurai gains Leadership [Friendly](+1/6&quot;) until the end of the game.
+- In the Starting Phase add 2 Blood of Orochi Tokens to the pool.
+
+
 Permitted [Ashigaru, Ronin Kami, Samurai, Snake]
 Exclusion [Hebimiman]</characteristic>
           </characteristics>
@@ -3440,7 +3445,7 @@ This model may only Channel to models with the Blood of Orochi trait.</character
         <entryLink id="89c3-403c-5d94-60ee" name="Enhancements" hidden="false" collective="false" import="true" targetId="c1b7-60f5-a313-5345" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
-        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="16"/>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="14"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="bb6c-95ea-a557-277e" name="Serpent&apos;s Coil" hidden="false" collective="false" import="true" type="upgrade">
@@ -4855,6 +4860,13 @@ While involved in a Melee Exchange with this model, Enemy models cannot benefit
           <costs>
             <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2"/>
           </costs>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="notInstanceOf" value="1" field="selections" scope="parent" childId="a678-8869-7918-cb24" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </selectionEntry>
         <selectionEntry id="3be7-2aa0-00f5-50a4" name="Teachings of Yashushi" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -5368,7 +5380,7 @@ Attached model gains Move Ki Boost (2).</characteristic>
                 <profile id="25c5-67f5-2c37-ac0b" name="The Snake Head Standard" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
                   <characteristics>
                     <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">While this model is within 6&quot; of any Enemy model, any Friendly Ashigaru or Samurai model with LoS to this model gains Agile and Evasive.
-This model is considered Medium Sized for the purposes of this ability.</characteristic>
+For the purpose of this ability, this model is considered Medium Sized and Friendly models have Aware.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>

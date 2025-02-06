@@ -1720,7 +1720,7 @@ Until the end of the game, whenever you win a Tactical Test, choose 2 Prefecture
           <profiles>
             <profile id="c3a3-3b6b-5c23-cff0" name="Mizuchi" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
               <characteristics>
-                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Armour (2) Cloudwalk, Fear (6), Fearless, Immune [Stunned], Mettle (1), Sixth Sense, Tough (1)</characteristic>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Armour (2) Cloudwalk, Fear (6), Fearless, Immune [States], Mettle (1), Sixth Sense, Tough (1)</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -1781,8 +1781,7 @@ Until the end of the game, whenever you win a Tactical Test, choose 2 Prefecture
           <profiles>
             <profile id="254e-8d66-cd37-7f78" name="Unique Effects" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
               <characteristics>
-                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">This model can be recruited into any Prefecture Theme that does not specifically restrict it.
-This model cannot be Healed.</characteristic>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">This model can be recruited into any Prefecture Theme that does not specifically restrict it.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -2422,7 +2421,7 @@ This model cannot be Healed.</characteristic>
           <profiles>
             <profile id="2045-d7cb-bb77-4107" name="Takashi Akio" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
               <characteristics>
-                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Armour (3), Fearless, Indomitable (1), Kata, Prowess [Melee](1), Split Attack, Resistance (1), Virtue (8&quot;)</characteristic>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Adept [Melee](1), Armour (3), Fearless, Indomitable (1), Kata, Prowess [Melee](1), Split Attack, Ranged Defence (2), Resistance (1), Virtue (8&quot;)</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -2431,10 +2430,12 @@ This model cannot be Healed.</characteristic>
             <infoLink id="964d-ce99-f7fb-2bc8" name="Fearless" hidden="false" targetId="5d6f-1746-9080-aca5" type="rule"/>
             <infoLink id="766e-85d1-efe7-7a5b" name="Indomitable " hidden="false" targetId="3beb-6f28-e7c4-a236" type="rule"/>
             <infoLink id="d446-9ff0-259d-7f07" name="Kata" hidden="false" targetId="7283-1e6d-cb9c-f1c8" type="rule"/>
-            <infoLink id="2f6e-4f79-41d5-fa4a" name="Prowess " hidden="false" targetId="75ef-327a-cd08-a248" type="rule"/>
+            <infoLink id="2f6e-4f79-41d5-fa4a" name="Ranged Defence " hidden="false" targetId="9b8d-9ca9-e25d-3988" type="rule"/>
             <infoLink id="e2eb-f3a5-c511-2224" name="Split Attack" hidden="false" targetId="92d0-d4fe-e58e-7535" type="rule"/>
             <infoLink id="d775-31e5-7349-7d60" name="Resistance " hidden="false" targetId="7e3f-9dc3-cacb-469f" type="rule"/>
             <infoLink id="7fc1-74d6-6bc5-ca88" name="Virtue" hidden="false" targetId="57d7-cc96-ce93-9258" type="rule"/>
+            <infoLink name="Prowess " id="4f56-3f13-cb09-ddaf" hidden="false" targetId="75ef-327a-cd08-a248" type="rule"/>
+            <infoLink name="Adept" id="63ed-84ec-ba12-521d" hidden="false" targetId="6fc1-6672-95ed-c4e7" type="rule"/>
           </infoLinks>
         </infoGroup>
         <infoGroup id="1a32-7cf5-7e37-b12d" name="Melee Weapon" hidden="false">
@@ -3019,7 +3020,7 @@ This model cannot be Healed.</characteristic>
         <entryLink id="d3ad-5903-7c40-026f" name="Enhancements" hidden="false" collective="false" import="true" targetId="3dad-1423-9b3c-86a7" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
-        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="22"/>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="20"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="106a-a023-8bc2-19c7" name="Takashi Katsumoto" hidden="false" collective="false" import="true" type="model">
@@ -4864,7 +4865,7 @@ This model may be recruited into a Warband that has recruited the Claws of the D
         <entryLink id="b9ef-5186-faa6-4c28" name="Enhancements" hidden="false" collective="false" import="true" targetId="3dad-1423-9b3c-86a7" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
-        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="13"/>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="10"/>
       </costs>
     </selectionEntry>
   </selectionEntries>
@@ -5943,7 +5944,7 @@ Attached model ignores Enemy Damage Rolls if the individual dice values of the D
                   <characteristics>
                     <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">While this model is within 6&quot; of any Enemy model, any Friendly Ashigaru or Samurai model with LoS to this model gains:
 Vengeance [Enemy models with RC &gt; 10]
-This model is considered Medium Size for the purposes of this ability.</characteristic>
+For the purpose of this ability, this model is considered Medium Sized and Friendly models have Aware.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -6118,7 +6119,7 @@ This model is considered Medium Size for the purposes of this ability.</characte
   <sharedProfiles>
     <profile id="5b88-5bdf-da20-7d8e" name="Uchidachi" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
       <characteristics>
-        <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">Enemy models may not use the Prowess trait while involved in a Melee Exchange with this model.</characteristic>
+        <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">Enemy models may not use the Brutal, Feint or Prowess traits while involved in a Melee Exchange with this model.</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>

@@ -991,7 +991,7 @@ Exclusion [Jung, Minimoto]</characteristic>
         <profile id="43ef-b092-d45e-d9c1" name="Unforeseen Outcome" hidden="true" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
           <characteristics>
             <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">Play in the Starting Phase.
-Until the End Phase, each time an Enemy model is Damaged, a Friendly model gains 1 Ki Token.</characteristic>
+Until the End Phase, each time either player’s model is Damaged, their opponent chooses one of their non-Kami models to gain 1 Ki Token.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -1000,7 +1000,7 @@ Until the End Phase, each time an Enemy model is Damaged, a Friendly model gains
         <categoryLink id="4c86-12f5-69bd-8013" name="Cycle: Weeping Sky" hidden="false" targetId="6da0-b320-b958-dc82" primary="false"/>
       </categoryLinks>
       <costs>
-        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2"/>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="1cdd-40cb-ef70-ac40" name="Weeping Sky" hidden="false" collective="false" import="true" type="upgrade">
@@ -1070,7 +1070,7 @@ For the first turn of the game, all models lose Cloudwalk and Lightfooted and ma
         <categoryLink id="ff15-8c57-ea3e-68e2" name="Ronin Equipment Cards" hidden="false" targetId="278f-9379-320a-1a7a" primary="true"/>
       </categoryLinks>
       <costs>
-        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2"/>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="3"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="49fb-d207-3a25-9327" name="Golden Sentinel" hidden="false" collective="false" import="true" type="unit">
@@ -1389,11 +1389,6 @@ For the first turn of the game, all models lose Cloudwalk and Lightfooted and ma
               </conditions>
             </conditionGroup>
           </conditionGroups>
-        </modifier>
-        <modifier type="set" field="hidden" value="false">
-          <conditions>
-            <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="294d-a0fa-f437-2fca" type="atLeast"/>
-          </conditions>
         </modifier>
       </modifiers>
       <constraints>
@@ -3888,7 +3883,7 @@ Against Durable models, instead of making a Damage Roll, always cause 1 Damage (
         <entryLink id="9379-f3b1-8ef7-3e2c" name="Enhancements" hidden="false" collective="false" import="true" targetId="f486-4498-03e3-c397" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
-        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="27"/>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="25"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="35fb-da76-bee4-2938" name="The Grey Pilgrim" hidden="false" collective="false" import="true" type="model">
@@ -4173,7 +4168,7 @@ While this model is in play, other models with marked Wound boxes gain +1 Melee 
         <categoryLink id="bda1-950e-9647-83a4" name="Ronin Equipment Cards" hidden="false" targetId="278f-9379-320a-1a7a" primary="true"/>
       </categoryLinks>
       <costs>
-        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2"/>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="4"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="b001-2a9b-ef61-6d68" name="Xi" hidden="false" collective="false" import="true" type="model">
@@ -5694,7 +5689,7 @@ This model can only be recruited into a Warband that contains all three Blood Br
         <categoryLink id="42d5-9eb9-ed75-7247" name="Ronin Enhancement Cards" hidden="false" targetId="2758-69ad-6e26-c737" primary="true"/>
       </categoryLinks>
       <costs>
-        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1"/>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="370e-e02b-d9ee-8b80" name="Magatama" hidden="false" collective="false" import="true" type="upgrade">
@@ -5777,7 +5772,7 @@ Note: there is currently no simple way to automatically check for this.</charact
         <categoryLink id="913c-58d2-44d2-844c" name="Ronin Enhancement Cards" hidden="false" targetId="2758-69ad-6e26-c737" primary="true"/>
       </categoryLinks>
       <costs>
-        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1"/>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="3"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="bb42-702b-ab84-a9f9" name="Prayer Scroll" hidden="false" collective="false" import="true" type="upgrade">
@@ -5853,13 +5848,15 @@ Note: there is currently no simple way to automatically check for this.</charact
         </modifier>
       </modifiers>
       <constraints>
-        <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="30d5-a16e-69a7-35c6" type="max"/>
+        <constraint field="selections" scope="roster" value="3" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="30d5-a16e-69a7-35c6" type="max"/>
         <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="60fa-e3ea-e35a-2caa" type="max"/>
       </constraints>
       <profiles>
         <profile id="e66e-64e4-fd25-5f5c" name="Wolf Heart Talisman" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
           <characteristics>
-            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">Attached model gains Bravery for its first Fear Test of the game, then discard this card.</characteristic>
+            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">Attached model gains Bravery for its first failed Fear Test.
+The Attached model treats Fear values above 5 as Fear (5).
+Max: 3</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -5871,7 +5868,7 @@ Note: there is currently no simple way to automatically check for this.</charact
         <categoryLink id="660b-3546-988b-d7a0" name="Ronin Equipment Cards" hidden="false" targetId="278f-9379-320a-1a7a" primary="true"/>
       </categoryLinks>
       <costs>
-        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2"/>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="39f7-4bb9-edb9-bde8" name="Shosu" hidden="false" collective="false" import="true" type="model">
@@ -6573,7 +6570,9 @@ If recruited into a Shiho Theme, this model is considered a Shiho model and may 
           <characteristics>
             <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">While Attached model is within 6&quot; of an Enemy model, Friendly Loyal models with LOS to the Attached model gain Banzai!.
 Friendly models with LOS to Attached model gain Vengeance [Prefecture].
-Attached model is considered Medium Sized for the purposes of this ability.
+
+For the purpose of this ability, this model is considered Medium Sized and Friendly models have Aware.
+
 Requirement [Tru&apos;pah]</characteristic>
           </characteristics>
         </profile>
@@ -7304,7 +7303,7 @@ Permitted [Hozumi, Taiyo, Ryokeen, Ronin models]</characteristic>
       <profiles>
         <profile id="014b-2bbc-8f69-6cf9" name="The Kiyozumi Family" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
           <characteristics>
-            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">• Before the first turn, you may change the alignment of 1 Objective. If you choose not to do this Kiyozumi models count as 2 models when calculating Zone Control until you score a Victory Point.
+            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">• Before the first turn, you may change the alignment of one objective by performing an Influence Scenario Action on it. This can even be done in scenarios where the Influence Scenario Action is not available but not in scenarios where the Influence Scenario Action (first or otherwise) is a Complex Action.
 • Kiyozumi, Kenmeina models may always be recruited into this theme.
 • Once per game, in the Starting Phase, use this ability. You win all tie breaks, regardless of the usual Rules Conflicts resolution until the End Phase. If you both have this ability, resolve the tie break normally.
 
@@ -8079,7 +8078,7 @@ When this model spends Ki Tokens, it may instead remove any number of Ghost Toke
                 </modifier>
               </modifiers>
               <characteristics>
-                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Aloof, Co-ordinated Attack [Hozumi], Dodge (1), Lightfooted, Sixth Sense</characteristic>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Aloof, Co-ordinated Attack [Hozumi], Dodge (1), Heal (3), Intangible, Sixth Sense</characteristic>
               </characteristics>
             </profile>
             <profile id="84c2-355d-2124-c454" name="Ryokeen" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
@@ -8091,14 +8090,14 @@ When this model spends Ki Tokens, it may instead remove any number of Ghost Toke
                 </modifier>
               </modifiers>
               <characteristics>
-                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Aloof, Dodge (1), Lightfooted, Sixth Sense</characteristic>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Aloof, Dodge (1), Heal (3), Intangible, Sixth Sense</characteristic>
               </characteristics>
             </profile>
           </profiles>
           <infoLinks>
             <infoLink id="55c6-8a61-ce5f-a669" name="Aloof" hidden="false" targetId="5101-70fc-eca4-d99b" type="rule"/>
             <infoLink id="1c15-bc06-d6f7-b2f3" name="Dodge " hidden="false" targetId="14d5-d459-5d8a-c73e" type="rule"/>
-            <infoLink id="d191-d3d2-6d48-992d" name="Lightfooted" hidden="false" targetId="57d2-cd57-07f9-addf" type="rule"/>
+            <infoLink id="d191-d3d2-6d48-992d" name="Heal" hidden="false" targetId="bd98-52d2-3a66-08e7" type="rule"/>
             <infoLink id="ffff-23f5-eaca-6745" name="Sixth Sense" hidden="false" targetId="ec49-3908-f1d1-8de2" type="rule"/>
             <infoLink id="0c16-65dd-43d0-c4e2" name="Co-ordinated Attack" hidden="false" targetId="2337-7bcc-c1f2-f2bd" type="rule">
               <modifiers>
@@ -8118,6 +8117,7 @@ When this model spends Ki Tokens, it may instead remove any number of Ghost Toke
                 </modifier>
               </modifiers>
             </infoLink>
+            <infoLink name="Intangible" id="53e0-5640-ecca-30a1" hidden="false" targetId="7f5c-c63d-f96f-65af" type="rule"/>
           </infoLinks>
         </infoGroup>
         <infoGroup id="be8a-0596-48a2-6614" name="Unique Effects" hidden="false">
@@ -9603,15 +9603,8 @@ This model can make only one Bird Strike Ranged Attack per turn.</characteristic
               <conditions>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0f84-8e23-429c-d5c4" type="atLeast"/>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9402-edcc-93a2-aef1" type="atLeast"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="477a-e693-0888-08f7" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="477a-e693-0888-08f7" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="2af4-e298-ee7f-b85f" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
             </conditionGroup>
           </conditionGroups>
         </modifier>

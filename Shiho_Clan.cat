@@ -1108,11 +1108,12 @@ This model gains Fearless when declaring actions Targeting or Selecting a model 
       <profiles>
         <profile id="2eda-fbc6-115f-0f38" name="Guerilla Warfare" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
           <characteristics>
-            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">You may choose one of the following in any Starting Phase. Each ability may only be chosen once. After using two of these abilities, discard this card.
-• Move each Friendly model that is currently BtB with an Enemy model until it leaves the Enemy model&apos;s ZoC.
-• All Ki Boosts for Friendly models cost one fewer Ki Token until the End Phase.
-• Friendly models with marked Wound Boxes may re-roll Defence Dice until the End Phase.
-• For each Friendly model currently Elsewhere using the Flank trait, immediately re-choose its arrival turn (you may not choose turn 1) and table edge as if it just gained Flank.
+            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">- Loyal &amp; Samurai models gain Reach on Katana Melee Weapons.
+- You may choose one of the following in any starting phase. Each ability may only be chosen once. You may use two abilities per game.
+  - Move each friendly model that is currently BtB with an enemy model until it leaves the enemy model’s Zone of Control.
+  - All Ki Boosts cost one fewer Ki Token until the end phase.
+  - Friendly models with marked wound boxes may reroll Defence dice until the end phase.
+  - For each model currently Elsewhere using the Flank trait, immediately re-choose its arrival turn (this may be the current turn, however you may not choose turn 1) and table edge as if it just gained Flank.
 
 Permitted [Hiroto, Loyal models]</characteristic>
           </characteristics>
@@ -1124,6 +1125,9 @@ Permitted [Hiroto, Loyal models]</characteristic>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0"/>
       </costs>
+      <infoLinks>
+        <infoLink name="Reach" id="a5a0-806d-cff5-7ddd" hidden="false" type="rule" targetId="e28e-d5dd-a262-1101"/>
+      </infoLinks>
     </selectionEntry>
     <selectionEntry id="38aa-a599-30a6-c707" name="The Unfurled Wing" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -1435,15 +1439,22 @@ When a model performs a Wait Action to Destroy this Terrain, it need not spend 2
         </infoGroup>
         <infoGroup id="49fb-d083-0bef-dd3c" name="Unique Effects" hidden="false">
           <profiles>
-            <profile id="28f4-aaa1-028b-538f" name="Unique Effects" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+            <profile id="28f4-aaa1-028b-538f" name="Training" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">While this model is in play, friendly Kyudoka models may use Flame Arrows Ki Feat as if it was written on their card.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Virtue+" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects" hidden="false" id="d6c7-448b-305f-efa6">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">While this model is in play, when a friendly Loyal &amp; Ashigaru Model spends a Virtue token, in addition to any other benefit chosen, that model may remove a Reload Marker.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Wait" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects" hidden="false" id="b297-df51-6685-4e87">
               <characteristics>
                 <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">When this model declares a Wait Action to remove Reload Markers, its Ranged Weapons gain Lightweight until the End Phase.</characteristic>
               </characteristics>
             </profile>
           </profiles>
-          <infoLinks>
-            <infoLink id="58d3-5a28-f497-cde7" name="Lightweight" hidden="false" targetId="c75c-7124-2b1f-a4d9" type="rule"/>
-          </infoLinks>
         </infoGroup>
       </infoGroups>
       <categoryLinks>
@@ -1652,6 +1663,20 @@ When a model performs a Wait Action to Destroy this Terrain, it need not spend 2
             <infoLink id="459c-7c92-ec6f-a5f3" name="Sidestep Defence " hidden="false" targetId="753c-6c3b-64d7-203c" type="rule"/>
           </infoLinks>
         </infoGroup>
+        <infoGroup name="Unique Effects" id="b3e1-4493-50a5-3707" hidden="false">
+          <profiles>
+            <profile name="Training" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects" hidden="false" id="daea-02af-96b4-b48d">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">While this model is in play, friendly Yarimen models may use the Unassailable Ki Feat as if it was written on their card.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Virtue+" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects" hidden="false" id="f02e-b9b9-a6a0-6aa2">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">While this model is in play, when a friendly Loyal &amp; Ashigaru Model spends a Virtue token, in addition to any other benefit chosen, if that model performs a Scenario Action, remove one fewer Activation Counters at the end of the action. They must have the required number of Activation Counters to declare the Action.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </infoGroup>
       </infoGroups>
       <categoryLinks>
         <categoryLink id="4b87-3407-d4c5-0ae7" name="Faction: Shiho Clan" hidden="false" targetId="53b4-db5e-0527-0759" primary="false"/>
@@ -1686,9 +1711,10 @@ When a model performs a Wait Action to Destroy this Terrain, it need not spend 2
       <profiles>
         <profile id="1fbc-cec3-f42d-f624" name="The Shiho Return" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
           <characteristics>
-            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">Friendly models that are Elsewhere are ignored when calculating Pass Tokens.
-• During the first turn of the game, models in this Warband gain Endurance and do not suffer the melee penalty for having Run.
-• Once per game, in a Starting Phase when a model is Deployed using the Flank rules, each Enemy model must perform a Ki Challenge Test(5). If it fails, you may change that model&apos;s facing.
+            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">- Friendly Models that are Elsewhere are ignored when calculating Pass Tokens.
+- During the first turn of the game, models in this warband gain Endurance and do not suffer the melee penalty for having Run.
+- Loyal &amp; Samurai models gain Reach on Katana Melee Weapons.
+- In the Starting phase for each Faction model that is Deployed using the Flank rules, an Enemy model must perform a Ki Challenge Test (7). If it fails, you may change that model’s facing.
 
 Permitted [Samurai, Eagles, Ronin Kami, Ronin Eagles]</characteristic>
           </characteristics>
@@ -1700,6 +1726,10 @@ Permitted [Samurai, Eagles, Ronin Kami, Ronin Eagles]</characteristic>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0"/>
       </costs>
+      <infoLinks>
+        <infoLink name="Reach" id="9b19-63b3-1659-65eb" hidden="false" type="rule" targetId="e28e-d5dd-a262-1101"/>
+        <infoLink name="Endurance" id="46a4-074d-1ae8-60cc" hidden="false" type="rule" targetId="7fdc-d150-9641-1235"/>
+      </infoLinks>
     </selectionEntry>
     <selectionEntry id="88f5-1986-098c-0729" name="The Black Eagle&apos;s Coalition" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
@@ -1730,14 +1760,14 @@ Permitted [Samurai, Eagles, Ronin Kami, Ronin Eagles]</characteristic>
       <profiles>
         <profile id="791e-44e1-9871-386a" name="The Black Eagle&apos;s Coalition" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
           <characteristics>
-            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">• Loyal models gain Leadership [Ronin] (1/6&quot;).
-• Ronin models gain Scout (1/1&quot;).
-• After recruiting the Warband to the correct Rice Cost, choose another 15 Rice of cards as Reserves. These are not added to the main list but kept separate. The Warband with and without Reserves must be legal.
-  Before Deployment you may switch cards in the Reserves with cards in the main list, the main list must remain legal. Show the new list to your Opponent before the game.
-  In a timed event, you have 5 minutes to make substitutions.
+            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">- Loyal &amp; Samurai models gain Leadership [Ronin](1/6”)
+- Ronin models gain Scout (1/1”) and Co-ordinated Attack [Loyal]
+- Loyal &amp; Samurai models gain Reach on Katana Melee Weapons.
+- When a Loyal &amp; Samurai model moves into BtB with an Enemy model this activation, it may make a normal Damage Roll when resolving a successful Sidestep Attack.
+- After recruiting the Warband to the correct Rice Cost, choose another 15 Rice of cards as Reserves. These are not added to the main list but kept separate. The Warband with and without Reserves must be legal. Before Deployment you may switch cards in the Reserves with cards in the main list, the main list must remain legal. Show the new list to your Opponent before the game. In a timed event, you have 5 minutes to make substitutions.
 
-Permitted [Shiho Faction models, Ronin models]
-Exclusion [Ronin Special Cards]</characteristic>
+
+Permitted [Shiho Faction Models, Ronin Models]</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -1749,6 +1779,12 @@ Exclusion [Ronin Special Cards]</characteristic>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0"/>
       </costs>
+      <infoLinks>
+        <infoLink name="Co-ordinated Attack" id="2c4c-1c11-e366-a8b1" hidden="false" type="rule" targetId="2337-7bcc-c1f2-f2bd"/>
+        <infoLink name="Leadership" id="79bc-71d5-ddd9-0db2" hidden="false" type="rule" targetId="8ec4-bfdc-8c03-f631"/>
+        <infoLink name="Scout" id="fce6-6ebe-dee0-ba1e" hidden="false" type="rule" targetId="8c82-d05a-f63b-1841"/>
+        <infoLink name="Reach" id="fd45-940c-036e-616a" hidden="false" type="rule" targetId="e28e-d5dd-a262-1101"/>
+      </infoLinks>
     </selectionEntry>
     <selectionEntry id="4be0-954e-0b7c-d91a" name="Shiho Keita" hidden="false" collective="false" import="true" type="model">
       <modifiers>
@@ -2379,7 +2415,7 @@ Requirement [Warband must contain a model with Tactician]</characteristic>
         </infoGroup>
         <infoGroup id="4888-5c9a-3f43-e462" name="Unique Effects" hidden="false">
           <profiles>
-            <profile id="f75b-3c33-ac49-2560" name="Unique Effects" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+            <profile id="f75b-3c33-ac49-2560" name="Wait" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
               <characteristics>
                 <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">When this model declares a Wait Action to remove Reload Markers, its Ranged Weapons gain Lightweight until the End Phase.</characteristic>
               </characteristics>
@@ -2388,6 +2424,18 @@ Requirement [Warband must contain a model with Tactician]</characteristic>
               <characteristics>
                 <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">This model may choose to use this ability when it chooses to use its Dai Kyu Ranged Weapon during a Ranged Attack.
 This model&apos;s Dai Kyu Ranged Weapon gains Reload (+1) and this model does not need LoS to target a Ranged Attack, ignores Cover, and ignores the Blind State during a Ranged Attack Action.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Virtue" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects" hidden="false" id="fe9a-b615-e79a-78a4">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">While this model is in play, when a Friendly Faction model spends a Virtue Token you may choose for that model to gain the following effect:
+When This model declares a Wait Action to remove a Reload Marker, they may immediately Walk up to their Move Stat in Inches.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Guerilla" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects" hidden="false" id="635e-7c5e-8bde-cca9">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">When this model is recruited into the Guerilla Warfare theme, add this option to the second benefit on the theme card:
+- Until the End Phase, Friendly model’s Ranged Weapons gain Brutal (1).</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -3813,9 +3861,6 @@ Whenever a Friendly model within 6&quot; of a model with a Luck Token makes a Fe
         <categoryLink id="d562-4058-7cf2-73f9" name="Loyal" hidden="false" targetId="f476-156e-8599-9253" primary="false"/>
         <categoryLink id="9637-564f-66ca-8eca" name="Peasant" hidden="false" targetId="78b4-4485-a93e-754c" primary="false"/>
       </categoryLinks>
-      <entryLinks>
-        <entryLink id="e432-2284-a574-f63b" name="Enhancements" hidden="false" collective="false" import="true" targetId="8a7c-6251-523e-a67c" type="selectionEntryGroup"/>
-      </entryLinks>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="4"/>
       </costs>
@@ -4801,175 +4846,19 @@ Exclusion [Hiroto]</characteristic>
             </selectionEntry>
           </selectionEntries>
           <entryLinks>
-            <entryLink id="58f7-e490-4657-7364" name="Arashi&apos;s Fan" hidden="false" collective="false" import="true" targetId="fbe4-1c24-7fea-0247" type="selectionEntry">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f5-1986-098c-0729" type="atLeast"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </entryLink>
-            <entryLink id="fc71-9d4c-2757-a874" name="Hotai&apos;s Coin" hidden="false" collective="false" import="true" targetId="b467-7ef8-5537-423b" type="selectionEntry">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f5-1986-098c-0729" type="atLeast"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </entryLink>
-            <entryLink id="9936-a731-b183-dfc9" name="Kintoki&apos;s Salt" hidden="false" collective="false" import="true" targetId="f7e6-106d-e876-9d34" type="selectionEntry">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f5-1986-098c-0729" type="atLeast"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </entryLink>
-            <entryLink id="c00d-89f8-7f26-07c2" name="Takeru&apos;s Tanto" hidden="false" collective="false" import="true" targetId="50f4-7511-f889-9f40" type="selectionEntry">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f5-1986-098c-0729" type="atLeast"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </entryLink>
-            <entryLink id="11a0-97a3-af98-13f1" name="Vial of Raijin&apos;s Breath" hidden="false" collective="false" import="true" targetId="9b29-1f89-46d2-0329" type="selectionEntry">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f5-1986-098c-0729" type="atLeast"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </entryLink>
-            <entryLink id="c8ae-12fc-c5fd-4a77" name="Demon-Face Mask" hidden="false" collective="false" import="true" targetId="2437-81ed-3b75-d23b" type="selectionEntry">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f5-1986-098c-0729" type="atLeast"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </entryLink>
-            <entryLink id="2be3-0426-7dba-70f3" name="Triangle Knife" hidden="false" collective="false" import="true" targetId="fcc9-c236-babe-2239" type="selectionEntry">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f5-1986-098c-0729" type="atLeast"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </entryLink>
-            <entryLink id="8654-6cf3-d88c-4f15" name="Obscure Charm" hidden="false" collective="false" import="true" targetId="74be-1ece-8b7d-739d" type="selectionEntry">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f5-1986-098c-0729" type="atLeast"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </entryLink>
-            <entryLink id="0b6f-c833-61c2-3dc7" name="Minimoto Steel Helm" hidden="false" collective="false" import="true" targetId="38b5-a50d-24f0-4435" type="selectionEntry">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f5-1986-098c-0729" type="atLeast"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </entryLink>
-            <entryLink id="571d-c5d6-1fce-9652" name="Magatama" hidden="false" collective="false" import="true" targetId="370e-e02b-d9ee-8b80" type="selectionEntry">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f5-1986-098c-0729" type="atLeast"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </entryLink>
-            <entryLink id="8bfb-c51c-7bcc-308d" name="Wolf Heart Talisman" hidden="false" collective="false" import="true" targetId="a56e-8e8e-97b4-ec73" type="selectionEntry">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f5-1986-098c-0729" type="atLeast"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </entryLink>
-            <entryLink id="7659-61b9-05f6-4d3a" name="The Eagle Banner" hidden="false" collective="false" import="true" targetId="010e-1205-db10-6a2d" type="selectionEntry">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f5-1986-098c-0729" type="atLeast"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </entryLink>
-            <entryLink id="488e-a8bf-cbd9-744e" name="Hand Cannon" hidden="false" collective="false" import="true" targetId="3009-1a3c-223d-cae2" type="selectionEntry">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f5-1986-098c-0729" type="atLeast"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </entryLink>
+            <entryLink id="58f7-e490-4657-7364" name="Arashi&apos;s Fan" hidden="false" collective="false" import="true" targetId="fbe4-1c24-7fea-0247" type="selectionEntry"/>
+            <entryLink id="fc71-9d4c-2757-a874" name="Hotai&apos;s Coin" hidden="false" collective="false" import="true" targetId="b467-7ef8-5537-423b" type="selectionEntry"/>
+            <entryLink id="9936-a731-b183-dfc9" name="Kintoki&apos;s Salt" hidden="false" collective="false" import="true" targetId="f7e6-106d-e876-9d34" type="selectionEntry"/>
+            <entryLink id="c00d-89f8-7f26-07c2" name="Takeru&apos;s Tanto" hidden="false" collective="false" import="true" targetId="50f4-7511-f889-9f40" type="selectionEntry"/>
+            <entryLink id="11a0-97a3-af98-13f1" name="Vial of Raijin&apos;s Breath" hidden="false" collective="false" import="true" targetId="9b29-1f89-46d2-0329" type="selectionEntry"/>
+            <entryLink id="c8ae-12fc-c5fd-4a77" name="Demon-Face Mask" hidden="false" collective="false" import="true" targetId="2437-81ed-3b75-d23b" type="selectionEntry"/>
+            <entryLink id="2be3-0426-7dba-70f3" name="Triangle Knife" hidden="false" collective="false" import="true" targetId="fcc9-c236-babe-2239" type="selectionEntry"/>
+            <entryLink id="8654-6cf3-d88c-4f15" name="Obscure Charm" hidden="false" collective="false" import="true" targetId="74be-1ece-8b7d-739d" type="selectionEntry"/>
+            <entryLink id="0b6f-c833-61c2-3dc7" name="Minimoto Steel Helm" hidden="false" collective="false" import="true" targetId="38b5-a50d-24f0-4435" type="selectionEntry"/>
+            <entryLink id="571d-c5d6-1fce-9652" name="Magatama" hidden="false" collective="false" import="true" targetId="370e-e02b-d9ee-8b80" type="selectionEntry"/>
+            <entryLink id="8bfb-c51c-7bcc-308d" name="Wolf Heart Talisman" hidden="false" collective="false" import="true" targetId="a56e-8e8e-97b4-ec73" type="selectionEntry"/>
+            <entryLink id="7659-61b9-05f6-4d3a" name="The Eagle Banner" hidden="false" collective="false" import="true" targetId="010e-1205-db10-6a2d" type="selectionEntry"/>
+            <entryLink id="488e-a8bf-cbd9-744e" name="Hand Cannon" hidden="false" collective="false" import="true" targetId="3009-1a3c-223d-cae2" type="selectionEntry"/>
             <entryLink id="be7c-ae31-2dd1-9f29" name="The Hozumi Katana" hidden="false" collective="false" import="true" targetId="5cac-d0cc-1c51-a147" type="selectionEntry"/>
             <entryLink id="dad8-641e-f512-6f85" name="The Kiyozumi Katana" hidden="false" collective="false" import="true" targetId="f882-5ccf-0724-2290" type="selectionEntry"/>
             <entryLink id="139d-d488-a83c-e5f3" name="The Sunrise Katana" hidden="false" collective="false" import="true" targetId="a54a-aa90-53f2-d9df" type="selectionEntry"/>
@@ -4977,71 +4866,11 @@ Exclusion [Hiroto]</characteristic>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="8b74-94b3-5b01-5f11" name="Paragon" hidden="false" collective="false" import="true" targetId="9059-1680-57c0-9f71" type="selectionEntry">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f5-1986-098c-0729" type="atLeast"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-        </entryLink>
-        <entryLink id="cbad-ef5d-46d2-5ff6" name="Finesse" hidden="false" collective="false" import="true" targetId="e916-ca9f-75ef-1c24" type="selectionEntry">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f5-1986-098c-0729" type="atLeast"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-        </entryLink>
-        <entryLink id="1099-442c-0410-7699" name="Pacifism" hidden="false" collective="false" import="true" targetId="6bf3-9dca-b4c5-6a3e" type="selectionEntry">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f5-1986-098c-0729" type="atLeast"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-        </entryLink>
-        <entryLink id="331c-ae8f-9429-9ad5" name="Prayer Scroll" hidden="false" collective="false" import="true" targetId="bb42-702b-ab84-a9f9" type="selectionEntry">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f5-1986-098c-0729" type="atLeast"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-        </entryLink>
-        <entryLink id="7866-0959-8269-0920" name="Fujin&apos;s Charm" hidden="false" collective="false" import="true" targetId="5110-9b07-a9dd-d71e" type="selectionEntry">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f5-1986-098c-0729" type="atLeast"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-        </entryLink>
+        <entryLink id="8b74-94b3-5b01-5f11" name="Paragon" hidden="false" collective="false" import="true" targetId="9059-1680-57c0-9f71" type="selectionEntry"/>
+        <entryLink id="cbad-ef5d-46d2-5ff6" name="Finesse" hidden="false" collective="false" import="true" targetId="e916-ca9f-75ef-1c24" type="selectionEntry"/>
+        <entryLink id="1099-442c-0410-7699" name="Pacifism" hidden="false" collective="false" import="true" targetId="6bf3-9dca-b4c5-6a3e" type="selectionEntry"/>
+        <entryLink id="331c-ae8f-9429-9ad5" name="Prayer Scroll" hidden="false" collective="false" import="true" targetId="bb42-702b-ab84-a9f9" type="selectionEntry"/>
+        <entryLink id="7866-0959-8269-0920" name="Fujin&apos;s Charm" hidden="false" collective="false" import="true" targetId="5110-9b07-a9dd-d71e" type="selectionEntry"/>
         <entryLink id="fcfa-0cd4-f690-37c4" name="Accepted into the Shadow" hidden="false" collective="false" import="true" targetId="5a4f-6e3e-0e2b-3e81" type="selectionEntry"/>
         <entryLink id="73ee-bed5-ac20-33a0" name="Broken Spirit" hidden="false" collective="false" import="true" targetId="66cd-f1c0-8da8-e6d9" type="selectionEntry"/>
         <entryLink id="a953-c1b7-053a-2444" name="Inducted into the Miko" hidden="false" collective="false" import="true" targetId="0ceb-eea9-97e0-8726" type="selectionEntry"/>
