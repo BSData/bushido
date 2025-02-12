@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="4213-717c-2228-e731" name="Temple of Ro-Kan" revision="46" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="19" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="4213-717c-2228-e731" name="Temple of Ro-Kan" revision="47" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="19" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <selectionEntries>
     <selectionEntry id="5048-3a52-5689-6d0b" name="Spiritual Harmony" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -5225,15 +5225,10 @@ This model may be Placed into BtB with an Enemy model when using this unique eff
     </selectionEntry>
     <selectionEntry id="6c62-ccd2-7b90-19e2" name="The Nine-Tailed Fox" hidden="false" collective="false" import="true" type="model">
       <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="477a-e693-0888-08f7" type="atLeast"/>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="44e6-4155-6b9b-2521" type="lessThan"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="lessThan" value="1" field="selections" scope="roster" childId="44e6-4155-6b9b-2521" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </conditions>
         </modifier>
       </modifiers>
       <profiles>
@@ -5312,15 +5307,10 @@ This model may only be included in Followers of Inari Theme.</characteristic>
     </selectionEntry>
     <selectionEntry id="b1bb-dffc-9c22-c9ae" name="Tengoko" hidden="false" collective="false" import="true" type="model">
       <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="477a-e693-0888-08f7" type="atLeast"/>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="44e6-4155-6b9b-2521" type="lessThan"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="lessThan" value="1" field="selections" scope="roster" childId="44e6-4155-6b9b-2521" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </conditions>
         </modifier>
       </modifiers>
       <constraints>
@@ -5885,14 +5875,9 @@ While attempting to Target this model, Enemy models lose Sixth Sense.</character
       <modifiers>
         <modifier type="append" field="name" value="- Fox Form"/>
         <modifier type="set" field="hidden" value="true">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="477a-e693-0888-08f7" type="atLeast"/>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="44e6-4155-6b9b-2521" type="lessThan"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
+          <conditions>
+            <condition type="lessThan" value="1" field="selections" scope="roster" childId="44e6-4155-6b9b-2521" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </conditions>
         </modifier>
       </modifiers>
       <constraints>
