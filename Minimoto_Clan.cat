@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="d2c8-91e9-1a97-89b4" name="Minimoto Clan" revision="36" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="19" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="d2c8-91e9-1a97-89b4" name="Minimoto Clan" revision="37" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="19" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <categoryEntries>
     <categoryEntry id="6b68-2575-cc8f-c08f" name="Armour 3+" hidden="false"/>
   </categoryEntries>
@@ -2975,10 +2975,15 @@ This is a Blizzard Effect.</characteristic>
     <entryLink id="0048-b8fa-a3a7-1ff7" name="Kami of Reflection" hidden="false" collective="false" import="true" targetId="55d0-ba9c-f4c8-c0d3" type="selectionEntry">
       <modifiers>
         <modifier type="set" field="9b8b-4b8c-502c-095a" value="0">
-          <conditions>
-            <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="bf82-59e5-bfa8-89e4" type="lessThan"/>
-            <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="83c2-5a85-fe86-1cb6" type="lessThan"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="bf82-59e5-bfa8-89e4" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="83c2-5a85-fe86-1cb6" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="1768-35aa-a05a-bd26" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
         <modifier type="set" field="hidden" value="false">
           <conditionGroups>
