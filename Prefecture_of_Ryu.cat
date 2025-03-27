@@ -3,6 +3,7 @@
   <categoryEntries>
     <categoryEntry id="8688-cd6e-bcbe-2cbb" name="Ima" hidden="false"/>
     <categoryEntry id="65a8-4392-a95b-115b" name="Takashi" hidden="false"/>
+    <categoryEntry name="Passing the Night" id="74ad-b881-8f16-4d44" hidden="false"/>
   </categoryEntries>
   <selectionEntries>
     <selectionEntry id="5048-3a52-5689-6d0b" name="Heroic Stand" hidden="false" collective="false" import="true" type="upgrade">
@@ -4868,6 +4869,78 @@ This model may be recruited into a Warband that has recruited the Claws of the D
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="13"/>
       </costs>
     </selectionEntry>
+    <selectionEntry type="model" import="true" name="Bairei" hidden="false" id="29ad-bde8-b9ff-37f9">
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="9"/>
+      </costs>
+      <categoryLinks>
+        <categoryLink targetId="0ca8-2040-37f2-a1e0" id="f896-1c3d-7f64-f9ad" primary="true" name="Faction Profile Cards"/>
+        <categoryLink targetId="7532-4f60-381d-2941" id="133d-6ef5-e9be-f5ee" primary="false" name="Faction: Prefecture of Ryu"/>
+        <categoryLink targetId="a485-b6b0-b58e-a3a1" id="1b75-4d0f-b07a-664d" primary="false" name="Shisai"/>
+        <categoryLink targetId="74ad-b881-8f16-4d44" id="4942-260c-f9a9-23dd" primary="false" name="Passing the Night"/>
+        <categoryLink targetId="afd4-8041-e359-223c" id="a343-9f77-33e0-9811" primary="false" name="Unique"/>
+      </categoryLinks>
+      <profiles>
+        <profile name="Bairei" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile" hidden="false" id="76a4-6e81-e3a2-28fb">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">2</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">2</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">2</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">8</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">5 OOOOO</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="8d93-7f76-2b2a-b5a6" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+      </constraints>
+      <infoGroups>
+        <infoGroup name="Ki Feats" id="d3e2-875d-9922-dedd" hidden="false">
+          <infoLinks>
+            <infoLink name="Repentance Shomyo" id="4835-ba87-65a6-18a8" hidden="false" type="infoGroup" targetId="94eb-6034-09cb-b280"/>
+            <infoLink name="Rewarding Honour" id="c092-2c36-2888-a6b3" hidden="false" type="infoGroup" targetId="235c-ffa4-bb8b-ee1e"/>
+            <infoLink name="Soothing Shomyo" id="2b47-f1d3-af52-28cf" hidden="false" type="infoGroup" targetId="5101-72b2-32a2-3f57"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup name="Melee Weapon" id="faf3-b65c-6387-d5d6" hidden="false">
+          <profiles>
+            <profile name="Censer" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon" hidden="false" id="80b7-d941-a73a-7e53">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+2</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Chain Weapon (1)</characteristic>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Push Defence (0)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink name="Push Defence" id="ecea-c8e7-7188-776b" hidden="false" type="rule" targetId="74fc-a971-d9c2-278c"/>
+            <infoLink name="Chain Weapon" id="0b2e-7af8-63dd-62b6" hidden="false" type="rule" targetId="84f9-d10e-0e9f-d79c"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup name="Unique Effects" id="97dd-f77b-87a9-4850" hidden="false">
+          <profiles>
+            <profile name="Virtue" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects" hidden="false" id="a476-a1cf-818f-c1c7">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">While this model is in play, if you are the Active Player when a Friendly model spends a Virtue Token you may choose the following effect:
+- Remove a Shame Token from this model.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Incense" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects" hidden="false" id="7a7b-3dbe-3cb5-702a">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">When this model begins its Activation within 1&quot; of a Faction model that you own, you may remove up to one Control, Death Sentence, Disease, Fire, Poison or Spirit Block Marker from that model.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </infoGroup>
+      </infoGroups>
+    </selectionEntry>
   </selectionEntries>
   <entryLinks>
     <entryLink id="d149-3ea0-90df-a450" name="Ancestor Spirit" hidden="false" collective="false" import="true" targetId="a8a8-fc30-a7e2-2913" type="selectionEntry">
@@ -4941,6 +5014,11 @@ This model may be recruited into a Warband that has recruited the Claws of the D
       </modifierGroups>
       <categoryLinks>
         <categoryLink id="6c92-d8e4-325e-b149" name="Faction Profile Cards" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
+        <categoryLink targetId="1a5c-7165-4266-4fbc" id="8faa-05ee-6c68-ad6c" primary="false" name="Imperial"/>
+        <categoryLink targetId="e12a-f782-3281-7444" id="7504-a8ba-9668-6ae3" primary="false" name="Samurai"/>
+        <categoryLink targetId="65a8-4392-a95b-115b" id="001b-ca67-3515-ff3b" primary="false" name="Takashi"/>
+        <categoryLink targetId="7532-4f60-381d-2941" id="216e-1fc4-bed9-78cb" primary="false" name="Faction: Prefecture of Ryu"/>
+        <categoryLink targetId="afd4-8041-e359-223c" id="2f41-4ef6-51d7-fa2a" primary="false" name="Unique"/>
       </categoryLinks>
     </entryLink>
     <entryLink id="90d5-0cfd-e90f-43a8" name="Shosu" hidden="false" collective="false" import="true" targetId="39f7-4bb9-edb9-bde8" type="selectionEntry">
