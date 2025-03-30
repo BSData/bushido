@@ -4869,9 +4869,9 @@ This model may be recruited into a Warband that has recruited the Claws of the D
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="13"/>
       </costs>
     </selectionEntry>
-    <selectionEntry type="model" import="true" name="Bairei" hidden="false" id="29ad-bde8-b9ff-37f9">
+    <selectionEntry type="model" import="true" name="Ton" hidden="false" id="29ad-bde8-b9ff-37f9">
       <costs>
-        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="9"/>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="14"/>
       </costs>
       <categoryLinks>
         <categoryLink targetId="0ca8-2040-37f2-a1e0" id="f896-1c3d-7f64-f9ad" primary="true" name="Faction Profile Cards"/>
@@ -4881,7 +4881,636 @@ This model may be recruited into a Warband that has recruited the Claws of the D
         <categoryLink targetId="afd4-8041-e359-223c" id="a343-9f77-33e0-9811" primary="false" name="Unique"/>
       </categoryLinks>
       <profiles>
-        <profile name="Bairei" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile" hidden="false" id="76a4-6e81-e3a2-28fb">
+        <profile name="Ton" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile" hidden="false" id="76a4-6e81-e3a2-28fb">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">1</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">3</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">1</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">8</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">9 OOOOO OOOO</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Medium 40mm</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="8d93-7f76-2b2a-b5a6" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+      </constraints>
+      <infoGroups>
+        <infoGroup name="Ki Feats" id="d3e2-875d-9922-dedd" hidden="false">
+          <infoLinks>
+            <infoLink name="Burden" id="4835-ba87-65a6-18a8" hidden="false" type="infoGroup" targetId="846d-7aaa-2b6b-d347"/>
+            <infoLink name="Oppressed Shomyo" id="c092-2c36-2888-a6b3" hidden="false" type="infoGroup" targetId="6168-605c-20f1-5f0c"/>
+            <infoLink name="Scorn Stone" id="2b47-f1d3-af52-28cf" hidden="false" type="infoGroup" targetId="8bee-c880-cb4e-b8fd"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup name="Melee Weapon" id="faf3-b65c-6387-d5d6" hidden="false">
+          <profiles>
+            <profile name="Unarmed" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon" hidden="false" id="80b7-d941-a73a-7e53">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+1</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e"/>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Push Attack (0)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink name="Push Attack" id="ecea-c8e7-7188-776b" hidden="false" type="rule" targetId="6c26-94ba-6b96-9e1b"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup name="Unique Effects" id="97dd-f77b-87a9-4850" hidden="false">
+          <profiles>
+            <profile name="Virtue" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects" hidden="false" id="a476-a1cf-818f-c1c7">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">While this model is in play, when a Friendly model spends a Virtue Token you may choose the following effect:
+- This model gains Endurance until the end of the current Activation.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Unique Effects" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects" hidden="false" id="7a7b-3dbe-3cb5-702a">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">While this model has any Shame Tokens, this model&apos;s Warband cannot score Scenario Points and models in this Warband may not perform Scenario Actions.
+
+
+This model may only be recruited into any Warband recruiting the Passing the Night Theme.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </infoGroup>
+        <infoGroup name="Traits" id="0595-9975-44c6-469e" hidden="false">
+          <profiles>
+            <profile name="Traits" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits" hidden="false" id="946a-5fae-f52d-4954">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Endurance, Immovable, Tough (1), Unstable</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink name="Immovable" id="3e9b-1ed1-2480-baeb" hidden="false" type="rule" targetId="d34b-724f-6fc8-7420"/>
+            <infoLink name="Tough" id="83e0-af58-edec-01c1" hidden="false" type="rule" targetId="5613-a6cf-495a-229f"/>
+            <infoLink name="Endurance" id="2a24-936c-3efd-353f" hidden="false" type="rule" targetId="7fdc-d150-9641-1235"/>
+            <infoLink name="Unstable" id="f9d9-9a42-8e04-a87e" hidden="false" type="rule" targetId="24e3-1e7e-40b5-e16c"/>
+          </infoLinks>
+        </infoGroup>
+      </infoGroups>
+      <entryLinks>
+        <entryLink import="true" name="Enhancements" hidden="false" id="bd49-f3cd-2693-9953" collective="false" targetId="3dad-1423-9b3c-86a7" type="selectionEntryGroup"/>
+      </entryLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Passing the Night" hidden="false" id="71c9-d30d-3c77-ae9c">
+      <categoryLinks>
+        <categoryLink targetId="477a-e693-0888-08f7" id="c52a-e0da-078e-0239" primary="true" name="Faction Theme Cards"/>
+      </categoryLinks>
+      <profiles>
+        <profile name="Passing the Night" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card" hidden="false" id="3790-18db-61ef-015e">
+          <characteristics>
+            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">- In the Starting Phase, the opponent must give a Shame Token to a number of models in this Warband equal to the turn number.
+- While a Friendly Faction Samurai model has no Shame Tokens, it gains the following benefits:
+  - Fearless
+  - Melee Boost (2)
+  - Spirit (+1)
+  - Melee Weapons gain +1 Melee Weapon Strength
+  - Lose Slow
+
+
+
+Permitted: [Samurai, Shisai, Ronin Shisai]</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry type="model" import="true" name="Takashi Hida" hidden="false" id="f1ce-b5eb-6c4a-53ef">
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="8"/>
+      </costs>
+      <categoryLinks>
+        <categoryLink targetId="65a8-4392-a95b-115b" id="b77e-fce6-a411-d7c7" primary="false" name="Takashi"/>
+        <categoryLink targetId="7532-4f60-381d-2941" id="0530-81c1-aa6e-ee84" primary="false" name="Faction: Prefecture of Ryu"/>
+        <categoryLink targetId="0ca8-2040-37f2-a1e0" id="2cc6-8e1a-94fb-dcee" primary="true" name="Faction Profile Cards"/>
+        <categoryLink targetId="a485-b6b0-b58e-a3a1" id="2552-2bf9-3843-840d" primary="false" name="Shisai"/>
+        <categoryLink targetId="f6da-373b-f718-6be8" id="b034-dcf9-e7e6-7de5" primary="false" name="Novice"/>
+        <categoryLink targetId="afd4-8041-e359-223c" id="1686-62bf-afd4-8e0d" primary="false" name="Unique"/>
+        <categoryLink targetId="74ad-b881-8f16-4d44" id="f1f0-f37b-f0ae-d48d" primary="false" name="Passing the Night"/>
+      </categoryLinks>
+      <profiles>
+        <profile name="Takashi Hida" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile" hidden="false" id="d2e6-10f1-83aa-6a48">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">2</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277"/>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">2</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">2</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">8</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">5 OOOOO</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup name="Traits" id="5043-3225-62dd-f565" hidden="false">
+          <profiles>
+            <profile name="Takashi Hida" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits" hidden="false" id="34ed-fbc0-d19c-3351">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Believer [Samurai with no Shame Tokens](1/4&quot;), Bravery, Channel (6/6&quot;), Leadership [Samurai, Ashigaru](1/8&quot;)</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink name="Bravery" id="89ed-d61a-b6c7-f0ff" hidden="false" type="rule" targetId="f9b2-38d2-7cda-de6e"/>
+            <infoLink name="Believer" id="6a2e-dd52-9b50-ca7b" hidden="false" type="rule" targetId="d41e-8717-2e5c-38db"/>
+            <infoLink name="Channel" id="a555-07a0-0cb6-fadc" hidden="false" type="rule" targetId="69af-3098-e21e-7734"/>
+            <infoLink name="Leadership" id="2aa6-35fc-a226-669b" hidden="false" type="rule" targetId="8ec4-bfdc-8c03-f631"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup name="Ki Feats" id="e186-5ab0-3588-5968" hidden="false">
+          <infoLinks>
+            <infoLink name="Rally" id="275f-dae6-c5cd-72d0" hidden="false" type="infoGroup" targetId="d11a-2a0d-5984-5688"/>
+            <infoLink name="Daimyo&apos;s Blessing" id="415b-742f-6dc2-f669" hidden="false" type="infoGroup" targetId="d85e-f600-678e-3ba4"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup name="Melee Weapon" id="c687-2777-8dd5-b44c" hidden="false">
+          <profiles>
+            <profile name="Unarmed" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon" hidden="false" id="6dd8-5119-2b9b-9955">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">-2</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e"/>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d"/>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+        </infoGroup>
+        <infoGroup name="Unique Effects" id="a3ba-1d5f-4731-9dc6" hidden="false">
+          <profiles>
+            <profile name="Unique Effects" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects" hidden="false" id="b0ba-1547-9685-700d">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">When this model takes Damage in a Melee Exchange, all Friendly models gain a Shame Token.
+If this model is Killed or Removed from Play, models may not have Shame Tokens removed for the rest of the game.
+This model may have Equipment Attached that has Requirement [Fujitaka].
+
+
+This model may only be recruited into any Warband recruiting the Passing the Night Theme.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </infoGroup>
+      </infoGroups>
+      <entryLinks>
+        <entryLink import="true" name="Enhancements" hidden="false" id="9c04-57ad-310c-8ae1" collective="false" targetId="3dad-1423-9b3c-86a7" type="selectionEntryGroup"/>
+      </entryLinks>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="5b74-bf73-b8d7-4e68" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+      </constraints>
+    </selectionEntry>
+    <selectionEntry id="3208-3c44-4b14-1ee5" name="Takashi Yoshimi" hidden="false" collective="false" import="true" type="model">
+      <constraints>
+        <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2604-2dd2-3c9a-8a0f" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="42c7-41f5-e3e8-9cc9" name="Takashi Yoshimi" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">3</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">2</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">6</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">6 OOOOO O</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="c788-6cd8-a617-9342" name="Ki Feats" hidden="false">
+          <infoLinks>
+            <infoLink id="ef9e-b6d6-e06e-a5d3" name="Recite Sins" hidden="false" targetId="e883-38fb-7e77-9b21" type="infoGroup"/>
+            <infoLink id="e150-4b8f-ca1b-f324" name="Combat Training" hidden="false" targetId="23c7-3032-575c-f5d0" type="infoGroup"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="df09-135c-3263-8489" name="Traits" hidden="false">
+          <profiles>
+            <profile id="06b5-4075-7c4a-de4e" name="Takashi Yoshimi" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Armour (3), Bravery, Prowess [Melee](1), Slow, Unstable</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="4fcb-bf5f-0909-04cd" name="Armour" hidden="false" targetId="8615-1c63-2242-5746" type="rule"/>
+            <infoLink id="d1a4-e6be-43e3-95a6" name="Bravery" hidden="false" targetId="f9b2-38d2-7cda-de6e" type="rule"/>
+            <infoLink id="db65-481f-8295-f34c" name="Unstable" hidden="false" targetId="24e3-1e7e-40b5-e16c" type="rule"/>
+            <infoLink id="13e2-1072-11a0-6d06" name="Prowess " hidden="false" targetId="75ef-327a-cd08-a248" type="rule"/>
+            <infoLink id="4e49-0db0-49d9-1537" name="Slow" hidden="false" targetId="f1c3-4a84-c616-23cd" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="8a09-1836-565d-7567" name="Melee Weapon" hidden="false">
+          <profiles>
+            <profile id="d243-c069-6883-50ac" name="Naginata" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+2</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Reach</characteristic>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Critical Attack (1), Powerful Attack (1), Push Defence (0)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="2e3c-3648-6160-e761" name="Critical Attack" hidden="false" targetId="7ec7-56ae-79e3-423e" type="rule"/>
+            <infoLink id="da8a-6914-9860-b9d5" name="Reach" hidden="false" targetId="e28e-d5dd-a262-1101" type="rule"/>
+            <infoLink id="6787-b3fd-c1aa-5288" name="Powerful Attack" hidden="false" targetId="d56a-058d-95d9-5b60" type="rule"/>
+            <infoLink id="00ef-6790-1481-e121" name="Push Defence" hidden="false" targetId="74fc-a971-d9c2-278c" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup name="Unique Effects" id="7ac7-e660-1807-e5c0" hidden="false" page="">
+          <profiles>
+            <profile name="Unique Effects" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects" hidden="false" id="da2b-a9b1-2cf1-0013">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">This model may only be recruited into any Warband recruiting the Passing the Night Theme.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </infoGroup>
+      </infoGroups>
+      <categoryLinks>
+        <categoryLink id="5086-1f4c-694a-35ed" name="Faction: Prefecture of Ryu" hidden="false" targetId="7532-4f60-381d-2941" primary="false"/>
+        <categoryLink id="7ed2-7950-aacc-90c8" name="Faction Profile Cards" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
+        <categoryLink id="abb7-dcc4-a6da-d2ae" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
+        <categoryLink id="f860-413f-6abc-b124" name="Samurai" hidden="false" targetId="e12a-f782-3281-7444" primary="false"/>
+        <categoryLink id="1725-ffd3-d185-a34b" name="Armour" hidden="false" targetId="f322-702a-ff62-b37e" primary="false"/>
+        <categoryLink id="c0b7-d4b7-6d66-b277" name="Takashi" hidden="false" targetId="65a8-4392-a95b-115b" primary="false"/>
+        <categoryLink targetId="8ee4-973e-c851-41cf" id="32cf-9df6-dab2-f853" primary="false" name="Shamed"/>
+        <categoryLink targetId="74ad-b881-8f16-4d44" id="df9c-8753-5883-09ed" primary="false" name="Passing the Night"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="54a2-a9d9-f552-0b56" name="Enhancements" hidden="false" collective="false" import="true" targetId="3dad-1423-9b3c-86a7" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="16"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="38a1-01e6-86d5-84bb" name="Takashi Kazu" hidden="false" collective="false" import="true" type="model">
+      <constraints>
+        <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0eff-ba43-2f2b-a5d5" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="1245-4c1b-12fe-aac1" name="Takashi Kazu" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">3</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33">3</characteristic>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">2</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">6</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">6 OOOOO O</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="a831-1104-6862-3a51" name="Ki Feats" hidden="false">
+          <infoLinks>
+            <infoLink id="aed3-c374-75ed-a816" name="Redemption Strike" hidden="false" targetId="56f2-50d7-1d64-6cbb" type="infoGroup"/>
+            <infoLink id="5ce8-3ec3-c73b-4daf" name="Umbrella Block" hidden="false" targetId="0005-2a79-5638-daa2" type="infoGroup"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="3f5d-50ec-7bb5-302a" name="Traits" hidden="false">
+          <profiles>
+            <profile id="bb03-1368-e759-7cd1" name="Takashi Kazu" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Armour (3), Bravery, Prowess [Melee](1), Slow, Unstable</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="e707-c0a4-286e-c891" name="Armour" hidden="false" targetId="8615-1c63-2242-5746" type="rule"/>
+            <infoLink id="b696-7043-b47c-12b8" name="Bravery" hidden="false" targetId="f9b2-38d2-7cda-de6e" type="rule"/>
+            <infoLink id="81f3-70c3-28bc-7ef8" name="Unstable" hidden="false" targetId="24e3-1e7e-40b5-e16c" type="rule"/>
+            <infoLink id="775c-d781-41f0-6690" name="Prowess " hidden="false" targetId="75ef-327a-cd08-a248" type="rule"/>
+            <infoLink id="2923-6d86-83b8-8010" name="Slow" hidden="false" targetId="f1c3-4a84-c616-23cd" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="1ff5-a137-5ba8-85c3" name="Melee Weapon" hidden="false">
+          <profiles>
+            <profile id="3b4e-506d-6192-31ab" name="Naginata" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+2</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Reach</characteristic>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Powerful Attack (1), Counterstrike Defence (1), Push Defence (0)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="904f-d36d-17d2-6895" name="Push Defence" hidden="false" targetId="74fc-a971-d9c2-278c" type="rule"/>
+            <infoLink id="4d97-118e-b2be-eb60" name="Counterstrike Defence " hidden="false" targetId="136e-4c77-dc59-4c6e" type="rule"/>
+            <infoLink id="a0f1-ba43-8a10-66e4" name="Powerful Attack" hidden="false" targetId="d56a-058d-95d9-5b60" type="rule"/>
+            <infoLink name="Reach" id="4623-a710-2312-3554" hidden="false" targetId="e28e-d5dd-a262-1101" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup name="Unique Effects" id="4eb7-5fc4-e60d-a2a5" hidden="false" page="">
+          <profiles>
+            <profile name="Unique Effects" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects" hidden="false" id="2786-bc73-ef42-843f">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">This model may only be recruited into any Warband recruiting the Passing the Night Theme.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </infoGroup>
+      </infoGroups>
+      <categoryLinks>
+        <categoryLink id="dc0d-baac-de2e-7095" name="Faction: Prefecture of Ryu" hidden="false" targetId="7532-4f60-381d-2941" primary="false"/>
+        <categoryLink id="a54a-3dcd-deda-e2db" name="Faction Profile Cards" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
+        <categoryLink id="b963-5e85-a802-0766" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
+        <categoryLink id="b3cd-3e69-11ed-3455" name="Samurai" hidden="false" targetId="e12a-f782-3281-7444" primary="false"/>
+        <categoryLink id="cf2e-b28d-e498-5039" name="Armour" hidden="false" targetId="f322-702a-ff62-b37e" primary="false"/>
+        <categoryLink id="af7f-d3e1-83c1-7b29" name="Takashi" hidden="false" targetId="65a8-4392-a95b-115b" primary="false"/>
+        <categoryLink targetId="8ee4-973e-c851-41cf" id="a426-d3a8-6313-13a0" primary="false" name="Shamed"/>
+        <categoryLink targetId="74ad-b881-8f16-4d44" id="3608-a667-2902-9be9" primary="false" name="Passing the Night"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="8c57-3ee6-9859-6e60" name="Enhancements" hidden="false" collective="false" import="true" targetId="3dad-1423-9b3c-86a7" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="16"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="faba-8776-7d76-f472" name="Takashi Nagisa" hidden="false" collective="false" import="true" type="model">
+      <constraints>
+        <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8381-dc59-3931-a6ae" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="db03-3203-9a06-58ce" name="Takashi Nagisa" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">3</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">2</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">6</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">6 OOOOO O</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="4dcf-57d9-8330-aa19" name="Ki Feats" hidden="false">
+          <infoLinks>
+            <infoLink id="024a-3bb5-4d62-c25c" name="Do-Kote" hidden="false" targetId="7c80-7e85-fc45-381a" type="infoGroup"/>
+            <infoLink id="067f-fde0-0efd-5999" name="First in the Fray" hidden="false" targetId="3ef3-92eb-1f6d-e65c" type="infoGroup"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="28ce-ffed-470d-7d69" name="Traits" hidden="false">
+          <profiles>
+            <profile id="9b6d-c91d-38df-5eef" name="Takashi Nagisa" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Armour (3), Bravery, Indomitable (1), Prowess [Melee](1), Slow, Unstable</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="e9eb-610c-1c5a-f64b" name="Armour" hidden="false" targetId="8615-1c63-2242-5746" type="rule"/>
+            <infoLink id="f9ba-5529-c916-4b75" name="Bravery" hidden="false" targetId="f9b2-38d2-7cda-de6e" type="rule"/>
+            <infoLink id="cc11-3e3d-3a61-cb11" name="Unstable" hidden="false" targetId="24e3-1e7e-40b5-e16c" type="rule"/>
+            <infoLink id="20cf-e150-cfa5-f391" name="Indomitable " hidden="false" targetId="3beb-6f28-e7c4-a236" type="rule"/>
+            <infoLink id="9b79-0fd5-75fd-c2b2" name="Slow" hidden="false" targetId="f1c3-4a84-c616-23cd" type="rule"/>
+            <infoLink id="1812-4320-8454-75e4" name="Prowess " hidden="false" targetId="75ef-327a-cd08-a248" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="c744-8432-8449-153f" name="Melee Weapon" hidden="false">
+          <profiles>
+            <profile id="2996-8bcd-89c9-3680" name="Naginata" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+2</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Reach</characteristic>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Critical Attack (0), Powerful Attack (1), Push Attack (0)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="e792-6ab0-0a8a-72a5" name="Push Attack" hidden="false" targetId="6c26-94ba-6b96-9e1b" type="rule"/>
+            <infoLink id="d2f1-5a58-7d64-be5a" name="Reach" hidden="false" targetId="e28e-d5dd-a262-1101" type="rule"/>
+            <infoLink id="c5fb-2fcf-3903-9dc5" name="Powerful Attack" hidden="false" targetId="d56a-058d-95d9-5b60" type="rule"/>
+            <infoLink id="90f2-3196-7ed9-2d3b" name="Critical Attack" hidden="false" targetId="7ec7-56ae-79e3-423e" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup name="Unique Effects" id="4c53-fc70-0268-c38a" hidden="false" page="">
+          <profiles>
+            <profile name="Unique Effects" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects" hidden="false" id="3185-172a-2a6e-a816">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">This model may only be recruited into any Warband recruiting the Passing the Night Theme.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </infoGroup>
+      </infoGroups>
+      <categoryLinks>
+        <categoryLink id="2b71-8717-1355-c438" name="Faction: Prefecture of Ryu" hidden="false" targetId="7532-4f60-381d-2941" primary="false"/>
+        <categoryLink id="8b14-f28c-ba4f-762b" name="Faction Profile Cards" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
+        <categoryLink id="87f0-dc8a-c8dc-ce16" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
+        <categoryLink id="23be-9900-9c0e-ac1b" name="Samurai" hidden="false" targetId="e12a-f782-3281-7444" primary="false"/>
+        <categoryLink id="813f-396b-fdf6-7cb7" name="Armour" hidden="false" targetId="f322-702a-ff62-b37e" primary="false"/>
+        <categoryLink id="db17-3294-93c4-8925" name="Takashi" hidden="false" targetId="65a8-4392-a95b-115b" primary="false"/>
+        <categoryLink targetId="8ee4-973e-c851-41cf" id="7882-1b89-bd22-2c6d" primary="false" name="Shamed"/>
+        <categoryLink targetId="74ad-b881-8f16-4d44" id="0363-cceb-680d-95b6" primary="false" name="Passing the Night"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="3f44-24d8-0030-50bd" name="Enhancements" hidden="false" collective="false" import="true" targetId="3dad-1423-9b3c-86a7" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="16"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="ad18-0263-2ab4-fb17" name="Takashi Takanibu" hidden="false" collective="false" import="true" type="model">
+      <constraints>
+        <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6473-f298-9960-4735" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="d740-b89b-2b15-79e2" name="Takashi Takanibu" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">3</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">2</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">6</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">6 OOOOO O</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="3d19-26e8-9c28-274d" name="Ki Feats" hidden="false">
+          <infoLinks>
+            <infoLink id="a833-58e7-7fba-4ade" name="Do-Kote" hidden="false" targetId="7c80-7e85-fc45-381a" type="infoGroup"/>
+            <infoLink id="096f-44f5-59be-f050" name="Atonement Swings" hidden="false" targetId="3953-f66f-73d7-1228" type="infoGroup"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="ecd6-d3ff-7311-8ccc" name="Traits" hidden="false">
+          <profiles>
+            <profile id="90f8-af47-b221-7b0e" name="Takashi Takanibu" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Armour (3), Bravery, Prowess [Melee](1), Slow, Unstable</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="b1f2-09ec-3c13-7d0f" name="Armour" hidden="false" targetId="8615-1c63-2242-5746" type="rule"/>
+            <infoLink id="0207-29a7-ebcf-5950" name="Bravery" hidden="false" targetId="f9b2-38d2-7cda-de6e" type="rule"/>
+            <infoLink id="f744-87cb-64a2-9daa" name="Unstable" hidden="false" targetId="24e3-1e7e-40b5-e16c" type="rule"/>
+            <infoLink id="bd6b-735f-9bce-6a23" name="Prowess " hidden="false" targetId="75ef-327a-cd08-a248" type="rule"/>
+            <infoLink id="3f99-85f1-c8cb-6171" name="Slow" hidden="false" targetId="f1c3-4a84-c616-23cd" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="91c1-043b-7d34-4e69" name="Melee Weapon" hidden="false">
+          <profiles>
+            <profile id="9eb0-a712-3ab0-9148" name="Naginata" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+2</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Reach</characteristic>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Powerful Attack (1), Push Attack (0), Push Defence (0)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="23f0-4e7f-5c07-2762" name="Push Attack" hidden="false" targetId="6c26-94ba-6b96-9e1b" type="rule"/>
+            <infoLink id="869f-7e3d-b93f-1f2a" name="Reach" hidden="false" targetId="e28e-d5dd-a262-1101" type="rule"/>
+            <infoLink id="85f6-e454-61a2-102d" name="Powerful Attack" hidden="false" targetId="d56a-058d-95d9-5b60" type="rule"/>
+            <infoLink id="0f88-ef5c-a312-eca3" name="Push Defence" hidden="false" targetId="74fc-a971-d9c2-278c" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup name="Unique Effects" id="c2b3-98a2-abd3-019d" hidden="false" page="">
+          <profiles>
+            <profile name="Unique Effects" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects" hidden="false" id="a132-7209-3291-6df4">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">This model may only be recruited into any Warband recruiting the Passing the Night Theme.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </infoGroup>
+      </infoGroups>
+      <categoryLinks>
+        <categoryLink id="07ae-02d4-8286-c24a" name="Faction: Prefecture of Ryu" hidden="false" targetId="7532-4f60-381d-2941" primary="false"/>
+        <categoryLink id="82f9-42e1-cf7c-39e3" name="Faction Profile Cards" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
+        <categoryLink id="7a4f-84ec-951d-63f8" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
+        <categoryLink id="c7ca-cd5d-d5f4-0214" name="Samurai" hidden="false" targetId="e12a-f782-3281-7444" primary="false"/>
+        <categoryLink id="d774-430a-a238-452a" name="Armour" hidden="false" targetId="f322-702a-ff62-b37e" primary="false"/>
+        <categoryLink id="f38d-d68b-c95a-0452" name="Takashi" hidden="false" targetId="65a8-4392-a95b-115b" primary="false"/>
+        <categoryLink targetId="8ee4-973e-c851-41cf" id="81d2-85e2-770d-46e1" primary="false" name="Shamed"/>
+        <categoryLink targetId="74ad-b881-8f16-4d44" id="d81f-9644-ca8f-93f7" primary="false" name="Passing the Night"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="33b1-b122-dd90-0671" name="Enhancements" hidden="false" collective="false" import="true" targetId="3dad-1423-9b3c-86a7" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="16"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry type="model" import="true" name="Tama" hidden="false" id="c1cb-e5f8-6d6c-cdca">
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="8"/>
+      </costs>
+      <categoryLinks>
+        <categoryLink targetId="0ca8-2040-37f2-a1e0" id="1154-d484-0515-5594" primary="true" name="Faction Profile Cards"/>
+        <categoryLink targetId="7532-4f60-381d-2941" id="7691-d9c2-12cb-07fb" primary="false" name="Faction: Prefecture of Ryu"/>
+        <categoryLink targetId="a485-b6b0-b58e-a3a1" id="1cc1-6f60-12ff-7f49" primary="false" name="Shisai"/>
+        <categoryLink targetId="74ad-b881-8f16-4d44" id="3959-1227-0c28-3bd3" primary="false" name="Passing the Night"/>
+        <categoryLink targetId="afd4-8041-e359-223c" id="8424-c22e-45b8-ef33" primary="false" name="Unique"/>
+        <categoryLink targetId="b95d-a028-ce17-612b" id="cbf2-0c8c-e8ea-ddf7" primary="false" name="Mourner"/>
+      </categoryLinks>
+      <profiles>
+        <profile name="Tama" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile" hidden="false" id="61a8-5110-f228-9ed2">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">2</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">3</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">1</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">6</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">6 OOOOO O</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="7864-5379-9657-5de7" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+      </constraints>
+      <infoGroups>
+        <infoGroup name="Ki Feats" id="e23d-79d6-4629-4ba9" hidden="false">
+          <infoLinks>
+            <infoLink name="Wailing Shōmyō" id="30b2-6065-0dc9-ca7e" hidden="false" type="infoGroup" targetId="fb89-cd6b-f3b9-0a9d"/>
+            <infoLink name="Spirit Ward" id="babf-ed24-27ce-70e4" hidden="false" type="infoGroup" targetId="5e54-1ebb-abd6-5178"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup name="Melee Weapon" id="497a-73b0-b824-22e2" hidden="false">
+          <profiles>
+            <profile name="Unarmed" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon" hidden="false" id="de28-3c60-1f0b-a741">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">-2</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e"/>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Push Defence (0)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink name="Push Defence" id="e212-49ab-dd06-ae7f" hidden="false" type="rule" targetId="74fc-a971-d9c2-278c"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup name="Unique Effects" id="4a4c-8390-7883-52ea" hidden="false">
+          <profiles>
+            <profile name="Virtue" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects" hidden="false" id="bc18-9a82-fbb2-2223">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">While this model is in play, when a Friendly Shisai model spends a Virtue Token you may choose the following effect:
+- This model may use one of its Simple or Complex Ki Feats for free as an Instant Ki Feat. Use this only when the Active Player but not during any model&apos;s Activation.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink name="Prayer Guardian" id="5d3f-71c3-2d89-f918" hidden="false" type="profile" targetId="f3f9-ba9b-e6a5-5f65"/>
+          </infoLinks>
+        </infoGroup>
+      </infoGroups>
+      <entryLinks>
+        <entryLink import="true" name="Enhancements" hidden="false" id="ce7c-9786-d2d0-f726" collective="false" targetId="3dad-1423-9b3c-86a7" type="selectionEntryGroup"/>
+      </entryLinks>
+    </selectionEntry>
+    <selectionEntry type="model" import="true" name="Bairei" hidden="false" id="1f97-bc35-026c-dbcd">
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="9"/>
+      </costs>
+      <categoryLinks>
+        <categoryLink targetId="0ca8-2040-37f2-a1e0" id="b75a-a928-d7ca-a1eb" primary="true" name="Faction Profile Cards"/>
+        <categoryLink targetId="7532-4f60-381d-2941" id="71c2-d2a7-f4db-9d02" primary="false" name="Faction: Prefecture of Ryu"/>
+        <categoryLink targetId="a485-b6b0-b58e-a3a1" id="690b-03ca-b5b0-d149" primary="false" name="Shisai"/>
+        <categoryLink targetId="74ad-b881-8f16-4d44" id="d553-7195-85c5-aeeb" primary="false" name="Passing the Night"/>
+        <categoryLink targetId="afd4-8041-e359-223c" id="c972-7034-9bf0-3a1f" primary="false" name="Unique"/>
+      </categoryLinks>
+      <profiles>
+        <profile name="Bairei" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile" hidden="false" id="78d8-4920-e062-fe64">
           <characteristics>
             <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">2</characteristic>
             <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
@@ -4898,19 +5527,19 @@ This model may be recruited into a Warband that has recruited the Claws of the D
         </profile>
       </profiles>
       <constraints>
-        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="8d93-7f76-2b2a-b5a6" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="2b61-7531-9ba7-7a0d" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
       </constraints>
       <infoGroups>
-        <infoGroup name="Ki Feats" id="d3e2-875d-9922-dedd" hidden="false">
+        <infoGroup name="Ki Feats" id="a071-8139-e3d8-d87e" hidden="false">
           <infoLinks>
-            <infoLink name="Repentance Shomyo" id="4835-ba87-65a6-18a8" hidden="false" type="infoGroup" targetId="94eb-6034-09cb-b280"/>
-            <infoLink name="Rewarding Honour" id="c092-2c36-2888-a6b3" hidden="false" type="infoGroup" targetId="235c-ffa4-bb8b-ee1e"/>
-            <infoLink name="Soothing Shomyo" id="2b47-f1d3-af52-28cf" hidden="false" type="infoGroup" targetId="5101-72b2-32a2-3f57"/>
+            <infoLink name="Repentance Shomyo" id="0c36-196d-fddd-b494" hidden="false" type="infoGroup" targetId="94eb-6034-09cb-b280"/>
+            <infoLink name="Rewarding Honour" id="7e3c-7f95-a969-19a6" hidden="false" type="infoGroup" targetId="235c-ffa4-bb8b-ee1e"/>
+            <infoLink name="Soothing Shomyo" id="96f1-f189-f10d-7b4c" hidden="false" type="infoGroup" targetId="5101-72b2-32a2-3f57"/>
           </infoLinks>
         </infoGroup>
-        <infoGroup name="Melee Weapon" id="faf3-b65c-6387-d5d6" hidden="false">
+        <infoGroup name="Melee Weapon" id="24ad-78cf-eb9d-4688" hidden="false">
           <profiles>
-            <profile name="Censer" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon" hidden="false" id="80b7-d941-a73a-7e53">
+            <profile name="Censer" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon" hidden="false" id="a907-d4f0-9160-b4bc">
               <characteristics>
                 <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+2</characteristic>
                 <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Chain Weapon (1)</characteristic>
@@ -4920,19 +5549,19 @@ This model may be recruited into a Warband that has recruited the Claws of the D
             </profile>
           </profiles>
           <infoLinks>
-            <infoLink name="Push Defence" id="ecea-c8e7-7188-776b" hidden="false" type="rule" targetId="74fc-a971-d9c2-278c"/>
-            <infoLink name="Chain Weapon" id="0b2e-7af8-63dd-62b6" hidden="false" type="rule" targetId="84f9-d10e-0e9f-d79c"/>
+            <infoLink name="Push Defence" id="80d5-615c-5b55-79b6" hidden="false" type="rule" targetId="74fc-a971-d9c2-278c"/>
+            <infoLink name="Chain Weapon" id="856c-7a9d-40f4-09ea" hidden="false" type="rule" targetId="84f9-d10e-0e9f-d79c"/>
           </infoLinks>
         </infoGroup>
-        <infoGroup name="Unique Effects" id="97dd-f77b-87a9-4850" hidden="false">
+        <infoGroup name="Unique Effects" id="ecd7-6b42-c520-c8f6" hidden="false">
           <profiles>
-            <profile name="Virtue" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects" hidden="false" id="a476-a1cf-818f-c1c7">
+            <profile name="Virtue" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects" hidden="false" id="dc5e-794f-0e2d-7513">
               <characteristics>
                 <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">While this model is in play, if you are the Active Player when a Friendly model spends a Virtue Token you may choose the following effect:
 - Remove a Shame Token from this model.</characteristic>
               </characteristics>
             </profile>
-            <profile name="Incense" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects" hidden="false" id="7a7b-3dbe-3cb5-702a">
+            <profile name="Incense" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects" hidden="false" id="71b1-2e84-fd2a-9cff">
               <characteristics>
                 <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">When this model begins its Activation within 1&quot; of a Faction model that you own, you may remove up to one Control, Death Sentence, Disease, Fire, Poison or Spirit Block Marker from that model.</characteristic>
               </characteristics>
@@ -4940,6 +5569,81 @@ This model may be recruited into a Warband that has recruited the Claws of the D
           </profiles>
         </infoGroup>
       </infoGroups>
+      <entryLinks>
+        <entryLink import="true" name="Enhancements" hidden="false" id="6f52-bd52-1ea1-64ed" collective="false" targetId="3dad-1423-9b3c-86a7" type="selectionEntryGroup"/>
+      </entryLinks>
+    </selectionEntry>
+    <selectionEntry type="model" import="true" name="Miho" hidden="false" id="5ed5-73f6-913a-fda4">
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="8"/>
+      </costs>
+      <categoryLinks>
+        <categoryLink targetId="0ca8-2040-37f2-a1e0" id="6388-159a-8322-6bf4" primary="true" name="Faction Profile Cards"/>
+        <categoryLink targetId="7532-4f60-381d-2941" id="b36d-70bc-32a8-baaa" primary="false" name="Faction: Prefecture of Ryu"/>
+        <categoryLink targetId="a485-b6b0-b58e-a3a1" id="462e-a974-3ebf-1da6" primary="false" name="Shisai"/>
+        <categoryLink targetId="74ad-b881-8f16-4d44" id="c411-6ae0-b83b-381d" primary="false" name="Passing the Night"/>
+        <categoryLink targetId="afd4-8041-e359-223c" id="c5a0-47a3-c84c-7328" primary="false" name="Unique"/>
+        <categoryLink targetId="b95d-a028-ce17-612b" id="ce97-3044-c85a-c791" primary="false" name="Mourner"/>
+      </categoryLinks>
+      <profiles>
+        <profile name="Miho" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile" hidden="false" id="6203-c685-5cec-7e6a">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">2</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">3</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">1</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">6</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">6 OOOOO O</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="872c-5a29-2738-93f7" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+      </constraints>
+      <infoGroups>
+        <infoGroup name="Ki Feats" id="2576-81f0-2761-729b" hidden="false">
+          <infoLinks>
+            <infoLink name="Wailing Shōmyō" id="21ad-7361-54bf-bea0" hidden="false" type="infoGroup" targetId="fb89-cd6b-f3b9-0a9d"/>
+            <infoLink name="Tears for the Dead" id="9865-75be-9a32-0670" hidden="false" type="infoGroup" targetId="0629-ca93-88ef-51cc"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup name="Melee Weapon" id="2def-8bd4-0e96-afaa" hidden="false">
+          <profiles>
+            <profile name="Unarmed" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon" hidden="false" id="1a01-e989-2fbd-2e3f">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">-2</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e"/>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Push Attack (0)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink name="Push Attack" id="151b-6873-c643-6974" hidden="false" type="rule" targetId="6c26-94ba-6b96-9e1b"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup name="Unique Effects" id="5434-b4ca-6e6e-d779" hidden="false">
+          <profiles>
+            <profile name="Virtue" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects" hidden="false" id="67b2-1e4b-036f-8de3">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">While this model is in play, when a Friendly model spends a Virtue Token you may choose the following effect:
+- This model gains 1 Ki Token.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink name="Prayer Guardian" id="bb15-c207-1299-e3ea" hidden="false" type="profile" targetId="f3f9-ba9b-e6a5-5f65"/>
+          </infoLinks>
+        </infoGroup>
+      </infoGroups>
+      <entryLinks>
+        <entryLink import="true" name="Enhancements" hidden="false" id="30d2-4865-b53d-af7f" collective="false" targetId="3dad-1423-9b3c-86a7" type="selectionEntryGroup"/>
+      </entryLinks>
     </selectionEntry>
   </selectionEntries>
   <entryLinks>
@@ -6195,6 +6899,14 @@ For the purpose of this ability, this model is considered Medium Sized and Frien
     <profile id="5b88-5bdf-da20-7d8e" name="Uchidachi" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
       <characteristics>
         <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">Enemy models may not use the Brutal, Feint or Prowess traits while involved in a Melee Exchange with this model.</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Prayer Guardian" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects" hidden="false" id="f3f9-ba9b-e6a5-5f65">
+      <characteristics>
+        <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">Before the first turn, if one or more models on the Battlefield has this ability, both players gain one Prayer Token.
+
+
+During Deployment, choose one Friendly model to begin the game with a Virtue Token.</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>
