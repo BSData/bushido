@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="0cac-b8ad-fb7f-ef84" name="Prefecture of Ryu" revision="37" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="19" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="0cac-b8ad-fb7f-ef84" name="Prefecture of Ryu" revision="38" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="19" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <categoryEntries>
     <categoryEntry id="8688-cd6e-bcbe-2cbb" name="Ima" hidden="false"/>
     <categoryEntry id="65a8-4392-a95b-115b" name="Takashi" hidden="false"/>
-    <categoryEntry name="Passing the Night" id="74ad-b881-8f16-4d44" hidden="false"/>
   </categoryEntries>
   <selectionEntries>
     <selectionEntry id="5048-3a52-5689-6d0b" name="Heroic Stand" hidden="false" collective="false" import="true" type="upgrade">
@@ -227,7 +226,8 @@ Until the end of the game, whenever you win a Tactical Test, choose 2 Prefecture
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1c4e-2aa6-2d32-f0d4" type="equalTo"/>
+                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1c4e-2aa6-2d32-f0d4" type="atLeast"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="71c9-d30d-3c77-ae9c" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -309,7 +309,8 @@ Until the end of the game, whenever you win a Tactical Test, choose 2 Prefecture
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1c4e-2aa6-2d32-f0d4" type="equalTo"/>
+                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1c4e-2aa6-2d32-f0d4" type="atLeast"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="71c9-d30d-3c77-ae9c" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -423,7 +424,7 @@ Until the end of the game, whenever you win a Tactical Test, choose 2 Prefecture
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d5a3-42bc-c296-969a" type="equalTo"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="d5a3-42bc-c296-969a" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -505,11 +506,11 @@ Until the end of the game, whenever you win a Tactical Test, choose 2 Prefecture
     </selectionEntry>
     <selectionEntry id="a995-3b9f-9148-2dfc" name="Takashi Tetsuya" hidden="false" collective="false" import="true" type="model">
       <modifiers>
-        <modifier type="set" field="hidden" value="true">
+        <modifier type="set" value="true" field="hidden">
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d5a3-42bc-c296-969a" type="equalTo"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="d5a3-42bc-c296-969a" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -593,7 +594,8 @@ Until the end of the game, whenever you win a Tactical Test, choose 2 Prefecture
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1c4e-2aa6-2d32-f0d4" type="equalTo"/>
+                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="71c9-d30d-3c77-ae9c" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1c4e-2aa6-2d32-f0d4" type="atLeast"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -679,8 +681,8 @@ Until the end of the game, whenever you win a Tactical Test, choose 2 Prefecture
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1c4e-2aa6-2d32-f0d4" type="equalTo"/>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="07e0-41f1-b800-70ad" type="equalTo"/>
+                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1c4e-2aa6-2d32-f0d4" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="07e0-41f1-b800-70ad" type="atLeast"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -773,7 +775,8 @@ Until the end of the game, whenever you win a Tactical Test, choose 2 Prefecture
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1c4e-2aa6-2d32-f0d4" type="equalTo"/>
+                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1c4e-2aa6-2d32-f0d4" type="atLeast"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="71c9-d30d-3c77-ae9c" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -865,7 +868,8 @@ Until the end of the game, whenever you win a Tactical Test, choose 2 Prefecture
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1c4e-2aa6-2d32-f0d4" type="equalTo"/>
+                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1c4e-2aa6-2d32-f0d4" type="atLeast"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="71c9-d30d-3c77-ae9c" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -961,7 +965,8 @@ Until the end of the game, whenever you win a Tactical Test, choose 2 Prefecture
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1c4e-2aa6-2d32-f0d4" type="equalTo"/>
+                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1c4e-2aa6-2d32-f0d4" type="atLeast"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="71c9-d30d-3c77-ae9c" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -1084,7 +1089,8 @@ Until the end of the game, whenever you win a Tactical Test, choose 2 Prefecture
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1c4e-2aa6-2d32-f0d4" type="equalTo"/>
+                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1c4e-2aa6-2d32-f0d4" type="atLeast"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="71c9-d30d-3c77-ae9c" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -1171,7 +1177,8 @@ Until the end of the game, whenever you win a Tactical Test, choose 2 Prefecture
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1c4e-2aa6-2d32-f0d4" type="equalTo"/>
+                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1c4e-2aa6-2d32-f0d4" type="atLeast"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="71c9-d30d-3c77-ae9c" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -1256,7 +1263,8 @@ Until the end of the game, whenever you win a Tactical Test, choose 2 Prefecture
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1c4e-2aa6-2d32-f0d4" type="equalTo"/>
+                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1c4e-2aa6-2d32-f0d4" type="atLeast"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="71c9-d30d-3c77-ae9c" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -1347,11 +1355,12 @@ Until the end of the game, whenever you win a Tactical Test, choose 2 Prefecture
     </selectionEntry>
     <selectionEntry id="676c-f4eb-4502-08c0" name="Jin" hidden="false" collective="false" import="true" type="model">
       <modifiers>
-        <modifier type="set" field="hidden" value="true">
+        <modifier type="set" value="true" field="hidden">
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1c4e-2aa6-2d32-f0d4" type="equalTo"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1c4e-2aa6-2d32-f0d4" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="71c9-d30d-3c77-ae9c" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -1437,7 +1446,8 @@ Until the end of the game, whenever you win a Tactical Test, choose 2 Prefecture
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1c4e-2aa6-2d32-f0d4" type="equalTo"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1c4e-2aa6-2d32-f0d4" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="71c9-d30d-3c77-ae9c" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -1515,7 +1525,8 @@ Until the end of the game, whenever you win a Tactical Test, choose 2 Prefecture
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1c4e-2aa6-2d32-f0d4" type="equalTo"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1c4e-2aa6-2d32-f0d4" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="71c9-d30d-3c77-ae9c" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -1596,7 +1607,8 @@ Until the end of the game, whenever you win a Tactical Test, choose 2 Prefecture
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1c4e-2aa6-2d32-f0d4" type="equalTo"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1c4e-2aa6-2d32-f0d4" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="71c9-d30d-3c77-ae9c" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -1808,7 +1820,7 @@ Until the end of the game, whenever you win a Tactical Test, choose 2 Prefecture
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d5a3-42bc-c296-969a" type="equalTo"/>
+                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d5a3-42bc-c296-969a" type="atLeast"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -1892,7 +1904,8 @@ Until the end of the game, whenever you win a Tactical Test, choose 2 Prefecture
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1c4e-2aa6-2d32-f0d4" type="equalTo"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1c4e-2aa6-2d32-f0d4" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="71c9-d30d-3c77-ae9c" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -2001,7 +2014,8 @@ Until the end of the game, whenever you win a Tactical Test, choose 2 Prefecture
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1c4e-2aa6-2d32-f0d4" type="equalTo"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1c4e-2aa6-2d32-f0d4" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="71c9-d30d-3c77-ae9c" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -2112,7 +2126,7 @@ Until the end of the game, whenever you win a Tactical Test, choose 2 Prefecture
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d5a3-42bc-c296-969a" type="equalTo"/>
+                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d5a3-42bc-c296-969a" type="atLeast"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -2199,9 +2213,10 @@ Until the end of the game, whenever you win a Tactical Test, choose 2 Prefecture
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d5a3-42bc-c296-969a" type="equalTo"/>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="07e0-41f1-b800-70ad" type="equalTo"/>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1c4e-2aa6-2d32-f0d4" type="equalTo"/>
+                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d5a3-42bc-c296-969a" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="07e0-41f1-b800-70ad" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1c4e-2aa6-2d32-f0d4" type="atLeast"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="71c9-d30d-3c77-ae9c" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -2293,8 +2308,8 @@ Until the end of the game, whenever you win a Tactical Test, choose 2 Prefecture
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1c4e-2aa6-2d32-f0d4" type="equalTo"/>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="07e0-41f1-b800-70ad" type="equalTo"/>
+                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1c4e-2aa6-2d32-f0d4" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="07e0-41f1-b800-70ad" type="atLeast"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -2384,7 +2399,7 @@ Until the end of the game, whenever you win a Tactical Test, choose 2 Prefecture
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d5a3-42bc-c296-969a" type="equalTo"/>
+                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d5a3-42bc-c296-969a" type="atLeast"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -2497,7 +2512,7 @@ Until the end of the game, whenever you win a Tactical Test, choose 2 Prefecture
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d5a3-42bc-c296-969a" type="equalTo"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="d5a3-42bc-c296-969a" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -2594,7 +2609,7 @@ Until the end of the game, whenever you win a Tactical Test, choose 2 Prefecture
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d5a3-42bc-c296-969a" type="equalTo"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="d5a3-42bc-c296-969a" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -2678,7 +2693,7 @@ Until the end of the game, whenever you win a Tactical Test, choose 2 Prefecture
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d5a3-42bc-c296-969a" type="equalTo"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="d5a3-42bc-c296-969a" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -2764,7 +2779,7 @@ Until the end of the game, whenever you win a Tactical Test, choose 2 Prefecture
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d5a3-42bc-c296-969a" type="equalTo"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="d5a3-42bc-c296-969a" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -2848,7 +2863,7 @@ Until the end of the game, whenever you win a Tactical Test, choose 2 Prefecture
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d5a3-42bc-c296-969a" type="equalTo"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="d5a3-42bc-c296-969a" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -2946,6 +2961,16 @@ Until the end of the game, whenever you win a Tactical Test, choose 2 Prefecture
             <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b596-d287-0d47-e2ee" type="atLeast"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="b596-d287-0d47-e2ee" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="d5a3-42bc-c296-969a" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b902-c095-5e44-17a3" type="max"/>
@@ -3030,7 +3055,7 @@ Until the end of the game, whenever you win a Tactical Test, choose 2 Prefecture
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d5a3-42bc-c296-969a" type="equalTo"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="d5a3-42bc-c296-969a" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -3120,7 +3145,7 @@ Until the end of the game, whenever you win a Tactical Test, choose 2 Prefecture
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d5a3-42bc-c296-969a" type="equalTo"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="d5a3-42bc-c296-969a" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -3221,7 +3246,7 @@ Until the end of the game, whenever you win a Tactical Test, choose 2 Prefecture
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d5a3-42bc-c296-969a" type="equalTo"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="d5a3-42bc-c296-969a" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -3316,7 +3341,7 @@ Until the end of the game, whenever you win a Tactical Test, choose 2 Prefecture
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d5a3-42bc-c296-969a" type="equalTo"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="d5a3-42bc-c296-969a" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -3404,7 +3429,7 @@ Until the end of the game, whenever you win a Tactical Test, choose 2 Prefecture
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d5a3-42bc-c296-969a" type="equalTo"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="d5a3-42bc-c296-969a" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -3509,7 +3534,8 @@ Until the end of the game, whenever you win a Tactical Test, choose 2 Prefecture
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1c4e-2aa6-2d32-f0d4" type="equalTo"/>
+                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="71c9-d30d-3c77-ae9c" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1c4e-2aa6-2d32-f0d4" type="atLeast"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -3596,7 +3622,7 @@ During Deployment place this model in BtB with Atsushi.</characteristic>
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d5a3-42bc-c296-969a" type="equalTo"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="d5a3-42bc-c296-969a" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -3738,7 +3764,8 @@ Remove all Reload Markers from models within 4&quot; of a Friendly Gunso model.<
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1c4e-2aa6-2d32-f0d4" type="equalTo"/>
+                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1c4e-2aa6-2d32-f0d4" type="atLeast"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="71c9-d30d-3c77-ae9c" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -3837,6 +3864,7 @@ Remove all Reload Markers from models within 4&quot; of a Friendly Gunso model.<
                     <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d5a3-42bc-c296-969a" type="atLeast"/>
                     <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1c4e-2aa6-2d32-f0d4" type="atLeast"/>
                     <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="07e0-41f1-b800-70ad" type="atLeast"/>
+                    <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="71c9-d30d-3c77-ae9c" type="atLeast"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -3979,11 +4007,11 @@ If this model is Successful, the Friendly model is not Surprised.</characteristi
     </selectionEntry>
     <selectionEntry id="5dd3-7bc6-5949-2df5" name="Satou Togai" hidden="false" collective="false" import="true" type="model">
       <modifiers>
-        <modifier type="set" field="hidden" value="true">
+        <modifier type="set" value="true" field="hidden">
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d5a3-42bc-c296-969a" type="equalTo"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="d5a3-42bc-c296-969a" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -4094,7 +4122,8 @@ If this model is Successful, the Friendly model is not Surprised.</characteristi
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1c4e-2aa6-2d32-f0d4" type="equalTo"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1c4e-2aa6-2d32-f0d4" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="71c9-d30d-3c77-ae9c" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -4451,8 +4480,8 @@ When this model gains Ki from the Channel Trait, it also gains a Virtue Token.</
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1c4e-2aa6-2d32-f0d4" type="equalTo"/>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="07e0-41f1-b800-70ad" type="equalTo"/>
+                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1c4e-2aa6-2d32-f0d4" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="07e0-41f1-b800-70ad" type="atLeast"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -4561,7 +4590,7 @@ When this model gains Ki from the Channel Trait, it also gains a Virtue Token.</
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d5a3-42bc-c296-969a" type="equalTo"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="d5a3-42bc-c296-969a" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -4868,6 +4897,17 @@ This model may be recruited into a Warband that has recruited the Claws of the D
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="13"/>
       </costs>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="d5a3-42bc-c296-969a" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Ton" hidden="false" id="29ad-bde8-b9ff-37f9">
       <costs>
@@ -4877,7 +4917,6 @@ This model may be recruited into a Warband that has recruited the Claws of the D
         <categoryLink targetId="0ca8-2040-37f2-a1e0" id="f896-1c3d-7f64-f9ad" primary="true" name="Faction Profile Cards"/>
         <categoryLink targetId="7532-4f60-381d-2941" id="133d-6ef5-e9be-f5ee" primary="false" name="Faction: Prefecture of Ryu"/>
         <categoryLink targetId="a485-b6b0-b58e-a3a1" id="1b75-4d0f-b07a-664d" primary="false" name="Shisai"/>
-        <categoryLink targetId="74ad-b881-8f16-4d44" id="4942-260c-f9a9-23dd" primary="false" name="Passing the Night"/>
         <categoryLink targetId="afd4-8041-e359-223c" id="a343-9f77-33e0-9811" primary="false" name="Unique"/>
       </categoryLinks>
       <profiles>
@@ -4904,7 +4943,7 @@ This model may be recruited into a Warband that has recruited the Claws of the D
         <infoGroup name="Ki Feats" id="d3e2-875d-9922-dedd" hidden="false">
           <infoLinks>
             <infoLink name="Burden" id="4835-ba87-65a6-18a8" hidden="false" type="infoGroup" targetId="846d-7aaa-2b6b-d347"/>
-            <infoLink name="Oppressed Shomyo" id="c092-2c36-2888-a6b3" hidden="false" type="infoGroup" targetId="6168-605c-20f1-5f0c"/>
+            <infoLink name="Oppressed Shōmyō" id="c092-2c36-2888-a6b3" hidden="false" type="infoGroup" targetId="6168-605c-20f1-5f0c"/>
             <infoLink name="Scorn Stone" id="2b47-f1d3-af52-28cf" hidden="false" type="infoGroup" targetId="8bee-c880-cb4e-b8fd"/>
           </infoLinks>
         </infoGroup>
@@ -4960,6 +4999,18 @@ This model may only be recruited into any Warband recruiting the Passing the Ni
       <entryLinks>
         <entryLink import="true" name="Enhancements" hidden="false" id="bd49-f3cd-2693-9953" collective="false" targetId="3dad-1423-9b3c-86a7" type="selectionEntryGroup"/>
       </entryLinks>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="07e0-41f1-b800-70ad" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1c4e-2aa6-2d32-f0d4" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Passing the Night" hidden="false" id="71c9-d30d-3c77-ae9c">
       <categoryLinks>
@@ -4982,6 +5033,10 @@ Permitted: [Samurai, Shisai, Ronin Shisai]</characteristic>
           </characteristics>
         </profile>
       </profiles>
+      <infoLinks>
+        <infoLink name="Spirit" id="2dbd-7f3c-97f3-d90d" hidden="false" type="rule" targetId="a9ba-9904-7d29-7bcb"/>
+        <infoLink name="Fearless" id="b4f8-7397-ca8a-4c34" hidden="false" type="rule" targetId="5d6f-1746-9080-aca5"/>
+      </infoLinks>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Takashi Hida" hidden="false" id="f1ce-b5eb-6c4a-53ef">
       <costs>
@@ -4994,7 +5049,6 @@ Permitted: [Samurai, Shisai, Ronin Shisai]</characteristic>
         <categoryLink targetId="a485-b6b0-b58e-a3a1" id="2552-2bf9-3843-840d" primary="false" name="Shisai"/>
         <categoryLink targetId="f6da-373b-f718-6be8" id="b034-dcf9-e7e6-7de5" primary="false" name="Novice"/>
         <categoryLink targetId="afd4-8041-e359-223c" id="1686-62bf-afd4-8e0d" primary="false" name="Unique"/>
-        <categoryLink targetId="74ad-b881-8f16-4d44" id="f1f0-f37b-f0ae-d48d" primary="false" name="Passing the Night"/>
       </categoryLinks>
       <profiles>
         <profile name="Takashi Hida" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile" hidden="false" id="d2e6-10f1-83aa-6a48">
@@ -5068,6 +5122,18 @@ This model may only be recruited into any Warband recruiting the Passing the Ni
       <constraints>
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="5b74-bf73-b8d7-4e68" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
       </constraints>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="07e0-41f1-b800-70ad" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1c4e-2aa6-2d32-f0d4" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry id="3208-3c44-4b14-1ee5" name="Takashi Yoshimi" hidden="false" collective="false" import="true" type="model">
       <constraints>
@@ -5131,7 +5197,7 @@ This model may only be recruited into any Warband recruiting the Passing the Ni
             <infoLink id="00ef-6790-1481-e121" name="Push Defence" hidden="false" targetId="74fc-a971-d9c2-278c" type="rule"/>
           </infoLinks>
         </infoGroup>
-        <infoGroup name="Unique Effects" id="7ac7-e660-1807-e5c0" hidden="false" page="">
+        <infoGroup name="Unique Effects" id="7ac7-e660-1807-e5c0" hidden="false">
           <profiles>
             <profile name="Unique Effects" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects" hidden="false" id="da2b-a9b1-2cf1-0013">
               <characteristics>
@@ -5149,7 +5215,6 @@ This model may only be recruited into any Warband recruiting the Passing the Ni
         <categoryLink id="1725-ffd3-d185-a34b" name="Armour" hidden="false" targetId="f322-702a-ff62-b37e" primary="false"/>
         <categoryLink id="c0b7-d4b7-6d66-b277" name="Takashi" hidden="false" targetId="65a8-4392-a95b-115b" primary="false"/>
         <categoryLink targetId="8ee4-973e-c851-41cf" id="32cf-9df6-dab2-f853" primary="false" name="Shamed"/>
-        <categoryLink targetId="74ad-b881-8f16-4d44" id="df9c-8753-5883-09ed" primary="false" name="Passing the Night"/>
       </categoryLinks>
       <entryLinks>
         <entryLink id="54a2-a9d9-f552-0b56" name="Enhancements" hidden="false" collective="false" import="true" targetId="3dad-1423-9b3c-86a7" type="selectionEntryGroup"/>
@@ -5157,6 +5222,17 @@ This model may only be recruited into any Warband recruiting the Passing the Ni
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="16"/>
       </costs>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="d5a3-42bc-c296-969a" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry id="38a1-01e6-86d5-84bb" name="Takashi Kazu" hidden="false" collective="false" import="true" type="model">
       <constraints>
@@ -5220,7 +5296,7 @@ This model may only be recruited into any Warband recruiting the Passing the Ni
             <infoLink name="Reach" id="4623-a710-2312-3554" hidden="false" targetId="e28e-d5dd-a262-1101" type="rule"/>
           </infoLinks>
         </infoGroup>
-        <infoGroup name="Unique Effects" id="4eb7-5fc4-e60d-a2a5" hidden="false" page="">
+        <infoGroup name="Unique Effects" id="4eb7-5fc4-e60d-a2a5" hidden="false">
           <profiles>
             <profile name="Unique Effects" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects" hidden="false" id="2786-bc73-ef42-843f">
               <characteristics>
@@ -5238,7 +5314,6 @@ This model may only be recruited into any Warband recruiting the Passing the Ni
         <categoryLink id="cf2e-b28d-e498-5039" name="Armour" hidden="false" targetId="f322-702a-ff62-b37e" primary="false"/>
         <categoryLink id="af7f-d3e1-83c1-7b29" name="Takashi" hidden="false" targetId="65a8-4392-a95b-115b" primary="false"/>
         <categoryLink targetId="8ee4-973e-c851-41cf" id="a426-d3a8-6313-13a0" primary="false" name="Shamed"/>
-        <categoryLink targetId="74ad-b881-8f16-4d44" id="3608-a667-2902-9be9" primary="false" name="Passing the Night"/>
       </categoryLinks>
       <entryLinks>
         <entryLink id="8c57-3ee6-9859-6e60" name="Enhancements" hidden="false" collective="false" import="true" targetId="3dad-1423-9b3c-86a7" type="selectionEntryGroup"/>
@@ -5246,6 +5321,17 @@ This model may only be recruited into any Warband recruiting the Passing the Ni
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="16"/>
       </costs>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="d5a3-42bc-c296-969a" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry id="faba-8776-7d76-f472" name="Takashi Nagisa" hidden="false" collective="false" import="true" type="model">
       <constraints>
@@ -5310,7 +5396,7 @@ This model may only be recruited into any Warband recruiting the Passing the Ni
             <infoLink id="90f2-3196-7ed9-2d3b" name="Critical Attack" hidden="false" targetId="7ec7-56ae-79e3-423e" type="rule"/>
           </infoLinks>
         </infoGroup>
-        <infoGroup name="Unique Effects" id="4c53-fc70-0268-c38a" hidden="false" page="">
+        <infoGroup name="Unique Effects" id="4c53-fc70-0268-c38a" hidden="false">
           <profiles>
             <profile name="Unique Effects" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects" hidden="false" id="3185-172a-2a6e-a816">
               <characteristics>
@@ -5328,7 +5414,6 @@ This model may only be recruited into any Warband recruiting the Passing the Ni
         <categoryLink id="813f-396b-fdf6-7cb7" name="Armour" hidden="false" targetId="f322-702a-ff62-b37e" primary="false"/>
         <categoryLink id="db17-3294-93c4-8925" name="Takashi" hidden="false" targetId="65a8-4392-a95b-115b" primary="false"/>
         <categoryLink targetId="8ee4-973e-c851-41cf" id="7882-1b89-bd22-2c6d" primary="false" name="Shamed"/>
-        <categoryLink targetId="74ad-b881-8f16-4d44" id="0363-cceb-680d-95b6" primary="false" name="Passing the Night"/>
       </categoryLinks>
       <entryLinks>
         <entryLink id="3f44-24d8-0030-50bd" name="Enhancements" hidden="false" collective="false" import="true" targetId="3dad-1423-9b3c-86a7" type="selectionEntryGroup"/>
@@ -5336,6 +5421,17 @@ This model may only be recruited into any Warband recruiting the Passing the Ni
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="16"/>
       </costs>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="d5a3-42bc-c296-969a" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry id="ad18-0263-2ab4-fb17" name="Takashi Takanibu" hidden="false" collective="false" import="true" type="model">
       <constraints>
@@ -5399,7 +5495,7 @@ This model may only be recruited into any Warband recruiting the Passing the Ni
             <infoLink id="0f88-ef5c-a312-eca3" name="Push Defence" hidden="false" targetId="74fc-a971-d9c2-278c" type="rule"/>
           </infoLinks>
         </infoGroup>
-        <infoGroup name="Unique Effects" id="c2b3-98a2-abd3-019d" hidden="false" page="">
+        <infoGroup name="Unique Effects" id="c2b3-98a2-abd3-019d" hidden="false">
           <profiles>
             <profile name="Unique Effects" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects" hidden="false" id="a132-7209-3291-6df4">
               <characteristics>
@@ -5417,7 +5513,6 @@ This model may only be recruited into any Warband recruiting the Passing the Ni
         <categoryLink id="d774-430a-a238-452a" name="Armour" hidden="false" targetId="f322-702a-ff62-b37e" primary="false"/>
         <categoryLink id="f38d-d68b-c95a-0452" name="Takashi" hidden="false" targetId="65a8-4392-a95b-115b" primary="false"/>
         <categoryLink targetId="8ee4-973e-c851-41cf" id="81d2-85e2-770d-46e1" primary="false" name="Shamed"/>
-        <categoryLink targetId="74ad-b881-8f16-4d44" id="d81f-9644-ca8f-93f7" primary="false" name="Passing the Night"/>
       </categoryLinks>
       <entryLinks>
         <entryLink id="33b1-b122-dd90-0671" name="Enhancements" hidden="false" collective="false" import="true" targetId="3dad-1423-9b3c-86a7" type="selectionEntryGroup"/>
@@ -5425,6 +5520,17 @@ This model may only be recruited into any Warband recruiting the Passing the Ni
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="16"/>
       </costs>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="d5a3-42bc-c296-969a" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Tama" hidden="false" id="c1cb-e5f8-6d6c-cdca">
       <costs>
@@ -5434,7 +5540,6 @@ This model may only be recruited into any Warband recruiting the Passing the Ni
         <categoryLink targetId="0ca8-2040-37f2-a1e0" id="1154-d484-0515-5594" primary="true" name="Faction Profile Cards"/>
         <categoryLink targetId="7532-4f60-381d-2941" id="7691-d9c2-12cb-07fb" primary="false" name="Faction: Prefecture of Ryu"/>
         <categoryLink targetId="a485-b6b0-b58e-a3a1" id="1cc1-6f60-12ff-7f49" primary="false" name="Shisai"/>
-        <categoryLink targetId="74ad-b881-8f16-4d44" id="3959-1227-0c28-3bd3" primary="false" name="Passing the Night"/>
         <categoryLink targetId="afd4-8041-e359-223c" id="8424-c22e-45b8-ef33" primary="false" name="Unique"/>
         <categoryLink targetId="b95d-a028-ce17-612b" id="cbf2-0c8c-e8ea-ddf7" primary="false" name="Mourner"/>
       </categoryLinks>
@@ -5497,6 +5602,18 @@ This model may only be recruited into any Warband recruiting the Passing the Ni
       <entryLinks>
         <entryLink import="true" name="Enhancements" hidden="false" id="ce7c-9786-d2d0-f726" collective="false" targetId="3dad-1423-9b3c-86a7" type="selectionEntryGroup"/>
       </entryLinks>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="07e0-41f1-b800-70ad" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1c4e-2aa6-2d32-f0d4" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Bairei" hidden="false" id="1f97-bc35-026c-dbcd">
       <costs>
@@ -5506,7 +5623,6 @@ This model may only be recruited into any Warband recruiting the Passing the Ni
         <categoryLink targetId="0ca8-2040-37f2-a1e0" id="b75a-a928-d7ca-a1eb" primary="true" name="Faction Profile Cards"/>
         <categoryLink targetId="7532-4f60-381d-2941" id="71c2-d2a7-f4db-9d02" primary="false" name="Faction: Prefecture of Ryu"/>
         <categoryLink targetId="a485-b6b0-b58e-a3a1" id="690b-03ca-b5b0-d149" primary="false" name="Shisai"/>
-        <categoryLink targetId="74ad-b881-8f16-4d44" id="d553-7195-85c5-aeeb" primary="false" name="Passing the Night"/>
         <categoryLink targetId="afd4-8041-e359-223c" id="c972-7034-9bf0-3a1f" primary="false" name="Unique"/>
       </categoryLinks>
       <profiles>
@@ -5532,9 +5648,9 @@ This model may only be recruited into any Warband recruiting the Passing the Ni
       <infoGroups>
         <infoGroup name="Ki Feats" id="a071-8139-e3d8-d87e" hidden="false">
           <infoLinks>
-            <infoLink name="Repentance Shomyo" id="0c36-196d-fddd-b494" hidden="false" type="infoGroup" targetId="94eb-6034-09cb-b280"/>
+            <infoLink name="Repentance Shōmyō" id="0c36-196d-fddd-b494" hidden="false" type="infoGroup" targetId="94eb-6034-09cb-b280"/>
             <infoLink name="Rewarding Honour" id="7e3c-7f95-a969-19a6" hidden="false" type="infoGroup" targetId="235c-ffa4-bb8b-ee1e"/>
-            <infoLink name="Soothing Shomyo" id="96f1-f189-f10d-7b4c" hidden="false" type="infoGroup" targetId="5101-72b2-32a2-3f57"/>
+            <infoLink name="Soothing Shōmyō" id="96f1-f189-f10d-7b4c" hidden="false" type="infoGroup" targetId="5101-72b2-32a2-3f57"/>
           </infoLinks>
         </infoGroup>
         <infoGroup name="Melee Weapon" id="24ad-78cf-eb9d-4688" hidden="false">
@@ -5572,6 +5688,18 @@ This model may only be recruited into any Warband recruiting the Passing the Ni
       <entryLinks>
         <entryLink import="true" name="Enhancements" hidden="false" id="6f52-bd52-1ea1-64ed" collective="false" targetId="3dad-1423-9b3c-86a7" type="selectionEntryGroup"/>
       </entryLinks>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="07e0-41f1-b800-70ad" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1c4e-2aa6-2d32-f0d4" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Miho" hidden="false" id="5ed5-73f6-913a-fda4">
       <costs>
@@ -5581,7 +5709,6 @@ This model may only be recruited into any Warband recruiting the Passing the Ni
         <categoryLink targetId="0ca8-2040-37f2-a1e0" id="6388-159a-8322-6bf4" primary="true" name="Faction Profile Cards"/>
         <categoryLink targetId="7532-4f60-381d-2941" id="b36d-70bc-32a8-baaa" primary="false" name="Faction: Prefecture of Ryu"/>
         <categoryLink targetId="a485-b6b0-b58e-a3a1" id="462e-a974-3ebf-1da6" primary="false" name="Shisai"/>
-        <categoryLink targetId="74ad-b881-8f16-4d44" id="c411-6ae0-b83b-381d" primary="false" name="Passing the Night"/>
         <categoryLink targetId="afd4-8041-e359-223c" id="c5a0-47a3-c84c-7328" primary="false" name="Unique"/>
         <categoryLink targetId="b95d-a028-ce17-612b" id="ce97-3044-c85a-c791" primary="false" name="Mourner"/>
       </categoryLinks>
@@ -5644,6 +5771,212 @@ This model may only be recruited into any Warband recruiting the Passing the Ni
       <entryLinks>
         <entryLink import="true" name="Enhancements" hidden="false" id="30d2-4865-b53d-af7f" collective="false" targetId="3dad-1423-9b3c-86a7" type="selectionEntryGroup"/>
       </entryLinks>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="07e0-41f1-b800-70ad" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1c4e-2aa6-2d32-f0d4" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Confession" hidden="false" id="117d-aa95-c4eb-0f87">
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1"/>
+      </costs>
+      <constraints>
+        <constraint type="max" value="3" field="selections" scope="roster" shared="true" id="c2a3-0a5b-d5ce-d711" includeChildSelections="true"/>
+      </constraints>
+      <profiles>
+        <profile name="Confession" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card" hidden="false" id="b423-8dc7-fb86-9751">
+          <characteristics>
+            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">A Friendly Samurai model gains a Shame Token.
+
+Requirement: [Passing the Night theme]</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="lessThan" value="1" field="selections" scope="roster" childId="71c9-d30d-3c77-ae9c" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink targetId="d360-71aa-ca22-ba3c" id="4c13-c4e9-be22-0d50" primary="true" name="Faction Event Cards"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Hida&apos;s Last Command" hidden="false" id="df37-602a-3dce-e18b">
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="4"/>
+      </costs>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="2ba1-fb4b-efd2-e604" includeChildSelections="true"/>
+      </constraints>
+      <profiles>
+        <profile name="Hida&apos;s Last Command" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card" hidden="false" id="cdd6-c2ec-e1d0-5a0a">
+          <characteristics>
+            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">Takashi Hida gains Order [Friendly](4/8&quot;) until the end of the current Activation.
+
+Requirement: [Passing the Night theme]</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="lessThan" value="1" field="selections" scope="roster" childId="71c9-d30d-3c77-ae9c" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink targetId="d360-71aa-ca22-ba3c" id="6c07-3e5c-340f-9442" primary="true" name="Faction Event Cards"/>
+      </categoryLinks>
+      <infoLinks>
+        <infoLink name="Order" id="6eda-a18f-c231-2fb7" hidden="false" type="rule" targetId="ed40-ed42-2208-1ea0"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Let the Tears Fall on Unworthy Ground" hidden="false" id="9f48-d1d7-5259-6402">
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1"/>
+      </costs>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="efe1-8cbe-1459-f968" includeChildSelections="true"/>
+      </constraints>
+      <profiles>
+        <profile name="Let the Tears Fall on Unworthy Ground" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card" hidden="false" id="82f5-71ac-b698-6223">
+          <characteristics>
+            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">When a Friendly model fails a Ki Test, after the action is complete, the Friendly model may choose to gain or lose a Shame Token.
+
+Requirement: [Passing the Night theme]</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="lessThan" value="1" field="selections" scope="roster" childId="71c9-d30d-3c77-ae9c" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink targetId="d360-71aa-ca22-ba3c" id="241b-9d53-f60f-0cfc" primary="true" name="Faction Event Cards"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Loyalty to the Daimyo" hidden="false" id="0d96-cda9-1e45-0b2e">
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1"/>
+      </costs>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="7184-c82b-6abb-989a" includeChildSelections="true"/>
+      </constraints>
+      <profiles>
+        <profile name="Loyalty to the Daimyo" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card" hidden="false" id="1474-100e-f1bf-e819">
+          <characteristics>
+            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">Samurai models gain Bodyguard [Hida, Hiro](3&quot;).
+Effects which prevent the use of the Bodyguard Trait cannot be used if the Target is Takashi Hida or Takashi Hiro until the end of the current Activation.
+
+Requirement: [Passing the Night theme]</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="lessThan" value="1" field="selections" scope="roster" childId="71c9-d30d-3c77-ae9c" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink targetId="d360-71aa-ca22-ba3c" id="2b30-e41c-9bd1-d583" primary="true" name="Faction Event Cards"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Only the Penitent" hidden="false" id="07ed-9e09-da52-7c12">
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="3"/>
+      </costs>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="2f6e-9cb5-b52f-5036" includeChildSelections="true"/>
+      </constraints>
+      <profiles>
+        <profile name="Only the Penitent" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card" hidden="false" id="8d09-fef7-378c-62f8">
+          <characteristics>
+            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">You may discard a Prayer Token. If you do, ignore all Damage done to one Friendly model this activation.
+
+Requirement: [Passing the Night theme]</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="lessThan" value="1" field="selections" scope="roster" childId="71c9-d30d-3c77-ae9c" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink targetId="d360-71aa-ca22-ba3c" id="1753-2726-dada-a4e1" primary="true" name="Faction Event Cards"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Pallbearer" hidden="false" id="c1f2-b003-d97a-20cb">
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1"/>
+      </costs>
+      <constraints>
+        <constraint type="max" value="3" field="selections" scope="roster" shared="true" id="acc3-ed0f-6968-f2c7" includeChildSelections="true"/>
+      </constraints>
+      <profiles>
+        <profile name="Pallbearer" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card" hidden="false" id="bc51-3e2f-39fa-c1fe">
+          <characteristics>
+            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">Play during Deployment. Choose a Friendly model to begin the game with a Virtue Token.
+Your opponent may then choose a model to begin the game with a Virtue Token.
+
+Requirement: [Passing the Night theme]</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="lessThan" value="1" field="selections" scope="roster" childId="71c9-d30d-3c77-ae9c" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink targetId="d360-71aa-ca22-ba3c" id="d705-48df-f0bd-ad14" primary="true" name="Faction Event Cards"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Redeeming Valour" hidden="false" id="1572-dd85-f47a-3d43">
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1"/>
+      </costs>
+      <constraints>
+        <constraint type="max" value="3" field="selections" scope="roster" shared="true" id="e7e2-1eb7-9b11-3196" includeChildSelections="true"/>
+      </constraints>
+      <profiles>
+        <profile name="Redeeming Valour" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card" hidden="false" id="0f34-12f2-6318-15c4">
+          <characteristics>
+            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">When a Friendly model passes a Fear Test, you may Remove a Shame Token from it.
+
+Requirement: [Passing the Night theme]</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="lessThan" value="1" field="selections" scope="roster" childId="71c9-d30d-3c77-ae9c" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink targetId="d360-71aa-ca22-ba3c" id="c26e-5773-cdd1-ce39" primary="true" name="Faction Event Cards"/>
+      </categoryLinks>
     </selectionEntry>
   </selectionEntries>
   <entryLinks>
@@ -5655,6 +5988,7 @@ This model may only be recruited into any Warband recruiting the Passing the Ni
               <conditions>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="07e0-41f1-b800-70ad" type="atLeast"/>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1c4e-2aa6-2d32-f0d4" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="71c9-d30d-3c77-ae9c" type="atLeast"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -5748,7 +6082,15 @@ This model may only be recruited into any Warband recruiting the Passing the Ni
     <entryLink id="ce59-5294-279d-a624" name="Hozumi Maha" hidden="true" collective="false" import="true" targetId="09da-574e-599a-3226" type="selectionEntry"/>
     <entryLink id="2afe-eb56-ccfd-b77c" name="Kenmeina" hidden="true" collective="false" import="true" targetId="b896-0ea7-fb05-1ecc" type="selectionEntry"/>
     <entryLink id="4306-2472-5148-46bc" name="Kiyozumi Haiboku" hidden="true" collective="false" import="true" targetId="91b9-5dcc-298c-0bfb" type="selectionEntry"/>
-    <entryLink id="d1c8-f756-590c-fd96" name="Kiyozumi Hinadori" hidden="false" collective="false" import="true" targetId="07f2-8804-f10d-7bbb" type="selectionEntry"/>
+    <entryLink id="d1c8-f756-590c-fd96" name="Kiyozumi Hinadori" hidden="false" collective="false" import="true" targetId="07f2-8804-f10d-7bbb" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="71c9-d30d-3c77-ae9c" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
     <entryLink id="b1f0-6a32-676e-9a31" name="Kiyozumi Kicho" hidden="true" collective="false" import="true" targetId="7b8f-61a1-2d88-60f2" type="selectionEntry"/>
     <entryLink id="af72-f14d-9a08-56b9" name="Kiyozumi Sadaka" hidden="true" collective="false" import="true" targetId="7728-72dd-3889-91b2" type="selectionEntry"/>
     <entryLink id="f196-85fd-8f58-3e68" name="Ryokeen" hidden="true" collective="false" import="true" targetId="f97b-84fa-27d7-b73b" type="selectionEntry"/>
@@ -5833,7 +6175,7 @@ This model may only be recruited into any Warband recruiting the Passing the Ni
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d5a3-42bc-c296-969a" type="equalTo"/>
+                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d5a3-42bc-c296-969a" type="atLeast"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -6110,11 +6452,16 @@ Requirement [Samurai, Teishin]</characteristic>
             <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="7342-bebc-c6cd-8cb7" name="Teachings of Yasushi" hidden="true" collective="false" import="true" type="upgrade">
+        <selectionEntry id="7342-bebc-c6cd-8cb7" name="Teachings of Yashushi" hidden="true" collective="false" import="true" type="upgrade">
           <modifiers>
             <modifier type="set" field="hidden" value="false">
               <conditions>
                 <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e12a-f782-3281-7444" type="instanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" value="Teachings of Yo! Sushi" field="name">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="2a53-5d9d-97e4-aee1" shared="true"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -6131,6 +6478,13 @@ Requirement [Samurai, Teishin]</characteristic>
           <costs>
             <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1"/>
           </costs>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Hungry for Knowledge" hidden="false" id="2a53-5d9d-97e4-aee1">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c9cc-ad57-a317-f8bc" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
         </selectionEntry>
         <selectionEntry id="1d00-1c27-96a8-2ec0" name="Asama&apos;s Dying Wish" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
@@ -6428,6 +6782,145 @@ Requirement [Hiromasa]</characteristic>
             <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1"/>
           </costs>
         </selectionEntry>
+        <selectionEntry id="e44c-31d6-754d-6c22" name="Undertaker" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="notInstanceOf" value="0" field="selections" scope="parent" childId="1f97-bc35-026c-dbcd" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="71c9-d30d-3c77-ae9c" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="6038-3e92-10ea-9206" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1b9a-2027-7a08-2c6a" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="e62d-59a7-ce44-c4de" name="Undertaker" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
+              <characteristics>
+                <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">When a model is Killed or Removed from play while within 6&quot; of the Attached model, you may choose to ignore any Enemy effects, Events or Ki Feats triggered by being Killed or removed from play.
+
+
+Requirement [Bairei, Passing the Night theme]</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <categoryLinks>
+            <categoryLink id="1364-e0cf-407a-249b" name="Faction Enhancement Cards" hidden="false" targetId="17cf-d9a9-c7c1-bcb6" primary="true"/>
+            <categoryLink targetId="a745-0548-80c8-ece4" id="1e92-41b9-168a-b566" primary="false" name="Cycle: Year of the Risen Sun"/>
+          </categoryLinks>
+          <costs>
+            <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="87ea-6dd2-fdcb-043d" name="Sacrifice" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="notInstanceOf" value="0" field="selections" scope="parent" childId="e12a-f782-3281-7444" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="71c9-d30d-3c77-ae9c" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f20e-48e3-3bd6-4364" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4bee-b177-af2b-c019" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="e484-5363-bfa5-9b4c" name="Sacrifice" hidden="false" typeId="bd15-7ead-9268-3576" typeName="Special Card (Ki Feat)">
+              <characteristics>
+                <characteristic name="Description" typeId="17eb-17e2-4df4-5c5d">Attached model gains the following Ki feat:
+
+
+Requirement [Samurai, Passing the Night theme]</characteristic>
+                <characteristic name="Name" typeId="27c7-1649-f16e-8eaa">Hari-Kiri</characteristic>
+                <characteristic name="Cost" typeId="e410-b220-64e5-7953">4</characteristic>
+                <characteristic name="Timing" typeId="b9bf-562a-fe26-cb29">Instant</characteristic>
+                <characteristic name="Subject" typeId="47b8-f739-9d50-2e45">Personal</characteristic>
+                <characteristic name="Limitation" typeId="870e-79e4-80ee-c0cc">noBtB</characteristic>
+                <characteristic name="Ki Feat Description" typeId="3886-242b-fb70-5c88">Remove this model from play. For each unmarked Damage Box on this model, remove a Shame Token from another model.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <categoryLinks>
+            <categoryLink id="947d-8087-3223-46f1" name="Faction Enhancement Cards" hidden="false" targetId="17cf-d9a9-c7c1-bcb6" primary="true"/>
+            <categoryLink targetId="a745-0548-80c8-ece4" id="2f71-b1ba-a012-7962" primary="false" name="Cycle: Year of the Risen Sun"/>
+          </categoryLinks>
+          <costs>
+            <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="19e9-63bb-3c9a-369d" name="Retribution" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="71c9-d30d-3c77-ae9c" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="roster" value="4" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="e465-b8f7-1908-a215" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b020-b227-a300-1493" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="7e42-fd0e-ad48-b9f9" name="Retribution" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
+              <characteristics>
+                <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">Attached model gains Vengeance [Ninja].
+
+
+Requirement: [Passing the Night theme]</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <categoryLinks>
+            <categoryLink id="0c57-a313-add6-338b" name="Faction Enhancement Cards" hidden="false" targetId="17cf-d9a9-c7c1-bcb6" primary="true"/>
+            <categoryLink targetId="a745-0548-80c8-ece4" id="73d3-d023-72ae-dce2" primary="false" name="Cycle: Year of the Risen Sun"/>
+          </categoryLinks>
+          <costs>
+            <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1"/>
+          </costs>
+          <infoLinks>
+            <infoLink name="Vengeance" id="3cad-8f59-a6df-7702" hidden="false" type="rule" targetId="6779-0aac-2f51-f67e"/>
+          </infoLinks>
+        </selectionEntry>
+        <selectionEntry id="8f3a-a11e-8691-130f" name="Headtaker" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="71c9-d30d-3c77-ae9c" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="70b0-35e8-e511-7cbb" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ad8b-39c3-3c90-cf49" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="beee-ed30-4410-5265" name="Headtaker" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
+              <characteristics>
+                <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">When the Attached model successfully removes a model from play with the Critical Attack Special Ability, it may add or remove a Shame Token.
+
+
+Requirement: [Passing the Night theme]</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <categoryLinks>
+            <categoryLink id="6aa9-4c62-8672-c89e" name="Faction Enhancement Cards" hidden="false" targetId="17cf-d9a9-c7c1-bcb6" primary="true"/>
+            <categoryLink targetId="a745-0548-80c8-ece4" id="cf78-2ba1-af09-4bb5" primary="false" name="Cycle: Year of the Risen Sun"/>
+          </categoryLinks>
+          <costs>
+            <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1"/>
+          </costs>
+        </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="1b86-cc12-7ad9-f5ae" name="Equipment" hidden="false" collective="false" import="true">
@@ -6699,18 +7192,18 @@ Attached model ignores Enemy Damage Rolls if the individual dice values of the D
             <selectionEntry id="88e6-bec6-1672-994e" name="The Dragon Banner" hidden="false" collective="false" import="true" type="upgrade">
               <modifiers>
                 <modifier type="set" field="hidden" value="true">
-                  <conditions>
-                    <condition field="selections" scope="parent" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f784-2aad-a4e3-319c" type="notInstanceOf"/>
-                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="notInstanceOf" value="1" field="selections" scope="parent" childId="f1ce-b5eb-6c4a-53ef" shared="true"/>
+                        <condition type="notInstanceOf" value="1" field="selections" scope="parent" childId="f784-2aad-a4e3-319c" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
                 </modifier>
                 <modifier type="decrement" field="a111-8656-5c05-7415" value="1">
                   <conditions>
                     <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="90d7-5fe5-0a05-1bea" type="atLeast"/>
-                  </conditions>
-                </modifier>
-                <modifier type="decrement" field="a111-8656-5c05-7415" value="1">
-                  <conditions>
-                    <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1d67-a836-b4e8-aa07" type="instanceOf"/>
                   </conditions>
                 </modifier>
               </modifiers>
@@ -6723,7 +7216,10 @@ Attached model ignores Enemy Damage Rolls if the individual dice values of the D
                   <characteristics>
                     <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">While this model is within 6&quot; of any Enemy model, any Friendly Ashigaru or Samurai model with LoS to this model gains:
 Vengeance [Enemy models with RC &gt; 10]
-For the purpose of this ability, this model is considered Medium Sized and Friendly models have Aware.</characteristic>
+For the purpose of this ability, this model is considered Medium Sized and Friendly models have Aware.
+
+
+Requirement: [Takashi Hida or Fujitaka]</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -6778,6 +7274,90 @@ For the purpose of this ability, this model is considered Medium Sized and Frien
               </categoryLinks>
               <costs>
                 <cost name=" Rice" typeId="a111-8656-5c05-7415" value="4"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Disgraced Armour" hidden="false" id="709f-93e5-00c8-80c8" collective="false">
+              <modifiers>
+                <modifier type="decrement" value="1" field="a111-8656-5c05-7415">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="90d7-5fe5-0a05-1bea" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                  </conditions>
+                </modifier>
+                <modifier type="set" value="true" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="notInstanceOf" value="1" field="selections" scope="parent" childId="e12a-f782-3281-7444" shared="true"/>
+                        <condition type="notInstanceOf" value="1" field="selections" scope="parent" childId="f322-702a-ff62-b37e" shared="true"/>
+                        <condition type="lessThan" value="1" field="selections" scope="roster" childId="71c9-d30d-3c77-ae9c" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier type="decrement" value="1" field="a111-8656-5c05-7415">
+                  <conditions>
+                    <condition type="instanceOf" value="0" field="selections" scope="ancestor" childId="1d67-a836-b4e8-aa07" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="6f38-2296-c9d1-f0b9" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7cc6-1bea-d082-83dc" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+              <profiles>
+                <profile name="Disgraced Armour" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card" hidden="false" id="9869-cdaf-a83c-d93d">
+                  <characteristics>
+                    <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">When a model rolls a Damage Roll on the Attached model, you may use this card before the roll to half the final Damage taken then discard this card.
+
+Requirement [Samurai with the Armour trait, Passing the Night theme]</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <categoryLinks>
+                <categoryLink name="Faction Equipment Cards" hidden="false" id="f7b9-9c54-fd7f-e96f" targetId="5bcd-fe93-a8ea-0164" primary="false"/>
+              </categoryLinks>
+              <costs>
+                <cost name=" Rice" typeId="a111-8656-5c05-7415" value="3"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Hida&apos;s Mon" hidden="false" id="7789-9811-b4b7-9c51" collective="false">
+              <modifiers>
+                <modifier type="decrement" value="1" field="a111-8656-5c05-7415">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="90d7-5fe5-0a05-1bea" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                  </conditions>
+                </modifier>
+                <modifier type="set" value="true" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="notInstanceOf" value="1" field="selections" scope="parent" childId="f1ce-b5eb-6c4a-53ef" shared="true"/>
+                        <condition type="notInstanceOf" value="1" field="selections" scope="parent" childId="f784-2aad-a4e3-319c" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="04f4-88fa-84be-d6b9" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2e54-4261-beaa-a38f" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+              <profiles>
+                <profile name="Hida&apos;s Mon" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card" hidden="false" id="728d-a2ad-99e1-ba2b">
+                  <characteristics>
+                    <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">While this model is within 6&quot; of any Enemy model, any Friendly Ashigaru or Samurai model with LOS to this model gains Indomitable (3).
+This model is considered Medium Sized for the purposes of this ability.
+
+
+Requirement: [Takashi Hida or Fujitaka]</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <categoryLinks>
+                <categoryLink name="Faction Equipment Cards" hidden="false" id="155a-58e9-04d6-3888" targetId="5bcd-fe93-a8ea-0164" primary="false"/>
+              </categoryLinks>
+              <costs>
+                <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
