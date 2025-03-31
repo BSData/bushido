@@ -4821,6 +4821,20 @@ While involved in a Melee Exchange with this model, Enemy models cannot benefit
           <costs>
             <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2"/>
           </costs>
+          <modifiers>
+            <modifier type="set" value="Teachings of Yo! Sushi" field="name">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="f195-5e30-01e9-ef2e" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Hungry for Knowledge" hidden="false" id="f195-5e30-01e9-ef2e">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0a24-e61d-f085-8d18" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
         </selectionEntry>
         <selectionEntry id="f4c7-bddd-e711-d992" name="Emboldened" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
