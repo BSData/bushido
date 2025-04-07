@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="b4d7-0e2a-728f-20cf" name="Kage Kaze Zoku" revision="35" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="19" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="b4d7-0e2a-728f-20cf" name="Kage Kaze Zoku" revision="36" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="19" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <selectionEntries>
     <selectionEntry id="33d5-3364-f1d4-a94c" name="Lockdown" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -577,7 +577,7 @@ X = the number of Ninja models in the Warband.</characteristic>
       </profiles>
       <infoLinks>
         <infoLink id="7806-e8fd-9235-a648" name="Disguise" hidden="false" targetId="1a0f-020f-3805-07f3" type="rule"/>
-        <infoLink id="d8b2-eb70-2562-282d" name="Bravery" page="" hidden="false" targetId="f9b2-38d2-7cda-de6e" type="rule"/>
+        <infoLink id="d8b2-eb70-2562-282d" name="Bravery" hidden="false" targetId="f9b2-38d2-7cda-de6e" type="rule"/>
         <infoLink id="677e-6dda-ae41-1787" name="Scout" hidden="false" targetId="8c82-d05a-f63b-1841" type="rule"/>
       </infoLinks>
       <categoryLinks>
@@ -4267,6 +4267,119 @@ If Phantom was not recruited into the Warband, remove this model from play and r
       </entryLinks>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="20"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="819b-dec6-105e-1ebf" name="Kima" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4c67-f393-7598-a82d" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4e1c-43c9-596d-ef16" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="cfa1-27b2-4dc3-ce16" type="atLeast"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="237c-0ca4-cc5c-37d2" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="7d22-8619-db32-93cd" name="Kima" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">3</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">1</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">6</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">6 OOOOO O</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="401a-7596-1ee8-72d8" name="Melee Weapon" hidden="false">
+          <profiles>
+            <profile id="b9a2-eb6d-8d90-f9ba" name="Tachi" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+0</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e"/>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Sweep Defence (0)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="1a69-7d2f-2a6e-6a23" name="Sweep Defence" hidden="false" targetId="5338-2d8f-f189-062d" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="73db-7cf3-9eee-a3ed" name="Ranged Weapon" hidden="false">
+          <profiles>
+            <profile id="a67e-6aa2-791b-c866" name="Blowgun" hidden="false" typeId="7e20-258e-bf92-18f9" typeName="Ranged Weapon">
+              <characteristics>
+                <characteristic name="Ranged Weapon Strength" typeId="15aa-b6bd-6923-271f">-2</characteristic>
+                <characteristic name="Range Bands" typeId="be6a-50c6-d691-e2e9">4/6/8</characteristic>
+                <characteristic name="Traits" typeId="3410-4428-ef91-eb61">Reload (1), Weak, Poison (1/3)</characteristic>
+                <characteristic name="Specials" typeId="cdaf-b6ac-89d4-39ef">Powerful Attack (1)</characteristic>
+                <characteristic name="Unique Effects" typeId="3bf8-6525-f003-4990"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="7af8-53a7-1cf9-a8fc" name="Powerful Attack" hidden="false" targetId="d56a-058d-95d9-5b60" type="rule"/>
+            <infoLink id="4671-614d-5659-363a" name="Weak" hidden="false" targetId="6a0c-59fb-ff0e-aced" type="rule"/>
+            <infoLink id="18b5-314d-1f9e-037d" name="Poison " hidden="false" targetId="7290-85f4-42cf-0b75" type="rule"/>
+            <infoLink id="7b99-90c3-41d7-87a0" name="Reload" hidden="false" targetId="9736-df56-0b62-b1a8" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="e2ea-92a9-f64f-a103" name="Unique Effects" hidden="false">
+          <profiles>
+            <profile id="82d1-9680-aad7-2340" name="Start of Activation" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
+              <characteristics>
+                <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">At the start of this model&apos;s activation choose one of the following:
+- This model&apos;s Ranged Weapon gains Lightweight until the end of the activation.
+- This model does not suffer the Melee Penalty for having Run until this model&apos;s next activation or the End Phase, whichever is sooner.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="802b-7f3d-96bd-bf05" name="Lightweight" hidden="false" targetId="c75c-7124-2b1f-a4d9" type="rule"/>
+            <infoLink id="01fb-857a-7269-e59d" name="Kohai" hidden="false" targetId="3468-4f9b-e251-6bf1" type="profile"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="6454-3c69-3394-0b7f" name="Traits" hidden="false">
+          <profiles>
+            <profile id="68fe-7066-8531-5670" name="Kima" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Assassin, Camouflage (2&quot;), Lightfooted</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="c1aa-acf7-7c50-6631" name="Assassin" hidden="false" targetId="ef59-928b-2550-f0a3" type="rule"/>
+            <infoLink id="9822-3957-6a6d-0d1a" name="Camouflage" hidden="false" targetId="9010-4983-c98c-1751" type="rule"/>
+            <infoLink id="75b0-5767-a207-a12d" name="Lightfooted" hidden="false" targetId="57d2-cd57-07f9-addf" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+      </infoGroups>
+      <categoryLinks>
+        <categoryLink id="b233-54c6-b296-3934" name="Faction: Kage Kaze Zoku" hidden="false" targetId="3aa4-cadb-b4be-0dc6" primary="false"/>
+        <categoryLink id="5da1-4a1e-948a-b61a" name="Ninja" hidden="false" targetId="dc64-e668-4aac-8ec9" primary="false"/>
+        <categoryLink id="1bdf-aa4b-35ce-c6e9" name="Faction Profile Cards" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
+        <categoryLink id="9d9f-309d-6773-9bf6" name="Worm" hidden="false" targetId="4c50-8b57-fe80-8fdc" primary="false"/>
+        <categoryLink id="eb0b-d33e-c480-fe23" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="d0d0-de89-42a3-147b" name="Enhancements" hidden="false" collective="false" import="true" targetId="b18f-16ea-bed1-4709" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="14"/>
       </costs>
     </selectionEntry>
   </selectionEntries>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="302b-66f1-a875-3b63" name="Ito Clan" revision="35" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="18" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="302b-66f1-a875-3b63" name="Ito Clan" revision="36" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="18" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <categoryEntries>
     <categoryEntry id="46b2-47c2-4c55-2e3a" name="Kinu" hidden="false"/>
     <categoryEntry id="273a-b61b-c7f8-76fd" name="Itsunagi" hidden="false"/>
@@ -4540,6 +4540,108 @@ While involved in a Melee Exchange with this model, Enemy models cannot benefit
       </entryLinks>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="18"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="8aa5-b1b3-9e57-62c3" name="Nanako" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9ca6-7a62-7b68-47a2" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1a68-ef5c-dd5d-9243" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="0690-a78d-79fb-ce7a" name="Nanako" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277"/>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">3</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">5</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">3</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c">3</characteristic>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">8</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">5 OOOOO</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Medium 40mm</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="04c2-7aa5-47ef-bf9c" name="Traits" hidden="false">
+          <profiles>
+            <profile id="4bcd-c11c-b569-4320" name="Nanako" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Aware, Blood of Orochi (1), Endurance, Immune [Poison], Ranged Defence (2)</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="b51f-fd72-4359-ab3a" name="Blood of Orochi" hidden="false" targetId="7a5a-2e8e-4a81-c48f" type="rule"/>
+            <infoLink id="0ec5-0c50-b0df-415a" name="Aware" hidden="false" targetId="ff4a-6b14-09dd-2343" type="rule"/>
+            <infoLink id="51a8-0bd1-725a-d6d1" name="Ranged Defence " hidden="false" targetId="9b8d-9ca9-e25d-3988" type="rule"/>
+            <infoLink id="4c16-a028-0eec-3e8b" name="Endurance" hidden="false" targetId="7fdc-d150-9641-1235" type="rule"/>
+            <infoLink id="8f94-6942-1a30-6e34" name="Immune" hidden="false" targetId="ea08-b25e-0ea8-af73" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="64db-79c8-9f98-204f" name="Melee Weapon" hidden="false">
+          <profiles>
+            <profile id="f8cc-20ea-5a0c-9728" name="Snake" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+2</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Poison (1/2), Reach</characteristic>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Combo Attack (1), Grapple Defence (0), Sidestep Defence (0)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="8da0-29cd-7ed5-dd33" name="Reach" hidden="false" targetId="e28e-d5dd-a262-1101" type="rule"/>
+            <infoLink id="34e7-996f-3989-a0ef" name="Sidestep Defence " hidden="false" targetId="753c-6c3b-64d7-203c" type="rule"/>
+            <infoLink id="a25c-afff-10da-bf04" name="Grapple Defence" hidden="false" targetId="6e8d-d1c4-dc69-6558" type="rule"/>
+            <infoLink id="6b1c-f167-a6f0-bfb1" name="Combo Attack " hidden="false" targetId="78ab-6a94-be24-8f74" type="rule"/>
+            <infoLink id="c0c6-e503-b9a0-4d8c" name="Poison " hidden="false" targetId="7290-85f4-42cf-0b75" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="4be8-7ceb-5294-e752" name="Ki Feats" hidden="false">
+          <infoLinks>
+            <infoLink id="c7a6-9d9f-7fbf-33dd" name="Seduction" hidden="false" targetId="3fe7-9816-3a75-4619" type="infoGroup"/>
+            <infoLink id="6925-e921-8b53-7acb" name="Serpentine Sway" hidden="false" targetId="5396-0a1e-9c98-91a6" type="infoGroup"/>
+            <infoLink id="38a5-2f88-521d-330b" name="Psychic Drain" hidden="false" targetId="5bbb-ceeb-3466-685a" type="infoGroup"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="645e-e5cf-9b2a-3542" name="Unique Effects" hidden="false">
+          <profiles>
+            <profile id="f6bb-8401-3551-4c6d" name="Nanako" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">This model&apos;s Melee Pool cannot be modified by States.
+
+
+When allocating Blood of Orochi  Tokens, this model may spend Ki to allocate additional Blood of Orochi Tokens to Friendly models at one Ki Token per Blood of Orochi Token.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </infoGroup>
+      </infoGroups>
+      <categoryLinks>
+        <categoryLink id="ac3f-eb51-0417-8270" name="Faction Profile Cards" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
+        <categoryLink id="fb85-cc1f-ac42-2ff2" name="Blood of Orochi" hidden="false" targetId="a678-8869-7918-cb24" primary="false"/>
+        <categoryLink id="25d4-f9e8-3d7f-8d4e" name="Hebimiman" hidden="false" targetId="683a-eb26-1ee8-43d1" primary="false"/>
+        <categoryLink id="0909-9528-e8f3-f91b" name="Shugenja" hidden="false" targetId="0c22-e9ca-a3de-e706" primary="false"/>
+        <categoryLink id="b8ea-9fcf-717f-19cd" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="199a-3e10-dc6e-4fc7" name="Enhancements" hidden="false" collective="false" import="true" targetId="c1b7-60f5-a313-5345" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="22"/>
       </costs>
     </selectionEntry>
   </selectionEntries>

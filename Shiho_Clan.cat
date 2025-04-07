@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="2276-2df6-78a7-841d" name="Shiho Clan" revision="42" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="19" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="2276-2df6-78a7-841d" name="Shiho Clan" revision="43" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="19" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <categoryEntries>
     <categoryEntry id="7fa5-7ef0-59c5-f657" name="Tanaka" hidden="false"/>
   </categoryEntries>
@@ -3208,6 +3208,110 @@ Whenever a Friendly model within 6&quot; of a model with a Luck Token makes a Fe
       </entryLinks>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="17"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="96ad-e72f-054e-7893" name="Shiho Zanji" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="fb4a-18a7-5b40-74ec" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9402-edcc-93a2-aef1" type="atLeast"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <profiles>
+        <profile id="a1d9-c64b-5f09-d89c" name="Shiho Zanji" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">2</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">2</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">2</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">8</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">5 OOOOO</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="4200-6051-d499-f25f" name="Traits" hidden="false">
+          <profiles>
+            <profile id="ee80-03e4-5051-93b4" name="Shiho Zanji" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Bravery, Booted, Flank, Prowess [Melee](1), Ranged Defence (1), Vengeance [Takashi]</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="4bb4-d776-005f-14b5" name="Prowess " hidden="false" targetId="75ef-327a-cd08-a248" type="rule"/>
+            <infoLink id="30b8-47da-a969-d075" name="Vengeance" hidden="false" targetId="6779-0aac-2f51-f67e" type="rule"/>
+            <infoLink id="200c-c8b8-43db-dbf8" name="Bravery" hidden="false" targetId="f9b2-38d2-7cda-de6e" type="rule"/>
+            <infoLink id="9e34-83f4-9649-282c" name="Ranged Defence " hidden="false" targetId="9b8d-9ca9-e25d-3988" type="rule"/>
+            <infoLink id="76d4-fb6d-dd97-4072" name="Booted" hidden="false" targetId="90ff-48db-c79d-251c" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="7c03-ad58-f83b-8fd3" name="Ki Feats" hidden="false">
+          <infoLinks>
+            <infoLink id="650e-0801-88e1-7fc7" name="Forestall" hidden="false" targetId="f11e-8606-1e9d-86c9" type="infoGroup"/>
+            <infoLink id="0997-3617-1643-e725" name="Jocho" hidden="false" targetId="6729-9a9b-d856-4866" type="infoGroup"/>
+            <infoLink id="210f-e958-7fbf-2568" name="Talon Strike" hidden="false" targetId="71c1-5bba-d6c1-92dc" type="infoGroup"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="8861-a113-9578-97b2" name="Melee Weapon" hidden="false">
+          <profiles>
+            <profile id="dd0f-d32b-a1f9-75f2" name="Katana" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+1</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Parry (1), Weak</characteristic>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Sidestep Attack (0), Counterstrike Defence (0)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="d3d7-bacf-f63a-0a5e" name="Sidestep Attack " hidden="false" targetId="070d-a69d-0b46-27dc" type="rule"/>
+            <infoLink id="eea7-21c4-439e-9b21" name="Weak" hidden="false" targetId="6a0c-59fb-ff0e-aced" type="rule"/>
+            <infoLink id="5581-e005-2fb6-270d" name="Counterstrike Defence " hidden="false" targetId="136e-4c77-dc59-4c6e" type="rule"/>
+            <infoLink id="b198-76f9-d3e0-bc35" name="Parry" hidden="false" targetId="c7c2-b36e-7952-c79b" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup name="Unique Effects" id="bb7e-9ecb-8abb-cb70" hidden="false">
+          <profiles>
+            <profile name="Virtue" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects" hidden="false" id="456d-12b0-1450-06a4">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">While this model is in play, when a Friendly Samurai model spends a Virtue Token you may choose the following effects for that model:
+- When this model uses a Ki Feat, it may use all of its Ki Boosts for zero Ki cost once that activation.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Guerilla" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects" hidden="false" id="06a5-5403-dc48-64e9">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">When this model is recruited into the Guerilla Warfare theme, add this ability as if it were written on the theme card:
+
+- Until the End Phase, Friendly models make a normal Damage Roll when using Sidestep Attack, instead of rolling no damage.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </infoGroup>
+      </infoGroups>
+      <categoryLinks>
+        <categoryLink id="7643-d43c-09b8-2bfb" name="Faction: Shiho Clan" hidden="false" targetId="53b4-db5e-0527-0759" primary="false"/>
+        <categoryLink id="8cad-fc12-afdf-d163" name="Faction Profile Cards" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
+        <categoryLink id="4646-4d54-4b46-7fc1" name="Samurai" hidden="false" targetId="e12a-f782-3281-7444" primary="false"/>
+        <categoryLink id="28c2-f18a-ddc3-ad46" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
+        <categoryLink id="6ae6-f121-8374-55bf" name="Loyal" hidden="false" targetId="f476-156e-8599-9253" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="f390-ece9-68d9-bb8a" name="Enhancements" hidden="false" collective="false" import="true" targetId="8a7c-6251-523e-a67c" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="13"/>
       </costs>
     </selectionEntry>
   </selectionEntries>
