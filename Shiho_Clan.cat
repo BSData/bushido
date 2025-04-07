@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="2276-2df6-78a7-841d" name="Shiho Clan" revision="37" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="19" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="2276-2df6-78a7-841d" name="Shiho Clan" revision="42" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="19" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <categoryEntries>
     <categoryEntry id="7fa5-7ef0-59c5-f657" name="Tanaka" hidden="false"/>
   </categoryEntries>
@@ -1108,11 +1108,12 @@ This model gains Fearless when declaring actions Targeting or Selecting a model 
       <profiles>
         <profile id="2eda-fbc6-115f-0f38" name="Guerilla Warfare" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
           <characteristics>
-            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">You may choose one of the following in any Starting Phase. Each ability may only be chosen once. After using two of these abilities, discard this card.
-• Move each Friendly model that is currently BtB with an Enemy model until it leaves the Enemy model&apos;s ZoC.
-• All Ki Boosts for Friendly models cost one fewer Ki Token until the End Phase.
-• Friendly models with marked Wound Boxes may re-roll Defence Dice until the End Phase.
-• For each Friendly model currently Elsewhere using the Flank trait, immediately re-choose its arrival turn (you may not choose turn 1) and table edge as if it just gained Flank.
+            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">- Loyal &amp; Samurai models gain Reach on Katana Melee Weapons.
+- You may choose one of the following in any starting phase. Each ability may only be chosen once. You may use two abilities per game.
+  - Move each friendly model that is currently BtB with an enemy model until it leaves the enemy model’s Zone of Control.
+  - All Ki Boosts cost one fewer Ki Token until the end phase.
+  - Friendly models with marked wound boxes may reroll Defence dice until the end phase.
+  - For each model currently Elsewhere using the Flank trait, immediately re-choose its arrival turn (this may be the current turn, however you may not choose turn 1) and table edge as if it just gained Flank.
 
 Permitted [Hiroto, Loyal models]</characteristic>
           </characteristics>
@@ -1124,6 +1125,9 @@ Permitted [Hiroto, Loyal models]</characteristic>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0"/>
       </costs>
+      <infoLinks>
+        <infoLink name="Reach" id="a5a0-806d-cff5-7ddd" hidden="false" type="rule" targetId="e28e-d5dd-a262-1101"/>
+      </infoLinks>
     </selectionEntry>
     <selectionEntry id="38aa-a599-30a6-c707" name="The Unfurled Wing" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -1307,7 +1311,6 @@ When a model performs a Wait Action to Destroy this Terrain, it need not spend 2
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2379-f077-1de3-5d39" type="min"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="f5cd-3db3-365a-7cb0" type="max"/>
           </constraints>
           <infoLinks>
             <infoLink id="6a5f-7a0f-672a-9ece" name="Heimin" hidden="false" targetId="6809-41b2-2abc-7558" type="profile">
@@ -1321,9 +1324,6 @@ When a model performs a Wait Action to Destroy this Terrain, it need not spend 2
           <modifiers>
             <modifier type="append" field="name" value="B"/>
           </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d507-60a0-714b-4d1f" type="max"/>
-          </constraints>
           <infoLinks>
             <infoLink id="669b-c12c-5d59-0c41" name="Heimin" hidden="false" targetId="6809-41b2-2abc-7558" type="profile">
               <modifiers>
@@ -1336,9 +1336,6 @@ When a model performs a Wait Action to Destroy this Terrain, it need not spend 2
           <modifiers>
             <modifier type="append" field="name" value="C"/>
           </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="489b-3f03-c609-2302" type="max"/>
-          </constraints>
           <infoLinks>
             <infoLink id="1acf-c946-dc62-7b14" name="Heimin" hidden="false" targetId="6809-41b2-2abc-7558" type="profile">
               <modifiers>
@@ -1435,15 +1432,22 @@ When a model performs a Wait Action to Destroy this Terrain, it need not spend 2
         </infoGroup>
         <infoGroup id="49fb-d083-0bef-dd3c" name="Unique Effects" hidden="false">
           <profiles>
-            <profile id="28f4-aaa1-028b-538f" name="Unique Effects" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+            <profile id="28f4-aaa1-028b-538f" name="Training" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">While this model is in play, friendly Kyudoka models may use Flame Arrows Ki Feat as if it was written on their card.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Virtue+" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects" hidden="false" id="d6c7-448b-305f-efa6">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">While this model is in play, when a friendly Loyal &amp; Ashigaru Model spends a Virtue token, in addition to any other benefit chosen, that model may remove a Reload Marker.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Wait" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects" hidden="false" id="b297-df51-6685-4e87">
               <characteristics>
                 <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">When this model declares a Wait Action to remove Reload Markers, its Ranged Weapons gain Lightweight until the End Phase.</characteristic>
               </characteristics>
             </profile>
           </profiles>
-          <infoLinks>
-            <infoLink id="58d3-5a28-f497-cde7" name="Lightweight" hidden="false" targetId="c75c-7124-2b1f-a4d9" type="rule"/>
-          </infoLinks>
         </infoGroup>
       </infoGroups>
       <categoryLinks>
@@ -1522,7 +1526,6 @@ When a model performs a Wait Action to Destroy this Terrain, it need not spend 2
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="df1c-9d28-e3ac-d123" type="min"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="cd6c-2881-1a3a-20f0" type="max"/>
           </constraints>
           <profiles>
             <profile id="1e51-fd28-e51f-8642" name="Loyal Yariman A" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
@@ -1546,9 +1549,6 @@ When a model performs a Wait Action to Destroy this Terrain, it need not spend 2
           <modifiers>
             <modifier type="append" field="name" value="B"/>
           </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="e410-17d2-ae48-c6c6" type="max"/>
-          </constraints>
           <profiles>
             <profile id="a643-653e-c873-7466" name="Loyal Yariman B" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
               <characteristics>
@@ -1652,6 +1652,20 @@ When a model performs a Wait Action to Destroy this Terrain, it need not spend 2
             <infoLink id="459c-7c92-ec6f-a5f3" name="Sidestep Defence " hidden="false" targetId="753c-6c3b-64d7-203c" type="rule"/>
           </infoLinks>
         </infoGroup>
+        <infoGroup name="Unique Effects" id="b3e1-4493-50a5-3707" hidden="false">
+          <profiles>
+            <profile name="Training" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects" hidden="false" id="daea-02af-96b4-b48d">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">While this model is in play, friendly Yarimen models may use the Unassailable Ki Feat as if it was written on their card.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Virtue+" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects" hidden="false" id="f02e-b9b9-a6a0-6aa2">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">While this model is in play, when a friendly Loyal &amp; Ashigaru Model spends a Virtue token, in addition to any other benefit chosen, if that model performs a Scenario Action, remove one fewer Activation Counters at the end of the action. They must have the required number of Activation Counters to declare the Action.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </infoGroup>
       </infoGroups>
       <categoryLinks>
         <categoryLink id="4b87-3407-d4c5-0ae7" name="Faction: Shiho Clan" hidden="false" targetId="53b4-db5e-0527-0759" primary="false"/>
@@ -1686,9 +1700,10 @@ When a model performs a Wait Action to Destroy this Terrain, it need not spend 2
       <profiles>
         <profile id="1fbc-cec3-f42d-f624" name="The Shiho Return" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
           <characteristics>
-            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">Friendly models that are Elsewhere are ignored when calculating Pass Tokens.
-• During the first turn of the game, models in this Warband gain Endurance and do not suffer the melee penalty for having Run.
-• Once per game, in a Starting Phase when a model is Deployed using the Flank rules, each Enemy model must perform a Ki Challenge Test(5). If it fails, you may change that model&apos;s facing.
+            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">- Friendly Models that are Elsewhere are ignored when calculating Pass Tokens.
+- During the first turn of the game, models in this warband gain Endurance and do not suffer the melee penalty for having Run.
+- Loyal &amp; Samurai models gain Reach on Katana Melee Weapons.
+- In the Starting phase for each Faction model that is Deployed using the Flank rules, an Enemy model must perform a Ki Challenge Test (7). If it fails, you may change that model’s facing.
 
 Permitted [Samurai, Eagles, Ronin Kami, Ronin Eagles]</characteristic>
           </characteristics>
@@ -1700,6 +1715,10 @@ Permitted [Samurai, Eagles, Ronin Kami, Ronin Eagles]</characteristic>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0"/>
       </costs>
+      <infoLinks>
+        <infoLink name="Reach" id="9b19-63b3-1659-65eb" hidden="false" type="rule" targetId="e28e-d5dd-a262-1101"/>
+        <infoLink name="Endurance" id="46a4-074d-1ae8-60cc" hidden="false" type="rule" targetId="7fdc-d150-9641-1235"/>
+      </infoLinks>
     </selectionEntry>
     <selectionEntry id="88f5-1986-098c-0729" name="The Black Eagle&apos;s Coalition" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
@@ -1713,16 +1732,6 @@ Permitted [Samurai, Eagles, Ronin Kami, Ronin Eagles]</characteristic>
             </conditionGroup>
           </conditionGroups>
         </modifier>
-        <modifier type="set" field="a940-728a-a7fb-0c6f" value="0">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7638-6ad1-8829-91db" type="atLeast"/>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3df8-0340-a4a1-a8be" type="atLeast"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a940-728a-a7fb-0c6f" type="max"/>
@@ -1730,14 +1739,14 @@ Permitted [Samurai, Eagles, Ronin Kami, Ronin Eagles]</characteristic>
       <profiles>
         <profile id="791e-44e1-9871-386a" name="The Black Eagle&apos;s Coalition" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
           <characteristics>
-            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">• Loyal models gain Leadership [Ronin] (1/6&quot;).
-• Ronin models gain Scout (1/1&quot;).
-• After recruiting the Warband to the correct Rice Cost, choose another 15 Rice of cards as Reserves. These are not added to the main list but kept separate. The Warband with and without Reserves must be legal.
-  Before Deployment you may switch cards in the Reserves with cards in the main list, the main list must remain legal. Show the new list to your Opponent before the game.
-  In a timed event, you have 5 minutes to make substitutions.
+            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">- Loyal &amp; Samurai models gain Leadership [Ronin](1/6”)
+- Ronin models gain Scout (1/1”) and Co-ordinated Attack [Loyal]
+- Loyal &amp; Samurai models gain Reach on Katana Melee Weapons.
+- When a Loyal &amp; Samurai model moves into BtB with an Enemy model this activation, it may make a normal Damage Roll when resolving a successful Sidestep Attack.
+- After recruiting the Warband to the correct Rice Cost, choose another 15 Rice of cards as Reserves. These are not added to the main list but kept separate. The Warband with and without Reserves must be legal. Before Deployment you may switch cards in the Reserves with cards in the main list, the main list must remain legal. Show the new list to your Opponent before the game. In a timed event, you have 5 minutes to make substitutions.
 
-Permitted [Shiho Faction models, Ronin models]
-Exclusion [Ronin Special Cards]</characteristic>
+
+Permitted [Shiho Faction Models, Ronin Models]</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -1749,6 +1758,12 @@ Exclusion [Ronin Special Cards]</characteristic>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0"/>
       </costs>
+      <infoLinks>
+        <infoLink name="Co-ordinated Attack" id="2c4c-1c11-e366-a8b1" hidden="false" type="rule" targetId="2337-7bcc-c1f2-f2bd"/>
+        <infoLink name="Leadership" id="79bc-71d5-ddd9-0db2" hidden="false" type="rule" targetId="8ec4-bfdc-8c03-f631"/>
+        <infoLink name="Scout" id="fce6-6ebe-dee0-ba1e" hidden="false" type="rule" targetId="8c82-d05a-f63b-1841"/>
+        <infoLink name="Reach" id="fd45-940c-036e-616a" hidden="false" type="rule" targetId="e28e-d5dd-a262-1101"/>
+      </infoLinks>
     </selectionEntry>
     <selectionEntry id="4be0-954e-0b7c-d91a" name="Shiho Keita" hidden="false" collective="false" import="true" type="model">
       <modifiers>
@@ -1952,7 +1967,7 @@ While this model is in play, when a Friendly Loyal model spends a Virtue Token y
       <profiles>
         <profile id="6ca4-f015-33b3-b257" name="Shiho Takuya" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
           <characteristics>
-            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">2</characteristic>
             <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
             <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">2</characteristic>
             <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33">3</characteristic>
@@ -2019,7 +2034,7 @@ While this model is in play, when a Friendly Loyal model spends a Virtue Token y
         <entryLink id="fd04-eb70-4b0c-91c5" name="Enhancements" hidden="false" collective="false" import="true" targetId="8a7c-6251-523e-a67c" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
-        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="20"/>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="12"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="7135-8fcb-cc8b-59fd" name="Shiho Wimpie" hidden="false" collective="false" import="true" type="model">
@@ -2379,7 +2394,7 @@ Requirement [Warband must contain a model with Tactician]</characteristic>
         </infoGroup>
         <infoGroup id="4888-5c9a-3f43-e462" name="Unique Effects" hidden="false">
           <profiles>
-            <profile id="f75b-3c33-ac49-2560" name="Unique Effects" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+            <profile id="f75b-3c33-ac49-2560" name="Wait" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
               <characteristics>
                 <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">When this model declares a Wait Action to remove Reload Markers, its Ranged Weapons gain Lightweight until the End Phase.</characteristic>
               </characteristics>
@@ -2388,6 +2403,18 @@ Requirement [Warband must contain a model with Tactician]</characteristic>
               <characteristics>
                 <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">This model may choose to use this ability when it chooses to use its Dai Kyu Ranged Weapon during a Ranged Attack.
 This model&apos;s Dai Kyu Ranged Weapon gains Reload (+1) and this model does not need LoS to target a Ranged Attack, ignores Cover, and ignores the Blind State during a Ranged Attack Action.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Virtue" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects" hidden="false" id="fe9a-b615-e79a-78a4">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">While this model is in play, when a Friendly Faction model spends a Virtue Token you may choose for that model to gain the following effect:
+When This model declares a Wait Action to remove a Reload Marker, they may immediately Walk up to their Move Stat in Inches.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Guerilla" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects" hidden="false" id="635e-7c5e-8bde-cca9">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">When this model is recruited into the Guerilla Warfare theme, add this option to the second benefit on the theme card:
+- Until the End Phase, Friendly model’s Ranged Weapons gain Brutal (1).</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -2516,7 +2543,6 @@ This model&apos;s Dai Kyu Ranged Weapon gains Reload (+1) and this model does no
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b846-6d05-45bc-24e5" type="min"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="0d77-219d-c833-c6c7" type="max"/>
           </constraints>
           <profiles>
             <profile id="4e4d-6f91-2499-77e7" name="Loyal Kyudoka A" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
@@ -2540,9 +2566,6 @@ This model&apos;s Dai Kyu Ranged Weapon gains Reload (+1) and this model does no
           <modifiers>
             <modifier type="append" field="name" value="B"/>
           </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="75de-412a-fb4b-ac4b" type="max"/>
-          </constraints>
           <profiles>
             <profile id="3cb4-870a-a614-3e1f" name="Loyal Kyudoka B" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
               <characteristics>
@@ -2887,7 +2910,6 @@ You may decide the order recruited terrain (Friendly and Enemy) is Deployed.</ch
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b3ff-9da3-1167-3c14" type="min"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="e2ab-4c79-3fe0-e1ea" type="max"/>
           </constraints>
           <profiles>
             <profile id="020a-d395-f783-7e5f" name="Wolf Ryoshi A" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
@@ -2913,7 +2935,6 @@ You may decide the order recruited terrain (Friendly and Enemy) is Deployed.</ch
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d739-a05f-d447-9e5c" type="min"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="91a5-30d6-ff86-a4aa" type="max"/>
           </constraints>
           <profiles>
             <profile id="94dd-3265-03a9-0513" name="Wolf Ryoshi B" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
@@ -2954,7 +2975,7 @@ You may decide the order recruited terrain (Friendly and Enemy) is Deployed.</ch
             <conditionGroup type="or">
               <conditions>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9126-f480-c2df-fbaf" type="atLeast"/>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="true" childId="f616-46d8-5907-fafd" type="atLeast"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="9402-edcc-93a2-aef1" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -3048,6 +3069,16 @@ Whenever a Friendly model within 6&quot; of a model with a Luck Token makes a Fe
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="11"/>
       </costs>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="9402-edcc-93a2-aef1" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </conditions>
+          <modifiers>
+            <modifier type="add" value="b254-2810-6b62-66d9" field="category"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry id="442b-4e2d-64c9-b479" name="Wolf Spears" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
@@ -3130,7 +3161,6 @@ Whenever a Friendly model within 6&quot; of a model with a Luck Token makes a Fe
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="70a8-2067-4076-fd55" type="min"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="4477-ab18-10d7-6507" type="max"/>
           </constraints>
           <profiles>
             <profile id="a903-8920-8f2f-6752" name="Wolf Spear A" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
@@ -3156,7 +3186,6 @@ Whenever a Friendly model within 6&quot; of a model with a Luck Token makes a Fe
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d972-de61-d886-cccf" type="min"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="5a3b-5c3e-b417-7a8d" type="max"/>
           </constraints>
           <profiles>
             <profile id="dabe-181a-e699-8f14" name="Wolf Spear B" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
@@ -3471,7 +3500,6 @@ Whenever a Friendly model within 6&quot; of a model with a Luck Token makes a Fe
               <conditions>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f5-1986-098c-0729" type="atLeast"/>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9126-f480-c2df-fbaf" type="atLeast"/>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="true" childId="f616-46d8-5907-fafd" type="atLeast"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -3486,7 +3514,6 @@ Whenever a Friendly model within 6&quot; of a model with a Luck Token makes a Fe
               <conditions>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f5-1986-098c-0729" type="atLeast"/>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9126-f480-c2df-fbaf" type="atLeast"/>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="true" childId="f616-46d8-5907-fafd" type="atLeast"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -3501,7 +3528,6 @@ Whenever a Friendly model within 6&quot; of a model with a Luck Token makes a Fe
               <conditions>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f5-1986-098c-0729" type="atLeast"/>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9126-f480-c2df-fbaf" type="atLeast"/>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="true" childId="f616-46d8-5907-fafd" type="atLeast"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -3516,7 +3542,6 @@ Whenever a Friendly model within 6&quot; of a model with a Luck Token makes a Fe
               <conditions>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f5-1986-098c-0729" type="atLeast"/>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9126-f480-c2df-fbaf" type="atLeast"/>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="true" childId="f616-46d8-5907-fafd" type="atLeast"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -3531,17 +3556,22 @@ Whenever a Friendly model within 6&quot; of a model with a Luck Token makes a Fe
               <conditions>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9126-f480-c2df-fbaf" type="atLeast"/>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f5-1986-098c-0729" type="atLeast"/>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="true" childId="f616-46d8-5907-fafd" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="966b-fc6b-359e-5c30" type="atLeast"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
         </modifier>
         <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="fb4a-18a7-5b40-74ec" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="hidden" value="true">
           <conditionGroups>
-            <conditionGroup type="or">
+            <conditionGroup type="and">
               <conditions>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c7de-19d4-64dd-911f" type="atLeast"/>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="fb4a-18a7-5b40-74ec" type="atLeast"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="9126-f480-c2df-fbaf" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -3572,15 +3602,7 @@ Whenever a Friendly model within 6&quot; of a model with a Luck Token makes a Fe
       </entryLinks>
     </entryLink>
     <entryLink id="5323-3a6e-0ae8-414a" name="Brotherhood" hidden="false" collective="false" import="true" targetId="9402-edcc-93a2-aef1" type="selectionEntry"/>
-    <entryLink id="97bf-558f-3853-c62d" name="Eldest Brother" hidden="true" collective="false" import="true" targetId="294d-a0fa-f437-2fca" type="selectionEntry">
-      <modifiers>
-        <modifier type="set" field="hidden" value="false">
-          <conditions>
-            <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="true" childId="9126-f480-c2df-fbaf" type="atLeast"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-    </entryLink>
+    <entryLink id="97bf-558f-3853-c62d" name="Eldest Brother" hidden="true" collective="false" import="true" targetId="294d-a0fa-f437-2fca" type="selectionEntry"/>
     <entryLink id="5c8a-39c9-369b-3f65" name="Ichiro" hidden="false" collective="false" import="true" targetId="1edd-65f3-2fdb-67b9" type="selectionEntry">
       <modifiers>
         <modifier type="set" field="hidden" value="false">
@@ -3697,20 +3719,6 @@ Whenever a Friendly model within 6&quot; of a model with a Luck Token makes a Fe
         </modifier>
       </modifiers>
     </entryLink>
-    <entryLink id="c221-5eb4-86e4-33b0" name="Hiroto, Drunken Master" hidden="true" collective="false" import="true" targetId="f616-46d8-5907-fafd" type="selectionEntry">
-      <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="true" childId="9126-f480-c2df-fbaf" type="atLeast"/>
-          </conditions>
-        </modifier>
-        <modifier type="set" field="hidden" value="false">
-          <conditions>
-            <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="true" childId="294d-a0fa-f437-2fca" type="atLeast"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-    </entryLink>
     <entryLink id="3c28-cbbc-2342-3398" name="Kami of Choking Fog" hidden="true" collective="false" import="true" targetId="f3c3-0154-adbf-aa05" type="selectionEntry">
       <modifierGroups>
         <modifierGroup>
@@ -3772,47 +3780,19 @@ Whenever a Friendly model within 6&quot; of a model with a Luck Token makes a Fe
         <categoryLink id="7d9e-e607-66f0-321e" name="Ronin Profile Cards" hidden="false" targetId="9fba-f50b-c8f7-8396" primary="true"/>
       </categoryLinks>
     </entryLink>
-    <entryLink id="e7fe-4c58-d753-7531" name="General Wu Shuo" hidden="false" collective="false" import="true" targetId="1eb3-cf68-2452-b5de" type="selectionEntry">
-      <modifiers>
-        <modifier type="set" field="hidden" value="false">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f5-1986-098c-0729" type="atLeast"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
-      <categoryLinks>
-        <categoryLink id="4dc9-0d5d-0dbc-2b49" name="Ronin Profile Cards" hidden="false" targetId="9fba-f50b-c8f7-8396" primary="true"/>
-      </categoryLinks>
-    </entryLink>
   </entryLinks>
   <sharedSelectionEntries>
-    <selectionEntry id="7784-df09-a292-0749" name="Wolf" hidden="false" collective="false" import="true" type="model">
-      <categoryLinks>
-        <categoryLink id="6b0a-c195-c91a-3832" name="Animal" hidden="false" targetId="c382-9ab3-9924-e30a" primary="false"/>
-        <categoryLink id="171c-d7eb-7aba-6ca5" name="Wolf" hidden="false" targetId="4e48-1ed5-3567-b991" primary="false"/>
-      </categoryLinks>
-      <entryLinks>
-        <entryLink id="722e-dc29-99eb-a3ce" name="Enhancements" hidden="false" collective="false" import="true" targetId="8a7c-6251-523e-a67c" type="selectionEntryGroup"/>
-      </entryLinks>
-      <costs>
-        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="6"/>
-      </costs>
-    </selectionEntry>
     <selectionEntry id="bcc0-d49e-e6f8-4c5c" name="Heimin" hidden="false" collective="false" import="true" type="model">
       <categoryLinks>
         <categoryLink id="d562-4058-7cf2-73f9" name="Loyal" hidden="false" targetId="f476-156e-8599-9253" primary="false"/>
         <categoryLink id="9637-564f-66ca-8eca" name="Peasant" hidden="false" targetId="78b4-4485-a93e-754c" primary="false"/>
       </categoryLinks>
-      <entryLinks>
-        <entryLink id="e432-2284-a574-f63b" name="Enhancements" hidden="false" collective="false" import="true" targetId="8a7c-6251-523e-a67c" type="selectionEntryGroup"/>
-      </entryLinks>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="4"/>
       </costs>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="d507-60a0-714b-4d1f" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+      </constraints>
     </selectionEntry>
     <selectionEntry id="f505-2b97-757b-b006" name="Loyal Yariman" hidden="false" collective="false" import="true" type="model">
       <categoryLinks>
@@ -3825,6 +3805,9 @@ Whenever a Friendly model within 6&quot; of a model with a Luck Token makes a Fe
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="12"/>
       </costs>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="afea-f086-f192-f42c" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+      </constraints>
     </selectionEntry>
     <selectionEntry id="dd57-5a6d-ddb8-4f1e" name="Loyal Kyudoka" hidden="false" collective="false" import="true" type="model">
       <categoryLinks>
@@ -3837,6 +3820,9 @@ Whenever a Friendly model within 6&quot; of a model with a Luck Token makes a Fe
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="14"/>
       </costs>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="3491-fde4-4c82-d4ac" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+      </constraints>
     </selectionEntry>
     <selectionEntry id="fa72-334d-dcd9-f1b2" name="Wolf Ryoshi" hidden="false" collective="false" import="true" type="model">
       <categoryLinks>
@@ -3848,6 +3834,9 @@ Whenever a Friendly model within 6&quot; of a model with a Luck Token makes a Fe
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0"/>
       </costs>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="6be4-20c5-e6d9-bd9b" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+      </constraints>
     </selectionEntry>
     <selectionEntry id="a3fa-5f2a-10af-5f69" name="Wolf Spear" hidden="false" collective="false" import="true" type="model">
       <categoryLinks>
@@ -3859,6 +3848,9 @@ Whenever a Friendly model within 6&quot; of a model with a Luck Token makes a Fe
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0"/>
       </costs>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="81de-d820-1e7f-d72c" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+      </constraints>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
@@ -3989,11 +3981,16 @@ Requirement [Loyal &amp; Samurai]</characteristic>
             <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="d22d-73ce-99ff-10a1" name="Teachings of Yasushi" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="d22d-73ce-99ff-10a1" name="Teachings of Yashushi" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditions>
                 <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e12a-f782-3281-7444" type="notInstanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" value="Teachings of Yo! Sushi" field="name">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="81bb-c0a9-3779-c9f9" shared="true"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -4010,6 +4007,13 @@ Requirement [Loyal &amp; Samurai]</characteristic>
           <costs>
             <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2"/>
           </costs>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Hungry for Knowledge" hidden="false" id="81bb-c0a9-3779-c9f9">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7e96-d06b-1e1b-fc2f" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
         </selectionEntry>
         <selectionEntry id="6022-a170-cc76-4d07" name="Eagle&apos;s Splendour" hidden="true" collective="false" import="true" type="upgrade">
           <modifiers>
@@ -4773,7 +4777,7 @@ Requirement [Falconer, Hiroto, Ronin Falconer]</characteristic>
                 <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bf52-cec7-764f-0dcb" type="max"/>
               </constraints>
               <profiles>
-                <profile id="3f99-5f35-8d10-5b0c" name="Straw Hat" page="" hidden="true" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
+                <profile id="3f99-5f35-8d10-5b0c" name="Straw Hat" hidden="true" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
                   <characteristics>
                     <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">Attached model gains Disguised (2).
 
@@ -4795,175 +4799,19 @@ Exclusion [Hiroto]</characteristic>
             </selectionEntry>
           </selectionEntries>
           <entryLinks>
-            <entryLink id="58f7-e490-4657-7364" name="Arashi&apos;s Fan" hidden="false" collective="false" import="true" targetId="fbe4-1c24-7fea-0247" type="selectionEntry">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f5-1986-098c-0729" type="atLeast"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </entryLink>
-            <entryLink id="fc71-9d4c-2757-a874" name="Hotai&apos;s Coin" hidden="false" collective="false" import="true" targetId="b467-7ef8-5537-423b" type="selectionEntry">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f5-1986-098c-0729" type="atLeast"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </entryLink>
-            <entryLink id="9936-a731-b183-dfc9" name="Kintoki&apos;s Salt" hidden="false" collective="false" import="true" targetId="f7e6-106d-e876-9d34" type="selectionEntry">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f5-1986-098c-0729" type="atLeast"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </entryLink>
-            <entryLink id="c00d-89f8-7f26-07c2" name="Takeru&apos;s Tanto" hidden="false" collective="false" import="true" targetId="50f4-7511-f889-9f40" type="selectionEntry">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f5-1986-098c-0729" type="atLeast"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </entryLink>
-            <entryLink id="11a0-97a3-af98-13f1" name="Vial of Raijin&apos;s Breath" hidden="false" collective="false" import="true" targetId="9b29-1f89-46d2-0329" type="selectionEntry">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f5-1986-098c-0729" type="atLeast"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </entryLink>
-            <entryLink id="c8ae-12fc-c5fd-4a77" name="Demon-Face Mask" hidden="false" collective="false" import="true" targetId="2437-81ed-3b75-d23b" type="selectionEntry">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f5-1986-098c-0729" type="atLeast"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </entryLink>
-            <entryLink id="2be3-0426-7dba-70f3" name="Triangle Knife" hidden="false" collective="false" import="true" targetId="fcc9-c236-babe-2239" type="selectionEntry">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f5-1986-098c-0729" type="atLeast"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </entryLink>
-            <entryLink id="8654-6cf3-d88c-4f15" name="Obscure Charm" hidden="false" collective="false" import="true" targetId="74be-1ece-8b7d-739d" type="selectionEntry">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f5-1986-098c-0729" type="atLeast"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </entryLink>
-            <entryLink id="0b6f-c833-61c2-3dc7" name="Minimoto Steel Helm" hidden="false" collective="false" import="true" targetId="38b5-a50d-24f0-4435" type="selectionEntry">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f5-1986-098c-0729" type="atLeast"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </entryLink>
-            <entryLink id="571d-c5d6-1fce-9652" name="Magatama" hidden="false" collective="false" import="true" targetId="370e-e02b-d9ee-8b80" type="selectionEntry">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f5-1986-098c-0729" type="atLeast"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </entryLink>
-            <entryLink id="8bfb-c51c-7bcc-308d" name="Wolf Heart Talisman" hidden="false" collective="false" import="true" targetId="a56e-8e8e-97b4-ec73" type="selectionEntry">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f5-1986-098c-0729" type="atLeast"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </entryLink>
-            <entryLink id="7659-61b9-05f6-4d3a" name="The Eagle Banner" hidden="false" collective="false" import="true" targetId="010e-1205-db10-6a2d" type="selectionEntry">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f5-1986-098c-0729" type="atLeast"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </entryLink>
-            <entryLink id="488e-a8bf-cbd9-744e" name="Hand Cannon" hidden="false" collective="false" import="true" targetId="3009-1a3c-223d-cae2" type="selectionEntry">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f5-1986-098c-0729" type="atLeast"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </entryLink>
+            <entryLink id="58f7-e490-4657-7364" name="Arashi&apos;s Fan" hidden="false" collective="false" import="true" targetId="fbe4-1c24-7fea-0247" type="selectionEntry"/>
+            <entryLink id="fc71-9d4c-2757-a874" name="Hotai&apos;s Coin" hidden="false" collective="false" import="true" targetId="b467-7ef8-5537-423b" type="selectionEntry"/>
+            <entryLink id="9936-a731-b183-dfc9" name="Kintoki&apos;s Salt" hidden="false" collective="false" import="true" targetId="f7e6-106d-e876-9d34" type="selectionEntry"/>
+            <entryLink id="c00d-89f8-7f26-07c2" name="Takeru&apos;s Tanto" hidden="false" collective="false" import="true" targetId="50f4-7511-f889-9f40" type="selectionEntry"/>
+            <entryLink id="11a0-97a3-af98-13f1" name="Vial of Raijin&apos;s Breath" hidden="false" collective="false" import="true" targetId="9b29-1f89-46d2-0329" type="selectionEntry"/>
+            <entryLink id="c8ae-12fc-c5fd-4a77" name="Demon-Face Mask" hidden="false" collective="false" import="true" targetId="2437-81ed-3b75-d23b" type="selectionEntry"/>
+            <entryLink id="2be3-0426-7dba-70f3" name="Triangle Knife" hidden="false" collective="false" import="true" targetId="fcc9-c236-babe-2239" type="selectionEntry"/>
+            <entryLink id="8654-6cf3-d88c-4f15" name="Obscure Charm" hidden="false" collective="false" import="true" targetId="74be-1ece-8b7d-739d" type="selectionEntry"/>
+            <entryLink id="0b6f-c833-61c2-3dc7" name="Minimoto Steel Helm" hidden="false" collective="false" import="true" targetId="38b5-a50d-24f0-4435" type="selectionEntry"/>
+            <entryLink id="571d-c5d6-1fce-9652" name="Magatama" hidden="false" collective="false" import="true" targetId="370e-e02b-d9ee-8b80" type="selectionEntry"/>
+            <entryLink id="8bfb-c51c-7bcc-308d" name="Wolf Heart Talisman" hidden="false" collective="false" import="true" targetId="a56e-8e8e-97b4-ec73" type="selectionEntry"/>
+            <entryLink id="7659-61b9-05f6-4d3a" name="The Eagle Banner" hidden="false" collective="false" import="true" targetId="010e-1205-db10-6a2d" type="selectionEntry"/>
+            <entryLink id="488e-a8bf-cbd9-744e" name="Hand Cannon" hidden="false" collective="false" import="true" targetId="3009-1a3c-223d-cae2" type="selectionEntry"/>
             <entryLink id="be7c-ae31-2dd1-9f29" name="The Hozumi Katana" hidden="false" collective="false" import="true" targetId="5cac-d0cc-1c51-a147" type="selectionEntry"/>
             <entryLink id="dad8-641e-f512-6f85" name="The Kiyozumi Katana" hidden="false" collective="false" import="true" targetId="f882-5ccf-0724-2290" type="selectionEntry"/>
             <entryLink id="139d-d488-a83c-e5f3" name="The Sunrise Katana" hidden="false" collective="false" import="true" targetId="a54a-aa90-53f2-d9df" type="selectionEntry"/>
@@ -4971,71 +4819,11 @@ Exclusion [Hiroto]</characteristic>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="8b74-94b3-5b01-5f11" name="Paragon" hidden="false" collective="false" import="true" targetId="9059-1680-57c0-9f71" type="selectionEntry">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f5-1986-098c-0729" type="atLeast"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-        </entryLink>
-        <entryLink id="cbad-ef5d-46d2-5ff6" name="Finesse" hidden="false" collective="false" import="true" targetId="e916-ca9f-75ef-1c24" type="selectionEntry">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f5-1986-098c-0729" type="atLeast"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-        </entryLink>
-        <entryLink id="1099-442c-0410-7699" name="Pacifism" hidden="false" collective="false" import="true" targetId="6bf3-9dca-b4c5-6a3e" type="selectionEntry">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f5-1986-098c-0729" type="atLeast"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-        </entryLink>
-        <entryLink id="331c-ae8f-9429-9ad5" name="Prayer Scroll" hidden="false" collective="false" import="true" targetId="bb42-702b-ab84-a9f9" type="selectionEntry">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f5-1986-098c-0729" type="atLeast"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-        </entryLink>
-        <entryLink id="7866-0959-8269-0920" name="Fujin&apos;s Charm" hidden="false" collective="false" import="true" targetId="5110-9b07-a9dd-d71e" type="selectionEntry">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f5-1986-098c-0729" type="atLeast"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-        </entryLink>
+        <entryLink id="8b74-94b3-5b01-5f11" name="Paragon" hidden="false" collective="false" import="true" targetId="9059-1680-57c0-9f71" type="selectionEntry"/>
+        <entryLink id="cbad-ef5d-46d2-5ff6" name="Finesse" hidden="false" collective="false" import="true" targetId="e916-ca9f-75ef-1c24" type="selectionEntry"/>
+        <entryLink id="1099-442c-0410-7699" name="Pacifism" hidden="false" collective="false" import="true" targetId="6bf3-9dca-b4c5-6a3e" type="selectionEntry"/>
+        <entryLink id="331c-ae8f-9429-9ad5" name="Prayer Scroll" hidden="false" collective="false" import="true" targetId="bb42-702b-ab84-a9f9" type="selectionEntry"/>
+        <entryLink id="7866-0959-8269-0920" name="Fujin&apos;s Charm" hidden="false" collective="false" import="true" targetId="5110-9b07-a9dd-d71e" type="selectionEntry"/>
         <entryLink id="fcfa-0cd4-f690-37c4" name="Accepted into the Shadow" hidden="false" collective="false" import="true" targetId="5a4f-6e3e-0e2b-3e81" type="selectionEntry"/>
         <entryLink id="73ee-bed5-ac20-33a0" name="Broken Spirit" hidden="false" collective="false" import="true" targetId="66cd-f1c0-8da8-e6d9" type="selectionEntry"/>
         <entryLink id="a953-c1b7-053a-2444" name="Inducted into the Miko" hidden="false" collective="false" import="true" targetId="0ceb-eea9-97e0-8726" type="selectionEntry"/>
@@ -5095,6 +4883,5 @@ Exclusion [Hiroto]</characteristic>
   </sharedInfoGroups>
   <catalogueLinks>
     <catalogueLink id="0809-f48a-8f64-4455" name="Library-Ronin" targetId="b489-b304-948d-52d0" type="catalogue" importRootEntries="true"/>
-    <catalogueLink id="0814-2514-9dab-ccf1" name="Library-Playtesting" targetId="a19b-8b81-40a5-05ca" type="catalogue" importRootEntries="true"/>
   </catalogueLinks>
 </catalogue>

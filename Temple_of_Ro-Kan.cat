@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="4213-717c-2228-e731" name="Temple of Ro-Kan" revision="41" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="19" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="4213-717c-2228-e731" name="Temple of Ro-Kan" revision="47" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="19" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <selectionEntries>
     <selectionEntry id="5048-3a52-5689-6d0b" name="Spiritual Harmony" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -740,7 +740,7 @@ Immediately distribute 4 additional Ki Tokens to non-Soulles models in the Warba
           <profiles>
             <profile id="9387-ee43-f089-5172" name="Virtue" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
               <characteristics>
-                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">While this model is in play, when a Friendly model spends a Virtue Token you may choose the following effect: 
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">While this model is in play, when a Friendly Monk spends a Virtue Token you may choose the following effect:
 • This model may Focus as a Simple Action rather than a Complex Action</characteristic>
               </characteristics>
             </profile>
@@ -2141,7 +2141,7 @@ When this model spends a Virtue Token you may choose 1 of the following effects:
         <entryLink id="115a-4363-b23a-791a" name="Enhancements" hidden="false" collective="false" import="true" targetId="d716-36e8-af1d-0a1f" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
-        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="22"/>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="19"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="4483-bc0f-8e0c-41c9" name="Kota" hidden="false" collective="false" import="true" type="model">
@@ -2367,7 +2367,7 @@ When Deploying this model you must choose to Deploy either the Kota - Fox Form m
         <entryLink id="b3a1-dd30-21e7-723b" name="Enhancements" hidden="false" collective="false" import="true" targetId="d716-36e8-af1d-0a1f" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
-        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="21"/>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="19"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="17bf-5172-f1ad-8a5c" name="Koji" hidden="false" collective="false" import="true" type="model">
@@ -2833,14 +2833,10 @@ When Deploying this model you must choose to Deploy either the Kota - Fox Form m
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c81b-cb45-9579-b5dd" type="atLeast"/>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="33ea-e647-b8c5-2267" type="atLeast"/>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="44e6-4155-6b9b-2521" type="atLeast"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="ffd8-72ee-dab5-a006" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
-        </modifier>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ffd8-72ee-dab5-a006" type="atLeast"/>
-          </conditions>
         </modifier>
       </modifiers>
       <constraints>
@@ -2892,6 +2888,9 @@ When Deploying this model you must choose to Deploy either the Kota - Fox Form m
 
 During the Starting Phase, this model gains a Luck Token.
 Whenever a Friendly model within 6” makes a Fear Test, Attack Roll, Defence Roll, Damage Roll or Opposed Ki Test this model may spend the token to reroll one of the dice.
+
+
+This model’s Luck Tokens may only be used by Animal, Villager and Yokai models.
 
 When this model declares a Charge Action, this model may Move through Destructible terrain; if you do, remove the terrain from the battlefield.</characteristic>
               </characteristics>
@@ -3812,6 +3811,16 @@ Permitted [Monks, up to 1 Sōhei, Construct, Kami, Ronin Kami]</characteristic>
           <infoLinks>
             <infoLink id="bbe0-5abc-042f-121b" name="Dance of Dragons" hidden="false" targetId="2506-a61b-ee09-b448" type="infoGroup"/>
           </infoLinks>
+        </infoGroup>
+        <infoGroup name="Unique Effects" id="80e0-4acf-99a7-49f5" hidden="false">
+          <profiles>
+            <profile name="Virtue" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects" hidden="false" id="d7b9-b3c4-fede-21a8">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">While this model is in play, when a Friendly Monk model spends a Virtue Token you may choose for that Friendly Monk model to gain the following effect:
+- This model gains an additional dice on a challenge test. You may use this ability after rolling the dice regardless of the usual modifier rules.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
         </infoGroup>
       </infoGroups>
       <categoryLinks>
@@ -5216,15 +5225,10 @@ This model may be Placed into BtB with an Enemy model when using this unique eff
     </selectionEntry>
     <selectionEntry id="6c62-ccd2-7b90-19e2" name="The Nine-Tailed Fox" hidden="false" collective="false" import="true" type="model">
       <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="477a-e693-0888-08f7" type="atLeast"/>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="44e6-4155-6b9b-2521" type="lessThan"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="lessThan" value="1" field="selections" scope="roster" childId="44e6-4155-6b9b-2521" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </conditions>
         </modifier>
       </modifiers>
       <profiles>
@@ -5303,15 +5307,10 @@ This model may only be included in Followers of Inari Theme.</characteristic>
     </selectionEntry>
     <selectionEntry id="b1bb-dffc-9c22-c9ae" name="Tengoko" hidden="false" collective="false" import="true" type="model">
       <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="477a-e693-0888-08f7" type="atLeast"/>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="44e6-4155-6b9b-2521" type="lessThan"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="lessThan" value="1" field="selections" scope="roster" childId="44e6-4155-6b9b-2521" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </conditions>
         </modifier>
       </modifiers>
       <constraints>
@@ -5876,14 +5875,9 @@ While attempting to Target this model, Enemy models lose Sixth Sense.</character
       <modifiers>
         <modifier type="append" field="name" value="- Fox Form"/>
         <modifier type="set" field="hidden" value="true">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="477a-e693-0888-08f7" type="atLeast"/>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="44e6-4155-6b9b-2521" type="lessThan"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
+          <conditions>
+            <condition type="lessThan" value="1" field="selections" scope="roster" childId="44e6-4155-6b9b-2521" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </conditions>
         </modifier>
       </modifiers>
       <constraints>
@@ -6981,6 +6975,105 @@ This profile card begins the game with 5 Ki Tokens, instead of its Maximum Ki To
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="24"/>
       </costs>
     </selectionEntry>
+    <selectionEntry type="model" import="true" name="Byiba" hidden="false" id="4704-b511-13ad-3c90" collective="false">
+      <categoryLinks>
+        <categoryLink name="Animal" hidden="false" id="bf1d-64da-78ab-fd03" targetId="c382-9ab3-9924-e30a" primary="false"/>
+        <categoryLink name="Brutal" hidden="false" id="0a8d-2ab9-177c-6e13" targetId="f62f-dd0b-4f06-06a6" primary="false"/>
+        <categoryLink targetId="e966-5aa5-b165-496d" id="72a9-6020-5fd2-33f6" primary="false" name="Dog"/>
+        <categoryLink targetId="afd4-8041-e359-223c" id="d3ac-1220-5ec7-9e3f" primary="false" name="Unique"/>
+        <categoryLink targetId="0ca8-2040-37f2-a1e0" id="0293-32a7-ba7e-746e" primary="true" name="Faction Profile Cards"/>
+      </categoryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="18"/>
+      </costs>
+      <profiles>
+        <profile name="Byiba" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile" hidden="false" id="219c-2d70-a0b8-55f1">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277"/>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">1</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">5</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">4</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">0</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">7 OOOOO OO</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Large 50mm</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup name="Traits" id="af77-e047-d96e-c198" hidden="false">
+          <profiles>
+            <profile name="Byiba" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits" hidden="false" id="76f4-4541-a8d3-ef1d">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Aware, Bodyguard [Villager](3&quot;), Fear (4), Fearless, Immune [Control, Stunned], Sixth Sense</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink name="Fearless" id="212e-aef9-c36b-1236" hidden="false" type="rule" targetId="5d6f-1746-9080-aca5"/>
+            <infoLink name="Bodyguard" id="61e2-3e8c-4003-935a" hidden="false" type="rule" targetId="0286-6d10-a236-e0c3"/>
+            <infoLink name="Fear" id="50c3-283b-b7d1-10a3" hidden="false" type="rule" targetId="3586-4583-7f10-1f31"/>
+            <infoLink name="Immune" id="defb-6443-ba7a-a52a" hidden="false" type="rule" targetId="ea08-b25e-0ea8-af73"/>
+            <infoLink name="Sixth Sense" id="4bb6-e306-a7f0-2adb" hidden="false" type="rule" targetId="ec49-3908-f1d1-8de2"/>
+            <infoLink name="Aware" id="0a47-5dae-aa99-b60a" hidden="false" type="rule" targetId="ff4a-6b14-09dd-2343"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup name="Melee Weapon" id="13aa-c2ca-4a4c-c8d9" hidden="false">
+          <profiles>
+            <profile name="Bite" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon" hidden="false" id="4ef4-f408-a581-5131">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+2</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e"/>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Powerful Attack (1), Push Defence (0)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289">Any Traits or Ki Feats that would reduce the final Damage taken from this weapon (e.g. Tough, Durable, Touch the Void) are ignored.
+Armour affects the Damage Roll as usual.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink name="Push Defence" id="80f3-a9b9-ecb5-e048" hidden="false" type="rule" targetId="74fc-a971-d9c2-278c"/>
+            <infoLink name="Powerful Attack" id="adbf-8ad1-54f2-7853" hidden="false" type="rule" targetId="d56a-058d-95d9-5b60"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup name="Ki Feats" id="152e-96fe-1206-213a" hidden="false">
+          <infoLinks>
+            <infoLink name="Warning Bark" id="e1a3-3c1c-d606-e299" hidden="false" type="infoGroup" targetId="7c81-2a94-798f-9541"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup name="Unique Effects" id="0f5a-9fde-59ac-2d8c" hidden="false">
+          <profiles>
+            <profile name="Unique Effects" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects" hidden="false" id="61b8-b78a-92f5-f86d">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">During an Enemy Unknown model&apos;s activation in which it enters BtB with this model, that Enemy model gains a Stunned Marker.
+
+
+This model cannot be affected by Gokusatsu Attack.
+
+
+If this model has LoS to Enemy models at the start of their activation, the Enemy models lose the Intangible trait and cannot gain it until the end of that Activation.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </infoGroup>
+      </infoGroups>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="c81b-cb45-9579-b5dd" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="33ea-e647-b8c5-2267" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="44e6-4155-6b9b-2521" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="ffd8-72ee-dab5-a006" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+    </selectionEntry>
   </selectionEntries>
   <entryLinks>
     <entryLink id="0f32-6304-1fad-6541" name="Ashinaga Tenaga" hidden="false" collective="false" import="true" targetId="e7ea-c376-aac2-5726" type="selectionEntry">
@@ -7013,13 +7106,6 @@ This profile card begins the game with 5 Ki Tokens, instead of its Maximum Ki To
       </categoryLinks>
     </entryLink>
     <entryLink id="3233-5576-e3ac-43bd" name="Hiroto, Drunken Master" hidden="true" collective="false" import="true" targetId="f616-46d8-5907-fafd" type="selectionEntry">
-      <modifiers>
-        <modifier type="set" field="hidden" value="false">
-          <conditions>
-            <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="294d-a0fa-f437-2fca" type="atLeast"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <categoryLinks>
         <categoryLink id="d3e9-0c77-35bb-9b77" name="Ronin Profile Cards" hidden="false" targetId="9fba-f50b-c8f7-8396" primary="true"/>
       </categoryLinks>
@@ -7260,51 +7346,11 @@ This profile card begins the game with 5 Ki Tokens, instead of its Maximum Ki To
       </categoryLinks>
     </entryLink>
     <entryLink id="9526-a47e-2db3-efec" name="Brotherhood" hidden="false" collective="false" import="true" targetId="9402-edcc-93a2-aef1" type="selectionEntry"/>
-    <entryLink id="7a76-96fb-9320-e4ad" name="Batu" hidden="true" collective="false" import="true" targetId="5e97-28ce-9c1b-6b8b" type="selectionEntry">
-      <modifiers>
-        <modifier type="set" field="hidden" value="false">
-          <conditions>
-            <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f616-46d8-5907-fafd" type="atLeast"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-    </entryLink>
-    <entryLink id="aae5-a176-120e-98f4" name="Tru&apos;pah" hidden="true" collective="false" import="true" targetId="82bb-a55d-5366-baf2" type="selectionEntry">
-      <modifiers>
-        <modifier type="set" field="hidden" value="false">
-          <conditions>
-            <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f616-46d8-5907-fafd" type="atLeast"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-    </entryLink>
-    <entryLink id="e059-22e7-bb05-8db1" name="Khendish" hidden="true" collective="false" import="true" targetId="dc54-b54e-1428-7c3e" type="selectionEntry">
-      <modifiers>
-        <modifier type="set" field="hidden" value="false">
-          <conditions>
-            <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f616-46d8-5907-fafd" type="atLeast"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-    </entryLink>
-    <entryLink id="7475-6007-e11e-e9b1" name="Two Lone Swordsmen" hidden="true" collective="false" import="true" targetId="29e4-7f5e-593d-2445" type="selectionEntry">
-      <modifiers>
-        <modifier type="set" field="hidden" value="false">
-          <conditions>
-            <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f616-46d8-5907-fafd" type="atLeast"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-    </entryLink>
-    <entryLink id="2c11-011b-a76f-f6df" name="Shosu" hidden="true" collective="false" import="true" targetId="39f7-4bb9-edb9-bde8" type="selectionEntry">
-      <modifiers>
-        <modifier type="set" field="hidden" value="false">
-          <conditions>
-            <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f616-46d8-5907-fafd" type="atLeast"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-    </entryLink>
+    <entryLink id="7a76-96fb-9320-e4ad" name="Batu" hidden="true" collective="false" import="true" targetId="5e97-28ce-9c1b-6b8b" type="selectionEntry"/>
+    <entryLink id="aae5-a176-120e-98f4" name="Tru&apos;pah" hidden="true" collective="false" import="true" targetId="82bb-a55d-5366-baf2" type="selectionEntry"/>
+    <entryLink id="e059-22e7-bb05-8db1" name="Khendish" hidden="true" collective="false" import="true" targetId="dc54-b54e-1428-7c3e" type="selectionEntry"/>
+    <entryLink id="7475-6007-e11e-e9b1" name="Two Lone Swordsmen" hidden="true" collective="false" import="true" targetId="29e4-7f5e-593d-2445" type="selectionEntry"/>
+    <entryLink id="2c11-011b-a76f-f6df" name="Shosu" hidden="true" collective="false" import="true" targetId="39f7-4bb9-edb9-bde8" type="selectionEntry"/>
     <entryLink id="b650-0a7f-2f6c-97e1" name="Ichiro" hidden="false" collective="false" import="true" targetId="1edd-65f3-2fdb-67b9" type="selectionEntry">
       <modifiers>
         <modifier type="set" field="hidden" value="false">
@@ -7543,6 +7589,13 @@ This profile card begins the game with 5 Ki Tokens, instead of its Maximum Ki To
       <categoryLinks>
         <categoryLink id="b33b-cc39-80a9-a068" name="Ronin Profile Cards" hidden="false" targetId="9fba-f50b-c8f7-8396" primary="true"/>
       </categoryLinks>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="2af4-e298-ee7f-b85f" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </entryLink>
   </entryLinks>
   <sharedSelectionEntries>

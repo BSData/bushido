@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="62e4-ab79-1c4c-9ffe" name="Bushido: Risen Sun" revision="19" battleScribeVersion="2.03" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="62e4-ab79-1c4c-9ffe" name="Bushido: Risen Sun" revision="20" battleScribeVersion="2.03" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <costTypes>
     <costType id="a111-8656-5c05-7415" name=" Rice" defaultCostLimit="-1.0" hidden="false"/>
   </costTypes>
@@ -279,7 +279,7 @@
     <categoryEntry id="5a76-c3ea-5cb7-471f" name="Faction: The Awoken" hidden="false"/>
   </categoryEntries>
   <forceEntries>
-    <forceEntry id="2150-40b1-52f8-4a8a" name="Risen Sun" hidden="true">
+    <forceEntry id="2150-40b1-52f8-4a8a" name="Risen Sun" hidden="false">
       <categoryLinks>
         <categoryLink id="849c-cf11-e943-d370" name="Communal Cards" hidden="false" targetId="69a2-397e-9d7b-a47d" primary="false"/>
         <categoryLink id="2870-03c0-ca95-7aea" name="Reference Cards" hidden="false" targetId="5073-f00b-a8f6-5e3b" primary="false"/>
