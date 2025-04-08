@@ -9,13 +9,6 @@ Bushido
 
 [![Chat on Discord](https://img.shields.io/discord/558412685981777922.svg?logo=discord&style=popout-square)](https://discord.gg/KqPVhds)
 
-#### Contents ####
-
-* [Overview][]
-* [Bushido][]
-* [Bugs, Errors, and Suggestions][]
-* [Links][]
-
 ## Overview ##
 [Overview]: #overview
 BSData organisation created this project. It's a GitHub repository of datafiles.
