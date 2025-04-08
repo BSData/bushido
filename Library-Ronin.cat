@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="b489-b304-948d-52d0" name="Library-Ronin" revision="45" battleScribeVersion="2.03" library="true" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="18" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="b489-b304-948d-52d0" name="Library-Ronin" revision="46" battleScribeVersion="2.03" library="true" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="18" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <selectionEntries>
     <selectionEntry id="4e24-3a7e-77bc-dfed" name="Balance" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -9798,6 +9798,103 @@ This model can make only one Bird Strike Ranged Attack per turn.</characteristic
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="17"/>
       </costs>
+    </selectionEntry>
+    <selectionEntry type="model" import="true" name="Lord Toad" hidden="false" id="0f7e-4984-e178-e212">
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="19"/>
+      </costs>
+      <categoryLinks>
+        <categoryLink name="Asura" hidden="false" id="f142-8ca6-6c55-1b71" targetId="c48e-5e32-f0b0-1cfe" primary="false"/>
+        <categoryLink name="Toad" hidden="false" id="0a83-b752-30ea-cc9e" targetId="9b2d-f963-4c9b-432f" primary="false"/>
+        <categoryLink name="Celestial" hidden="false" id="bc81-31be-d521-4a04" targetId="b9c7-baf3-6795-acf7" primary="false"/>
+      </categoryLinks>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="1732-03e7-06d0-7c8a" includeChildSelections="true"/>
+      </constraints>
+      <profiles>
+        <profile name="Lord Toad" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile" hidden="false" id="4f26-a3c1-8a1c-865e">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">3</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33">3</characteristic>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">2</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">10</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">7 OOOOO OO</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Medium 40mm</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup name="Traits" id="aa6b-f0e2-4ebf-48e9" hidden="false">
+          <profiles>
+            <profile name="Traits" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits" hidden="false" id="1e8d-0f8a-dd3f-e36d">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Cloudwalk, Ranged Defence (2), Soulless, Tough (X)</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink name="Ranged Defence " id="ec09-89a2-f674-e22f" hidden="false" type="rule" targetId="9b8d-9ca9-e25d-3988"/>
+            <infoLink name="Cloudwalk" id="9884-bea5-dc4f-dbdc" hidden="false" type="rule" targetId="538c-1266-626b-fcc9"/>
+            <infoLink name="Soulless" id="f306-0c75-d6d9-841b" hidden="false" type="rule" targetId="af31-aad0-fcea-9590"/>
+            <infoLink name="Tough" id="eafe-370c-75c3-7135" hidden="false" type="rule" targetId="5613-a6cf-495a-229f"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup name="Melee Weapon" id="6c02-e4cf-8893-0dee" hidden="false">
+          <profiles>
+            <profile name="Gunbai" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon" hidden="false" id="efed-6a90-0f21-1e04">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+0</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Reach</characteristic>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Stun Attack (1), Sweep Defence (1)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink name="Reach" id="cc5f-43e7-d17d-8060" hidden="false" type="rule" targetId="e28e-d5dd-a262-1101"/>
+            <infoLink name="Stun Attack" id="8c60-773b-cd70-192a" hidden="false" type="rule" targetId="ae27-975e-6c4b-d84e"/>
+            <infoLink name="Sweep Defence" id="bbc2-6311-2c5a-7c7f" hidden="false" type="rule" targetId="5338-2d8f-f189-062d"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup name="Ranged Weapon" id="8217-071a-1b99-d1ae" hidden="false">
+          <profiles>
+            <profile name="Tongue" typeId="7e20-258e-bf92-18f9" typeName="Ranged Weapon" hidden="false" id="7946-3731-edcd-00cf">
+              <characteristics>
+                <characteristic name="Ranged Weapon Strength" typeId="15aa-b6bd-6923-271f">+1</characteristic>
+                <characteristic name="Range Bands" typeId="be6a-50c6-d691-e2e9">-/2/-</characteristic>
+                <characteristic name="Traits" typeId="3410-4428-ef91-eb61"/>
+                <characteristic name="Specials" typeId="cdaf-b6ac-89d4-39ef"/>
+                <characteristic name="Unique Effects" typeId="3bf8-6525-f003-4990">When an Attack using this weapon is Successful, you may immediately use the Swallow Up Ki Feat with Range 2&quot;.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </infoGroup>
+        <infoGroup name="Ki Feats" id="9054-9aa6-6aff-7f34" hidden="false">
+          <infoLinks>
+            <infoLink name="Lick the Frog" id="7514-56e3-993c-9a2e" hidden="false" type="infoGroup" targetId="d877-e6f6-dfb4-549e"/>
+            <infoLink name="Swallow Up" id="921d-3e95-af7b-4dc0" hidden="false" type="infoGroup" targetId="009b-5a87-72f6-02a7"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup name="Unique Effects" id="7c93-1f3d-1f7e-9edc" hidden="false">
+          <profiles>
+            <profile name="Amphibian" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects" hidden="false" id="16b9-3c4d-cf45-4ede">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">While in the area of a Quagmire or Incoming Tide, this model gains +2 Move and Intangible.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Variable Toughness" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects" hidden="false" id="55d3-a81a-39f8-1135">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">This model&apos;s Tough value is variable. X is equal to the number of marked Wound boxes this model has.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </infoGroup>
+      </infoGroups>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
