@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="b4d7-0e2a-728f-20cf" name="Kage Kaze Zoku" revision="36" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="19" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="b4d7-0e2a-728f-20cf" name="Kage Kaze Zoku" revision="37" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="19" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <selectionEntries>
     <selectionEntry id="33d5-3364-f1d4-a94c" name="Lockdown" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -4545,7 +4545,15 @@ If Phantom was not recruited into the Warband, remove this model from play and r
         <categoryLink id="0adc-1ed9-9bf6-55ad" name="Ronin Profile Cards" hidden="false" targetId="9fba-f50b-c8f7-8396" primary="true"/>
       </categoryLinks>
     </entryLink>
-    <entryLink import="true" name="Lord Toad" hidden="false" id="2daa-fb32-1f43-ea31" type="selectionEntry" targetId="0f7e-4984-e178-e212"/>
+    <entryLink import="true" name="Lord Toad" hidden="false" id="2daa-fb32-1f43-ea31" type="selectionEntry" targetId="0f7e-4984-e178-e212">
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="4e1c-43c9-596d-ef16" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="08df-a834-9433-f20a" name="Karapan" hidden="false" collective="false" import="true" type="model">

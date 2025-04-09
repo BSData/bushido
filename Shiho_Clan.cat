@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="2276-2df6-78a7-841d" name="Shiho Clan" revision="43" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="19" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="2276-2df6-78a7-841d" name="Shiho Clan" revision="44" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="19" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <categoryEntries>
     <categoryEntry id="7fa5-7ef0-59c5-f657" name="Tanaka" hidden="false"/>
   </categoryEntries>
@@ -3884,7 +3884,15 @@ Whenever a Friendly model within 6&quot; of a model with a Luck Token makes a Fe
         <categoryLink id="7d9e-e607-66f0-321e" name="Ronin Profile Cards" hidden="false" targetId="9fba-f50b-c8f7-8396" primary="true"/>
       </categoryLinks>
     </entryLink>
-    <entryLink import="true" name="Lord Toad" hidden="false" id="a4d7-41ec-3fdf-ff32" type="selectionEntry" targetId="0f7e-4984-e178-e212"/>
+    <entryLink import="true" name="Lord Toad" hidden="false" id="a4d7-41ec-3fdf-ff32" type="selectionEntry" targetId="0f7e-4984-e178-e212">
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="ec59-5e92-0626-3540" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="bcc0-d49e-e6f8-4c5c" name="Heimin" hidden="false" collective="false" import="true" type="model">

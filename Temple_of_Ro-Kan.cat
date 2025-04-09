@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="4213-717c-2228-e731" name="Temple of Ro-Kan" revision="48" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="19" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="4213-717c-2228-e731" name="Temple of Ro-Kan" revision="49" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="19" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <selectionEntries>
     <selectionEntry id="5048-3a52-5689-6d0b" name="Spiritual Harmony" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -7597,7 +7597,15 @@ If this model has LoS to Enemy models at the start of their activation, the Ene
         </modifier>
       </modifiers>
     </entryLink>
-    <entryLink import="true" name="Lord Toad" hidden="false" id="cac4-f306-bca2-bf5b" type="selectionEntry" targetId="0f7e-4984-e178-e212"/>
+    <entryLink import="true" name="Lord Toad" hidden="false" id="cac4-f306-bca2-bf5b" type="selectionEntry" targetId="0f7e-4984-e178-e212">
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="2af4-e298-ee7f-b85f" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="fdb3-04df-ec18-16cd" name="Fisherman" hidden="false" collective="false" import="true" type="model">

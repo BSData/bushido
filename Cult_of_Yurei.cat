@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="1ac7-2939-2874-7530" name="Cult of Yurei" revision="39" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="19" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="1ac7-2939-2874-7530" name="Cult of Yurei" revision="40" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="19" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <selectionEntries>
     <selectionEntry id="5048-3a52-5689-6d0b" name="Drain Spirit" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -8135,7 +8135,15 @@ You may choose a Kami with any Rice Cost including &apos;Su&apos;.</characterist
         <categoryLink id="10e5-f213-5626-fad8" name="Reference Cards" hidden="false" targetId="5073-f00b-a8f6-5e3b" primary="true"/>
       </categoryLinks>
     </entryLink>
-    <entryLink import="true" name="Lord Toad" hidden="false" id="151b-b72a-c2e2-da86" type="selectionEntry" targetId="0f7e-4984-e178-e212"/>
+    <entryLink import="true" name="Lord Toad" hidden="false" id="151b-b72a-c2e2-da86" type="selectionEntry" targetId="0f7e-4984-e178-e212">
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="8a75-ceb1-bdf5-c64b" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="9449-ed36-7d0f-1eeb" name="Large Rat Swarm" hidden="false" collective="false" import="true" type="model">

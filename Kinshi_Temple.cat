@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="67f3-e3c0-9b54-71fa" name="Kinshi Temple" revision="18" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="19" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="67f3-e3c0-9b54-71fa" name="Kinshi Temple" revision="19" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="19" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <selectionEntries>
     <selectionEntry id="096c-e1e9-7274-9439" name="Master Shi" hidden="false" collective="false" import="true" type="model">
       <constraints>
@@ -1366,7 +1366,15 @@ Permitted [Kinshi Temple models, Ronin models]</characteristic>
         <categoryLink id="39f4-f303-f911-5692" name="Ronin Profile Cards" hidden="false" targetId="9fba-f50b-c8f7-8396" primary="true"/>
       </categoryLinks>
     </entryLink>
-    <entryLink import="true" name="Lord Toad" hidden="false" id="1640-31cc-7e00-9bcb" type="selectionEntry" targetId="0f7e-4984-e178-e212"/>
+    <entryLink import="true" name="Lord Toad" hidden="false" id="1640-31cc-7e00-9bcb" type="selectionEntry" targetId="0f7e-4984-e178-e212">
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="ecb4-9578-acca-a48b" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="1c52-10dc-2bf8-938b" name="Kodai" hidden="false" collective="false" import="true" type="model">
