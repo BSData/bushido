@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="d2c8-91e9-1a97-89b4" name="Minimoto Clan" revision="38" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="19" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="d2c8-91e9-1a97-89b4" name="Minimoto Clan" revision="39" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="19" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <categoryEntries>
     <categoryEntry id="6b68-2575-cc8f-c08f" name="Armour 3+" hidden="false"/>
   </categoryEntries>
@@ -3272,14 +3272,10 @@ When this model performs a Wait Action it gains Tough (2) and Resistance (2) unt
         </selectionEntry>
         <selectionEntry id="d220-6535-7783-6b13" name="Teachings of Yashushi" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
-            <modifier type="set" field="hidden" value="false">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e12a-f782-3281-7444" type="instanceOf"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition type="notInstanceOf" value="1" field="selections" scope="parent" childId="e12a-f782-3281-7444" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </conditions>
             </modifier>
             <modifier type="set" value="Teachings of Yo! Sushi" field="name">
               <conditions>
