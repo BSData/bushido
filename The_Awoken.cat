@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="7615-d14e-1ab8-41ed" name="The Awoken" revision="8" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="19" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="7615-d14e-1ab8-41ed" name="The Awoken" revision="9" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="19" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <selectionEntries>
     <selectionEntry id="357b-ee70-73b0-9b34" name="Joyless Smiles and Dark Eyes" hidden="false" collective="false" import="true" type="upgrade">
       <profiles>
@@ -1367,7 +1367,7 @@ If this model is within a Webbed Ground Terrain feature then it does not lose a
             <profile name=" Bite" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon" hidden="false" id="6a0e-02f3-d5ee-be1c">
               <characteristics>
                 <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">-1</characteristic>
-                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Pierce (1), Poison (1/1)</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Pierce (2), Poison (1/1)</characteristic>
                 <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Combo Attack (0), Sidestep Defence (1)</characteristic>
                 <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
               </characteristics>
@@ -1379,6 +1379,21 @@ If this model is within a Webbed Ground Terrain feature then it does not lose a
             <infoLink name="Combo Attack " id="8ca8-8928-9f00-2e16" hidden="false" targetId="78ab-6a94-be24-8f74" type="rule"/>
             <infoLink name="Poison " id="5417-39c3-be48-c15d" hidden="false" targetId="7290-85f4-42cf-0b75" type="rule"/>
           </infoLinks>
+        </infoGroup>
+        <infoGroup name="Unique Effects" id="5acb-ed5e-55d3-0487" hidden="false">
+          <profiles>
+            <profile name="Web" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects" hidden="false" id="f3c9-4732-706a-ff23">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">This model may perform a Wait action to put a Webbed Ground Terrain into play in BtB with this model.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Swarm" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects" hidden="false" id="426a-a0c8-8e8e-ccdb">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">This model&apos;s Melee Pool and Ki Statistics are variable.
+X is equal to the number of Wounds it has remaining unmarked on its Wound Track.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
         </infoGroup>
       </infoGroups>
       <categoryLinks>
