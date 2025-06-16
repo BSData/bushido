@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="0b85-0901-eb64-b84b" name="The Savage Wave" revision="40" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="19" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="0b85-0901-eb64-b84b" name="The Savage Wave" revision="41" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="19" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <selectionEntries>
     <selectionEntry id="5048-3a52-5689-6d0b" name="Ambush" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -1544,7 +1544,7 @@ For any effect which adds or removes Control Markers, Darkness Counters are cons
             <profile id="ae0d-2045-b29f-475e" name="Paired Cleavers" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
               <characteristics>
                 <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+2</characteristic>
-                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Brutal (+1)</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Brutal (1)</characteristic>
                 <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Combo Attack (0), Powerful Attack (1)</characteristic>
                 <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
               </characteristics>
@@ -3797,7 +3797,7 @@ Permitted [Onisho]</characteristic>
         </profile>
       </profiles>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Bound by Desire" hidden="false" id="d505-1797-472d-560c">
+    <selectionEntry type="upgrade" import="true" name="Bound by Wild Desire" hidden="false" id="d505-1797-472d-560c">
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1"/>
       </costs>
@@ -3805,10 +3805,424 @@ Permitted [Onisho]</characteristic>
         <categoryLink targetId="d360-71aa-ca22-ba3c" id="6cca-95be-e97a-c82a" primary="true" name="Faction Event Cards"/>
       </categoryLinks>
       <profiles>
-        <profile name="Bound by Desire" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card" hidden="false" id="40b5-a653-c12b-8af2">
+        <profile name="Bound by Wild Desire" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card" hidden="false" id="40b5-a653-c12b-8af2">
           <characteristics>
             <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">Play before a Melee Exchange between a Friendly Faction Onisho and an Enemy model.
 Both models gain a Death Sentence Marker.
+
+Requirement [Ring of Fire theme]</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <constraints>
+        <constraint type="max" value="2" field="selections" scope="roster" shared="true" id="5721-b0ee-cae9-7876" includeChildSelections="true" includeChildForces="true"/>
+      </constraints>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="lessThan" value="1" field="selections" scope="roster" childId="af1e-831f-1050-76d5" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </selectionEntry>
+    <selectionEntry id="5ec7-e278-dc87-fc2f" name="Kuroko" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d14c-bf06-fc37-16e2" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2125-1289-3bb1-15c1" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="bd75-31a1-5a23-cd2d" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="bec1-2154-3ab5-7979" type="atLeast"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="218d-db50-2138-c095" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="94e2-8692-91c4-a978" name="Kuroko" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">3</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">2</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">6</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">8 OOOOO OOO</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Medium 40mm</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="902e-fba8-f1f1-4742" name="Traits" hidden="false">
+          <profiles>
+            <profile id="d9dd-1f6e-d427-bdaf" name="Kuroko" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Aggressive,  Bravery, Fear (5), Intimidate, Tough (1)</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="7859-732a-3215-e31c" name="Bravery" hidden="false" targetId="f9b2-38d2-7cda-de6e" type="rule"/>
+            <infoLink id="40ea-a209-9e8e-a382" name="Fear" hidden="false" targetId="3586-4583-7f10-1f31" type="rule"/>
+            <infoLink id="d429-1dbc-1e7f-1148" name="Tough" hidden="false" targetId="5613-a6cf-495a-229f" type="rule"/>
+            <infoLink id="e4a6-0d8e-2275-1bf5" name="Aggressive" hidden="false" targetId="a445-e041-8d5f-aa28" type="rule"/>
+            <infoLink id="2f02-5069-ecfc-1ba0" name="Intimidate" hidden="false" targetId="f57d-b137-75c8-7329" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="f0b7-d0f5-41bf-509b" name="Melee Weapon" hidden="false">
+          <profiles>
+            <profile id="4781-f9b6-bc80-4273" name="Arbalest" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+1</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Brutal (+1)</characteristic>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Push Defence (0)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="ee0d-489a-8518-0287" name="Brutal" hidden="false" targetId="5d95-975e-a72c-25f3" type="rule"/>
+            <infoLink id="22a5-9d22-68ae-59cc" name="Push Defence" hidden="false" targetId="74fc-a971-d9c2-278c" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="103f-6731-0f5b-f8d2" name="Ki Feats" hidden="false">
+          <infoLinks>
+            <infoLink id="0ac4-0252-41b9-643b" name="Consume Soul" hidden="false" targetId="85bd-ac0d-842c-3097" type="infoGroup"/>
+            <infoLink id="cf42-3a4a-7e89-3422" name="Inertia" hidden="false" targetId="b86c-1b3f-9798-0c53" type="infoGroup"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="9a89-656d-c39b-c5da" name="Ranged Weapon" hidden="false">
+          <profiles>
+            <profile id="3b21-a808-e658-57b0" name="Arbalest" hidden="false" typeId="7e20-258e-bf92-18f9" typeName="Ranged Weapon">
+              <characteristics>
+                <characteristic name="Ranged Weapon Strength" typeId="15aa-b6bd-6923-271f">+2</characteristic>
+                <characteristic name="Range Bands" typeId="be6a-50c6-d691-e2e9">7/14/21</characteristic>
+                <characteristic name="Traits" typeId="3410-4428-ef91-eb61">Reload (1), Ammo (2), Pierce (2), Sharp (2)</characteristic>
+                <characteristic name="Specials" typeId="cdaf-b6ac-89d4-39ef"/>
+                <characteristic name="Unique Effects" typeId="3bf8-6525-f003-4990">This weapon gains Sweep Attack (0) when making Ranged Attacks against Small or Tiny Targets that are not Swarms.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="e2cc-1fb6-71b2-8fac" name="Reload" hidden="false" targetId="9736-df56-0b62-b1a8" type="rule"/>
+            <infoLink id="c193-0e7e-afb6-cea6" name="Sharp " hidden="false" targetId="6092-9fb5-5196-d1eb" type="rule"/>
+            <infoLink id="3eb6-85d1-68e5-0b95" name="Sweep Attack" hidden="false" targetId="bcbd-fab2-c8e2-6ff7" type="rule"/>
+            <infoLink id="d64a-ceb3-a9af-368b" name="Pierce " hidden="false" targetId="39e4-14d7-5533-6e67" type="rule"/>
+            <infoLink id="ad3d-b5ff-4907-6d3a" name="Ammo" hidden="false" targetId="765d-18a5-7170-9b56" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup name="Unique Effects" id="c30b-c8db-4e2b-7bab" hidden="false">
+          <profiles>
+            <profile name="Unique Effects" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects" hidden="false" id="ff64-2883-ffea-b165">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">During the Starting Phase if this model has no Ammo Tokens, it can remove all Activation Counters and gain 2 Ammo Tokens.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </infoGroup>
+      </infoGroups>
+      <categoryLinks>
+        <categoryLink id="0085-e780-1cab-fd05" name="Faction: The Savage Wave" hidden="false" targetId="c920-0951-5d96-5693" primary="false"/>
+        <categoryLink id="7b56-e72b-c9a0-9af4" name="Onisho" hidden="false" targetId="3507-42ea-bf26-b23d" primary="false"/>
+        <categoryLink id="b4c9-5688-87cf-3772" name="Faction Profile Cards" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
+        <categoryLink id="1582-ad9d-7e8e-6335" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
+        <categoryLink id="abbe-b932-e10c-424a" name="Brutal" hidden="false" targetId="f62f-dd0b-4f06-06a6" primary="false"/>
+        <categoryLink targetId="cb8b-ca36-e256-96c7" id="f0d1-f73e-9ad9-7542" primary="false" name="Kijo"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="2b9c-330e-842b-a558" name="Enhancements" hidden="false" collective="false" import="true" targetId="74e6-2485-1c0a-4227" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="16"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="29f3-2936-a20c-5ba6" name="Junec" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d14c-bf06-fc37-16e2" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2125-1289-3bb1-15c1" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="bd75-31a1-5a23-cd2d" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="bec1-2154-3ab5-7979" type="atLeast"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a4ad-5887-1aa9-3325" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="84f0-efc8-d829-32f1" name="Junec" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">3</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">2</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">6</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">8 OOOOO OOO</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Medium 40mm</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="6f03-75b5-9c6d-86d9" name="Traits" hidden="false">
+          <profiles>
+            <profile id="949f-6ae9-7ad6-f8ae" name="Junec" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Aggressive, Armour (2), Bravery, Fear (5), Parry (1), Tough (1)</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="6ee2-fc7f-074e-e457" name="Bravery" hidden="false" targetId="f9b2-38d2-7cda-de6e" type="rule"/>
+            <infoLink id="12f6-f936-9b2a-6b9b" name="Fear" hidden="false" targetId="3586-4583-7f10-1f31" type="rule"/>
+            <infoLink id="c211-67f8-6e0c-864a" name="Tough" hidden="false" targetId="5613-a6cf-495a-229f" type="rule"/>
+            <infoLink id="bc8c-5be8-166b-8e78" name="Aggressive" hidden="false" targetId="a445-e041-8d5f-aa28" type="rule"/>
+            <infoLink id="0208-e539-6fed-df6d" name="Armour" hidden="false" targetId="8615-1c63-2242-5746" type="rule"/>
+            <infoLink name="Parry" id="156a-2f50-3734-970c" hidden="false" targetId="c7c2-b36e-7952-c79b" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="934f-107e-4f1a-0809" name="Melee Weapon" hidden="false">
+          <profiles>
+            <profile id="7228-e3c9-7f03-ca66" name="Swords" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+2</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Brutal (+1)</characteristic>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Dual Attack (1), Push Attack (1), Slam Attack (1)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="e35a-df1f-8115-b2a0" name="Brutal" hidden="false" targetId="5d95-975e-a72c-25f3" type="rule"/>
+            <infoLink id="117c-4620-9957-2ca5" name="Dual Attack" hidden="false" targetId="86ff-08dc-dfd1-bce9" type="rule"/>
+            <infoLink id="18e3-6637-37a4-65d1" name="Push Attack" hidden="false" targetId="6c26-94ba-6b96-9e1b" type="rule"/>
+            <infoLink id="7006-a345-53aa-4adc" name="Slam Attack" hidden="false" targetId="5d05-b0ce-d7db-9def" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="588c-3c7a-3b0d-b295" name="Ki Feats" hidden="false">
+          <infoLinks>
+            <infoLink id="be7e-c5ef-2df9-0932" name="Consume Soul" hidden="false" targetId="85bd-ac0d-842c-3097" type="infoGroup"/>
+            <infoLink id="e580-ba5d-77ca-324e" name="Rend" hidden="false" targetId="7263-4efc-8b05-233b" type="infoGroup"/>
+            <infoLink id="b5d4-da0e-2d80-e5a5" name="Tsukkakaru" hidden="false" targetId="8fcb-74be-c338-21ed" type="infoGroup"/>
+          </infoLinks>
+        </infoGroup>
+      </infoGroups>
+      <categoryLinks>
+        <categoryLink id="844d-544c-5a98-a18c" name="Faction: The Savage Wave" hidden="false" targetId="c920-0951-5d96-5693" primary="false"/>
+        <categoryLink id="e6d6-5b8d-1691-c969" name="Onisho" hidden="false" targetId="3507-42ea-bf26-b23d" primary="false"/>
+        <categoryLink id="209c-bfe2-d8b2-f318" name="Faction Profile Cards" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
+        <categoryLink id="4aef-e952-4a44-e024" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
+        <categoryLink id="f5c0-a455-caf8-3df7" name="Armour" hidden="false" targetId="f322-702a-ff62-b37e" primary="false"/>
+        <categoryLink id="ccff-6d0f-3ad2-5738" name="Brutal" hidden="false" targetId="f62f-dd0b-4f06-06a6" primary="false"/>
+        <categoryLink targetId="cb8b-ca36-e256-96c7" id="f670-5a8b-38b2-651f" primary="false" name="Kijo"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="a321-fbce-dcb5-506d" name="Enhancements" hidden="false" collective="false" import="true" targetId="74e6-2485-1c0a-4227" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="21"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Inviolable Physique" hidden="false" id="290a-3de2-22e0-a5b3">
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1"/>
+      </costs>
+      <categoryLinks>
+        <categoryLink targetId="d360-71aa-ca22-ba3c" id="7ffd-1b00-3830-244a" primary="true" name="Faction Event Cards"/>
+      </categoryLinks>
+      <profiles>
+        <profile name="Inviolable Physique" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card" hidden="false" id="4862-8ceb-56a8-b61e">
+          <characteristics>
+            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">A Friendly Jokash gains Immune [States] and Endurance until the end of the current Activation.
+That Jokash loses these benefits if a Bound by Wild Desire Event affects him.
+
+Requirement [Jokash &amp; Ring of Fire Theme]</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="fa7b-bff9-7027-4e3a" includeChildSelections="true" includeChildForces="true"/>
+      </constraints>
+      <infoLinks>
+        <infoLink name="Endurance" id="09ae-cbf7-3cb8-1367" hidden="false" type="rule" targetId="7fdc-d150-9641-1235"/>
+        <infoLink name="Immune" id="eaa5-f228-d723-e24c" hidden="false" type="rule" targetId="ea08-b25e-0ea8-af73"/>
+      </infoLinks>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="af1e-831f-1050-76d5" shared="true" includeChildSelections="true"/>
+                <condition type="notInstanceOf" value="1" field="selections" scope="parent" childId="437c-1286-aa66-23b7" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+    </selectionEntry>
+    <selectionEntry id="437c-1286-aa66-23b7" name="Jokash" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d14c-bf06-fc37-16e2" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2125-1289-3bb1-15c1" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="bd75-31a1-5a23-cd2d" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="bec1-2154-3ab5-7979" type="atLeast"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="de83-c2db-69bc-2d58" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="ce42-ac7c-8131-b8d9" name="Jokash" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">3</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">2</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">6</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">9 OOOOO OOOO</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Medium 40mm</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="bb52-589e-5691-8dae" name="Traits" hidden="false">
+          <profiles>
+            <profile id="056e-4b14-3530-cd4e" name="Jokash" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Aggressive, Armour (3), Bravery, Indomitable (X), Fear (5), Parry (1), Tough (1)</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="414b-d9f3-42ca-c747" name="Bravery" hidden="false" targetId="f9b2-38d2-7cda-de6e" type="rule"/>
+            <infoLink id="ddc7-1552-ab63-deba" name="Fear" hidden="false" targetId="3586-4583-7f10-1f31" type="rule"/>
+            <infoLink id="6c31-0dca-7f07-bc7f" name="Tough" hidden="false" targetId="5613-a6cf-495a-229f" type="rule"/>
+            <infoLink id="a448-9f10-044e-de8a" name="Indomitable " hidden="false" targetId="3beb-6f28-e7c4-a236" type="rule"/>
+            <infoLink id="8cec-e754-8323-2648" name="Armour" hidden="false" targetId="8615-1c63-2242-5746" type="rule"/>
+            <infoLink id="8747-e327-59f8-7593" name="Aggressive" hidden="false" targetId="a445-e041-8d5f-aa28" type="rule"/>
+            <infoLink id="2dbb-3c67-c5c9-8991" name="Parry" hidden="false" targetId="c7c2-b36e-7952-c79b" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="d0ca-139d-c518-f674" name="Melee Weapon" hidden="false">
+          <profiles>
+            <profile id="4a45-7243-6917-b3e8" name="Agoniser" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+1</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Brutal (1), Reach</characteristic>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Powerful Attack (1), Slam Attack (1), Stun Attack (0)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289">Models damaged in a Melee Exchange using this weapon cannot be Healed until the End Phase.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="e378-c5c1-3002-dcef" name="Brutal" hidden="false" targetId="5d95-975e-a72c-25f3" type="rule"/>
+            <infoLink id="cc5e-1654-05b1-0c86" name="Reach" hidden="false" targetId="e28e-d5dd-a262-1101" type="rule"/>
+            <infoLink id="6084-7c7a-5d05-a32a" name="Powerful Attack" hidden="false" targetId="d56a-058d-95d9-5b60" type="rule"/>
+            <infoLink id="1bba-70cd-c128-d4e5" name="Slam Attack" hidden="false" targetId="5d05-b0ce-d7db-9def" type="rule"/>
+            <infoLink id="7bc5-6aee-33db-877c" name="Stun Attack" hidden="false" targetId="ae27-975e-6c4b-d84e" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="6246-f3b1-56f9-4e3f" name="Ki Feats" hidden="false">
+          <infoLinks>
+            <infoLink id="800c-634c-779e-b8f6" name="Consume Soul" hidden="false" targetId="85bd-ac0d-842c-3097" type="infoGroup"/>
+            <infoLink id="0720-9ada-8b79-2bad" name="Shroud" hidden="false" targetId="14f8-8835-1156-84bc" type="infoGroup"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup name="Unique Effects" id="d960-7674-b0a3-65f1" hidden="false">
+          <profiles>
+            <profile name="Unique Effects" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects" hidden="false" id="bf76-6a7a-fc84-7299">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">This model&apos;s Indomitable Trait is variable.
+X is equal to the number of Enemy Small or Tiny models in BtB with this model.
+Reduce the cost of this model&apos;s Melee Boost by X to a minimum of 1.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </infoGroup>
+      </infoGroups>
+      <categoryLinks>
+        <categoryLink id="fe1e-637a-df19-fcdc" name="Faction: The Savage Wave" hidden="false" targetId="c920-0951-5d96-5693" primary="false"/>
+        <categoryLink id="d7d4-a9ec-876b-67e5" name="Onisho" hidden="false" targetId="3507-42ea-bf26-b23d" primary="false"/>
+        <categoryLink id="5671-534e-0195-ee5d" name="Faction Profile Cards" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
+        <categoryLink id="da7e-aef1-5fa3-aab9" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
+        <categoryLink id="7e36-0bca-5703-d1a8" name="Armour" hidden="false" targetId="f322-702a-ff62-b37e" primary="false"/>
+        <categoryLink id="a685-489a-64d5-8b87" name="Brutal" hidden="false" targetId="f62f-dd0b-4f06-06a6" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="1f0a-2238-549f-ae86" name="Enhancements" hidden="false" collective="false" import="true" targetId="74e6-2485-1c0a-4227" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="19"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Overwhelming Force" hidden="false" id="347f-10de-8162-8906">
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2"/>
+      </costs>
+      <categoryLinks>
+        <categoryLink targetId="d360-71aa-ca22-ba3c" id="46da-521d-5c2e-ecb9" primary="true" name="Faction Event Cards"/>
+      </categoryLinks>
+      <profiles>
+        <profile name="Overwhelming Force" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card" hidden="false" id="2d93-c6c2-a2d2-51ac">
+          <characteristics>
+            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">When a Friendly Faction Onisho declares a Charge Action, during the resulting Melee Exchange, reduce the Success Level of the Enemy model&apos;s Attack by the Success Level of the Onisho&apos;s Attack (to a minimum of 0).
+
+
+Requirement [Ring of Fire Theme]</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="ed77-71d5-d9e8-75eb" includeChildSelections="true" includeChildForces="true"/>
+      </constraints>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="lessThan" value="1" field="selections" scope="roster" childId="af1e-831f-1050-76d5" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="There Can Be Only One" hidden="false" id="7eab-f5a9-aa73-f791">
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="3"/>
+      </costs>
+      <categoryLinks>
+        <categoryLink targetId="d360-71aa-ca22-ba3c" id="ca9d-51af-19b6-7115" primary="true" name="Faction Event Cards"/>
+      </categoryLinks>
+      <profiles>
+        <profile name="There Can Be Only One" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card" hidden="false" id="20ee-9d6d-83ce-3c69">
+          <characteristics>
+            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">Play this card if the only Friendly model remaining in play is an Onisho that you own.
+While any Enemy models have Activation Counters, that model cannot remove any Activation Counters.
+The model activates as usual.
 
 
 Requirement [Ring of Fire theme]</characteristic>
@@ -3816,8 +4230,274 @@ Requirement [Ring of Fire theme]</characteristic>
         </profile>
       </profiles>
       <constraints>
-        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="5721-b0ee-cae9-7876" includeChildSelections="true" includeChildForces="true"/>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="841f-ec00-9f1f-ea9f" includeChildSelections="true" includeChildForces="true"/>
       </constraints>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="lessThan" value="1" field="selections" scope="roster" childId="af1e-831f-1050-76d5" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Trepanation" hidden="false" id="4281-4652-36e9-1188">
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2"/>
+      </costs>
+      <categoryLinks>
+        <categoryLink name="Faction Event Cards" hidden="false" id="1e49-4f24-9e13-10e0" targetId="d360-71aa-ca22-ba3c" primary="true"/>
+      </categoryLinks>
+      <profiles>
+        <profile name="Trepanation" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card" hidden="false" id="c548-93cc-ccca-057a">
+          <characteristics>
+            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">While the Attached model has exactly one or two unmarked wound boxes, double its melee pool.
+
+Requirement [Ring of Fire theme]</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="lessThan" value="1" field="selections" scope="roster" childId="af1e-831f-1050-76d5" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="7bd1-ec6e-33c2-72c1" includeChildSelections="true" includeChildForces="true"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d710-0bcf-7934-29b6" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+      </constraints>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Trepanation" hidden="false" id="d105-c742-2cd0-29f0">
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2"/>
+      </costs>
+      <categoryLinks>
+        <categoryLink name="Faction Event Cards" hidden="false" id="b8cd-4258-b9e1-337c" targetId="d360-71aa-ca22-ba3c" primary="true"/>
+      </categoryLinks>
+      <profiles>
+        <profile name="Trepanation" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card" hidden="false" id="0716-5d35-a6b6-a172">
+          <characteristics>
+            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">While the Attached model has exactly one or two unmarked wound boxes, double its melee pool.
+
+Requirement [Ring of Fire theme]</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="lessThan" value="1" field="selections" scope="roster" childId="af1e-831f-1050-76d5" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="fa48-5a99-fbc7-3cd6" includeChildSelections="true" includeChildForces="true"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="81df-e8b6-45ed-5fdf" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+      </constraints>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Underwhelming Force" hidden="false" id="fba4-b8c0-cc4e-46fd">
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2"/>
+      </costs>
+      <categoryLinks>
+        <categoryLink targetId="d360-71aa-ca22-ba3c" id="784c-78d6-3f48-6192" primary="true" name="Faction Event Cards"/>
+      </categoryLinks>
+      <profiles>
+        <profile name="Underwhelming Force" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card" hidden="false" id="35dc-e6ee-5444-ffd6">
+          <characteristics>
+            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">Until the End Phase, when a Friendly Faction Onisho would take exactly 1 damage, it takes no damage (apply the Tough Trait first).
+
+Requirement [Ring of Fire theme]</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="8636-c038-640d-c462" includeChildSelections="true" includeChildForces="true"/>
+      </constraints>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="lessThan" value="1" field="selections" scope="roster" childId="af1e-831f-1050-76d5" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Unworthy Task" hidden="false" id="ad13-6986-621f-8f1c">
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2"/>
+      </costs>
+      <categoryLinks>
+        <categoryLink targetId="d360-71aa-ca22-ba3c" id="782e-c0c5-971a-18ce" primary="true" name="Faction Event Cards"/>
+      </categoryLinks>
+      <profiles>
+        <profile name="Unworthy Task" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card" hidden="false" id="1938-9024-e0b1-5952">
+          <characteristics>
+            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">When a Faction Onisho model performs a Scenario Action, remove one fewer Activation Counters (to a minimum of zero) at the end of the action. (They must have the usual amount of Activation Counters available).
+
+Requirement [Ring of Fire theme]</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="bb49-eea7-d440-44b1" includeChildSelections="true" includeChildForces="true"/>
+      </constraints>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="lessThan" value="1" field="selections" scope="roster" childId="af1e-831f-1050-76d5" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Worthy Opponent" hidden="false" id="28fd-9829-d096-823a">
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2"/>
+      </costs>
+      <categoryLinks>
+        <categoryLink targetId="d360-71aa-ca22-ba3c" id="207b-d3bd-c563-27d8" primary="true" name="Faction Event Cards"/>
+      </categoryLinks>
+      <profiles>
+        <profile name="Worthy Opponent" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card" hidden="false" id="d081-ceec-60cb-cd5f">
+          <characteristics>
+            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">Play during the Starting Phase.
+If there are no Death Sentence Markers on any Enemy models, choose an Enemy model.
+That model gains a Death Sentence Marker.
+
+
+Requirement [Ring of Fire theme]</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <constraints>
+        <constraint type="max" value="3" field="selections" scope="roster" shared="true" id="304b-f80e-c532-768b" includeChildSelections="true" includeChildForces="true"/>
+      </constraints>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="lessThan" value="1" field="selections" scope="roster" childId="af1e-831f-1050-76d5" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </selectionEntry>
+    <selectionEntry id="35e0-9bbb-51c8-b5bd" name="Merlek" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d14c-bf06-fc37-16e2" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2125-1289-3bb1-15c1" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="bd75-31a1-5a23-cd2d" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="bec1-2154-3ab5-7979" type="atLeast"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6868-dde7-44c1-fcd6" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="c012-33db-d104-9cdd" name="Merlek" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">3</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33">3</characteristic>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">2</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c">2</characteristic>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">8</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">8 OOOOO OOO</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Medium 40mm</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="2ee8-2465-0253-7bba" name="Ki Feats" hidden="false">
+          <infoLinks>
+            <infoLink id="35d2-d9e4-30b2-65b1" name="Ring of Fire" hidden="false" targetId="3105-dbaa-d933-d1aa" type="infoGroup"/>
+            <infoLink id="c070-ea1f-384a-ed3b" name="Fall Into the Ring" hidden="false" targetId="0a7c-4798-4d8b-ed0b" type="infoGroup"/>
+            <infoLink id="6315-6fec-4e98-4298" name="Soul Thirst" hidden="false" targetId="c304-45e5-ece2-386f" type="infoGroup"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="3abb-cbe2-49e0-bfc1" name="Traits" hidden="false">
+          <profiles>
+            <profile id="0ada-e18c-a532-2978" name="Merlek" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Aggressive, Bravery, Fear (5), Tough (1)</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="0eb1-88d5-f477-b753" name="Bravery" hidden="false" targetId="f9b2-38d2-7cda-de6e" type="rule"/>
+            <infoLink id="74ce-2df2-2c82-586c" name="Fear" hidden="false" targetId="3586-4583-7f10-1f31" type="rule"/>
+            <infoLink id="2e57-1a6d-c055-64a6" name="Tough" hidden="false" targetId="5613-a6cf-495a-229f" type="rule"/>
+            <infoLink id="a685-b7e6-0602-98fe" name="Aggressive" hidden="false" targetId="a445-e041-8d5f-aa28" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="7f79-0cdf-c6a0-25d6" name="Melee Weapon" hidden="false">
+          <profiles>
+            <profile id="4ec9-d915-cc26-e287" name="Staff" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+2</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e"/>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Powerful Attack (1), Push Attack (0)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="1968-114f-d91b-e479" name="Push Attack" hidden="false" targetId="6c26-94ba-6b96-9e1b" type="rule"/>
+            <infoLink id="d63e-a259-b973-d9d2" name="Powerful Attack" hidden="false" targetId="d56a-058d-95d9-5b60" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="22ed-b491-83b8-470d" name="Ranged Weapon" hidden="false">
+          <profiles>
+            <profile id="4962-0d19-f378-b642" name="Black Magic" hidden="false" typeId="7e20-258e-bf92-18f9" typeName="Ranged Weapon">
+              <characteristics>
+                <characteristic name="Ranged Weapon Strength" typeId="15aa-b6bd-6923-271f">+0</characteristic>
+                <characteristic name="Range Bands" typeId="be6a-50c6-d691-e2e9">2/4/6</characteristic>
+                <characteristic name="Traits" typeId="3410-4428-ef91-eb61"/>
+                <characteristic name="Specials" typeId="cdaf-b6ac-89d4-39ef"/>
+                <characteristic name="Unique Effects" typeId="3bf8-6525-f003-4990">If this model successfully Damages a model with its Ranged Attack, place a Darkness Counter on this model.
+This model&apos;s Ranged Attack gains +1 Strength for each Darkness Counter on this model.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="aaaa-87d4-2da6-c469" name="Push Attack" hidden="false" targetId="6c26-94ba-6b96-9e1b" type="rule"/>
+            <infoLink id="e468-2c80-726b-04df" name="Powerful Attack" hidden="false" targetId="d56a-058d-95d9-5b60" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup name="Unique Effects" id="9eeb-7a4f-859d-b7f8" hidden="false">
+          <profiles>
+            <profile name="Unique Effects" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects" hidden="false" id="0cf0-db58-dc4b-2698">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">This model treats Unknown models as having Dread (1).</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink name="Dread" id="3a17-6e26-da86-0244" hidden="false" targetId="53bf-4091-3aec-d5ec" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+      </infoGroups>
+      <categoryLinks>
+        <categoryLink id="0ed3-812e-648b-0abb" name="Faction: The Savage Wave" hidden="false" targetId="c920-0951-5d96-5693" primary="false"/>
+        <categoryLink id="05a1-448f-84b1-596b" name="Onisho" hidden="false" targetId="3507-42ea-bf26-b23d" primary="false"/>
+        <categoryLink id="27af-8bcc-3f16-5574" name="Faction Profile Cards" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
+        <categoryLink id="e633-123e-b19e-f47a" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
+        <categoryLink targetId="0c22-e9ca-a3de-e706" id="e8ea-09f8-2cb4-b1b0" primary="false" name="Shugenja"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="7e3e-a1e8-4c23-2496" name="Enhancements" hidden="false" collective="false" import="true" targetId="74e6-2485-1c0a-4227" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="18"/>
+      </costs>
     </selectionEntry>
   </selectionEntries>
   <entryLinks>
@@ -6438,6 +7118,140 @@ Requirement [Onisho]</characteristic>
             <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2"/>
           </costs>
         </selectionEntry>
+        <selectionEntry id="0f5d-4d9b-02cb-af1b" name="Cunning Warrior" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="af1e-831f-1050-76d5" type="lessThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b71a-6d83-dcc6-4b47" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1e9d-471d-e438-a1b3" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="b160-ba7b-f65a-0422" name="Cunning Warrior" hidden="true" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
+              <characteristics>
+                <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">Attached model&apos;s Ranged weapons gain Powerful Attack (1).
+
+Requirement [Ring of Fire theme]</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <categoryLinks>
+            <categoryLink id="0939-7d25-52eb-e15a" name="Faction Enhancement Cards" hidden="false" targetId="17cf-d9a9-c7c1-bcb6" primary="true"/>
+          </categoryLinks>
+          <costs>
+            <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="b3ee-029a-223e-9949" name="Fiery Wroth" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="af1e-831f-1050-76d5" type="lessThan"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" value="1.5" field="a111-8656-5c05-7415">
+              <conditions>
+                <condition type="equalTo" value="2" field="selections" scope="roster" childId="b3ee-029a-223e-9949" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" value="1" field="a111-8656-5c05-7415">
+              <conditions>
+                <condition type="equalTo" value="3" field="selections" scope="roster" childId="b3ee-029a-223e-9949" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="roster" value="3" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="3690-c67f-345b-c373" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e0d9-5990-750c-b0da" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="e224-4526-14ee-aabe" name="Fiery Wroth" hidden="true" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
+              <characteristics>
+                <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">Attached models Melee weapons gain Fire (1/1).
+When the attached model suffers Damage from Fire in the End Phase, the model gains a Rage Token.
+Until the end of the game, models Weapons gain Fire (+1/+1) for each Rage Token they have.
+
+Requirement [Ring of Fire theme]</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <categoryLinks>
+            <categoryLink id="bdda-f9d2-34e1-8fe2" name="Faction Enhancement Cards" hidden="false" targetId="17cf-d9a9-c7c1-bcb6" primary="true"/>
+          </categoryLinks>
+          <costs>
+            <cost name=" Rice" typeId="a111-8656-5c05-7415" value="3"/>
+          </costs>
+          <infoLinks>
+            <infoLink name="Fire" id="7be9-d97e-20c4-c31f" hidden="false" type="rule" targetId="2422-40b7-254f-f6f1"/>
+          </infoLinks>
+        </selectionEntry>
+        <selectionEntry id="7c0d-1dfb-0411-0aea" name="Intuition" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="parent" childId="29f3-2936-a20c-5ba6" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="af1e-831f-1050-76d5" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="e2ea-f514-a940-dd55" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a61d-e9d2-b81e-a1c5" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="38a2-c306-e5f8-8125" name="Intuition" hidden="true" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
+              <characteristics>
+                <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">The Attached model gains Sixth Sense.
+
+Requirement [Kuroko &amp; Ring of Fire Theme]</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <categoryLinks>
+            <categoryLink id="c655-4aea-ccfb-469f" name="Faction Enhancement Cards" hidden="false" targetId="17cf-d9a9-c7c1-bcb6" primary="true"/>
+          </categoryLinks>
+          <costs>
+            <cost name=" Rice" typeId="a111-8656-5c05-7415" value="3"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="8348-293e-a8d3-ebd6" name="Quicken" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="af1e-831f-1050-76d5" type="lessThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a1f2-c6fb-0007-bb74" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4949-9806-f445-4981" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="f821-ef9a-1855-0911" name="Quicken" hidden="true" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
+              <characteristics>
+                <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">Attached model gains +X to its Move Statistic.
+X is equal to the number of VPs scored.
+
+
+Requirement [Ring of Fire Theme]</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <categoryLinks>
+            <categoryLink id="b315-77fa-8fba-8fd7" name="Faction Enhancement Cards" hidden="false" targetId="17cf-d9a9-c7c1-bcb6" primary="true"/>
+          </categoryLinks>
+          <costs>
+            <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1"/>
+          </costs>
+        </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="5966-5fdb-3efa-d8d2" name="Equipment" hidden="false" collective="false" import="true">
@@ -6895,6 +7709,7 @@ Requirement [Ring of Fire Theme]</characteristic>
               </modifiers>
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="9aec-ed7e-fbe1-526f" includeChildSelections="true" includeChildForces="true"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ba05-4268-6e11-fe0a" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="His Father&apos;s Skull" hidden="false" id="df93-92ca-bbba-303b">
@@ -6910,7 +7725,6 @@ Requirement [Ring of Fire Theme]</characteristic>
                   <characteristics>
                     <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">Once per game, this model&apos;s Range Weapon gains Brutal +2 for the next Range Attack, then discard this card.
 
-
 Requirement [Boba &amp; Ring of Fire Theme]</characteristic>
                   </characteristics>
                 </profile>
@@ -6920,7 +7734,7 @@ Requirement [Boba &amp; Ring of Fire Theme]</characteristic>
                   <conditionGroups>
                     <conditionGroup type="or">
                       <conditions>
-                        <condition type="lessThan" value="1" field="selections" scope="roster" childId="0819-115f-032e-cbf4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                        <condition type="notInstanceOf" value="1" field="selections" scope="parent" childId="0819-115f-032e-cbf4" shared="true" includeChildSelections="true" includeChildForces="true"/>
                         <condition type="lessThan" value="1" field="selections" scope="roster" childId="af1e-831f-1050-76d5" shared="true" includeChildSelections="true" includeChildForces="true"/>
                       </conditions>
                     </conditionGroup>
@@ -6929,6 +7743,110 @@ Requirement [Boba &amp; Ring of Fire Theme]</characteristic>
               </modifiers>
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="6d00-128e-c286-91fe" includeChildSelections="true" includeChildForces="true"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6a42-8aab-e8c7-6d54" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Raiment of Violence" hidden="false" id="9a76-1f1c-a6e4-e7a8">
+              <costs>
+                <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1"/>
+              </costs>
+              <categoryLinks>
+                <categoryLink targetId="5bcd-fe93-a8ea-0164" id="94bb-7827-4c9b-80d6" primary="true" name="Faction Equipment Cards"/>
+                <categoryLink targetId="17cf-d9a9-c7c1-bcb6" id="cb8f-45f7-6376-336c" primary="false" name="Faction Enhancement Cards"/>
+              </categoryLinks>
+              <profiles>
+                <profile name="Raiment of Violence" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card" hidden="false" id="1be9-e120-abd2-a94f">
+                  <characteristics>
+                    <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">Attached model Gains Armour (2), Fearless and Vengeance [Stunned].
+While this model is BtB with an Enemy model, other Friendly Onisho gain Fearless and Vengeance [Stunned].
+
+Requirement [Kano &amp; Ring of Fire Iheme]</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="notInstanceOf" value="1" field="selections" scope="parent" childId="490d-a1e9-30df-dc67" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                        <condition type="lessThan" value="1" field="selections" scope="roster" childId="af1e-831f-1050-76d5" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="acd9-6da3-c8bc-3cf0" includeChildSelections="true" includeChildForces="true"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2a1b-c50b-fc99-ca3d" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+              <infoLinks>
+                <infoLink name="Armour" id="fb11-4715-f7a0-1a99" hidden="false" type="rule" targetId="8615-1c63-2242-5746"/>
+                <infoLink name="Fearless" id="e435-5bac-8049-4691" hidden="false" type="rule" targetId="5d6f-1746-9080-aca5"/>
+                <infoLink name="Vengeance" id="4b74-2c54-a6db-eb92" hidden="false" type="rule" targetId="6779-0aac-2f51-f67e"/>
+              </infoLinks>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Mantle of the Matriarch" hidden="false" id="2e16-bb23-0594-bfaf">
+              <costs>
+                <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1"/>
+              </costs>
+              <categoryLinks>
+                <categoryLink targetId="5bcd-fe93-a8ea-0164" id="b28e-d80d-a4fa-9435" primary="true" name="Faction Equipment Cards"/>
+                <categoryLink targetId="17cf-d9a9-c7c1-bcb6" id="0fea-b88a-b54b-2603" primary="false" name="Faction Enhancement Cards"/>
+              </categoryLinks>
+              <profiles>
+                <profile name="Mantle of the Matriarch" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card" hidden="false" id="1591-9926-28ae-4637">
+                  <characteristics>
+                    <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">Once per Activation, before resolving any model&apos;s Consume Soul or Soul Thirst Ki Feat, the Attached model may make a Walk.
+
+Requirement [Kijo &amp; Ring of Fire Theme]</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="notInstanceOf" value="1" field="selections" scope="parent" childId="cb8b-ca36-e256-96c7" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                        <condition type="lessThan" value="1" field="selections" scope="roster" childId="af1e-831f-1050-76d5" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="a075-6f55-2911-50f4" includeChildSelections="true" includeChildForces="true"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c963-8757-a1a3-ad87" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Underwhelming Force" hidden="false" id="0160-4853-b794-1666">
+              <costs>
+                <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2"/>
+              </costs>
+              <categoryLinks>
+                <categoryLink targetId="5bcd-fe93-a8ea-0164" id="9a01-1cfa-aa02-1dcd" primary="true" name="Faction Equipment Cards"/>
+                <categoryLink targetId="17cf-d9a9-c7c1-bcb6" id="ea56-bef4-cf6a-92a4" primary="false" name="Faction Enhancement Cards"/>
+              </categoryLinks>
+              <profiles>
+                <profile name="Underwhelming Force" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card" hidden="false" id="b78f-db2c-3bae-8f74">
+                  <characteristics>
+                    <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">Until the End Phase, when a Friendly Faction Onisho would take exactly 1 damage, it takes no damage (apply the Tough Trait first).
+
+Requirement [Ring of Fire theme]</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="af1e-831f-1050-76d5" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="954a-804f-3605-4b53" includeChildSelections="true" includeChildForces="true"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4a5b-2376-2ccc-0d3c" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
             </selectionEntry>
           </selectionEntries>
