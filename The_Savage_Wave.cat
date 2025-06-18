@@ -4241,34 +4241,6 @@ Requirement [Ring of Fire theme]</characteristic>
         </modifier>
       </modifiers>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Trepanation" hidden="false" id="d105-c742-2cd0-29f0">
-      <costs>
-        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2"/>
-      </costs>
-      <categoryLinks>
-        <categoryLink name="Faction Event Cards" hidden="false" id="b8cd-4258-b9e1-337c" targetId="d360-71aa-ca22-ba3c" primary="true"/>
-      </categoryLinks>
-      <profiles>
-        <profile name="Trepanation" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card" hidden="false" id="0716-5d35-a6b6-a172">
-          <characteristics>
-            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">While the Attached model has exactly one or two unmarked wound boxes, double its melee pool.
-
-Requirement [Ring of Fire theme]</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <modifiers>
-        <modifier type="set" value="true" field="hidden">
-          <conditions>
-            <condition type="lessThan" value="1" field="selections" scope="roster" childId="af1e-831f-1050-76d5" shared="true" includeChildSelections="true" includeChildForces="true"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-      <constraints>
-        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="fa48-5a99-fbc7-3cd6" includeChildSelections="true" includeChildForces="true"/>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="81df-e8b6-45ed-5fdf" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-      </constraints>
-    </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Underwhelming Force" hidden="false" id="fba4-b8c0-cc4e-46fd">
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2"/>
@@ -7886,6 +7858,35 @@ Requirement [Merlek &amp; Ring of Fire Theme]</characteristic>
               <infoLinks>
                 <infoLink name="Fire" id="d735-c639-3649-ea54" hidden="false" type="rule" targetId="2422-40b7-254f-f6f1"/>
               </infoLinks>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Trepanation" hidden="false" id="d105-c742-2cd0-29f0">
+              <costs>
+                <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2"/>
+              </costs>
+              <categoryLinks>
+                <categoryLink targetId="5bcd-fe93-a8ea-0164" id="dd7c-1313-f347-d6b9" primary="true" name="Faction Equipment Cards"/>
+                <categoryLink targetId="17cf-d9a9-c7c1-bcb6" id="83c9-6347-5f87-26d9" primary="false" name="Faction Enhancement Cards"/>
+              </categoryLinks>
+              <profiles>
+                <profile name="Trepanation" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card" hidden="false" id="0716-5d35-a6b6-a172">
+                  <characteristics>
+                    <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">While the Attached model has exactly one or two unmarked wound boxes, double its melee pool.
+
+Requirement [Ring of Fire theme]</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="af1e-831f-1050-76d5" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="fa48-5a99-fbc7-3cd6" includeChildSelections="true" includeChildForces="true"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="81df-e8b6-45ed-5fdf" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
             </selectionEntry>
           </selectionEntries>
           <entryLinks>
