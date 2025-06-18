@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="0b85-0901-eb64-b84b" name="The Savage Wave" revision="41" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="19" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="0b85-0901-eb64-b84b" name="The Savage Wave" revision="42" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="19" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <selectionEntries>
     <selectionEntry id="5048-3a52-5689-6d0b" name="Ambush" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -1894,8 +1894,9 @@ For any effect which adds or removes Control Markers, Darkness Counters are cons
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="bd75-31a1-5a23-cd2d" type="equalTo"/>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4ff5-0ce5-fd04-3969" type="equalTo"/>
+                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="bd75-31a1-5a23-cd2d" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4ff5-0ce5-fd04-3969" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="af1e-831f-1050-76d5" type="atLeast"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -4068,8 +4069,8 @@ Requirement [Jokash &amp; Ring of Fire Theme]</characteristic>
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
-                <condition type="lessThan" value="1" field="selections" scope="roster" childId="af1e-831f-1050-76d5" shared="true" includeChildSelections="true"/>
-                <condition type="notInstanceOf" value="1" field="selections" scope="parent" childId="437c-1286-aa66-23b7" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="af1e-831f-1050-76d5" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="437c-1286-aa66-23b7" shared="true" includeChildSelections="true" includeChildForces="true"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -4239,34 +4240,6 @@ Requirement [Ring of Fire theme]</characteristic>
           </conditions>
         </modifier>
       </modifiers>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Trepanation" hidden="false" id="4281-4652-36e9-1188">
-      <costs>
-        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2"/>
-      </costs>
-      <categoryLinks>
-        <categoryLink name="Faction Event Cards" hidden="false" id="1e49-4f24-9e13-10e0" targetId="d360-71aa-ca22-ba3c" primary="true"/>
-      </categoryLinks>
-      <profiles>
-        <profile name="Trepanation" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card" hidden="false" id="c548-93cc-ccca-057a">
-          <characteristics>
-            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">While the Attached model has exactly one or two unmarked wound boxes, double its melee pool.
-
-Requirement [Ring of Fire theme]</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <modifiers>
-        <modifier type="set" value="true" field="hidden">
-          <conditions>
-            <condition type="lessThan" value="1" field="selections" scope="roster" childId="af1e-831f-1050-76d5" shared="true" includeChildSelections="true" includeChildForces="true"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-      <constraints>
-        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="7bd1-ec6e-33c2-72c1" includeChildSelections="true" includeChildForces="true"/>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d710-0bcf-7934-29b6" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-      </constraints>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Trepanation" hidden="false" id="d105-c742-2cd0-29f0">
       <costs>
@@ -6987,13 +6960,6 @@ Requirement [Oni]</characteristic>
           </costs>
         </selectionEntry>
         <selectionEntry id="77fa-78df-bb07-72e5" name="Unearthly Rage" hidden="true" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="hidden" value="false">
-              <conditions>
-                <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4864-a322-cefd-fbfb" type="instanceOf"/>
-              </conditions>
-            </modifier>
-          </modifiers>
           <constraints>
             <constraint field="selections" scope="roster" value="3" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5c63-238f-3fa3-1db3" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="063a-65b9-5387-7d19" type="max"/>
@@ -7183,7 +7149,7 @@ Requirement [Ring of Fire theme]</characteristic>
             <categoryLink id="bdda-f9d2-34e1-8fe2" name="Faction Enhancement Cards" hidden="false" targetId="17cf-d9a9-c7c1-bcb6" primary="true"/>
           </categoryLinks>
           <costs>
-            <cost name=" Rice" typeId="a111-8656-5c05-7415" value="3"/>
+            <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1"/>
           </costs>
           <infoLinks>
             <infoLink name="Fire" id="7be9-d97e-20c4-c31f" hidden="false" type="rule" targetId="2422-40b7-254f-f6f1"/>
@@ -7247,6 +7213,40 @@ Requirement [Ring of Fire Theme]</characteristic>
           </profiles>
           <categoryLinks>
             <categoryLink id="b315-77fa-8fba-8fd7" name="Faction Enhancement Cards" hidden="false" targetId="17cf-d9a9-c7c1-bcb6" primary="true"/>
+          </categoryLinks>
+          <costs>
+            <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="7ccf-6b7e-3d76-b7c8" name="Headbutt" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="parent" childId="5ec7-e278-dc87-fc2f" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="af1e-831f-1050-76d5" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8ba5-d989-63e2-7de9" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8edf-a3a1-919b-7220" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="d650-b8a8-07c1-d461" name="Headbutt" hidden="true" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
+              <characteristics>
+                <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">At the start of the attached model&apos;s activation you may move all Enemy models in BtB with the Attached model 2&quot; directly away.
+Then discard this card.
+
+Requirement [Kuroko &amp; Ring of Fire theme]</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <categoryLinks>
+            <categoryLink id="5d24-4f9b-4243-dca8" name="Faction Enhancement Cards" hidden="false" targetId="17cf-d9a9-c7c1-bcb6" primary="true"/>
           </categoryLinks>
           <costs>
             <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1"/>
@@ -7848,6 +7848,44 @@ Requirement [Ring of Fire theme]</characteristic>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="954a-804f-3605-4b53" includeChildSelections="true" includeChildForces="true"/>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4a5b-2376-2ccc-0d3c" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Fiery Sceptre" hidden="false" id="215f-8447-2930-9d3e">
+              <costs>
+                <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1"/>
+              </costs>
+              <categoryLinks>
+                <categoryLink targetId="5bcd-fe93-a8ea-0164" id="d720-30e9-6843-a0a1" primary="true" name="Faction Equipment Cards"/>
+                <categoryLink targetId="17cf-d9a9-c7c1-bcb6" id="3c7a-6265-d4c5-d36c" primary="false" name="Faction Enhancement Cards"/>
+              </categoryLinks>
+              <profiles>
+                <profile name="Fiery Sceptre" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card" hidden="false" id="3006-e4df-2489-7905">
+                  <characteristics>
+                    <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">You may choose to discard this card during the Starting Phase.
+If you do so, Attached model&apos;s Ranged Weapons gain Fire (1/1) until the End Phase.
+
+Requirement [Merlek &amp; Ring of Fire Theme]</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="notInstanceOf" value="1" field="selections" scope="parent" childId="35e0-9bbb-51c8-b5bd" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                        <condition type="lessThan" value="1" field="selections" scope="roster" childId="af1e-831f-1050-76d5" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="2872-4cb9-3a0f-7ed8" includeChildSelections="true" includeChildForces="true"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f10d-9a61-f0a1-73be" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+              <infoLinks>
+                <infoLink name="Fire" id="d735-c639-3649-ea54" hidden="false" type="rule" targetId="2422-40b7-254f-f6f1"/>
+              </infoLinks>
             </selectionEntry>
           </selectionEntries>
           <entryLinks>
