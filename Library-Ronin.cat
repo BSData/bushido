@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="b489-b304-948d-52d0" name="Library-Ronin" revision="51" battleScribeVersion="2.03" library="true" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="18" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="b489-b304-948d-52d0" name="Library-Ronin" revision="52" battleScribeVersion="2.03" library="true" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="18" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <selectionEntries>
     <selectionEntry id="4e24-3a7e-77bc-dfed" name="Balance" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -9907,6 +9907,122 @@ This model can make only one Bird Strike Ranged Attack per turn.</characteristic
       </modifiers>
       <entryLinks>
         <entryLink import="true" name="Enhancements" hidden="false" id="7494-3fe9-c221-635a" collective="false" targetId="f486-4498-03e3-c397" type="selectionEntryGroup"/>
+      </entryLinks>
+    </selectionEntry>
+    <selectionEntry type="model" import="true" name="Master Bat" hidden="false" id="04ab-3a0e-8c26-d333">
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="13"/>
+      </costs>
+      <categoryLinks>
+        <categoryLink name="Asura" hidden="false" id="9b00-ce84-3f92-dac3" targetId="c48e-5e32-f0b0-1cfe" primary="false"/>
+        <categoryLink name="Celestial" hidden="false" id="6946-0671-0f37-7231" targetId="b9c7-baf3-6795-acf7" primary="false"/>
+        <categoryLink targetId="9fba-f50b-c8f7-8396" id="d5e6-6f01-47e4-9063" primary="true" name="Ronin Profile Cards"/>
+        <categoryLink targetId="afd4-8041-e359-223c" id="8e0e-4cca-fe52-360b" primary="false" name="Unique"/>
+        <categoryLink targetId="9e88-f51c-7ee1-71f0" id="f680-810b-35ea-6cca" primary="false" name="Bat"/>
+      </categoryLinks>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="69ea-ecb6-0919-5715" includeChildSelections="true"/>
+      </constraints>
+      <profiles>
+        <profile name="Master Bat" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile" hidden="false" id="038c-dba3-ffac-5f52">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">3</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33">3</characteristic>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">6</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac">1</characteristic>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">2</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">10</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">7 OOOOO OO</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Medium 40mm</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup name="Traits" id="51d5-fd75-9807-6408" hidden="false">
+          <profiles>
+            <profile name="Traits" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits" hidden="false" id="4d79-231f-1475-3198">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Aware, Camouflage (4&quot;), Cloudwalk, Sixth Sense, Soulless</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink name="Camouflage" id="a0a2-d7a0-f546-4c81" hidden="false" type="rule" targetId="9010-4983-c98c-1751"/>
+            <infoLink name="Cloudwalk" id="a429-4984-88a9-961f" hidden="false" type="rule" targetId="538c-1266-626b-fcc9"/>
+            <infoLink name="Sixth Sense" id="34ec-b2fa-cfce-87fe" hidden="false" type="rule" targetId="ec49-3908-f1d1-8de2"/>
+            <infoLink name="Aware" id="77cd-7d97-b773-6686" hidden="false" type="rule" targetId="ff4a-6b14-09dd-2343"/>
+            <infoLink name="Soulless" id="e4cd-c9d6-8395-0a1c" hidden="false" type="rule" targetId="af31-aad0-fcea-9590"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup name="Melee Weapon" id="32fe-02cc-9b8f-d117" hidden="false">
+          <profiles>
+            <profile name="Claws" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon" hidden="false" id="dc96-8218-2f16-4fa6">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+1</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Bleed (1/1)</characteristic>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Combo Attack (0), Sidestep Defence (0)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink name="Bleed" id="95c8-0fc9-c68c-0943" hidden="false" type="rule" targetId="ac4a-e540-4fe3-126a"/>
+            <infoLink name="Sidestep Defence " id="8997-b4ab-b9cc-4feb" hidden="false" type="rule" targetId="753c-6c3b-64d7-203c"/>
+            <infoLink name="Combo Attack " id="f698-2a3c-bf04-f15b" hidden="false" type="rule" targetId="78ab-6a94-be24-8f74"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup name="Ranged Weapon" id="c601-89b1-aebc-c814" hidden="false">
+          <profiles>
+            <profile name="Tongue" typeId="7e20-258e-bf92-18f9" typeName="Ranged Weapon" hidden="false" id="2ce3-bc5b-f977-78e1">
+              <characteristics>
+                <characteristic name="Ranged Weapon Strength" typeId="15aa-b6bd-6923-271f">+1</characteristic>
+                <characteristic name="Range Bands" typeId="be6a-50c6-d691-e2e9">-/2/-</characteristic>
+                <characteristic name="Traits" typeId="3410-4428-ef91-eb61"/>
+                <characteristic name="Specials" typeId="cdaf-b6ac-89d4-39ef"/>
+                <characteristic name="Unique Effects" typeId="3bf8-6525-f003-4990">When an Attack using this weapon is Successful, you may immediately use the Swallow Up Ki Feat with Range 2&quot;.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </infoGroup>
+        <infoGroup name="Ki Feats" id="ff38-5ae1-7292-2cac" hidden="false">
+          <infoLinks>
+            <infoLink name="Blood Omen" id="c782-b7e4-f56a-e4db" hidden="false" type="infoGroup" targetId="5d8c-4937-1937-1d2e"/>
+            <infoLink name="Whistling Shriek" id="3a60-2d20-84fa-f455" hidden="false" type="infoGroup" targetId="2c84-a713-2f4c-38d5"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup name="Unique Effects" id="e405-22a2-3b20-c89b" hidden="false">
+          <profiles>
+            <profile name="Amphibian" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects" hidden="false" id="1394-1b8e-7252-a60b">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">While in the area of a Quagmire or Incoming Tide, this model gains +2 Move and Intangible.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Variable Toughness" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects" hidden="false" id="17c9-06b5-f588-afbf">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">This model&apos;s Tough value is variable. X is equal to the number of marked Wound boxes this model has.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </infoGroup>
+      </infoGroups>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="477a-e693-0888-08f7" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="9402-edcc-93a2-aef1" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <condition type="equalTo" value="1" field="selections" scope="roster" childId="b94d-f7cb-a84c-4077" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <entryLinks>
+        <entryLink import="true" name="Enhancements" hidden="false" id="a97c-ba2c-85d1-490d" collective="false" targetId="f486-4498-03e3-c397" type="selectionEntryGroup"/>
       </entryLinks>
     </selectionEntry>
   </sharedSelectionEntries>

@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="d2c8-91e9-1a97-89b4" name="Minimoto Clan" revision="40" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="19" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="d2c8-91e9-1a97-89b4" name="Minimoto Clan" revision="41" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="19" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <categoryEntries>
     <categoryEntry id="6b68-2575-cc8f-c08f" name="Armour 3+" hidden="false"/>
+    <categoryEntry name="Kami of Reflection" id="496e-5698-8930-6d42" hidden="false"/>
   </categoryEntries>
   <selectionEntries>
     <selectionEntry id="21b7-f8af-69c4-6c0b" name="WITNESS ME!" hidden="false" collective="false" import="true" type="upgrade">
@@ -2886,6 +2887,115 @@ This is a Blizzard Effect.</characteristic>
       </entryLinks>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="15"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Kamuy" hidden="true" id="4f01-eaa5-031e-7f9a" collective="false">
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="greaterThan" value="0" field="selections" scope="roster" childId="bf82-59e5-bfa8-89e4" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <condition type="greaterThan" value="0" field="selections" scope="roster" childId="83c2-5a85-fe86-1cb6" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <condition type="greaterThan" value="0" field="selections" scope="roster" childId="1768-35aa-a05a-bd26" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="477a-e693-0888-08f7" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="force" shared="true" id="b7cc-8bf7-7eaf-d64f" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+      </constraints>
+      <profiles>
+        <profile name="Kamuy" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile" hidden="false" id="da35-b02a-496f-f967">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">1</characteristic>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">-</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">0</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">7</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">Special</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Large 50mm</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup name="Traits" id="2295-a87b-8cd0-9eb4" hidden="false">
+          <profiles>
+            <profile name="Kamuy" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits" hidden="false" id="f511-717d-8e0f-017d">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Aloof, Bear Stands Alone, Durable, Fear (6), Kami, Lightfooted, Soulless</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink name="Durable" id="d9b5-ceca-6134-4242" hidden="false" targetId="3612-7e19-3cb9-72d0" type="rule"/>
+            <infoLink name="Aloof" id="b5cf-5c05-5960-c28c" hidden="false" targetId="5101-70fc-eca4-d99b" type="rule"/>
+            <infoLink name="Lightfooted" id="5779-13db-8378-3ffd" hidden="false" targetId="57d2-cd57-07f9-addf" type="rule"/>
+            <infoLink name="Kami" id="208f-a6f3-6375-c4b4" hidden="false" targetId="50d4-ec7a-9763-1b4d" type="rule"/>
+            <infoLink name="Bear Stands Alone" id="5877-311d-c3d1-7e93" hidden="false" targetId="40cc-86cf-58d8-8799" type="rule"/>
+            <infoLink name="Soulless" id="e70a-2d48-cf2f-54ae" hidden="false" targetId="af31-aad0-fcea-9590" type="rule"/>
+            <infoLink name="Fear" id="bd47-b919-45f1-e3b5" hidden="false" targetId="3586-4583-7f10-1f31" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup name="Melee Weapon" id="af1c-08d5-d91b-2ff4" hidden="false">
+          <profiles>
+            <profile name="Icicle Bite" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon" hidden="false" id="a8ef-ff08-af98-ced4">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+2</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Sharp (2)</characteristic>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Powerful Attack (1), Push Attack (0)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink name="Powerful Attack" id="2ad8-9012-896b-92e3" hidden="false" targetId="d56a-058d-95d9-5b60" type="rule"/>
+            <infoLink name="Push Attack" id="811b-37cd-f0e7-f75c" hidden="false" targetId="6c26-94ba-6b96-9e1b" type="rule"/>
+            <infoLink name="Sharp " id="6a4c-8b54-134a-5e38" hidden="false" targetId="6092-9fb5-5196-d1eb" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup name="Ki Feats" id="a918-35d4-ee63-830d" hidden="false">
+          <infoLinks>
+            <infoLink name="Rend" id="4d95-26f3-f086-814f" hidden="false" type="infoGroup" targetId="7263-4efc-8b05-233b"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup name="Unique Effects" id="089d-8bd5-b8c0-d0b9" hidden="false">
+          <profiles>
+            <profile name="Melt" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects" hidden="false" id="d800-6972-bf23-8637">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">In the End Phase, unless there was a Blizzard Effect used during the turn, this model suffers two Damage, ignoring Tough and Durable.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Unique Effects" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects" hidden="false" id="2963-6129-04de-f7e5">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">This model does not gain Slow from Blizzard and cannot be Healed or gain Ki Tokens other than from its Kami Trait.
+
+
+When this model deals Damage in a Melee Exchange, the Enemy model gains Slow until the End Phase.
+
+
+When this model is Damaged by an Enemy model in a Melee Exchange, until the End Phase, all models are in Cover and gain Slow. This is a Blizzard effect.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </infoGroup>
+      </infoGroups>
+      <categoryLinks>
+        <categoryLink name="Kami" hidden="false" id="244d-ca18-41f0-ff17" targetId="6639-615e-f1ab-bc64" primary="false"/>
+        <categoryLink name="Element: Water" hidden="false" id="b860-bdc8-01f2-af5e" targetId="8ec2-de25-acb0-7b5a" primary="false"/>
+        <categoryLink targetId="a594-a557-e582-e19a" id="5df0-80aa-3a59-9bc6" primary="false" name="Ice"/>
+        <categoryLink targetId="496e-5698-8930-6d42" id="4c2a-f76a-6f00-1235" primary="false" name="Kami of Reflection"/>
+        <categoryLink targetId="0ca8-2040-37f2-a1e0" id="f2ca-6910-48e0-1a1e" primary="true" name="Faction Profile Cards"/>
+        <categoryLink targetId="afd4-8041-e359-223c" id="cc86-509d-a91b-f0b5" primary="false" name="Unique"/>
+      </categoryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="8"/>
       </costs>
     </selectionEntry>
   </selectionEntries>

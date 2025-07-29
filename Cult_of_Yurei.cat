@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="1ac7-2939-2874-7530" name="Cult of Yurei" revision="41" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="19" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="1ac7-2939-2874-7530" name="Cult of Yurei" revision="42" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="19" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <selectionEntries>
     <selectionEntry id="5048-3a52-5689-6d0b" name="Drain Spirit" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -7828,6 +7828,98 @@ You may choose a Kami with any Rice Cost including &apos;Su&apos;.</characterist
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="10"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="dc68-b2b9-e9f4-665d" name="Nintoku" hidden="false" collective="false" import="true" type="model">
+      <constraints>
+        <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="true" id="a5a5-ba1d-6473-5f16" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="5874-46d6-4a3c-d704" name="Nintoku" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">3</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">2</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">6</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">6 OOOOO O</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="1e1e-a7cb-7b6c-c078" name="Traits" hidden="false">
+          <profiles>
+            <profile id="ee34-a542-e64c-abba" name="Nintoku" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Cultist (2/8&quot;), Endurance, Fearless, Fear (5), Indomitable (1)</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="d78b-97cb-6ca5-fea9" name="Endurance" hidden="false" targetId="7fdc-d150-9641-1235" type="rule"/>
+            <infoLink id="a642-e9ce-dd68-5a0d" name="Cultist" hidden="false" targetId="ed04-4bf2-e1ff-7a88" type="rule"/>
+            <infoLink id="0d8f-fe4c-1f27-d9ac" name="Indomitable " hidden="false" targetId="3beb-6f28-e7c4-a236" type="rule"/>
+            <infoLink id="02b9-73ad-21e6-5c05" name="Fearless" hidden="false" targetId="5d6f-1746-9080-aca5" type="rule"/>
+            <infoLink id="50e4-7df5-64b3-d5e6" name="Fear" hidden="false" targetId="3586-4583-7f10-1f31" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="bef0-bd34-8a0f-cab7" name="Melee Weapon" hidden="false">
+          <profiles>
+            <profile id="4502-00a5-7e45-b7c9" name="Sawtooth Decapitator" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+0</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Bleed (1/1), Reach</characteristic>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Powerful Attack (1), Push Defence (0)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289">This Weapon&apos;s Strength Modifier is variable. X is equal to the number of marked Wounds on the Enemy model.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="c7b7-68e2-fbf5-ff37" name="Push Defence" hidden="false" targetId="74fc-a971-d9c2-278c" type="rule"/>
+            <infoLink id="4802-52db-39fc-64e2" name="Reach" hidden="false" targetId="e28e-d5dd-a262-1101" type="rule"/>
+            <infoLink id="7d51-8d3a-e8db-731b" name="Bleed" hidden="false" targetId="ac4a-e540-4fe3-126a" type="rule"/>
+            <infoLink id="c30c-9cd8-a35a-c564" name="Powerful Attack" hidden="false" targetId="d56a-058d-95d9-5b60" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="01e8-e264-0e31-44b7" name="Ki Feats" hidden="false">
+          <infoLinks>
+            <infoLink id="e918-05b0-5524-0baf" name="Noose" hidden="false" targetId="6685-211d-9c0b-d71f" type="infoGroup"/>
+            <infoLink id="91ac-fead-aae9-1fb0" name="Josei&apos;s Arrow Curse" hidden="false" targetId="446b-0ca9-84f5-1bfc" type="infoGroup"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup name="Unique Effects" id="e961-ff95-9b49-915a" hidden="false">
+          <profiles>
+            <profile name="Noose" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects" hidden="false" id="ab97-ab2e-9eb7-5705">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">Models with a Noose Token cannot use Special Abilities.
+In the End Phase models with one or more Noose Tokens suffer one Damage ignoring Tough.
+Models with a Noose Token cannot benefit from the Prowess, Brutal, Parry, Dodge, Feint, Resistance, Spirit or Bravery Traits while making Opposed Tests or Tests against Effects from Friendly Burakumin.
+Remove any Noose Tokens from a model when it leaves BtB with this model.
+While this model is on the Battlefield, Friendly Burakumin gain Vengeance [Noose Token].</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </infoGroup>
+      </infoGroups>
+      <categoryLinks>
+        <categoryLink id="205d-a18d-160f-71fb" name="Faction: Cult of Yurei" hidden="false" targetId="0d0a-4c02-8dce-676b" primary="false"/>
+        <categoryLink id="94d7-c03b-6ce0-8443" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
+        <categoryLink id="6d88-73a7-ad0c-48a1" name="Burakumin" hidden="false" targetId="5250-d881-a61c-718c" primary="false"/>
+        <categoryLink id="315e-f070-47e0-d579" name="Faction Profile Cards" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
+        <categoryLink id="c5ad-76a1-882f-670d" name="Cultist" hidden="false" targetId="3522-14fa-d48f-3e16" primary="false"/>
+        <categoryLink targetId="36a6-b788-1985-e87c" id="d110-83bf-e0c9-e73d" primary="false" name="Executioner"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="088c-05d4-16aa-9435" name="Enhancements" hidden="false" collective="false" import="true" targetId="ef93-ecd4-88c1-9224" type="selectionEntryGroup"/>
+        <entryLink id="561a-14e5-587a-0718" name="Ijimyo&apos;s Masks" hidden="false" collective="false" import="true" targetId="c138-ec1d-df76-737c" type="selectionEntry"/>
+      </entryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="16"/>
+      </costs>
+    </selectionEntry>
   </selectionEntries>
   <entryLinks>
     <entryLink id="5358-9c72-b23c-c2e3" name="Baichi" hidden="false" collective="false" import="true" targetId="d998-94b8-fd53-f8ce" type="selectionEntry">
@@ -8126,6 +8218,15 @@ You may choose a Kami with any Rice Cost including &apos;Su&apos;.</characterist
         <modifier type="set" value="false" field="hidden">
           <conditions>
             <condition type="atLeast" value="1" field="selections" scope="roster" childId="8a75-ceb1-bdf5-c64b" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink id="6745-4001-6526-9418" name="Master Bat" hidden="false" collective="false" import="true" targetId="04ab-3a0e-8c26-d333" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8a75-ceb1-bdf5-c64b" type="atLeast"/>
           </conditions>
         </modifier>
       </modifiers>

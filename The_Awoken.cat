@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="7615-d14e-1ab8-41ed" name="The Awoken" revision="9" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="19" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="7615-d14e-1ab8-41ed" name="The Awoken" revision="10" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="19" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <selectionEntries>
     <selectionEntry id="357b-ee70-73b0-9b34" name="Joyless Smiles and Dark Eyes" hidden="false" collective="false" import="true" type="upgrade">
       <profiles>
@@ -1566,6 +1566,98 @@ X is equal to the number of Wounds it has remaining unmarked on its Wound Track
       </costs>
       <constraints>
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="3624-f286-4ff2-0da6" includeChildSelections="true"/>
+      </constraints>
+    </selectionEntry>
+    <selectionEntry id="4fe4-7b3f-f934-f5bc" name="Katzu" hidden="false" collective="false" import="true" type="model">
+      <profiles>
+        <profile id="362d-f9f4-ed86-f2ff" name="Katzu" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">2</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">3</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33">3</characteristic>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">1</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">3</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">6 OOOOO O</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="c550-f67d-8ceb-6142" name="Traits" hidden="false">
+          <profiles>
+            <profile id="6e2a-02c4-fb47-f83c" name="Katzu" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Aware, Cultist (1/4&quot;), Fearless</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="fb0d-1ed1-0fa1-b4fa" name="Aware" hidden="false" targetId="ff4a-6b14-09dd-2343" type="rule"/>
+            <infoLink id="39c6-564d-d08c-df18" name="Fearless" hidden="false" targetId="5d6f-1746-9080-aca5" type="rule"/>
+            <infoLink id="c37e-ea58-23ee-97a2" name="Cultist" hidden="false" targetId="ed04-4bf2-e1ff-7a88" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="ef26-6d24-161b-e1b5" name=" Melee Weapon" hidden="false">
+          <profiles>
+            <profile id="0573-ee64-69bb-cde0" name="Knife" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">-1</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e"/>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Push Defence (0)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="898e-b5af-4bda-158f" name="Push Defence" hidden="false" targetId="74fc-a971-d9c2-278c" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="d64e-cf63-1614-9f62" name="Unique Effects" hidden="false">
+          <infoLinks>
+            <infoLink name="Crawlerling Host" id="880f-44fd-ef5b-9edb" hidden="false" type="profile" targetId="a1e5-72a5-505b-05df"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="0582-0417-dcae-a614" name="Ki Feats" hidden="false">
+          <infoLinks>
+            <infoLink id="b245-9702-0c01-c049" name="Eruption of Skittering Progeny" hidden="false" targetId="79f6-4b2b-18f6-aec3" type="infoGroup"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="abe9-3e1d-71f4-2929" name="Ranged Weapon" hidden="false">
+          <profiles>
+            <profile id="aa6b-854a-b801-d369" name="Shortbow" hidden="false" typeId="7e20-258e-bf92-18f9" typeName="Ranged Weapon">
+              <characteristics>
+                <characteristic name="Ranged Weapon Strength" typeId="15aa-b6bd-6923-271f">-1</characteristic>
+                <characteristic name="Range Bands" typeId="be6a-50c6-d691-e2e9">4/8/12</characteristic>
+                <characteristic name="Traits" typeId="3410-4428-ef91-eb61">Reload (1)</characteristic>
+                <characteristic name="Specials" typeId="cdaf-b6ac-89d4-39ef"/>
+                <characteristic name="Unique Effects" typeId="3bf8-6525-f003-4990"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="f3d5-154c-201e-4287" name="Reload" hidden="false" targetId="9736-df56-0b62-b1a8" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+      </infoGroups>
+      <categoryLinks>
+        <categoryLink id="7a14-ba89-8cac-7237" name="Faction: The Awoken" hidden="false" targetId="5a76-c3ea-5cb7-471f" primary="false"/>
+        <categoryLink id="9381-2736-3485-077e" name="Faction Profile Cards" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
+        <categoryLink id="b644-8bd9-5a1f-92a8" name="Jaakuna" hidden="false" targetId="8e9d-1853-1c1d-9f60" primary="false"/>
+        <categoryLink id="e953-af0a-3dcd-f766" name="Cultist" hidden="false" targetId="3522-14fa-d48f-3e16" primary="false"/>
+        <categoryLink targetId="afd4-8041-e359-223c" id="004a-7af9-657e-414c" primary="false" name="Unique"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="b4d6-15d0-1c7c-39cb" name="Enhancements" hidden="false" collective="false" import="true" targetId="2be0-472c-1d87-ef19" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="8"/>
+      </costs>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="c8d5-26eb-c92b-47a8" includeChildSelections="true"/>
       </constraints>
     </selectionEntry>
   </selectionEntries>
