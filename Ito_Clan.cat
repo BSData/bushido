@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="302b-66f1-a875-3b63" name="Ito Clan" revision="37" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="18" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="302b-66f1-a875-3b63" name="Ito Clan" revision="38" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="18" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <categoryEntries>
     <categoryEntry id="46b2-47c2-4c55-2e3a" name="Kinu" hidden="false"/>
     <categoryEntry id="273a-b61b-c7f8-76fd" name="Itsunagi" hidden="false"/>
@@ -4750,7 +4750,20 @@ When allocating Blood of Orochi  Tokens, this model may spend Ki to allocate ad
       </categoryLinks>
     </entryLink>
     <entryLink import="true" name="Lord Toad" hidden="false" id="8fcd-3078-a053-872a" type="selectionEntry" targetId="0f7e-4984-e178-e212"/>
-    <entryLink id="821c-4121-75f9-a984" name="Master Bat" hidden="true" collective="false" import="true" targetId="04ab-3a0e-8c26-d333" type="selectionEntry"/>
+    <entryLink id="821c-4121-75f9-a984" name="Master Bat" hidden="true" collective="false" import="true" targetId="04ab-3a0e-8c26-d333" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="4750-f234-49e4-79c1" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="0e4a-a40c-14eb-2f4f" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+    </entryLink>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="aa49-891a-7805-f60e" name="Okyo Ashigaru" hidden="false" collective="false" import="true" type="model">
