@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="1ac7-2939-2874-7530" name="Cult of Yurei" revision="43" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="19" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="1ac7-2939-2874-7530" name="Cult of Yurei" revision="44" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="19" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <selectionEntries>
     <selectionEntry id="5048-3a52-5689-6d0b" name="Drain Spirit" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -264,6 +264,7 @@ Any models that are Deployed in this way do not generate Activation Markers in t
               <conditions>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="abc1-93da-2f5a-dab4" type="atLeast"/>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="538d-4d36-c07f-9024" type="atLeast"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="0f5f-ba99-db81-8d97" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -421,6 +422,17 @@ Any models that are Deployed in this way do not generate Activation Markers in t
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="10"/>
       </costs>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="0f5f-ba99-db81-8d97" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry id="022d-59b1-7907-5a48" name="Risu" hidden="false" collective="false" import="true" type="model">
       <constraints>
@@ -501,6 +513,17 @@ Any models that are Deployed in this way do not generate Activation Markers in t
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="11"/>
       </costs>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="0f5f-ba99-db81-8d97" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry id="9986-3bb8-98ed-a208" name="Ibara" hidden="false" collective="false" import="true" type="model">
       <constraints>
@@ -580,6 +603,17 @@ Any models that are Deployed in this way do not generate Activation Markers in t
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="12"/>
       </costs>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="0f5f-ba99-db81-8d97" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry id="40ce-5185-5cf8-6f16" name="Araka" hidden="false" collective="false" import="true" type="model">
       <modifiers>
@@ -588,6 +622,7 @@ Any models that are Deployed in this way do not generate Activation Markers in t
             <conditionGroup type="or">
               <conditions>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f013-587d-b333-6938" type="equalTo"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="0f5f-ba99-db81-8d97" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -715,6 +750,7 @@ When this model causes an Enemy model to be removed from play as a result of a M
               <conditions>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="abc1-93da-2f5a-dab4" type="atLeast"/>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="538d-4d36-c07f-9024" type="atLeast"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="0f5f-ba99-db81-8d97" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -824,6 +860,7 @@ When this model causes an Enemy model to be removed from play as a result of a M
               <conditions>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="abc1-93da-2f5a-dab4" type="atLeast"/>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="538d-4d36-c07f-9024" type="atLeast"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="0f5f-ba99-db81-8d97" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -973,6 +1010,17 @@ When this model causes an Enemy model to be removed from play as a result of a M
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="10"/>
       </costs>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="0f5f-ba99-db81-8d97" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry id="1443-5050-89da-f587" name="Gok" hidden="false" collective="false" import="true" type="model">
       <modifiers>
@@ -1079,6 +1127,7 @@ Friendly Kairai models within 6&quot; gain 1 Ki in the Ki Generation step each t
               <conditions>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="abc1-93da-2f5a-dab4" type="atLeast"/>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="538d-4d36-c07f-9024" type="atLeast"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="0f5f-ba99-db81-8d97" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -1176,6 +1225,7 @@ Wounds caused by this effect ignore Armor and Tough.</characteristic>
             <conditionGroup type="or">
               <conditions>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="538d-4d36-c07f-9024" type="atLeast"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="0f5f-ba99-db81-8d97" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -1344,6 +1394,7 @@ Wounds caused by this effect ignore Armor and Tough.</characteristic>
         <categoryLink id="e334-31a4-5bde-a0b5" name="Kairai" hidden="false" targetId="26f6-e547-6d94-8b70" primary="false"/>
         <categoryLink id="b046-fb52-30c7-0439" name="Armour" hidden="false" targetId="f322-702a-ff62-b37e" primary="false"/>
         <categoryLink id="0f3c-6f1f-e4df-7074" name="Soulless" hidden="false" targetId="0abe-c3e6-4300-478f" primary="false"/>
+        <categoryLink targetId="e12a-f782-3281-7444" id="39c2-1610-3f17-2622" primary="false" name="Samurai"/>
       </categoryLinks>
       <entryLinks>
         <entryLink id="437e-e68d-e93b-a8d0" name="Enhancements" hidden="false" collective="false" import="true" targetId="ef93-ecd4-88c1-9224" type="selectionEntryGroup"/>
@@ -1431,6 +1482,17 @@ Wounds caused by this effect ignore Armor and Tough.</characteristic>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="15"/>
       </costs>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="0f5f-ba99-db81-8d97" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry id="e14c-b9a6-7d80-c7ae" name="Mokoti" hidden="false" collective="false" import="true" type="model">
       <constraints>
@@ -1503,6 +1565,17 @@ Wounds caused by this effect ignore Armor and Tough.</characteristic>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="10"/>
       </costs>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="0f5f-ba99-db81-8d97" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry id="bd63-87eb-88e2-9f98" name="Rokuro" hidden="false" collective="false" import="true" type="model">
       <constraints>
@@ -1610,6 +1683,17 @@ Models that fail gain Vengeance [Rokuro] until the action is resolved.</characte
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="15"/>
       </costs>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="0f5f-ba99-db81-8d97" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry id="79eb-6569-2c98-511e" name="Shichiro" hidden="false" collective="false" import="true" type="model">
       <constraints>
@@ -1701,6 +1785,17 @@ Models that fail gain Vengeance [Rokuro] until the action is resolved.</characte
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="9"/>
       </costs>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="0f5f-ba99-db81-8d97" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry id="7040-b76e-36bc-9916" name="Shinji" hidden="false" collective="false" import="true" type="model">
       <modifiers>
@@ -1710,6 +1805,7 @@ Models that fail gain Vengeance [Rokuro] until the action is resolved.</characte
               <conditions>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="abc1-93da-2f5a-dab4" type="atLeast"/>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="538d-4d36-c07f-9024" type="atLeast"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="0f5f-ba99-db81-8d97" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -1797,6 +1893,7 @@ Models that fail gain Vengeance [Rokuro] until the action is resolved.</characte
               <conditions>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="abc1-93da-2f5a-dab4" type="atLeast"/>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="538d-4d36-c07f-9024" type="atLeast"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="0f5f-ba99-db81-8d97" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -1907,6 +2004,7 @@ If this model is removed from play, also remove any Friendly Envy from play.</ch
               <conditions>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="abc1-93da-2f5a-dab4" type="atLeast"/>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="538d-4d36-c07f-9024" type="atLeast"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="0f5f-ba99-db81-8d97" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -2017,6 +2115,7 @@ If this model is removed from play, also remove any Friendly Envy from play.</ch
               <conditions>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="abc1-93da-2f5a-dab4" type="atLeast"/>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="538d-4d36-c07f-9024" type="atLeast"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="0f5f-ba99-db81-8d97" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -2108,6 +2207,7 @@ If this model is removed from play, also remove any Friendly Envy from play.</ch
               <conditions>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="abc1-93da-2f5a-dab4" type="atLeast"/>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="538d-4d36-c07f-9024" type="atLeast"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="0f5f-ba99-db81-8d97" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -2213,6 +2313,7 @@ If this model is removed from play, also remove any Friendly Envy from play.</ch
               <conditions>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="abc1-93da-2f5a-dab4" type="atLeast"/>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="538d-4d36-c07f-9024" type="atLeast"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="0f5f-ba99-db81-8d97" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -2309,6 +2410,7 @@ If this model is removed from play, also remove any Friendly Envy from play.</ch
               <conditions>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="abc1-93da-2f5a-dab4" type="atLeast"/>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="538d-4d36-c07f-9024" type="atLeast"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="0f5f-ba99-db81-8d97" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -2414,6 +2516,7 @@ During the Starting Phase models in BtB with this model gain a Fire (1) Marker.<
               <conditions>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="abc1-93da-2f5a-dab4" type="atLeast"/>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="538d-4d36-c07f-9024" type="atLeast"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="0f5f-ba99-db81-8d97" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -2521,6 +2624,7 @@ During the Starting Phase models in BtB with this model gain a Fire (1) Marker.<
               <conditions>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="abc1-93da-2f5a-dab4" type="atLeast"/>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="538d-4d36-c07f-9024" type="atLeast"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="0f5f-ba99-db81-8d97" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -2697,6 +2801,17 @@ If a model with a Death Sentence Marker is Killed this model Heals two Wounds.</
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="10"/>
       </costs>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="0f5f-ba99-db81-8d97" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry id="3cdc-79da-a124-73ad" name="Risen Kairai" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
@@ -2705,6 +2820,7 @@ If a model with a Death Sentence Marker is Killed this model Heals two Wounds.</
             <conditionGroup type="or">
               <conditions>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f013-587d-b333-6938" type="atLeast"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="0f5f-ba99-db81-8d97" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -2876,6 +2992,7 @@ In the End Phase, if this model is not in BtB with another Kairai this model bec
             <conditionGroup type="or">
               <conditions>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f013-587d-b333-6938" type="atLeast"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="0f5f-ba99-db81-8d97" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -2999,6 +3116,7 @@ When this model is reduced to 0 Wounds remove it from play and each model within
             <conditionGroup type="or">
               <conditions>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f013-587d-b333-6938" type="atLeast"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="0f5f-ba99-db81-8d97" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -3115,6 +3233,7 @@ When this model is reduced to 0 Wounds remove it from play and each model within
             <conditionGroup type="or">
               <conditions>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f013-587d-b333-6938" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0f5f-ba99-db81-8d97" type="atLeast"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -3232,6 +3351,7 @@ When this model is reduced to 0 Wounds remove it from play and each model within
             <conditionGroup type="or">
               <conditions>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f013-587d-b333-6938" type="atLeast"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="0f5f-ba99-db81-8d97" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -3347,6 +3467,7 @@ When this model is reduced to 0 Wounds remove it from play and each model within
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="abc1-93da-2f5a-dab4" type="atLeast"/>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f013-587d-b333-6938" type="atLeast"/>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="538d-4d36-c07f-9024" type="atLeast"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="0f5f-ba99-db81-8d97" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -3485,6 +3606,7 @@ When this model is reduced to 0 Wounds remove it from play and each model within
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="abc1-93da-2f5a-dab4" type="atLeast"/>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f013-587d-b333-6938" type="atLeast"/>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="538d-4d36-c07f-9024" type="atLeast"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="0f5f-ba99-db81-8d97" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -3612,6 +3734,7 @@ During the End Phase you may remove a Friendly Rat model in BtB with this model 
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="abc1-93da-2f5a-dab4" type="atLeast"/>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f013-587d-b333-6938" type="atLeast"/>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="538d-4d36-c07f-9024" type="atLeast"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="0f5f-ba99-db81-8d97" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -3745,7 +3868,8 @@ During the End Phase you may remove a Friendly Rat model in BtB with this model 
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f013-587d-b333-6938" type="equalTo"/>
+                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f013-587d-b333-6938" type="atLeast"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="0f5f-ba99-db81-8d97" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -4642,6 +4766,7 @@ Burakumin models in the same Warband as this model gain Regenerate (1).</charact
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="477a-e693-0888-08f7" type="atLeast"/>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="538d-4d36-c07f-9024" type="lessThan"/>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8a75-ceb1-bdf5-c64b" type="lessThan"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="0f5f-ba99-db81-8d97" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -4727,6 +4852,7 @@ Burakumin models in the same Warband as this model gain Regenerate (1).</charact
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="477a-e693-0888-08f7" type="atLeast"/>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="538d-4d36-c07f-9024" type="lessThan"/>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8a75-ceb1-bdf5-c64b" type="lessThan"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="0f5f-ba99-db81-8d97" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -5152,6 +5278,7 @@ No model may be chosen more than once.</characteristic>
             <conditionGroup type="or">
               <conditions>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f013-587d-b333-6938" type="atLeast"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="0f5f-ba99-db81-8d97" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -5322,6 +5449,7 @@ No model may be chosen more than once.</characteristic>
               <conditions>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="abc1-93da-2f5a-dab4" type="atLeast"/>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="538d-4d36-c07f-9024" type="atLeast"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="0f5f-ba99-db81-8d97" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -5433,6 +5561,7 @@ No model may be chosen more than once.</characteristic>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="477a-e693-0888-08f7" type="atLeast"/>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="538d-4d36-c07f-9024" type="lessThan"/>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8a75-ceb1-bdf5-c64b" type="lessThan"/>
+                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0f5f-ba99-db81-8d97" type="lessThan"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -5518,6 +5647,7 @@ No model may be chosen more than once.</characteristic>
               <conditions>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="abc1-93da-2f5a-dab4" type="atLeast"/>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="538d-4d36-c07f-9024" type="atLeast"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="0f5f-ba99-db81-8d97" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -5616,6 +5746,7 @@ If neither option is available this model is removed from play as usual.</charac
         <categoryLink id="be7c-b532-afd3-0757" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
         <categoryLink id="31ec-290d-d68c-911e" name="Faction Profile Cards" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
         <categoryLink id="564d-52e2-c94f-f668" name="Soulless" hidden="false" targetId="0abe-c3e6-4300-478f" primary="false"/>
+        <categoryLink targetId="232e-d32e-1be1-507e" id="c123-86af-191f-2efd" primary="false" name="Kaidan"/>
       </categoryLinks>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="15"/>
@@ -5655,19 +5786,7 @@ This terrain is always recruited in a Warband with Fuwa Kaidan.</characteristic>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="2f97-4707-3a8e-4c17" name="Armoured Kairai (reference)" hidden="true" collective="false" import="true" type="unit">
-      <modifiers>
-        <modifier type="set" field="hidden" value="false">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b49b-6987-598a-9b9c" type="atLeast"/>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a984-cccb-756d-a253" type="atLeast"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
+    <selectionEntry id="2f97-4707-3a8e-4c17" name="Armoured Kairai (reference)" hidden="false" collective="false" import="true" type="unit">
       <constraints>
         <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="true" id="e583-35f9-ec64-ae9c" type="max"/>
       </constraints>
@@ -5777,19 +5896,7 @@ This terrain is always recruited in a Warband with Fuwa Kaidan.</characteristic>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="4629-d333-7138-b074" name="Kairai Farmers (reference)" hidden="true" collective="false" import="true" type="unit">
-      <modifiers>
-        <modifier type="set" field="hidden" value="false">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b49b-6987-598a-9b9c" type="atLeast"/>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a984-cccb-756d-a253" type="atLeast"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
+    <selectionEntry id="4629-d333-7138-b074" name="Kairai Farmers (reference)" hidden="false" collective="false" import="true" type="unit">
       <constraints>
         <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="true" id="583d-363d-9740-da1a" type="max"/>
       </constraints>
@@ -5890,19 +5997,7 @@ This terrain is always recruited in a Warband with Fuwa Kaidan.</characteristic>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="770d-b09f-1539-1b70" name="Kairai Militia (reference)" hidden="true" collective="false" import="true" type="unit">
-      <modifiers>
-        <modifier type="set" field="hidden" value="false">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b49b-6987-598a-9b9c" type="atLeast"/>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a984-cccb-756d-a253" type="atLeast"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
+    <selectionEntry id="770d-b09f-1539-1b70" name="Kairai Militia (reference)" hidden="false" collective="false" import="true" type="unit">
       <constraints>
         <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="true" id="37b4-feb8-3e03-37fb" type="max"/>
       </constraints>
@@ -6008,18 +6103,6 @@ This terrain is always recruited in a Warband with Fuwa Kaidan.</characteristic>
       </costs>
     </selectionEntry>
     <selectionEntry id="44f0-51e8-6529-fb2e" name="Kairai Villagers (reference)" hidden="true" collective="false" import="true" type="unit">
-      <modifiers>
-        <modifier type="set" field="hidden" value="false">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b49b-6987-598a-9b9c" type="atLeast"/>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a984-cccb-756d-a253" type="atLeast"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="true" id="a24a-293c-26b4-162b" type="max"/>
       </constraints>
@@ -6123,19 +6206,7 @@ This terrain is always recruited in a Warband with Fuwa Kaidan.</characteristic>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="5de2-9fea-5f77-3b87" name="Kusatta Kairai (reference)" hidden="true" collective="false" import="true" type="unit">
-      <modifiers>
-        <modifier type="set" field="hidden" value="false">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b49b-6987-598a-9b9c" type="atLeast"/>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a984-cccb-756d-a253" type="atLeast"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
+    <selectionEntry id="5de2-9fea-5f77-3b87" name="Kusatta Kairai (reference)" hidden="false" collective="false" import="true" type="unit">
       <constraints>
         <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="true" id="1cc5-04b9-ae28-d780" type="max"/>
       </constraints>
@@ -6246,20 +6317,7 @@ When this model is reduced to 0 Wounds remove it from play and each model within
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="f04c-0cab-6974-8342" name="Risen Kairai (reference)" hidden="true" collective="false" import="true" type="unit">
-      <modifiers>
-        <modifier type="set" field="hidden" value="false">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b49b-6987-598a-9b9c" type="atLeast"/>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a984-cccb-756d-a253" type="atLeast"/>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="abc1-93da-2f5a-dab4" type="atLeast"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
+    <selectionEntry id="f04c-0cab-6974-8342" name="Risen Kairai (reference)" hidden="false" collective="false" import="true" type="unit">
       <constraints>
         <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="true" id="8be1-046f-85bd-c6a3" type="max"/>
       </constraints>
@@ -6419,19 +6477,7 @@ In the End Phase, if this model is not in BtB with another Kairai this model bec
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="bdd6-cc25-6b98-8d3e" name="Small Rat Swarms (reference)" hidden="true" collective="false" import="true" type="unit">
-      <modifiers>
-        <modifier type="set" field="hidden" value="false">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8fdc-0d2c-2ca8-deee" type="atLeast"/>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4582-a96b-a921-a81e" type="atLeast"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
+    <selectionEntry id="bdd6-cc25-6b98-8d3e" name="Small Rat Swarms (reference)" hidden="false" collective="false" import="true" type="unit">
       <constraints>
         <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="true" id="43cb-2770-cb65-abce" type="max"/>
       </constraints>
@@ -6664,6 +6710,7 @@ During the End Phase you may decide the order States are resolved.</characterist
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="477a-e693-0888-08f7" type="atLeast"/>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="538d-4d36-c07f-9024" type="lessThan"/>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8a75-ceb1-bdf5-c64b" type="lessThan"/>
+                <condition type="equalTo" value="0" field="selections" scope="roster" childId="0f5f-ba99-db81-8d97" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -6845,6 +6892,7 @@ During the End Phase you may decide the order States are resolved.</characterist
         <categoryLink id="05bc-52f8-13fd-15eb" name="Faction Profile Cards" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="false"/>
         <categoryLink id="5115-1f78-c883-7240" name="Soulless" hidden="false" targetId="0abe-c3e6-4300-478f" primary="false"/>
         <categoryLink id="f1e9-f0eb-66db-95f7" name="Reference Cards" hidden="false" targetId="5073-f00b-a8f6-5e3b" primary="true"/>
+        <categoryLink targetId="232e-d32e-1be1-507e" id="6db5-4752-0368-ee90" primary="false" name="Kaidan"/>
       </categoryLinks>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0"/>
@@ -6858,6 +6906,7 @@ During the End Phase you may decide the order States are resolved.</characterist
               <conditions>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="abc1-93da-2f5a-dab4" type="atLeast"/>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="538d-4d36-c07f-9024" type="atLeast"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="0f5f-ba99-db81-8d97" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -6941,6 +6990,7 @@ During the End Phase you may decide the order States are resolved.</characterist
               <conditions>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="abc1-93da-2f5a-dab4" type="atLeast"/>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="538d-4d36-c07f-9024" type="atLeast"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="0f5f-ba99-db81-8d97" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -7059,6 +7109,7 @@ During the End Phase you may decide the order States are resolved.</characterist
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="477a-e693-0888-08f7" type="atLeast"/>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="538d-4d36-c07f-9024" type="lessThan"/>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8a75-ceb1-bdf5-c64b" type="lessThan"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="0f5f-ba99-db81-8d97" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -7216,19 +7267,6 @@ During the End Phase you may decide the order States are resolved.</characterist
       </costs>
     </selectionEntry>
     <selectionEntry id="d0e4-5a9c-cdc3-4a14" name="Animated Warriors (reference)" hidden="false" collective="false" import="true" type="unit">
-      <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="477a-e693-0888-08f7" type="atLeast"/>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="538d-4d36-c07f-9024" type="lessThan"/>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8a75-ceb1-bdf5-c64b" type="lessThan"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
       <constraints>
         <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="true" id="4b5f-fd6c-19d7-fc4b" type="max"/>
       </constraints>
@@ -7366,19 +7404,6 @@ During the End Phase you may decide the order States are resolved.</characterist
       </costs>
     </selectionEntry>
     <selectionEntry id="819b-6940-850d-94e2" name="Animated Militia (reference)" hidden="false" collective="false" import="true" type="unit">
-      <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="477a-e693-0888-08f7" type="atLeast"/>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="538d-4d36-c07f-9024" type="lessThan"/>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8a75-ceb1-bdf5-c64b" type="lessThan"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
       <constraints>
         <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="true" id="4fa1-e0cb-e928-f4d6" type="max"/>
       </constraints>
@@ -7540,6 +7565,7 @@ During the End Phase you may decide the order States are resolved.</characterist
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="477a-e693-0888-08f7" type="atLeast"/>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="538d-4d36-c07f-9024" type="lessThan"/>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8a75-ceb1-bdf5-c64b" type="lessThan"/>
+                <condition type="equalTo" value="0" field="selections" scope="roster" childId="0f5f-ba99-db81-8d97" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -7626,13 +7652,6 @@ You may choose a Kami with any Rice Cost including &apos;Su&apos;.</characterist
       </costs>
     </selectionEntry>
     <selectionEntry id="7ec4-a5ad-e085-4a9d" name="The Wraith (reference)" hidden="false" collective="false" import="true" type="model">
-      <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="592b-a7e0-7211-18d4" type="lessThan"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="true" id="4725-0bd3-5618-9434" type="max"/>
       </constraints>
@@ -7732,6 +7751,7 @@ You may choose a Kami with any Rice Cost including &apos;Su&apos;.</characterist
               <conditions>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="abc1-93da-2f5a-dab4" type="atLeast"/>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="538d-4d36-c07f-9024" type="atLeast"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="0f5f-ba99-db81-8d97" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -7919,6 +7939,579 @@ While this model is on the Battlefield, Friendly Burakumin gain Vengeance [Noos
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="16"/>
       </costs>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="0f5f-ba99-db81-8d97" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+    </selectionEntry>
+    <selectionEntry id="de45-92db-f15e-85af" name="Fukou" hidden="false" collective="false" import="true" type="model">
+      <constraints>
+        <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="true" id="3c44-f39e-d1ac-27d8" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="0f03-403c-5657-42d6" name="Fukou" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">3</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">1</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">6</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">6 OOOOO O</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="2662-ac74-b3ea-f052" name="Traits" hidden="false">
+          <profiles>
+            <profile id="81a1-c18e-54b2-17f8" name="Fukou" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Co-ordinated Attack [Ashigaru], Cultist (1/6&quot;)</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="811a-778f-51e7-940f" name="Cultist" hidden="false" targetId="ed04-4bf2-e1ff-7a88" type="rule"/>
+            <infoLink id="97da-ef89-a972-396f" name="Co-ordinated Attack" hidden="false" targetId="2337-7bcc-c1f2-f2bd" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="afda-34e6-c90b-5bfe" name="Melee Weapon" hidden="false">
+          <profiles>
+            <profile id="a2d0-147b-ec17-994a" name="Long Masakari" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+2</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Brutal (1), Reach</characteristic>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Powerful Attack (1)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="8efb-6501-e19d-fe51" name="Brutal" hidden="false" targetId="5d95-975e-a72c-25f3" type="rule"/>
+            <infoLink id="a6d4-4a49-a600-3aa6" name="Reach" hidden="false" targetId="e28e-d5dd-a262-1101" type="rule"/>
+            <infoLink id="9001-f88c-ced8-26b6" name="Powerful Attack" hidden="false" targetId="d56a-058d-95d9-5b60" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="588f-b840-b3dd-d54b" name="Ki Feats" hidden="false">
+          <infoLinks>
+            <infoLink id="e1d9-260a-4391-de1f" name="Beneath Notice" hidden="false" targetId="8794-1f9f-f045-0c41" type="infoGroup"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup name="Unique Effects" id="fdc6-d92c-7008-78b6" hidden="false">
+          <profiles>
+            <profile name="The Wretched" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects" hidden="false" id="633b-8216-9ed3-4ad3">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">When this model is Killed, you may return to play a Ikeda Kokou that was recruited into the Warband but has been Killed or Removed from Play, and Replace this model with that Ikeda Kokou model.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </infoGroup>
+      </infoGroups>
+      <categoryLinks>
+        <categoryLink id="d6b0-b689-2069-5f91" name="Faction: Cult of Yurei" hidden="false" targetId="0d0a-4c02-8dce-676b" primary="false"/>
+        <categoryLink id="cd57-e545-1a45-a43b" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
+        <categoryLink id="242b-19b4-7af4-aa76" name="Burakumin" hidden="false" targetId="5250-d881-a61c-718c" primary="false"/>
+        <categoryLink id="032c-5e93-53df-995b" name="Faction Profile Cards" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
+        <categoryLink id="4bd4-8b3f-0863-48d9" name="Cultist" hidden="false" targetId="3522-14fa-d48f-3e16" primary="false"/>
+        <categoryLink targetId="f434-17e6-174c-b4f6" id="8340-17a8-27f2-08be" primary="false" name="Ashigaru"/>
+        <categoryLink targetId="65cb-f8e9-10d7-a7bb" id="87b3-e6cd-cc14-029f" primary="false" name="Wretched"/>
+        <categoryLink targetId="f62f-dd0b-4f06-06a6" id="a7e2-c1d4-9b77-0436" primary="false" name="Brutal"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="f21a-82e3-fe15-6a39" name="Enhancements" hidden="false" collective="false" import="true" targetId="ef93-ecd4-88c1-9224" type="selectionEntryGroup"/>
+        <entryLink id="0049-ee3d-febf-7e0d" name="Ijimyo&apos;s Masks" hidden="false" collective="false" import="true" targetId="c138-ec1d-df76-737c" type="selectionEntry"/>
+      </entryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="13"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="c1be-4bbf-31a7-87d3" name="Ikeda Kokou" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f013-587d-b333-6938" type="atLeast"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="true" id="3e23-ecdf-7982-b9a9" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="ea46-80fb-fcb0-7398" name="Ikeda Kokou" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">3</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">2</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">6</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">6 OOOOO O</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="dfae-54c3-5030-531a" name="Melee Weapons" hidden="false">
+          <profiles>
+            <profile id="91b9-4c63-8047-34ff" name="Katana" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+1</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e"/>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Push Defence (0), Counterstrike Defence (0)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+            <profile id="a710-8113-c107-0d17" name="Masakari" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+1</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Brutal (1)</characteristic>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Forceback Attack (0)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="2408-8e51-d2e4-2795" name="Brutal" hidden="false" targetId="5d95-975e-a72c-25f3" type="rule"/>
+            <infoLink id="f82d-4e7e-b4ad-e8f1" name="Push Defence" hidden="false" targetId="74fc-a971-d9c2-278c" type="rule"/>
+            <infoLink id="7ded-e44c-3b6b-0f35" name="Forceback Attack" hidden="false" targetId="2682-7c66-4163-28f2" type="rule"/>
+            <infoLink id="a5ce-0b68-d3d9-5d05" name="Counterstrike Defence " hidden="false" targetId="136e-4c77-dc59-4c6e" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="3573-bd4d-2d03-60c5" name="Traits" hidden="false">
+          <profiles>
+            <profile id="f900-2828-0ad9-7751" name="Ikeda Kokou" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Bravery, Fear (2), Prowess [Melee](1)</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="9af5-12a6-5a3e-7804" name="Fear" hidden="false" targetId="3586-4583-7f10-1f31" type="rule"/>
+            <infoLink id="4c79-4f5f-de96-bb28" name="Bravery" hidden="false" targetId="f9b2-38d2-7cda-de6e" type="rule"/>
+            <infoLink id="2d18-2037-e3a8-c0e1" name="Prowess " hidden="false" targetId="75ef-327a-cd08-a248" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="ad1d-4e96-c41b-293d" name="Ki Feats" hidden="false">
+          <infoLinks>
+            <infoLink id="35cf-14f9-b00c-15e3" name="Do-Kote" hidden="false" targetId="7c80-7e85-fc45-381a" type="infoGroup"/>
+            <infoLink id="3866-dbcc-41cd-5c37" name="Encroaching Mist" hidden="false" targetId="9abe-9d60-d910-ff7f" type="infoGroup"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup name="Unique Effects" id="ebda-6fc5-a535-bed7" hidden="false">
+          <profiles>
+            <profile name="The Wretched" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects" hidden="false" id="2f0b-ac6a-4896-7a7a">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">When this model is Killed, you may return to play an Ikeda Shindarei that was recruited into the Warband but has been Killed or Removed from Play, and Replace this model with that Ikeda Shindarei model.
+
+
+When this model is damaged in a Melee Exchange, it also suffers a Bleed (1) marker.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </infoGroup>
+      </infoGroups>
+      <categoryLinks>
+        <categoryLink id="1ec5-7ac0-1467-6b48" name="Faction: Cult of Yurei" hidden="false" targetId="0d0a-4c02-8dce-676b" primary="false"/>
+        <categoryLink id="3655-79e9-b24f-451d" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
+        <categoryLink id="3dbb-fcce-b94a-eee7" name="Faction Profile Cards" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
+        <categoryLink targetId="65cb-f8e9-10d7-a7bb" id="a936-0b71-03ab-e433" primary="false" name="Wretched"/>
+        <categoryLink targetId="e12a-f782-3281-7444" id="6cb8-1ac3-0f73-e4a4" primary="false" name="Samurai"/>
+        <categoryLink targetId="f62f-dd0b-4f06-06a6" id="c0e4-ac08-da41-4ed8" primary="false" name="Brutal"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="713b-6622-ee78-327e" name="Enhancements" hidden="false" collective="false" import="true" targetId="ef93-ecd4-88c1-9224" type="selectionEntryGroup"/>
+        <entryLink id="6c8a-fb89-bc97-9f21" name="Ijimyo&apos;s Masks" hidden="false" collective="false" import="true" targetId="c138-ec1d-df76-737c" type="selectionEntry"/>
+      </entryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="16"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="4072-0fe7-1279-4d9f" name="Ikeda Shindarei" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="abc1-93da-2f5a-dab4" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="538d-4d36-c07f-9024" type="atLeast"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f59e-f5d9-089b-5459" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="24ce-7353-18d1-ff28" name="Ikeda Shindarei" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">1</characteristic>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">1</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">0</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">6</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">Special</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="28eb-2cdb-4a30-973b" name="Ki Feats" hidden="false">
+          <infoLinks>
+            <infoLink id="27b8-4419-9845-55ee" name="Apparition" hidden="false" targetId="1c1e-18a9-546e-9c59" type="infoGroup"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="e9e2-13ea-ecb6-bdea" name="Melee Weapon" hidden="false">
+          <profiles>
+            <profile id="fecd-1f87-e31b-7540" name="Long Masakari" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+2</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Brutal (1), Reach</characteristic>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d"/>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink name="Brutal" id="5b63-4d83-2ee6-e789" hidden="false" targetId="5d95-975e-a72c-25f3" type="rule"/>
+            <infoLink name="Reach" id="bc3e-873c-91f7-96b7" hidden="false" targetId="e28e-d5dd-a262-1101" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="f117-db63-c8af-c5a1" name="Traits" hidden="false">
+          <profiles>
+            <profile id="ed1d-ae5e-e090-6325" name="Ikeda Shindarei" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Armour (1), Co-ordinated Attack [Ashigaru], Fear (6), Intangible, Insignificant, Kami, Soulless</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="287f-4824-adfe-73c2" name="Fear" hidden="false" targetId="3586-4583-7f10-1f31" type="rule"/>
+            <infoLink id="7e46-778b-8d7d-f182" name="Insignificant" hidden="false" targetId="1614-d86c-ef8a-c095" type="rule"/>
+            <infoLink id="0774-276a-8301-e92a" name="Kami" hidden="false" targetId="50d4-ec7a-9763-1b4d" type="rule"/>
+            <infoLink id="ab62-2f66-c560-7fc9" name="Armour" hidden="false" targetId="8615-1c63-2242-5746" type="rule"/>
+            <infoLink id="b12e-c7e4-033c-3c85" name="Soulless" hidden="false" targetId="af31-aad0-fcea-9590" type="rule"/>
+            <infoLink id="be16-ac97-e6ba-a001" name="Intangible" hidden="false" targetId="7f5c-c63d-f96f-65af" type="rule"/>
+            <infoLink id="a6c3-1918-d212-4084" name="Co-ordinated Attack" hidden="false" targetId="2337-7bcc-c1f2-f2bd" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup name="Unique Effects" id="434c-28a5-712c-2664" hidden="false">
+          <profiles>
+            <profile name="The Wretched" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects" hidden="false" id="81f9-4632-bacc-7b11">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">When this model is Killed, you may return to play a Koshō that was recruited into the Warband but has been Killed or Removed from Play, and Replace this model with that Koshō model.
+
+When this model inflicts Wounds through a successful Melee Attack, it gains a number of Ki Tokens equal to the Wounded model&apos;s Ki Statistic.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </infoGroup>
+      </infoGroups>
+      <categoryLinks>
+        <categoryLink id="0ab6-2cda-b15d-85d0" name="Minor" hidden="false" targetId="d45e-8b05-fa4c-e6c9" primary="false"/>
+        <categoryLink id="0350-a2a3-1be1-09b0" name="Kami" hidden="false" targetId="6639-615e-f1ab-bc64" primary="false"/>
+        <categoryLink id="a9ec-a68f-e839-3506" name="Faction: Cult of Yurei" hidden="false" targetId="0d0a-4c02-8dce-676b" primary="false"/>
+        <categoryLink id="905e-e1b4-af06-c581" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
+        <categoryLink id="ecca-52a0-2b94-2adf" name="Faction Profile Cards" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
+        <categoryLink id="2272-743c-c333-8ad9" name="Soulless" hidden="false" targetId="0abe-c3e6-4300-478f" primary="false"/>
+        <categoryLink targetId="232e-d32e-1be1-507e" id="d5bf-f5da-d682-a449" primary="false" name="Kaidan"/>
+        <categoryLink targetId="65cb-f8e9-10d7-a7bb" id="cb5b-2c05-79e2-84c9" primary="false" name="Wretched"/>
+        <categoryLink targetId="f62f-dd0b-4f06-06a6" id="6c72-5ef1-c48d-3d7a" primary="false" name="Brutal"/>
+        <categoryLink targetId="bd21-7464-7dc8-a907" id="ce46-b843-614e-e996" primary="false" name="Bushi"/>
+        <categoryLink targetId="f322-702a-ff62-b37e" id="09ca-0c82-3b65-84a9" primary="false" name="Armour"/>
+      </categoryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="16"/>
+      </costs>
+      <entryLinks>
+        <entryLink import="true" name="Ikeda Koryou" hidden="false" id="d4ea-8332-320f-eb6c" type="selectionEntry" targetId="fdeb-03be-d929-a9d8"/>
+      </entryLinks>
+    </selectionEntry>
+    <selectionEntry id="a70c-eab2-e23e-4547" name="Kanashī" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f013-587d-b333-6938" type="atLeast"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="true" id="66a5-345f-66fc-9147" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="6720-f351-529b-a2c5" name="Kanashī" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">0</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">3</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">0</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">6</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">6 OOOOO O</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="6a5a-ed90-91b6-f1b3" name="Melee Weapon" hidden="false">
+          <profiles>
+            <profile id="9ae2-feb4-5491-77c2" name="No-Dachi" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+2</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Reach</characteristic>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Powerful Attack (1), Push Attack (0)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink name="Reach" id="a2c7-798b-098f-c9c4" hidden="false" targetId="e28e-d5dd-a262-1101" type="rule"/>
+            <infoLink name="Powerful Attack" id="fd0b-37bc-9bf0-1e1d" hidden="false" targetId="d56a-058d-95d9-5b60" type="rule"/>
+            <infoLink name="Push Attack" id="0edb-dcfb-0ef4-0f39" hidden="false" targetId="6c26-94ba-6b96-9e1b" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="f624-66de-103e-9d6e" name="Traits" hidden="false">
+          <profiles>
+            <profile id="0e50-ad7e-ec22-33c5" name="Kanashī" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Co-ordinated Attack [Ashigaru], Fear (5), Leech (2/8&quot;), Rise (3), Slow, Soulless, Tough (1)</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="f517-2193-e782-016f" name="Fear" hidden="false" targetId="3586-4583-7f10-1f31" type="rule"/>
+            <infoLink id="9e90-ff4f-3291-48ae" name="Leech" hidden="false" targetId="bab1-710b-4f90-7c2f" type="rule"/>
+            <infoLink id="f90d-636d-4267-afde" name="Slow" hidden="false" targetId="f1c3-4a84-c616-23cd" type="rule"/>
+            <infoLink id="cded-ae37-5cf8-aa67" name="Soulless" hidden="false" targetId="af31-aad0-fcea-9590" type="rule"/>
+            <infoLink id="1ba3-2739-3487-0309" name="Tough" hidden="false" targetId="5613-a6cf-495a-229f" type="rule"/>
+            <infoLink id="36d6-1f8d-cd7d-137f" name="Co-ordinated Attack" hidden="false" targetId="2337-7bcc-c1f2-f2bd" type="rule"/>
+            <infoLink id="778c-11cf-7796-fcf1" name="Rise" hidden="false" targetId="f774-9156-2996-f5c6" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="164f-5959-81fa-a4ab" name="Ki Feats" hidden="false">
+          <infoLinks>
+            <infoLink id="742b-6b4e-1e51-64dd" name="Stagger" hidden="false" targetId="6c8e-7b6f-c53a-d878" type="infoGroup"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup name="Unique Effects" id="89b3-0c92-d537-6125" hidden="false">
+          <profiles>
+            <profile name="The Wretched" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects" hidden="false" id="05c1-4f2c-2cc4-b416">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">When this model is Killed, you may return to play a Fukou that was recruited into the Warband but has been Killed or Removed from Play, and Replace this model with that Fukou model.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </infoGroup>
+      </infoGroups>
+      <categoryLinks>
+        <categoryLink id="7aff-cba5-2734-d391" name="Faction: Cult of Yurei" hidden="false" targetId="0d0a-4c02-8dce-676b" primary="false"/>
+        <categoryLink id="a073-78b8-6aff-80e4" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
+        <categoryLink id="36d3-7cbd-e9a9-cc49" name="Faction Profile Cards" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
+        <categoryLink id="c5f3-7e36-84dd-39ed" name="Kairai" hidden="false" targetId="26f6-e547-6d94-8b70" primary="false"/>
+        <categoryLink id="b4d6-97ee-4261-f48b" name="Soulless" hidden="false" targetId="0abe-c3e6-4300-478f" primary="false"/>
+        <categoryLink targetId="65cb-f8e9-10d7-a7bb" id="6620-c14a-ab3b-346a" primary="false" name="Wretched"/>
+        <categoryLink targetId="f434-17e6-174c-b4f6" id="3f49-db6a-955f-16d5" primary="false" name="Ashigaru"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="063c-fbb9-369d-c0e7" name="Enhancements" hidden="false" collective="false" import="true" targetId="ef93-ecd4-88c1-9224" type="selectionEntryGroup"/>
+        <entryLink id="5328-f8b4-4640-76fb" name="Fresh" hidden="false" collective="false" import="true" targetId="ab7f-d22b-08ee-9a07" type="selectionEntry"/>
+        <entryLink id="fa22-f3cb-86d1-0bd2" name="Ijimyo&apos;s Masks" hidden="false" collective="false" import="true" targetId="c138-ec1d-df76-737c" type="selectionEntry"/>
+      </entryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="14"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="2112-d91e-e2fa-102f" name="Koshō" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="477a-e693-0888-08f7" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="538d-4d36-c07f-9024" type="lessThan"/>
+                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8a75-ceb1-bdf5-c64b" type="lessThan"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="true" id="3c57-41ab-5a3b-93a0" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="4d1c-e9e5-34ae-a1b7" name="Koshō" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">2</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277"/>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">2</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">0</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">0</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">3 OOO</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="480f-3cfb-7e24-a1e0" name="Traits" hidden="false">
+          <profiles>
+            <profile id="da43-8a4a-420a-28ed" name="Koshō" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Co-ordinated Attack [Ashigaru], Durable, Fear (4), Immune [States], Soulless, Regenerate (1)</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="7244-7c07-4c4d-a992" name="Fear" hidden="false" targetId="3586-4583-7f10-1f31" type="rule"/>
+            <infoLink id="37d7-1378-8aff-1947" name="Co-ordinated Attack" hidden="false" targetId="2337-7bcc-c1f2-f2bd" type="rule"/>
+            <infoLink id="c3c0-9efe-2cad-cd9c" name="Durable" hidden="false" targetId="3612-7e19-3cb9-72d0" type="rule"/>
+            <infoLink id="6af6-e91a-1f10-8161" name="Immune" hidden="false" targetId="ea08-b25e-0ea8-af73" type="rule"/>
+            <infoLink id="d8fa-409f-4d32-ec4e" name="Soulless" hidden="false" targetId="af31-aad0-fcea-9590" type="rule"/>
+            <infoLink id="bfc5-ccf3-3b37-f388" name="Regenerate" hidden="false" targetId="74c4-617e-8405-3e46" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="f414-e35a-c25b-d0b3" name="Melee Weapons" hidden="false">
+          <profiles>
+            <profile id="d210-3104-fd04-ef21" name="Masakari" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+0</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Brutal (1)</characteristic>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Forceback Attack (0)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+            <profile id="0cbf-aad5-35ab-72f2" name="Wakizashi" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+0</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Pierce (1)</characteristic>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Counterstrike Defence (1)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="1588-c1b6-9b47-f072" name="Pierce " hidden="false" targetId="39e4-14d7-5533-6e67" type="rule"/>
+            <infoLink id="bd14-19d2-2cca-e5a5" name="Forceback Attack" hidden="false" targetId="2682-7c66-4163-28f2" type="rule"/>
+            <infoLink id="41f5-649f-5142-55b9" name="Brutal" hidden="false" targetId="5d95-975e-a72c-25f3" type="rule"/>
+            <infoLink id="308c-2463-e4f8-edb6" name="Counterstrike Defence " hidden="false" targetId="136e-4c77-dc59-4c6e" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup name="Unique Effects" id="1614-f420-8d74-5eb4" hidden="false">
+          <profiles>
+            <profile name="The Wretched" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects" hidden="false" id="3232-9e57-770a-824a">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">When this model is Killed, you may return to play a Kanashī that was recruited into the Warband but has been Killed or Removed from Play, and Replace this model with that Kanashī model.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </infoGroup>
+      </infoGroups>
+      <categoryLinks>
+        <categoryLink id="e0dc-0bfb-f165-8aa0" name="Ashigaru" hidden="false" targetId="f434-17e6-174c-b4f6" primary="false"/>
+        <categoryLink id="3405-7523-89d2-d8a9" name="Faction: Cult of Yurei" hidden="false" targetId="0d0a-4c02-8dce-676b" primary="false"/>
+        <categoryLink id="8725-a96b-43cb-59c6" name="Gashadokuro" hidden="false" targetId="1d35-1993-a101-542b" primary="false"/>
+        <categoryLink id="42aa-e997-958e-d040" name="Faction Profile Cards" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
+        <categoryLink id="9e0b-161b-afcf-c6de" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
+        <categoryLink id="da79-3acd-8c9b-6dc2" name="Soulless" hidden="false" targetId="0abe-c3e6-4300-478f" primary="false"/>
+        <categoryLink targetId="65cb-f8e9-10d7-a7bb" id="345e-0382-3871-8a4c" primary="false" name="Wretched"/>
+        <categoryLink targetId="f62f-dd0b-4f06-06a6" id="e228-9e71-0f2b-dea0" primary="false" name="Brutal"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="e077-1bed-c006-854c" name="Enhancements" hidden="false" collective="false" import="true" targetId="ef93-ecd4-88c1-9224" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="10"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Miserable Fraternity" hidden="false" id="76e1-8871-8eb5-0263">
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2"/>
+      </costs>
+      <categoryLinks>
+        <categoryLink targetId="d360-71aa-ca22-ba3c" id="dd95-b1f6-ba73-416c" primary="true" name="Faction Event Cards"/>
+      </categoryLinks>
+      <constraints>
+        <constraint type="min" value="3" field="selections" scope="roster" shared="true" id="bf7d-f47e-1450-7bff" includeChildSelections="true" includeChildForces="true"/>
+      </constraints>
+      <profiles>
+        <profile name="Miserable Fraternity" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card" hidden="false" id="b26a-1543-d7c9-a906">
+          <characteristics>
+            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">When an Enemy model fails a rolled Fear Test, mark a number of Wound Boxes equal to the amount the Test was failed by (i.e. the difference between the Challenge Number and the rolled result).
+This Damage ignores Tough. A model may only be damaged once per test by this card.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Onojutsu" hidden="false" id="e30c-7890-73d4-fd48">
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2"/>
+      </costs>
+      <categoryLinks>
+        <categoryLink targetId="d360-71aa-ca22-ba3c" id="c3ad-3c97-a4af-55e1" primary="true" name="Faction Event Cards"/>
+      </categoryLinks>
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="roster" shared="true" id="1342-0559-b54b-d618" includeChildSelections="true" includeChildForces="true"/>
+      </constraints>
+      <profiles>
+        <profile name="Miserable Fraternity" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card" hidden="false" id="1d15-8cf0-ba6e-1548">
+          <characteristics>
+            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">Play in the Starting Phase. Until the End Phase, Friendly Masakari and Long Masakari weapons gain Pierce (2) and Sharp (2).</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Sharp " id="f965-20ce-e2c7-026b" hidden="false" type="rule" targetId="6092-9fb5-5196-d1eb"/>
+        <infoLink name="Pierce " id="6b77-57d8-76ad-32fc" hidden="false" type="rule" targetId="39e4-14d7-5533-6e67"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Wretched Existence" hidden="false" id="0f5f-ba99-db81-8d97">
+      <categoryLinks>
+        <categoryLink targetId="477a-e693-0888-08f7" id="18f0-8701-2408-38da" primary="true" name="Faction Theme Cards"/>
+      </categoryLinks>
+      <profiles>
+        <profile name="Wretched Existence" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card" hidden="false" id="bdba-98f2-bcd3-8890">
+          <characteristics>
+            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">- Automatically win the Tactical Test for turn 4.
+- During turn 4, Enemy models cannot use or force rerolls or benefit from the Brutal or Unblockable Traits until the End Phase.
+- Once per game, during the Starting Phase, replace a Recruited Wretched model with another Recruited Wretched model that is no longer in play.
+
+
+Permitted [Ashigaru, Wretched, Samurai, Ronin Samurai]</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
     </selectionEntry>
   </selectionEntries>
   <entryLinks>
@@ -8029,9 +8622,14 @@ While this model is on the Battlefield, Friendly Burakumin gain Vengeance [Noos
     <entryLink id="1cf8-e834-4dba-4315" name="Shenzhiqi" hidden="false" collective="false" import="true" targetId="6d5c-257b-027b-289f" type="selectionEntry">
       <modifiers>
         <modifier type="set" field="hidden" value="false">
-          <conditions>
-            <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8a75-ceb1-bdf5-c64b" type="atLeast"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="8a75-ceb1-bdf5-c64b" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="0f5f-ba99-db81-8d97" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <categoryLinks>
@@ -8041,9 +8639,14 @@ While this model is on the Battlefield, Friendly Burakumin gain Vengeance [Noos
     <entryLink id="7d1e-7a53-1b57-aff9" name="Shuohuang" hidden="false" collective="false" import="true" targetId="7603-352e-f85b-f2d4" type="selectionEntry">
       <modifiers>
         <modifier type="set" field="hidden" value="false">
-          <conditions>
-            <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8a75-ceb1-bdf5-c64b" type="atLeast"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="8a75-ceb1-bdf5-c64b" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="0f5f-ba99-db81-8d97" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <categoryLinks>
@@ -8053,9 +8656,14 @@ While this model is on the Battlefield, Friendly Burakumin gain Vengeance [Noos
     <entryLink id="8ee8-eaba-79f2-2766" name="Tenbatsu" hidden="false" collective="false" import="true" targetId="7785-a709-ad57-73e4" type="selectionEntry">
       <modifiers>
         <modifier type="set" field="hidden" value="false">
-          <conditions>
-            <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8a75-ceb1-bdf5-c64b" type="atLeast"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="8a75-ceb1-bdf5-c64b" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="0f5f-ba99-db81-8d97" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <categoryLinks>
@@ -8065,9 +8673,14 @@ While this model is on the Battlefield, Friendly Burakumin gain Vengeance [Noos
     <entryLink id="513a-b50a-cf8f-ad67" name="Toshiro" hidden="false" collective="false" import="true" targetId="0deb-0a52-4231-9cdb" type="selectionEntry">
       <modifiers>
         <modifier type="set" field="hidden" value="false">
-          <conditions>
-            <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8a75-ceb1-bdf5-c64b" type="atLeast"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="8a75-ceb1-bdf5-c64b" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="0f5f-ba99-db81-8d97" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <categoryLinks>
@@ -8077,9 +8690,14 @@ While this model is on the Battlefield, Friendly Burakumin gain Vengeance [Noos
     <entryLink id="49ec-c104-aef4-6be7" name="Ying-Jian" hidden="false" collective="false" import="true" targetId="56df-f15b-64ba-8429" type="selectionEntry">
       <modifiers>
         <modifier type="set" field="hidden" value="false">
-          <conditions>
-            <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8a75-ceb1-bdf5-c64b" type="atLeast"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="8a75-ceb1-bdf5-c64b" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="0f5f-ba99-db81-8d97" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <categoryLinks>
@@ -8092,7 +8710,8 @@ While this model is on the Battlefield, Friendly Burakumin gain Vengeance [Noos
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8a75-ceb1-bdf5-c64b" type="atLeast"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="8a75-ceb1-bdf5-c64b" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="0f5f-ba99-db81-8d97" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -8535,6 +9154,40 @@ Due to the cost increment per model, the cost needs to decrement once to offset 
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="6"/>
       </costs>
     </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Ikeda Koryou" hidden="false" id="fdeb-03be-d929-a9d8">
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2"/>
+      </costs>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7d15-c8d6-c8bb-3376"/>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="7847-60db-22f8-c942" includeChildSelections="true" includeChildForces="true"/>
+      </constraints>
+      <profiles>
+        <profile name="Ikeda Koryou" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card" hidden="false" id="4ed8-81d4-a2c4-44a1">
+          <characteristics>
+            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">When using a Masakari Weapon in a Melee Exchange, the attached model&apos;s attacks are considered Sweep Attacks in addition to any chosen Special Ability.
+
+
+This Enhancement may be attached to Ikeda Shindarei despite being Insignificant and Kami.
+
+
+Requirement [Bushi, Samurai]</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="notInstanceOf" value="0" field="selections" scope="parent" childId="e12a-f782-3281-7444" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <condition type="notInstanceOf" value="0" field="selections" scope="parent" childId="bd21-7464-7dc8-a907" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup id="ef93-ecd4-88c1-9224" name="Enhancements" hidden="false" collective="false" import="true">
@@ -8747,6 +9400,41 @@ Requirement [Wanyudo]</characteristic>
             <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1"/>
           </costs>
         </selectionEntry>
+        <selectionEntry id="42ff-6b9c-7404-2c2d" name="Unholy Misalignment" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="roster" value="4" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="822c-b685-d5ff-f85e" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="3108-f053-c9ac-5dda" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="ab8e-b109-35c2-ed39" name="Bargain with Yurei" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
+              <characteristics>
+                <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">If any Dice Roll would cause the Attached model to be Killed it must be re-rolled.
+The second result is kept (unless another effect also causes a re-roll) even if it still causes the Attached model to be Killed.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Unholy Misalignment" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card" hidden="false" id="1a5e-b096-2b75-aa38">
+              <characteristics>
+                <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">Attached model gains an additional die on its first Rise Test, then discard this card.
+
+
+Requirement [Kairai]</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <categoryLinks>
+            <categoryLink id="4241-4ba7-dcd6-836f" name="Faction Enhancement Cards" hidden="false" targetId="17cf-d9a9-c7c1-bcb6" primary="true"/>
+          </categoryLinks>
+          <costs>
+            <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2"/>
+          </costs>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="notInstanceOf" value="1" field="selections" scope="parent" childId="26f6-e547-6d94-8b70" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="f1a1-b6ab-a0f8-41e0" name="Equipment" hidden="false" collective="false" import="true">
@@ -8904,6 +9592,7 @@ Restriction [Burakumin]</characteristic>
         <entryLink id="1f62-7074-244c-942b" name="Spark of Life" hidden="false" collective="false" import="true" targetId="af1d-199c-fe39-69e6" type="selectionEntry"/>
         <entryLink id="166b-c3fc-f969-0f9c" name="Professional" hidden="false" collective="false" import="true" targetId="a795-4dac-6489-ce72" type="selectionEntry"/>
         <entryLink id="ad04-3353-1572-1a0b" name="Bright Nurture" hidden="false" collective="false" import="true" targetId="7345-3239-1f28-59f1" type="selectionEntry"/>
+        <entryLink import="true" name="Ikeda Koryou" hidden="false" id="bc85-5f52-968a-b249" type="selectionEntry" targetId="fdeb-03be-d929-a9d8"/>
       </entryLinks>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
