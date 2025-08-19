@@ -5276,8 +5276,9 @@ Remove this model from play if Friendly Tsukai is Killed or Removed From Play.</
       <infoGroups>
         <infoGroup id="14c7-ead9-fc57-1b1f" name="Ki Feats" hidden="false">
           <infoLinks>
-            <infoLink id="56fb-792e-378a-4f79" name="Tax" hidden="false" targetId="4aed-176e-57b0-19be" type="infoGroup"/>
-            <infoLink id="d715-fe3b-24ac-3f7a" name="Trade" hidden="false" targetId="605a-39b4-1ee6-9471" type="infoGroup"/>
+            <infoLink id="56fb-792e-378a-4f79" name="Hero&apos;s Dilemma" hidden="false" targetId="724e-2565-9d6c-c5ee" type="infoGroup"/>
+            <infoLink id="d715-fe3b-24ac-3f7a" name="Stir Emotion" hidden="false" targetId="f5fb-7c83-d5bd-8b08" type="infoGroup"/>
+            <infoLink id="97ec-b061-6882-da2b" name="Set the Scene" hidden="false" targetId="794e-df8e-f96d-5eb1" type="infoGroup"/>
           </infoLinks>
         </infoGroup>
         <infoGroup id="2533-8134-5afe-035b" name="Traits" hidden="false">
@@ -5318,7 +5319,7 @@ Remove this model from play if Friendly Tsukai is Killed or Removed From Play.</
         </infoGroup>
         <infoGroup id="2bbe-4920-193d-23b2" name="Unique Effects" hidden="false">
           <profiles>
-            <profile id="77aa-f1ca-8281-18ee" name="Unique Effects" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+            <profile id="77aa-f1ca-8281-18ee" name="Kokei" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
               <characteristics>
                 <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">This model may only be included in the Path of a Thousand Names Theme.
 Enemy models may not gain Activation Counters during the Main Phase.</characteristic>
@@ -5863,6 +5864,103 @@ X is equal to the number of Friendly Urchin models within 2&quot; of the Target 
       </entryLinks>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="13"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="ecd9-1bfc-2f32-5b34" name="Tuk" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="98a6-e76a-f99b-a1d3" type="atLeast"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="888f-8e23-f4b3-a825" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="af22-7853-e1b3-10d7" name="Tuk" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">2</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33">3</characteristic>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">1</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">6</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">6 OOOOO O</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="24ae-f5e4-217e-421b" name="Ki Feats" hidden="false">
+          <infoLinks>
+            <infoLink id="d24b-7494-9f52-7f77" name="Self-Taught Koryu" hidden="false" targetId="b93d-86c3-a2f9-dd28" type="infoGroup"/>
+            <infoLink id="d698-d9bb-9bae-2eed" name="Hack" hidden="false" targetId="4b42-aa02-ccb3-cfd8" type="infoGroup"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="6b5a-49da-902f-803f" name="Traits" hidden="false">
+          <profiles>
+            <profile id="7038-0c8d-d592-2e96" name="Tuk" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Fortune, Impetuous (1)</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="e0e8-87e8-b230-3919" name="Fortune" hidden="false" targetId="abf1-1c0e-4717-77e2" type="rule"/>
+            <infoLink id="39e7-5417-f2ac-6fca" name="Impetuous" hidden="false" targetId="4b80-3180-0b04-fb11" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="8fa1-9099-4b53-04e7" name="Melee Weapon" hidden="false">
+          <profiles>
+            <profile id="4cd7-8246-5508-b95d" name="Stolen Katana" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+1</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Parry (1), Sharp (1)</characteristic>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Slam Attack (1), Push Defence (0)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="7c10-0deb-0bd6-a93e" name="Sharp " hidden="false" targetId="6092-9fb5-5196-d1eb" type="rule"/>
+            <infoLink id="2de0-fb01-5885-0ae9" name="Slam Attack" hidden="false" targetId="5d05-b0ce-d7db-9def" type="rule"/>
+            <infoLink id="1450-12ac-b3be-fcf3" name="Push Defence" hidden="false" targetId="74fc-a971-d9c2-278c" type="rule"/>
+            <infoLink id="8e12-94da-dfbd-c71b" name="Parry" hidden="false" targetId="c7c2-b36e-7952-c79b" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup name="Unique Effects" id="8db2-3f10-52a2-3e84" hidden="false">
+          <profiles>
+            <profile name="Liability" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects" hidden="false" id="e122-727e-c3c9-d8cb">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">Enemy Samurai models gain Vengeance [Tuk].
+A Warband with this model may not recruit any Inside Information cards.
+This model may not have Enhancements attached to it.
+While this model is on the Battlefield, Friendly models cannot benefit from the Tactician Trait.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </infoGroup>
+      </infoGroups>
+      <categoryLinks>
+        <categoryLink id="7d5c-361d-3f77-af8f" name="Faction: Silvermoon Trade Syndicate" hidden="false" targetId="875a-48b1-3c9f-0a14" primary="false"/>
+        <categoryLink id="09a5-1d86-a3d8-699e" name="Faction Profile Cards" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
+        <categoryLink id="62dd-bdd7-6d36-3391" name="Shatei" hidden="false" targetId="dd57-4bab-fa7b-f75c" primary="false"/>
+        <categoryLink id="7d5e-b6d4-e8b9-3456" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
+        <categoryLink targetId="d28a-b3c9-bf59-7339" id="c752-5139-f379-0c96" primary="false" name="Iron Fist"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="1803-45db-1648-3311" name="Enhancements" hidden="false" collective="false" import="true" targetId="37a1-1d53-ef45-026d" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="6"/>
       </costs>
     </selectionEntry>
   </selectionEntries>
