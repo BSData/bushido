@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="d615-aef7-31d5-367d" name="Jung Pirates" revision="45" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="19" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="d615-aef7-31d5-367d" name="Jung Pirates" revision="46" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="19" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <categoryEntries>
     <categoryEntry id="258a-e1a8-8db1-9635" name="Ki&lt;2" hidden="true"/>
     <categoryEntry id="f6c9-50fa-a9d3-e9f3" name="Ranged Weapon" hidden="true"/>
@@ -5300,19 +5300,55 @@ If the model becomes ineligible before it is chosen as the Activating model then
     </selectionEntry>
     <selectionEntry id="503d-0153-24d9-9c5a" name="Jung Sen&apos;in" hidden="false" collective="false" import="true" type="model">
       <modifiers>
-        <modifier type="set" field="hidden" value="true">
+        <modifier type="set" field="4861-0a9e-82c1-19aa" value="0">
           <conditionGroups>
             <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="068d-6ee9-fa4a-a8bf" type="atLeast"/>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1b47-eda0-6ebd-dc1a" type="atLeast"/>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="aaa8-4503-68d2-4665" type="atLeast"/>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c0d2-f3cb-e3b1-ffaf" type="atLeast"/>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c2b6-0a48-94a3-1c8b" type="atLeast"/>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4e07-8c38-7f78-6e5d" type="atLeast"/>
-              </conditions>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="068d-6ee9-fa4a-a8bf" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="3e93-d3d7-a93b-0777" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="1b47-eda0-6ebd-dc1a" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="3e93-d3d7-a93b-0777" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="4e07-8c38-7f78-6e5d" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="3e93-d3d7-a93b-0777" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="c0d2-f3cb-e3b1-ffaf" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="3e93-d3d7-a93b-0777" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="aaa8-4503-68d2-4665" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="3e93-d3d7-a93b-0777" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="3e93-d3d7-a93b-0777" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="c2b6-0a48-94a3-1c8b" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="3e93-d3d7-a93b-0777" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </conditionGroup>
           </conditionGroups>
+        </modifier>
+        <modifier type="remove" value="bcfa-f75d-fc85-80c2" field="category">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="force" childId="3e93-d3d7-a93b-0777" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
         </modifier>
       </modifiers>
       <constraints>
