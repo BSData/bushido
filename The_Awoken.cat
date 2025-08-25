@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="7615-d14e-1ab8-41ed" name="The Awoken" revision="11" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="19" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="7615-d14e-1ab8-41ed" name="The Awoken" revision="12" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="19" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <selectionEntries>
     <selectionEntry id="357b-ee70-73b0-9b34" name="Joyless Smiles and Dark Eyes" hidden="false" collective="false" import="true" type="upgrade">
       <profiles>
@@ -9,9 +9,9 @@
 - When applying Poison Damage to Friendly and Enemy models, only ever resolve one Poisoned Marker, even if the model has three or more Poisoned Markers.
 - In the Starting Phase, Poisoned Enemy models Gain a Ki Block Marker.
 
-This Warband must include at least as many Jaakuna models as non-Jaakuna models.
+This Warband must include at least as many Jaakuna models as non-Jaakuna models (not yet enforced in BS).
 
-Permitted [Kumo, Cultists, Ronin Yokai, Ronin Tenbatsu]</characteristic>
+Permitted [Kumo, Cultist, Ronin Yokai, Ronin Tenbatsu]</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -1660,23 +1660,1058 @@ X is equal to the number of Wounds it has remaining unmarked on its Wound Track
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="c8d5-26eb-c92b-47a8" includeChildSelections="true"/>
       </constraints>
     </selectionEntry>
+    <selectionEntry id="d08f-b97e-2405-fe89" name="Familial Support" hidden="false" collective="false" import="true" type="upgrade">
+      <profiles>
+        <profile id="e5fa-7661-60ad-5de7" name="Familial Support" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
+          <characteristics>
+            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">When a Friendly Kimura model fails a Fear test, if it is within 3&quot; of another Kimura, it gains Steadfast and Co-ordinated Attack [Kimura] until the End Phase.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="10e9-07b6-e82e-567f" name="Faction Event Cards" hidden="false" targetId="d360-71aa-ca22-ba3c" primary="true"/>
+      </categoryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1"/>
+      </costs>
+      <infoLinks>
+        <infoLink name="Steadfast" id="db24-ce3b-f3bd-96f1" hidden="false" type="rule" targetId="95e7-3178-c29b-013c"/>
+        <infoLink name="Co-ordinated Attack" id="6f80-7b51-313d-79da" hidden="false" type="rule" targetId="2337-7bcc-c1f2-f2bd"/>
+      </infoLinks>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="force" shared="true" id="ae52-8d56-94af-f9dd" includeChildSelections="true" includeChildForces="true"/>
+      </constraints>
+    </selectionEntry>
+    <selectionEntry id="6fcf-17e9-6a81-edef" name="Family Bond" hidden="false" collective="false" import="true" type="upgrade">
+      <profiles>
+        <profile id="c7d2-54c9-377d-37bf" name="Family Bond" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
+          <characteristics>
+            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">Play only in the Starting Phase.
+Immediately Heal all Friendly Kimura models to have the same number of marked Wound boxes as the least Wounded Friendly Kimura model.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="c722-4f0f-78ca-0eda" name="Faction Event Cards" hidden="false" targetId="d360-71aa-ca22-ba3c" primary="true"/>
+      </categoryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="4"/>
+      </costs>
+      <constraints>
+        <constraint type="max" value="4" field="selections" scope="force" shared="true" id="41e7-889b-03dd-fb42" includeChildSelections="true" includeChildForces="true"/>
+      </constraints>
+    </selectionEntry>
+    <selectionEntry id="25ee-8e9a-b624-9b8e" name="Family Vengeance" hidden="false" collective="false" import="true" type="upgrade">
+      <profiles>
+        <profile id="a760-d0ea-f610-ba9d" name="Family Vengeance" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
+          <characteristics>
+            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">When an Enemy model kills a Friendly Kimura model, that Enemy model gains a Death Sentence Marker.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="2ac2-fe63-e327-d513" name="Faction Event Cards" hidden="false" targetId="d360-71aa-ca22-ba3c" primary="true"/>
+      </categoryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="3"/>
+      </costs>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="force" shared="true" id="258a-f31d-45e1-a1dd" includeChildSelections="true" includeChildForces="true"/>
+      </constraints>
+    </selectionEntry>
+    <selectionEntry id="989d-fc23-d875-21b2" name="Kimura&apos;s Gift" hidden="false" collective="false" import="true" type="upgrade">
+      <profiles>
+        <profile id="6adf-4634-c5ea-b98b" name="Kimura&apos;s Gift" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
+          <characteristics>
+            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">Play during Deployment.
+A Friendly Kimura model starts the game with one additional Ki Token.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="b30e-0136-31dd-dfb6" name="Faction Event Cards" hidden="false" targetId="d360-71aa-ca22-ba3c" primary="true"/>
+      </categoryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1"/>
+      </costs>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="force" shared="true" id="f4da-813e-d8b2-3991" includeChildSelections="true" includeChildForces="true"/>
+      </constraints>
+    </selectionEntry>
+    <selectionEntry id="eb24-4b50-02e7-f511" name="Known Webs" hidden="false" collective="false" import="true" type="upgrade">
+      <profiles>
+        <profile id="65b4-c23e-45d2-1f9f" name="Known Webs" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
+          <characteristics>
+            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">Play in the Starting Phase of Turn 3.
+Until the end of the current turn Friendly Kimura &amp; Kumo models treat Webbed Ground as Ideal Terrain.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="ec17-cc2a-c771-2496" name="Faction Event Cards" hidden="false" targetId="d360-71aa-ca22-ba3c" primary="true"/>
+      </categoryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2"/>
+      </costs>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="force" shared="true" id="3299-aa2e-4f27-d861" includeChildSelections="true" includeChildForces="true"/>
+      </constraints>
+    </selectionEntry>
+    <selectionEntry id="7bcf-8488-8ed8-e4bf" name="Protective Brood" hidden="false" collective="false" import="true" type="upgrade">
+      <profiles>
+        <profile id="80b2-d34c-f150-a9eb" name="Protective Brood" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
+          <characteristics>
+            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">Friendly Kimura model gains Bodyguard [Controlled model, Kimura with lower Rice Cost](3&quot;) until the end of the current activation.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="4950-3459-ca06-ed55" name="Faction Event Cards" hidden="false" targetId="d360-71aa-ca22-ba3c" primary="true"/>
+      </categoryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1"/>
+      </costs>
+      <constraints>
+        <constraint type="max" value="3" field="selections" scope="force" shared="true" id="0e34-4eed-69bd-d169" includeChildSelections="true" includeChildForces="true"/>
+      </constraints>
+      <infoLinks>
+        <infoLink name="Bodyguard" id="fcb4-eebd-937c-e60f" hidden="false" type="rule" targetId="0286-6d10-a236-e0c3"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry id="e4b8-0560-a55d-f32e" name="Shoot Out Spines" hidden="false" collective="false" import="true" type="upgrade">
+      <profiles>
+        <profile id="06e1-37ee-5a9c-14f7" name="Shoot Out Spines" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
+          <characteristics>
+            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">During an Enemy model&apos;s activation in which it enters BtB with a Friendly Kimura model, that Enemy model makes an Opposed Size Challenge Test with the Kimura, if the Enemy model fails, it gains a Blind Marker.
+This is a Trap effect.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="64ad-c895-5d7b-b717" name="Faction Event Cards" hidden="false" targetId="d360-71aa-ca22-ba3c" primary="true"/>
+      </categoryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2"/>
+      </costs>
+      <constraints>
+        <constraint type="max" value="3" field="selections" scope="force" shared="true" id="f560-3cb3-af3a-8109" includeChildSelections="true" includeChildForces="true"/>
+      </constraints>
+    </selectionEntry>
+    <selectionEntry id="eaea-d878-72c7-409b" name="Stalker x3" hidden="false" collective="false" import="true" type="upgrade">
+      <profiles>
+        <profile id="1eab-58b6-2a31-7892" name="Stalker" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
+          <characteristics>
+            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">Choose a Friendly Kimura model to gain Assassin until the end of the Current Activation.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="b6fc-0fa9-daf5-335b" name="Faction Event Cards" hidden="false" targetId="d360-71aa-ca22-ba3c" primary="true"/>
+      </categoryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1"/>
+      </costs>
+      <infoLinks>
+        <infoLink name="Assassin" id="8777-aee2-2bea-c391" hidden="false" type="rule" targetId="ef59-928b-2550-f0a3"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry id="68af-a681-7dd7-bac2" name="Temptation" hidden="false" collective="false" import="true" type="upgrade">
+      <profiles>
+        <profile id="eb7b-6a6b-9f3b-c302" name="Temptation" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
+          <characteristics>
+            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">When you win a Victory Point, you may give the opponent that Victory Point.
+If you do, all Enemy models must make a Ki Challenge (8) Test or gain a Control Marker.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="e70d-b5f7-3b45-c9b6" name="Faction Event Cards" hidden="false" targetId="d360-71aa-ca22-ba3c" primary="true"/>
+      </categoryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="3"/>
+      </costs>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="force" shared="true" id="9f89-4b2e-0880-9d53" includeChildSelections="true" includeChildForces="true"/>
+      </constraints>
+    </selectionEntry>
+    <selectionEntry id="4a77-3a57-6b14-feda" name="Welcome Our Guests" hidden="false" collective="false" import="true" type="upgrade">
+      <profiles>
+        <profile id="8008-87d6-ac55-51e1" name="Welcome Our Guests" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
+          <characteristics>
+            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">Until the end of the current activation, when an Enemy model enters a Webbed Ground due to a Drag Special Ability it gains an Immobilised Marker.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="4ebb-925a-60a3-76f3" name="Faction Event Cards" hidden="false" targetId="d360-71aa-ca22-ba3c" primary="true"/>
+      </categoryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2"/>
+      </costs>
+      <constraints>
+        <constraint type="max" value="3" field="selections" scope="force" shared="true" id="89ae-33c7-f663-eeb5" includeChildSelections="true" includeChildForces="true"/>
+      </constraints>
+    </selectionEntry>
+    <selectionEntry id="183d-48e5-700d-eccb" name="Itoko" hidden="false" collective="false" import="true" type="model">
+      <profiles>
+        <profile id="25d3-7f73-f1e5-b1cb" name="Itoko" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">3</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">0</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">6</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">7 OOOOO OO</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Medium 40mm</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="b446-807e-ea4d-2e18" name="Traits" hidden="false">
+          <profiles>
+            <profile id="dea3-f01c-0abb-eb19" name="Itoko" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Armour (2), Bravery, Channel (1/2&quot;), Kumo, Prowess [Melee](1), Strong, Spirit (2)</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="f9db-afdd-d381-91dd" name="Armour" hidden="false" targetId="8615-1c63-2242-5746" type="rule"/>
+            <infoLink id="d038-3719-ee72-1d70" name="Bravery" hidden="false" targetId="f9b2-38d2-7cda-de6e" type="rule"/>
+            <infoLink id="1b0c-4888-4c11-7c09" name="Channel" hidden="false" targetId="69af-3098-e21e-7734" type="rule"/>
+            <infoLink id="c51b-1da7-bfbf-1718" name="Prowess " hidden="false" targetId="75ef-327a-cd08-a248" type="rule"/>
+            <infoLink id="e127-898c-0c20-8571" name="Kumo" hidden="false" targetId="d61f-26dc-7429-84ee" type="rule"/>
+            <infoLink id="8ba0-e200-4f23-246d" name="Strong" hidden="false" targetId="00b5-3637-d48a-807e" type="rule"/>
+            <infoLink id="baa5-f343-2e5e-73bb" name="Spirit" hidden="false" targetId="a9ba-9904-7d29-7bcb" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="886b-768f-22e9-d3f2" name=" Melee Weapons" hidden="false">
+          <profiles>
+            <profile id="9754-ec6d-3f43-d644" name="Daisho" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+1</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e"/>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Combo Attack (1), Drag Defence (0)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+            <profile id="f91a-8762-dbe5-0f8d" name="Mandibles" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+0</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Pierce (2)</characteristic>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Drag Defence (0), Web Defence (0)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="bfa3-43de-dac4-769b" name="Pierce " hidden="false" targetId="39e4-14d7-5533-6e67" type="rule"/>
+            <infoLink id="bb65-dcc4-828f-86d1" name="Drag Defence" hidden="false" targetId="be46-98c7-87e8-c024" type="rule"/>
+            <infoLink id="a8dc-0a0f-c7f4-6f28" name="Combo Attack " hidden="false" targetId="78ab-6a94-be24-8f74" type="rule"/>
+            <infoLink id="6ffe-0d5c-d6ed-933f" name="Web Defence" hidden="false" targetId="c7ec-9628-1cf9-40d9" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="9688-155c-32bf-d6b4" name="Unique Effects" hidden="false">
+          <infoLinks>
+            <infoLink id="dc82-ab0a-27d7-fe9d" name="Kimura" hidden="false" targetId="5973-1a39-e124-204a" type="infoGroup"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="c9d8-044b-e5e6-8a32" name="Ki Feats" hidden="false">
+          <infoLinks>
+            <infoLink id="1c91-8bcd-0325-9f51" name="Allure" hidden="false" targetId="8452-027f-5b68-ed09" type="infoGroup"/>
+            <infoLink id="eaca-1dba-ac64-d834" name="Crushing Blow" hidden="false" targetId="ca16-d173-676c-88da" type="infoGroup"/>
+            <infoLink id="a539-4621-3978-c9be" name="Paralyze" hidden="false" targetId="bc0f-ea4d-8401-4f3c" type="infoGroup"/>
+          </infoLinks>
+        </infoGroup>
+      </infoGroups>
+      <categoryLinks>
+        <categoryLink id="fb70-7deb-3bdf-a7b2" name="Faction: The Awoken" hidden="false" targetId="5a76-c3ea-5cb7-471f" primary="false"/>
+        <categoryLink id="91c0-2c83-3954-7620" name="Faction Profile Cards" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
+        <categoryLink id="1cef-9142-0188-ca49" name="Kumo" hidden="false" targetId="0068-20c8-ce79-0b15" primary="false"/>
+        <categoryLink targetId="afd4-8041-e359-223c" id="d799-3b63-1c64-ee33" primary="false" name="Unique"/>
+        <categoryLink targetId="e12a-f782-3281-7444" id="d670-83c1-323c-a350" primary="false" name="Samurai"/>
+        <categoryLink targetId="f322-702a-ff62-b37e" id="23c5-74aa-51e5-07df" primary="false" name="Armour"/>
+        <categoryLink targetId="a04d-f396-77a2-68a3" id="7bde-fe08-e881-208c" primary="false" name="Kimura"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="887a-56bc-1892-b7bc" name="Enhancements" hidden="false" collective="false" import="true" targetId="2be0-472c-1d87-ef19" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="16"/>
+      </costs>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="15b2-3bb5-9673-cef4" includeChildSelections="true"/>
+      </constraints>
+    </selectionEntry>
+    <selectionEntry id="df95-93ba-cb53-fae6" name="Kyōdan" hidden="false" collective="false" import="true" type="model">
+      <profiles>
+        <profile id="ae2a-c860-327a-ae5b" name="Kyōdan" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">3</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">0</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">6</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">7 OOOOO OO</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Medium 40mm</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="861a-9249-9b8c-76c5" name="Traits" hidden="false">
+          <profiles>
+            <profile id="3e7a-1666-0916-2a0a" name="Kyōdan" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Armour (2), Bravery, Channel (1/2&quot;), Cultist (1 /4&quot;), Kumo, Prowess [Melee](1), Strong, Spirit (2)</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="a659-0626-b294-eab5" name="Cultist" hidden="false" targetId="ed04-4bf2-e1ff-7a88" type="rule"/>
+            <infoLink id="627a-2c50-a3d5-498c" name="Bravery" hidden="false" targetId="f9b2-38d2-7cda-de6e" type="rule"/>
+            <infoLink id="aefd-f85b-a52f-9454" name="Channel" hidden="false" targetId="69af-3098-e21e-7734" type="rule"/>
+            <infoLink id="af50-71d1-13dd-56da" name="Prowess " hidden="false" targetId="75ef-327a-cd08-a248" type="rule"/>
+            <infoLink id="bc19-e39d-cabe-b32d" name="Kumo" hidden="false" targetId="d61f-26dc-7429-84ee" type="rule"/>
+            <infoLink id="99e4-fbc2-14e8-7978" name="Strong" hidden="false" targetId="00b5-3637-d48a-807e" type="rule"/>
+            <infoLink id="cabe-4789-432d-c867" name="Spirit" hidden="false" targetId="a9ba-9904-7d29-7bcb" type="rule"/>
+            <infoLink id="ea48-70af-e687-6a72" name="Armour" hidden="false" targetId="8615-1c63-2242-5746" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="0e71-4da3-7e5d-8842" name=" Melee Weapons" hidden="false">
+          <profiles>
+            <profile id="3bd3-0516-2a15-c092" name="No-dachi" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+2</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e"/>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Powerful Attack (1), Drag Defence (0), Web Defence (0)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+            <profile id="cd48-df59-6691-0d19" name="Mandibles" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+0</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e"/>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Drag Defence (0), Grapple Defence (1), Web Defence (0)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="369f-308c-6c9e-4b07" name="Pierce " hidden="false" targetId="39e4-14d7-5533-6e67" type="rule"/>
+            <infoLink id="7a48-a8ad-153e-4667" name="Drag Defence" hidden="false" targetId="be46-98c7-87e8-c024" type="rule"/>
+            <infoLink id="e99d-789a-5415-d248" name="Powerful Attack" hidden="false" targetId="d56a-058d-95d9-5b60" type="rule"/>
+            <infoLink id="5f85-107e-e4b8-6ce4" name="Grapple Defence" hidden="false" targetId="6e8d-d1c4-dc69-6558" type="rule"/>
+            <infoLink id="4b20-b91f-04f6-1fb3" name="Web Defence" hidden="false" targetId="c7ec-9628-1cf9-40d9" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="4245-c3c7-a591-9726" name="Unique Effects" hidden="false">
+          <infoLinks>
+            <infoLink id="6b4a-7efe-cfa9-888b" name="Spin Web" hidden="false" targetId="c8bd-f680-c33f-1834" type="infoGroup"/>
+            <infoLink id="8574-00a6-e0ea-0d0c" name="Kimura" hidden="false" targetId="5973-1a39-e124-204a" type="infoGroup"/>
+          </infoLinks>
+          <profiles>
+            <profile name="Unique Effects" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects" hidden="false" id="2404-f14e-8f29-679a">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">This model does not lose Movement for Contacting Webbed Ground.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </infoGroup>
+        <infoGroup id="04c4-bc62-6d8d-f6d6" name="Ki Feats" hidden="false">
+          <infoLinks>
+            <infoLink id="1eb8-98df-c12e-8bac" name="Fraternity" hidden="false" targetId="cbf2-989d-6fac-50ff" type="infoGroup"/>
+            <infoLink id="e45a-fd53-15ce-c6e1" name="Overpower" hidden="false" targetId="21f2-4c42-ab17-9b01" type="infoGroup"/>
+          </infoLinks>
+        </infoGroup>
+      </infoGroups>
+      <categoryLinks>
+        <categoryLink id="294a-28a6-0665-50c5" name="Faction: The Awoken" hidden="false" targetId="5a76-c3ea-5cb7-471f" primary="false"/>
+        <categoryLink id="b0fa-d0d2-4451-1156" name="Faction Profile Cards" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
+        <categoryLink targetId="afd4-8041-e359-223c" id="7297-0371-3d82-5ee3" primary="false" name="Unique"/>
+        <categoryLink targetId="e12a-f782-3281-7444" id="6e23-f83b-4605-c2e1" primary="false" name="Samurai"/>
+        <categoryLink targetId="f322-702a-ff62-b37e" id="4e8a-9e76-9c96-8ee1" primary="false" name="Armour"/>
+        <categoryLink targetId="a04d-f396-77a2-68a3" id="742b-3dfe-3cc3-01d1" primary="false" name="Kimura"/>
+        <categoryLink targetId="3522-14fa-d48f-3e16" id="225a-4461-bb8c-4915" primary="false" name="Cultist"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="5815-0562-61f2-1508" name="Enhancements" hidden="false" collective="false" import="true" targetId="2be0-472c-1d87-ef19" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="15"/>
+      </costs>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="c15e-4d15-2594-37d2" includeChildSelections="true"/>
+      </constraints>
+    </selectionEntry>
+    <selectionEntry id="faba-5139-9f40-18da" name="Ma&apos;go" hidden="false" collective="false" import="true" type="model">
+      <profiles>
+        <profile id="933d-e849-7bda-8f86" name="Ma&apos;go" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">3</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">0</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">3</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">8 OOOOO OOO</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Medium 40mm</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="7d91-75bf-4a71-9201" name="Traits" hidden="false">
+          <profiles>
+            <profile id="4a68-f60f-e11f-1cb1" name="Ma&apos;go" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Bravery, Channel (1/2&quot;), Cultist (1 /4&quot;), Indomitable (2), Strong, Spirit (2)</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="1a5c-185e-d36d-836e" name="Cultist" hidden="false" targetId="ed04-4bf2-e1ff-7a88" type="rule"/>
+            <infoLink id="de2b-b1f6-ebde-e0ce" name="Bravery" hidden="false" targetId="f9b2-38d2-7cda-de6e" type="rule"/>
+            <infoLink id="c21e-8840-cb89-1a3c" name="Channel" hidden="false" targetId="69af-3098-e21e-7734" type="rule"/>
+            <infoLink id="1c1f-3d3e-0be1-df91" name="Strong" hidden="false" targetId="00b5-3637-d48a-807e" type="rule"/>
+            <infoLink id="9df9-27cf-147f-e480" name="Spirit" hidden="false" targetId="a9ba-9904-7d29-7bcb" type="rule"/>
+            <infoLink id="7be9-840c-5421-6fd7" name="Indomitable " hidden="false" targetId="3beb-6f28-e7c4-a236" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="e16a-0976-a7a0-34b7" name=" Melee Weapon" hidden="false">
+          <profiles>
+            <profile id="7b3f-bdae-9d34-0fbe" name="Naginata" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+1</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e"/>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Grapple Attack (1), Powerful Attack (1), Drag Defence (0)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="287d-2fed-4c93-f726" name="Reach" hidden="false" targetId="e28e-d5dd-a262-1101" type="rule"/>
+            <infoLink id="b60b-ac69-68c6-b16e" name="Drag Defence" hidden="false" targetId="be46-98c7-87e8-c024" type="rule"/>
+            <infoLink id="ed07-6ef0-5eb3-c55e" name="Powerful Attack" hidden="false" targetId="d56a-058d-95d9-5b60" type="rule"/>
+            <infoLink id="8a45-d25e-96ba-ff65" name="Grapple Attack" hidden="false" targetId="1b9a-c71d-0a30-8d0d" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="ef5b-54ca-130d-6158" name="Unique Effects" hidden="false">
+          <infoLinks>
+            <infoLink id="9e17-1704-186b-fe0a" name="Kimura" hidden="false" targetId="5973-1a39-e124-204a" type="infoGroup"/>
+          </infoLinks>
+          <profiles>
+            <profile name="Unique Effects" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects" hidden="false" id="3205-fabf-4318-4e9a">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">If this model deals Damage in a Melee Exchange it gains Ki Tokens equal to the Enemy model&apos;s Ki Statistic.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </infoGroup>
+        <infoGroup id="d92d-f61b-72d4-8303" name="Ki Feats" hidden="false">
+          <infoLinks>
+            <infoLink id="1030-3bd9-c9d7-6f79" name="Embrace" hidden="false" targetId="d882-98ce-247a-9710" type="infoGroup"/>
+          </infoLinks>
+        </infoGroup>
+      </infoGroups>
+      <categoryLinks>
+        <categoryLink id="b16b-e812-5c2c-7ce1" name="Faction: The Awoken" hidden="false" targetId="5a76-c3ea-5cb7-471f" primary="false"/>
+        <categoryLink id="8ccb-27dd-61ec-d88b" name="Faction Profile Cards" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
+        <categoryLink targetId="afd4-8041-e359-223c" id="6922-0146-d5a3-1f10" primary="false" name="Unique"/>
+        <categoryLink targetId="a04d-f396-77a2-68a3" id="0fed-cdb6-e663-494f" primary="false" name="Kimura"/>
+        <categoryLink targetId="f434-17e6-174c-b4f6" id="674f-cba2-0401-90e6" primary="false" name="Ashigaru"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="dde9-7a80-f5a2-9d49" name="Enhancements" hidden="false" collective="false" import="true" targetId="2be0-472c-1d87-ef19" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="11"/>
+      </costs>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="7c66-f20b-f38b-b58e" includeChildSelections="true"/>
+      </constraints>
+    </selectionEntry>
+    <selectionEntry id="31a0-491f-5328-2746" name="Mei" hidden="false" collective="false" import="true" type="model">
+      <profiles>
+        <profile id="abc2-d5dd-155a-4e87" name="Mei" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">3</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">0</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">6</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">10 OOOOO OOOOO</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Large 50mm</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="ea64-c1c4-b9b5-d5ea" name="Traits" hidden="false">
+          <profiles>
+            <profile id="cc97-c4d9-14b8-c9db" name="Mei" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Armour (2), Aware, Camouflage (8&quot;), Fear (X), Heal (1), Immovable, Indomitable (8), Kumo, Strong, Spirit (2)</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="b88a-153a-b5ca-5a8b" name="Fear" hidden="false" targetId="3586-4583-7f10-1f31" type="rule"/>
+            <infoLink id="50d6-ddae-7cb5-02f8" name="Aware" hidden="false" targetId="ff4a-6b14-09dd-2343" type="rule"/>
+            <infoLink id="8b87-f7e0-2cb4-d62b" name="Camouflage" hidden="false" targetId="9010-4983-c98c-1751" type="rule"/>
+            <infoLink id="ca61-f2d8-5c85-02ae" name="Heal" hidden="false" targetId="bd98-52d2-3a66-08e7" type="rule"/>
+            <infoLink id="2d9f-faac-71c2-74fb" name="Kumo" hidden="false" targetId="d61f-26dc-7429-84ee" type="rule"/>
+            <infoLink id="805a-2b45-3767-4462" name="Strong" hidden="false" targetId="00b5-3637-d48a-807e" type="rule"/>
+            <infoLink id="8fef-98e3-95ad-38c3" name="Spirit" hidden="false" targetId="a9ba-9904-7d29-7bcb" type="rule"/>
+            <infoLink id="b9f4-673a-03d8-8681" name="Armour" hidden="false" targetId="8615-1c63-2242-5746" type="rule"/>
+            <infoLink id="20d2-2857-d381-903c" name="Immovable" hidden="false" targetId="d34b-724f-6fc8-7420" type="rule"/>
+            <infoLink id="ebae-5f7e-0673-73e3" name="Indomitable " hidden="false" targetId="3beb-6f28-e7c4-a236" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="fa69-3efc-09df-c07a" name=" Melee Weapons" hidden="false">
+          <profiles>
+            <profile id="ef4b-a1be-e4a0-9a77" name="Pincers" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+2</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e"/>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Grapple Attack (1), Sweep Attack (1), Throw Defence (0)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+            <profile id="2dc9-0d88-cff9-3759" name="Mandibles" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+1</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Pierce</characteristic>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Drag Defence (0), Combo Attack (1), Web Defence (0)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="899e-347f-a3ba-b612" name="Pierce " hidden="false" targetId="39e4-14d7-5533-6e67" type="rule"/>
+            <infoLink id="3091-fd44-5281-60e8" name="Drag Defence" hidden="false" targetId="be46-98c7-87e8-c024" type="rule"/>
+            <infoLink id="4cd1-504d-9cfa-c858" name="Throw Defence" hidden="false" targetId="81f2-67a9-c905-7a41" type="rule"/>
+            <infoLink id="b14a-b266-358a-2412" name="Grapple Attack" hidden="false" targetId="1b9a-c71d-0a30-8d0d" type="rule"/>
+            <infoLink id="a41c-b23c-22e8-a00e" name="Web Defence" hidden="false" targetId="c7ec-9628-1cf9-40d9" type="rule"/>
+            <infoLink id="3ae2-a4d5-58b9-c999" name="Sweep Attack" hidden="false" targetId="bcbd-fab2-c8e2-6ff7" type="rule"/>
+            <infoLink id="bcae-173e-3743-1c41" name="Combo Attack " hidden="false" targetId="78ab-6a94-be24-8f74" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="1024-83ce-ba67-420b" name="Unique Effects" hidden="false">
+          <infoLinks>
+            <infoLink id="2cc0-b7c8-f9b7-d016" name="Variable Fear" hidden="false" targetId="f105-6b8b-6ba6-e2ad" type="infoGroup"/>
+          </infoLinks>
+          <profiles>
+            <profile name="Unique Effects" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects" hidden="false" id="b34a-3770-4e82-9e18">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">This model may choose one Special Attack and one Special Defence and apply both to the same Melee Exchange.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </infoGroup>
+        <infoGroup id="a709-f0e1-1d8e-41ca" name="Ki Feats" hidden="false">
+          <infoLinks>
+            <infoLink id="599e-9455-8a92-2db5" name="Shadow" hidden="false" targetId="0221-63c7-3e02-bbfc" type="infoGroup"/>
+            <infoLink id="1725-b4aa-8d2c-7419" name="Wrestle" hidden="false" targetId="0db3-144d-fde6-f36a" type="infoGroup"/>
+            <infoLink id="4df6-7696-9f48-cb77" name="Apex Predator" hidden="false" targetId="599f-faa2-7cbd-7680" type="infoGroup"/>
+          </infoLinks>
+        </infoGroup>
+      </infoGroups>
+      <categoryLinks>
+        <categoryLink id="ecec-8e13-cee4-f4b1" name="Faction: The Awoken" hidden="false" targetId="5a76-c3ea-5cb7-471f" primary="false"/>
+        <categoryLink id="1b67-d029-e488-318f" name="Faction Profile Cards" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
+        <categoryLink targetId="afd4-8041-e359-223c" id="c777-ba87-56fa-2e49" primary="false" name="Unique"/>
+        <categoryLink targetId="f322-702a-ff62-b37e" id="f3a0-7e5b-77e2-7fe9" primary="false" name="Armour"/>
+        <categoryLink targetId="a04d-f396-77a2-68a3" id="7640-67ea-8460-6b0a" primary="false" name="Kimura"/>
+        <categoryLink targetId="0068-20c8-ce79-0b15" id="c13a-b81a-c33c-ffcf" primary="false" name="Kumo"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="a9e7-1891-85a6-12b9" name="Enhancements" hidden="false" collective="false" import="true" targetId="2be0-472c-1d87-ef19" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="19"/>
+      </costs>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="a727-4be3-6cfe-dc69" includeChildSelections="true"/>
+      </constraints>
+    </selectionEntry>
+    <selectionEntry id="6e04-af47-b459-c4a2" name="Musume" hidden="false" collective="false" import="true" type="model">
+      <profiles>
+        <profile id="eacc-99e7-9dc5-1be1" name="Musume" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">2</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33">3</characteristic>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">0</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">6</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">8 OOOOO OOO</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Medium 40mm</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="352e-7a57-14af-8b62" name="Traits" hidden="false">
+          <profiles>
+            <profile id="1ca7-68ff-f50e-5a85" name="Musume" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Armour (2), Bravery, Camouflage (8&quot;), Channel (1/2&quot;), Fear (X), Indomitable (8), Kumo, Strong, Spirit (2)</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="338d-6106-01bf-cfbf" name="Fear" hidden="false" targetId="3586-4583-7f10-1f31" type="rule"/>
+            <infoLink id="2c7e-81d4-d46f-1b93" name="Bravery" hidden="false" targetId="f9b2-38d2-7cda-de6e" type="rule"/>
+            <infoLink id="c49f-8fa5-b970-d546" name="Camouflage" hidden="false" targetId="9010-4983-c98c-1751" type="rule"/>
+            <infoLink id="f8b0-76c2-779d-30f4" name="Indomitable " hidden="false" targetId="3beb-6f28-e7c4-a236" type="rule"/>
+            <infoLink id="a6cb-e67b-e21f-d54b" name="Kumo" hidden="false" targetId="d61f-26dc-7429-84ee" type="rule"/>
+            <infoLink id="d80e-f75f-0764-aab1" name="Strong" hidden="false" targetId="00b5-3637-d48a-807e" type="rule"/>
+            <infoLink id="d1dc-02e7-1506-a143" name="Spirit" hidden="false" targetId="a9ba-9904-7d29-7bcb" type="rule"/>
+            <infoLink id="03ed-456b-08e7-a4e6" name="Armour" hidden="false" targetId="8615-1c63-2242-5746" type="rule"/>
+            <infoLink id="489b-e7bd-0979-1fe1" name="Channel" hidden="false" targetId="69af-3098-e21e-7734" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="0893-7c8d-1cfa-b3b5" name=" Melee Weapon" hidden="false">
+          <profiles>
+            <profile id="0340-ed0a-c61b-669c" name="Mandibles" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+2</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e"/>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Slam Attack (1), Push Attack (0)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="ec11-5c76-a118-2805" name="Slam Attack" hidden="false" targetId="5d05-b0ce-d7db-9def" type="rule"/>
+            <infoLink id="d091-25ff-8279-db96" name="Push Attack" hidden="false" targetId="6c26-94ba-6b96-9e1b" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="a2e3-4ae4-e079-00f6" name="Unique Effects" hidden="false">
+          <infoLinks>
+            <infoLink id="a5a2-25d7-cf9f-8185" name="Spin Web" hidden="false" targetId="c8bd-f680-c33f-1834" type="infoGroup"/>
+            <infoLink id="e64b-46e0-ef11-b7f3" name="Variable Fear" hidden="false" targetId="f105-6b8b-6ba6-e2ad" type="infoGroup"/>
+            <infoLink id="e6a1-3a3b-5275-00a7" name="Kimura" hidden="false" targetId="5973-1a39-e124-204a" type="infoGroup"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="6760-06fc-5e76-7e13" name="Ki Feats" hidden="false">
+          <infoLinks>
+            <infoLink id="c65e-79d2-3d1d-e163" name="Choke Hold" hidden="false" targetId="5c8e-25b1-a26e-7979" type="infoGroup"/>
+            <infoLink id="564b-255d-b609-38a1" name="&quot;Come, Join Us&quot;" hidden="false" targetId="64cd-f3be-407e-8d84" type="infoGroup"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="61a7-7c5f-28a2-a86f" name="Ranged Weapon" hidden="false">
+          <profiles>
+            <profile id="f4f9-a573-e6af-e6cf" name="Lob a Rock" hidden="false" typeId="7e20-258e-bf92-18f9" typeName="Ranged Weapon">
+              <characteristics>
+                <characteristic name="Ranged Weapon Strength" typeId="15aa-b6bd-6923-271f">+0</characteristic>
+                <characteristic name="Range Bands" typeId="be6a-50c6-d691-e2e9">2/4/6</characteristic>
+                <characteristic name="Traits" typeId="3410-4428-ef91-eb61"/>
+                <characteristic name="Specials" typeId="cdaf-b6ac-89d4-39ef">Stun Attack (0)</characteristic>
+                <characteristic name="Unique Effects" typeId="3bf8-6525-f003-4990"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="01b2-216b-3350-420b" name="Stun Attack" hidden="false" targetId="ae27-975e-6c4b-d84e" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+      </infoGroups>
+      <categoryLinks>
+        <categoryLink id="1a20-1e09-83a6-b1b3" name="Faction: The Awoken" hidden="false" targetId="5a76-c3ea-5cb7-471f" primary="false"/>
+        <categoryLink id="bcfa-e2ed-9ed1-28da" name="Faction Profile Cards" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
+        <categoryLink targetId="afd4-8041-e359-223c" id="d806-0890-baf6-52e3" primary="false" name="Unique"/>
+        <categoryLink targetId="f322-702a-ff62-b37e" id="778f-396b-7b27-9d1c" primary="false" name="Armour"/>
+        <categoryLink targetId="a04d-f396-77a2-68a3" id="dde9-67a2-4f51-c71a" primary="false" name="Kimura"/>
+        <categoryLink targetId="0068-20c8-ce79-0b15" id="7ad0-b934-7487-966d" primary="false" name="Kumo"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="9a2b-7060-b588-805d" name="Enhancements" hidden="false" collective="false" import="true" targetId="2be0-472c-1d87-ef19" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="19"/>
+      </costs>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="2f24-4891-1f85-8c23" includeChildSelections="true"/>
+      </constraints>
+    </selectionEntry>
+    <selectionEntry id="f8e6-161e-06f3-5483" name="Obasan" hidden="false" collective="false" import="true" type="model">
+      <profiles>
+        <profile id="a2a4-228b-da7c-7714" name="Obasan" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">3</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">0</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">8</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">12 OOOOO OOOOO OO</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Huge 60mm</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="3c84-aeea-54c7-9aa0" name="Traits" hidden="false">
+          <profiles>
+            <profile id="4b91-df18-a9b4-0c7d" name="Obasan" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Armour (2), Aware, Camouflage (8&quot;), Channel (2/2&quot;), Fear (6), Fearless, Flank, Heal (2), Immune [Prone], Indomitable (8), Kumo, Strong, Spirit(3)</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="921f-2355-d586-1c00" name="Fearless" hidden="false" targetId="5d6f-1746-9080-aca5" type="rule"/>
+            <infoLink id="b5ec-28d1-704a-efb3" name="Aware" hidden="false" targetId="ff4a-6b14-09dd-2343" type="rule"/>
+            <infoLink id="c2dd-1ad9-c549-41ba" name="Channel" hidden="false" targetId="69af-3098-e21e-7734" type="rule"/>
+            <infoLink id="cb6f-c98d-8932-ab62" name="Flank" hidden="false" targetId="a847-f02d-7e99-8a66" type="rule"/>
+            <infoLink id="2031-34ad-5575-14eb" name="Kumo" hidden="false" targetId="d61f-26dc-7429-84ee" type="rule"/>
+            <infoLink id="292b-ad7f-4cfa-5807" name="Strong" hidden="false" targetId="00b5-3637-d48a-807e" type="rule"/>
+            <infoLink id="437d-564b-3a58-26d6" name="Spirit" hidden="false" targetId="a9ba-9904-7d29-7bcb" type="rule"/>
+            <infoLink id="e435-4d54-34e3-afda" name="Armour" hidden="false" targetId="8615-1c63-2242-5746" type="rule"/>
+            <infoLink id="5096-9aeb-2793-14c2" name="Immune" hidden="false" targetId="ea08-b25e-0ea8-af73" type="rule"/>
+            <infoLink id="8e16-8d77-102b-f443" name="Indomitable " hidden="false" targetId="3beb-6f28-e7c4-a236" type="rule"/>
+            <infoLink id="757b-64fc-8232-6107" name="Camouflage" hidden="false" targetId="9010-4983-c98c-1751" type="rule"/>
+            <infoLink id="07ec-0b90-0d81-9e71" name="Fear" hidden="false" targetId="3586-4583-7f10-1f31" type="rule"/>
+            <infoLink id="99fa-08e6-a547-e4ac" name="Heal" hidden="false" targetId="bd98-52d2-3a66-08e7" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="3b39-a16f-cdc2-f1e0" name=" Melee Weapons" hidden="false">
+          <profiles>
+            <profile id="89c6-a720-a514-109e" name="Legs" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+2</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Reach</characteristic>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Web Defence (0)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+            <profile id="a8fb-146d-337b-6df7" name="Mandibles" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+1</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Pierce (2)</characteristic>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Drag Defence (0)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="002a-5b66-89e4-398f" name="Pierce " hidden="false" targetId="39e4-14d7-5533-6e67" type="rule"/>
+            <infoLink id="4667-6d61-2491-e213" name="Drag Defence" hidden="false" targetId="be46-98c7-87e8-c024" type="rule"/>
+            <infoLink id="1732-1913-8aee-0695" name="Web Defence" hidden="false" targetId="c7ec-9628-1cf9-40d9" type="rule"/>
+            <infoLink id="945c-ad79-d500-38d8" name="Reach" hidden="false" targetId="e28e-d5dd-a262-1101" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="4538-fb0b-055e-07ed" name="Unique Effects" hidden="false">
+          <infoLinks>
+            <infoLink id="5cc2-2c1b-9faf-9205" name="Kimura" hidden="false" targetId="5973-1a39-e124-204a" type="infoGroup"/>
+            <infoLink id="d718-4177-0155-4f97" name="Spin Web" hidden="false" targetId="c8bd-f680-c33f-1834" type="infoGroup"/>
+          </infoLinks>
+          <profiles>
+            <profile name="Patient Hunter" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects" hidden="false" id="73da-bcf3-4b8d-b1ef">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">This model cannot be the first in this Warband to activate each turn unless the only models available all have this rule.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </infoGroup>
+        <infoGroup id="4616-3ff3-520a-34d1" name="Ki Feats" hidden="false">
+          <infoLinks>
+            <infoLink id="0076-b1b7-945c-4e54" name="Recantation" hidden="false" targetId="6d7e-0498-99c4-7895" type="infoGroup"/>
+            <infoLink id="f2ca-9675-9726-6f23" name="Rappel" hidden="false" targetId="b6e8-315e-25f4-fce8" type="infoGroup"/>
+          </infoLinks>
+        </infoGroup>
+      </infoGroups>
+      <categoryLinks>
+        <categoryLink id="b82e-f90b-5027-01a9" name="Faction: The Awoken" hidden="false" targetId="5a76-c3ea-5cb7-471f" primary="false"/>
+        <categoryLink id="0764-f8fc-054a-f34a" name="Faction Profile Cards" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
+        <categoryLink targetId="afd4-8041-e359-223c" id="3a38-a7bc-75ab-483a" primary="false" name="Unique"/>
+        <categoryLink targetId="f322-702a-ff62-b37e" id="8e5a-5fdd-2e3b-8ce0" primary="false" name="Armour"/>
+        <categoryLink targetId="a04d-f396-77a2-68a3" id="3e4e-240d-a3f1-5c5e" primary="false" name="Kimura"/>
+        <categoryLink targetId="0068-20c8-ce79-0b15" id="f1de-8cd9-7b96-1923" primary="false" name="Kumo"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="5be8-f411-663d-6478" name="Enhancements" hidden="false" collective="false" import="true" targetId="2be0-472c-1d87-ef19" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="23"/>
+      </costs>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="f901-2ff8-77dc-4b3f" includeChildSelections="true"/>
+      </constraints>
+    </selectionEntry>
+    <selectionEntry id="97b3-ce52-7c61-3d6a" name="Oi" hidden="false" collective="false" import="true" type="model">
+      <profiles>
+        <profile id="5c5b-ce91-079e-d8d6" name="Oi" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">3</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">0</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">3</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">7 OOOOO OO</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Medium 40mm</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="8c46-e995-e157-7db6" name="Traits" hidden="false">
+          <profiles>
+            <profile id="339f-b09d-da01-b8d5" name="Oi" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Aware, Channel (1/2&quot;), Immovable, Strong, Spirit (1)</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="6d52-6d76-6347-de3f" name="Aware" hidden="false" targetId="ff4a-6b14-09dd-2343" type="rule"/>
+            <infoLink id="c1da-f8b3-3f0e-a78a" name="Channel" hidden="false" targetId="69af-3098-e21e-7734" type="rule"/>
+            <infoLink id="437a-8e31-797d-0990" name="Strong" hidden="false" targetId="00b5-3637-d48a-807e" type="rule"/>
+            <infoLink id="1c42-0c82-4d61-aeef" name="Spirit" hidden="false" targetId="a9ba-9904-7d29-7bcb" type="rule"/>
+            <infoLink id="05ea-d1c6-1c40-2aee" name="Immovable" hidden="false" targetId="d34b-724f-6fc8-7420" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="4e53-f802-bcb1-0ca1" name=" Melee Weapon" hidden="false">
+          <profiles>
+            <profile id="abdf-1507-eea8-29fe" name="Spiked Fist" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+2</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e"/>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Grapple Attack (1), Powerful Attack (1), Drag Defence (0)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="eb78-bd46-4517-a340" name="Drag Defence" hidden="false" targetId="be46-98c7-87e8-c024" type="rule"/>
+            <infoLink id="cd6d-31f9-6299-8ddc" name="Powerful Attack" hidden="false" targetId="d56a-058d-95d9-5b60" type="rule"/>
+            <infoLink id="f55c-0187-1527-f7b3" name="Grapple Attack" hidden="false" targetId="1b9a-c71d-0a30-8d0d" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="c451-38c7-b761-d047" name="Unique Effects" hidden="false">
+          <infoLinks>
+            <infoLink id="cc2a-c92a-2525-4de4" name="Kimura" hidden="false" targetId="5973-1a39-e124-204a" type="infoGroup"/>
+          </infoLinks>
+          <profiles>
+            <profile name="Unique Effects" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects" hidden="false" id="dd0a-31c1-6333-aad0">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">This model may perform a Wait Action to increase its Move Statistic to 6 until the End Phase.
+If this model begins its activation within a Webbed Ground terrain feature then it does not lose an Activation Counter the first time each turn it performs this Wait Action.
+
+
+When this model suffers Wounds in a Melee Exchange, the attacker suffers one Wound ignoring Tough.
+
+
+This model does not lose Movement for Contacting Webbed Ground.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </infoGroup>
+        <infoGroup id="f46d-a0d0-9e28-1330" name="Ki Feats" hidden="false">
+          <infoLinks>
+            <infoLink id="9e0c-c0e9-095c-4f26" name="Tenacious" hidden="false" targetId="897f-3853-920a-86fb" type="infoGroup"/>
+          </infoLinks>
+        </infoGroup>
+      </infoGroups>
+      <categoryLinks>
+        <categoryLink id="b2ca-78ab-4cce-f383" name="Faction: The Awoken" hidden="false" targetId="5a76-c3ea-5cb7-471f" primary="false"/>
+        <categoryLink id="9a55-d352-d8dc-5d99" name="Faction Profile Cards" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
+        <categoryLink targetId="afd4-8041-e359-223c" id="02d1-d9d7-dfc6-3c22" primary="false" name="Unique"/>
+        <categoryLink targetId="a04d-f396-77a2-68a3" id="bb2d-2894-a40a-0f42" primary="false" name="Kimura"/>
+        <categoryLink targetId="3522-14fa-d48f-3e16" id="c3fb-a796-6299-6551" primary="false" name="Cultist"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="93cb-5dc4-ab17-6561" name="Enhancements" hidden="false" collective="false" import="true" targetId="2be0-472c-1d87-ef19" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="12"/>
+      </costs>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="5e1f-bf56-04b3-29ad" includeChildSelections="true"/>
+      </constraints>
+    </selectionEntry>
+    <selectionEntry id="1e69-e029-167e-d36d" name="Kuna" hidden="false" collective="false" import="true" type="model">
+      <profiles>
+        <profile id="a932-6b14-33fd-63e0" name="Kuna" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">3</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33">3</characteristic>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">1</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c">2</characteristic>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">8</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">10 OOOOO OOOOO</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Large 50mm</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="107d-d76c-de32-7084" name="Traits" hidden="false">
+          <profiles>
+            <profile id="8766-2ec1-134c-f5cb" name="Kuna" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Aware, Disguise (6), Fear (6), Indomitable (8), Kumo, Spirit (2), Strong</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="149b-4f5e-64d2-8c75" name="Fear" hidden="false" targetId="3586-4583-7f10-1f31" type="rule"/>
+            <infoLink id="edae-e8c5-f101-6b74" name="Aware" hidden="false" targetId="ff4a-6b14-09dd-2343" type="rule"/>
+            <infoLink id="af2f-8e38-e27f-29f0" name="Disguise" hidden="false" targetId="1a0f-020f-3805-07f3" type="rule"/>
+            <infoLink id="d8bc-eef8-de59-598d" name="Kumo" hidden="false" targetId="d61f-26dc-7429-84ee" type="rule"/>
+            <infoLink id="9daa-6daa-54b3-352a" name="Strong" hidden="false" targetId="00b5-3637-d48a-807e" type="rule"/>
+            <infoLink id="8891-9e53-70ca-3656" name="Spirit" hidden="false" targetId="a9ba-9904-7d29-7bcb" type="rule"/>
+            <infoLink id="907f-cd17-86b0-a27c" name="Indomitable " hidden="false" targetId="3beb-6f28-e7c4-a236" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="411e-a17d-4a96-db69" name=" Melee Weapon" hidden="false">
+          <profiles>
+            <profile id="d6e9-f410-da0c-f27f" name="A Spider&apos;s Touch" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+0</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Poison (X/1)</characteristic>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Grapple Defence (0), Web Defence (0)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289">This model&apos;s Melee Weapon has a Variable Poison Trait. X is equal to the Success Level of the Attack in a Melee Exchange.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="e2bf-6d49-6244-4dd5" name="Poison " hidden="false" targetId="7290-85f4-42cf-0b75" type="rule"/>
+            <infoLink id="405a-0cc5-619d-9733" name="Drag Defence" hidden="false" targetId="be46-98c7-87e8-c024" type="rule"/>
+            <infoLink id="7f8c-e1c4-912c-9f37" name="Grapple Attack" hidden="false" targetId="1b9a-c71d-0a30-8d0d" type="rule"/>
+            <infoLink id="e0eb-8bab-31ca-e708" name="Web Defence" hidden="false" targetId="c7ec-9628-1cf9-40d9" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="76fa-e6ad-ba0f-7700" name="Unique Effects" hidden="false">
+          <profiles>
+            <profile name="Unique Effects" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects" hidden="false" id="71a2-3fee-ca1c-a6ba">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">This model may perform a Wait action to add a Poison (0) Marker to all Enemy models within Webbed Ground Terrain.
+Remove this Marker in the End Phase in addition to any others.
+
+While this model is on the Battlefield, other Friendly model&apos;s Mandible Weapons gain Poison (+ 1 /+0) and Poison damage ignores Tough.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </infoGroup>
+        <infoGroup id="c828-bdc7-4f3b-3bb8" name="Ki Feats" hidden="false">
+          <infoLinks>
+            <infoLink id="1c75-401d-f470-d22a" name="Masterful Expenditure of Inferiors" hidden="false" targetId="a53b-458a-06a3-761b" type="infoGroup"/>
+            <infoLink id="056e-916f-27ee-9ba3" name="Araneaen Seduction" hidden="false" targetId="ec1d-9574-fac7-ac79" type="infoGroup"/>
+            <infoLink id="9eb6-e90c-406d-a3f4" name="Webs of Spirit and Soul" hidden="false" targetId="2eb1-7aa6-55e0-d97e" type="infoGroup"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="150d-eb99-0534-2eff" name="Ranged Weapon" hidden="false">
+          <profiles>
+            <profile id="2ff1-4ece-63dc-fa21" name="Fire Spiders" hidden="false" typeId="7e20-258e-bf92-18f9" typeName="Ranged Weapon">
+              <characteristics>
+                <characteristic name="Ranged Weapon Strength" typeId="15aa-b6bd-6923-271f">Special</characteristic>
+                <characteristic name="Range Bands" typeId="be6a-50c6-d691-e2e9">2/4/8</characteristic>
+                <characteristic name="Traits" typeId="3410-4428-ef91-eb61">Rapid Fire (3)</characteristic>
+                <characteristic name="Specials" typeId="cdaf-b6ac-89d4-39ef"/>
+                <characteristic name="Unique Effects" typeId="3bf8-6525-f003-4990">When a Ranged Attack with the Fire Spiders weapon is Successful or when the Masterful Expenditure of Inferiors Ki Feat is Successful, Summon and deploy an Endless Procession of Arachnid Presence in BtB with the Target with one unmarked wound box and a Fire (1) Marker.
+The Target gains a Fire (2) Marker.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="f972-b791-80d0-c5a9" name="Rapid Fire" hidden="false" targetId="129c-7864-4cc1-f7bc" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+      </infoGroups>
+      <categoryLinks>
+        <categoryLink id="39ca-6a40-fcb5-b8a6" name="Faction: The Awoken" hidden="false" targetId="5a76-c3ea-5cb7-471f" primary="false"/>
+        <categoryLink id="b7d2-639d-7cf1-d01a" name="Faction Profile Cards" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
+        <categoryLink targetId="afd4-8041-e359-223c" id="7d33-8712-da8c-2f9f" primary="false" name="Unique"/>
+        <categoryLink targetId="0068-20c8-ce79-0b15" id="f045-da0b-8dac-06f5" primary="false" name="Kumo"/>
+        <categoryLink targetId="8e9d-1853-1c1d-9f60" id="bca1-95e1-ff44-2992" primary="false" name="Jaakuna"/>
+        <categoryLink targetId="a1e3-2a3a-1589-2c99" id="a134-0978-0b83-cc77" primary="false" name="Jorogumo"/>
+        <categoryLink targetId="8a19-8c2b-46a8-4086" id="425f-23e9-deef-95a5" primary="false" name="Yokai"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="24c3-491a-1ccd-96a4" name="Enhancements" hidden="false" collective="false" import="true" targetId="2be0-472c-1d87-ef19" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="25"/>
+      </costs>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="059c-c722-d537-a8b9" includeChildSelections="true"/>
+      </constraints>
+    </selectionEntry>
+    <selectionEntry id="22f2-84e2-4b0a-abee" name="The Family" hidden="false" collective="false" import="true" type="upgrade">
+      <profiles>
+        <profile id="e8de-7b21-7d98-0445" name="The Family" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
+          <characteristics>
+            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">- When a Friendly model loses its last Control Marker, before it returns to the opposing Warband, distribute a number of Ki Tokens to Friendly Kimura models equal to that model&apos;s Ki Statistic.
+- Once per game Friendly Kimura with Camouflage gain Camouflage (-4&quot;) until the End Phase.
+- Darkness: During the first turn, non-Sixth Sense, non-Bakemono, non-Soulless models may only draw LOS up to 41&apos;.
+- During the first turn, Friendly Kimura ignore Darkness and Breath of Yurei effects.
+
+This Warband must include at least as many Kimura models as non-Kimura models (not yet enforced in BS).
+
+Permitted [Kumo, Cultist, Ronin Yokai, Ronin Tenbatsu]
+</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="a693-9e63-bd40-a72c" name="Faction Theme Cards" hidden="false" targetId="477a-e693-0888-08f7" primary="true"/>
+      </categoryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0"/>
+      </costs>
+    </selectionEntry>
   </selectionEntries>
   <entryLinks>
     <entryLink id="acf1-d7a8-1d10-532e" name="Tenbatsu" hidden="false" collective="false" import="true" targetId="7785-a709-ad57-73e4" type="selectionEntry">
       <modifiers>
         <modifier type="set" field="hidden" value="false">
-          <conditions>
-            <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="357b-ee70-73b0-9b34" type="atLeast"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="357b-ee70-73b0-9b34" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="22f2-84e2-4b0a-abee" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
     </entryLink>
     <entryLink id="896a-0423-ea6a-027c" name="Kappa" hidden="false" collective="false" import="true" targetId="34f2-cc79-8047-6138" type="selectionEntry">
       <modifiers>
-        <modifier type="set" field="hidden" value="false">
-          <conditions>
-            <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="357b-ee70-73b0-9b34" type="atLeast"/>
-          </conditions>
+        <modifier type="set" value="false" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="357b-ee70-73b0-9b34" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="22f2-84e2-4b0a-abee" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
     </entryLink>
@@ -1808,6 +2843,18 @@ If this model begins its activation within a Webbed Ground Terrain feature then 
           </characteristics>
         </profile>
       </profiles>
+    </infoGroup>
+    <infoGroup name="Kimura" id="5973-1a39-e124-204a" hidden="false">
+      <profiles>
+        <profile name="Kimura" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects" hidden="false" id="6c16-ccf1-dfb4-8c94">
+          <characteristics>
+            <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">When channelling to one or more Kimura in an activation model this model gains Channel (+ 1/+0&quot;).</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Channel" id="33a0-5d5f-2ed8-86b9" hidden="false" type="rule" targetId="69af-3098-e21e-7734"/>
+      </infoLinks>
     </infoGroup>
   </sharedInfoGroups>
   <catalogueLinks>
