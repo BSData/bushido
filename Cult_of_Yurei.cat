@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="1ac7-2939-2874-7530" name="Cult of Yurei" revision="45" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="19" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="1ac7-2939-2874-7530" name="Cult of Yurei" revision="46" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="19" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <selectionEntries>
     <selectionEntry id="5048-3a52-5689-6d0b" name="Drain Spirit" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -4853,7 +4853,6 @@ Burakumin models in the same Warband as this model gain Regenerate (1).</charact
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="477a-e693-0888-08f7" type="atLeast"/>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="538d-4d36-c07f-9024" type="lessThan"/>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8a75-ceb1-bdf5-c64b" type="lessThan"/>
-                <condition type="lessThan" value="1" field="selections" scope="roster" childId="0f5f-ba99-db81-8d97" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -8043,6 +8042,8 @@ While this model is on the Battlefield, Friendly Burakumin gain Vengeance [Noos
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
+                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="abc1-93da-2f5a-dab4" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="538d-4d36-c07f-9024" type="atLeast"/>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f013-587d-b333-6938" type="atLeast"/>
               </conditions>
             </conditionGroup>
@@ -9156,7 +9157,7 @@ Due to the cost increment per model, the cost needs to decrement once to offset 
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="6"/>
       </costs>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Ikeda Koryou" hidden="false" id="fdeb-03be-d929-a9d8">
+    <selectionEntry type="upgrade" import="true" name="Ikeda Koryu" hidden="false" id="fdeb-03be-d929-a9d8">
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2"/>
       </costs>
@@ -9165,7 +9166,7 @@ Due to the cost increment per model, the cost needs to decrement once to offset 
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="7847-60db-22f8-c942" includeChildSelections="true" includeChildForces="true"/>
       </constraints>
       <profiles>
-        <profile name="Ikeda Koryou" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card" hidden="false" id="4ed8-81d4-a2c4-44a1">
+        <profile name="Ikeda Koryu" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card" hidden="false" id="4ed8-81d4-a2c4-44a1">
           <characteristics>
             <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">When using a Masakari Weapon in a Melee Exchange, the attached model&apos;s attacks are considered Sweep Attacks in addition to any chosen Special Ability.
 
@@ -9594,7 +9595,7 @@ Restriction [Burakumin]</characteristic>
         <entryLink id="1f62-7074-244c-942b" name="Spark of Life" hidden="false" collective="false" import="true" targetId="af1d-199c-fe39-69e6" type="selectionEntry"/>
         <entryLink id="166b-c3fc-f969-0f9c" name="Professional" hidden="false" collective="false" import="true" targetId="a795-4dac-6489-ce72" type="selectionEntry"/>
         <entryLink id="ad04-3353-1572-1a0b" name="Bright Nurture" hidden="false" collective="false" import="true" targetId="7345-3239-1f28-59f1" type="selectionEntry"/>
-        <entryLink import="true" name="Ikeda Koryou" hidden="false" id="bc85-5f52-968a-b249" type="selectionEntry" targetId="fdeb-03be-d929-a9d8"/>
+        <entryLink import="true" name="Ikeda Koryu" hidden="false" id="bc85-5f52-968a-b249" type="selectionEntry" targetId="fdeb-03be-d929-a9d8"/>
       </entryLinks>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
