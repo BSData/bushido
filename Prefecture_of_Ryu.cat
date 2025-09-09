@@ -127,9 +127,12 @@ Until the end of the game, whenever you win a Tactical Test, choose 2 Prefecture
       <profiles>
         <profile id="0d40-cf68-b4b9-91f4" name="Blood of the Dragon" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
           <characteristics>
-            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">• Friendly models gain double Ki during the first turn&apos;s Ki Generation step
-• If a Friendly model fails a Fear Test, after the activation ends, it gains Fearless until the End Phase
-• Friendly models reduce the dice cost of Critical Attack by 1 (to a minimum of 0)</characteristic>
+            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">- Friendly models gain double Ki during the first turn&apos;s Ki Generation step
+- If a Friendly model fails a Fear Test, after the activation ends, it gains Fearless until the End Phase
+- Friendly models reduce the dice cost of Critical Attack by 1 (to a minimum of 0)
+
+
+Permitted [Samurai, Ronin Kami, Shugenja, Ronin Seishin na Goei]</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -156,9 +159,12 @@ Until the end of the game, whenever you win a Tactical Test, choose 2 Prefecture
       <profiles>
         <profile id="e40c-44f9-2ebc-f295" name="Claws of the Dragon" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
           <characteristics>
-            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">• During each Starting Phase, choose 1 Ashigaru. That model gains Co-ordinated Attack [Ashigaru] until the End Phase
-• Friendly Ashigaru models gain Scout (+0/+2&quot;)
-• Once per game, in the Starting Phase, all Ashigaru gain Tough (1) until the End Phase</characteristic>
+            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">- During each Starting Phase, choose 1 Ashigaru. That model gains Co-ordinated Attack [Ashigaru] until the End Phase
+- Friendly Ashigaru models gain Scout (+0/+2&quot;)
+- Once per game, in the Starting Phase, all Ashigaru gain Tough (1) until the End Phase
+
+
+Permitted [Ashigaru, Shisai]</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -190,8 +196,11 @@ Until the end of the game, whenever you win a Tactical Test, choose 2 Prefecture
       <profiles>
         <profile id="7a3b-4372-c5fc-adcb" name="Prefecture Patrol" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
           <characteristics>
-            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">• Models with Leadership gain Leadership (+0/+2&quot;)
-• In the Starting Phase, gain a Pass Token for each Friendly model that was recruited into the Warband that is currently removed from play</characteristic>
+            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">- Models with Leadership gain Leadership (+0/+2&quot;)
+- In the Starting Phase, gain a Pass Token for each Friendly model that was recruited into the Warband that is currently removed from play
+
+
+Permitted [Samurai, Ashigaru]</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -6087,6 +6096,20 @@ Requirement: [Passing the Night theme]</characteristic>
               <conditions>
                 <condition type="atLeast" value="1" field="selections" scope="roster" childId="4750-f234-49e4-79c1" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                 <condition type="atLeast" value="1" field="selections" scope="roster" childId="0e4a-a40c-14eb-2f4f" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink import="true" name="Gocho" hidden="false" id="6387-c952-fe97-4893" type="selectionEntry" targetId="34cb-ec1a-36a2-e41c">
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="07e0-41f1-b800-70ad" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="d5a3-42bc-c296-969a" shared="true" includeChildSelections="true" includeChildForces="true"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
