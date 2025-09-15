@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="b489-b304-948d-52d0" name="Library-Ronin" revision="53" battleScribeVersion="2.03" library="true" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="18" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="b489-b304-948d-52d0" name="Library-Ronin" revision="54" battleScribeVersion="2.03" library="true" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="18" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <selectionEntries>
     <selectionEntry id="4e24-3a7e-77bc-dfed" name="Balance" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -10664,8 +10664,7 @@ Reguirement [Tozoku]</characteristic>
           <characteristics>
             <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">Friendly Ashigaru do not suffer the Melee penalty for having Run in the first turn of the game.
 
-
-Reguirement [Gocho]</characteristic>
+Requirement [Gocho]</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -10713,6 +10712,50 @@ Requirement [lto Saiaku]</characteristic>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="4593-5949-dca4-8498" name="The Good Stuff" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="parent" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c382-9ab3-9924-e30a" type="instanceOf"/>
+                <condition field="selections" scope="parent" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d7c5-a2b9-4696-fd33" type="instanceOf"/>
+                <condition field="selections" scope="parent" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6639-615e-f1ab-bc64" type="instanceOf"/>
+                <condition field="selections" scope="parent" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7435-856f-ece2-fe58" type="instanceOf"/>
+                <condition type="notInstanceOf" value="0" field="selections" scope="parent" childId="b95b-a74e-5a5a-beaa" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="decrement" field="a111-8656-5c05-7415" value="1">
+          <conditions>
+            <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="90d7-5fe5-0a05-1bea" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d150-c8d2-cbab-927a" type="max"/>
+        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ff22-145c-835a-91b1" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="faa7-57a4-aac6-f401" name="The Good Stuff" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
+          <characteristics>
+            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">When an Enemy Samurai or Prince model declares a Melee or Charge action which will bring it into BtB with, or Targets this model, it must make a Challenge (7) Ki Test.
+If the Enemy model is successful, resolve the Action as normal. If unsuccessful, its activation ends after any movement but with no Melee Exchange and it removes one Activation Counter.
+Discard this card after the Test is taken. This is a Trap Effect.
+
+
+Requirement [Ito Saiaku]</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="f636-730f-291f-83c0" name="Ronin Equipment Cards" hidden="false" targetId="278f-9379-320a-1a7a" primary="true"/>
+      </categoryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2"/>
+      </costs>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup id="f486-4498-03e3-c397" name="Enhancements" hidden="false" collective="false" import="true">
@@ -10750,6 +10793,9 @@ Requirement [lto Saiaku]</characteristic>
             <entryLink id="d612-5992-475d-8711" name="The Sunrise Katana" hidden="false" collective="false" import="true" targetId="a54a-aa90-53f2-d9df" type="selectionEntry"/>
             <entryLink id="3784-d309-2a41-1b06" name="The Hozumi Katana" hidden="false" collective="false" import="true" targetId="5cac-d0cc-1c51-a147" type="selectionEntry"/>
             <entryLink id="f2ab-44a9-a3b5-f2b2" name="The Kiyozumi Katana" hidden="false" collective="false" import="true" targetId="f882-5ccf-0724-2290" type="selectionEntry"/>
+            <entryLink import="true" name="The Good Stuff" hidden="false" id="ba71-b4e3-58f6-dc6b" type="selectionEntry" targetId="4593-5949-dca4-8498"/>
+            <entryLink import="true" name="Extra Kamaboko Rations" hidden="false" id="4222-69f4-389c-fee4" type="selectionEntry" targetId="7099-48ed-f481-89af"/>
+            <entryLink import="true" name="Hozumi Introduction" hidden="false" id="7975-2f16-adab-58a6" type="selectionEntry" targetId="9c73-278d-b6b4-5913"/>
           </entryLinks>
           <modifiers>
             <modifier type="set" value="-1" field="4ca6-762b-9f97-022f">
@@ -10779,6 +10825,7 @@ Requirement [lto Saiaku]</characteristic>
         <entryLink id="34b2-e25b-4b8a-fdaf" name="Professional" hidden="false" collective="false" import="true" targetId="a795-4dac-6489-ce72" type="selectionEntry"/>
         <entryLink id="5902-ac4e-658c-7cf5" name="The Oncoming Storm" hidden="false" collective="false" import="true" targetId="4965-ef2c-5ec7-2d99" type="selectionEntry"/>
         <entryLink id="0545-3170-07b3-d801" name="Spark of Life" hidden="false" collective="false" import="true" targetId="af1d-199c-fe39-69e6" type="selectionEntry"/>
+        <entryLink import="true" name="Inflated Importance" hidden="false" id="1d83-3582-e4c3-373e" type="selectionEntry" targetId="2d98-2493-6e18-8993"/>
       </entryLinks>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
