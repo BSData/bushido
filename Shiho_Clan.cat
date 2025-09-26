@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="2276-2df6-78a7-841d" name="Shiho Clan" revision="48" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="19" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="2276-2df6-78a7-841d" name="Shiho Clan" revision="49" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="19" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <categoryEntries>
     <categoryEntry id="7fa5-7ef0-59c5-f657" name="Tanaka" hidden="false"/>
   </categoryEntries>
@@ -370,32 +370,10 @@ This model gains Fearless when declaring actions Targeting or Selecting a model 
     </selectionEntry>
     <selectionEntry id="7bda-31ca-310f-2f3d" name="Tanaka Tsuki" hidden="false" collective="false" import="true" type="model">
       <modifiers>
-        <modifier type="set" field="a0ca-48fb-3192-c03c" value="1">
-          <conditions>
-            <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="fb4a-18a7-5b40-74ec" type="atLeast"/>
-          </conditions>
-        </modifier>
         <modifier type="set" field="hidden" value="true">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ff27-a550-2dd1-e2e3" type="atLeast"/>
-              </conditions>
-            </conditionGroup>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9402-edcc-93a2-aef1" type="atLeast"/>
-              </conditions>
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="966b-fc6b-359e-5c30" type="atLeast"/>
-                    <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e9a0-cc94-3fee-24da" type="lessThan"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </conditionGroup>
-          </conditionGroups>
+          <conditions>
+            <condition type="lessThan" value="1" field="selections" scope="roster" childId="fb4a-18a7-5b40-74ec" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </conditions>
         </modifier>
         <modifier type="add" field="category" value="f476-156e-8599-9253">
           <conditions>
@@ -404,7 +382,7 @@ This model gains Fearless when declaring actions Targeting or Selecting a model 
         </modifier>
       </modifiers>
       <constraints>
-        <constraint field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a0ca-48fb-3192-c03c" type="max"/>
+        <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a0ca-48fb-3192-c03c" type="max"/>
       </constraints>
       <profiles>
         <profile id="b5b3-5a17-f5c3-c7f8" name="Tanaka Tsuki" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
@@ -1753,7 +1731,6 @@ Permitted [Shiho Faction Models, Ronin Models]</characteristic>
       <categoryLinks>
         <categoryLink id="bd8e-fde4-783a-d754" name="Faction Theme Cards" hidden="false" targetId="477a-e693-0888-08f7" primary="true"/>
         <categoryLink id="bfe1-73bd-4d40-abc2" name="The Black Eagle&apos;s Coalition" hidden="false" targetId="ec59-5e92-0626-3540" primary="false"/>
-        <categoryLink id="353d-4ca6-746a-a1e8" name="Exclude_Ronin_Enhancements" hidden="false" targetId="6be3-5710-4a9e-0c9f" primary="false"/>
       </categoryLinks>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0"/>
@@ -2824,15 +2801,10 @@ You may decide the order recruited terrain (Friendly and Enemy) is Deployed.</ch
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9402-edcc-93a2-aef1" type="atLeast"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="9402-edcc-93a2-aef1" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="966b-fc6b-359e-5c30" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="c7de-19d4-64dd-911f" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="966b-fc6b-359e-5c30" type="atLeast"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
             </conditionGroup>
           </conditionGroups>
         </modifier>
@@ -3087,14 +3059,9 @@ Whenever a Friendly model within 6&quot; of a model with a Luck Token makes a Fe
             <conditionGroup type="or">
               <conditions>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9402-edcc-93a2-aef1" type="atLeast"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="966b-fc6b-359e-5c30" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="c7de-19d4-64dd-911f" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="966b-fc6b-359e-5c30" type="atLeast"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
             </conditionGroup>
           </conditionGroups>
         </modifier>

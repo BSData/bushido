@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="7615-d14e-1ab8-41ed" name="The Awoken" revision="14" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="19" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="7615-d14e-1ab8-41ed" name="The Awoken" revision="15" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="19" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <selectionEntries>
     <selectionEntry id="357b-ee70-73b0-9b34" name="Joyless Smiles and Dark Eyes" hidden="false" collective="false" import="true" type="upgrade">
       <profiles>
@@ -21,6 +21,18 @@ Permitted [Kumo, Cultist, Ronin Yokai, Ronin Tenbatsu]</characteristic>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0"/>
       </costs>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="477a-e693-0888-08f7" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="357b-ee70-73b0-9b34" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry id="09de-628a-3e17-f171" name="Clinging Web Strands" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -2683,6 +2695,18 @@ Permitted [Kumo, Cultist, Ronin Yokai, Ronin Tenbatsu]</characteristic>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0"/>
       </costs>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="477a-e693-0888-08f7" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="22f2-84e2-4b0a-abee" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry id="8a10-946d-67f8-6f78" name="Domination" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
