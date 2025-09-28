@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="6a8f-b352-80c6-855f" name="Silvermoon Trade Syndicate" revision="47" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="20" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="6a8f-b352-80c6-855f" name="Silvermoon Trade Syndicate" revision="48" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="20" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <selectionEntries>
     <selectionEntry id="5048-3a52-5689-6d0b" name="Bought Loyalty" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -5973,6 +5973,109 @@ While this model is on the Battlefield, Friendly models cannot benefit from the
       </entryLinks>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="6"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="ec53-4cac-7bb3-71fe" name="Yoshiko" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="60c2-7558-d59a-0e05" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="98a6-e76a-f99b-a1d3" type="atLeast"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9121-b912-e9b2-a34a" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="ebd5-c88b-e76e-8c9e" name="Yoshiko" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">2</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33">3</characteristic>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">5</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">2</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c">2</characteristic>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">6</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">6 OOOOO O</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="8f61-b353-011d-fdc2" name="Unique Effects" hidden="false">
+          <profiles>
+            <profile id="40d0-34a1-5d91-bc5b" name="Unique Effects" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">At the end of any of this model&apos;s activations, one Enemy model that is not an Animal or Insignificant within 2&quot; gains a Scheme Token if it has none.
+
+
+When playing nominated VIM, instead, you may select a Friendly model with Disguise to be your chosen VIM.
+That model loses the Disguise Trait and any Disguise Markers and may not gain the Disguise Trait or Disguise Markers.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </infoGroup>
+        <infoGroup id="6e09-904f-8b39-3700" name="Ki Feats" hidden="false">
+          <infoLinks>
+            <infoLink id="4a91-68dc-1e06-0443" name="The Crowds Part" hidden="false" targetId="cae4-7ce7-fadb-0013" type="infoGroup"/>
+            <infoLink id="65cc-f04b-93b9-4a21" name="Contingency Plan" hidden="false" targetId="02ac-526e-4695-b39b" type="infoGroup"/>
+            <infoLink id="d833-14e1-ed0f-70d1" name="Scheme" hidden="false" targetId="f2b9-8498-03c8-6de7" type="infoGroup"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="f253-37b9-75ea-b2df" name="Traits" hidden="false">
+          <profiles>
+            <profile id="a4d7-998b-0e56-ebc4" name="Yoshiko" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Disguise (5), Dodge (1), Jump Up, Evasive, Lightfooted, Willpower (1)</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="9e15-4775-13e8-6052" name="Dodge " hidden="false" targetId="14d5-d459-5d8a-c73e" type="rule"/>
+            <infoLink id="0658-4d9f-f571-1288" name="Evasive" hidden="false" targetId="b0f8-d197-536b-c8fc" type="rule"/>
+            <infoLink id="1178-b422-56a1-cb3e" name="Disguise" hidden="false" targetId="1a0f-020f-3805-07f3" type="rule"/>
+            <infoLink id="661a-9877-dc27-54fe" name="Jump Up" hidden="false" targetId="1575-e12f-4ca3-c557" type="rule"/>
+            <infoLink id="1938-5628-fbd1-93c6" name="Lightfooted" hidden="false" targetId="57d2-cd57-07f9-addf" type="rule"/>
+            <infoLink id="f924-e782-ecfb-304d" name="Willpower" hidden="false" targetId="f980-8d03-ad19-afe3" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="c20a-a4db-6a4e-6b18" name="Melee Weapon" hidden="false">
+          <profiles>
+            <profile id="2510-4176-c82c-6720" name="Tachi" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+0</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e"/>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Push Attack (0), Stun Attack (1), Sidestep Defence (0)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink name="Push Attack" id="54a3-9e67-a0f0-ad37" hidden="false" targetId="6c26-94ba-6b96-9e1b" type="rule"/>
+            <infoLink name="Sidestep Defence " id="efb8-208b-8fa4-ee60" hidden="false" targetId="753c-6c3b-64d7-203c" type="rule"/>
+            <infoLink name="Stun Attack" id="5ec1-60eb-3b13-1e6c" hidden="false" targetId="ae27-975e-6c4b-d84e" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+      </infoGroups>
+      <categoryLinks>
+        <categoryLink id="cd28-c74f-80d9-c098" name="Faction: Silvermoon Trade Syndicate" hidden="false" targetId="875a-48b1-3c9f-0a14" primary="false"/>
+        <categoryLink id="169f-4cb9-de88-4130" name="Faction Profile Cards" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
+        <categoryLink id="aec4-49b1-8219-ba00" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
+        <categoryLink id="abc1-72b1-e695-598f" name="Rose" hidden="false" targetId="38c2-663a-aa2e-8d30" primary="false"/>
+        <categoryLink targetId="dd57-4bab-fa7b-f75c" id="3b04-0f6c-0f4f-c2cc" primary="false" name="Shatei"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="f7e8-0c09-f997-3a55" name="Enhancements" hidden="false" collective="false" import="true" targetId="37a1-1d53-ef45-026d" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="15"/>
       </costs>
     </selectionEntry>
   </selectionEntries>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="62e4-ab79-1c4c-9ffe" name="Bushido: Risen Sun" revision="22" battleScribeVersion="2.03" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem">
+<gameSystem id="62e4-ab79-1c4c-9ffe" name="Bushido: Risen Sun" revision="23" battleScribeVersion="2.03" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem">
   <costTypes>
     <costType id="a111-8656-5c05-7415" name=" Rice" defaultCostLimit="-1" hidden="false"/>
   </costTypes>
@@ -139,6 +139,15 @@
     <profileType id="db15-9d5e-ae6b-d56f" name="Character Types">
       <characteristicTypes>
         <characteristicType id="dd92-f9b1-4a4f-37d6" name="Types"/>
+      </characteristicTypes>
+    </profileType>
+    <profileType id="8434-bfc1-2aea-3e40" name="UE (Melee Weapon)">
+      <characteristicTypes>
+        <characteristicType id="56c5-55d9-1f22-aa08" name="Description"/>
+        <characteristicType id="6045-c896-5651-8fdc" name="Melee Weapon Strength"/>
+        <characteristicType id="483b-04e1-0e68-eb72" name="Traits"/>
+        <characteristicType id="0f56-8504-1a53-2f40" name="Specials"/>
+        <characteristicType id="7565-c497-9a53-5b51" name="Unique Effects"/>
       </characteristicTypes>
     </profileType>
   </profileTypes>

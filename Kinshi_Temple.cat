@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="67f3-e3c0-9b54-71fa" name="Kinshi Temple" revision="21" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="19" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="67f3-e3c0-9b54-71fa" name="Kinshi Temple" revision="22" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="19" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <selectionEntries>
     <selectionEntry id="096c-e1e9-7274-9439" name="Master Shi" hidden="false" collective="false" import="true" type="model">
       <constraints>
@@ -1211,6 +1211,111 @@ Permitted [Kinshi Temple models, Ronin models]</characteristic>
       </categoryLinks>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="e2d3-412c-cd10-e6d2" name="Tomoaki" hidden="false" collective="false" import="true" type="model">
+      <constraints>
+        <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ec6d-b84a-a3bc-a71d" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="6609-5cef-6ee6-f2cc" name="Tomoaki" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">2</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277"/>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">2</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">2</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">0</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">5 OOOOO</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">30mm Small</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="5632-9a86-5a48-11a2" name="Melee Weapon" hidden="false">
+          <profiles>
+            <profile id="4e6a-3316-ba15-c9e2" name="Satsui Bujutsu" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+0</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Ki Block</characteristic>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Sidestep Defence (0)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="cf88-070b-01c2-1115" name="Ki Block" hidden="false" targetId="d134-7fba-38f0-8896" type="rule"/>
+            <infoLink id="38e9-5e0c-284f-946d" name="Sidestep Defence " hidden="false" targetId="753c-6c3b-64d7-203c" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="f782-e988-e95d-b29b" name="Unique Effects" hidden="false">
+          <profiles>
+            <profile id="0568-605f-e9fd-00bb" name="Unique Effects" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">While within 6&quot; of a Friendly Monk, this model gains the Kata trait.
+
+
+After adding any Void Counters for this model being Killed, until the End Phase of the turn this model was Killed, Void Counters cannot be added to the Communal Card.
+
+
+If Recruited into a Warband with Master Shi, this model gains Fearless and cannot be affected by Gokusatsu Attack.
+
+
+Whenever a Friendly Monk would be required to spend or transfer Ki for an effect, you may mark one Wound Box on this model for each Ki Token that would be required to resolve the effect. This may not reduce this model to zero Wounds.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </infoGroup>
+        <infoGroup id="2901-6cd9-82e8-2f1c" name="Feats" hidden="false">
+          <infoLinks>
+            <infoLink id="5841-4d45-f0ac-8ba8" name="Amazed by the Void" hidden="false" targetId="a949-bc93-1f82-05f0" type="infoGroup"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="b1bc-7e19-41ca-ac82" name="Ranged Weapon" hidden="false">
+          <profiles>
+            <profile id="d0ab-c6f1-4c69-81b8" name="Ki Vacuum" hidden="false" typeId="7e20-258e-bf92-18f9" typeName="Ranged Weapon">
+              <characteristics>
+                <characteristic name="Ranged Weapon Strength" typeId="15aa-b6bd-6923-271f">+0</characteristic>
+                <characteristic name="Range Bands" typeId="be6a-50c6-d691-e2e9">3/5/7</characteristic>
+                <characteristic name="Traits" typeId="3410-4428-ef91-eb61">Ki Block</characteristic>
+                <characteristic name="Specials" typeId="cdaf-b6ac-89d4-39ef"/>
+                <characteristic name="Unique Effects" typeId="3bf8-6525-f003-4990"/>
+              </characteristics>
+            </profile>
+          </profiles>
+        </infoGroup>
+        <infoGroup id="f4ee-5046-aee6-e867" name="Traits" hidden="false">
+          <profiles>
+            <profile id="0dce-094d-cef2-9a85" name="Tomoaki" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Jump Up, Spirit (1), Steadfast</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="7978-fbdb-fa3c-8e13" name="Steadfast" hidden="false" targetId="95e7-3178-c29b-013c" type="rule"/>
+            <infoLink id="2871-5b91-0424-e849" name="Jump Up" hidden="false" targetId="1575-e12f-4ca3-c557" type="rule"/>
+            <infoLink id="4bc7-3b8a-fb9c-41b1" name="Spirit" hidden="false" targetId="a9ba-9904-7d29-7bcb" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+      </infoGroups>
+      <categoryLinks>
+        <categoryLink id="293f-84f7-48b4-cce1" name="Faction: Kinshi Temple" hidden="false" targetId="943d-6b70-d85b-fb7b" primary="false"/>
+        <categoryLink id="8b02-1c02-9add-22a1" name="Faction Profile Cards" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
+        <categoryLink id="d158-2e96-1257-4b0b" name="Monk" hidden="false" targetId="57a9-2b8a-3729-1ad8" primary="false"/>
+        <categoryLink id="7797-942e-ac23-b2a9" name="Satsui" hidden="false" targetId="a94e-8398-e4cc-2fb0" primary="false"/>
+        <categoryLink id="0de1-c028-72e9-5e34" name="Element: Void" hidden="false" targetId="18b7-00de-cec4-40ca" primary="false"/>
+        <categoryLink id="80fc-9632-fb18-7efc" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
+        <categoryLink targetId="65b2-664f-9065-3e67" id="0b5c-eacc-33a7-92da" primary="false" name="Unsui"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="d6b8-98d2-0a0b-15f3" name="Enhancements" hidden="false" collective="false" import="true" targetId="36b2-5747-21c9-8865" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="10"/>
       </costs>
     </selectionEntry>
   </selectionEntries>

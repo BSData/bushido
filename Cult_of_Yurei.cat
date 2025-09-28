@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="1ac7-2939-2874-7530" name="Cult of Yurei" revision="49" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="19" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="1ac7-2939-2874-7530" name="Cult of Yurei" revision="50" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="19" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <selectionEntries>
     <selectionEntry id="5048-3a52-5689-6d0b" name="Drain Spirit" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -8522,6 +8522,115 @@ Permitted [Ashigaru, Wretched, Samurai, Ronin Samurai]</characteristic>
               <conditions>
                 <condition type="lessThan" value="1" field="selections" scope="roster" childId="0f5f-ba99-db81-8d97" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                 <condition type="atLeast" value="1" field="selections" scope="roster" childId="477a-e693-0888-08f7" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+    </selectionEntry>
+    <selectionEntry id="ac31-8595-689d-fd8b" name="Vekye" hidden="false" collective="false" import="true" type="model">
+      <constraints>
+        <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="true" id="792f-45f1-fd8e-5c7c" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="84a8-3f74-97f7-5cc1" name="Vekye" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">1</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">5</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">1</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">6</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">7 OOOOO OO</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Medium 40mm</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="292f-921d-fb5d-629e" name="Melee Weapons" hidden="false">
+          <profiles>
+            <profile id="65dd-1246-c272-c592" name="Claws" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+1</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Pierce (1), Bleed (1)</characteristic>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Combo Attack (1)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+            <profile id="bf4a-f419-f603-c23a" name="Tainted Hands" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+0</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e"/>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Grapple Attack (0), Push Attack (1)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="bfc0-208a-08c6-ce59" name="Grapple Attack" hidden="false" targetId="1b9a-c71d-0a30-8d0d" type="rule"/>
+            <infoLink id="532f-ab70-8c87-36a7" name="Push Attack" hidden="false" targetId="6c26-94ba-6b96-9e1b" type="rule"/>
+            <infoLink id="fa1b-c59f-0d15-ffd6" name="Pierce " hidden="false" targetId="39e4-14d7-5533-6e67" type="rule"/>
+            <infoLink id="0221-df6b-74ab-faa0" name="Combo Attack " hidden="false" targetId="78ab-6a94-be24-8f74" type="rule"/>
+            <infoLink id="7239-5dd2-247a-1ae1" name="Bleed" hidden="false" targetId="ac4a-e540-4fe3-126a" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="0378-5a9a-9b72-9b1c" name="Traits" hidden="false">
+          <profiles>
+            <profile id="332b-f571-c681-69e1" name="Vekye" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Aggressive, Co-ordinated Attack [Tengu], Cultist (1 /6&quot;), Fear (5), Indomitable (1), Sixth Sense</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="b934-0b04-2b45-29a3" name="Aggressive" hidden="false" targetId="a445-e041-8d5f-aa28" type="rule"/>
+            <infoLink id="0084-2c96-6b00-a381" name="Co-ordinated Attack" hidden="false" targetId="2337-7bcc-c1f2-f2bd" type="rule"/>
+            <infoLink id="44b7-64a9-f0b2-5b1c" name="Cultist" hidden="false" targetId="ed04-4bf2-e1ff-7a88" type="rule"/>
+            <infoLink id="905a-e099-74ac-593d" name="Fear" hidden="false" targetId="3586-4583-7f10-1f31" type="rule"/>
+            <infoLink id="ec53-eac2-8121-8019" name="Indomitable " hidden="false" targetId="3beb-6f28-e7c4-a236" type="rule"/>
+            <infoLink id="a59d-1482-79f2-b423" name="Sixth Sense" hidden="false" targetId="ec49-3908-f1d1-8de2" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="cc3e-1b35-0f11-3e5d" name="Ki Feats" hidden="false">
+          <infoLinks>
+            <infoLink id="682c-5b5f-f0f0-76c2" name="Mutation" hidden="false" targetId="8179-8061-a013-cbab" type="infoGroup"/>
+            <infoLink id="f7cf-a747-d7df-b9bf" name="Fight or Flight" hidden="false" targetId="c53a-dd04-6b46-24b0" type="infoGroup"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="9df9-36e0-adfe-5f80" name="Unique Effects" hidden="false">
+          <profiles>
+            <profile id="5449-3212-48c8-dd73" name="Ibara" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">If an Enemy model is removed from play due to Fire Damage in the End Phase, this model may Heal all its Wounds.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </infoGroup>
+      </infoGroups>
+      <categoryLinks>
+        <categoryLink id="b2ba-0732-81d6-cf1a" name="Faction: Cult of Yurei" hidden="false" targetId="0d0a-4c02-8dce-676b" primary="false"/>
+        <categoryLink id="0053-f4c4-e16d-97e2" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
+        <categoryLink id="040a-c3d6-1127-79b4" name="Burakumin" hidden="false" targetId="5250-d881-a61c-718c" primary="false"/>
+        <categoryLink id="f225-4699-74e3-6985" name="Faction Profile Cards" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
+        <categoryLink id="cbe5-8fb4-ba4f-a038" name="Cultist" hidden="false" targetId="3522-14fa-d48f-3e16" primary="false"/>
+        <categoryLink targetId="8a19-8c2b-46a8-4086" id="a4e3-a68e-5668-a867" primary="false" name="Yokai"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="6558-958c-e5bb-5bc1" name="Enhancements" hidden="false" collective="false" import="true" targetId="ef93-ecd4-88c1-9224" type="selectionEntryGroup"/>
+        <entryLink id="b36c-a886-25dd-c97e" name="Ijimyo&apos;s Masks" hidden="false" collective="false" import="true" targetId="c138-ec1d-df76-737c" type="selectionEntry"/>
+      </entryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="10"/>
+      </costs>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="0f5f-ba99-db81-8d97" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>

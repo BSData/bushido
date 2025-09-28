@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="4213-717c-2228-e731" name="Temple of Ro-Kan" revision="52" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="19" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="4213-717c-2228-e731" name="Temple of Ro-Kan" revision="53" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="19" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <selectionEntries>
     <selectionEntry id="5048-3a52-5689-6d0b" name="Spiritual Harmony" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -7197,6 +7197,145 @@ You must choose the same turn and table edge to arrive for all of the Villager
       </entryLinks>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="16"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="b1d8-3f6a-20d3-f1b1" name="Kurēn" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1a12-f47f-8f23-0777" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="33ea-e647-b8c5-2267" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="44e6-4155-6b9b-2521" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2af4-e298-ee7f-b85f" type="atLeast"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" field="0de2-839e-04fc-bff0" value="0">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c81b-cb45-9579-b5dd" type="equalTo"/>
+                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="db22-747f-9e25-371a" type="greaterThan"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ffd8-72ee-dab5-a006" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0de2-839e-04fc-bff0" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="5f72-64c4-d673-af88" name="Kurēn" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">2</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">2</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33">3</characteristic>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">5</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">2</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">8</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">6 OOOOO O</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="7b77-f89f-f634-bc65" name="Traits" hidden="false">
+          <profiles>
+            <profile id="551c-3205-d96f-c887" name="Kurēn" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Agile, Bravery, Endurance, Evasive</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="267f-e57e-6d00-d583" name="Agile" hidden="false" targetId="6a46-2f07-1725-11b2" type="rule"/>
+            <infoLink id="198b-1653-083a-cd34" name="Bravery" hidden="false" targetId="f9b2-38d2-7cda-de6e" type="rule"/>
+            <infoLink id="9181-cf5e-8bee-f3d9" name="Endurance" hidden="false" targetId="7fdc-d150-9641-1235" type="rule"/>
+            <infoLink id="f6fa-ebef-6835-4a8e" name="Evasive" hidden="false" targetId="b0f8-d197-536b-c8fc" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="7796-a172-91dc-f99c" name="Melee Weapons" hidden="false">
+          <profiles>
+            <profile id="0681-d985-4474-745e" name="Bujutsu" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+0</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e"/>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Sidestep Defence (0), Throw Defence (1), Push Defence (0)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"> </characteristic>
+              </characteristics>
+            </profile>
+            <profile id="ebc5-cc65-4cbf-5dff" name="Claws" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+1</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Pierce (1)</characteristic>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Combo Attack (0), Push Attack (0)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="e69c-e59c-6c20-4df4" name="Pierce " hidden="false" targetId="39e4-14d7-5533-6e67" type="rule"/>
+            <infoLink id="f059-c36f-322c-91b6" name="Sidestep Defence " hidden="false" targetId="753c-6c3b-64d7-203c" type="rule"/>
+            <infoLink id="4d29-c08d-d641-b5fd" name="Combo Attack " hidden="false" targetId="78ab-6a94-be24-8f74" type="rule"/>
+            <infoLink id="b7b6-5b08-ed1b-40ac" name="Push Attack" hidden="false" targetId="6c26-94ba-6b96-9e1b" type="rule"/>
+            <infoLink id="4e73-6a97-9b54-1a15" name="Push Defence" hidden="false" targetId="74fc-a971-d9c2-278c" type="rule"/>
+            <infoLink id="093c-90c4-4b63-1624" name="Throw Defence" hidden="false" targetId="81f2-67a9-c905-7a41" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="238b-69a3-6801-5b96" name="Ki Feats" hidden="false">
+          <infoLinks>
+            <infoLink id="fc4a-5318-d065-b366" name="Apparition" hidden="false" targetId="1c1e-18a9-546e-9c59" type="infoGroup"/>
+            <infoLink id="97b6-e90e-82bd-f20f" name="Focusing Shōmyō" hidden="false" targetId="1b0d-a983-2094-a5d9" type="infoGroup"/>
+            <infoLink id="e49e-9f5c-2e2f-5cb8" name="Martial Discipline" hidden="false" targetId="6205-3f1a-7182-b39d" type="infoGroup"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="b755-acef-1baa-47af" name="Unique Effects" hidden="false">
+          <profiles>
+            <profile id="d5ba-3d9e-3d88-d45f" name="Virtue" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">While this model is in play, when a Friendly Sohei model spends a Virtue Token you may choose the following effects for that model:
+-This model gains Dodge (1) until the end of the current activation.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Unique Effects" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects" hidden="false" id="ca58-b0ca-b24f-c7f1">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">Whenever this model Performs a Wait Action, it gains Unblockable (1) until the End Phase.
+
+
+When this model performs a Complex Ki Feat, it gains Virtue (6&quot;) for that Action. This model&apos;s Virtue may only Target Sohei models.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="7912-70ab-9fee-493d" name="Unblockable" hidden="false" targetId="964b-62c9-4f94-bed7" type="rule"/>
+            <infoLink id="6c9f-ffd3-8ad5-5698" name="Dodge " hidden="false" targetId="14d5-d459-5d8a-c73e" type="rule"/>
+            <infoLink id="d799-76f6-ec65-1bde" name="Virtue" hidden="false" targetId="57d7-cc96-ce93-9258" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+      </infoGroups>
+      <categoryLinks>
+        <categoryLink id="3a16-1bd0-c22e-4346" name="Faction: Temple of Rokan" hidden="false" targetId="3186-3d3a-a105-887b" primary="false"/>
+        <categoryLink id="3b32-5d19-cf9c-158e" name="Faction Profile Cards" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
+        <categoryLink id="2529-b702-c95d-f1e2" name="Sohei" hidden="false" targetId="db22-747f-9e25-371a" primary="false"/>
+        <categoryLink id="878f-d62e-a00c-2e76" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
+        <categoryLink targetId="cfb8-797d-9fae-9a4f" id="9246-d068-0fe7-d98c" primary="false" name="Bird"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="b0ca-d614-391b-97e3" name="Enhancements" hidden="false" collective="false" import="true" targetId="d716-36e8-af1d-0a1f" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="11"/>
       </costs>
     </selectionEntry>
   </selectionEntries>

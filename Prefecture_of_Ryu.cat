@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="0cac-b8ad-fb7f-ef84" name="Prefecture of Ryu" revision="46" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="19" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="0cac-b8ad-fb7f-ef84" name="Prefecture of Ryu" revision="47" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="19" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <categoryEntries>
     <categoryEntry id="8688-cd6e-bcbe-2cbb" name="Ima" hidden="false"/>
     <categoryEntry id="65a8-4392-a95b-115b" name="Takashi" hidden="false"/>
@@ -5967,6 +5967,129 @@ Requirement: [Passing the Night theme]</characteristic>
       <categoryLinks>
         <categoryLink targetId="d360-71aa-ca22-ba3c" id="c26e-5773-cdd1-ce39" primary="true" name="Faction Event Cards"/>
       </categoryLinks>
+    </selectionEntry>
+    <selectionEntry id="23e3-781f-896f-38c9" name="Takashi Horaki" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="d5a3-42bc-c296-969a" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8d07-9351-8ea3-42f0" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="166b-8025-90ad-be46" name="Takashi Horaki" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">3</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33">3</characteristic>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">2</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">6</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">6 OOOOO O</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="8d6b-f0e6-e05c-b2be" name="Ki Feats" hidden="false">
+          <infoLinks>
+            <infoLink id="ec81-20c8-0cbe-a2df" name="Spiritual Nexus" hidden="false" targetId="a295-1701-b2fc-55bb" type="infoGroup"/>
+            <infoLink id="d775-3e9e-5b99-d9c7" name="Alert" hidden="false" targetId="d6fc-72fb-d59f-0fcf" type="infoGroup"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="1872-bf6a-1f43-8a73" name="Traits" hidden="false">
+          <profiles>
+            <profile id="f77e-b285-6ba7-e701" name="Takashi Horaki" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Bravery, Endurance, Parry (1), Prowess[Melee](1), Vengeance [Oni]</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="2850-efc1-21b9-4759" name="Bravery" hidden="false" targetId="f9b2-38d2-7cda-de6e" type="rule"/>
+            <infoLink id="67d2-2add-681b-6497" name="Endurance" hidden="false" targetId="7fdc-d150-9641-1235" type="rule"/>
+            <infoLink id="4a72-0f8e-17c9-b21e" name="Vengeance" hidden="false" targetId="6779-0aac-2f51-f67e" type="rule"/>
+            <infoLink id="ac42-3d74-14ed-bbbd" name="Parry" hidden="false" targetId="c7c2-b36e-7952-c79b" type="rule"/>
+            <infoLink id="0166-ad2f-7858-3c6d" name="Prowess " hidden="false" targetId="75ef-327a-cd08-a248" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="988c-4218-babd-c557" name="Melee Weapon" hidden="false">
+          <profiles>
+            <profile id="7be9-7785-1676-db1f" name="Yari" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+1</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Reach</characteristic>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Push Defence (0), Sweep Defence (1), Push Attack (0)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink name="Reach" id="ca97-7cac-02fb-d488" hidden="false" targetId="e28e-d5dd-a262-1101" type="rule"/>
+            <infoLink name="Push Defence" id="d8c2-4f3a-2024-1c4e" hidden="false" targetId="74fc-a971-d9c2-278c" type="rule"/>
+            <infoLink name="Sweep Defence" id="85b1-e9b9-391f-ad47" hidden="false" targetId="5338-2d8f-f189-062d" type="rule"/>
+            <infoLink name="Push Attack" id="9414-7a23-d8a2-9ead" hidden="false" targetId="6c26-94ba-6b96-9e1b" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="e297-ac71-1a3c-717c" name="Ranged Weapon" hidden="false">
+          <profiles>
+            <profile id="0cde-93bb-c350-09ad" name="Thrown Yari" hidden="false" typeId="7e20-258e-bf92-18f9" typeName="Ranged Weapon">
+              <characteristics>
+                <characteristic name="Ranged Weapon Strength" typeId="15aa-b6bd-6923-271f">+1</characteristic>
+                <characteristic name="Range Bands" typeId="be6a-50c6-d691-e2e9">3/5/7</characteristic>
+                <characteristic name="Traits" typeId="3410-4428-ef91-eb61">Ammo (2)</characteristic>
+                <characteristic name="Specials" typeId="cdaf-b6ac-89d4-39ef">Powerful Attack (1)</characteristic>
+                <characteristic name="Unique Effects" typeId="3bf8-6525-f003-4990"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink name="Ammo" id="134d-a43b-6a64-3a11" hidden="false" targetId="765d-18a5-7170-9b56" type="rule"/>
+            <infoLink name="Powerful Attack" id="951e-a4c0-291d-4d08" hidden="false" targetId="d56a-058d-95d9-5b60" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup name="Unique Effects" id="ec8c-e71f-d913-9a00" hidden="false">
+          <profiles>
+            <profile name="Unique Effects" typeId="8434-bfc1-2aea-3e40" typeName="UE (Melee Weapon)" hidden="false" id="a5ab-ba0e-5224-fa5c">
+              <characteristics>
+                <characteristic name="Description" typeId="56c5-55d9-1f22-aa08">When this model has no Ammo Tokens, it cannot choose to use its Yari or Thrown Yari weapons and gains the following Weapon:</characteristic>
+                <characteristic name="Melee Weapon Strength" typeId="6045-c896-5651-8fdc">-1</characteristic>
+                <characteristic name="Traits" typeId="483b-04e1-0e68-eb72"/>
+                <characteristic name="Specials" typeId="0f56-8504-1a53-2f40">Powerful Attack (1), Sidestep Defence (0)</characteristic>
+                <characteristic name="Unique Effects" typeId="7565-c497-9a53-5b51"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink name="Powerful Attack" id="02bf-4368-9ff0-5529" hidden="false" targetId="d56a-058d-95d9-5b60" type="rule"/>
+            <infoLink name="Sidestep Defence " id="f632-2403-44ec-b7fa" hidden="false" targetId="753c-6c3b-64d7-203c" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+      </infoGroups>
+      <categoryLinks>
+        <categoryLink id="faca-bb23-5ffa-2458" name="Faction: Prefecture of Ryu" hidden="false" targetId="7532-4f60-381d-2941" primary="false"/>
+        <categoryLink id="169a-84a2-f3ef-ea7b" name="Faction Profile Cards" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
+        <categoryLink id="4acb-8c4e-47fe-867f" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
+        <categoryLink id="2868-24d3-767f-3d7e" name="Samurai" hidden="false" targetId="e12a-f782-3281-7444" primary="false"/>
+        <categoryLink id="3eb1-82ca-5191-8db3" name="Shugenja" hidden="false" targetId="0c22-e9ca-a3de-e706" primary="false"/>
+        <categoryLink id="d0e9-cd8c-2530-8ec4" name="Takashi" hidden="false" targetId="65a8-4392-a95b-115b" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="a944-00ba-d4b1-bec8" name="Enhancements" hidden="false" collective="false" import="true" targetId="3dad-1423-9b3c-86a7" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="15"/>
+      </costs>
     </selectionEntry>
   </selectionEntries>
   <entryLinks>
