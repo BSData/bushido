@@ -3290,6 +3290,7 @@ Whenever a Friendly model within 6&quot; of a model with a Luck Token makes a Fe
             <conditionGroup type="or">
               <conditions>
                 <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="7ef8-7f43-f951-237e" type="atLeast"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="c699-276a-757d-71c8" shared="true" includeChildSelections="true" includeChildForces="true"/>
               </conditions>
               <conditionGroups>
                 <conditionGroup type="and">
@@ -3696,6 +3697,7 @@ Whenever a Friendly model within 6&quot; of a model with a Luck Token makes a Fe
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f5-1986-098c-0729" type="atLeast"/>
                 <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="7ef8-7f43-f951-237e" type="atLeast"/>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c7de-19d4-64dd-911f" type="atLeast"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="c699-276a-757d-71c8" shared="true" includeChildSelections="true" includeChildForces="true"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -3935,6 +3937,21 @@ Whenever a Friendly model within 6&quot; of a model with a Luck Token makes a Fe
           </conditions>
         </modifier>
       </modifiers>
+    </entryLink>
+    <entryLink import="true" name="Shiho Kizo" hidden="false" id="c699-276a-757d-71c8" type="selectionEntry" targetId="77de-5b5f-3a0c-3c74"/>
+    <entryLink import="true" name="Karapan" hidden="true" id="4d4d-ca25-1095-dc61" type="selectionEntry" targetId="78e7-a0f7-4d57-0a04">
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="add" value="9fba-f50b-c8f7-8396" field="category"/>
+            <modifier type="remove" value="0ca8-2040-37f2-a1e0" field="category"/>
+            <modifier type="set" value="false" field="hidden"/>
+          </modifiers>
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="c699-276a-757d-71c8" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifierGroup>
+      </modifierGroups>
     </entryLink>
   </entryLinks>
   <sharedSelectionEntries>

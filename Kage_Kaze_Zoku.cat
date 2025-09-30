@@ -382,135 +382,6 @@ X = the number of Ninja models in the Warband.</characteristic>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="db47-875d-6696-aa1d" name="Karapan" hidden="false" collective="false" import="true" type="unit">
-      <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4c67-f393-7598-a82d" type="atLeast"/>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4e1c-43c9-596d-ef16" type="atLeast"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
-      <constraints>
-        <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="32d0-663d-f50c-9a1e" type="max"/>
-      </constraints>
-      <infoGroups>
-        <infoGroup id="3221-2693-6f24-254e" name="Traits" hidden="false">
-          <profiles>
-            <profile id="63e5-3593-b47e-f9b5" name="Karapan" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
-              <characteristics>
-                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Aloof, Assassin, Camouflage (2&quot;), Flank, Cloudwalk, Scout (1/4&quot;), Sixth Sense</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <infoLinks>
-            <infoLink id="7bde-5ee8-37b0-4e54" name="Cloudwalk" hidden="false" targetId="538c-1266-626b-fcc9" type="rule"/>
-            <infoLink id="9807-4ad7-3adf-a039" name="Scout" hidden="false" targetId="8c82-d05a-f63b-1841" type="rule"/>
-            <infoLink id="0862-f9be-9ed2-9566" name="Flank" hidden="false" targetId="a847-f02d-7e99-8a66" type="rule"/>
-            <infoLink id="4c01-460a-d9d7-c13b" name="Assassin" hidden="false" targetId="ef59-928b-2550-f0a3" type="rule"/>
-            <infoLink id="e2ed-e61a-acb5-a1a6" name="Camouflage" hidden="false" targetId="9010-4983-c98c-1751" type="rule"/>
-            <infoLink id="23ad-83f0-e66d-9b45" name="Aloof" hidden="false" targetId="5101-70fc-eca4-d99b" type="rule"/>
-            <infoLink id="f580-65ee-3fb9-8956" name="Sixth Sense" hidden="false" targetId="ec49-3908-f1d1-8de2" type="rule"/>
-          </infoLinks>
-        </infoGroup>
-        <infoGroup id="5057-6018-3117-dd1b" name="Melee Weapons" hidden="false">
-          <profiles>
-            <profile id="6d50-1bf9-2430-3e44" name="Bite" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
-              <characteristics>
-                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+1</characteristic>
-                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Sharp (1)</characteristic>
-                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d"/>
-                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289">This model cannot declare Melee Actions using its Bite Weapon.</characteristic>
-              </characteristics>
-            </profile>
-            <profile id="d996-658f-0f28-e5c8" name="Claw" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
-              <characteristics>
-                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+2</characteristic>
-                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e"/>
-                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d"/>
-                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289">When this model Damages an Enemy model in a Melee Exchange with its Claws, after the Melee Exchange is resolved, perform another Melee Exchange using its Bite Weapon. The Activating model does not change. After this second exchange, neither model loses an Activation Counter.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <infoLinks>
-            <infoLink id="79c7-68b0-019b-7fa8" name="Sharp " hidden="false" targetId="6092-9fb5-5196-d1eb" type="rule"/>
-          </infoLinks>
-        </infoGroup>
-        <infoGroup id="d890-b5a8-26d2-27d7" name="Unique Effects" hidden="false">
-          <profiles>
-            <profile id="de0b-3441-b51d-936f" name="End Phase" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
-              <characteristics>
-                <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">During the End Phase, this model may make a Walk directly towards a Friendly Ninja. If this model is BtB with the chosen Ninja, that Ninja gains Tactician (+1) for the next Tactical Roll.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <infoLinks>
-            <infoLink id="ced2-be80-14ee-55f7" name="Tactician" hidden="false" targetId="14dd-c67a-5240-e647" type="rule"/>
-          </infoLinks>
-        </infoGroup>
-      </infoGroups>
-      <categoryLinks>
-        <categoryLink id="f441-3d3d-35fe-8c21" name="Faction Profile Cards" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
-        <categoryLink id="3f51-aade-6afa-9e72" name="Animal" hidden="false" targetId="c382-9ab3-9924-e30a" primary="false"/>
-        <categoryLink id="97e2-c62d-82cd-9b3a" name="Non-Unique" hidden="false" targetId="d181-219d-3add-d47b" primary="false"/>
-      </categoryLinks>
-      <entryLinks>
-        <entryLink id="776e-c591-1d4e-40fd" name="Karapan" hidden="false" collective="false" import="true" targetId="08df-a834-9433-f20a" type="selectionEntry">
-          <modifiers>
-            <modifier type="append" field="name" value="B"/>
-          </modifiers>
-          <profiles>
-            <profile id="1857-cf4c-63a1-4a4a" name="Karapan B" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
-              <characteristics>
-                <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
-                <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277"/>
-                <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">0</characteristic>
-                <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
-                <characteristic name="Move" typeId="91b7-833e-fd8e-a620">6</characteristic>
-                <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
-                <characteristic name="Ki" typeId="3969-9568-a914-6854">2</characteristic>
-                <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
-                <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">0</characteristic>
-                <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">8 OOOOO OOO</characteristic>
-                <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Medium 40mm</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-        </entryLink>
-        <entryLink id="f8b3-df23-df41-6297" name="Karapan" hidden="false" collective="false" import="true" targetId="08df-a834-9433-f20a" type="selectionEntry">
-          <modifiers>
-            <modifier type="append" field="name" value="A"/>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a5c1-b917-08ff-830f" type="min"/>
-          </constraints>
-          <profiles>
-            <profile id="fd0b-2b72-a71e-6e84" name="Karapan A" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
-              <characteristics>
-                <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
-                <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277"/>
-                <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">0</characteristic>
-                <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
-                <characteristic name="Move" typeId="91b7-833e-fd8e-a620">6</characteristic>
-                <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
-                <characteristic name="Ki" typeId="3969-9568-a914-6854">2</characteristic>
-                <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
-                <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">0</characteristic>
-                <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">8 OOOOO OOO</characteristic>
-                <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Medium 40mm</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-        </entryLink>
-      </entryLinks>
-      <costs>
-        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0"/>
-      </costs>
-    </selectionEntry>
     <selectionEntry id="92e2-ac64-af2f-056c" name="Terminate" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a6f3-4f36-aa00-b97e" type="max"/>
@@ -4561,20 +4432,28 @@ If Phantom was not recruited into the Warband, remove this model from play and r
     </entryLink>
     <entryLink import="true" name="Somabo" hidden="false" id="1d7a-8a07-01be-22c0" type="selectionEntry" targetId="77b7-4d40-c62b-0a4b"/>
     <entryLink import="true" name="Tozoku" hidden="true" id="efc7-8e62-70db-4092" type="selectionEntry" targetId="1659-29d3-dacb-8261"/>
+    <entryLink import="true" name="Karapan" hidden="false" id="db47-875d-6696-aa1d" type="selectionEntry" targetId="78e7-a0f7-4d57-0a04"/>
+    <entryLink import="true" name="Eagles of Jwar" hidden="true" id="4a6e-e392-53df-b198" type="selectionEntry" targetId="7ae1-11df-c8ef-4f5a">
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="039b-ade9-a48a-91fd" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink import="true" name="Giant Eagle" hidden="true" id="e174-4c21-09b0-c4d1" type="selectionEntry" targetId="f25f-493d-4123-b0ee">
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="039b-ade9-a48a-91fd" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink import="true" name="Shiho Kizo" hidden="false" id="039b-ade9-a48a-91fd" type="selectionEntry" targetId="77de-5b5f-3a0c-3c74"/>
   </entryLinks>
   <sharedSelectionEntries>
-    <selectionEntry id="08df-a834-9433-f20a" name="Karapan" hidden="false" collective="false" import="true" type="model">
-      <constraints>
-        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="46e5-5682-6b09-15ac" type="max"/>
-      </constraints>
-      <categoryLinks>
-        <categoryLink id="4bf0-a25a-238c-479a" name="Animal" hidden="false" targetId="c382-9ab3-9924-e30a" primary="false"/>
-        <categoryLink id="2bc4-845b-2e04-7369" name="Karapan" hidden="false" targetId="28d6-c4b6-feae-4663" primary="false"/>
-      </categoryLinks>
-      <costs>
-        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="11"/>
-      </costs>
-    </selectionEntry>
     <selectionEntry id="c5be-e9e5-ee8d-39de" name="Two Lone Swordsmen" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
         <modifier type="set" field="hidden" value="false">
