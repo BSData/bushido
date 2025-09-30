@@ -8637,6 +8637,126 @@ Permitted [Ashigaru, Wretched, Samurai, Ronin Samurai]</characteristic>
         </modifier>
       </modifiers>
     </selectionEntry>
+    <selectionEntry id="45d5-cd29-ab42-811a" name="Lotus Kaidan" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="abc1-93da-2f5a-dab4" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="538d-4d36-c07f-9024" type="atLeast"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="0f5f-ba99-db81-8d97" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="caa4-e068-1cfb-93c3" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="072d-690d-1b7c-262c" name="Lotus Kaidan" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">1</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277"/>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">2</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">3</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac">1</characteristic>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">0</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">4</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">Special</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Medium 40mm</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="3b56-2bb2-d9ea-186a" name="Ki Feats" hidden="false">
+          <infoLinks>
+            <infoLink id="6044-b8de-fff2-ff98" name="Rebirth" hidden="false" targetId="64ab-afb5-8149-b1a4" type="infoGroup"/>
+            <infoLink id="852f-dce8-8624-81ee" name="The Oppressed" hidden="false" targetId="095f-a273-4549-085f" type="infoGroup"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="0ecd-8203-8d16-6990" name="Melee Weapon" hidden="false">
+          <profiles>
+            <profile id="e5a4-de2c-c00b-aa07" name="Unarmed" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">-2</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Ki Block</characteristic>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d"/>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink name="Ki Block" id="9d16-58dd-f802-e117" hidden="false" targetId="d134-7fba-38f0-8896" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="3ec5-439f-58c6-9d19" name="Traits" hidden="false">
+          <profiles>
+            <profile id="1212-8ba7-84ad-4408" name="Lotus Kaidan" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Durable, Fear (6), Immune [Controlled], Insignificant, Intangible, Kami, Soulless, Split Attack</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="fba3-e6cb-6410-f159" name="Fear" hidden="false" targetId="3586-4583-7f10-1f31" type="rule"/>
+            <infoLink id="1639-4690-951f-582d" name="Immune" hidden="false" targetId="ea08-b25e-0ea8-af73" type="rule"/>
+            <infoLink id="8a3c-5de7-3b06-a6a8" name="Kami" hidden="false" targetId="50d4-ec7a-9763-1b4d" type="rule"/>
+            <infoLink id="3f31-afbc-20e1-5fe1" name="Durable" hidden="false" targetId="3612-7e19-3cb9-72d0" type="rule"/>
+            <infoLink id="7102-3ca6-1b9e-db25" name="Soulless" hidden="false" targetId="af31-aad0-fcea-9590" type="rule"/>
+            <infoLink id="c1db-a730-7d59-0b8c" name="Intangible" hidden="false" targetId="7f5c-c63d-f96f-65af" type="rule"/>
+            <infoLink id="2788-c05f-918e-9e4c" name="Split Attack" hidden="false" targetId="92d0-d4fe-e58e-7535" type="rule"/>
+            <infoLink id="0841-11b5-2c47-79eb" name="Insignificant" hidden="false" targetId="1614-d86c-ef8a-c095" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="94d6-38e4-535d-40a8" name="Ranged Weapon" hidden="false">
+          <profiles>
+            <profile id="9091-be3a-21a0-93b6" name="Angst" hidden="false" typeId="7e20-258e-bf92-18f9" typeName="Ranged Weapon">
+              <characteristics>
+                <characteristic name="Ranged Weapon Strength" typeId="15aa-b6bd-6923-271f">+0</characteristic>
+                <characteristic name="Range Bands" typeId="be6a-50c6-d691-e2e9">-/4/-</characteristic>
+                <characteristic name="Traits" typeId="3410-4428-ef91-eb61">Ki Block</characteristic>
+                <characteristic name="Specials" typeId="cdaf-b6ac-89d4-39ef"/>
+                <characteristic name="Unique Effects" typeId="3bf8-6525-f003-4990"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="d69a-4ef4-2649-9dd0" name="Ki Block" hidden="false" targetId="d134-7fba-38f0-8896" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="2a1e-fd5f-768e-9699" name="Unique Effects" hidden="false">
+          <profiles>
+            <profile id="3d98-c5c9-a9b0-e8a2" name="Unique Effects" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">In the Starting Phase if no Enemy Models have a Death Sentence Marker, your opponent must choose one of their models to gain a Death Sentence Marker.
+
+
+When this model would be removed from play, instead Deploy it within 4&quot; of another model with a Death Sentence Marker but not in BtB or in any other model&apos;s ZoC. If this is not possible, this model is removed from play as normal.
+
+
+When an Active Friendly model fails an Opposed K test you may distribute the used Ki Tokens equal to the cost of the Ki Feat to a Friendly Intangible Summoned model.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </infoGroup>
+      </infoGroups>
+      <categoryLinks>
+        <categoryLink id="40c8-11a7-5bd7-a68c" name="Minor" hidden="false" targetId="d45e-8b05-fa4c-e6c9" primary="false"/>
+        <categoryLink id="30b2-270a-8901-500e" name="Kami" hidden="false" targetId="6639-615e-f1ab-bc64" primary="false"/>
+        <categoryLink id="a3f9-0a1b-3af7-3da7" name="Faction: Cult of Yurei" hidden="false" targetId="0d0a-4c02-8dce-676b" primary="false"/>
+        <categoryLink id="77c1-6d15-885b-6b9c" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
+        <categoryLink id="ecdd-5dae-d438-7a4f" name="Faction Profile Cards" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
+        <categoryLink id="d8e9-5c36-b2d9-51e2" name="Soulless" hidden="false" targetId="0abe-c3e6-4300-478f" primary="false"/>
+        <categoryLink targetId="232e-d32e-1be1-507e" id="f38c-768f-38c7-0412" primary="false" name="Kaidan"/>
+      </categoryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="14"/>
+      </costs>
+    </selectionEntry>
   </selectionEntries>
   <entryLinks>
     <entryLink id="5358-9c72-b23c-c2e3" name="Baichi" hidden="false" collective="false" import="true" targetId="d998-94b8-fd53-f8ce" type="selectionEntry">

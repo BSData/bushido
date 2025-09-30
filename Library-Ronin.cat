@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="b489-b304-948d-52d0" name="Library-Ronin" revision="54" battleScribeVersion="2.03" library="true" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="18" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="b489-b304-948d-52d0" name="Library-Ronin" revision="55" battleScribeVersion="2.03" library="true" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="18" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <selectionEntries>
     <selectionEntry id="4e24-3a7e-77bc-dfed" name="Balance" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -10740,6 +10740,136 @@ Requirement [Ito Saiaku]</characteristic>
       </categoryLinks>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry type="model" import="true" name="Somabo" hidden="false" id="77b7-4d40-c62b-0a4b" collective="false">
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="f616-46d8-5907-fafd" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="9402-edcc-93a2-aef1" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="b94d-f7cb-a84c-4077" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="477a-e693-0888-08f7" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="1cc9-239c-e007-0376" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+      </constraints>
+      <profiles>
+        <profile name="Somabo" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile" hidden="false" id="fea3-fad4-6be6-1bf5">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">4</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">2</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">5</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac">3</characteristic>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">2</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c">3</characteristic>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">8</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">5 OOOOO</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup name="Ki Feats" id="703f-240f-7653-cc16" hidden="false">
+          <infoLinks>
+            <infoLink name="Umbrella Block" id="f11a-458d-01d3-5603" hidden="false" targetId="0005-2a79-5638-daa2" type="infoGroup"/>
+            <infoLink name="Squall Strike" id="bf7d-a80a-ba88-3f0c" hidden="false" targetId="b859-6eaf-f906-07d1" type="infoGroup"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup name="Traits" id="7580-a301-b11f-7a81" hidden="false">
+          <profiles>
+            <profile name="Somabo" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits" hidden="false" id="8cbb-b1b3-0818-4549">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Bravery, Dodge (1), Evasive, Lightning Reflexes,
+Prowess [Attack](1), Ranged Defence (1)</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink name="Ranged Defence " id="a8af-6f75-8b74-cdb9" hidden="false" targetId="9b8d-9ca9-e25d-3988" type="rule"/>
+            <infoLink name="Dodge " id="2e03-b4c3-f4bd-c622" hidden="false" targetId="14d5-d459-5d8a-c73e" type="rule"/>
+            <infoLink name="Bravery" id="34d8-014c-ca9d-fd52" hidden="false" targetId="f9b2-38d2-7cda-de6e" type="rule"/>
+            <infoLink name="Lightning Reflexes" id="3756-578b-91c8-c746" hidden="false" targetId="efd4-dc31-6523-9c79" type="rule"/>
+            <infoLink name="Evasive" id="9473-c46f-20ba-5d23" hidden="false" targetId="b0f8-d197-536b-c8fc" type="rule"/>
+            <infoLink name="Prowess " id="bd43-4f9d-0e12-bfc3" hidden="false" targetId="75ef-327a-cd08-a248" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup name="Unique Effects" id="7433-6535-0428-5633" hidden="false">
+          <profiles>
+            <profile name="Unique Effects" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects" hidden="false" id="3539-4ab9-1672-4d4f">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">This model cannot be Targeted by Friendly Tengu models and cannot be Channelled to or Leeched from.
+
+
+When this model declares a Run Action it gains +1 Move until the end of the activation.
+This model does not suffer Melee penalties for having Run.
+
+
+While this model is on the Battlefield, Opponents cannot use effects on Profile Cards and Special Cards that allow additional scenario points to be scored.
+
+
+This model may be recruited into any Warband that has recruited Hiroto.
+This model may be recruited into Descension Themes as if it were a Faction model.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </infoGroup>
+        <infoGroup name="Melee Weapons" id="449d-97d9-ad55-dbe8" hidden="false">
+          <profiles>
+            <profile name="Katana" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon" hidden="false" id="cc72-e2e0-fa21-4b68">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+1</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e"/>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Critical Attack (1), Sidestep Defence (1)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+            <profile name="Claws" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon" hidden="false" id="cd55-a511-1523-a052">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+1</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Pierce (1), Bleed (1)</characteristic>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Combo Attack (1)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink name="Sidestep Defence " id="1163-0b4d-f962-154e" hidden="false" targetId="753c-6c3b-64d7-203c" type="rule"/>
+            <infoLink name="Combo Attack " id="c4ac-5a12-80bd-8e10" hidden="false" targetId="78ab-6a94-be24-8f74" type="rule"/>
+            <infoLink name="Bleed" id="efe9-eae2-92b6-b1df" hidden="false" targetId="ac4a-e540-4fe3-126a" type="rule"/>
+            <infoLink name="Pierce " id="393b-a2da-e88a-6894" hidden="false" targetId="39e4-14d7-5533-6e67" type="rule"/>
+            <infoLink name="Critical Attack" id="99cb-14f2-9cf0-bfce" hidden="false" targetId="7ec7-56ae-79e3-423e" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+      </infoGroups>
+      <categoryLinks>
+        <categoryLink name="Tengu" hidden="false" id="4e6f-3d40-2d97-1e39" targetId="6da4-f657-173c-c135" primary="false"/>
+        <categoryLink name="Unique" hidden="false" id="c6bb-56a7-c8c0-ab37" targetId="afd4-8041-e359-223c" primary="false"/>
+        <categoryLink name="Kakyu" hidden="false" id="20a1-0e2a-1c7c-0c17" targetId="3fcb-ecd1-632a-d26e" primary="false"/>
+        <categoryLink name="Bushi" hidden="false" id="6218-08b1-f06a-68a9" targetId="bd21-7464-7dc8-a907" primary="false"/>
+        <categoryLink targetId="9fba-f50b-c8f7-8396" id="58f1-9f83-c9b2-75fc" primary="true" name="Ronin Profile Cards"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink import="true" name="Enhancements" hidden="false" id="909d-dcc0-eeb9-4120" collective="false" targetId="f486-4498-03e3-c397" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="18"/>
       </costs>
     </selectionEntry>
   </sharedSelectionEntries>
