@@ -6078,6 +6078,118 @@ That model loses the Disguise Trait and any Disguise Markers and may not gain t
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="15"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="16e8-7413-3fe3-d606" name="Minori" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="60d5-9a39-f05d-dced" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3431-049f-a403-5b30" type="atLeast"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="decrement" field="a111-8656-5c05-7415" value="1">
+          <conditions>
+            <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="98a6-e76a-f99b-a1d3" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="803e-3830-379e-8d62" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="5975-ec72-9f15-72c7" name="Minori" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">2</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277"/>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">3</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">2</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">8</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">8 OOOOO OOO</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Medium 40mm</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="c3be-cb2e-abcf-1eb4" name="Ki Feats" hidden="false">
+          <infoLinks>
+            <infoLink id="3048-7f5e-2335-5651" name="Life Insurance" hidden="false" targetId="06dd-4b9f-96d7-5ff1" type="infoGroup"/>
+            <infoLink id="4ca1-f853-0f1f-9c81" name="Invest in Ammo!" hidden="false" targetId="846e-4bd5-a43d-1972" type="infoGroup"/>
+            <infoLink id="592b-65ba-4c99-6e7f" name="Compound Interest" hidden="false" targetId="30d6-2690-f836-4874" type="infoGroup"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="ec9e-13c4-0113-fa59" name="Melee Weapon" hidden="false">
+          <profiles>
+            <profile id="b117-9e4a-cd5f-8775" name="Pistol" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+2</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Pierce (2)</characteristic>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d"/>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="78c3-c426-75e3-b869" name="Pierce " hidden="false" targetId="39e4-14d7-5533-6e67" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="56af-4ad2-83e8-b190" name="Traits" hidden="false">
+          <profiles>
+            <profile id="72f8-f696-41d4-c34c" name="Minori" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Fear (4), Hatred [Kabuki, Shadow Master], Intimidate, Immune [Prone], Steadfast, Tough (1), Unstable</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="cc19-c3b1-3628-32df" name="Hatred" hidden="false" targetId="7e1f-e126-b487-828b" type="rule"/>
+            <infoLink id="b373-0339-bff0-d47a" name="Immune" hidden="false" targetId="ea08-b25e-0ea8-af73" type="rule"/>
+            <infoLink id="6bd0-7288-a04a-294b" name="Fear" hidden="false" targetId="3586-4583-7f10-1f31" type="rule"/>
+            <infoLink id="3863-457a-dd67-47e3" name="Unstable" hidden="false" targetId="24e3-1e7e-40b5-e16c" type="rule"/>
+            <infoLink id="c72e-bf8f-a84b-b151" name="Steadfast" hidden="false" targetId="95e7-3178-c29b-013c" type="rule"/>
+            <infoLink id="7d5e-75c7-3c7b-4bf3" name="Intimidate" hidden="false" targetId="f57d-b137-75c8-7329" type="rule"/>
+            <infoLink id="bf8d-90b2-3e65-6984" name="Tough" hidden="false" targetId="5613-a6cf-495a-229f" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="df5d-65b1-0c96-b253" name="Ranged Weapon" hidden="false">
+          <profiles>
+            <profile id="e2e9-7c4b-527b-6eb7" name="Carronade" hidden="false" typeId="7e20-258e-bf92-18f9" typeName="Ranged Weapon">
+              <characteristics>
+                <characteristic name="Ranged Weapon Strength" typeId="15aa-b6bd-6923-271f">+4</characteristic>
+                <characteristic name="Range Bands" typeId="be6a-50c6-d691-e2e9">6/12/18</characteristic>
+                <characteristic name="Traits" typeId="3410-4428-ef91-eb61">Pierce (2), Reload (2)</characteristic>
+                <characteristic name="Specials" typeId="cdaf-b6ac-89d4-39ef"/>
+                <characteristic name="Unique Effects" typeId="3bf8-6525-f003-4990">When this model makes a Ranged Attack with this weapon, if you choose the Slam Attack ability, this model loses Immune [Prone] until the End Phase and gains a Prone Marker.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="ff43-65e7-bb14-69f9" name="Reload" hidden="false" targetId="9736-df56-0b62-b1a8" type="rule"/>
+            <infoLink id="5866-7bfb-9951-8354" name="Pierce " hidden="false" targetId="39e4-14d7-5533-6e67" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+      </infoGroups>
+      <categoryLinks>
+        <categoryLink id="7972-bd19-7259-5c29" name="Faction: Silvermoon Trade Syndicate" hidden="false" targetId="875a-48b1-3c9f-0a14" primary="false"/>
+        <categoryLink id="10ec-7e49-fa9f-d52d" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
+        <categoryLink id="c583-6c8a-e338-e451" name="Faction Profile Cards" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
+        <categoryLink id="4ac5-d606-bd56-d003" name="Buto" hidden="false" targetId="48d9-12ca-aeef-7295" primary="false"/>
+        <categoryLink name="Blue Gulls" hidden="false" id="613f-eccc-eba8-51a2" targetId="e27c-95f1-5ad5-e53b" primary="false"/>
+        <categoryLink name="Saiko-Komon" hidden="false" id="5839-d89f-0351-55b7" targetId="e23d-b420-e943-1aec" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="78b8-5516-90fb-53ea" name="Enhancements" hidden="false" collective="false" import="true" targetId="37a1-1d53-ef45-026d" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="19"/>
+      </costs>
+    </selectionEntry>
   </selectionEntries>
   <entryLinks>
     <entryLink id="7ae5-b29d-c5eb-c5c7" name="Kappa" hidden="false" collective="false" import="true" targetId="34f2-cc79-8047-6138" type="selectionEntry">
@@ -6349,6 +6461,7 @@ That model loses the Disguise Trait and any Disguise Markers and may not gain t
         </modifier>
       </modifiers>
     </entryLink>
+    <entryLink import="true" name="Somabo" hidden="false" id="7b2a-e5ff-5370-d1ab" type="selectionEntry" targetId="77b7-4d40-c62b-0a4b"/>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="7dd1-2a29-81b8-8e4e" name="Okkete San" hidden="false" collective="false" import="true" type="model">

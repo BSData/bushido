@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="4213-717c-2228-e731" name="Temple of Ro-Kan" revision="53" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="19" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="4213-717c-2228-e731" name="Temple of Ro-Kan" revision="54" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="19" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <selectionEntries>
     <selectionEntry id="5048-3a52-5689-6d0b" name="Spiritual Harmony" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -7272,7 +7272,7 @@ You must choose the same turn and table edge to arrive for all of the Villager
                 <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+0</characteristic>
                 <characteristic name="Traits" typeId="39e3-f945-7956-ad4e"/>
                 <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Sidestep Defence (0), Throw Defence (1), Push Defence (0)</characteristic>
-                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"> </characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
               </characteristics>
             </profile>
             <profile id="ebc5-cc65-4cbf-5dff" name="Claws" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
@@ -7336,6 +7336,142 @@ When this model performs a Complex Ki Feat, it gains Virtue (6&quot;) for that A
       </entryLinks>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="11"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="e2b7-1d63-43c0-77fa" name="Kongu" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1a12-f47f-8f23-0777" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="33ea-e647-b8c5-2267" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="44e6-4155-6b9b-2521" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2af4-e298-ee7f-b85f" type="atLeast"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" field="3e7e-626d-6875-4e4d" value="0">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c81b-cb45-9579-b5dd" type="equalTo"/>
+                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="db22-747f-9e25-371a" type="greaterThan"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ffd8-72ee-dab5-a006" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3e7e-626d-6875-4e4d" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="f8e7-6ee8-1c7e-cd46" name="Kongu" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">2</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33">3</characteristic>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">5</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac">3</characteristic>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">2</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c">3</characteristic>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">8</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">8 OOOOO OOO</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Medium 40mm</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="609e-47c4-fdf2-50e6" name="Traits" hidden="false">
+          <profiles>
+            <profile id="3df7-b3b2-48ec-10a9" name="Kongu" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Command [Animal](3/6&quot;), Immovable, Indomitable (2), Leadership /6&quot;), Steadfast, Tough (1)</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="de78-2610-c6eb-13f4" name="Command" hidden="false" targetId="1b83-5421-f050-365a" type="rule"/>
+            <infoLink id="e9ca-7d7b-5c9a-a65e" name="Immovable" hidden="false" targetId="d34b-724f-6fc8-7420" type="rule"/>
+            <infoLink id="4420-7ee8-9a76-7233" name="Indomitable " hidden="false" targetId="3beb-6f28-e7c4-a236" type="rule"/>
+            <infoLink id="287a-ae51-dff7-00cb" name="Leadership" hidden="false" targetId="8ec4-bfdc-8c03-f631" type="rule"/>
+            <infoLink id="d582-50f0-dd04-a188" name="Steadfast" hidden="false" targetId="95e7-3178-c29b-013c" type="rule"/>
+            <infoLink id="9e3c-fcd8-9993-b41b" name="Tough" hidden="false" targetId="5613-a6cf-495a-229f" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="3354-b782-91f4-157d" name="Melee Weapon" hidden="false">
+          <profiles>
+            <profile id="aba3-45ab-36c6-34ad" name="Bujutsu" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+2</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Brutal (1)</characteristic>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Slam Attack (1), Throw Attack (0), Throw Defence (1)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="20be-bc73-0d95-2a53" name="Brutal" hidden="false" targetId="5d95-975e-a72c-25f3" type="rule"/>
+            <infoLink id="480b-13af-82fc-60bd" name="Slam Attack" hidden="false" targetId="5d05-b0ce-d7db-9def" type="rule"/>
+            <infoLink id="8929-373c-66e2-1214" name="Throw Attack" hidden="false" targetId="e4a9-1967-fb91-ce07" type="rule"/>
+            <infoLink id="ad5a-85ad-58a1-e28d" name="Throw Defence" hidden="false" targetId="81f2-67a9-c905-7a41" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="33d4-ef34-7d86-5d19" name="Ki Feats" hidden="false">
+          <infoLinks>
+            <infoLink id="2675-3096-3ac3-fcc1" name="Chest Thump" hidden="false" targetId="2a6d-0015-2284-2c5e" type="infoGroup"/>
+            <infoLink id="61c4-7860-49c1-7e80" name="Go Ape!" hidden="false" targetId="c823-445d-79be-9c7f" type="infoGroup"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="eb44-a5a3-9b1a-b330" name="Unique Effects" hidden="false">
+          <profiles>
+            <profile id="c232-783a-88a5-0be8" name="Virtue" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">When an Ape or Gorilla model spends a Virtue Token you may choose one of the following effects:
+- This model gains Endurance and Defensive until the End Phase.
+- This model gains Indomitable (100) until the End Phase.
+- This model may Heal one marked Wound Box.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Apes Together Strong" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects" hidden="false" id="cf61-9158-6b3f-5900">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">While this model is on the Battlefield, Friendly Gorilla models count as two models when working out Zone Control.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Wisdom of the Jungle" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects" hidden="false" id="02db-bb9c-6d48-a57a">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">During Deployment, gain 2 Virtue Tokens and place each on a Friendly Sohei model.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="d21c-6ccf-c14e-bad5" name="Defensive" hidden="false" targetId="c6e1-0904-b78f-7933" type="rule"/>
+            <infoLink id="b922-ede7-867f-7367" name="Endurance" hidden="false" targetId="7fdc-d150-9641-1235" type="rule"/>
+            <infoLink id="39c2-f4ef-8f94-f841" name="Heal" hidden="false" targetId="bd98-52d2-3a66-08e7" type="rule"/>
+            <infoLink id="b6a3-bd00-4f83-1802" name="Indomitable " hidden="false" targetId="3beb-6f28-e7c4-a236" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+      </infoGroups>
+      <categoryLinks>
+        <categoryLink id="8710-f9a8-084d-a3a2" name="Faction: Temple of Rokan" hidden="false" targetId="3186-3d3a-a105-887b" primary="false"/>
+        <categoryLink id="c3eb-af7f-4984-697f" name="Faction Profile Cards" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
+        <categoryLink id="3e46-945d-e584-eea5" name="Sohei" hidden="false" targetId="db22-747f-9e25-371a" primary="false"/>
+        <categoryLink id="9d71-2732-9d13-cd8f" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
+        <categoryLink id="b481-efa1-925a-a78b" name="Brutal" hidden="false" targetId="f62f-dd0b-4f06-06a6" primary="false"/>
+        <categoryLink name="Gorilla" hidden="false" id="f7a0-87d0-53bd-a5a9" targetId="797f-2aef-43cf-a4dc" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="eefa-96c5-3e0e-9654" name="Enhancements" hidden="false" collective="false" import="true" targetId="d716-36e8-af1d-0a1f" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="18"/>
       </costs>
     </selectionEntry>
   </selectionEntries>
@@ -7885,6 +8021,7 @@ When this model performs a Complex Ki Feat, it gains Virtue (6&quot;) for that A
         </modifier>
       </modifiers>
     </entryLink>
+    <entryLink import="true" name="Somabo" hidden="false" id="8560-6d62-c209-8a62" type="selectionEntry" targetId="77b7-4d40-c62b-0a4b"/>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="fdb3-04df-ec18-16cd" name="Fisherman" hidden="false" collective="false" import="true" type="model">
