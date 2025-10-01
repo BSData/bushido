@@ -4308,11 +4308,8 @@ If Phantom was not recruited into the Warband, remove this model from play and r
           </conditionGroups>
         </modifier>
       </modifiers>
-      <entryLinks>
-        <entryLink id="726f-6791-4034-b89b" name="Enhancements" hidden="false" collective="false" import="true" targetId="b18f-16ea-bed1-4709" type="selectionEntryGroup"/>
-      </entryLinks>
     </entryLink>
-    <entryLink id="945a-04e5-f976-96e9" name="Two Lone Swordsmen" hidden="false" collective="false" import="true" targetId="c5be-e9e5-ee8d-39de" type="selectionEntry">
+    <entryLink id="945a-04e5-f976-96e9" name="Two Lone Swordsmen" hidden="false" collective="false" import="true" targetId="29e4-7f5e-593d-2445" type="selectionEntry">
       <modifiers>
         <modifier type="set" field="hidden" value="false">
           <conditions>
@@ -4346,9 +4343,6 @@ If Phantom was not recruited into the Warband, remove this model from play and r
           </conditionGroups>
         </modifier>
       </modifiers>
-      <entryLinks>
-        <entryLink id="c5b3-58fd-f73d-6862" name="Enhancements" hidden="false" collective="false" import="true" targetId="b18f-16ea-bed1-4709" type="selectionEntryGroup"/>
-      </entryLinks>
     </entryLink>
     <entryLink id="42d9-e9d5-eea7-e29a" name="Kiyozumi Sadaka" hidden="true" collective="false" import="true" targetId="7728-72dd-3889-91b2" type="selectionEntry"/>
     <entryLink id="40f9-65bb-791b-b159" name="Ryokeen" hidden="true" collective="false" import="true" targetId="f97b-84fa-27d7-b73b" type="selectionEntry"/>
@@ -4363,9 +4357,6 @@ If Phantom was not recruited into the Warband, remove this model from play and r
           </conditions>
         </modifier>
       </modifiers>
-      <entryLinks>
-        <entryLink id="5029-a55f-a062-36c4" name="Enhancements" hidden="false" collective="false" import="true" targetId="b18f-16ea-bed1-4709" type="selectionEntryGroup"/>
-      </entryLinks>
     </entryLink>
     <entryLink id="307f-7265-dd92-3cd8" name="Kami of the Strong West Wind" hidden="true" collective="false" import="true" targetId="9404-f1fd-c785-168c" type="selectionEntry">
       <modifierGroups>
@@ -4499,189 +4490,6 @@ If Phantom was not recruited into the Warband, remove this model from play and r
       </modifiers>
     </entryLink>
   </entryLinks>
-  <sharedSelectionEntries>
-    <selectionEntry id="c5be-e9e5-ee8d-39de" name="Two Lone Swordsmen" hidden="false" collective="false" import="true" type="unit">
-      <modifiers>
-        <modifier type="set" field="hidden" value="false">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="f616-46d8-5907-fafd" type="atLeast"/>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="9402-edcc-93a2-aef1" type="atLeast"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-        <modifier type="set" field="hidden" value="true">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="b94d-f7cb-a84c-4077" type="equalTo"/>
-              </conditions>
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="477a-e693-0888-08f7" type="atLeast"/>
-                    <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="f616-46d8-5907-fafd" type="lessThan"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
-      <constraints>
-        <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="daab-39db-7276-a962" type="max"/>
-      </constraints>
-      <infoGroups>
-        <infoGroup id="d39c-05c4-415a-bc3b" name="Melee Weapon" hidden="false">
-          <profiles>
-            <profile id="6ae6-bfa9-d01b-e529" name="Katana" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
-              <characteristics>
-                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+1</characteristic>
-                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Pierce (1), Reach</characteristic>
-                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Counterstrike Defence (1), Sidestep Attack (0)</characteristic>
-                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
-              </characteristics>
-            </profile>
-          </profiles>
-          <infoLinks>
-            <infoLink id="4e6b-4f7e-3359-e539" name="Pierce " hidden="false" targetId="39e4-14d7-5533-6e67" type="rule"/>
-            <infoLink id="9721-a5ba-d15b-57f3" name="Reach" hidden="false" targetId="e28e-d5dd-a262-1101" type="rule"/>
-            <infoLink id="2e59-22e6-4122-fb8d" name="Counterstrike Defence " hidden="false" targetId="136e-4c77-dc59-4c6e" type="rule"/>
-            <infoLink id="c53a-b5db-0424-4875" name="Sidestep Attack " hidden="false" targetId="070d-a69d-0b46-27dc" type="rule"/>
-          </infoLinks>
-        </infoGroup>
-        <infoGroup id="7045-3654-8866-1917" name="Unique Effects" hidden="false">
-          <profiles>
-            <profile id="debe-7675-1e2b-597a" name="Linked" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
-              <characteristics>
-                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">If this model is Killed, instead put the model Elsewhere.
-In the Starting Phase, Deploy any Lone Swordsmen that are Elsewhere into play with no marked Wound boxes, in BtB with a Lone Swordsman model.
-If both Lone Swordsmen are Elsewhere at the same time, remove them from play.
-
-These models must always declare the same action unless one of them performs a Charge, Stand Up or Wait actions.
-
-When a Lone Swordsman model would generate Ki Tokens (or otherwise gain Ki Tokens) instead place those Ki Tokens on this card.
-Either Lone Swordsman model may spend Ki Tokens from this card to pay for Ki Feats, Boosts, or other effects.
-
-This model cannot have Enhancement cards attached.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <infoLinks>
-            <infoLink id="aef9-4933-1bee-d58a" name="Brotherhood" hidden="false" targetId="cf85-5dd9-be99-6042" type="profile"/>
-          </infoLinks>
-        </infoGroup>
-        <infoGroup id="1b57-5e66-24af-d7b4" name="Ki Feats" hidden="false">
-          <infoLinks>
-            <infoLink id="59d9-3d05-8465-e767" name="Practised Manoeuvres" hidden="false" targetId="9b3f-dcf3-388c-dc19" type="infoGroup"/>
-          </infoLinks>
-        </infoGroup>
-        <infoGroup id="a068-c9e3-7c6f-5307" name="Traits" hidden="false">
-          <profiles>
-            <profile id="0c30-fa44-8af5-7a65" name="Lone Swordsman" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
-              <characteristics>
-                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Armour (2), Co-ordinated Attack [Lone Swordsmen], Fearless, Group, Hatred [Tengu], Prowess [Melee](1)</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <infoLinks>
-            <infoLink id="4934-6f73-9c11-e902" name="Armour" hidden="false" targetId="8615-1c63-2242-5746" type="rule"/>
-            <infoLink id="0a6a-77ee-56db-118f" name="Co-ordinated Attack" hidden="false" targetId="2337-7bcc-c1f2-f2bd" type="rule"/>
-            <infoLink id="5108-1d65-8b28-f164" name="Group" hidden="false" targetId="4c02-03a1-ae7b-7821" type="rule"/>
-            <infoLink id="74f7-99ac-1b6a-8a9b" name="Hatred" hidden="false" targetId="7e1f-e126-b487-828b" type="rule"/>
-            <infoLink id="8720-7951-907e-30d6" name="Prowess " hidden="false" targetId="75ef-327a-cd08-a248" type="rule"/>
-            <infoLink id="52a4-5dc8-1031-3f49" name="Fearless" hidden="false" targetId="5d6f-1746-9080-aca5" type="rule"/>
-          </infoLinks>
-        </infoGroup>
-      </infoGroups>
-      <categoryLinks>
-        <categoryLink id="2a61-5490-726e-514f" name="Ronin Profile Cards" hidden="false" targetId="9fba-f50b-c8f7-8396" primary="true"/>
-        <categoryLink id="2e91-0180-312f-50d1" name="Samurai" hidden="false" targetId="e12a-f782-3281-7444" primary="false"/>
-        <categoryLink id="890b-e9a8-7462-22c6" name="Unknown" hidden="false" targetId="681b-423e-83dd-d9bd" primary="false"/>
-        <categoryLink id="a835-5758-514c-e0b0" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
-        <categoryLink id="0706-002d-ccc8-1216" name="Armour" hidden="false" targetId="f322-702a-ff62-b37e" primary="false"/>
-      </categoryLinks>
-      <selectionEntries>
-        <selectionEntry id="fdf3-8876-5d8b-5954" name="Lone Swordsman A" hidden="false" collective="false" import="true" type="model">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3b6e-8583-a707-5749" type="min"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4d47-df39-4ba2-f07e" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="6c77-a28a-e555-97af" name="Lone Swordsman A" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
-              <characteristics>
-                <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
-                <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
-                <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">3</characteristic>
-                <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33">3</characteristic>
-                <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
-                <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac">3</characteristic>
-                <characteristic name="Ki" typeId="3969-9568-a914-6854">1</characteristic>
-                <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c">3</characteristic>
-                <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">*</characteristic>
-                <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">5</characteristic>
-                <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <categoryLinks>
-            <categoryLink id="fd8f-068e-12ea-3c58" name="Ronin Profile Cards" hidden="false" targetId="9fba-f50b-c8f7-8396" primary="true"/>
-            <categoryLink id="cedb-b729-be73-1b67" name="Unknown" hidden="false" targetId="681b-423e-83dd-d9bd" primary="false"/>
-            <categoryLink id="8ce0-5eb1-3ade-0b8b" name="Samurai" hidden="false" targetId="e12a-f782-3281-7444" primary="false"/>
-            <categoryLink id="9460-ee23-03ac-4149" name="Armour" hidden="false" targetId="f322-702a-ff62-b37e" primary="false"/>
-            <categoryLink id="c08a-a55d-fe97-afeb" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
-          </categoryLinks>
-          <entryLinks>
-            <entryLink id="8e7e-9ee8-ed1a-4723" name="Enhancements" hidden="false" collective="false" import="true" targetId="b18f-16ea-bed1-4709" type="selectionEntryGroup"/>
-          </entryLinks>
-          <costs>
-            <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="0d24-34a3-c0fa-9270" name="Lone Swordsman B" hidden="false" collective="false" import="true" type="model">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="85fd-3b9c-be8d-9943" type="min"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e44e-88e0-9184-3697" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="e361-8531-69bb-f938" name="Lone Swordsman B" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
-              <characteristics>
-                <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
-                <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
-                <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">3</characteristic>
-                <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33">3</characteristic>
-                <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
-                <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac">3</characteristic>
-                <characteristic name="Ki" typeId="3969-9568-a914-6854">1</characteristic>
-                <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c">3</characteristic>
-                <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">*</characteristic>
-                <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">5</characteristic>
-                <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <categoryLinks>
-            <categoryLink id="787c-938d-cdec-ca68" name="Ronin Profile Cards" hidden="false" targetId="9fba-f50b-c8f7-8396" primary="true"/>
-            <categoryLink id="90a4-b40e-8e4c-c3a6" name="Unknown" hidden="false" targetId="681b-423e-83dd-d9bd" primary="false"/>
-            <categoryLink id="7181-9de8-810e-ffb9" name="Samurai" hidden="false" targetId="e12a-f782-3281-7444" primary="false"/>
-            <categoryLink id="630c-86bb-ca24-3062" name="Armour" hidden="false" targetId="f322-702a-ff62-b37e" primary="false"/>
-            <categoryLink id="fea1-23a2-fbc9-3263" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
-          </categoryLinks>
-          <entryLinks>
-            <entryLink id="ad66-1b1e-48cc-ce8f" name="Enhancements" hidden="false" collective="false" import="true" targetId="b18f-16ea-bed1-4709" type="selectionEntryGroup"/>
-          </entryLinks>
-          <costs>
-            <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
-      <costs>
-        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="25"/>
-      </costs>
-    </selectionEntry>
-  </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup id="b18f-16ea-bed1-4709" name="Enhancements" hidden="false" collective="false" import="true">
       <modifiers>

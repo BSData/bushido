@@ -5008,15 +5008,7 @@ This model can only be recruited into a Warband that contains all three Blood Br
         <categoryLink id="9410-2d32-6653-45c3" name="Armour" hidden="false" targetId="f322-702a-ff62-b37e" primary="false"/>
       </categoryLinks>
       <entryLinks>
-        <entryLink id="ba3a-0b1c-28e5-8a45" name="Enhancements" hidden="false" collective="false" import="true" targetId="f486-4498-03e3-c397" type="selectionEntryGroup">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="primary-catalogue" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b4d7-0e2a-728f-20cf" type="instanceOf"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </entryLink>
+        <entryLink id="ba3a-0b1c-28e5-8a45" name="Enhancements" hidden="false" collective="false" import="true" targetId="f486-4498-03e3-c397" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="18"/>
@@ -7734,15 +7726,7 @@ Requirement [Kiyozumi Kicho]</characteristic>
         <categoryLink id="e3d1-f059-306f-6543" name="Kiyozumi" hidden="false" targetId="4a1c-ccdf-9b9a-58a0" primary="false"/>
       </categoryLinks>
       <entryLinks>
-        <entryLink id="3dd1-6152-d04f-5fa8" name="Enhancements" hidden="false" collective="false" import="true" targetId="f486-4498-03e3-c397" type="selectionEntryGroup">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="primary-catalogue" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b4d7-0e2a-728f-20cf" type="instanceOf"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </entryLink>
+        <entryLink import="true" name="Enhancements" hidden="false" id="ee41-e4fd-b4d4-f01c" type="selectionEntryGroup" targetId="f486-4498-03e3-c397"/>
       </entryLinks>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="16"/>
@@ -9227,15 +9211,7 @@ This model cannot be Targeted by Call Lightning Ranged Attacks or by Attacks gen
         <categoryLink id="2bcb-d59d-1205-05a1" name="Ronin Profile Cards" hidden="false" targetId="9fba-f50b-c8f7-8396" primary="true"/>
       </categoryLinks>
       <entryLinks>
-        <entryLink id="50e7-6cca-fe63-7263" name="Enhancements" hidden="false" collective="false" import="true" targetId="f486-4498-03e3-c397" type="selectionEntryGroup">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="primary-catalogue" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b4d7-0e2a-728f-20cf" type="instanceOf"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </entryLink>
+        <entryLink import="true" name="Enhancements" hidden="false" id="f030-474e-64fc-858c" type="selectionEntryGroup" targetId="f486-4498-03e3-c397"/>
       </entryLinks>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="18"/>
@@ -10946,7 +10922,7 @@ This model may be recruited into Descension Themes as if it were a Faction mode
             <infoLink id="2455-df3f-b1f2-b077" name="Sidestep Attack " hidden="false" targetId="070d-a69d-0b46-27dc" type="rule"/>
           </infoLinks>
         </infoGroup>
-        <infoGroup id="a529-150b-eab5-a45e" name="Ranged Weapon" hidden="false">
+        <infoGroup id="a529-150b-eab5-a45e" name="Ranged Weapon" hidden="true">
           <profiles>
             <profile id="de62-2356-af4e-5180" name="Karapling" hidden="false" typeId="7e20-258e-bf92-18f9" typeName="Ranged Weapon">
               <characteristics>
@@ -10954,7 +10930,7 @@ This model may be recruited into Descension Themes as if it were a Faction mode
                 <characteristic name="Range Bands" typeId="be6a-50c6-d691-e2e9">-/10/-</characteristic>
                 <characteristic name="Traits" typeId="3410-4428-ef91-eb61">Lightweight</characteristic>
                 <characteristic name="Specials" typeId="cdaf-b6ac-89d4-39ef"/>
-                <characteristic name="Unique Effects" typeId="3bf8-6525-f003-4990">This model does not need LOS for its Karapling Ranged Attack and ignores Cover and Tiny modifiers, but can never Surprise an Enemy.
+                <characteristic name="Unique Effects" typeId="3bf8-6525-f003-4990">This model does not need LoS for its Karapling Ranged Attack and ignores Cover and Tiny modifiers, but can never Surprise an Enemy.
 This model can only make one Karapling Ranged Attack per turn.
 On a successful ranged attack instead of a Damage Roll, the Target gains a Bleed(1/2) Marker.</characteristic>
               </characteristics>
@@ -10963,6 +10939,13 @@ On a successful ranged attack instead of a Damage Roll, the Target gains a Blee
           <infoLinks>
             <infoLink id="4911-6c29-6524-98c7" name="Lightweight" hidden="false" targetId="c75c-7124-2b1f-a4d9" type="rule"/>
           </infoLinks>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="77de-5b5f-3a0c-3c74" childId="7e92-7008-54e0-3561" shared="true" includeChildSelections="true" includeChildForces="false"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </infoGroup>
         <infoGroup id="2f66-ba90-f7d5-a275" name="Unique Effects" hidden="false">
           <profiles>
@@ -10986,6 +10969,31 @@ This model may be recruited into the Guerilla Warfare Theme.</characteristic>
             <infoLink name="Sixth Sense" id="629d-8051-04b4-feef" hidden="false" targetId="ec49-3908-f1d1-8de2" type="rule"/>
           </infoLinks>
         </infoGroup>
+        <infoGroup id="c9af-00c1-bc13-7c15" name="Ranged Weapon" hidden="true">
+          <profiles>
+            <profile id="6209-60f9-51f8-a73b" name="Karapup" hidden="false" typeId="7e20-258e-bf92-18f9" typeName="Ranged Weapon">
+              <characteristics>
+                <characteristic name="Ranged Weapon Strength" typeId="15aa-b6bd-6923-271f">Special</characteristic>
+                <characteristic name="Range Bands" typeId="be6a-50c6-d691-e2e9">-/10/-</characteristic>
+                <characteristic name="Traits" typeId="3410-4428-ef91-eb61">Lightweight</characteristic>
+                <characteristic name="Specials" typeId="cdaf-b6ac-89d4-39ef"/>
+                <characteristic name="Unique Effects" typeId="3bf8-6525-f003-4990">This model does not need LoS for its Karapup Ranged Attack and ignores Cover and Tiny modifiers, but can never Surprise an Enemy.
+This model can only make one Karapling Ranged Attack per turn.
+On a successful ranged attack instead of a Damage Roll, the Target gains a Bleed(1/2) Marker.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="6e94-5f0e-087c-5c68" name="Lightweight" hidden="false" targetId="c75c-7124-2b1f-a4d9" type="rule"/>
+          </infoLinks>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="77de-5b5f-3a0c-3c74" childId="7e92-7008-54e0-3561" shared="true" includeChildSelections="true" includeChildForces="false"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </infoGroup>
       </infoGroups>
       <categoryLinks>
         <categoryLink id="c3c7-8d2e-15ca-5d56" name="Ninja" hidden="false" targetId="dc64-e668-4aac-8ec9" primary="false"/>
@@ -10996,19 +11004,18 @@ This model may be recruited into the Guerilla Warfare Theme.</characteristic>
         <categoryLink name="Loyal" hidden="false" id="db4a-8654-5bd9-27ae" targetId="f476-156e-8599-9253" primary="false"/>
       </categoryLinks>
       <entryLinks>
-        <entryLink id="77a5-6380-cacd-aa49" name="Enhancements" hidden="false" collective="false" import="true" targetId="f486-4498-03e3-c397" type="selectionEntryGroup">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="primary-catalogue" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b4d7-0e2a-728f-20cf" type="instanceOf"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </entryLink>
+        <entryLink id="77a5-6380-cacd-aa49" name="Enhancements" hidden="false" collective="false" import="true" targetId="f486-4498-03e3-c397" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="12"/>
       </costs>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Fanboys" hidden="false" id="7e92-7008-54e0-3561">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5d98-d310-f7f9-ff02" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntry>
+      </selectionEntries>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Karapan" hidden="false" id="a48a-75ca-aa62-c465" collective="false">
       <constraints>

@@ -6796,12 +6796,19 @@ This profile card begins the game with 5 Ki Tokens, instead of its Maximum Ki To
         <categoryLink id="b948-eb9b-23e7-472d" name="Armour" hidden="false" targetId="f322-702a-ff62-b37e" primary="false"/>
       </categoryLinks>
       <entryLinks>
-        <entryLink id="f2e6-3493-ee90-b9c3" name="Village Militia" hidden="false" collective="false" import="true" targetId="940d-4c21-5a3c-7750" type="selectionEntry">
+        <entryLink id="7998-e1f9-4849-2796" name="Village Militia" hidden="false" collective="false" import="true" targetId="940d-4c21-5a3c-7750" type="selectionEntry">
           <modifiers>
-            <modifier type="append" field="name" value="B"/>
+            <modifier type="append" field="name" value="A">
+              <conditions>
+                <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="940d-4c21-5a3c-7750" type="greaterThan"/>
+              </conditions>
+            </modifier>
           </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d96f-9213-4246-6e1a" type="min"/>
+          </constraints>
           <profiles>
-            <profile id="441e-f7de-de5a-1c31" name="Village Militia B" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+            <profile id="22cf-9cc3-b0ae-230e" name="Village Militia A" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
               <characteristics>
                 <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">2</characteristic>
                 <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
@@ -6818,19 +6825,12 @@ This profile card begins the game with 5 Ki Tokens, instead of its Maximum Ki To
             </profile>
           </profiles>
         </entryLink>
-        <entryLink id="7998-e1f9-4849-2796" name="Village Militia" hidden="false" collective="false" import="true" targetId="940d-4c21-5a3c-7750" type="selectionEntry">
+        <entryLink import="true" name="Village Militia" hidden="false" id="f2e6-3493-ee90-b9c3" collective="false" targetId="940d-4c21-5a3c-7750" type="selectionEntry">
           <modifiers>
-            <modifier type="append" field="name" value="A">
-              <conditions>
-                <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="940d-4c21-5a3c-7750" type="greaterThan"/>
-              </conditions>
-            </modifier>
+            <modifier type="append" value="B" field="name"/>
           </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d96f-9213-4246-6e1a" type="min"/>
-          </constraints>
           <profiles>
-            <profile id="22cf-9cc3-b0ae-230e" name="Village Militia A" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+            <profile name="Village Militia B" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile" hidden="false" id="441e-f7de-de5a-1c31">
               <characteristics>
                 <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">2</characteristic>
                 <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
@@ -7472,6 +7472,465 @@ When this model performs a Complex Ki Feat, it gains Virtue (6&quot;) for that A
       </entryLinks>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="18"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="dfc0-7831-e5df-0dfc" name="Masaru" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="append" field="name" value="- Human Form"/>
+        <modifier type="set" field="7e63-0028-0e86-dfb6" value="0">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="2af4-e298-ee7f-b85f" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="44e6-4155-6b9b-2521" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="477a-e693-0888-08f7" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="2af4-e298-ee7f-b85f" shared="true" includeChildSelections="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="44e6-4155-6b9b-2521" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7e63-0028-0e86-dfb6" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="72ba-36cf-ee85-f078" name="Masaru - Human Form" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">3</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33">3</characteristic>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">3</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c">2</characteristic>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">9</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">6 OOOOO O</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="d108-62eb-98d1-bf3c" name="Traits" hidden="false">
+          <profiles>
+            <profile id="6ec2-e492-92c9-3ff0" name="Masaru - Human Form" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Armour (1), Bravery, Dodge (1), Feint (1), Sixth Sense</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="047b-39e0-589c-07d3" name="Bravery" hidden="false" targetId="f9b2-38d2-7cda-de6e" type="rule"/>
+            <infoLink id="3b74-75d3-95f9-4c0b" name="Dodge " hidden="false" targetId="14d5-d459-5d8a-c73e" type="rule"/>
+            <infoLink id="f903-9e03-d164-c91f" name="Feint" hidden="false" targetId="38b0-4d97-3c4c-8d96" type="rule"/>
+            <infoLink id="7c10-6630-a594-429f" name="Armour" hidden="false" targetId="8615-1c63-2242-5746" type="rule"/>
+            <infoLink id="f135-b0e8-aef0-1a13" name="Sixth Sense" hidden="false" targetId="ec49-3908-f1d1-8de2" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="9ac5-585e-fe2c-4753" name="Melee Weapon" hidden="false">
+          <profiles>
+            <profile id="b23b-42ae-2e3e-9261" name="Shoku" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+1</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e"/>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Combo Attack (0), Grapple Defence (1)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="d94a-cc42-017e-8292" name="Combo Attack " hidden="false" targetId="78ab-6a94-be24-8f74" type="rule"/>
+            <infoLink id="5a91-133c-fbc1-d0a9" name="Grapple Defence" hidden="false" targetId="6e8d-d1c4-dc69-6558" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="2758-39d2-a1cf-37d6" name="Ki Feats" hidden="false">
+          <infoLinks>
+            <infoLink id="139a-ebd4-e9d1-fdb4" name="Outfox" hidden="false" targetId="d7f3-1d07-5381-d9a4" type="infoGroup"/>
+            <infoLink id="134b-faf7-b072-f934" name="Shapeshift" hidden="false" targetId="73c5-ecd1-71fa-13ec" type="infoGroup"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="7138-4bba-335d-f1a2" name="Unique Effects" hidden="false">
+          <profiles>
+            <profile name="Unique Effects" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects" hidden="false" id="f2e4-0204-d216-5b5f">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">When this model suffers damage, instead, a Friendly Torikka and/or Atsukau may take all of that Damage, with any excess Damage then taken by Masaru.
+You cannot assign more Damage than that Torikka or Atsukau have Ki Tokens remaining.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </infoGroup>
+        <infoGroup id="dad8-388a-d2ee-db3f" name="Ranged Weapon" hidden="false">
+          <profiles>
+            <profile id="b1a2-5355-dcf2-26a3" name="Fox Fire" hidden="false" typeId="7e20-258e-bf92-18f9" typeName="Ranged Weapon">
+              <characteristics>
+                <characteristic name="Ranged Weapon Strength" typeId="15aa-b6bd-6923-271f">Special</characteristic>
+                <characteristic name="Range Bands" typeId="be6a-50c6-d691-e2e9">3/6/9</characteristic>
+                <characteristic name="Traits" typeId="3410-4428-ef91-eb61"/>
+                <characteristic name="Specials" typeId="cdaf-b6ac-89d4-39ef"/>
+                <characteristic name="Unique Effects" typeId="3bf8-6525-f003-4990">On a successful Ranged Attack with this weapon, the Target loses Cloudwalk, Lightfooted and Intangible.
+The Target gains a Reload Marker and its Ranged Weapons have Reload (0) while the model has a Reload Marker.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink name="Reload" id="0664-5e89-f80c-e1fa" hidden="false" targetId="9736-df56-0b62-b1a8" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+      </infoGroups>
+      <categoryLinks>
+        <categoryLink id="ac3a-0566-e7ca-faa2" name="Faction: Temple of Rokan" hidden="false" targetId="3186-3d3a-a105-887b" primary="false"/>
+        <categoryLink id="8d04-d4db-99c5-892c" name="Kitsune" hidden="false" targetId="8d84-d45d-1b30-d696" primary="false"/>
+        <categoryLink id="05d7-8805-3f42-3ce0" name="Faction Profile Cards" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
+        <categoryLink id="eb54-b18d-03ff-e70f" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
+        <categoryLink id="1687-20d2-27fc-83e0" name="Yokai" hidden="false" targetId="8a19-8c2b-46a8-4086" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="9931-7acb-3510-29c8" name="Enhancements" hidden="false" collective="false" import="true" targetId="d716-36e8-af1d-0a1f" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="18"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="52c2-2689-f064-f3be" name="Masaru - Fox Form" hidden="true" collective="false" import="true" type="upgrade">
+      <modifierGroups>
+        <modifierGroup>
+          <conditions>
+            <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="dfc0-7831-e5df-0dfc" type="atLeast"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" field="hidden" value="false"/>
+            <modifier type="set" value="1" field="67ea-6932-634f-2b49"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fa94-73f5-f758-13fd" type="max"/>
+        <constraint type="min" value="0" field="selections" scope="roster" shared="true" id="67ea-6932-634f-2b49" includeChildSelections="true" includeChildForces="true"/>
+      </constraints>
+      <profiles>
+        <profile id="f8de-aa05-9b1c-49bb" name="Masaru - Fox Form" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">1</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">1</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33">3</characteristic>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">7</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac">2</characteristic>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">3</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c">2</characteristic>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">9</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">6 OOOOO O</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Tiny 30mm</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="f55f-1011-cca1-d72f" name="Melee Weapon" hidden="false">
+          <profiles>
+            <profile id="611e-f846-a5e2-8917" name="Bite" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">-2</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e"/>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Sidestep Defence (0)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="3f0a-7bec-9fbe-b212" name="Sidestep Defence " hidden="false" targetId="753c-6c3b-64d7-203c" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="5414-aa9f-9e39-43e7" name="Ki Feats" hidden="false">
+          <infoLinks>
+            <infoLink id="cdca-4fd9-ea9b-5df6" name="Shapeshift" hidden="false" targetId="73c5-ecd1-71fa-13ec" type="infoGroup"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="3b18-5853-3628-869b" name="Traits" hidden="false">
+          <profiles>
+            <profile id="ef3b-cc0e-7034-8e76" name="Masaru - Fox Form" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Aloof, Bravery, Dodge (3), Lightfooted, Ranged Defence (2), Sixth Sense, Tiny, Weak</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="8b90-52f4-d58d-3f57" name="Bravery" hidden="false" targetId="f9b2-38d2-7cda-de6e" type="rule"/>
+            <infoLink id="f1c1-d3e2-185c-de63" name="Dodge " hidden="false" targetId="14d5-d459-5d8a-c73e" type="rule"/>
+            <infoLink id="997d-6705-889c-b176" name="Sixth Sense" hidden="false" targetId="ec49-3908-f1d1-8de2" type="rule"/>
+            <infoLink id="1e95-e908-8aa4-23f6" name="Aloof" hidden="false" targetId="5101-70fc-eca4-d99b" type="rule"/>
+            <infoLink id="ccdb-80ff-7902-721d" name="Lightfooted" hidden="false" targetId="57d2-cd57-07f9-addf" type="rule"/>
+            <infoLink id="4a4e-ffee-219c-2755" name="Ranged Defence " hidden="false" targetId="9b8d-9ca9-e25d-3988" type="rule"/>
+            <infoLink id="9852-d4e7-c84e-f22b" name="Tiny" hidden="false" targetId="335c-7f6f-9ca0-cb93" type="rule"/>
+            <infoLink id="556f-a9a5-5d2e-0add" name="Weak" hidden="false" targetId="6a0c-59fb-ff0e-aced" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup name="Unique Effects" id="0b3b-64b8-6303-b6a4" hidden="false">
+          <profiles>
+            <profile name="Unique Effects" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects" hidden="false" id="9567-ccb7-ea1b-52b4">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">When this model suffers damage, instead, a Friendly Torikka and/or Atsukau may take all of that Damage with any excess Damage then taken by Masaru.
+You cannot assign more Damage than that Torikka or Atsukau have Ki Tokens remaining.
+
+
+Masaru&apos;s Fox Form and Human Form profiles are considered the same model when creating a Warband.
+
+
+This model may only be recruited into the Minkan Denshö or Followers of Inari Themes.
+
+
+During Deployment you must Recruit and Deploy Torikka and Atsukau within 2&quot; of this model.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </infoGroup>
+      </infoGroups>
+      <categoryLinks>
+        <categoryLink id="9f51-eeff-b483-697c" name="Faction Profile Cards" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="false"/>
+        <categoryLink id="618a-a14d-45ae-dcca" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
+        <categoryLink id="f887-c4db-10e1-5180" name="Yokai" hidden="false" targetId="8a19-8c2b-46a8-4086" primary="false"/>
+        <categoryLink id="5ce9-0282-95f7-fcdc" name="Kitsune" hidden="false" targetId="8d84-d45d-1b30-d696" primary="false"/>
+        <categoryLink id="8be3-da71-3206-6889" name="Faction: Temple of Rokan" hidden="false" targetId="3186-3d3a-a105-887b" primary="false"/>
+        <categoryLink id="6eef-e748-bebc-c58d" name="Reference Cards" hidden="false" targetId="5073-f00b-a8f6-5e3b" primary="true"/>
+      </categoryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="4725-1970-7809-1a28" name="Atsukau" hidden="true" collective="false" import="true" type="upgrade">
+      <modifierGroups>
+        <modifierGroup>
+          <conditions>
+            <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="dfc0-7831-e5df-0dfc" type="atLeast"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" field="hidden" value="false"/>
+            <modifier type="set" value="1" field="614b-35f8-0dc9-b1a8"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8fb9-eb8c-e045-7350" type="max"/>
+        <constraint type="min" value="0" field="selections" scope="roster" shared="true" id="614b-35f8-0dc9-b1a8" includeChildSelections="true" includeChildForces="true"/>
+      </constraints>
+      <profiles>
+        <profile name="Atsukau" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile" hidden="false" id="2a86-40ed-3c0a-e90b">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">2</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277"/>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">2</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">7</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac">1</characteristic>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">0</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">3</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">Kami</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Tiny 30mm</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="735d-b15e-e4fd-19e1" name="Melee Weapon" hidden="false">
+          <profiles>
+            <profile id="c908-42d5-4dbf-f1bd" name="Bite" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">-1</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e"/>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Grapple Attack (1), Sidestep Defence (0)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="06d1-f73f-cca4-8917" name="Grapple Attack" hidden="false" targetId="1b9a-c71d-0a30-8d0d" type="rule"/>
+            <infoLink id="c6e8-6666-888a-bf22" name="Sidestep Defence " hidden="false" targetId="753c-6c3b-64d7-203c" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="9c5e-6597-312a-eb4b" name="Ki Feats" hidden="false">
+          <infoLinks>
+            <infoLink id="aad9-9ba7-4185-5758" name="Fox&apos;s Cunning" hidden="false" targetId="f0bf-6a0f-2b51-afbe" type="infoGroup"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="2747-f617-6df2-7121" name="Traits" hidden="false">
+          <profiles>
+            <profile id="539c-84d2-46f0-2286" name="Atsukau" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Bravery, Dodge (2), Feint (1), Insignificant, Kami, Sixth Sense, Spirit (2), Tiny</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="090a-5ea9-c9b8-bca1" name="Bravery" hidden="false" targetId="f9b2-38d2-7cda-de6e" type="rule"/>
+            <infoLink id="2cdd-ada3-08d3-00ae" name="Dodge " hidden="false" targetId="14d5-d459-5d8a-c73e" type="rule"/>
+            <infoLink id="68c6-dc8a-4367-07fd" name="Sixth Sense" hidden="false" targetId="ec49-3908-f1d1-8de2" type="rule"/>
+            <infoLink id="39df-cb4a-6a15-2c07" name="Feint" hidden="false" targetId="38b0-4d97-3c4c-8d96" type="rule"/>
+            <infoLink id="b84c-d98f-3020-6986" name="Insignificant" hidden="false" targetId="1614-d86c-ef8a-c095" type="rule"/>
+            <infoLink id="816c-6b8f-2b28-b257" name="Kami" hidden="false" targetId="50d4-ec7a-9763-1b4d" type="rule"/>
+            <infoLink id="e521-7c74-f9c5-a618" name="Tiny" hidden="false" targetId="335c-7f6f-9ca0-cb93" type="rule"/>
+            <infoLink id="9b2a-7592-5fb0-7d27" name="Spirit" hidden="false" targetId="a9ba-9904-7d29-7bcb" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup name="Unique Effects" id="1ac2-e826-557e-49f8" hidden="false">
+          <profiles>
+            <profile name="Unique Effects" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects" hidden="false" id="8b52-9234-9a36-544f">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">While this model has more Ki Tokens than Friendly, Torikku model that is in play, Friendly Masaru models gain Parry (1).
+
+
+Friendly Masaru - Fox Form models gain +X to Move Statistic X is equal to the remaining Ki Tokens on this model.
+
+
+The first time each turn an Enemy model moves into BtB with this model, place this model within 2&quot; of its current location but not into an Enemy model&apos;s ZOC.
+The Enemy model&apos;s Activation, if any, ends and it loses one Activation Counter, regardless of the Action performed, if any.
+
+
+This model cannot be Chosen to Activate unless Friendly Masaru has no Activation Counters. When a Friendly Masaru Activates, you must also activate this model. Each model resolves any movement before any Melee Exchanges are resolved.
+
+
+If Masaru model that you own is Killed or Removed from Play, Remove this model from Play.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink name="Parry" id="280c-e7ed-806d-3614" hidden="false" targetId="c7c2-b36e-7952-c79b" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+      </infoGroups>
+      <categoryLinks>
+        <categoryLink id="6e6b-2f43-282c-c58a" name="Faction Profile Cards" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="false"/>
+        <categoryLink id="6234-c98e-41ad-be99" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
+        <categoryLink id="9c85-8b8f-d136-b6b5" name="Kitsune" hidden="false" targetId="8d84-d45d-1b30-d696" primary="false"/>
+        <categoryLink id="f5b8-35dc-c920-ac32" name="Faction: Temple of Rokan" hidden="false" targetId="3186-3d3a-a105-887b" primary="false"/>
+        <categoryLink id="291b-d7a9-26c5-f90e" name="Reference Cards" hidden="false" targetId="5073-f00b-a8f6-5e3b" primary="true"/>
+        <categoryLink name="Kami" hidden="false" id="397c-d946-d769-d91e" targetId="6639-615e-f1ab-bc64" primary="false"/>
+      </categoryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="f21d-ef1d-823f-fd2b" name="Torikka" hidden="true" collective="false" import="true" type="upgrade">
+      <modifierGroups>
+        <modifierGroup>
+          <conditions>
+            <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="dfc0-7831-e5df-0dfc" type="atLeast"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" field="hidden" value="false"/>
+            <modifier type="set" value="1" field="130d-76de-7adc-8620"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="773c-231e-0334-9d54" type="max"/>
+        <constraint type="min" value="0" field="selections" scope="roster" shared="true" id="130d-76de-7adc-8620" includeChildSelections="true" includeChildForces="true"/>
+      </constraints>
+      <profiles>
+        <profile id="805f-3daa-221d-4d85" name="Torikka" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">2</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277"/>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">2</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">7</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac">1</characteristic>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">0</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">3</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">Kami</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Tiny 30mm</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="c9af-557c-4531-9064" name="Melee Weapon" hidden="false">
+          <profiles>
+            <profile id="bff1-cab1-7856-4848" name="Bite" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">-1</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e"/>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Stun Attack (1), Sidestep Defence (0)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="1ead-3d8d-411c-b4ba" name="Stun Attack" hidden="false" targetId="ae27-975e-6c4b-d84e" type="rule"/>
+            <infoLink id="5c3a-b26f-3f39-0b72" name="Sidestep Defence " hidden="false" targetId="753c-6c3b-64d7-203c" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="c65b-b793-64e5-2e01" name="Ki Feats" hidden="false">
+          <infoLinks>
+            <infoLink id="4943-fe19-d1af-14e8" name="Hunting Fox" hidden="false" targetId="d25e-b335-4045-bef5" type="infoGroup"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="4933-6918-149f-e3a5" name="Traits" hidden="false">
+          <profiles>
+            <profile id="21c7-768b-796f-b12d" name="Torikka" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Bravery, Dodge (2), Feint (1), Insignificant, Kami, Sixth Sense, Spirit (2), Tiny</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="3d55-5be3-51d8-867c" name="Bravery" hidden="false" targetId="f9b2-38d2-7cda-de6e" type="rule"/>
+            <infoLink id="e2b1-40bd-317d-bc08" name="Dodge " hidden="false" targetId="14d5-d459-5d8a-c73e" type="rule"/>
+            <infoLink id="eeae-8da8-1646-dd48" name="Sixth Sense" hidden="false" targetId="ec49-3908-f1d1-8de2" type="rule"/>
+            <infoLink id="f2b8-a841-6ad6-7ece" name="Feint" hidden="false" targetId="38b0-4d97-3c4c-8d96" type="rule"/>
+            <infoLink id="89c5-d36c-807a-eb5b" name="Insignificant" hidden="false" targetId="1614-d86c-ef8a-c095" type="rule"/>
+            <infoLink id="4e95-e03d-34b5-f51e" name="Kami" hidden="false" targetId="50d4-ec7a-9763-1b4d" type="rule"/>
+            <infoLink id="1916-1b3d-b968-187c" name="Tiny" hidden="false" targetId="335c-7f6f-9ca0-cb93" type="rule"/>
+            <infoLink id="8007-eee8-77e6-9138" name="Spirit" hidden="false" targetId="a9ba-9904-7d29-7bcb" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup name="Unique Effects" id="0298-52f7-275c-52de" hidden="false">
+          <profiles>
+            <profile name="Unique Effects" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects" hidden="false" id="16a1-b116-e07c-58ad">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">While this model has more Ki Tokens than Friendly, Torikku model that is in play, Friendly Masaru models gain Ranged Defence (2).
+
+Friendly Masaru models gain Fear (6) and Dread (X). X is equal to the remaining Ki Tokens on this model.
+
+The first time each turn an Enemy model moves into BtB with this model, place this model within 2&quot; of its current location but not into an Enemy model&apos;s ZOC.
+The Enemy model&apos;s Activation, if any, ends and it loses one Activation Counter, regardless of the Action performed, if any.
+
+This model cannot be Chosen to Activate unless Friendly Masaru has no Activation Counters. When a Friendly Masaru Activates, you must also activate this model. Each model resolves any movement before any Melee Exchanges are resolved.
+
+If Masaru model that you own is Killed or Removed from Play, Remove this model from Play.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink name="Fear" id="7142-0d13-d63d-01f7" hidden="false" targetId="3586-4583-7f10-1f31" type="rule"/>
+            <infoLink name="Dread" id="620a-cf62-7879-a484" hidden="false" targetId="53bf-4091-3aec-d5ec" type="rule"/>
+            <infoLink name="Ranged Defence " id="0dc0-1c7a-9bbf-3293" hidden="false" targetId="9b8d-9ca9-e25d-3988" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+      </infoGroups>
+      <categoryLinks>
+        <categoryLink id="9d5f-b817-1856-9e96" name="Faction Profile Cards" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="false"/>
+        <categoryLink id="ff92-be8b-92eb-43b5" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
+        <categoryLink id="a4c9-1197-63aa-8147" name="Kitsune" hidden="false" targetId="8d84-d45d-1b30-d696" primary="false"/>
+        <categoryLink id="616b-7251-f672-bfc0" name="Faction: Temple of Rokan" hidden="false" targetId="3186-3d3a-a105-887b" primary="false"/>
+        <categoryLink id="afa8-122d-ed9e-c5c3" name="Reference Cards" hidden="false" targetId="5073-f00b-a8f6-5e3b" primary="true"/>
+        <categoryLink name="Kami" hidden="false" id="8ff6-5510-41c3-b42d" targetId="6639-615e-f1ab-bc64" primary="false"/>
+      </categoryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0"/>
       </costs>
     </selectionEntry>
   </selectionEntries>
@@ -9105,6 +9564,68 @@ Restriction [Master Ekusa]</characteristic>
           <costs>
             <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2"/>
           </costs>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Loss of Atsukau" hidden="false" id="436e-852b-724a-2bce">
+          <categoryLinks>
+            <categoryLink name="Faction Enhancement Cards" hidden="false" id="e8b1-7b15-4507-4372" targetId="17cf-d9a9-c7c1-bcb6" primary="false"/>
+          </categoryLinks>
+          <profiles>
+            <profile name="Loss of Atsukau" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card" hidden="false" id="09fe-9895-bd12-89fd">
+              <characteristics>
+                <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">When Friendly Atsukau model is removed from play, a Friendly Masaru model gains this Enhancement:
+Attached model gains Vengeance [Enemy]</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink name="Vengeance" id="4efc-1701-4c6a-346e" hidden="false" type="rule" targetId="6779-0aac-2f51-f67e"/>
+          </infoLinks>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="c735-9dfe-d462-326b" includeChildSelections="true"/>
+            <constraint type="min" value="0" field="selections" scope="roster" shared="true" id="08b2-c273-3d8c-3060" includeChildSelections="true"/>
+          </constraints>
+          <modifierGroups>
+            <modifierGroup type="and">
+              <conditions>
+                <condition type="notInstanceOf" value="1" field="selections" scope="parent" childId="dfc0-7831-e5df-0dfc" shared="true" includeChildSelections="false"/>
+              </conditions>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden"/>
+                <modifier type="set" value="1" field="08b2-c273-3d8c-3060"/>
+              </modifiers>
+            </modifierGroup>
+          </modifierGroups>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Loss of Torikka" hidden="false" id="aabb-dd5c-f1a4-8060">
+          <categoryLinks>
+            <categoryLink name="Faction Enhancement Cards" hidden="false" id="d398-2399-5956-a7eb" targetId="17cf-d9a9-c7c1-bcb6" primary="false"/>
+          </categoryLinks>
+          <profiles>
+            <profile name="Loss of Torikka" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card" hidden="false" id="99f4-361d-5aa3-cae9">
+              <characteristics>
+                <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">When Friendly Torikka model is removed from play, a Friendly Masaru model gains this Enhancement:
+Attached model gains Fearless.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink name="Fearless" id="dde1-742f-a56c-1907" hidden="false" type="rule" targetId="5d6f-1746-9080-aca5"/>
+          </infoLinks>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="84a0-bacc-a23f-f6e8" includeChildSelections="true"/>
+            <constraint type="min" value="0" field="selections" scope="roster" shared="true" id="7567-c758-42f2-bc7a" includeChildSelections="true"/>
+          </constraints>
+          <modifierGroups>
+            <modifierGroup type="and">
+              <conditions>
+                <condition type="notInstanceOf" value="1" field="selections" scope="parent" childId="dfc0-7831-e5df-0dfc" shared="true" includeChildSelections="false"/>
+              </conditions>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden"/>
+                <modifier type="set" value="1" field="7567-c758-42f2-bc7a"/>
+              </modifiers>
+            </modifierGroup>
+          </modifierGroups>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>

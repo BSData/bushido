@@ -6191,6 +6191,41 @@ That model loses the Disguise Trait and any Disguise Markers and may not gain t
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="19"/>
       </costs>
     </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Investment Card" hidden="true" id="9717-0b79-d00e-8854">
+      <profiles>
+        <profile name="Investment Card" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card" hidden="false" id="6e39-af48-995f-9b17">
+          <characteristics>
+            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">This card is recruited into any Warband with Minori.
+When a Friendly model successfully Flips when using the Fortune Trait, instead of gaining double Ki Tokens, you may add an Investment Counter to this card and that model generates Ki Tokens up to its Ki Statistic as usual.
+While the number of Investment Counters shown below is reached, Friendly Shatei gain the following:
+1-3 Ranged Defence (+1)
+4-6 Steadfast
+7-9 Stun Attack (0)
+10+ An additional Ki Token in the Starting Phase.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="d0c4-71db-ba56-39c0" includeChildSelections="true"/>
+        <constraint type="min" value="0" field="selections" scope="roster" shared="true" id="3b25-83fd-3ecc-59c8" includeChildSelections="true"/>
+      </constraints>
+      <infoLinks>
+        <infoLink name="Stun Attack" id="37fe-caf3-fb0b-d3e3" hidden="false" type="rule" targetId="ae27-975e-6c4b-d84e"/>
+        <infoLink name="Ranged Defence " id="5821-95de-1d54-a401" hidden="false" type="rule" targetId="9b8d-9ca9-e25d-3988"/>
+        <infoLink name="Steadfast" id="5b64-c280-d830-c6aa" hidden="false" type="rule" targetId="95e7-3178-c29b-013c"/>
+      </infoLinks>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="16e8-7413-3fe3-d606" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="1" field="3b25-83fd-3ecc-59c8"/>
+            <modifier type="set" value="false" field="hidden"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
+    </selectionEntry>
   </selectionEntries>
   <entryLinks>
     <entryLink id="7ae5-b29d-c5eb-c5c7" name="Kappa" hidden="false" collective="false" import="true" targetId="34f2-cc79-8047-6138" type="selectionEntry">
