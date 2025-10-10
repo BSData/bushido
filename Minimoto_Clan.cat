@@ -253,6 +253,11 @@ Permitted [Samurai, Blacksmiths]</characteristic>
             <infoLink id="5e14-a130-9e42-fcc8" name="Fire" hidden="false" targetId="2422-40b7-254f-f6f1" type="rule"/>
           </infoLinks>
         </infoGroup>
+        <infoGroup name="Unique Effects" id="a8a8-ce2d-b813-8ae6" hidden="false">
+          <infoLinks>
+            <infoLink name="Blacksmith" id="97ea-9f1c-acaa-dedf" hidden="false" type="profile" targetId="9419-5093-f786-efe0"/>
+          </infoLinks>
+        </infoGroup>
       </infoGroups>
       <categoryLinks>
         <categoryLink id="f78f-498c-289f-c22e" name="Faction: Minimoto Clan" hidden="false" targetId="7ad5-75e1-6134-ca44" primary="false"/>
@@ -326,12 +331,15 @@ Permitted [Samurai, Blacksmiths]</characteristic>
         <categoryLink id="670f-00c7-129d-7bc9" name="Armour" hidden="false" targetId="f322-702a-ff62-b37e" primary="false"/>
       </categoryLinks>
       <entryLinks>
-        <entryLink id="4727-f2e6-88a4-8f79" name="Jyoto Ashigaru" hidden="false" collective="false" import="true" targetId="a382-7e2d-9df9-d700" type="selectionEntry">
+        <entryLink id="ff04-4e28-22b6-e257" name="Jyoto Ashigaru" hidden="false" collective="false" import="true" targetId="a382-7e2d-9df9-d700" type="selectionEntry">
           <modifiers>
-            <modifier type="append" field="name" value="B"/>
+            <modifier type="append" field="name" value="A"/>
           </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="230d-c18c-4cc5-234f" type="min"/>
+          </constraints>
           <profiles>
-            <profile id="8d14-c492-86fd-b733" name="Jyoto Ashigaru B" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+            <profile id="42e5-f36f-c5a0-0cc3" name="Jyoto Ashigaru A" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
               <characteristics>
                 <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
                 <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
@@ -348,15 +356,12 @@ Permitted [Samurai, Blacksmiths]</characteristic>
             </profile>
           </profiles>
         </entryLink>
-        <entryLink id="ff04-4e28-22b6-e257" name="Jyoto Ashigaru" hidden="false" collective="false" import="true" targetId="a382-7e2d-9df9-d700" type="selectionEntry">
+        <entryLink import="true" name="Jyoto Ashigaru" hidden="false" id="4727-f2e6-88a4-8f79" collective="false" targetId="a382-7e2d-9df9-d700" type="selectionEntry">
           <modifiers>
-            <modifier type="append" field="name" value="A"/>
+            <modifier type="append" value="B" field="name"/>
           </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="230d-c18c-4cc5-234f" type="min"/>
-          </constraints>
           <profiles>
-            <profile id="42e5-f36f-c5a0-0cc3" name="Jyoto Ashigaru A" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+            <profile name="Jyoto Ashigaru B" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile" hidden="false" id="8d14-c492-86fd-b733">
               <characteristics>
                 <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
                 <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
@@ -920,6 +925,11 @@ The Ice Patch is considered [Difficult, Clear, Zero] for Enemy models.</characte
             <infoLink id="b839-3406-6dae-4c1d" name="Fire" hidden="false" targetId="2422-40b7-254f-f6f1" type="rule"/>
           </infoLinks>
         </infoGroup>
+        <infoGroup name="Unique Effects" id="5524-4de6-c606-a085" hidden="false">
+          <infoLinks>
+            <infoLink name="Blacksmith" id="b38e-3a13-acd2-a4e1" hidden="false" type="profile" targetId="9419-5093-f786-efe0"/>
+          </infoLinks>
+        </infoGroup>
       </infoGroups>
       <categoryLinks>
         <categoryLink id="37e8-54db-4974-6645" name="Blacksmith" hidden="false" targetId="bb3d-e5b0-7590-5b14" primary="false"/>
@@ -1383,12 +1393,15 @@ This model may be recruited into any Minimoto Theme that does not restrict it.</
         <categoryLink id="53c5-ed72-f0b5-453b" name="Non-Unique" hidden="false" targetId="d181-219d-3add-d47b" primary="false"/>
       </categoryLinks>
       <entryLinks>
-        <entryLink id="66f5-da73-7d0a-4641" name="Unblessed Ashigaru" hidden="false" collective="false" import="true" targetId="3655-7e82-4c3b-5111" type="selectionEntry">
+        <entryLink id="e46d-8c16-de34-d835" name="Unblessed Ashigaru" hidden="false" collective="false" import="true" targetId="3655-7e82-4c3b-5111" type="selectionEntry">
           <modifiers>
-            <modifier type="append" field="name" value="B"/>
+            <modifier type="append" field="name" value="A"/>
           </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1c92-e231-34ff-50e9" type="min"/>
+          </constraints>
           <profiles>
-            <profile id="5b5f-fe7c-f02d-119e" name="Unblessed Ashigaru B" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+            <profile id="731a-6539-0e12-df22" name="Unblessed Ashigaru A" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
               <characteristics>
                 <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">2</characteristic>
                 <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
@@ -1405,15 +1418,12 @@ This model may be recruited into any Minimoto Theme that does not restrict it.</
             </profile>
           </profiles>
         </entryLink>
-        <entryLink id="e46d-8c16-de34-d835" name="Unblessed Ashigaru" hidden="false" collective="false" import="true" targetId="3655-7e82-4c3b-5111" type="selectionEntry">
+        <entryLink import="true" name="Unblessed Ashigaru" hidden="false" id="66f5-da73-7d0a-4641" collective="false" targetId="3655-7e82-4c3b-5111" type="selectionEntry">
           <modifiers>
-            <modifier type="append" field="name" value="A"/>
+            <modifier type="append" value="B" field="name"/>
           </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1c92-e231-34ff-50e9" type="min"/>
-          </constraints>
           <profiles>
-            <profile id="731a-6539-0e12-df22" name="Unblessed Ashigaru A" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+            <profile name="Unblessed Ashigaru B" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile" hidden="false" id="5b5f-fe7c-f02d-119e">
               <characteristics>
                 <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">2</characteristic>
                 <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
@@ -1649,12 +1659,15 @@ This model may declare a Charge Action while in BtB with an Enemy model.</charac
         <categoryLink id="786e-47aa-83ba-bbc4" name="Armour 3+" hidden="false" targetId="6b68-2575-cc8f-c08f" primary="false"/>
       </categoryLinks>
       <entryLinks>
-        <entryLink id="e4ec-4db4-93ad-e901" name="Enban&apos;nage Ashigaru" hidden="false" collective="false" import="true" targetId="cd4a-1480-2f08-545b" type="selectionEntry">
+        <entryLink id="0f7c-fb18-afdc-cfd7" name="Enban&apos;nage Ashigaru" hidden="false" collective="false" import="true" targetId="cd4a-1480-2f08-545b" type="selectionEntry">
           <modifiers>
-            <modifier type="append" field="name" value="B"/>
+            <modifier type="append" field="name" value="A"/>
           </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ff07-1ae8-f9b1-069e" type="min"/>
+          </constraints>
           <profiles>
-            <profile id="0776-4ba9-d827-b873" name="Enban&apos;nage Ashigaru B" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+            <profile id="8fd1-c3c2-389f-4b14" name="Enban&apos;nage Ashigaru A" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
               <characteristics>
                 <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">2</characteristic>
                 <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
@@ -1671,15 +1684,12 @@ This model may declare a Charge Action while in BtB with an Enemy model.</charac
             </profile>
           </profiles>
         </entryLink>
-        <entryLink id="0f7c-fb18-afdc-cfd7" name="Enban&apos;nage Ashigaru" hidden="false" collective="false" import="true" targetId="cd4a-1480-2f08-545b" type="selectionEntry">
+        <entryLink import="true" name="Enban&apos;nage Ashigaru" hidden="false" id="e4ec-4db4-93ad-e901" collective="false" targetId="cd4a-1480-2f08-545b" type="selectionEntry">
           <modifiers>
-            <modifier type="append" field="name" value="A"/>
+            <modifier type="append" value="B" field="name"/>
           </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ff07-1ae8-f9b1-069e" type="min"/>
-          </constraints>
           <profiles>
-            <profile id="8fd1-c3c2-389f-4b14" name="Enban&apos;nage Ashigaru A" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+            <profile name="Enban&apos;nage Ashigaru B" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile" hidden="false" id="0776-4ba9-d827-b873">
               <characteristics>
                 <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">2</characteristic>
                 <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
@@ -1777,6 +1787,11 @@ This model may declare a Charge Action while in BtB with an Enemy model.</charac
               </characteristics>
             </profile>
           </profiles>
+        </infoGroup>
+        <infoGroup name="Unique Effects" id="64be-aaed-a703-0d33" hidden="false">
+          <infoLinks>
+            <infoLink name="Blacksmith" id="5efc-1545-6b69-dc1e" hidden="false" type="profile" targetId="9419-5093-f786-efe0"/>
+          </infoLinks>
         </infoGroup>
       </infoGroups>
       <categoryLinks>
@@ -2191,6 +2206,11 @@ This model may be recruited into any Minimoto Theme that does not restrict it.</
             <infoLink id="d805-63b4-a91e-3b83" name="Courage" hidden="false" targetId="2c5f-d52f-24ba-7927" type="rule"/>
           </infoLinks>
         </infoGroup>
+        <infoGroup name="Unique Effects" id="c797-4a45-a49f-908e" hidden="false">
+          <infoLinks>
+            <infoLink name="Blacksmith" id="4aff-25f2-660f-d81b" hidden="false" type="profile" targetId="9419-5093-f786-efe0"/>
+          </infoLinks>
+        </infoGroup>
       </infoGroups>
       <categoryLinks>
         <categoryLink id="10ed-e8a6-a70d-c9fe" name="Faction: Minimoto Clan" hidden="false" targetId="7ad5-75e1-6134-ca44" primary="false"/>
@@ -2514,12 +2534,15 @@ Until the End Phase, all Ki Feats from Communal cards cost one additional Ki Tok
         <categoryLink id="3832-58c2-95ae-25de" name="Armour" hidden="false" targetId="f322-702a-ff62-b37e" primary="false"/>
       </categoryLinks>
       <entryLinks>
-        <entryLink id="e1f0-4a69-d90d-e15f" name="Ashigaru of the Peaks" hidden="false" collective="false" import="true" targetId="bbc2-2b92-ecdb-bb5d" type="selectionEntry">
+        <entryLink id="1132-38ad-1148-fb0d" name="Ashigaru of the Peaks" hidden="false" collective="false" import="true" targetId="bbc2-2b92-ecdb-bb5d" type="selectionEntry">
           <modifiers>
-            <modifier type="append" field="name" value="B"/>
+            <modifier type="append" field="name" value="A"/>
           </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3f5b-8a18-6d93-53a3" type="min"/>
+          </constraints>
           <profiles>
-            <profile id="1326-c618-8295-a08c" name="Ashigaru of the Peaks B" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+            <profile id="df3b-4d9e-8e8e-ad8b" name="Ashigaru of the Peaks A" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
               <characteristics>
                 <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
                 <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
@@ -2536,15 +2559,12 @@ Until the End Phase, all Ki Feats from Communal cards cost one additional Ki Tok
             </profile>
           </profiles>
         </entryLink>
-        <entryLink id="1132-38ad-1148-fb0d" name="Ashigaru of the Peaks" hidden="false" collective="false" import="true" targetId="bbc2-2b92-ecdb-bb5d" type="selectionEntry">
+        <entryLink import="true" name="Ashigaru of the Peaks" hidden="false" id="e1f0-4a69-d90d-e15f" collective="false" targetId="bbc2-2b92-ecdb-bb5d" type="selectionEntry">
           <modifiers>
-            <modifier type="append" field="name" value="A"/>
+            <modifier type="append" value="B" field="name"/>
           </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3f5b-8a18-6d93-53a3" type="min"/>
-          </constraints>
           <profiles>
-            <profile id="df3b-4d9e-8e8e-ad8b" name="Ashigaru of the Peaks A" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+            <profile name="Ashigaru of the Peaks B" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile" hidden="false" id="1326-c618-8295-a08c">
               <characteristics>
                 <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
                 <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
@@ -3006,6 +3026,218 @@ When this model is Damaged by an Enemy model in a Melee Exchange, until the End
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="8"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="26ea-775e-21b3-61ae" name="Aida" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9c2d-5c9d-444f-bfc8" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ebc1-bc57-e726-f0b5" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="737d-776c-5876-1089" name="Aida" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">2</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">2</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">2</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">6</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">7 OOOOO OO</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="85fa-bc59-fd83-f95e" name="Traits" hidden="false">
+          <profiles>
+            <profile id="84d9-7c07-e3a2-25ce" name="Aida" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Resistance (2), Steadfast</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="a5fb-a8bc-41ee-299c" name="Steadfast" hidden="false" targetId="95e7-3178-c29b-013c" type="rule"/>
+            <infoLink id="79b3-dc6a-e1cc-6059" name="Resistance " hidden="false" targetId="7e3f-9dc3-cacb-469f" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="b649-bfdc-ab41-af6a" name="Melee Weapon" hidden="false">
+          <profiles>
+            <profile id="8be2-1154-8d1e-83a7" name="Tongs" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">-1</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Reach</characteristic>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Grapple Attack (1)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink name="Reach" id="dfa6-8b1d-2868-4e78" hidden="false" targetId="e28e-d5dd-a262-1101" type="rule"/>
+            <infoLink name="Grapple Attack" id="c9ec-56f5-7813-dc1a" hidden="false" targetId="1b9a-c71d-0a30-8d0d" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="3391-8108-689a-7388" name="Ki Feats" hidden="false">
+          <infoLinks>
+            <infoLink id="4a0a-e8a1-8988-dbcf" name="Soul of a Kami" hidden="false" targetId="90a3-dc71-f352-6e9b" type="infoGroup"/>
+            <infoLink id="99ee-80b3-95c3-8601" name="Undying Finale" hidden="false" targetId="34ee-b461-5a1b-73f3" type="infoGroup"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="1bfa-2062-de06-a0f8" name="Unique Effects" hidden="false">
+          <profiles>
+            <profile id="d0ae-f6b7-ab6e-ef7d" name="Unique Effects" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">During a Melee Exchange, if this model has the Initiative, it gains Grapple Attack (0) until the end of the current Activation.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink name="Blacksmith" id="d0a5-ed21-4ab6-9412" hidden="false" type="profile" targetId="9419-5093-f786-efe0"/>
+          </infoLinks>
+        </infoGroup>
+      </infoGroups>
+      <categoryLinks>
+        <categoryLink id="3112-d0ad-5ae8-7a28" name="Faction: Minimoto Clan" hidden="false" targetId="7ad5-75e1-6134-ca44" primary="false"/>
+        <categoryLink id="39d5-4722-bc1d-44e4" name="Faction Profile Cards" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
+        <categoryLink id="6756-c29f-5925-0f2f" name="Blacksmith" hidden="false" targetId="bb3d-e5b0-7590-5b14" primary="false"/>
+        <categoryLink id="06c5-260a-e3cf-6c03" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="69fc-9887-22cf-589b" name="Enhancements" hidden="false" collective="false" import="true" targetId="8c47-dfe8-69f0-770c" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="25"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Kami of Enduring Embers" hidden="true" id="7223-cf19-ae6c-9bed" collective="false">
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="477a-e693-0888-08f7" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="b94d-f7cb-a84c-4077" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="9402-edcc-93a2-aef1" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="469e-fb70-999b-5d55" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+      </constraints>
+      <profiles>
+        <profile name="Kami of Enduring Embers" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile" hidden="false" id="2428-e49e-944d-b853">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">1</characteristic>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">3</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">0</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">7</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">Special</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Medium 40mm</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup name="Traits" id="1baa-569e-9254-765f" hidden="false">
+          <profiles>
+            <profile name="Kami of Enduring Embers" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits" hidden="false" id="78f0-65f0-e33c-7ab2">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Armour (3), Fear (4), Immune [Prone], Insignificant, Kami, Soulless</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink name="Insignificant" id="cfa1-1f94-79ca-d5ce" hidden="false" targetId="1614-d86c-ef8a-c095" type="rule"/>
+            <infoLink name="Kami" id="a4a9-45ec-6bc5-91c1" hidden="false" targetId="50d4-ec7a-9763-1b4d" type="rule"/>
+            <infoLink name="Soulless" id="ae0c-4841-b3a2-65b9" hidden="false" targetId="af31-aad0-fcea-9590" type="rule"/>
+            <infoLink name="Armour" id="0f1f-001d-c4a9-8cab" hidden="false" targetId="8615-1c63-2242-5746" type="rule"/>
+            <infoLink name="Fear" id="bd91-94f2-e146-f291" hidden="false" targetId="3586-4583-7f10-1f31" type="rule"/>
+            <infoLink name="Immune" id="a2ff-ef18-d7ee-3605" hidden="false" targetId="ea08-b25e-0ea8-af73" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup name="Ranged Weapon" id="17b3-538d-d878-9e5e" hidden="false">
+          <profiles>
+            <profile name="Fiery Blast" typeId="7e20-258e-bf92-18f9" typeName="Ranged Weapon" hidden="false" id="240c-cf44-b71d-8f9a">
+              <characteristics>
+                <characteristic name="Ranged Weapon Strength" typeId="15aa-b6bd-6923-271f">+1</characteristic>
+                <characteristic name="Range Bands" typeId="be6a-50c6-d691-e2e9">2/4/6</characteristic>
+                <characteristic name="Traits" typeId="3410-4428-ef91-eb61">Fire (1/2)</characteristic>
+                <characteristic name="Specials" typeId="cdaf-b6ac-89d4-39ef"/>
+                <characteristic name="Unique Effects" typeId="3bf8-6525-f003-4990"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink name="Fire" id="fb34-bb08-5875-f634" hidden="false" targetId="2422-40b7-254f-f6f1" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup name="Melee Weapon" id="d9e7-ebdd-5953-e5ef" hidden="false">
+          <profiles>
+            <profile name="Flaming Fist" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon" hidden="false" id="920e-bd03-d836-93e2">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+1</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Fire (1/2)</characteristic>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Combo Attack (1), Powerful Attack (1)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink name="Powerful Attack" id="6a6f-c29f-d719-2192" hidden="false" targetId="d56a-058d-95d9-5b60" type="rule"/>
+            <infoLink name="Fire" id="3ce6-27ff-02ac-8b69" hidden="false" targetId="2422-40b7-254f-f6f1" type="rule"/>
+            <infoLink name="Powerful Attack" id="2a3f-878f-db96-ec81" hidden="false" targetId="d56a-058d-95d9-5b60" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup name="Unique Effects" id="0d12-db40-e8d0-3878" hidden="false">
+          <profiles>
+            <profile name="Starting Phase" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects" hidden="false" id="6175-6d95-d841-3462">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">During the Starting Phase choose one of the following:
+- Remove this model from play and Friendly Faction models within 2&quot; gain Immune [Fire] and those models&apos; Melee Weapons gain Brutal (1) until the End Phase.
+- This model&apos;s weapons gain +1 Strength and Fire 0/+1 until the End Phase.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Unique Effects" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects" hidden="false" id="4cdd-5844-16b5-3f2a">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink name="Soulless" id="6153-9d64-b888-18c6" hidden="false" targetId="af31-aad0-fcea-9590" type="rule"/>
+            <infoLink name="Soulless" id="9318-bfa9-52f5-1591" hidden="false" targetId="af31-aad0-fcea-9590" type="rule"/>
+            <infoLink name="Immune" id="4cde-b0cf-f534-26a5" hidden="false" targetId="ea08-b25e-0ea8-af73" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+      </infoGroups>
+      <categoryLinks>
+        <categoryLink name="Kami" hidden="false" id="61ff-2c18-1f36-1087" targetId="6639-615e-f1ab-bc64" primary="false"/>
+        <categoryLink name="Element: Fire" hidden="false" id="7e46-55f5-df69-5ae8" targetId="7ad2-8152-55dc-b4c9" primary="false"/>
+        <categoryLink name="Faction Profile Cards" hidden="false" id="d4d1-7535-babc-7a28" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
+        <categoryLink name="Unique" hidden="false" id="bfd9-05ad-d5ae-298a" targetId="afd4-8041-e359-223c" primary="false"/>
+        <categoryLink name="Element: Metal" hidden="false" id="3d84-652f-0464-7f2e" targetId="760e-95d4-349a-cb3c" primary="false"/>
+      </categoryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0"/>
+      </costs>
+    </selectionEntry>
   </selectionEntries>
   <entryLinks>
     <entryLink id="7750-2ede-a509-e6c0" name="Golden Sentinel" hidden="false" collective="false" import="true" targetId="49fb-d207-3a25-9327" type="selectionEntry">
@@ -3221,6 +3453,8 @@ When this model is Damaged by an Enemy model in a Melee Exchange, until the End
     </entryLink>
     <entryLink import="true" name="Somabo" hidden="false" id="205c-4c82-8169-f855" type="selectionEntry" targetId="77b7-4d40-c62b-0a4b"/>
     <entryLink import="true" name="Tozoku" hidden="true" id="1ee4-280d-0c09-6b7a" type="selectionEntry" targetId="1659-29d3-dacb-8261"/>
+    <entryLink import="true" name="Yu" hidden="false" id="7b2a-e6b3-7d30-345d" type="selectionEntry" targetId="df96-c357-cba6-d5fe"/>
+    <entryLink import="true" name="Ito Saiaku" hidden="true" id="a148-6846-5c6d-3456" type="selectionEntry" targetId="b95b-a74e-5a5a-beaa"/>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="a382-7e2d-9df9-d700" name="Jyoto Ashigaru" hidden="false" collective="false" import="true" type="model">
@@ -3948,6 +4182,11 @@ Requirement [Masaema Yama]</characteristic>
     <profile name="Ice Affinity" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects" hidden="false" id="1eaa-b9d0-f8e6-f919">
       <characteristics>
         <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">If this model is included in your Warband you may also include Ronin Kami of Reflection.</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Blacksmith" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects" hidden="false" id="9419-5093-f786-efe0">
+      <characteristics>
+        <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">If this model is included in your Warband you may also include Ronin [Fire] and [Metal] Kami.</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>

@@ -1304,12 +1304,15 @@ This model&apos;s weapons gains Poison (1/1)</characteristic>
         <categoryLink id="0d30-714d-f5cf-9741" name="Non-Unique" hidden="false" targetId="d181-219d-3add-d47b" primary="false"/>
       </categoryLinks>
       <entryLinks>
-        <entryLink id="abde-addd-4d46-3c0c" name="Child of Orochi" hidden="false" collective="false" import="true" targetId="d9f3-b2da-7f3b-d36c" type="selectionEntry">
+        <entryLink id="f967-4069-5fc1-8d03" name="Child of Orochi" hidden="false" collective="false" import="true" targetId="d9f3-b2da-7f3b-d36c" type="selectionEntry">
           <modifiers>
-            <modifier type="append" field="name" value="B"/>
+            <modifier type="append" field="name" value="A"/>
           </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ee9f-e388-487e-2dff" type="min"/>
+          </constraints>
           <profiles>
-            <profile id="5511-f540-f3bf-379e" name="Child of Orochi B" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+            <profile id="7941-6ab7-0232-68a3" name="Child of Orochi A" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
               <characteristics>
                 <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">2</characteristic>
                 <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277"/>
@@ -1326,15 +1329,12 @@ This model&apos;s weapons gains Poison (1/1)</characteristic>
             </profile>
           </profiles>
         </entryLink>
-        <entryLink id="f967-4069-5fc1-8d03" name="Child of Orochi" hidden="false" collective="false" import="true" targetId="d9f3-b2da-7f3b-d36c" type="selectionEntry">
+        <entryLink import="true" name="Child of Orochi" hidden="false" id="abde-addd-4d46-3c0c" collective="false" targetId="d9f3-b2da-7f3b-d36c" type="selectionEntry">
           <modifiers>
-            <modifier type="append" field="name" value="A"/>
+            <modifier type="append" value="B" field="name"/>
           </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ee9f-e388-487e-2dff" type="min"/>
-          </constraints>
           <profiles>
-            <profile id="7941-6ab7-0232-68a3" name="Child of Orochi A" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+            <profile name="Child of Orochi B" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile" hidden="false" id="5511-f540-f3bf-379e">
               <characteristics>
                 <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">2</characteristic>
                 <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277"/>
@@ -4883,6 +4883,7 @@ When allocating Blood of Orochi  Tokens, this model may spend Ki to allocate ad
       </modifiers>
     </entryLink>
     <entryLink import="true" name="Somabo" hidden="false" id="2bf1-c3a1-302f-d34b" type="selectionEntry" targetId="77b7-4d40-c62b-0a4b"/>
+    <entryLink import="true" name="Yu" hidden="false" id="03be-3241-f107-2dc6" type="selectionEntry" targetId="df96-c357-cba6-d5fe"/>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="aa49-891a-7805-f60e" name="Okyo Ashigaru" hidden="false" collective="false" import="true" type="model">

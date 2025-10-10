@@ -9950,19 +9950,6 @@ This model can make only one Bird Strike Ranged Attack per turn.</characteristic
             <infoLink name="Combo Attack " id="f698-2a3c-bf04-f15b" hidden="false" type="rule" targetId="78ab-6a94-be24-8f74"/>
           </infoLinks>
         </infoGroup>
-        <infoGroup name="Ranged Weapon" id="c601-89b1-aebc-c814" hidden="false">
-          <profiles>
-            <profile name="Tongue" typeId="7e20-258e-bf92-18f9" typeName="Ranged Weapon" hidden="false" id="2ce3-bc5b-f977-78e1">
-              <characteristics>
-                <characteristic name="Ranged Weapon Strength" typeId="15aa-b6bd-6923-271f">+1</characteristic>
-                <characteristic name="Range Bands" typeId="be6a-50c6-d691-e2e9">-/2/-</characteristic>
-                <characteristic name="Traits" typeId="3410-4428-ef91-eb61"/>
-                <characteristic name="Specials" typeId="cdaf-b6ac-89d4-39ef"/>
-                <characteristic name="Unique Effects" typeId="3bf8-6525-f003-4990">When an Attack using this weapon is Successful, you may immediately use the Swallow Up Ki Feat with Range 2&quot;.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-        </infoGroup>
         <infoGroup name="Ki Feats" id="ff38-5ae1-7292-2cac" hidden="false">
           <infoLinks>
             <infoLink name="Blood Omen" id="c782-b7e4-f56a-e4db" hidden="false" type="infoGroup" targetId="5d8c-4937-1937-1d2e"/>
@@ -9971,14 +9958,12 @@ This model can make only one Bird Strike Ranged Attack per turn.</characteristic
         </infoGroup>
         <infoGroup name="Unique Effects" id="e405-22a2-3b20-c89b" hidden="false">
           <profiles>
-            <profile name="Amphibian" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects" hidden="false" id="1394-1b8e-7252-a60b">
+            <profile name="Unique Effects" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects" hidden="false" id="d2cb-5296-582b-6ace">
               <characteristics>
-                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">While in the area of a Quagmire or Incoming Tide, this model gains +2 Move and Intangible.</characteristic>
-              </characteristics>
-            </profile>
-            <profile name="Variable Toughness" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects" hidden="false" id="17c9-06b5-f588-afbf">
-              <characteristics>
-                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">This model&apos;s Tough value is variable. X is equal to the number of marked Wound boxes this model has.</characteristic>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">This model may be included in the House Bleeding Moon theme.
+
+
+When this model inflicts Wounds through a successful Melee Attack, it gains a number of Ki Tokens equal to the Wounded model&apos;s Ki Statistic.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -11145,6 +11130,102 @@ On a successful ranged attack instead of a Damage Roll, the Target gains a Blee
       </entryLinks>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="df96-c357-cba6-d5fe" name="Yu" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="477a-e693-0888-08f7" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0f84-8e23-429c-d5c4" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9402-edcc-93a2-aef1" type="atLeast"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8ad6-ba60-fef5-7ce7" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="a4fb-1f19-f5cf-aae3" name="Yu" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">2</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">2</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">2</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">8</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">5 OOOOO</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="bc57-3f23-464a-c85e" name="Ki Feats" hidden="false">
+          <infoLinks>
+            <infoLink id="2489-455e-09ca-da21" name="Fumidashi" hidden="false" targetId="b918-07be-8771-bee3" type="infoGroup"/>
+            <infoLink id="81ef-6a36-ac54-380e" name="Page from the Book" hidden="false" targetId="4a05-7106-2df7-639a" type="infoGroup"/>
+            <infoLink id="4fa4-85e7-7d10-f621" name="To My Side!" hidden="false" targetId="e566-e6bc-efba-3070" type="infoGroup"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="9612-ea77-c10c-5be0" name="Traits" hidden="false">
+          <profiles>
+            <profile id="1f02-53a3-e097-57fc" name="Yu" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Bravery, Willpower (1), Strategy [+1 Ki Token]</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="647e-6aa8-428f-5dbc" name="Bravery" hidden="false" targetId="f9b2-38d2-7cda-de6e" type="rule"/>
+            <infoLink id="ba81-a71b-4da5-6857" name="Strategy" hidden="false" targetId="7c36-9814-c78f-f9d8" type="rule"/>
+            <infoLink id="68f9-b0b4-1cb0-d467" name="Willpower" hidden="false" targetId="f980-8d03-ad19-afe3" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="3674-388a-a3d0-808d" name="Melee Weapon" hidden="false">
+          <profiles>
+            <profile id="fb2e-fbed-dbf8-2c20" name="Daishō" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+0</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e"/>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Push Defence (0)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink name="Push Defence" id="d880-66db-3ce0-c400" hidden="false" targetId="74fc-a971-d9c2-278c" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup name="Unique Effects" id="251d-ab89-6848-f836" hidden="false">
+          <profiles>
+            <profile name="Unique Effects" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects" hidden="false" id="a4e7-b672-7e28-ae4c">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">When another Friendly Imperial model starts its activation BtB with this model, if the Imperial model declares a Scenario Action, it may Walk before or after the Scenario Action.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </infoGroup>
+      </infoGroups>
+      <categoryLinks>
+        <categoryLink id="d211-a5a1-2ab0-1226" name="Envoy" hidden="false" targetId="c651-be56-1207-5e21" primary="false"/>
+        <categoryLink id="ebb4-70e9-5b73-c499" name="Imperial" hidden="false" targetId="1a5c-7165-4266-4fbc" primary="false"/>
+        <categoryLink id="3f59-d63c-8b38-58fb" name="Teishin" hidden="false" targetId="216a-c1c3-66df-b497" primary="false"/>
+        <categoryLink id="dc97-3af7-6669-c34d" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
+        <categoryLink id="d354-d70c-0471-828b" name="Ronin Profile Cards" hidden="false" targetId="9fba-f50b-c8f7-8396" primary="true"/>
+        <categoryLink id="bb8b-2edd-8765-52fb" name="Armour" hidden="false" targetId="f322-702a-ff62-b37e" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="f4ec-0419-60b5-5502" name="Enhancements" hidden="false" collective="false" import="true" targetId="f486-4498-03e3-c397" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="12"/>
       </costs>
     </selectionEntry>
   </sharedSelectionEntries>

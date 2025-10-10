@@ -3469,12 +3469,15 @@ When this model declares a Charge Action, this model may Move through Destructib
         <categoryLink id="4c64-15b8-a3f2-aef8" name="Villager" hidden="false" targetId="9389-c90b-a833-f68d" primary="false"/>
       </categoryLinks>
       <entryLinks>
-        <entryLink id="6593-0fc1-8b74-b22f" name="Fisherman" hidden="false" collective="false" import="true" targetId="fdb3-04df-ec18-16cd" type="selectionEntry">
+        <entryLink id="f062-947b-33d3-5355" name="Fisherman" hidden="false" collective="false" import="true" targetId="fdb3-04df-ec18-16cd" type="selectionEntry">
           <modifiers>
-            <modifier type="append" field="name" value="B"/>
+            <modifier type="append" field="name" value="A"/>
           </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cd8d-1992-b814-680e" type="min"/>
+          </constraints>
           <profiles>
-            <profile id="8954-65d9-fb45-ace0" name="Fisherman B" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+            <profile id="f852-1ce6-8a7d-8b40" name="Fisherman A" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
               <characteristics>
                 <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">2</characteristic>
                 <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277"/>
@@ -3491,15 +3494,12 @@ When this model declares a Charge Action, this model may Move through Destructib
             </profile>
           </profiles>
         </entryLink>
-        <entryLink id="f062-947b-33d3-5355" name="Fisherman" hidden="false" collective="false" import="true" targetId="fdb3-04df-ec18-16cd" type="selectionEntry">
+        <entryLink import="true" name="Fisherman" hidden="false" id="6593-0fc1-8b74-b22f" collective="false" targetId="fdb3-04df-ec18-16cd" type="selectionEntry">
           <modifiers>
-            <modifier type="append" field="name" value="A"/>
+            <modifier type="append" value="B" field="name"/>
           </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cd8d-1992-b814-680e" type="min"/>
-          </constraints>
           <profiles>
-            <profile id="f852-1ce6-8a7d-8b40" name="Fisherman A" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+            <profile name="Fisherman B" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile" hidden="false" id="8954-65d9-fb45-ace0">
               <characteristics>
                 <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">2</characteristic>
                 <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277"/>
@@ -4163,12 +4163,19 @@ If it does, it loses the Monk type and gains an ability based on the type of Kam
         <categoryLink id="b117-e8c8-6b3e-368c" name="Rice Farmer" hidden="false" targetId="3a29-622e-c421-b114" primary="false"/>
       </categoryLinks>
       <entryLinks>
-        <entryLink id="a2cd-60af-dcb0-7d30" name="Rice Farmer" hidden="false" collective="false" import="true" targetId="9ceb-f282-1e44-8007" type="selectionEntry">
+        <entryLink id="bb9b-f88c-c347-7125" name="Rice Farmer" hidden="false" collective="false" import="true" targetId="9ceb-f282-1e44-8007" type="selectionEntry">
           <modifiers>
-            <modifier type="append" field="name" value="B"/>
+            <modifier type="append" field="name" value="A">
+              <conditions>
+                <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9ceb-f282-1e44-8007" type="greaterThan"/>
+              </conditions>
+            </modifier>
           </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6e81-aec9-0a5b-559d" type="min"/>
+          </constraints>
           <profiles>
-            <profile id="a75f-4223-1073-ec79" name="Rice Farmer B" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+            <profile id="6acd-3733-2e4f-27bd" name="Rice Farmer A" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
               <characteristics>
                 <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">2</characteristic>
                 <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
@@ -4185,19 +4192,12 @@ If it does, it loses the Monk type and gains an ability based on the type of Kam
             </profile>
           </profiles>
         </entryLink>
-        <entryLink id="bb9b-f88c-c347-7125" name="Rice Farmer" hidden="false" collective="false" import="true" targetId="9ceb-f282-1e44-8007" type="selectionEntry">
+        <entryLink import="true" name="Rice Farmer" hidden="false" id="a2cd-60af-dcb0-7d30" collective="false" targetId="9ceb-f282-1e44-8007" type="selectionEntry">
           <modifiers>
-            <modifier type="append" field="name" value="A">
-              <conditions>
-                <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9ceb-f282-1e44-8007" type="greaterThan"/>
-              </conditions>
-            </modifier>
+            <modifier type="append" value="B" field="name"/>
           </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6e81-aec9-0a5b-559d" type="min"/>
-          </constraints>
           <profiles>
-            <profile id="6acd-3733-2e4f-27bd" name="Rice Farmer A" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+            <profile name="Rice Farmer B" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile" hidden="false" id="a75f-4223-1073-ec79">
               <characteristics>
                 <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">2</characteristic>
                 <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
@@ -7474,9 +7474,8 @@ When this model performs a Complex Ki Feat, it gains Virtue (6&quot;) for that A
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="18"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="dfc0-7831-e5df-0dfc" name="Masaru" hidden="false" collective="false" import="true" type="model">
+    <selectionEntry id="dfc0-7831-e5df-0dfc" name="Masaru - Human Form" hidden="true" collective="false" import="true" type="model">
       <modifiers>
-        <modifier type="append" field="name" value="- Human Form"/>
         <modifier type="set" field="7e63-0028-0e86-dfb6" value="0">
           <conditionGroups>
             <conditionGroup type="and">
@@ -7487,26 +7486,10 @@ When this model performs a Complex Ki Feat, it gains Virtue (6&quot;) for that A
             </conditionGroup>
           </conditionGroups>
         </modifier>
-        <modifier type="set" value="true" field="hidden">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="roster" childId="477a-e693-0888-08f7" shared="true" includeChildSelections="true" includeChildForces="true"/>
-              </conditions>
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="2af4-e298-ee7f-b85f" shared="true" includeChildSelections="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="44e6-4155-6b9b-2521" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7e63-0028-0e86-dfb6" type="max"/>
+        <constraint type="min" value="0" field="selections" scope="roster" shared="true" id="67ea-6932-634f-2b49" includeChildSelections="true" includeChildForces="true"/>
       </constraints>
       <profiles>
         <profile id="72ba-36cf-ee85-f078" name="Masaru - Human Form" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
@@ -7595,32 +7578,32 @@ The Target gains a Reload Marker and its Ranged Weapons have Reload (0) while t
       <categoryLinks>
         <categoryLink id="ac3a-0566-e7ca-faa2" name="Faction: Temple of Rokan" hidden="false" targetId="3186-3d3a-a105-887b" primary="false"/>
         <categoryLink id="8d04-d4db-99c5-892c" name="Kitsune" hidden="false" targetId="8d84-d45d-1b30-d696" primary="false"/>
-        <categoryLink id="05d7-8805-3f42-3ce0" name="Faction Profile Cards" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
+        <categoryLink id="05d7-8805-3f42-3ce0" name="Faction Profile Cards" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="false"/>
         <categoryLink id="eb54-b18d-03ff-e70f" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
         <categoryLink id="1687-20d2-27fc-83e0" name="Yokai" hidden="false" targetId="8a19-8c2b-46a8-4086" primary="false"/>
+        <categoryLink name="Reference Cards" hidden="false" id="8d66-6bc6-1c99-8293" targetId="5073-f00b-a8f6-5e3b" primary="true"/>
       </categoryLinks>
       <entryLinks>
         <entryLink id="9931-7acb-3510-29c8" name="Enhancements" hidden="false" collective="false" import="true" targetId="d716-36e8-af1d-0a1f" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
-        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="18"/>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0"/>
       </costs>
-    </selectionEntry>
-    <selectionEntry id="52c2-2689-f064-f3be" name="Masaru - Fox Form" hidden="true" collective="false" import="true" type="upgrade">
       <modifierGroups>
-        <modifierGroup>
+        <modifierGroup type="and">
           <conditions>
-            <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="dfc0-7831-e5df-0dfc" type="atLeast"/>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="52c2-2689-f064-f3be" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </conditions>
           <modifiers>
-            <modifier type="set" field="hidden" value="false"/>
+            <modifier type="set" value="false" field="hidden"/>
             <modifier type="set" value="1" field="67ea-6932-634f-2b49"/>
           </modifiers>
         </modifierGroup>
       </modifierGroups>
+    </selectionEntry>
+    <selectionEntry id="52c2-2689-f064-f3be" name="Masaru" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fa94-73f5-f758-13fd" type="max"/>
-        <constraint type="min" value="0" field="selections" scope="roster" shared="true" id="67ea-6932-634f-2b49" includeChildSelections="true" includeChildForces="true"/>
       </constraints>
       <profiles>
         <profile id="f8de-aa05-9b1c-49bb" name="Masaru - Fox Form" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
@@ -7700,16 +7683,35 @@ During Deployment you must Recruit and Deploy Torikka and Atsukau within 2&quot
         </infoGroup>
       </infoGroups>
       <categoryLinks>
-        <categoryLink id="9f51-eeff-b483-697c" name="Faction Profile Cards" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="false"/>
         <categoryLink id="618a-a14d-45ae-dcca" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
         <categoryLink id="f887-c4db-10e1-5180" name="Yokai" hidden="false" targetId="8a19-8c2b-46a8-4086" primary="false"/>
         <categoryLink id="5ce9-0282-95f7-fcdc" name="Kitsune" hidden="false" targetId="8d84-d45d-1b30-d696" primary="false"/>
         <categoryLink id="8be3-da71-3206-6889" name="Faction: Temple of Rokan" hidden="false" targetId="3186-3d3a-a105-887b" primary="false"/>
-        <categoryLink id="6eef-e748-bebc-c58d" name="Reference Cards" hidden="false" targetId="5073-f00b-a8f6-5e3b" primary="true"/>
+        <categoryLink name="Faction Profile Cards" hidden="false" id="b818-b96a-f36d-f4e0" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
       </categoryLinks>
       <costs>
-        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0"/>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="25"/>
       </costs>
+      <modifiers>
+        <modifier type="append" value="- Fox Form" field="name"/>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="477a-e693-0888-08f7" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="2af4-e298-ee7f-b85f" shared="true" includeChildSelections="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="44e6-4155-6b9b-2521" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry id="4725-1970-7809-1a28" name="Atsukau" hidden="true" collective="false" import="true" type="upgrade">
       <modifierGroups>
@@ -7812,12 +7814,11 @@ If Masaru model that you own is Killed or Removed from Play, Remove this model 
         </infoGroup>
       </infoGroups>
       <categoryLinks>
-        <categoryLink id="6e6b-2f43-282c-c58a" name="Faction Profile Cards" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="false"/>
         <categoryLink id="6234-c98e-41ad-be99" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
         <categoryLink id="9c85-8b8f-d136-b6b5" name="Kitsune" hidden="false" targetId="8d84-d45d-1b30-d696" primary="false"/>
         <categoryLink id="f5b8-35dc-c920-ac32" name="Faction: Temple of Rokan" hidden="false" targetId="3186-3d3a-a105-887b" primary="false"/>
-        <categoryLink id="291b-d7a9-26c5-f90e" name="Reference Cards" hidden="false" targetId="5073-f00b-a8f6-5e3b" primary="true"/>
         <categoryLink name="Kami" hidden="false" id="397c-d946-d769-d91e" targetId="6639-615e-f1ab-bc64" primary="false"/>
+        <categoryLink name="Faction Profile Cards" hidden="false" id="e041-fad6-a67c-3f7c" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
       </categoryLinks>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0"/>
@@ -7922,12 +7923,11 @@ If Masaru model that you own is Killed or Removed from Play, Remove this model 
         </infoGroup>
       </infoGroups>
       <categoryLinks>
-        <categoryLink id="9d5f-b817-1856-9e96" name="Faction Profile Cards" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="false"/>
         <categoryLink id="ff92-be8b-92eb-43b5" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
         <categoryLink id="a4c9-1197-63aa-8147" name="Kitsune" hidden="false" targetId="8d84-d45d-1b30-d696" primary="false"/>
         <categoryLink id="616b-7251-f672-bfc0" name="Faction: Temple of Rokan" hidden="false" targetId="3186-3d3a-a105-887b" primary="false"/>
-        <categoryLink id="afa8-122d-ed9e-c5c3" name="Reference Cards" hidden="false" targetId="5073-f00b-a8f6-5e3b" primary="true"/>
         <categoryLink name="Kami" hidden="false" id="8ff6-5510-41c3-b42d" targetId="6639-615e-f1ab-bc64" primary="false"/>
+        <categoryLink name="Faction Profile Cards" hidden="false" id="0c91-5b36-0e5c-9c01" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
       </categoryLinks>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0"/>
@@ -8482,6 +8482,7 @@ If Masaru model that you own is Killed or Removed from Play, Remove this model 
     </entryLink>
     <entryLink import="true" name="Somabo" hidden="false" id="8560-6d62-c209-8a62" type="selectionEntry" targetId="77b7-4d40-c62b-0a4b"/>
     <entryLink import="true" name="Tozoku" hidden="true" id="a9f1-3ad8-91e4-0868" type="selectionEntry" targetId="1659-29d3-dacb-8261"/>
+    <entryLink import="true" name="Ito Saiaku" hidden="true" id="418b-2817-3e11-2861" type="selectionEntry" targetId="b95b-a74e-5a5a-beaa"/>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="fdb3-04df-ec18-16cd" name="Fisherman" hidden="false" collective="false" import="true" type="model">

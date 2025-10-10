@@ -2617,12 +2617,15 @@ The first time in a turn when a model ends its move in BtB with this model, if t
         <categoryLink id="85ae-1d1e-95b1-1c5d" name="Armour" hidden="false" targetId="f322-702a-ff62-b37e" primary="false"/>
       </categoryLinks>
       <entryLinks>
-        <entryLink id="59b0-8812-c524-884d" name="Zephyr Guard" hidden="false" collective="false" import="true" targetId="e281-eb25-ed0e-d987" type="selectionEntry">
+        <entryLink id="51a3-30ea-52b6-0d21" name="Zephyr Guard" hidden="false" collective="false" import="true" targetId="e281-eb25-ed0e-d987" type="selectionEntry">
           <modifiers>
-            <modifier type="append" field="name" value="B"/>
+            <modifier type="append" field="name" value="A"/>
           </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="629b-1ee7-e47e-a468" type="min"/>
+          </constraints>
           <profiles>
-            <profile id="b3ea-1607-0d98-4960" name="Zephyr Guard B" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+            <profile id="00dc-3273-1dd1-1e8a" name="Zephyr Guard A" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
               <characteristics>
                 <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
                 <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
@@ -2639,15 +2642,12 @@ The first time in a turn when a model ends its move in BtB with this model, if t
             </profile>
           </profiles>
         </entryLink>
-        <entryLink id="51a3-30ea-52b6-0d21" name="Zephyr Guard" hidden="false" collective="false" import="true" targetId="e281-eb25-ed0e-d987" type="selectionEntry">
+        <entryLink import="true" name="Zephyr Guard" hidden="false" id="59b0-8812-c524-884d" collective="false" targetId="e281-eb25-ed0e-d987" type="selectionEntry">
           <modifiers>
-            <modifier type="append" field="name" value="A"/>
+            <modifier type="append" value="B" field="name"/>
           </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="629b-1ee7-e47e-a468" type="min"/>
-          </constraints>
           <profiles>
-            <profile id="00dc-3273-1dd1-1e8a" name="Zephyr Guard A" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+            <profile name="Zephyr Guard B" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile" hidden="false" id="b3ea-1607-0d98-4960">
               <characteristics>
                 <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
                 <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
@@ -4616,6 +4616,7 @@ Permitted [Bushi, Koroko, Tribesman]</characteristic>
         </modifier>
       </modifiers>
     </entryLink>
+    <entryLink import="true" name="Ito Saiaku" hidden="true" id="88f4-d319-011f-1048" type="selectionEntry" targetId="b95b-a74e-5a5a-beaa"/>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="e767-2b69-cf2f-8713" name="Hilltribe Tracker" hidden="false" collective="false" import="true" type="model">
