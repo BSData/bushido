@@ -1187,15 +1187,6 @@ For the first turn of the game, all models lose Cloudwalk and Lightfooted and ma
           </categoryLinks>
           <entryLinks>
             <entryLink id="e797-2bb0-d0fa-687c" name="Enhancements" hidden="false" collective="false" import="true" targetId="f486-4498-03e3-c397" type="selectionEntryGroup"/>
-            <entryLink import="true" name="Enhancements" hidden="true" id="0275-4361-6ea8-8496" type="selectionEntryGroup" targetId="36a2-c9ac-5af8-2f4b">
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="95ba-13e7-e7bb-5dba" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </entryLink>
           </entryLinks>
           <costs>
             <cost name=" Rice" typeId="a111-8656-5c05-7415" value="16"/>
@@ -1231,15 +1222,6 @@ For the first turn of the game, all models lose Cloudwalk and Lightfooted and ma
           </categoryLinks>
           <entryLinks>
             <entryLink id="3b47-0adf-f967-02e4" name="Enhancements" hidden="false" collective="false" import="true" targetId="f486-4498-03e3-c397" type="selectionEntryGroup"/>
-            <entryLink import="true" name="Enhancements" hidden="true" id="2b57-c580-3440-2be8" type="selectionEntryGroup" targetId="36a2-c9ac-5af8-2f4b">
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="95ba-13e7-e7bb-5dba" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </entryLink>
           </entryLinks>
           <costs>
             <cost name=" Rice" typeId="a111-8656-5c05-7415" value="16"/>
@@ -11301,6 +11283,11 @@ On a successful ranged attack instead of a Damage Roll, the Target gains a Blee
             <modifier type="set" value="-1" field="4ca6-762b-9f97-022f">
               <conditions>
                 <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="b95b-a74e-5a5a-beaa" shared="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="ac80-29b0-dc43-5a14" shared="true" includeChildSelections="true"/>
               </conditions>
             </modifier>
           </modifiers>
