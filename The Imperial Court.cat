@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="80c6-07e1-3198-e6ee" name="The Imperial Court" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="23" revision="1" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="80c6-07e1-3198-e6ee" name="The Imperial Court" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="23" revision="2" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <catalogueLinks>
     <catalogueLink type="catalogue" name="Library_Ronin" id="2bc6-7957-a79a-a616" targetId="b489-b304-948d-52d0" importRootEntries="true"/>
   </catalogueLinks>
@@ -10,11 +10,15 @@
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="roster" childId="6be3-5710-4a9e-0c9f" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
                 <condition type="instanceOf" value="0" field="selections" scope="ancestor" childId="5073-f00b-a8f6-5e3b" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
+        </modifier>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="e770-d8d3-2ca6-962e" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
         </modifier>
       </modifiers>
       <selectionEntryGroups>
@@ -47,6 +51,11 @@
             <modifier type="set" value="-1" field="f96c-16d5-1d96-9db1">
               <conditions>
                 <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="b95b-a74e-5a5a-beaa" shared="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="parent" childId="ac80-29b0-dc43-5a14" shared="true" includeChildSelections="false"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -83,6 +92,7 @@
           </categoryLinks>
           <constraints>
             <constraint type="max" value="3" field="selections" scope="roster" shared="true" id="0156-ea98-0242-43bf" includeChildSelections="true"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d6eb-c88c-eda4-3e12"/>
           </constraints>
           <profiles>
             <profile name="Veteran Sentinel" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card" hidden="false" id="8e9e-2e86-ae91-5a2d">
@@ -99,7 +109,7 @@ Requirement [Golden Sentinel]</characteristic>
           <modifiers>
             <modifier type="set" value="true" field="hidden">
               <conditions>
-                <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="0439-8071-d012-a4e1" shared="true" includeChildSelections="false"/>
+                <condition type="notInstanceOf" value="1" field="selections" scope="parent" childId="0439-8071-d012-a4e1" shared="true" includeChildSelections="false"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -328,6 +338,7 @@ Until the End Phase, Friendly [Earth] Bǎi Qiān gain Tireless. Models may not g
       <categoryLinks>
         <categoryLink targetId="477a-e693-0888-08f7" id="3e69-2545-5a2d-0504" primary="true" name="Faction Theme Cards"/>
         <categoryLink targetId="6be3-5710-4a9e-0c9f" id="2d4e-5385-62f3-408a" primary="false" name="Exclude_Ronin_Enhancements"/>
+        <categoryLink targetId="e770-d8d3-2ca6-962e" id="113c-6542-f533-c1a3" primary="false" name="Permit Faction Equipment"/>
       </categoryLinks>
       <profiles>
         <profile name="The Eternal Legion" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card" hidden="false" id="2a51-713a-7a51-54ae">
@@ -1107,19 +1118,178 @@ While a Bǎi Qiān model has an Air Token it may use Ki Feats on Azure models&ap
         </infoGroup>
       </infoGroups>
     </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Golden Sentinel" hidden="false" id="99b5-bac2-4382-ff64" collective="false">
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="477a-e693-0888-08f7" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="0f84-8e23-429c-d5c4" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="9402-edcc-93a2-aef1" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="force" shared="true" id="7823-b29c-c9d6-4698" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+      </constraints>
+      <infoGroups>
+        <infoGroup name="Traits" id="1c27-58c7-17e5-2f1d" hidden="false">
+          <profiles>
+            <profile name="Golden Sentinel" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits" hidden="false" id="9838-8d65-3a11-b281">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Armour (3), Bodyguard [Imperial](3&quot;), Fearless, Immune [Control], Prowess [Melee](1)</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink name="Armour" id="c84e-592a-f978-6110" hidden="false" targetId="8615-1c63-2242-5746" type="rule"/>
+            <infoLink name="Bodyguard" id="31e4-8213-0ec5-7ebf" hidden="false" targetId="0286-6d10-a236-e0c3" type="rule"/>
+            <infoLink name="Fearless" id="611a-e6d1-cd61-32e8" hidden="false" targetId="5d6f-1746-9080-aca5" type="rule"/>
+            <infoLink name="Immune" id="3b5f-7bed-a924-47dd" hidden="false" targetId="ea08-b25e-0ea8-af73" type="rule"/>
+            <infoLink name="Prowess " id="3173-5527-68b5-c990" hidden="false" targetId="75ef-327a-cd08-a248" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup name="Melee Weapon" id="2d5b-0f87-9b71-c8e3" hidden="false">
+          <profiles>
+            <profile name="Katana" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon" hidden="false" id="20c0-6235-8c12-ef23">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+1</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e"/>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Forceback Attack (0), Push Defence (0)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink name="Forceback Attack" id="0144-51f7-622b-46e4" hidden="false" targetId="2682-7c66-4163-28f2" type="rule"/>
+            <infoLink name="Push Defence" id="0d89-1735-ec88-6fbf" hidden="false" targetId="74fc-a971-d9c2-278c" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup name="Unique Effects" id="a1f1-7264-01a3-c6d4" hidden="false">
+          <profiles>
+            <profile name="Golden Sentinel" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects" hidden="false" id="06ec-a2c5-d1f0-02cd">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">While within 3&quot; of another Friendly Imperial model, this model gains Aware and its Melee Weapons gain Reach.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink name="Imperial" id="b295-b4d8-4128-9476" hidden="false" targetId="3e9b-2e75-0e97-a739" type="profile"/>
+            <infoLink name="Aware" id="87b8-4459-1aa8-0b08" hidden="false" targetId="ff4a-6b14-09dd-2343" type="rule"/>
+            <infoLink name="Reach" id="a314-0a93-3a1e-f967" hidden="false" targetId="e28e-d5dd-a262-1101" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup name="Ki Feats" id="f360-a2c3-5a71-c28d" hidden="false">
+          <infoLinks>
+            <infoLink name="Tenacious" id="3d39-121c-cff1-d077" hidden="false" targetId="897f-3853-920a-86fb" type="infoGroup"/>
+          </infoLinks>
+        </infoGroup>
+      </infoGroups>
+      <categoryLinks>
+        <categoryLink name="Imperial" hidden="false" id="155e-5d3b-e9db-ea20" targetId="1a5c-7165-4266-4fbc" primary="false"/>
+        <categoryLink name="Samurai" hidden="false" id="a14e-1c14-4cd7-a15b" targetId="e12a-f782-3281-7444" primary="false"/>
+        <categoryLink name="Non-Unique" hidden="false" id="2ba7-eb5f-108d-19b4" targetId="d181-219d-3add-d47b" primary="false"/>
+        <categoryLink name="Ronin Profile Cards" hidden="false" id="8c54-2dba-a682-22f1" targetId="9fba-f50b-c8f7-8396" primary="true"/>
+        <categoryLink name="Golden Sentinel" hidden="false" id="40f8-21ec-c366-424a" targetId="0439-8071-d012-a4e1" primary="false"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Golden Sentinel A" hidden="false" id="005f-5454-73b7-7e32" collective="false">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a491-3b96-14f3-fbb2" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="302c-d83c-4fc0-18f0" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </constraints>
+          <profiles>
+            <profile name="Golden Sentinel A" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile" hidden="false" id="ea58-a140-4469-45f8">
+              <characteristics>
+                <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
+                <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+                <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">3</characteristic>
+                <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+                <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
+                <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+                <characteristic name="Ki" typeId="3969-9568-a914-6854">2</characteristic>
+                <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+                <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">6</characteristic>
+                <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">6 OOOOO O</characteristic>
+                <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <categoryLinks>
+            <categoryLink name="Armour" hidden="false" id="a2b5-161c-dd80-8184" targetId="f322-702a-ff62-b37e" primary="false"/>
+            <categoryLink name="Samurai" hidden="false" id="b28d-f2a5-2510-b454" targetId="e12a-f782-3281-7444" primary="false"/>
+            <categoryLink name="Non-Unique" hidden="false" id="8004-701e-dc80-9425" targetId="d181-219d-3add-d47b" primary="false"/>
+            <categoryLink name="Imperial" hidden="false" id="8721-d587-0699-1ad8" targetId="1a5c-7165-4266-4fbc" primary="false"/>
+            <categoryLink name="Golden Sentinel" hidden="false" id="026f-b6d2-d81d-67df" targetId="0439-8071-d012-a4e1" primary="false"/>
+          </categoryLinks>
+          <entryLinks>
+            <entryLink import="true" name="Enhancements" hidden="false" id="8d54-827c-722b-d171" collective="false" targetId="f486-4498-03e3-c397" type="selectionEntryGroup"/>
+            <entryLink import="true" name="Enhancements" hidden="true" id="17f8-4dec-1219-deb8" type="selectionEntryGroup" targetId="36a2-c9ac-5af8-2f4b"/>
+          </entryLinks>
+          <costs>
+            <cost name=" Rice" typeId="a111-8656-5c05-7415" value="16"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry type="model" import="true" name="Golden Sentinel B" hidden="false" id="aa53-6326-78b4-141d" collective="false">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3a47-6b2f-b4f9-2bb2" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </constraints>
+          <profiles>
+            <profile name="Golden Sentinel B" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile" hidden="false" id="c1d5-58df-fedf-02a6">
+              <characteristics>
+                <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
+                <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+                <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">3</characteristic>
+                <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+                <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
+                <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+                <characteristic name="Ki" typeId="3969-9568-a914-6854">2</characteristic>
+                <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+                <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">6</characteristic>
+                <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">6 OOOOO O</characteristic>
+                <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <categoryLinks>
+            <categoryLink name="Armour" hidden="false" id="4285-1d7c-b8ba-e255" targetId="f322-702a-ff62-b37e" primary="false"/>
+            <categoryLink name="Imperial" hidden="false" id="2256-6f5e-3492-009e" targetId="1a5c-7165-4266-4fbc" primary="false"/>
+            <categoryLink name="Non-Unique" hidden="false" id="1a59-acde-4547-04b1" targetId="d181-219d-3add-d47b" primary="false"/>
+            <categoryLink name="Samurai" hidden="false" id="75eb-c2e9-76d4-6673" targetId="e12a-f782-3281-7444" primary="false"/>
+            <categoryLink name="Golden Sentinel" hidden="false" id="c58e-97b4-3b48-bd47" targetId="0439-8071-d012-a4e1" primary="false"/>
+          </categoryLinks>
+          <entryLinks>
+            <entryLink import="true" name="Enhancements" hidden="false" id="6173-673f-78aa-e254" collective="false" targetId="f486-4498-03e3-c397" type="selectionEntryGroup"/>
+            <entryLink import="true" name="Enhancements" hidden="true" id="9cf1-527f-376b-479a" type="selectionEntryGroup" targetId="36a2-c9ac-5af8-2f4b"/>
+          </entryLinks>
+          <costs>
+            <cost name=" Rice" typeId="a111-8656-5c05-7415" value="16"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0"/>
+      </costs>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="95ba-13e7-e7bb-5dba" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden"/>
+            <modifier type="set-primary" value="0ca8-2040-37f2-a1e0" field="category"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
+    </selectionEntry>
   </selectionEntries>
   <entryLinks>
     <entryLink import="true" name="Yu" hidden="false" id="203b-3316-7d20-7388" type="selectionEntry" targetId="df96-c357-cba6-d5fe">
       <entryLinks>
-        <entryLink import="true" name="Enhancements" hidden="true" id="d1bc-2fe4-8c7d-6d17" type="selectionEntryGroup" targetId="36a2-c9ac-5af8-2f4b">
-          <modifiers>
-            <modifier type="set" value="false" field="hidden">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="roster" childId="95ba-13e7-e7bb-5dba" shared="true" includeChildSelections="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </entryLink>
+        <entryLink import="true" name="Enhancements" hidden="true" id="f969-8bb3-ea97-4376" type="selectionEntryGroup" targetId="36a2-c9ac-5af8-2f4b"/>
       </entryLinks>
       <modifierGroups>
         <modifierGroup type="and">
@@ -1135,15 +1305,7 @@ While a Bǎi Qiān model has an Air Token it may use Ki Feats on Azure models&ap
     </entryLink>
     <entryLink import="true" name="Zhongwei" hidden="false" id="6fad-f829-5bce-5486" type="selectionEntry" targetId="2e04-4ddb-7365-5607">
       <entryLinks>
-        <entryLink import="true" name="Enhancements" hidden="true" id="bd05-3403-45bb-b5d3" type="selectionEntryGroup" targetId="36a2-c9ac-5af8-2f4b">
-          <modifiers>
-            <modifier type="set" value="false" field="hidden">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="roster" childId="95ba-13e7-e7bb-5dba" shared="true" includeChildSelections="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </entryLink>
+        <entryLink import="true" name="Enhancements" hidden="true" id="bd05-3403-45bb-b5d3" type="selectionEntryGroup" targetId="36a2-c9ac-5af8-2f4b"/>
       </entryLinks>
       <modifierGroups>
         <modifierGroup type="and">
@@ -1159,15 +1321,7 @@ While a Bǎi Qiān model has an Air Token it may use Ki Feats on Azure models&ap
     </entryLink>
     <entryLink import="true" name="Yizhi" hidden="false" id="6a73-086d-7fb3-a46a" type="selectionEntry" targetId="27e0-cd04-df15-eeee">
       <entryLinks>
-        <entryLink import="true" name="Enhancements" hidden="true" id="d3a9-fbed-1c70-1c44" type="selectionEntryGroup" targetId="36a2-c9ac-5af8-2f4b">
-          <modifiers>
-            <modifier type="set" value="false" field="hidden">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="roster" childId="95ba-13e7-e7bb-5dba" shared="true" includeChildSelections="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </entryLink>
+        <entryLink import="true" name="Enhancements" hidden="true" id="14ab-2325-96d2-d25a" type="selectionEntryGroup" targetId="36a2-c9ac-5af8-2f4b"/>
       </entryLinks>
       <modifierGroups>
         <modifierGroup type="and">
@@ -1183,15 +1337,7 @@ While a Bǎi Qiān model has an Air Token it may use Ki Feats on Azure models&ap
     </entryLink>
     <entryLink import="true" name="Yanjing" hidden="false" id="f026-e20c-b7b2-6b51" type="selectionEntry" targetId="63be-6949-c902-f788">
       <entryLinks>
-        <entryLink import="true" name="Enhancements" hidden="true" id="6ccd-af7d-5089-0d9a" type="selectionEntryGroup" targetId="36a2-c9ac-5af8-2f4b">
-          <modifiers>
-            <modifier type="set" value="false" field="hidden">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="roster" childId="95ba-13e7-e7bb-5dba" shared="true" includeChildSelections="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </entryLink>
+        <entryLink import="true" name="Enhancements" hidden="true" id="fa43-00e4-50e7-bd57" type="selectionEntryGroup" targetId="36a2-c9ac-5af8-2f4b"/>
       </entryLinks>
       <modifierGroups>
         <modifierGroup type="and">
@@ -1207,15 +1353,7 @@ While a Bǎi Qiān model has an Air Token it may use Ki Feats on Azure models&ap
     </entryLink>
     <entryLink import="true" name="Xi" hidden="false" id="08c4-b872-7e3f-6092" type="selectionEntry" targetId="b001-2a9b-ef61-6d68">
       <entryLinks>
-        <entryLink import="true" name="Enhancements" hidden="true" id="6b51-dab3-9912-17dd" type="selectionEntryGroup" targetId="36a2-c9ac-5af8-2f4b">
-          <modifiers>
-            <modifier type="set" value="false" field="hidden">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="roster" childId="95ba-13e7-e7bb-5dba" shared="true" includeChildSelections="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </entryLink>
+        <entryLink import="true" name="Enhancements" hidden="true" id="26f0-42d5-bc7d-1728" type="selectionEntryGroup" targetId="36a2-c9ac-5af8-2f4b"/>
       </entryLinks>
       <modifierGroups>
         <modifierGroup type="and">
@@ -1241,31 +1379,13 @@ While a Bǎi Qiān model has an Air Token it may use Ki Feats on Azure models&ap
           </modifiers>
         </modifierGroup>
       </modifierGroups>
-    </entryLink>
-    <entryLink import="true" name="Golden Sentinel" hidden="false" id="7f63-73e4-e0b6-f4e9" type="selectionEntry" targetId="49fb-d207-3a25-9327">
-      <modifierGroups>
-        <modifierGroup type="and">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="roster" childId="95ba-13e7-e7bb-5dba" shared="true" includeChildSelections="true" includeChildForces="true"/>
-          </conditions>
-          <modifiers>
-            <modifier type="set" value="false" field="hidden"/>
-            <modifier type="set-primary" value="0ca8-2040-37f2-a1e0" field="category"/>
-          </modifiers>
-        </modifierGroup>
-      </modifierGroups>
+      <entryLinks>
+        <entryLink import="true" name="Enhancements" hidden="true" id="49df-866d-374f-f15b" type="selectionEntryGroup" targetId="36a2-c9ac-5af8-2f4b"/>
+      </entryLinks>
     </entryLink>
     <entryLink import="true" name="General Wu Shuo" hidden="false" id="4838-566a-e47e-a69b" type="selectionEntry" targetId="1eb3-cf68-2452-b5de">
       <entryLinks>
-        <entryLink import="true" name="Enhancements" hidden="true" id="ec88-32c3-a56e-b25b" type="selectionEntryGroup" targetId="36a2-c9ac-5af8-2f4b">
-          <modifiers>
-            <modifier type="set" value="false" field="hidden">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="roster" childId="95ba-13e7-e7bb-5dba" shared="true" includeChildSelections="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </entryLink>
+        <entryLink import="true" name="Enhancements" hidden="true" id="ec88-32c3-a56e-b25b" type="selectionEntryGroup" targetId="36a2-c9ac-5af8-2f4b"/>
       </entryLinks>
       <modifierGroups>
         <modifierGroup type="and">
