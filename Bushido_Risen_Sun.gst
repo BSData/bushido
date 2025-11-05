@@ -261,6 +261,7 @@
     <categoryEntry id="5a76-c3ea-5cb7-471f" name="Faction: The Awoken" hidden="false"/>
     <categoryEntry name="Disallow Equipment" id="ac80-29b0-dc43-5a14" hidden="false"/>
     <categoryEntry name="Permit Faction Enhancements" id="e770-d8d3-2ca6-962e" hidden="false"/>
+    <categoryEntry name="Cycle: Consequences" id="c13c-a06d-22fe-e254" hidden="false"/>
   </categoryEntries>
   <forceEntries>
     <forceEntry id="2150-40b1-52f8-4a8a" name="Risen Sun" hidden="false">
