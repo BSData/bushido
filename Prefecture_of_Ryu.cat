@@ -198,7 +198,7 @@ Permitted [Ashigaru, Shisai]</characteristic>
           <characteristics>
             <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">- Models with Leadership gain Leadership (+0/+2&quot;)
 - In the Starting Phase, gain a Pass Token for each Friendly model that was recruited into the Warband that is currently removed from play
-
+- Ashigaru gain Steadfast and Co-ordinated Attack [Ashigaru] while declaring and performing any Action due to a Friendly model&apos;s Command trait.
 
 Permitted [Samurai, Ashigaru]</characteristic>
           </characteristics>
@@ -210,6 +210,10 @@ Permitted [Samurai, Ashigaru]</characteristic>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0"/>
       </costs>
+      <infoLinks>
+        <infoLink name="Co-ordinated Attack" id="dc85-a3e3-66f8-1521" hidden="false" type="rule" targetId="2337-7bcc-c1f2-f2bd"/>
+        <infoLink name="Steadfast" id="d7cd-f869-aa09-7522" hidden="false" type="rule" targetId="95e7-3178-c29b-013c"/>
+      </infoLinks>
     </selectionEntry>
     <selectionEntry id="9212-6a6f-63a7-3981" name="Steady the Line" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -2278,7 +2282,9 @@ Permitted [Samurai, Ashigaru]</characteristic>
           <profiles>
             <profile id="55e3-c03e-431e-8516" name="Deployment" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
               <characteristics>
-                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">After setting up normal terrain, choose Deployment Zones (before setting up terrain that is part of either Warband) then add or remove one piece of Large or smaller terrain using the normal terrain set up rules.</characteristic>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">After setting up normal terrain, choose Deployment Zones (before setting up terrain that is part of either Warband) then either remove one piece of Large or smaller Pool Terrain or Deploy a Pool Terrain element no larger than a 50mm base using the relevant terrain set up rules.
+It is permitted to bring a 50mm piece of terrain specifically for this ability, in case the Pool has no suitable terrain.
+This Terrain Element has visibility, passage and size traits, declare these when deployed, it may not have model traits or other effects.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -4927,8 +4933,8 @@ This model may be recruited into a Warband that has recruited the Claws of the D
             <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
             <characteristic name="Move" typeId="91b7-833e-fd8e-a620">3</characteristic>
             <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
-            <characteristic name="Ki" typeId="3969-9568-a914-6854">1</characteristic>
-            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">2</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c">3</characteristic>
             <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">8</characteristic>
             <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">9 OOOOO OOOO</characteristic>
             <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Medium 40mm</characteristic>
@@ -4971,9 +4977,8 @@ This model may be recruited into a Warband that has recruited the Claws of the D
             </profile>
             <profile name="Unique Effects" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects" hidden="false" id="7a7b-3dbe-3cb5-702a">
               <characteristics>
-                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">While this model has any Shame Tokens, this model&apos;s Warband cannot score Scenario Points and models in this Warband may not perform Scenario Actions.
-
-
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">If this model is Killed or Removed from Play, Friendly models may not have Shame Tokens removed for the rest of the game except by the Hari-Kiri Ki Feat.
+You may recruit this model for -X Rice, where X is the number of Shamed models recruited into the Warband.
 This model may only be recruited into any Warband recruiting the Passing the Night Theme.</characteristic>
               </characteristics>
             </profile>
@@ -5009,6 +5014,14 @@ This model may only be recruited into any Warband recruiting the Passing the Ni
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="decrement" value="1" field="a111-8656-5c05-7415">
+          <repeats>
+            <repeat value="1" repeats="1" field="selections" scope="roster" childId="8ee4-973e-c851-41cf" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
+          </repeats>
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="8ee4-973e-c851-41cf" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
       </modifiers>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Passing the Night" hidden="false" id="71c9-d30d-3c77-ae9c">
@@ -5018,16 +5031,16 @@ This model may only be recruited into any Warband recruiting the Passing the Ni
       <profiles>
         <profile name="Passing the Night" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card" hidden="false" id="3790-18db-61ef-015e">
           <characteristics>
-            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">- In the Starting Phase, the opponent must give a Shame Token to a number of models in this Warband equal to the turn number.
-- While a Friendly Faction Samurai model has no Shame Tokens, it gains the following benefits:
+            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">- In the Starting Phase, the opponent must give 1 Shame Token to each Friendly Samurai that is not a Shamed model and then 1 Shame Token to a number of Friendly models equal to the turn number. 
+- Friendly models that are not Ton may only have one Shame Token.
+- While a Friendly Faction Samurai or Shisai model has no Shame Tokens, it gains the following benefits:
   - Fearless
   - Melee Boost (2)
   - Spirit (+1)
   - Melee Weapons gain +1 Melee Weapon Strength
   - Lose Slow
 
-
-
+Warbands recruiting this Theme must recruit Hida.
 Permitted: [Samurai, Shisai, Ronin Shisai]</characteristic>
           </characteristics>
         </profile>
@@ -5117,9 +5130,8 @@ Permitted: [Samurai, Shisai, Ronin Shisai]</characteristic>
             <profile name="Unique Effects" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects" hidden="false" id="b0ba-1547-9685-700d">
               <characteristics>
                 <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">When this model takes Damage in a Melee Exchange, all Friendly models gain a Shame Token.
-If this model is Killed or Removed from Play, models may not have Shame Tokens removed for the rest of the game.
+If this model is Killed or Removed from Play, this Warband cannot score Scenario Points and models in this Warband may not perform Scenario Actions for the rest of the turn.
 This model may have Equipment Attached that has Requirement [Fujitaka].
-
 
 This model may only be recruited into any Warband recruiting the Passing the Night Theme.</characteristic>
               </characteristics>
@@ -5132,11 +5144,17 @@ This model may only be recruited into any Warband recruiting the Passing the Ni
       </entryLinks>
       <constraints>
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="5b74-bf73-b8d7-4e68" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+        <constraint type="min" value="0" field="selections" scope="roster" shared="true" id="ae83-a4d5-84d8-1755" includeChildSelections="true"/>
       </constraints>
       <modifiers>
         <modifier type="set" value="true" field="hidden">
           <conditions>
             <condition type="lessThan" value="1" field="selections" scope="roster" childId="71c9-d30d-3c77-ae9c" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="1" field="ae83-a4d5-84d8-1755">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="71c9-d30d-3c77-ae9c" shared="true" includeChildSelections="true"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -6091,6 +6109,44 @@ Requirement: [Passing the Night theme]</characteristic>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="15"/>
       </costs>
     </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Sacrifice" hidden="false" id="87ea-6dd2-fdcb-043d" collective="false">
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="71c9-d30d-3c77-ae9c" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="f20e-48e3-3bd6-4364" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+      </constraints>
+      <profiles>
+        <profile name="Sacrifice" typeId="bd15-7ead-9268-3576" typeName="Special Card (Ki Feat)" hidden="false" id="e484-5363-bfa5-9b4c">
+          <characteristics>
+            <characteristic name="Description" typeId="17eb-17e2-4df4-5c5d">Choose a Friendly Samurai model to gain the following Ki Feat:
+
+Requirement [Passing the Night theme]</characteristic>
+            <characteristic name="Name" typeId="27c7-1649-f16e-8eaa">Hari-Kiri</characteristic>
+            <characteristic name="Cost" typeId="e410-b220-64e5-7953">1</characteristic>
+            <characteristic name="Timing" typeId="b9bf-562a-fe26-cb29">Instant</characteristic>
+            <characteristic name="Subject" typeId="47b8-f739-9d50-2e45">Personal</characteristic>
+            <characteristic name="Limitation" typeId="870e-79e4-80ee-c0cc">noBtB</characteristic>
+            <characteristic name="Ki Feat Description" typeId="3886-242b-fb70-5c88">Use this Ki Feat any time except during a model’s Activation. Remove this model from play.
+For each unmarked Damage Box on this model, remove a Shame Token from another Friendly model.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink name="Faction Event Cards" hidden="false" id="1f13-5c28-a9ca-89a8" targetId="d360-71aa-ca22-ba3c" primary="true"/>
+      </categoryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1"/>
+      </costs>
+    </selectionEntry>
   </selectionEntries>
   <entryLinks>
     <entryLink id="d149-3ea0-90df-a450" name="Ancestor Spirit" hidden="false" collective="false" import="true" targetId="a8a8-fc30-a7e2-2913" type="selectionEntry">
@@ -6283,7 +6339,7 @@ Requirement: [Passing the Night theme]</characteristic>
         <entryLink id="b98d-07ee-a5f2-9394" name="Enhancements" hidden="false" collective="false" import="true" targetId="3dad-1423-9b3c-86a7" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
-        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="10"/>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="8"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="339d-b7e6-d0dc-b022" name="Ryu Houseguard" hidden="false" collective="false" import="true" type="model">
@@ -6960,46 +7016,6 @@ Requirement [Bairei, Passing the Night theme]</characteristic>
           </categoryLinks>
           <costs>
             <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="87ea-6dd2-fdcb-043d" name="Sacrifice" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition type="notInstanceOf" value="0" field="selections" scope="parent" childId="e12a-f782-3281-7444" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="71c9-d30d-3c77-ae9c" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f20e-48e3-3bd6-4364" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4bee-b177-af2b-c019" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="e484-5363-bfa5-9b4c" name="Sacrifice" hidden="false" typeId="bd15-7ead-9268-3576" typeName="Special Card (Ki Feat)">
-              <characteristics>
-                <characteristic name="Description" typeId="17eb-17e2-4df4-5c5d">Attached model gains the following Ki feat:
-
-
-Requirement [Samurai, Passing the Night theme]</characteristic>
-                <characteristic name="Name" typeId="27c7-1649-f16e-8eaa">Hari-Kiri</characteristic>
-                <characteristic name="Cost" typeId="e410-b220-64e5-7953">4</characteristic>
-                <characteristic name="Timing" typeId="b9bf-562a-fe26-cb29">Instant</characteristic>
-                <characteristic name="Subject" typeId="47b8-f739-9d50-2e45">Personal</characteristic>
-                <characteristic name="Limitation" typeId="870e-79e4-80ee-c0cc">noBtB</characteristic>
-                <characteristic name="Ki Feat Description" typeId="3886-242b-fb70-5c88">Remove this model from play. For each unmarked Damage Box on this model, remove a Shame Token from another model.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <categoryLinks>
-            <categoryLink id="947d-8087-3223-46f1" name="Faction Enhancement Cards" hidden="false" targetId="17cf-d9a9-c7c1-bcb6" primary="true"/>
-          </categoryLinks>
-          <costs>
-            <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="19e9-63bb-3c9a-369d" name="Retribution" hidden="false" collective="false" import="true" type="upgrade">
