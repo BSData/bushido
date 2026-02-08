@@ -138,7 +138,8 @@ This effect ends if all Poison Markers are removed from the Enemy model.</charac
       <profiles>
         <profile id="a259-d456-6bb3-a6e9" name="The Blessed" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
           <characteristics>
-            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">- Friendly Shisai gain double Ki Tokens on the Ki Generation step of the first turn.
+            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">- Hebimiman models recruited into this Warband cost -1 RC.
+- Friendly Shisai gain double Ki Tokens on the Ki Generation step of the first turn.
 - Each turn choose 1 Friendly Hebimmiman model. That model may be given up to 3 Blood of Orochi Tokens in the Starting Phase instead of 2.
 - During Deployment you may assign a Virtue Token to up to 2 Friendly Faction models.
 - When a Friendly model would apply a Poison Marker to an Enemy model that has Immune [Poison], instead apply a Fire Marker of the same Value.
@@ -163,16 +164,19 @@ Permitted [Acolyte, Jade Mamba, models with Blood of Orochi, Snake]</characteris
           <profiles>
             <profile id="ffd8-3225-68cc-385f" name="Shimogamo Viper" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
               <characteristics>
-                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Cloudwalk, Evasive, Flank, Insignificant, Jump Up</characteristic>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Aloof, Cloudwalk, Evasive, Flank, Group, Jump Up, Range Defence (1)</characteristic>
               </characteristics>
             </profile>
           </profiles>
           <infoLinks>
             <infoLink id="afe6-16ec-cea8-4774" name="Flank" hidden="false" targetId="a847-f02d-7e99-8a66" type="rule"/>
             <infoLink id="5da1-77a3-9f1f-30f4" name="Jump Up" hidden="false" targetId="1575-e12f-4ca3-c557" type="rule"/>
-            <infoLink id="ab0b-99c5-33a9-d817" name="Cloudwalk" hidden="false" targetId="538c-1266-626b-fcc9" type="rule"/>
-            <infoLink id="cdea-887f-d832-6f59" name="Evasive" hidden="false" targetId="b0f8-d197-536b-c8fc" type="rule"/>
+            <infoLink id="ab0b-99c5-33a9-d817" name="Group" hidden="false" targetId="4c02-03a1-ae7b-7821" type="rule"/>
+            <infoLink id="cdea-887f-d832-6f59" name="Aloof" hidden="false" targetId="5101-70fc-eca4-d99b" type="rule"/>
             <infoLink id="6fb5-c67a-10fd-10d6" name="Insignificant" hidden="false" targetId="1614-d86c-ef8a-c095" type="rule"/>
+            <infoLink id="1c84-db6a-24f1-8c1b" name="Cloudwalk" hidden="false" targetId="538c-1266-626b-fcc9" type="rule"/>
+            <infoLink id="efe3-8f15-90cd-dd41" name="Ranged Defence " hidden="false" targetId="9b8d-9ca9-e25d-3988" type="rule"/>
+            <infoLink id="e5a7-fa70-66be-12fd" name="Evasive" hidden="false" targetId="b0f8-d197-536b-c8fc" type="rule"/>
           </infoLinks>
         </infoGroup>
         <infoGroup id="7bad-950f-a0a2-6355" name="Melee Weapon" hidden="false">
@@ -189,6 +193,15 @@ Permitted [Acolyte, Jade Mamba, models with Blood of Orochi, Snake]</characteris
           <infoLinks>
             <infoLink id="814d-ed74-ef0f-08d2" name="Poison " hidden="false" targetId="7290-85f4-42cf-0b75" type="rule"/>
           </infoLinks>
+        </infoGroup>
+        <infoGroup name="Unique Effects" id="6d7c-8e8e-6faf-2919" hidden="false">
+          <profiles>
+            <profile name="Unique Effects" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects" hidden="false" id="9e8d-1827-5d1d-09f5">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">This model does not suffer Melee penalties for having Run.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
         </infoGroup>
       </infoGroups>
       <categoryLinks>
@@ -217,7 +230,7 @@ Permitted [Acolyte, Jade Mamba, models with Blood of Orochi, Snake]</characteris
                 <characteristic name="Ki" typeId="3969-9568-a914-6854">1</characteristic>
                 <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
                 <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">0</characteristic>
-                <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">OOO</characteristic>
+                <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">4 OOOO</characteristic>
                 <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
               </characteristics>
             </profile>
@@ -239,7 +252,7 @@ Permitted [Acolyte, Jade Mamba, models with Blood of Orochi, Snake]</characteris
                 <characteristic name="Ki" typeId="3969-9568-a914-6854">1</characteristic>
                 <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
                 <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">0</characteristic>
-                <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">OOO</characteristic>
+                <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">4 OOOO</characteristic>
                 <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
               </characteristics>
             </profile>
@@ -260,6 +273,11 @@ Permitted [Acolyte, Jade Mamba, models with Blood of Orochi, Snake]</characteris
               </conditions>
             </conditionGroup>
           </conditionGroups>
+        </modifier>
+        <modifier type="decrement" value="1" field="a111-8656-5c05-7415">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="88f0-9b34-3c84-dbc2" shared="true" includeChildSelections="true"/>
+          </conditions>
         </modifier>
       </modifiers>
       <constraints>
@@ -512,6 +530,11 @@ Exclusion [Hebimiman]</characteristic>
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="decrement" value="1" field="a111-8656-5c05-7415">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="88f0-9b34-3c84-dbc2" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="53b6-e8e4-59c9-c951" type="max"/>
@@ -612,6 +635,11 @@ Exclusion [Hebimiman]</characteristic>
               </conditions>
             </conditionGroup>
           </conditionGroups>
+        </modifier>
+        <modifier type="decrement" value="1" field="a111-8656-5c05-7415">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="88f0-9b34-3c84-dbc2" shared="true" includeChildSelections="true"/>
+          </conditions>
         </modifier>
       </modifiers>
       <constraints>
@@ -967,6 +995,11 @@ Exclusion [Hebimiman]</characteristic>
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="decrement" value="1" field="a111-8656-5c05-7415">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="88f0-9b34-3c84-dbc2" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="195e-f520-2096-04ce" type="max"/>
@@ -1137,6 +1170,11 @@ Exclusion [Hebimiman]</characteristic>
               </conditions>
             </conditionGroup>
           </conditionGroups>
+        </modifier>
+        <modifier type="decrement" value="1" field="a111-8656-5c05-7415">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="88f0-9b34-3c84-dbc2" shared="true" includeChildSelections="true"/>
+          </conditions>
         </modifier>
       </modifiers>
       <constraints>
@@ -1590,6 +1628,7 @@ This model&apos;s weapons gains Poison (1/1)</characteristic>
         <categoryLink id="1b44-9d40-e6d0-67ce" name="Jade Mamba" hidden="false" targetId="fdf7-5d79-7702-04a7" primary="false"/>
         <categoryLink id="d16c-e007-db90-f73e" name="Non-Unique" hidden="false" targetId="d181-219d-3add-d47b" primary="false"/>
         <categoryLink id="9834-9440-14f8-1765" name="Armour" hidden="false" targetId="f322-702a-ff62-b37e" primary="false"/>
+        <categoryLink targetId="3134-f1cd-dcfc-649f" id="f171-d88d-917d-51b6" primary="false" name="Acolyte"/>
       </categoryLinks>
       <entryLinks>
         <entryLink id="6137-0084-0557-54f6" name="Jade Mamba Guard" hidden="false" collective="false" import="true" targetId="87f9-35a8-5648-99a7" type="selectionEntry">
@@ -1869,15 +1908,16 @@ This model may only Channel to models with the Blood of Orochi trait.</character
           <profiles>
             <profile id="359f-eb9c-91fe-3945" name="Kyou" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
               <characteristics>
-                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Aware, Blood of Orochi (1), Immune [Poison], Indomitable (1)</characteristic>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Aware, Blood of Orochi (1), Immune [Poison], Indomitable (1), Ranged Defence (1)</characteristic>
               </characteristics>
             </profile>
           </profiles>
           <infoLinks>
             <infoLink id="e2a8-3692-bfcf-bd53" name="Blood of Orochi" hidden="false" targetId="7a5a-2e8e-4a81-c48f" type="rule"/>
-            <infoLink id="0882-8e33-c09a-5e87" name="Aware" hidden="false" targetId="ff4a-6b14-09dd-2343" type="rule"/>
+            <infoLink id="0882-8e33-c09a-5e87" name="Ranged Defence " hidden="false" targetId="9b8d-9ca9-e25d-3988" type="rule"/>
             <infoLink id="34c2-64d4-e0b1-567f" name="Immune" hidden="false" targetId="ea08-b25e-0ea8-af73" type="rule"/>
             <infoLink id="e7f9-e068-9170-237f" name="Indomitable " hidden="false" targetId="3beb-6f28-e7c4-a236" type="rule"/>
+            <infoLink id="3bba-e66d-613c-012f" name="Aware" hidden="false" targetId="ff4a-6b14-09dd-2343" type="rule"/>
           </infoLinks>
         </infoGroup>
         <infoGroup id="e291-06d0-4b29-69f4" name="Melee Weapon" hidden="false">
@@ -1902,8 +1942,9 @@ This model may only Channel to models with the Blood of Orochi trait.</character
           <profiles>
             <profile id="e5c4-d350-cc76-2cc3" name="Virtue" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
               <characteristics>
-                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">While this model is in play, when a Friendly model spends a Virtue Token you may choose the following effect:
-• This model may immediately Rotate to Face any direction. This does not count as moving.</characteristic>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">While this model is in play, when a Friendly model spends a Virtue Token you may choose one of the following effects:
+- This model may immediately rotate to face any direction. This does not count as Moving.
+- This model’s Melee Weapon’s Strength becomes +1 until the current Melee Exchange is resolved.</characteristic>
               </characteristics>
             </profile>
             <profile id="fa79-12b8-36df-2b49" name="Kyou" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
@@ -1943,6 +1984,11 @@ This model may only Channel to models with the Blood of Orochi trait.</character
               </conditions>
             </conditionGroup>
           </conditionGroups>
+        </modifier>
+        <modifier type="decrement" value="1" field="a111-8656-5c05-7415">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="88f0-9b34-3c84-dbc2" shared="true" includeChildSelections="true"/>
+          </conditions>
         </modifier>
       </modifiers>
       <constraints>
@@ -2049,6 +2095,11 @@ This model may only Channel to models with the Blood of Orochi trait.</character
               </conditions>
             </conditionGroup>
           </conditionGroups>
+        </modifier>
+        <modifier type="decrement" value="1" field="a111-8656-5c05-7415">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="88f0-9b34-3c84-dbc2" shared="true" includeChildSelections="true"/>
+          </conditions>
         </modifier>
       </modifiers>
       <constraints>
@@ -2213,7 +2264,7 @@ This model may only Channel to models with the Blood of Orochi trait.</character
         <entryLink id="dabf-fe25-cf8f-dbfe" name="Enhancements" hidden="false" collective="false" import="true" targetId="c1b7-60f5-a313-5345" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
-        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="13"/>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="10"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="0a47-dab0-f00e-eaa4" name="Satoshi" hidden="false" collective="false" import="true" type="model">
@@ -2394,7 +2445,7 @@ This model may only Channel to models with the Blood of Orochi trait.</character
         <entryLink id="6e79-68e8-3f2e-26c1" name="Enhancements" hidden="false" collective="false" import="true" targetId="c1b7-60f5-a313-5345" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
-        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="14"/>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="11"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="5ce0-001b-dd6f-f0ae" name="Taisei" hidden="false" collective="false" import="true" type="model">
@@ -2407,6 +2458,11 @@ This model may only Channel to models with the Blood of Orochi trait.</character
               </conditions>
             </conditionGroup>
           </conditionGroups>
+        </modifier>
+        <modifier type="decrement" value="1" field="a111-8656-5c05-7415">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="88f0-9b34-3c84-dbc2" shared="true" includeChildSelections="true"/>
+          </conditions>
         </modifier>
       </modifiers>
       <constraints>
@@ -2555,6 +2611,7 @@ This model may only Channel to models with the Blood of Orochi trait.</character
         <categoryLink id="938c-0e9c-dd07-9c1e" name="Jade Mamba" hidden="false" targetId="fdf7-5d79-7702-04a7" primary="false"/>
         <categoryLink id="db8a-e5ff-0ee8-4cb9" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
         <categoryLink id="f991-17d3-8bcc-2510" name="Armour" hidden="false" targetId="f322-702a-ff62-b37e" primary="false"/>
+        <categoryLink targetId="3134-f1cd-dcfc-649f" id="1ffb-4ead-9a43-e4f5" primary="false" name="Acolyte"/>
       </categoryLinks>
       <entryLinks>
         <entryLink id="d077-2668-4fa3-58da" name="Enhancements" hidden="false" collective="false" import="true" targetId="c1b7-60f5-a313-5345" type="selectionEntryGroup"/>
@@ -2752,6 +2809,11 @@ This model may only Channel to models with the Blood of Orochi trait.</character
               </conditions>
             </conditionGroup>
           </conditionGroups>
+        </modifier>
+        <modifier type="decrement" value="1" field="a111-8656-5c05-7415">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="88f0-9b34-3c84-dbc2" shared="true" includeChildSelections="true"/>
+          </conditions>
         </modifier>
       </modifiers>
       <constraints>
@@ -3168,6 +3230,11 @@ This model may only Channel to models with the Blood of Orochi trait.</character
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="decrement" value="1" field="a111-8656-5c05-7415">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="88f0-9b34-3c84-dbc2" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a952-a9fe-b584-85a7" type="max"/>
@@ -3341,7 +3408,7 @@ This model may only Channel to models with the Blood of Orochi trait.</character
         <entryLink id="4ea3-14c2-5a68-de04" name="Enhancements" hidden="false" collective="false" import="true" targetId="c1b7-60f5-a313-5345" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
-        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="14"/>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="12"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="4be7-a84f-507f-de4b" name="Ito Kinu" hidden="false" collective="false" import="true" type="model">
@@ -3531,6 +3598,11 @@ All Friendly Shisai models gain 2 Ki Tokens.</characteristic>
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="decrement" value="1" field="a111-8656-5c05-7415">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="88f0-9b34-3c84-dbc2" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="652b-f4ad-c9c1-5ee8" type="max"/>
@@ -3588,7 +3660,8 @@ All Friendly Shisai models gain 2 Ki Tokens.</characteristic>
         </infoGroup>
         <infoGroup id="edfc-b2a4-a630-1252" name="Ki Feats" hidden="false">
           <infoLinks>
-            <infoLink id="ca9e-f3f1-ab1b-9564" name="Skewer" hidden="false" targetId="36f6-4acc-2f2a-145a" type="infoGroup"/>
+            <infoLink id="ca9e-f3f1-ab1b-9564" name="Slither" hidden="false" targetId="ab39-3a2c-6bc5-397f" type="infoGroup"/>
+            <infoLink id="5ef4-dfc4-b587-c17f" name="Skewer" hidden="false" targetId="36f6-4acc-2f2a-145a" type="infoGroup"/>
           </infoLinks>
         </infoGroup>
       </infoGroups>
@@ -3619,6 +3692,11 @@ All Friendly Shisai models gain 2 Ki Tokens.</characteristic>
               </conditions>
             </conditionGroup>
           </conditionGroups>
+        </modifier>
+        <modifier type="decrement" value="1" field="a111-8656-5c05-7415">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="88f0-9b34-3c84-dbc2" shared="true" includeChildSelections="true"/>
+          </conditions>
         </modifier>
       </modifiers>
       <constraints>
@@ -3662,7 +3740,7 @@ All Friendly Shisai models gain 2 Ki Tokens.</characteristic>
               <characteristics>
                 <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+0</characteristic>
                 <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Chain Weapon (1), Reach</characteristic>
-                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Grapple Attack (1), Sweep Attack (1), Sidestep Defence (0)</characteristic>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Grapple Attack (0), Sweep Attack (1), Sidestep Defence (0)</characteristic>
                 <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
               </characteristics>
             </profile>
@@ -3732,7 +3810,7 @@ All Friendly Shisai models gain 2 Ki Tokens.</characteristic>
           <profiles>
             <profile id="f7ed-cf4a-1800-1bee" name="Ito Koburai" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
               <characteristics>
-                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Aggressive, Impetuous (2), Jump Up, Lightning Reflexes, Parry (1), Prowess [Melee, Move](1), Split Attack</characteristic>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Aggressive, Impetuous (2), Jump Up, Lightning Reflexes, Parry (1), Prowess [Melee, Move](1), Ranged Defence (1), Split Attack</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -3744,6 +3822,7 @@ All Friendly Shisai models gain 2 Ki Tokens.</characteristic>
             <infoLink id="00f3-f684-4f2c-12b5" name="Prowess " hidden="false" targetId="75ef-327a-cd08-a248" type="rule"/>
             <infoLink id="3935-1f2c-c637-4d57" name="Split Attack" hidden="false" targetId="92d0-d4fe-e58e-7535" type="rule"/>
             <infoLink id="3d9d-f71d-3f81-ebe9" name="Impetuous" hidden="false" targetId="4b80-3180-0b04-fb11" type="rule"/>
+            <infoLink name="Ranged Defence " id="71a7-ad8d-eca5-34bf" hidden="false" targetId="9b8d-9ca9-e25d-3988" type="rule"/>
           </infoLinks>
         </infoGroup>
         <infoGroup id="1c99-5a24-2d15-51f8" name="Melee Weapon" hidden="false">
@@ -4045,6 +4124,11 @@ When this model&apos;s Last Stand trait is triggered, the nearest Friendly Shuge
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="decrement" value="1" field="a111-8656-5c05-7415">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="88f0-9b34-3c84-dbc2" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1944-8d93-c9c2-de80" type="max"/>
@@ -4143,6 +4227,11 @@ When this model&apos;s Last Stand trait is triggered, the nearest Friendly Shuge
               </conditions>
             </conditionGroup>
           </conditionGroups>
+        </modifier>
+        <modifier type="decrement" value="1" field="a111-8656-5c05-7415">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="88f0-9b34-3c84-dbc2" shared="true" includeChildSelections="true"/>
+          </conditions>
         </modifier>
       </modifiers>
       <constraints>
@@ -4553,6 +4642,11 @@ While involved in a Melee Exchange with this model, Enemy models cannot benefit
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="decrement" value="1" field="a111-8656-5c05-7415">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="88f0-9b34-3c84-dbc2" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1a68-ef5c-dd5d-9243" type="max"/>
@@ -4623,8 +4717,9 @@ While involved in a Melee Exchange with this model, Enemy models cannot benefit
               <characteristics>
                 <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">This model&apos;s Melee Pool cannot be modified by States.
 
-
-When allocating Blood of Orochi  Tokens, this model may spend Ki to allocate additional Blood of Orochi Tokens to Friendly models at one Ki Token per Blood of Orochi Token.</characteristic>
+In the Starting Phase you may choose one of the following abilities:
+- When allocating Blood of Orochi Tokens this model may spend Ki Tokens to allocate additional Blood of Orochi Tokens to the pool at one Ki Token per Blood of Orochi Token. 
+- For each Blood of Orochi token allocated to this model during the Starting Phase, it gains a Ki Token.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -4907,6 +5002,7 @@ When allocating Blood of Orochi  Tokens, this model may spend Ki to allocate ad
       <categoryLinks>
         <categoryLink id="1369-51a6-afed-492a" name="Ashigaru" hidden="false" targetId="f434-17e6-174c-b4f6" primary="false"/>
         <categoryLink id="08ae-adde-c432-4b75" name="Jade Mamba" hidden="false" targetId="fdf7-5d79-7702-04a7" primary="false"/>
+        <categoryLink targetId="3134-f1cd-dcfc-649f" id="a8bc-80a7-fe79-6cb8" primary="false" name="Acolyte"/>
       </categoryLinks>
       <entryLinks>
         <entryLink id="82ed-0d9e-8648-f80f" name="Enhancements" hidden="false" collective="false" import="true" targetId="c1b7-60f5-a313-5345" type="selectionEntryGroup"/>
@@ -4924,7 +5020,7 @@ When allocating Blood of Orochi  Tokens, this model may spend Ki to allocate ad
         <categoryLink id="5159-dbe5-ec8d-7ce8" name="Snake" hidden="false" targetId="5c9f-48df-87d2-af68" primary="false"/>
       </categoryLinks>
       <costs>
-        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="6"/>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="5"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="ec65-c5f9-c8d0-bcc3" name="Okyo Archer" hidden="false" collective="false" import="true" type="model">
