@@ -4066,7 +4066,7 @@ This model cannot be Targeted by Call Lightning Ranged Attacks or by Attacks gen
                 <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+0</characteristic>
                 <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Reach</characteristic>
                 <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d"/>
-                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289">This model may use any non-Exceptional Special Attack or Defence at cost (1).</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289">This model may use any non-Exceptional Special Attack or Defence at cost (0).</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -4192,9 +4192,20 @@ While this model is in play, other models with marked Wound boxes gain +1 Melee 
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="set" value="1" field="9979-64f0-b539-4cc5">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="27e0-cd04-df15-eeee" shared="true" includeChildSelections="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="63be-6949-c902-f788" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="119b-7517-13c5-2ee2" type="max"/>
+        <constraint type="min" value="0" field="selections" scope="roster" shared="true" id="9979-64f0-b539-4cc5" includeChildSelections="true"/>
       </constraints>
       <profiles>
         <profile id="9b7f-7ec6-719f-fc84" name="Xi" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
@@ -4255,6 +4266,15 @@ While this model is in play, other models with marked Wound boxes gain +1 Melee 
             <infoLink id="e2b5-2dcf-5fd9-b940" name="Vengeance" hidden="false" targetId="6779-0aac-2f51-f67e" type="rule"/>
           </infoLinks>
         </infoGroup>
+        <infoGroup name="Unique Effects" id="dc3a-c45f-1831-5f49" hidden="false">
+          <profiles>
+            <profile name="Sisterhood" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects" hidden="false" id="723a-c8e2-cc7d-0bbb">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">The Rice Cost for Yizhi, Xi and Yanjing is 36 for all three models.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </infoGroup>
       </infoGroups>
       <categoryLinks>
         <categoryLink id="d8f4-e3bf-26e6-5a20" name="Princess" hidden="false" targetId="d495-f3e9-2505-e40a" primary="false"/>
@@ -4282,9 +4302,20 @@ While this model is in play, other models with marked Wound boxes gain +1 Melee 
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="set" value="1" field="152d-ec1b-3ace-98ab">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="b001-2a9b-ef61-6d68" shared="true" includeChildSelections="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="27e0-cd04-df15-eeee" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7a51-85d2-cb80-67ba" type="max"/>
+        <constraint type="min" value="0" field="selections" scope="roster" shared="true" id="152d-ec1b-3ace-98ab" includeChildSelections="true"/>
       </constraints>
       <profiles>
         <profile id="3f6a-94f1-31b8-291c" name="Yanjing" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
@@ -4364,6 +4395,15 @@ While this model is in play, other models with marked Wound boxes gain +1 Melee 
             <infoLink id="7921-8fac-f0cf-e7ee" name="Sisterly Bond" hidden="false" targetId="d868-9e9a-012e-7b29" type="infoGroup"/>
           </infoLinks>
         </infoGroup>
+        <infoGroup name="Unique Effects" id="cc14-413f-a726-c971" hidden="false">
+          <profiles>
+            <profile name="Sisterhood" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects" hidden="false" id="46dd-71bf-97a9-4f58">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">The Rice Cost for Yizhi, Xi and Yanjing is 36 for all three models.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </infoGroup>
       </infoGroups>
       <categoryLinks>
         <categoryLink id="16c0-fd6d-1b5d-e32a" name="Imperial" hidden="false" targetId="1a5c-7165-4266-4fbc" primary="false"/>
@@ -4376,7 +4416,7 @@ While this model is in play, other models with marked Wound boxes gain +1 Melee 
         <entryLink id="3814-9ec1-4be9-1770" name="Enhancements" hidden="false" collective="false" import="true" targetId="f486-4498-03e3-c397" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
-        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="16"/>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="12"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="56df-f15b-64ba-8429" name="Ying-Jian" hidden="false" collective="false" import="true" type="model">
@@ -4473,7 +4513,7 @@ While this model is in play, other models with marked Wound boxes gain +1 Melee 
         <entryLink id="830a-748b-4309-0ef2" name="Enhancements" hidden="false" collective="false" import="true" targetId="f486-4498-03e3-c397" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
-        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="16"/>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="12"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="27e0-cd04-df15-eeee" name="Yizhi" hidden="false" collective="false" import="true" type="model">
@@ -4489,9 +4529,20 @@ While this model is in play, other models with marked Wound boxes gain +1 Melee 
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="set" value="1" field="350f-a055-8d87-db9d">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="63be-6949-c902-f788" shared="true" includeChildSelections="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="b001-2a9b-ef61-6d68" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9594-b5f8-29e9-696b" type="max"/>
+        <constraint type="min" value="0" field="selections" scope="roster" shared="true" id="350f-a055-8d87-db9d" includeChildSelections="true"/>
       </constraints>
       <profiles>
         <profile id="ca2b-c50c-4c9a-3220" name="Yizhi" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
@@ -4554,6 +4605,15 @@ While this model is in play, other models with marked Wound boxes gain +1 Melee 
             <infoLink id="57c8-a81a-9733-b8cb" name="Sister&apos;s Succour" hidden="false" targetId="8d63-5c23-75fd-cb4a" type="infoGroup"/>
           </infoLinks>
         </infoGroup>
+        <infoGroup name="Unique Effects" id="ee91-d4d2-e4f4-fae9" hidden="false">
+          <profiles>
+            <profile name="Sisterhood" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects" hidden="false" id="9912-2e2d-e759-7e30">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">The Rice Cost for Yizhi, Xi and Yanjing is 36 for all three models.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </infoGroup>
       </infoGroups>
       <categoryLinks>
         <categoryLink id="904d-79a1-d8bb-7e84" name="Imperial" hidden="false" targetId="1a5c-7165-4266-4fbc" primary="false"/>
@@ -4565,7 +4625,7 @@ While this model is in play, other models with marked Wound boxes gain +1 Melee 
         <entryLink id="ed6b-8034-fc76-c871" name="Enhancements" hidden="false" collective="false" import="true" targetId="f486-4498-03e3-c397" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
-        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="16"/>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="12"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="a8a8-fc30-a7e2-2913" name="Ancestor Spirit" hidden="false" collective="false" import="true" type="model">
@@ -4623,12 +4683,12 @@ While this model is in play, other models with marked Wound boxes gain +1 Melee 
         </infoGroup>
         <infoGroup id="af42-c48b-dde1-f51e" name="Unique Effects" hidden="false">
           <profiles>
-            <profile id="837e-53eb-0abe-784d" name="Ancestor Spirit" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+            <profile id="837e-53eb-0abe-784d" name="Channel" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
               <characteristics>
-                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">When this model Channels Ki Tokens to Target Friendly model, the Target gains 1 of the following effects until the End Phase:
-• This model gains Resistance (1)
-• This model gains Bravery
-• This model gains Ranged Defence (1)</characteristic>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">When this model Channels Ki Tokens to chosen Friendly model, that model gains one of the following effects until the End Phase: 
+- Resistance (+1)
+- Courage (+1)
+- Range Defence (+1) </characteristic>
               </characteristics>
             </profile>
             <profile id="c45a-083a-25a2-1e37" name="Ancestor Spirit" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
@@ -4663,7 +4723,7 @@ While this model is in play, other models with marked Wound boxes gain +1 Melee 
         <categoryLink id="adea-18e6-528d-27a3" name="Soulless" hidden="false" targetId="0abe-c3e6-4300-478f" primary="false"/>
       </categoryLinks>
       <costs>
-        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="17"/>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="15"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="e7ea-c376-aac2-5726" name="Ashinaga Tenaga" hidden="false" collective="false" import="true" type="model">
@@ -4901,125 +4961,6 @@ This model can only be recruited into a Warband that contains all three Blood Br
       </categoryLinks>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="6196-faa4-e40a-b955" name="Bikou" hidden="false" collective="false" import="true" type="model">
-      <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="477a-e693-0888-08f7" type="atLeast"/>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b94d-f7cb-a84c-4077" type="atLeast"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
-      <constraints>
-        <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d460-fe12-16ae-de45" type="max"/>
-      </constraints>
-      <profiles>
-        <profile id="9ebe-8e87-e32b-97d9" name="Bikou" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
-          <characteristics>
-            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
-            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
-            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">3</characteristic>
-            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33">3</characteristic>
-            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
-            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac">3</characteristic>
-            <characteristic name="Ki" typeId="3969-9568-a914-6854">2</characteristic>
-            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
-            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">8</characteristic>
-            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">6 OOOOO O</characteristic>
-            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <infoGroups>
-        <infoGroup id="81f4-446e-4cd9-76aa" name="Ki Feats" hidden="false">
-          <infoLinks>
-            <infoLink id="1315-f659-22f1-fdd0" name="Distraction" hidden="false" targetId="67dc-8faf-a547-262a" type="infoGroup"/>
-            <infoLink id="026c-2242-fc69-8f8b" name="Hail of Steel" hidden="false" targetId="0a04-6a93-fb5f-af61" type="infoGroup"/>
-          </infoLinks>
-        </infoGroup>
-        <infoGroup id="0867-df76-2c8e-04d6" name="Traits" hidden="false">
-          <profiles>
-            <profile id="1f1f-e9ab-25a2-7243" name="Bikou" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
-              <characteristics>
-                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Armour (1), Assassin, Camouflage (2&quot;), Evasive, Jump Up, Lightfooted</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <infoLinks>
-            <infoLink id="61d5-c65f-c4fb-3482" name="Assassin" hidden="false" targetId="ef59-928b-2550-f0a3" type="rule"/>
-            <infoLink id="663b-5109-7bc2-96b6" name="Camouflage" hidden="false" targetId="9010-4983-c98c-1751" type="rule"/>
-            <infoLink id="fac7-b838-30c5-b01e" name="Armour" hidden="false" targetId="8615-1c63-2242-5746" type="rule"/>
-            <infoLink id="1578-b1df-459d-6498" name="Lightfooted" hidden="false" targetId="57d2-cd57-07f9-addf" type="rule"/>
-            <infoLink id="0b3a-5430-26f6-20de" name="Jump Up" hidden="false" targetId="1575-e12f-4ca3-c557" type="rule"/>
-            <infoLink id="88e1-ccbe-c655-181a" name="Evasive" hidden="false" targetId="b0f8-d197-536b-c8fc" type="rule"/>
-          </infoLinks>
-        </infoGroup>
-        <infoGroup id="c573-f383-3634-47da" name="Melee Weapon" hidden="false">
-          <profiles>
-            <profile id="f2ae-35f8-8e98-70f4" name="Kusari-gama" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
-              <characteristics>
-                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+0</characteristic>
-                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Chain Weapon (1)</characteristic>
-                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Sidestep Defence (0), Push Attack (0)</characteristic>
-                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
-              </characteristics>
-            </profile>
-          </profiles>
-          <infoLinks>
-            <infoLink id="eaa3-7145-9709-a6f5" name="Chain Weapon" hidden="false" targetId="84f9-d10e-0e9f-d79c" type="rule"/>
-            <infoLink id="8ceb-9c36-6883-adee" name="Sidestep Defence " hidden="false" targetId="753c-6c3b-64d7-203c" type="rule"/>
-            <infoLink id="263e-e514-a79a-2b68" name="Push Attack" hidden="false" targetId="6c26-94ba-6b96-9e1b" type="rule"/>
-          </infoLinks>
-        </infoGroup>
-        <infoGroup id="467a-70db-28c7-7641" name="Ranged Weapon" hidden="false">
-          <profiles>
-            <profile id="5da9-c022-f498-db51" name="Shuriken" hidden="false" typeId="7e20-258e-bf92-18f9" typeName="Ranged Weapon">
-              <characteristics>
-                <characteristic name="Ranged Weapon Strength" typeId="15aa-b6bd-6923-271f">-1</characteristic>
-                <characteristic name="Range Bands" typeId="be6a-50c6-d691-e2e9">3/5/7</characteristic>
-                <characteristic name="Traits" typeId="3410-4428-ef91-eb61">Lightweight</characteristic>
-                <characteristic name="Specials" typeId="cdaf-b6ac-89d4-39ef"/>
-                <characteristic name="Unique Effects" typeId="3bf8-6525-f003-4990">If an Attack with this weapon is successful and the individual dice results of the Damage Roll are the same number this weapon gains Pierce (3) for that Damage Roll.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <infoLinks>
-            <infoLink id="3c1b-b023-9057-ad8c" name="Lightweight" hidden="false" targetId="c75c-7124-2b1f-a4d9" type="rule"/>
-            <infoLink id="e3e0-6e2b-c089-7848" name="Pierce " hidden="false" targetId="39e4-14d7-5533-6e67" type="rule"/>
-          </infoLinks>
-        </infoGroup>
-        <infoGroup id="d3c0-26fb-2c3c-3d1f" name="Unique Effects" hidden="false">
-          <profiles>
-            <profile id="1a03-150c-5687-7fb0" name="Start of Activation" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
-              <characteristics>
-                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">At the start of this model&apos;s activation, choose 1 of the following:
-• This model gains the following weapon profile until the end of the activation:
-  RWS: Special, Range: -/3/-, Traits: Lightweight, Specials: Sweep Attack (0)
-  This model may only make 1 Ranged Attack with the Kusari per activation.
-• This model gains Move Boost (2) until the end of the activation.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-        </infoGroup>
-      </infoGroups>
-      <categoryLinks>
-        <categoryLink id="ef58-3fef-73f7-8f87" name="Ninja" hidden="false" targetId="dc64-e668-4aac-8ec9" primary="false"/>
-        <categoryLink id="ab10-3389-93c3-0b3b" name="North Star" hidden="false" targetId="2bf8-b13c-a906-baea" primary="false"/>
-        <categoryLink id="facc-5553-ce00-4926" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
-        <categoryLink id="9424-11ee-b873-3c97" name="Ronin Profile Cards" hidden="false" targetId="9fba-f50b-c8f7-8396" primary="true"/>
-        <categoryLink id="9410-2d32-6653-45c3" name="Armour" hidden="false" targetId="f322-702a-ff62-b37e" primary="false"/>
-      </categoryLinks>
-      <entryLinks>
-        <entryLink id="ba3a-0b1c-28e5-8a45" name="Enhancements" hidden="false" collective="false" import="true" targetId="f486-4498-03e3-c397" type="selectionEntryGroup"/>
-      </entryLinks>
-      <costs>
-        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="18"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="294d-a0fa-f437-2fca" name="Eldest Brother" hidden="false" collective="false" import="true" type="model">
@@ -6269,7 +6210,7 @@ This model may use Fire Spin despite the Stupid trait.</characteristic>
           <profiles>
             <profile id="846c-ae70-21f4-8bb8" name="Khendish" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
               <characteristics>
-                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Intimidate, Steadfast, Strong, Stupid, Vengeance [Prefecture]</characteristic>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Immune [Fire], Intimidate, Steadfast, Strong, Stupid, Vengeance [Prefecture]</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -6277,14 +6218,16 @@ This model may use Fire Spin despite the Stupid trait.</characteristic>
             <infoLink id="81ae-48c9-bb41-4840" name="Steadfast" hidden="false" targetId="95e7-3178-c29b-013c" type="rule"/>
             <infoLink id="13fa-a576-8893-9c90" name="Stupid" hidden="false" targetId="4251-8743-3f5e-8781" type="rule"/>
             <infoLink id="f56d-2e1c-e2cc-0dfd" name="Vengeance" hidden="false" targetId="6779-0aac-2f51-f67e" type="rule"/>
-            <infoLink id="9f84-9bee-9857-215b" name="Intimidate" hidden="false" targetId="f57d-b137-75c8-7329" type="rule"/>
+            <infoLink id="9f84-9bee-9857-215b" name="Immune" hidden="false" targetId="ea08-b25e-0ea8-af73" type="rule"/>
             <infoLink id="dceb-5701-cba7-9a7e" name="Strong" hidden="false" targetId="00b5-3637-d48a-807e" type="rule"/>
+            <infoLink id="07db-9379-e0cf-b880" name="Intimidate" hidden="false" targetId="f57d-b137-75c8-7329" type="rule"/>
           </infoLinks>
         </infoGroup>
       </infoGroups>
       <categoryLinks>
         <categoryLink id="1121-1bb7-a516-6d55" name="Ronin Profile Cards" hidden="false" targetId="9fba-f50b-c8f7-8396" primary="true"/>
         <categoryLink id="f51a-43d8-6728-524d" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
+        <categoryLink targetId="78b4-4485-a93e-754c" id="a1a9-5368-2e8a-42b8" primary="false" name="Peasant"/>
       </categoryLinks>
       <entryLinks>
         <entryLink id="a2a0-9d9d-bb74-2c22" name="Enhancements" hidden="false" collective="false" import="true" targetId="f486-4498-03e3-c397" type="selectionEntryGroup"/>
@@ -7997,9 +7940,14 @@ When this model spends Ki Tokens, it may instead remove any number of Ghost Toke
         </infoGroup>
         <infoGroup id="435b-7c05-791a-f2bf" name="Unique Effects" hidden="false">
           <profiles>
-            <profile id="004b-1cac-19e7-55ca" name="Unique Effects" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+            <profile id="004b-1cac-19e7-55ca" name="Batman" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
               <characteristics>
-                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">Enhancement - Equipment cards bought for Warbands that have recruited this model cost -1 Rice (to a minimum of 1).</characteristic>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">This model may be Recruited into the following Faction Themes (Guerilla Warfare, Open Rebellion).</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="aeda-2e5d-30ef-97be" name="Batman" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">This model may be Recruited into the following Faction Themes (Guerilla Warfare, Open Rebellion).</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -9005,7 +8953,7 @@ Requirement [Kiyozumi Sadaka]</characteristic>
         <entryLink id="efd9-3be1-13cd-f969" name="Enhancements" hidden="false" collective="false" import="true" targetId="f486-4498-03e3-c397" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
-        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="13"/>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="8"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="a795-4dac-6489-ce72" name="Professional" hidden="false" collective="false" import="true" type="upgrade">
@@ -9125,7 +9073,7 @@ Requirement (Kenmeina)</characteristic>
         <entryLink id="475d-4755-0d45-91c5" name="Enhancements" hidden="false" collective="false" import="true" targetId="f486-4498-03e3-c397" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
-        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="13"/>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="8"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="1ada-6f0c-8123-5aab" name="The Dark Pilgrim" hidden="false" collective="false" import="true" type="model">
@@ -9210,7 +9158,7 @@ Requirement (Kenmeina)</characteristic>
                 <characteristic name="Range Bands" typeId="be6a-50c6-d691-e2e9">2/4/6</characteristic>
                 <characteristic name="Traits" typeId="3410-4428-ef91-eb61">Lightweight, Rapid Fire (X)</characteristic>
                 <characteristic name="Specials" typeId="cdaf-b6ac-89d4-39ef"/>
-                <characteristic name="Unique Effects" typeId="3bf8-6525-f003-4990">This weapon&apos;s Rapid Fire Trait is variable. X is equal to the number of Stunned Markers on Enemy models within 6&quot; of this model.</characteristic>
+                <characteristic name="Unique Effects" typeId="3bf8-6525-f003-4990">This weapon&apos;s Rapid Fire Trait is variable. X is equal to the number of Stunned Enemy models within 6&quot; of this model, to a minimum of 1.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -9891,6 +9839,9 @@ This model can make only one Bird Strike Ranged Attack per turn.</characteristic
               </characteristics>
             </profile>
           </profiles>
+          <infoLinks>
+            <infoLink name="Celestial Convergence" id="9b42-ff38-4ad0-d9e3" hidden="false" type="profile" targetId="b4b5-15e7-f283-7470"/>
+          </infoLinks>
         </infoGroup>
       </infoGroups>
       <modifiers>
@@ -9904,6 +9855,14 @@ This model can make only one Bird Strike Ranged Attack per turn.</characteristic
               </conditions>
             </conditionGroup>
           </conditionGroups>
+        </modifier>
+        <modifier type="increment" value="1" field="a111-8656-5c05-7415">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="b9c7-baf3-6795-acf7" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+          <repeats>
+            <repeat value="1" repeats="1" field="selections" scope="parent" childId="any" shared="true" roundUp="false"/>
+          </repeats>
         </modifier>
       </modifiers>
       <entryLinks>
@@ -9946,16 +9905,17 @@ This model can make only one Bird Strike Ranged Attack per turn.</characteristic
           <profiles>
             <profile name="Traits" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits" hidden="false" id="4d79-231f-1475-3198">
               <characteristics>
-                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Aware, Camouflage (4&quot;), Cloudwalk, Sixth Sense, Soulless</characteristic>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Aloof, Aware, Camouflage (4&quot;), Cloudwalk, Sixth Sense, Soulless</characteristic>
               </characteristics>
             </profile>
           </profiles>
           <infoLinks>
-            <infoLink name="Camouflage" id="a0a2-d7a0-f546-4c81" hidden="false" type="rule" targetId="9010-4983-c98c-1751"/>
+            <infoLink name="Aloof" id="a0a2-d7a0-f546-4c81" hidden="false" type="rule" targetId="5101-70fc-eca4-d99b"/>
             <infoLink name="Cloudwalk" id="a429-4984-88a9-961f" hidden="false" type="rule" targetId="538c-1266-626b-fcc9"/>
             <infoLink name="Sixth Sense" id="34ec-b2fa-cfce-87fe" hidden="false" type="rule" targetId="ec49-3908-f1d1-8de2"/>
             <infoLink name="Aware" id="77cd-7d97-b773-6686" hidden="false" type="rule" targetId="ff4a-6b14-09dd-2343"/>
             <infoLink name="Soulless" id="e4cd-c9d6-8395-0a1c" hidden="false" type="rule" targetId="af31-aad0-fcea-9590"/>
+            <infoLink name="Aloof" id="8b71-0dbc-655b-0a53" hidden="false" type="rule" targetId="5101-70fc-eca4-d99b"/>
           </infoLinks>
         </infoGroup>
         <infoGroup name="Melee Weapon" id="32fe-02cc-9b8f-d117" hidden="false">
@@ -9992,6 +9952,9 @@ When this model inflicts Wounds through a successful Melee Attack, it gains a n
               </characteristics>
             </profile>
           </profiles>
+          <infoLinks>
+            <infoLink name="Celestial Convergence" id="6340-a5c4-3506-2381" hidden="false" type="profile" targetId="b4b5-15e7-f283-7470"/>
+          </infoLinks>
         </infoGroup>
       </infoGroups>
       <modifiers>
@@ -10005,6 +9968,14 @@ When this model inflicts Wounds through a successful Melee Attack, it gains a n
               </conditions>
             </conditionGroup>
           </conditionGroups>
+        </modifier>
+        <modifier type="increment" value="1" field="a111-8656-5c05-7415">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="b9c7-baf3-6795-acf7" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+          <repeats>
+            <repeat value="1" repeats="1" field="selections" scope="parent" childId="any" shared="true" roundUp="false"/>
+          </repeats>
         </modifier>
       </modifiers>
       <entryLinks>
@@ -11356,6 +11327,16 @@ On a successful ranged attack instead of a Damage Roll, the Target gains a Blee
     <profile id="3e9b-2e75-0e97-a739" name="Imperial" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
       <characteristics>
         <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">This model cannot declare Melee or Charge actions Targeting Imperial models.</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Celestial Convergence" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects" hidden="false" id="b4b5-15e7-f283-7470">
+      <characteristics>
+        <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">This Model’s Rice Cost is Variable. X is equal to the number of Celestial models recruited into the final Warband (including this model).</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Sisterhood" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects" hidden="false" id="0f6f-866d-1230-708a">
+      <characteristics>
+        <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">The Rice Cost for Yizhi, Xi and Yanjing is 36 for all three models.</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>

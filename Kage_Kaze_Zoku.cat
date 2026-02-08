@@ -4247,6 +4247,126 @@ If Phantom was not recruited into the Warband, remove this model from play and r
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="14"/>
       </costs>
     </selectionEntry>
+    <selectionEntry type="model" import="true" name="Bikou" hidden="false" id="800d-e5e7-f3c4-1e75" collective="false">
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="477a-e693-0888-08f7" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="b94d-f7cb-a84c-4077" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="d460-fe12-16ae-de45" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+      </constraints>
+      <profiles>
+        <profile name="Bikou" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile" hidden="false" id="9ebe-8e87-e32b-97d9">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">3</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33">3</characteristic>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac">3</characteristic>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">2</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">8</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">6 OOOOO O</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup name="Ki Feats" id="81f4-446e-4cd9-76aa" hidden="false">
+          <infoLinks>
+            <infoLink name="Distraction" id="1315-f659-22f1-fdd0" hidden="false" targetId="67dc-8faf-a547-262a" type="infoGroup"/>
+            <infoLink name="Hail of Steel" id="026c-2242-fc69-8f8b" hidden="false" targetId="0a04-6a93-fb5f-af61" type="infoGroup"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup name="Traits" id="0867-df76-2c8e-04d6" hidden="false">
+          <profiles>
+            <profile name="Bikou" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits" hidden="false" id="1f1f-e9ab-25a2-7243">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Armour (1), Assassin, Camouflage (2&quot;), Evasive, Jump Up, Lightfooted</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink name="Assassin" id="61d5-c65f-c4fb-3482" hidden="false" targetId="ef59-928b-2550-f0a3" type="rule"/>
+            <infoLink name="Camouflage" id="663b-5109-7bc2-96b6" hidden="false" targetId="9010-4983-c98c-1751" type="rule"/>
+            <infoLink name="Armour" id="fac7-b838-30c5-b01e" hidden="false" targetId="8615-1c63-2242-5746" type="rule"/>
+            <infoLink name="Lightfooted" id="1578-b1df-459d-6498" hidden="false" targetId="57d2-cd57-07f9-addf" type="rule"/>
+            <infoLink name="Jump Up" id="0b3a-5430-26f6-20de" hidden="false" targetId="1575-e12f-4ca3-c557" type="rule"/>
+            <infoLink name="Evasive" id="88e1-ccbe-c655-181a" hidden="false" targetId="b0f8-d197-536b-c8fc" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup name="Melee Weapon" id="c573-f383-3634-47da" hidden="false">
+          <profiles>
+            <profile name="Kusari-gama" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon" hidden="false" id="f2ae-35f8-8e98-70f4">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+0</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Chain Weapon (1)</characteristic>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Sidestep Defence (0), Push Attack (0)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink name="Chain Weapon" id="eaa3-7145-9709-a6f5" hidden="false" targetId="84f9-d10e-0e9f-d79c" type="rule"/>
+            <infoLink name="Sidestep Defence " id="8ceb-9c36-6883-adee" hidden="false" targetId="753c-6c3b-64d7-203c" type="rule"/>
+            <infoLink name="Push Attack" id="263e-e514-a79a-2b68" hidden="false" targetId="6c26-94ba-6b96-9e1b" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup name="Ranged Weapon" id="467a-70db-28c7-7641" hidden="false">
+          <profiles>
+            <profile name="Shuriken" typeId="7e20-258e-bf92-18f9" typeName="Ranged Weapon" hidden="false" id="5da9-c022-f498-db51">
+              <characteristics>
+                <characteristic name="Ranged Weapon Strength" typeId="15aa-b6bd-6923-271f">-1</characteristic>
+                <characteristic name="Range Bands" typeId="be6a-50c6-d691-e2e9">3/5/7</characteristic>
+                <characteristic name="Traits" typeId="3410-4428-ef91-eb61">Lightweight</characteristic>
+                <characteristic name="Specials" typeId="cdaf-b6ac-89d4-39ef"/>
+                <characteristic name="Unique Effects" typeId="3bf8-6525-f003-4990">If an Attack with this weapon is successful and the individual dice results of the Damage Roll are the same number this weapon gains Pierce (3) for that Damage Roll.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink name="Lightweight" id="3c1b-b023-9057-ad8c" hidden="false" targetId="c75c-7124-2b1f-a4d9" type="rule"/>
+            <infoLink name="Pierce " id="e3e0-6e2b-c089-7848" hidden="false" targetId="39e4-14d7-5533-6e67" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup name="Unique Effects" id="d3c0-26fb-2c3c-3d1f" hidden="false">
+          <profiles>
+            <profile name="Start of Activation" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects" hidden="false" id="1a03-150c-5687-7fb0">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">At the start of this model&apos;s activation, choose 1 of the following:
+- This model gains the following weapon profile until the end of the activation:
+RWS: Special, Range: -/3/-, Traits: Lightweight, Specials: Sweep Attack (0)
+This model may only make 1 Ranged Attack with the Kusari per activation.
+- This model gains Move Boost (2) and Ranged Boost (2) until the end of the activation.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </infoGroup>
+      </infoGroups>
+      <categoryLinks>
+        <categoryLink name="Ninja" hidden="false" id="ef58-3fef-73f7-8f87" targetId="dc64-e668-4aac-8ec9" primary="false"/>
+        <categoryLink name="North Star" hidden="false" id="ab10-3389-93c3-0b3b" targetId="2bf8-b13c-a906-baea" primary="false"/>
+        <categoryLink name="Unique" hidden="false" id="facc-5553-ce00-4926" targetId="afd4-8041-e359-223c" primary="false"/>
+        <categoryLink name="Armour" hidden="false" id="9410-2d32-6653-45c3" targetId="f322-702a-ff62-b37e" primary="false"/>
+        <categoryLink targetId="0ca8-2040-37f2-a1e0" id="767b-ba26-5d2c-9b98" primary="true" name="Faction Profile Cards"/>
+        <categoryLink targetId="3aa4-cadb-b4be-0dc6" id="8fb2-78b1-7d58-8e54" primary="false" name="Faction: Kage Kaze Zoku"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink import="true" name="Enhancements" hidden="false" id="ba3a-0b1c-28e5-8a45" collective="false" targetId="f486-4498-03e3-c397" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="18"/>
+      </costs>
+    </selectionEntry>
   </selectionEntries>
   <entryLinks>
     <entryLink id="0225-d3c7-eee7-c723" name="Hiretsuna" hidden="false" collective="false" import="true" targetId="fee6-a48b-db82-74e7" type="selectionEntry">
@@ -4277,36 +4397,6 @@ If Phantom was not recruited into the Warband, remove this model from play and r
       </modifiers>
       <entryLinks>
         <entryLink import="true" name="Enhancements" hidden="false" id="e301-7b78-c7d8-a563" type="selectionEntryGroup" targetId="7a6b-8675-ab00-074d"/>
-      </entryLinks>
-    </entryLink>
-    <entryLink id="800d-e5e7-f3c4-1e75" name="Bikou" hidden="false" collective="false" import="true" targetId="6196-faa4-e40a-b955" type="selectionEntry">
-      <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="cfa1-27b2-4dc3-ce16" type="atLeast"/>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4c67-f393-7598-a82d" type="atLeast"/>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="9402-edcc-93a2-aef1" type="atLeast"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-        <modifier type="set" field="hidden" value="false">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="6c2d-b743-18d7-2779" type="atLeast"/>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4e1c-43c9-596d-ef16" type="atLeast"/>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="70cc-ef54-f1d8-9837" type="atLeast"/>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="f423-abc7-6e32-6e8c" type="atLeast"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
-      <entryLinks>
-        <entryLink import="true" name="Enhancements" hidden="false" id="8286-5330-4846-5ec6" type="selectionEntryGroup" targetId="7a6b-8675-ab00-074d"/>
       </entryLinks>
     </entryLink>
     <entryLink id="945a-04e5-f976-96e9" name="Two Lone Swordsmen" hidden="false" collective="false" import="true" targetId="29e4-7f5e-593d-2445" type="selectionEntry">

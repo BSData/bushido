@@ -2,6 +2,11 @@
 <catalogue id="d4b0-a54e-a48b-88a5" name="The Descension" revision="42" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="19" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <categoryEntries>
     <categoryEntry id="093f-43eb-fd72-ead0" name="Move Boost" hidden="false"/>
+    <categoryEntry name="Max. Kurama" id="3c5a-4724-16e9-6da6" hidden="false">
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="7c39-8008-633a-b43c" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+      </constraints>
+    </categoryEntry>
   </categoryEntries>
   <selectionEntries>
     <selectionEntry id="5048-3a52-5689-6d0b" name="Ambush" hidden="false" collective="false" import="true" type="upgrade">
@@ -240,6 +245,11 @@ Each Friendly Suzume model may be placed within 1&quot; of its current location 
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="decrement" value="1" field="a111-8656-5c05-7415">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="9592-a8de-7eb6-461b" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="89be-4430-ed10-86b7" type="max"/>
@@ -339,6 +349,11 @@ Each Friendly Suzume model may be placed within 1&quot; of its current location 
               </conditions>
             </conditionGroup>
           </conditionGroups>
+        </modifier>
+        <modifier type="add" value="3c5a-4724-16e9-6da6" field="category">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="bcb4-ecc1-04fc-f3e8" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </conditions>
         </modifier>
       </modifiers>
       <constraints>
@@ -648,7 +663,7 @@ Each Friendly Suzume model may be placed within 1&quot; of its current location 
         <categoryLink id="507d-bfed-ae4b-dbee" name="Swarm" hidden="false" targetId="7435-856f-ece2-fe58" primary="false"/>
       </categoryLinks>
       <costs>
-        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="13"/>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="10"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="dd40-17f4-38f3-e8cb" name="Hazkabo" hidden="false" collective="false" import="true" type="model">
@@ -770,6 +785,16 @@ Each Friendly Suzume model may be placed within 1&quot; of its current location 
           <conditions>
             <condition field="selections" scope="parent" value="2" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="f177-b9c1-25b6-1318" type="equalTo"/>
           </conditions>
+        </modifier>
+        <modifier type="decrement" value="2" field="a111-8656-5c05-7415">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="equalTo" value="2" field="selections" scope="parent" childId="f177-b9c1-25b6-1318" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="bcb4-ecc1-04fc-f3e8" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <constraints>
@@ -1249,6 +1274,11 @@ Each Friendly Suzume model may be placed within 1&quot; of its current location 
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="add" value="3c5a-4724-16e9-6da6" field="category">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="bcb4-ecc1-04fc-f3e8" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9c67-f82d-3d29-af32" type="max"/>
@@ -1282,8 +1312,8 @@ Each Friendly Suzume model may be placed within 1&quot; of its current location 
           <profiles>
             <profile id="cc15-8445-5700-7f73" name="Massive Katana" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
               <characteristics>
-                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+2</characteristic>
-                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Pierce (1)</characteristic>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+3</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Feint (1), Pierce (1)</characteristic>
                 <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Powerful Attack (1), Drag Defence (0), Forceback Attack (0)</characteristic>
                 <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
               </characteristics>
@@ -1292,27 +1322,29 @@ Each Friendly Suzume model may be placed within 1&quot; of its current location 
           <infoLinks>
             <infoLink id="2009-3dc6-446d-9344" name="Powerful Attack" hidden="false" targetId="d56a-058d-95d9-5b60" type="rule"/>
             <infoLink id="2bfe-4ba7-fbaa-9b2f" name="Drag Defence" hidden="false" targetId="be46-98c7-87e8-c024" type="rule"/>
-            <infoLink id="2f3c-4665-52b1-550d" name="Forceback Attack" hidden="false" targetId="2682-7c66-4163-28f2" type="rule"/>
+            <infoLink id="2f3c-4665-52b1-550d" name="Feint" hidden="false" targetId="38b0-4d97-3c4c-8d96" type="rule"/>
             <infoLink id="96ff-4ef4-4768-66ee" name="Pierce " hidden="false" targetId="39e4-14d7-5533-6e67" type="rule"/>
+            <infoLink id="07ca-b300-39f9-5a40" name="Forceback Attack" hidden="false" targetId="2682-7c66-4163-28f2" type="rule"/>
           </infoLinks>
         </infoGroup>
         <infoGroup id="8d72-56c9-395b-7028" name="Traits" hidden="false">
           <profiles>
             <profile id="8935-4bba-c1e3-ed6c" name="Hokibo" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
               <characteristics>
-                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Armour (2), Cloudwalk, Fear (5), Fearless, Jump Up, Prowess [Attack](1), Spirit (1), Virtue (6&quot;)</characteristic>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Armour (2), Cloudwalk, Fear (5), Fearless, Jump Up, Prowess [Attack](1), Ranged Defence (1), Spirit (1), Virtue (6&quot;)</characteristic>
               </characteristics>
             </profile>
           </profiles>
           <infoLinks>
             <infoLink id="0f69-a62f-fa2f-9527" name="Armour" hidden="false" targetId="8615-1c63-2242-5746" type="rule"/>
-            <infoLink id="bd06-a766-5993-da30" name="Fearless" hidden="false" targetId="5d6f-1746-9080-aca5" type="rule"/>
+            <infoLink id="bd06-a766-5993-da30" name="Ranged Defence " hidden="false" targetId="9b8d-9ca9-e25d-3988" type="rule"/>
             <infoLink id="6559-dd75-4cc9-df24" name="Cloudwalk" hidden="false" targetId="538c-1266-626b-fcc9" type="rule"/>
             <infoLink id="83ba-2965-a3d3-37c8" name="Fear" hidden="false" targetId="3586-4583-7f10-1f31" type="rule"/>
             <infoLink id="febe-dd75-e58b-1bbd" name="Prowess " hidden="false" targetId="75ef-327a-cd08-a248" type="rule"/>
             <infoLink id="f9b8-adc7-4f6b-fd84" name="Spirit" hidden="false" targetId="a9ba-9904-7d29-7bcb" type="rule"/>
             <infoLink id="91a7-7655-ac32-37ff" name="Jump Up" hidden="false" targetId="1575-e12f-4ca3-c557" type="rule"/>
             <infoLink id="44d9-9dcd-528f-f97a" name="Virtue" hidden="false" targetId="57d7-cc96-ce93-9258" type="rule"/>
+            <infoLink id="aaf1-ceba-43ba-659e" name="Fearless" hidden="false" targetId="5d6f-1746-9080-aca5" type="rule"/>
           </infoLinks>
         </infoGroup>
         <infoGroup id="fa5f-22a8-8574-f846" name="Unique Effects" hidden="false">
@@ -1347,7 +1379,7 @@ Each Friendly Suzume model may be placed within 1&quot; of its current location 
         <entryLink id="7fbd-762b-4d89-78f1" name="Enhancements" hidden="false" collective="false" import="true" targetId="f513-13e0-08f2-0d67" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
-        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="25"/>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="23"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="9392-85b1-def6-fe92" name="Jirobo" hidden="false" collective="false" import="true" type="model">
@@ -1362,6 +1394,11 @@ Each Friendly Suzume model may be placed within 1&quot; of its current location 
               </conditions>
             </conditionGroup>
           </conditionGroups>
+        </modifier>
+        <modifier type="decrement" value="1" field="a111-8656-5c05-7415">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="bcb4-ecc1-04fc-f3e8" shared="true" includeChildSelections="true"/>
+          </conditions>
         </modifier>
       </modifiers>
       <constraints>
@@ -1458,6 +1495,11 @@ Each Friendly Suzume model may be placed within 1&quot; of its current location 
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="decrement" value="1" field="a111-8656-5c05-7415">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="9592-a8de-7eb6-461b" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2b54-1484-0319-77a3" type="max"/>
@@ -1541,7 +1583,7 @@ Each Friendly Suzume model may be placed within 1&quot; of its current location 
           <profiles>
             <profile id="a808-2c99-42bc-e497" name="Inspiration" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
               <characteristics>
-                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">This Model&apos;s Inspiration Feat may only Target Friendly Tribesmen models.</characteristic>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">This model’s Inspiration Ki Feat may only Target Tribesmen and Ronin Tribesmen models.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -1574,6 +1616,11 @@ Each Friendly Suzume model may be placed within 1&quot; of its current location 
               </conditions>
             </conditionGroup>
           </conditionGroups>
+        </modifier>
+        <modifier type="decrement" value="1" field="a111-8656-5c05-7415">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="bcb4-ecc1-04fc-f3e8" shared="true" includeChildSelections="true"/>
+          </conditions>
         </modifier>
       </modifiers>
       <constraints>
@@ -1671,6 +1718,11 @@ Each Friendly Suzume model may be placed within 1&quot; of its current location 
               </conditions>
             </conditionGroup>
           </conditionGroups>
+        </modifier>
+        <modifier type="decrement" value="1" field="a111-8656-5c05-7415">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="9592-a8de-7eb6-461b" shared="true" includeChildSelections="true"/>
+          </conditions>
         </modifier>
       </modifiers>
       <constraints>
@@ -1874,6 +1926,11 @@ The first time in a turn when a model ends its move in BtB with this model, if t
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="decrement" value="1" field="a111-8656-5c05-7415">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="9592-a8de-7eb6-461b" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="360c-0e7b-2383-4c78" type="max"/>
@@ -1967,6 +2024,11 @@ The first time in a turn when a model ends its move in BtB with this model, if t
               </conditions>
             </conditionGroup>
           </conditionGroups>
+        </modifier>
+        <modifier type="decrement" value="1" field="a111-8656-5c05-7415">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="9592-a8de-7eb6-461b" shared="true" includeChildSelections="true"/>
+          </conditions>
         </modifier>
       </modifiers>
       <constraints>
@@ -2264,6 +2326,11 @@ The first time in a turn when a model ends its move in BtB with this model, if t
               </conditions>
             </conditionGroup>
           </conditionGroups>
+        </modifier>
+        <modifier type="decrement" value="1" field="a111-8656-5c05-7415">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="9592-a8de-7eb6-461b" shared="true" includeChildSelections="true"/>
+          </conditions>
         </modifier>
       </modifiers>
       <constraints>
@@ -3304,7 +3371,7 @@ Permitted: [Ronin Kami, Small Tengu, Tribesmen, Ronin Tribesmen]</characteristic
       <profiles>
         <profile id="7eae-69c5-e51a-cc46" name="Attack From Above" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
           <characteristics>
-            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">When a Friendly model with Cloudwalk declares a Melee or Charge Action, the Enemy model is Surprised, regardless of the usual Surprised requirements.</characteristic>
+            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">When a Friendly Small Tengu model with Cloudwalk declares a Melee or Charge Action, the Enemy model is Surprised, regardless of the usual Surprised requirements.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -3574,6 +3641,11 @@ Until the End Phase, Enemy models gain Weak when making Size Tests.</characteris
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="decrement" value="1" field="a111-8656-5c05-7415">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="bcb4-ecc1-04fc-f3e8" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d2b1-66a4-0fd3-81f4" type="max"/>
@@ -3743,12 +3815,12 @@ Until the End Phase, reduce the cost of Friendly Haiatake models&apos; Special A
       <profiles>
         <profile id="a3a1-e45c-f32c-6af6" name="Hunter Gatherers" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
           <characteristics>
-            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">• Once per game, in the Starting Phase, Friendly models gain &apos;While this model has no marked Wound boxes they gain Strong&apos;. This effect lasts until the End Phase.
-• When a Friendly model kills an Enemy non-Soulless model in a Melee Exchange, that Friendly model may gain Ki Tokens equal to the Enemy model&apos;s Ki Statistic.
-• Friendly Tribesman models do not suffer the Melee or Ranged Penalty for having Moved or Run or the Ranged Penalty for the Target having Run that turn.
+            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">- Once per game, in the Starting Phase, Friendly models gain &apos;While this model has no marked Wound boxes they gain Strong&apos;. This effect lasts until the End Phase.
+- When a Friendly model kills an Enemy non-Soulless model in a Melee Exchange, that Friendly model may gain Ki Tokens equal to the Enemy model&apos;s Ki Statistic.
+- Friendly Tribesman models do not suffer the Melee or Ranged Penalty for having Moved or Run or the Ranged Penalty for the Target having Run that turn.
+- Tribesman models recruited into this Warband cost -1 Rice.
 
-Permitted [Tribesman]
-Exclusion [Cliff Tribe, Plainsman]</characteristic>
+Permitted [Tribesman, Ronin Tribesman, Unknown Ronin]</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -3768,10 +3840,14 @@ Exclusion [Cliff Tribe, Plainsman]</characteristic>
               <conditions>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9704-9d38-8681-8266" type="atLeast"/>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="118b-3406-56d9-05d2" type="atLeast"/>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9592-a8de-7eb6-461b" type="atLeast"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
+        </modifier>
+        <modifier type="decrement" value="1" field="a111-8656-5c05-7415">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="9592-a8de-7eb6-461b" shared="true" includeChildSelections="true"/>
+          </conditions>
         </modifier>
       </modifiers>
       <constraints>
@@ -3876,10 +3952,14 @@ Exclusion [Cliff Tribe, Plainsman]</characteristic>
               <conditions>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9704-9d38-8681-8266" type="atLeast"/>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="118b-3406-56d9-05d2" type="atLeast"/>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9592-a8de-7eb6-461b" type="atLeast"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
+        </modifier>
+        <modifier type="decrement" value="1" field="a111-8656-5c05-7415">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="9592-a8de-7eb6-461b" shared="true" includeChildSelections="true"/>
+          </conditions>
         </modifier>
       </modifiers>
       <constraints>
@@ -3987,6 +4067,11 @@ Exclusion [Cliff Tribe, Plainsman]</characteristic>
               </conditions>
             </conditionGroup>
           </conditionGroups>
+        </modifier>
+        <modifier type="add" value="3c5a-4724-16e9-6da6" field="category">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="bcb4-ecc1-04fc-f3e8" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </conditions>
         </modifier>
       </modifiers>
       <constraints>
@@ -4101,17 +4186,20 @@ Exclusion [Cliff Tribe, Plainsman]</characteristic>
       <profiles>
         <profile id="414d-7646-d489-f824" name="Way of the Ancient Warrior" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
           <characteristics>
-            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">• Friendly Koroko models may not be Targeted by Enemy models unless they are the closest model to that Enemy model.
-• Once Per Game, in the Starting Phase choose to use this ability. Haiatake models gain Dodge (1) and Feint (1) until the End Phase.
-• Haiatake models gain Coordinated Attack [Bushi].
+            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">- Friendly Koroko models may not be Targeted by Enemy models unless they are the closest model to that Enemy model.
+- Haiatake models gain Dodge (1), Feint (1), and Ranged Defence (1).
+- Friendly Haiatake models gain Coordinated Attack [Bushi].
+- Haiatake models cost -1 Rice to recruit individually and 28 Rice for both Haiatake Guard.
 
-Permitted [Bushi, Koroko, Tribesman]</characteristic>
+Permitted [Bushi, Koroko, Tribesman]
+Exclusion [more than 1 Kurama model]</characteristic>
           </characteristics>
         </profile>
       </profiles>
       <categoryLinks>
         <categoryLink id="fd01-a684-9437-9d91" name="Faction: The Descension" hidden="false" targetId="daaa-d0d2-e66e-0672" primary="false"/>
         <categoryLink id="9b6c-e12b-b1c1-2f64" name="Faction Theme Cards" hidden="false" targetId="477a-e693-0888-08f7" primary="true"/>
+        <categoryLink targetId="6da0-b320-b958-dc82" id="6dbe-8c0c-5413-1f12" primary="false" name="Cycle: Weeping Sky"/>
       </categoryLinks>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0"/>
@@ -4174,7 +4262,8 @@ Permitted [Bushi, Koroko, Tribesman]</characteristic>
           <profiles>
             <profile id="09de-49d0-98a1-b7b9" name="Daranibe" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
               <characteristics>
-                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">Whenever this model is Placed by a Friendly Effect, increase the Place distance by 1&quot;.</characteristic>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">Whenever this model is Placed by a Friendly Effect, increase the Place distance by 1&quot;.
+When this model performs a Scenario Action, remove one fewer Activation Counters at the end of the action. This model must have the usual amount of Activation Counters available.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -4444,6 +4533,17 @@ Permitted [Bushi, Koroko, Tribesman]</characteristic>
       <categoryLinks>
         <categoryLink id="c3e7-0112-d3c2-5e3d" name="Ronin Profile Cards" hidden="false" targetId="9fba-f50b-c8f7-8396" primary="true"/>
       </categoryLinks>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="9592-a8de-7eb6-461b" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </entryLink>
     <entryLink id="e952-a783-d3cf-bb12" name="Xi" hidden="false" collective="false" import="true" targetId="b001-2a9b-ef61-6d68" type="selectionEntry">
       <categoryLinks>
@@ -4467,14 +4567,32 @@ Permitted [Bushi, Koroko, Tribesman]</characteristic>
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
+                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9592-a8de-7eb6-461b" type="atLeast"/>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="efff-019c-1bff-2d6e" type="atLeast"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="decrement" value="1" field="a111-8656-5c05-7415">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="9592-a8de-7eb6-461b" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink id="bc6a-20a0-f52b-db6b" name="Two Lone Swordsmen" hidden="false" collective="false" import="true" targetId="29e4-7f5e-593d-2445" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="9592-a8de-7eb6-461b" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
         </modifier>
       </modifiers>
     </entryLink>
-    <entryLink id="bc6a-20a0-f52b-db6b" name="Two Lone Swordsmen" hidden="false" collective="false" import="true" targetId="29e4-7f5e-593d-2445" type="selectionEntry"/>
     <entryLink id="2d04-a2b2-01ca-b264" name="Karu" hidden="false" collective="false" import="true" targetId="556c-88bf-b5ef-d732" type="selectionEntry"/>
     <entryLink id="1182-4850-9bc8-dc7b" name="Brotherhood" hidden="false" collective="false" import="true" targetId="9402-edcc-93a2-aef1" type="selectionEntry"/>
     <entryLink id="1a35-14a3-a745-fcd6" name="Khendish" hidden="true" collective="false" import="true" targetId="dc54-b54e-1428-7c3e" type="selectionEntry"/>
@@ -4500,7 +4618,19 @@ Permitted [Bushi, Koroko, Tribesman]</characteristic>
     <entryLink id="e0fe-6e54-9158-6c64" name="Kenmeina" hidden="true" collective="false" import="true" targetId="b896-0ea7-fb05-1ecc" type="selectionEntry"/>
     <entryLink id="9128-9f30-39fb-91e4" name="Kiyozumi Haiboku" hidden="true" collective="false" import="true" targetId="91b9-5dcc-298c-0bfb" type="selectionEntry"/>
     <entryLink id="0163-904a-0e11-838b" name="Kiyozumi Hinadori" hidden="true" collective="false" import="true" targetId="07f2-8804-f10d-7bbb" type="selectionEntry"/>
-    <entryLink id="e520-1a09-4c23-8646" name="Kiyozumi Kicho" hidden="false" collective="false" import="true" targetId="7b8f-61a1-2d88-60f2" type="selectionEntry"/>
+    <entryLink id="e520-1a09-4c23-8646" name="Kiyozumi Kicho" hidden="false" collective="false" import="true" targetId="7b8f-61a1-2d88-60f2" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="9592-a8de-7eb6-461b" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+    </entryLink>
     <entryLink id="1263-fddf-3a8c-a2b0" name="Kiyozumi Sadaka" hidden="true" collective="false" import="true" targetId="7728-72dd-3889-91b2" type="selectionEntry"/>
     <entryLink id="b171-16a2-fbe0-2a62" name="Ryokeen" hidden="false" collective="false" import="true" targetId="f97b-84fa-27d7-b73b" type="selectionEntry"/>
     <entryLink id="5efc-b365-0534-9a96" name="Taiyo" hidden="true" collective="false" import="true" targetId="90d7-5fe5-0a05-1bea" type="selectionEntry"/>
@@ -4518,6 +4648,11 @@ Permitted [Bushi, Koroko, Tribesman]</characteristic>
               </conditions>
             </conditionGroup>
           </conditionGroups>
+        </modifier>
+        <modifier type="decrement" value="1" field="a111-8656-5c05-7415">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="9592-a8de-7eb6-461b" shared="true" includeChildSelections="true"/>
+          </conditions>
         </modifier>
       </modifiers>
     </entryLink>
@@ -4563,6 +4698,11 @@ Permitted [Bushi, Koroko, Tribesman]</characteristic>
               </conditions>
             </conditionGroup>
           </conditionGroups>
+        </modifier>
+        <modifier type="decrement" value="1" field="a111-8656-5c05-7415">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="9592-a8de-7eb6-461b" shared="true" includeChildSelections="true"/>
+          </conditions>
         </modifier>
       </modifiers>
     </entryLink>
@@ -4632,6 +4772,13 @@ Permitted [Bushi, Koroko, Tribesman]</characteristic>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="8"/>
       </costs>
+      <modifiers>
+        <modifier type="decrement" value="1" field="a111-8656-5c05-7415">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="9592-a8de-7eb6-461b" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry id="e281-eb25-ed0e-d987" name="Zephyr Guard" hidden="false" collective="false" import="true" type="model">
       <constraints>
@@ -4665,6 +4812,13 @@ Permitted [Bushi, Koroko, Tribesman]</characteristic>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="8"/>
       </costs>
+      <modifiers>
+        <modifier type="decrement" value="1" field="a111-8656-5c05-7415">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="9592-a8de-7eb6-461b" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry id="9b13-99d8-3811-6405" name="Blue Gale Scout" hidden="false" collective="false" import="true" type="model">
       <constraints>

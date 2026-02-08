@@ -244,8 +244,7 @@ If activated, the model must declare an action permitted while in BtB.</characte
             <characteristic name="Visibility" typeId="9858-c2c1-b6fc-b75c">Clear</characteristic>
             <characteristic name="Size" typeId="000a-cf92-4d1e-c934">Zero</characteristic>
             <characteristic name="Traits" typeId="eaef-482b-c5d3-866e">Destructible</characteristic>
-            <characteristic name="Description" typeId="9cfa-9bd0-0b1b-9c06">When a model that is not Kumo contacts a Webbed Ground terrain during a Walk, Melee, Run or Charge, it loses 1&quot; of movement cumulative for each Webbed Ground
-contacted (to a minimum of 1 &quot; Movement).
+            <characteristic name="Description" typeId="9cfa-9bd0-0b1b-9c06">When a model that is not Kumo contacts one or more Webbed Ground terrain during a Walk, Melee, Run or Charge, it loses 1&quot; of movement (to a minimum of 1 &quot; movement).
 Enemy models in Webbed Ground Terrain lose Cloudwalk and Camouflage.
 While in the Webbed Ground, Friendly Faction models gain Sidestep Attack (0) and Sidestep Defence (0).
 When an Enemy model is within one ore more Webbed Ground Terrain uses a Ki Feat or Ki Boost, the cost in Ki Tokens is increased by 1, and you may choose one Kumo model to gain 1 Ki Token.
@@ -1082,7 +1081,7 @@ If this model is within a Webbed Ground Terrain feature then it does not lose an
         <entryLink id="4fd2-aca4-92e4-bea3" name="Enhancements" hidden="false" collective="false" import="true" targetId="2be0-472c-1d87-ef19" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
-        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="6"/>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="8"/>
       </costs>
       <constraints>
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="dd9f-c0ba-a10b-53b3" includeChildSelections="true"/>
@@ -1359,13 +1358,13 @@ If this model is within a Webbed Ground Terrain feature then it does not lose a
           <profiles>
             <profile name="Procession" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits" hidden="false" id="5193-199b-a72c-6078">
               <characteristics>
-                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Aware, Durable, Indomitable (8), Insignificant, Kumo, Swarm, Tiny, Tireless</characteristic>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Aware, Durable, Group, Indomitable (8), Insignificant, Swarm, Tiny, Tireless</characteristic>
               </characteristics>
             </profile>
           </profiles>
           <infoLinks>
             <infoLink name="Indomitable " id="394d-588e-e050-8488" hidden="false" targetId="3beb-6f28-e7c4-a236" type="rule"/>
-            <infoLink name="Kumo" id="db48-0043-6849-301c" hidden="false" targetId="d61f-26dc-7429-84ee" type="rule"/>
+            <infoLink name="Group" id="db48-0043-6849-301c" hidden="false" targetId="4c02-03a1-ae7b-7821" type="rule"/>
             <infoLink name="Aware" id="9571-4cc6-b7ba-31ee" hidden="false" targetId="ff4a-6b14-09dd-2343" type="rule"/>
             <infoLink name="Durable" id="ec2f-4aa5-91d1-069c" hidden="false" targetId="3612-7e19-3cb9-72d0" type="rule"/>
             <infoLink name="Insignificant" id="7517-d022-e1a6-e623" hidden="false" targetId="1614-d86c-ef8a-c095" type="rule"/>
@@ -1403,6 +1402,13 @@ If this model is within a Webbed Ground Terrain feature then it does not lose a
               <characteristics>
                 <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">This model&apos;s Melee Pool and Ki Statistics are variable.
 X is equal to the number of Wounds it has remaining unmarked on its Wound Track.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Unique Effects" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects" hidden="false" id="8f53-d40b-9db7-3c84">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">This model does not suffer movement penalties for Webbed Ground Terrain.
+If this model deals any damage in a melee exchange it Heals one Damage.
+This model may be included in any Awoken Theme Warbands.</characteristic>
               </characteristics>
             </profile>
           </profiles>
