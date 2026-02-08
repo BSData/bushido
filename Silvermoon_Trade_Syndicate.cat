@@ -993,8 +993,8 @@ A non-Soulless Enemy model in BtB with a Friendly Rose model must make a Ki Chal
 
 In the Starting Phase of each turn, this model gains a Luck Token. Whenever a Friendly model within 6&quot; makes a Fear Test, Attack Roll, Defence Roll, Damage Roll or Opposed Ki Test this model may spend the token to re-roll one of the dice.
 
-During the Starting Phase you may remove this model from play, roll 3D6 and put the dice to one side but keeping the results; or keep this model in play and roll a D6 and put the dice to one side but keeping the result. 
-At any point during the turn when a Player would make a dice roll, before dice are rolled you can substitute one of your dice that would be rolled for one of these dice, any other dice are rolled as normal, but the result of this dice is the one chosen.</characteristic>
+During the Starting Phase you may remove this model from play, roll 3D6 and put the dice to one side but keeping the results; or keep this model in play and roll a D6 and put the dice to one side but keeping the result.
+At any point during the turn when a Player would make a dice roll for a Test, before dice are rolled you can substitute one of your dice that would be rolled for one of these dice, any other dice are rolled as normal, but the result of this dice is the one chosen.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -1483,7 +1483,7 @@ At any point during the turn when a Player would make a dice roll, before dice a
               <characteristics>
                 <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+2</characteristic>
                 <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Brutal (1)</characteristic>
-                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Forceback Attack (1), Powerful Attack (1), Push Defence (1)</characteristic>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Forceback Attack (1), Powerful Attack (1), Push Defence (0)</characteristic>
                 <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
               </characteristics>
             </profile>
@@ -1499,11 +1499,11 @@ At any point during the turn when a Player would make a dice roll, before dice a
           <profiles>
             <profile id="d675-18aa-ea2b-06fd" name="Virtue" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
               <characteristics>
-                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">While this model is in play, when a Friendly Buto, Jumo or Monk model spends a Virtue Token you may choose one of the following effects: 
-• Reduce the cost of this model’s Special Attacks or Defences by (1)
-• Sweep Attack (1) and Sweep Defence (1)
-• Throw Attack (1) and Throw Defence (1)
-• Immovable</characteristic>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">While this model is in play, when a Friendly Buto, Jumo or Monk model spends a Virtue Token you may choose one of the following effects:
+- Reduce the cost of this model’s Special Attacks or Defences by (1)
+- Sweep Attack (1) and Sweep Defence (1)
+- Throw Attack (1) and Throw Defence (1)
+- Immovable</characteristic>
               </characteristics>
             </profile>
             <profile id="d85d-edf5-0790-34f1" name="Oyabun" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
@@ -3322,14 +3322,13 @@ While within 2&quot; of this model, Fire Kami models gain Aggressive and Brutal 
       <profiles>
         <profile id="bd89-4f1f-c7e7-4075" name="Yokozuna&apos;s Revenge" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
           <characteristics>
-            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">• During Deployment, nominate an Enemy model to be the Antagonist. Yokozuna Akashi gains Vengeance [Antagonist].
-• Buto models cost -1 Rice to recruit into this warband.
-• Each turn the first failed Opposed Ki Test for an Enemy Ki Feat is ignored. The Friendly model is considered to have succeeded and the Enemy model failed instead.
-• Friendly models gain Bodyguard [Yokozuna Akashi](3&quot;) and Co-ordinated Attack [Buto].
-• This Theme may recruit Lua as a Ronin model.
-• Warbands using this theme must recruit Yokozuna Akashi.
+            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">- During Deployment, nominate an Enemy model to be the Antagonist. Yokozuna Akashi gains Vengeance [Antagonist].
+- Buto models cost -1 Rice to recruit into this warband.
+- Each turn the first failed Opposed Ki Test for an Enemy Ki Feat is ignored. The Friendly model is considered to have succeeded and the Enemy model failed instead.
+- Friendly models gain Bodyguard [Yokozuna Akashi](3&quot;) and Co-ordinated Attack [Buto].
+- Warbands using this theme must recruit Yokozuna Akashi.
 
-Permitted [Buto]
+Permitted [Buto, Ronin Buto, Lua]
 Exclusion [Oda]</characteristic>
           </characteristics>
         </profile>
@@ -5065,17 +5064,18 @@ While Enemy models are in BtB with this model, they cannot benefit from the Brut
           <profiles>
             <profile id="443a-d5cc-03ab-a8a4" name="Sensu &amp; Uchiwa" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
               <characteristics>
-                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Bodyguard [Fan], Dodge (1), Feint (1), Group, Ranged Defence (3), Vengeance [Ken]</characteristic>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Bodyguard [Fan], Defensive, Dodge (1), Feint (1), Group, Ranged Defence (3), Vengeance [Ken]</characteristic>
               </characteristics>
             </profile>
           </profiles>
           <infoLinks>
-            <infoLink id="4e06-6eb1-5894-f83f" name="Bodyguard" hidden="false" targetId="0286-6d10-a236-e0c3" type="rule"/>
+            <infoLink id="4e06-6eb1-5894-f83f" name="Defensive" hidden="false" targetId="c6e1-0904-b78f-7933" type="rule"/>
             <infoLink id="14ee-d6fd-9c6c-3878" name="Dodge " hidden="false" targetId="14d5-d459-5d8a-c73e" type="rule"/>
             <infoLink id="811f-86ba-72e0-57d8" name="Group" hidden="false" targetId="4c02-03a1-ae7b-7821" type="rule"/>
             <infoLink id="3a63-c74f-ecad-a5eb" name="Ranged Defence " hidden="false" targetId="9b8d-9ca9-e25d-3988" type="rule"/>
             <infoLink id="8728-ad45-c629-796a" name="Vengeance" hidden="false" targetId="6779-0aac-2f51-f67e" type="rule"/>
             <infoLink id="1a50-5b45-c2b6-c880" name="Feint" hidden="false" targetId="38b0-4d97-3c4c-8d96" type="rule"/>
+            <infoLink id="f41b-f89e-3339-e9ef" name="Bodyguard" hidden="false" targetId="0286-6d10-a236-e0c3" type="rule"/>
           </infoLinks>
         </infoGroup>
       </infoGroups>
@@ -6343,17 +6343,12 @@ While the number of Investment Counters shown below is reached, Friendly Shatei
       </modifiers>
       <modifierGroups>
         <modifierGroup>
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="98a6-e76a-f99b-a1d3" type="atLeast"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
           <modifiers>
             <modifier type="set" field="hidden" value="false"/>
-            <modifier type="set-primary" field="category" value="9fba-f50b-c8f7-8396"/>
           </modifiers>
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="98a6-e76a-f99b-a1d3" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </conditions>
         </modifierGroup>
       </modifierGroups>
       <entryLinks>

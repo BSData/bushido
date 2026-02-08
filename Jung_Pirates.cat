@@ -621,7 +621,7 @@ If this model has no Ammo Tokens on its Net Weapon it loses the Net Weapon.</cha
                 <characteristic name="Range Bands" typeId="be6a-50c6-d691-e2e9">-/6/-</characteristic>
                 <characteristic name="Traits" typeId="3410-4428-ef91-eb61"/>
                 <characteristic name="Specials" typeId="cdaf-b6ac-89d4-39ef">Drag Attack (0), Forceback Attack(0)</characteristic>
-                <characteristic name="Unique Effects" typeId="3bf8-6525-f003-4990"/>
+                <characteristic name="Unique Effects" typeId="3bf8-6525-f003-4990">This model&apos;s Ranged Attack must declare a Special Attack.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -634,7 +634,7 @@ If this model has no Ammo Tokens on its Net Weapon it loses the Net Weapon.</cha
           <profiles>
             <profile id="0b51-9cb5-400f-127f" name="Unique Effects" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
               <characteristics>
-                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">This model&apos;s Ranged Attack must declare a Special Attack.</characteristic>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">This model Gains Ranged Boost 2 and Willpower (+1) while in the area of a Quagmire or Incoming Tide.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -651,7 +651,7 @@ If this model has no Ammo Tokens on its Net Weapon it loses the Net Weapon.</cha
         <entryLink id="7352-0a37-9fef-5fba" name="Enhancements" hidden="false" collective="false" import="true" targetId="2327-1257-a4b4-df32" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
-        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="14"/>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="13"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="8139-57d6-352b-77b1" name="Ryota" hidden="false" collective="false" import="true" type="model">
@@ -2780,7 +2780,7 @@ This model gains Ki Tokens equal to the removed Water Lesser Kami&apos;s remaini
               <characteristics>
                 <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">-2</characteristic>
                 <characteristic name="Traits" typeId="39e3-f945-7956-ad4e"/>
-                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Sidestep Defence (1), Drag Attack (0), Forceback Attack (0)</characteristic>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Sidestep Defence (0), Drag Attack (0), Forceback Attack (0)</characteristic>
                 <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
               </characteristics>
             </profile>
@@ -2798,8 +2798,8 @@ This model gains Ki Tokens equal to the removed Water Lesser Kami&apos;s remaini
                 <characteristic name="Ranged Weapon Strength" typeId="15aa-b6bd-6923-271f">Sp</characteristic>
                 <characteristic name="Range Bands" typeId="be6a-50c6-d691-e2e9">3/6/9</characteristic>
                 <characteristic name="Traits" typeId="3410-4428-ef91-eb61"/>
-                <characteristic name="Specials" typeId="cdaf-b6ac-89d4-39ef">Drag Attack (0), Forceback Attack(0), Sweep Attack (2)</characteristic>
-                <characteristic name="Unique Effects" typeId="3bf8-6525-f003-4990"/>
+                <characteristic name="Specials" typeId="cdaf-b6ac-89d4-39ef">Drag Attack (0), Forceback Attack(0), Sweep Attack (1)</characteristic>
+                <characteristic name="Unique Effects" typeId="3bf8-6525-f003-4990">This model&apos;s Ranged Attack must declare a Special Attack.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -2813,7 +2813,7 @@ This model gains Ki Tokens equal to the removed Water Lesser Kami&apos;s remaini
           <profiles>
             <profile id="d260-11db-85c3-73df" name="Unique Effects" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
               <characteristics>
-                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">This model&apos;s Ranged Attack must declare a Special Attack.</characteristic>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">This model Gains Ranged Boost 2 and Willpower (+1) while in the area of a Quagmire or Incoming Tide.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -2830,7 +2830,7 @@ This model gains Ki Tokens equal to the removed Water Lesser Kami&apos;s remaini
         <entryLink id="519e-ef6c-8083-a447" name="Enhancements" hidden="false" collective="false" import="true" targetId="2327-1257-a4b4-df32" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
-        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="17"/>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="14"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="55ce-5e27-7f05-0f2d" name="Moyasu" hidden="false" collective="false" import="true" type="upgrade">
@@ -4779,6 +4779,7 @@ This model may not declare Ranged Attack Actions.</characteristic>
               <characteristics>
                 <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">This model cannot gain Scout or Flank.
 This model cannot declare Melee or Charge Actions.
+This model may not have Equipment attached.
 Enemy models in BtB with this model in the Starting Phase generate one fewer Activation Counters.
 Before or after this model performs any action it may Move 3&quot;.
 Once per activation, when this model Enters BtB with an Enemy model or an Enemy model Enters into BtB with this model, that Enemy model gains an Immobilised Marker after the activation is resolved.</characteristic>
@@ -5738,13 +5739,25 @@ Exclusion: [Other Kancho or Juhin than those listed, Crabs, Samemiman]</charact
         </infoGroup>
       </infoGroups>
       <categoryLinks>
-        <categoryLink id="eab7-859a-1de6-2b0a" name="Faction: Jung Pirates" hidden="false" targetId="76df-04fb-ea1f-77ab" primary="false"/>
-        <categoryLink id="6d0c-f0ae-d844-be0b" name="Faction Profile Cards" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
         <categoryLink id="0db6-2bba-5679-0332" name="Buto" hidden="false" targetId="48d9-12ca-aeef-7295" primary="false"/>
+        <categoryLink targetId="9fba-f50b-c8f7-8396" id="ada9-7c05-7a29-f1c4" primary="true" name="Ronin Profile Cards"/>
+        <categoryLink targetId="f62f-dd0b-4f06-06a6" id="ae73-0f78-02c5-58a5" primary="false" name="Brutal"/>
       </categoryLinks>
       <entryLinks>
         <entryLink id="6987-63f5-652a-8c82" name="Enhancements" hidden="false" collective="false" import="true" targetId="2327-1257-a4b4-df32" type="selectionEntryGroup"/>
       </entryLinks>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="add" value="76df-04fb-ea1f-77ab" field="category"/>
+            <modifier type="set-primary" value="0ca8-2040-37f2-a1e0" field="category"/>
+            <modifier type="remove" value="9fba-f50b-c8f7-8396" field="category"/>
+          </modifiers>
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="477a-e693-0888-08f7" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifierGroup>
+      </modifierGroups>
     </entryLink>
     <entryLink id="a54b-1c17-94bf-8666" name="Two Lone Swordsmen" hidden="false" collective="false" import="true" targetId="29e4-7f5e-593d-2445" type="selectionEntry"/>
     <entryLink id="1528-6094-b0f6-9725" name="Khendish" hidden="false" collective="false" import="true" targetId="dc54-b54e-1428-7c3e" type="selectionEntry"/>
