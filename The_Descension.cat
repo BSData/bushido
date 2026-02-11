@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="d4b0-a54e-a48b-88a5" name="The Descension" revision="43" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="19" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="d4b0-a54e-a48b-88a5" name="The Descension" revision="44" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="19" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <categoryEntries>
     <categoryEntry id="093f-43eb-fd72-ead0" name="Move Boost" hidden="false"/>
     <categoryEntry name="Max. Kurama" id="3c5a-4724-16e9-6da6" hidden="false">
@@ -4315,7 +4315,7 @@ When this model performs a Scenario Action, remove one fewer Activation Counters
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Undermoles" hidden="false" id="9070-c102-01ba-e9a7">
       <constraints>
-        <constraint type="max" value="1" field="selections" scope="force" shared="true" id="663e-9fcd-82e8-a13f" includeChildSelections="true"/>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="663e-9fcd-82e8-a13f" includeChildSelections="true" includeChildForces="true"/>
       </constraints>
       <infoGroups>
         <infoGroup name="Traits" id="12d7-5362-6a5f-b543" hidden="false">
@@ -4426,12 +4426,18 @@ When this model performs a Scenario Action, remove one fewer Activation Counters
         </entryLink>
       </entryLinks>
       <modifiers>
-        <modifier type="set" value="true" field="hidden">
+        <modifier type="set" value="0" field="663e-9fcd-82e8-a13f">
           <conditions>
-            <condition type="lessThan" value="1" field="selections" scope="force" childId="020f-7723-5e32-6ed0" shared="true" includeChildSelections="true" includeChildForces="true"/>
+            <condition type="lessThan" value="1" field="selections" scope="roster" childId="020f-7723-5e32-6ed0" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifier>
       </modifiers>
+      <categoryLinks>
+        <categoryLink targetId="0ca8-2040-37f2-a1e0" id="a44f-d75d-bfc6-7d82" primary="true" name="Faction Profile Cards"/>
+        <categoryLink targetId="daaa-d0d2-e66e-0672" id="8e4f-af8c-5a57-6372" primary="false" name="Faction: The Descension"/>
+        <categoryLink targetId="c382-9ab3-9924-e30a" id="6f12-4500-9221-0c58" primary="false" name="Animal"/>
+        <categoryLink targetId="ecfc-6a77-10bd-4ae4" id="ebb0-b92e-90a3-fb0b" primary="false" name="Mole"/>
+      </categoryLinks>
     </selectionEntry>
   </selectionEntries>
   <entryLinks>
@@ -4645,6 +4651,7 @@ When this model performs a Scenario Action, remove one fewer Activation Counters
             <conditionGroup type="or">
               <conditions>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="efff-019c-1bff-2d6e" type="atLeast"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="9592-a8de-7eb6-461b" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -4694,6 +4701,7 @@ When this model performs a Scenario Action, remove one fewer Activation Counters
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
+                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9592-a8de-7eb6-461b" type="atLeast"/>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="efff-019c-1bff-2d6e" type="atLeast"/>
               </conditions>
             </conditionGroup>
