@@ -4658,7 +4658,7 @@ When this model gains Ki from the Channel Trait, it also gains a Virtue Token.</
           <profiles>
             <profile id="c57f-c6a4-461e-67e1" name="Artisan" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
               <characteristics>
-                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">Equipment cards without weapon profiles cost 1 rice less when Attached to this model, to a minimum of O rice.</characteristic>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">Equipment cards without weapon profiles cost 1 rice less when Attached to this model, to a minimum of 0 rice.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -7469,19 +7469,19 @@ Requirement [Samurai with the Armour trait, Passing the Night theme]</characteri
                 <cost name=" Rice" typeId="a111-8656-5c05-7415" value="3"/>
               </costs>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Hida&apos;s Mon" hidden="false" id="7789-9811-b4b7-9c51" collective="false">
+            <selectionEntry type="upgrade" import="true" name="Hida&apos;s Mon" hidden="true" id="7789-9811-b4b7-9c51" collective="false">
               <modifiers>
                 <modifier type="decrement" value="1" field="a111-8656-5c05-7415">
                   <conditions>
                     <condition type="atLeast" value="1" field="selections" scope="roster" childId="90d7-5fe5-0a05-1bea" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                   </conditions>
                 </modifier>
-                <modifier type="set" value="true" field="hidden">
+                <modifier type="set" value="false" field="hidden">
                   <conditionGroups>
-                    <conditionGroup type="and">
+                    <conditionGroup type="or">
                       <conditions>
-                        <condition type="notInstanceOf" value="1" field="selections" scope="parent" childId="f1ce-b5eb-6c4a-53ef" shared="true"/>
-                        <condition type="notInstanceOf" value="1" field="selections" scope="parent" childId="f784-2aad-a4e3-319c" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="f1ce-b5eb-6c4a-53ef" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="f784-2aad-a4e3-319c" shared="true"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
@@ -7494,9 +7494,8 @@ Requirement [Samurai with the Armour trait, Passing the Night theme]</characteri
               <profiles>
                 <profile name="Hida&apos;s Mon" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card" hidden="false" id="728d-a2ad-99e1-ba2b">
                   <characteristics>
-                    <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">While this model is within 6&quot; of any Enemy model, any Friendly Ashigaru or Samurai model with LOS to this model gains Indomitable (3).
+                    <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">While this model is within 6&quot; of any Enemy model, any Friendly Ashigaru or Samurai model with LoS to this model gains Indomitable (3).
 This model is considered Medium Sized for the purposes of this ability.
-
 
 Requirement: [Takashi Hida or Fujitaka]</characteristic>
                   </characteristics>
@@ -7507,6 +7506,169 @@ Requirement: [Takashi Hida or Fujitaka]</characteristic>
               </categoryLinks>
               <costs>
                 <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2"/>
+              </costs>
+              <infoLinks>
+                <infoLink name="Indomitable " id="12fb-4ac7-7bc6-9a8c" hidden="false" targetId="3beb-6f28-e7c4-a236" type="rule"/>
+              </infoLinks>
+            </selectionEntry>
+            <selectionEntry id="34fc-5246-1576-1de0" name="Dragon Blade" hidden="true" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="false">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e12a-f782-3281-7444" type="instanceOf"/>
+                  </conditions>
+                </modifier>
+                <modifier type="decrement" field="a111-8656-5c05-7415" value="1">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="90d7-5fe5-0a05-1bea" type="atLeast"/>
+                  </conditions>
+                </modifier>
+                <modifier type="decrement" field="a111-8656-5c05-7415" value="1">
+                  <conditions>
+                    <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1d67-a836-b4e8-aa07" type="instanceOf"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4072-94ef-40e5-5b63" type="max"/>
+                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7f21-21c1-fb59-a8b8" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="bb4f-7642-3e0b-c55c" name="Katana" hidden="false" typeId="e3e5-fd2b-c549-aa9f" typeName="Special Card (Melee Weapon)">
+                  <characteristics>
+                    <characteristic name="Melee Weapon Strength" typeId="6ea7-0195-5369-2e8f">+1</characteristic>
+                    <characteristic name="Traits" typeId="5aef-50d8-65f8-28c7"/>
+                    <characteristic name="Specials" typeId="11a1-1998-fe0a-3211">Critical Attack (1), Powerful Attack (1), Sidestep Defence (1)</characteristic>
+                    <characteristic name="Unique Effects" typeId="a97f-eed7-2b8b-2e6b"/>
+                  </characteristics>
+                </profile>
+                <profile name="Dragon Blade" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card" hidden="false" id="8320-5abd-937a-9406">
+                  <characteristics>
+                    <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">Attached model gains the following Melee Weapon.
+
+Requirement [Samurai]</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <infoLinks>
+                <infoLink id="36b9-0819-09cb-5376" name="Critical Attack" hidden="false" targetId="7ec7-56ae-79e3-423e" type="rule"/>
+                <infoLink id="41a8-6cfa-cca5-0bb8" name="Powerful Attack" hidden="false" targetId="d56a-058d-95d9-5b60" type="rule"/>
+                <infoLink id="7c37-b03b-9907-bd42" name="Sidestep Defence " hidden="false" targetId="753c-6c3b-64d7-203c" type="rule"/>
+              </infoLinks>
+              <categoryLinks>
+                <categoryLink id="1e27-fb60-269c-2d45" name="Faction Equipment Cards" hidden="false" targetId="5bcd-fe93-a8ea-0164" primary="true"/>
+                <categoryLink targetId="c13c-a06d-22fe-e254" id="6953-3f24-635a-0e4a" primary="false" name="Cycle: Consequences"/>
+              </categoryLinks>
+              <costs>
+                <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="4408-b575-cf73-60e3" name="Hiro&apos;s Mon" hidden="true" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="false">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f784-2aad-a4e3-319c" type="instanceOf"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="64b1-d28c-2fd9-e2bd" type="max"/>
+                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3c15-573c-8bae-9044" type="max"/>
+              </constraints>
+              <profiles>
+                <profile name="Hiro&apos;s Mon" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card" hidden="false" id="a5b9-3cb2-63c2-3e8b">
+                  <characteristics>
+                    <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">While this model is within 6&quot; of any Enemy model, Friendly Ashigaru models with LoS to this model gain Courage (2) and Spirit (1).
+While they do not have the Initiative, those Ashigaru also gain Parry (1).
+For the purpose of this ability, this model is considered Medium Sized and Friendly models have Aware.
+
+Requirement [ Fujitaka]</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <infoLinks>
+                <infoLink id="231d-7b96-44bd-47aa" name="Courage" hidden="false" targetId="2c5f-d52f-24ba-7927" type="rule"/>
+                <infoLink id="d162-16e9-4893-a144" name="Aware" hidden="false" targetId="ff4a-6b14-09dd-2343" type="rule"/>
+                <infoLink id="7108-24d1-9b0f-7c99" name="Parry" hidden="false" targetId="c7c2-b36e-7952-c79b" type="rule"/>
+                <infoLink id="6be4-5ad2-6211-1ed2" name="Spirit" hidden="false" targetId="a9ba-9904-7d29-7bcb" type="rule"/>
+              </infoLinks>
+              <categoryLinks>
+                <categoryLink id="e396-88be-cdf1-ee7b" name="Faction Equipment Cards" hidden="false" targetId="5bcd-fe93-a8ea-0164" primary="true"/>
+                <categoryLink targetId="c13c-a06d-22fe-e254" id="3c48-2eab-1471-d576" primary="false" name="Cycle: Consequences"/>
+              </categoryLinks>
+              <costs>
+                <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="e425-7772-28a8-b28c" name="Telescopic Sights" hidden="true" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="false">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="922d-203a-4f2a-603a" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="09e9-54aa-133c-8156" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="1b09-d9ec-a2a3-410b" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9311-4e15-e45e-2d25" type="max"/>
+                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="12de-7ebb-5b82-55a1" type="max"/>
+              </constraints>
+              <profiles>
+                <profile name="Telescopic Sights" typeId="bd15-7ead-9268-3576" typeName="Special Card (Ki Feat)" hidden="false" id="33d4-4eb2-a20e-8adb">
+                  <characteristics>
+                    <characteristic name="Description" typeId="17eb-17e2-4df4-5c5d">Attached model gains the following Ki Feat:
+
+Requirement [Ashigaru with Arquebus]</characteristic>
+                    <characteristic name="Name" typeId="27c7-1649-f16e-8eaa">Sniper Shot</characteristic>
+                    <characteristic name="Cost" typeId="e410-b220-64e5-7953">1</characteristic>
+                    <characteristic name="Timing" typeId="b9bf-562a-fe26-cb29">Active</characteristic>
+                    <characteristic name="Subject" typeId="47b8-f739-9d50-2e45">Personal</characteristic>
+                    <characteristic name="Limitation" typeId="870e-79e4-80ee-c0cc">noBtB, OpG</characteristic>
+                    <characteristic name="Ki Feat Description" typeId="3886-242b-fb70-5c88">The next time this model performs a ranged attack the Challenge Number is not modified by Cover.
+This effect does not ignore Camouflage.
+This attack automatically succeeds the Range Challenge Test for models in BtB.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <categoryLinks>
+                <categoryLink id="1213-0415-a27a-0fa0" name="Faction Equipment Cards" hidden="false" targetId="5bcd-fe93-a8ea-0164" primary="true"/>
+                <categoryLink targetId="c13c-a06d-22fe-e254" id="b6ec-b35c-1ffb-5035" primary="false" name="Cycle: Consequences"/>
+              </categoryLinks>
+              <costs>
+                <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="2461-59aa-7701-c145" name="Twice Blessed Helmet" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a485-b6b0-b58e-a3a1" type="notInstanceOf"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0dbb-b80e-a418-65ad" type="max"/>
+                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="554e-67ce-500a-e054" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="c144-287c-3c9a-b093" name="Twice Blessed Helmet" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
+                  <characteristics>
+                    <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">When the Attached model gains an increase to their Melee Pool they gain an additional +1 to their Melee Pool.
+
+Requirement [Shisai]</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <categoryLinks>
+                <categoryLink id="944c-71b9-9d53-5afa" name="Faction Equipment Cards" hidden="false" targetId="5bcd-fe93-a8ea-0164" primary="true"/>
+              </categoryLinks>
+              <costs>
+                <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
@@ -7599,6 +7761,7 @@ Requirement: [Takashi Hida or Fujitaka]</characteristic>
             <entryLink id="aeb4-76a6-f332-21c1" name="The Sunrise Katana" hidden="false" collective="false" import="true" targetId="a54a-aa90-53f2-d9df" type="selectionEntry"/>
             <entryLink id="39d7-305c-b71e-aea7" name="The Kiyozumi Katana" hidden="false" collective="false" import="true" targetId="f882-5ccf-0724-2290" type="selectionEntry"/>
             <entryLink id="f668-66da-5a5e-5595" name="The Hozumi Katana" hidden="false" collective="false" import="true" targetId="5cac-d0cc-1c51-a147" type="selectionEntry"/>
+            <entryLink import="true" name="Spidersilk Coat" hidden="false" id="50ca-ac4f-c940-ecc4" type="selectionEntry" targetId="6f8c-dbe4-cdeb-809f"/>
           </entryLinks>
           <modifiers>
             <modifier type="set" value="true" field="hidden">
@@ -7628,6 +7791,7 @@ Requirement: [Takashi Hida or Fujitaka]</characteristic>
         <entryLink id="ae3d-a4ec-9661-264f" name="Professional" hidden="false" collective="false" import="true" targetId="a795-4dac-6489-ce72" type="selectionEntry"/>
         <entryLink id="839d-7ba0-9bd6-dc42" name="Spark of Life" hidden="false" collective="false" import="true" targetId="af1d-199c-fe39-69e6" type="selectionEntry"/>
         <entryLink id="afba-4a7f-dc0d-4283" name="The Oncoming Storm" hidden="false" collective="false" import="true" targetId="4965-ef2c-5ec7-2d99" type="selectionEntry"/>
+        <entryLink import="true" name="Mosh Pit" hidden="false" id="6eab-c26b-54c1-5705" type="selectionEntry" targetId="a4b8-d258-053b-0f1d"/>
       </entryLinks>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>

@@ -1035,6 +1035,67 @@ For the first turn of the game, all models lose Cloudwalk and Lightfooted and ma
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1"/>
       </costs>
     </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Bleeding Moon&apos;s Influence" hidden="false" id="cf7f-cd0c-1bd8-caa6">
+      <categoryLinks>
+        <categoryLink name="Ronin Event Cards" hidden="false" id="39fa-488b-f8b3-8027" targetId="7638-6ad1-8829-91db" primary="true"/>
+        <categoryLink targetId="c13c-a06d-22fe-e254" id="b398-8ae7-2083-f9c9" primary="false" name="Cycle: Consequences"/>
+      </categoryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1"/>
+      </costs>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="6e0a-1a75-253f-3977" includeChildSelections="true"/>
+      </constraints>
+      <profiles>
+        <profile name="Bleeding Moon&apos;s Influence" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card" hidden="false" id="c3e5-bc89-63e9-5ee1">
+          <characteristics>
+            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">Play in the Starting Phase.
+Bleed Markers cannot be removed this Main Phase.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Weeping Sky&apos;s Influence" hidden="false" id="e7ee-4871-1a35-885e">
+      <categoryLinks>
+        <categoryLink name="Ronin Event Cards" hidden="false" id="2d00-c18a-1172-7b6d" targetId="7638-6ad1-8829-91db" primary="true"/>
+        <categoryLink targetId="c13c-a06d-22fe-e254" id="e3c4-ce81-7560-a67f" primary="false" name="Cycle: Consequences"/>
+      </categoryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1"/>
+      </costs>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="8136-d2a3-622d-4741" includeChildSelections="true"/>
+      </constraints>
+      <profiles>
+        <profile name="Weeping Sky&apos;s Influence" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card" hidden="false" id="17ff-2538-77d3-418f">
+          <characteristics>
+            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">Play in the Starting Phase.
+Models cannot make Ranged Attacks at long range this turn.
+The battlefield is a Quagmire effect this turn.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Horoscope" hidden="false" id="b503-5963-e33c-e965">
+      <categoryLinks>
+        <categoryLink name="Ronin Event Cards" hidden="false" id="2455-3cfa-b090-19ce" targetId="7638-6ad1-8829-91db" primary="true"/>
+        <categoryLink targetId="c13c-a06d-22fe-e254" id="4677-c004-2cc4-5f70" primary="false" name="Cycle: Consequences"/>
+      </categoryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="3"/>
+      </costs>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="dd86-90be-c04c-b012" includeChildSelections="true"/>
+      </constraints>
+      <profiles>
+        <profile name="Horoscope" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card" hidden="false" id="decc-87b1-8f9b-c263">
+          <characteristics>
+            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">After rolling dice for any Opposed Test, for that test, you may re-roll any number of your dice used in the test.
+If you do, those dice may not be re-rolled, substituted, or have their value changed.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </selectionEntry>
   </selectionEntries>
   <sharedSelectionEntries>
     <selectionEntry id="fbe4-1c24-7fea-0247" name="Arashi&apos;s Fan" hidden="false" collective="false" import="true" type="upgrade">
@@ -7999,6 +8060,11 @@ When this model spends Ki Tokens, it may instead remove any number of Ghost Toke
             <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4750-f234-49e4-79c1" type="atLeast"/>
           </conditions>
         </modifier>
+        <modifier type="add" value="8d84-d45d-1b30-d696" field="category">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="parent" childId="7c5f-dd28-f992-5e75" shared="true" includeChildSelections="false"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3274-5b25-b292-07f6" type="max"/>
@@ -11224,6 +11290,88 @@ On a successful ranged attack instead of a Damage Roll, the Target gains a Blee
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="12"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="a4b8-d258-053b-0f1d" name="Mosh Pit" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="parent" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c382-9ab3-9924-e30a" type="instanceOf"/>
+                <condition field="selections" scope="parent" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d7c5-a2b9-4696-fd33" type="instanceOf"/>
+                <condition field="selections" scope="parent" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6639-615e-f1ab-bc64" type="instanceOf"/>
+                <condition field="selections" scope="parent" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7435-856f-ece2-fe58" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="divide" value="2" field="a111-8656-5c05-7415">
+          <conditions>
+            <condition type="equalTo" value="2" field="selections" scope="roster" childId="a4b8-d258-053b-0f1d" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="divide" value="3" field="a111-8656-5c05-7415">
+          <conditions>
+            <condition type="equalTo" value="3" field="selections" scope="roster" childId="a4b8-d258-053b-0f1d" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="3" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="cb30-450e-9321-c1ba" type="max"/>
+        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="91ee-715d-e6cc-5129" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="04d1-f8e4-ad47-868f" name="Mosh Pit" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
+          <characteristics>
+            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">Attached model gains Push Attack (2).</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="fed8-6de8-9676-40bc" name="Ronin Enhancement Cards" hidden="false" targetId="2758-69ad-6e26-c737" primary="true"/>
+      </categoryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1"/>
+      </costs>
+      <infoLinks>
+        <infoLink name="Push Attack" id="f078-1a2e-21b1-2005" hidden="false" type="rule" targetId="6c26-94ba-6b96-9e1b"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry id="6f8c-dbe4-cdeb-809f" name="Spidersilk Coat" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="instanceOf" value="0" field="selections" scope="parent" childId="c382-9ab3-9924-e30a" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <condition type="instanceOf" value="0" field="selections" scope="parent" childId="d7c5-a2b9-4696-fd33" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <condition type="instanceOf" value="0" field="selections" scope="parent" childId="6639-615e-f1ab-bc64" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <condition type="instanceOf" value="0" field="selections" scope="parent" childId="7435-856f-ece2-fe58" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="3" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c1e8-6455-d8df-181d" type="max"/>
+        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="beeb-3242-8f2f-c566" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="6cb6-7ed2-b96e-0abf" name="Spidersilk Coat" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
+          <characteristics>
+            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">Attached model gains Immune [Immobilised, Held, Frightened].</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink targetId="278f-9379-320a-1a7a" id="f1e1-7de0-f840-48da" primary="true" name="Ronin Equipment Cards"/>
+      </categoryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1"/>
+      </costs>
+      <infoLinks>
+        <infoLink name="" id="a236-f51e-2fb6-d28e" hidden="false" type="rule" targetId="ea08-b25e-0ea8-af73"/>
+      </infoLinks>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup id="f486-4498-03e3-c397" name="Enhancements" hidden="false" collective="false" import="true">
@@ -11264,6 +11412,7 @@ On a successful ranged attack instead of a Damage Roll, the Target gains a Blee
             <entryLink import="true" name="The Good Stuff" hidden="false" id="ba71-b4e3-58f6-dc6b" type="selectionEntry" targetId="4593-5949-dca4-8498"/>
             <entryLink import="true" name="Extra Kamaboko Rations" hidden="false" id="4222-69f4-389c-fee4" type="selectionEntry" targetId="7099-48ed-f481-89af"/>
             <entryLink import="true" name="Hozumi Introduction" hidden="false" id="7975-2f16-adab-58a6" type="selectionEntry" targetId="9c73-278d-b6b4-5913"/>
+            <entryLink import="true" name="Spidersilk Coat" hidden="false" id="f1df-5b34-ae11-9d54" type="selectionEntry" targetId="6f8c-dbe4-cdeb-809f"/>
           </entryLinks>
           <modifiers>
             <modifier type="set" value="-1" field="4ca6-762b-9f97-022f">
@@ -11299,7 +11448,74 @@ On a successful ranged attack instead of a Damage Roll, the Target gains a Blee
         <entryLink id="5902-ac4e-658c-7cf5" name="The Oncoming Storm" hidden="false" collective="false" import="true" targetId="4965-ef2c-5ec7-2d99" type="selectionEntry"/>
         <entryLink id="0545-3170-07b3-d801" name="Spark of Life" hidden="false" collective="false" import="true" targetId="af1d-199c-fe39-69e6" type="selectionEntry"/>
         <entryLink import="true" name="Inflated Importance" hidden="false" id="1d83-3582-e4c3-373e" type="selectionEntry" targetId="2d98-2493-6e18-8993"/>
+        <entryLink import="true" name="Mosh Pit" hidden="false" id="5bbd-0cbc-51ca-156b" type="selectionEntry" targetId="a4b8-d258-053b-0f1d"/>
       </entryLinks>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Consequences of Kiyohara" hidden="false" id="ea72-7b41-dd3c-918e" collective="false">
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="notInstanceOf" value="0" field="selections" scope="parent" childId="e78b-1ae8-1f5c-2eec" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="0812-2777-fa64-f63c" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="86e6-5abb-3d5c-c7e3" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </constraints>
+          <profiles>
+            <profile name="Consequences of Kiyohara" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card" hidden="false" id="18e6-6752-80c9-146d">
+              <characteristics>
+                <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">Attached model loses Cloudwalk and cannot gain it.
+In the End Phase, your opponent makes a Ranged Attack against the Attached model with the following Ranged Weapon: Call Lightning (-1).
+The Ranged Pool is equal to the turn number. The range is always medium. 
+his attack ignores models in BtB, Cover and Ranged Defence.
+
+
+Requirement [Sojobo]</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <categoryLinks>
+            <categoryLink name="Ronin Enhancement Cards" hidden="false" id="83f7-1120-37ad-d533" targetId="2758-69ad-6e26-c737" primary="true"/>
+            <categoryLink targetId="c13c-a06d-22fe-e254" id="4b19-83ae-6efd-ed61" primary="false" name="Cycle: Consequences"/>
+          </categoryLinks>
+          <costs>
+            <cost name=" Rice" typeId="a111-8656-5c05-7415" value="-5"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Fox Kin" hidden="false" id="7c5f-dd28-f992-5e75" collective="false">
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="notInstanceOf" value="0" field="selections" scope="parent" childId="f97b-84fa-27d7-b73b" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="ae11-da41-28e5-62c6" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="649b-52a2-7ab6-87b9" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </constraints>
+          <profiles>
+            <profile name="Fox Kin" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card" hidden="false" id="933c-7b01-3f72-2b72">
+              <characteristics>
+                <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">Attached model gains the Kitsune type.
+This Enhancement may be given to an Animal model.
+
+
+Requirement [Ryokeen]</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <categoryLinks>
+            <categoryLink name="Ronin Enhancement Cards" hidden="false" id="10de-b32f-96a4-40f2" targetId="2758-69ad-6e26-c737" primary="true"/>
+            <categoryLink targetId="c13c-a06d-22fe-e254" id="2ccc-5331-5889-017a" primary="false" name="Cycle: Consequences"/>
+          </categoryLinks>
+          <costs>
+            <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
   <sharedProfiles>
