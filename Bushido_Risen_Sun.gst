@@ -240,7 +240,37 @@
     <categoryEntry id="6eac-b6fc-ac09-4d64" name="The Imperial March" hidden="false"/>
     <categoryEntry id="69a2-397e-9d7b-a47d" name="Communal Cards" hidden="false"/>
     <categoryEntry id="875a-48b1-3c9f-0a14" name="Faction: Silvermoon Trade Syndicate" hidden="false"/>
-    <categoryEntry id="a745-0548-80c8-ece4" name="Cycle: Year of the Risen Sun" hidden="false"/>
+    <categoryEntry id="a745-0548-80c8-ece4" name="Year of the Risen Sun" hidden="false">
+      <modifiers>
+        <modifier type="set" value="0" field="b640-e68d-1ece-d96d">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="2a7c-a7b6-55b7-a6ed" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="9e0e-78bf-83d0-f5b4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="401f-cfc6-71c4-a415" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="6da0-b320-b958-dc82" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="2a7c-a7b6-55b7-a6ed" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="9e0e-78bf-83d0-f5b4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="401f-cfc6-71c4-a415" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="c13c-a06d-22fe-e254" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint type="max" value="-1" field="selections" scope="roster" shared="true" id="b640-e68d-1ece-d96d" includeChildSelections="true" includeChildForces="true"/>
+      </constraints>
+    </categoryEntry>
     <categoryEntry id="b254-2810-6b62-66d9" name="Brotherhood" hidden="false"/>
     <categoryEntry id="3df8-0340-a4a1-a8be" name="Ronin Terrain Cards" hidden="false"/>
     <categoryEntry id="7638-6ad1-8829-91db" name="Ronin Event Cards" hidden="false"/>
@@ -252,7 +282,37 @@
     <categoryEntry id="2758-69ad-6e26-c737" name="Ronin Enhancement Cards" hidden="false"/>
     <categoryEntry id="5073-f00b-a8f6-5e3b" name="Reference Cards" hidden="false"/>
     <categoryEntry id="7cb4-8adf-0e10-c1ea" name="Faction Test Cards" hidden="false"/>
-    <categoryEntry id="6da0-b320-b958-dc82" name="Cycle: Weeping Sky" hidden="false"/>
+    <categoryEntry id="6da0-b320-b958-dc82" name="Weeping Sky" hidden="false">
+      <modifiers>
+        <modifier type="set" value="0" field="4c0d-cf09-6a29-6d07">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="2a7c-a7b6-55b7-a6ed" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="9e0e-78bf-83d0-f5b4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="401f-cfc6-71c4-a415" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="a745-0548-80c8-ece4" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="2a7c-a7b6-55b7-a6ed" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="9e0e-78bf-83d0-f5b4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="401f-cfc6-71c4-a415" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="c13c-a06d-22fe-e254" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint type="max" value="-1" field="selections" scope="roster" shared="true" id="4c0d-cf09-6a29-6d07" includeChildSelections="true" includeChildForces="true"/>
+      </constraints>
+    </categoryEntry>
     <categoryEntry id="d190-d7ff-d350-6425" name="Trap" hidden="false"/>
     <categoryEntry id="a614-eb85-43c8-7869" name="Filters" hidden="false"/>
     <categoryEntry id="728d-5909-6312-6d40" name="Additional Rules" hidden="false"/>
@@ -261,7 +321,38 @@
     <categoryEntry id="5a76-c3ea-5cb7-471f" name="Faction: The Awoken" hidden="false"/>
     <categoryEntry name="Disallow Equipment" id="ac80-29b0-dc43-5a14" hidden="false"/>
     <categoryEntry name="Permit Faction Enhancements" id="e770-d8d3-2ca6-962e" hidden="false"/>
-    <categoryEntry name="Cycle: Consequences" id="c13c-a06d-22fe-e254" hidden="false"/>
+    <categoryEntry name="Consequences" id="c13c-a06d-22fe-e254" hidden="false">
+      <modifiers>
+        <modifier type="set" value="0" field="3d61-4f64-5bb0-b625">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="2a7c-a7b6-55b7-a6ed" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="9e0e-78bf-83d0-f5b4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="401f-cfc6-71c4-a415" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="a745-0548-80c8-ece4" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="2a7c-a7b6-55b7-a6ed" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="9e0e-78bf-83d0-f5b4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="401f-cfc6-71c4-a415" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="6da0-b320-b958-dc82" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint type="max" value="-1" field="selections" scope="roster" shared="true" id="3d61-4f64-5bb0-b625" includeChildSelections="true" includeChildForces="true"/>
+      </constraints>
+    </categoryEntry>
+    <categoryEntry name="Cycle" id="ecbb-5575-0b01-70a9" hidden="false"/>
   </categoryEntries>
   <forceEntries>
     <forceEntry id="2150-40b1-52f8-4a8a" name="Risen Sun" hidden="false">
@@ -300,54 +391,134 @@
     </selectionEntry>
     <selectionEntry id="e53c-5bc0-1cef-a8dc" name="Restrict to Cycle" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
-        <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="e55c-8636-d9b7-a7b6" type="max"/>
+        <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="e55c-8636-d9b7-a7b6" type="max"/>
       </constraints>
       <categoryLinks>
         <categoryLink id="1622-bddd-723e-c20f" name="Filters" hidden="false" targetId="a614-eb85-43c8-7869" primary="true"/>
       </categoryLinks>
-      <selectionEntries>
-        <selectionEntry id="2a7c-a7b6-55b7-a6ed" name="Restrict to Weeping Sky" hidden="false" collective="false" import="true" type="unit">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="a745-0548-80c8-ece4" type="atLeast"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e7a6-fc75-961b-24f6" type="max"/>
-          </constraints>
-          <categoryLinks>
-            <categoryLink id="3cfb-7ac7-7a20-ba9e" name="Cycle: Weeping Sky" hidden="false" targetId="6da0-b320-b958-dc82" primary="false"/>
-            <categoryLink id="9442-b262-fea6-be9f" name="Filters" hidden="false" targetId="a614-eb85-43c8-7869" primary="true"/>
-          </categoryLinks>
-          <costs>
-            <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="401f-cfc6-71c4-a415" name="Restrict to Year of the Risen Sun" hidden="false" collective="false" import="true" type="unit">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="6da0-b320-b958-dc82" type="atLeast"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="40be-a849-ae11-8182" type="max"/>
-          </constraints>
-          <categoryLinks>
-            <categoryLink id="6aa0-a276-ecd5-2a60" name="Cycle: Year of the Risen Sun" hidden="false" targetId="a745-0548-80c8-ece4" primary="false"/>
-            <categoryLink id="799f-0602-b3aa-7821" name="Filters" hidden="false" targetId="a614-eb85-43c8-7869" primary="true"/>
-          </categoryLinks>
-          <costs>
-            <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0"/>
       </costs>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Cycle" id="66a7-24e3-a036-9e1a" hidden="false" defaultSelectionEntryId="none">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="self" shared="true" id="487f-745a-b5f7-639b"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry type="unit" import="true" name="Restrict to Year of the Risen Sun" hidden="false" id="401f-cfc6-71c4-a415" collective="false">
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="2a7c-a7b6-55b7-a6ed" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="9e0e-78bf-83d0-f5b4" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="40be-a849-ae11-8182" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+              <categoryLinks>
+                <categoryLink name="Filters" hidden="false" id="799f-0602-b3aa-7821" targetId="a614-eb85-43c8-7869" primary="true"/>
+              </categoryLinks>
+              <costs>
+                <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="unit" import="true" name="Restrict to Weeping Sky" hidden="false" id="2a7c-a7b6-55b7-a6ed" collective="false">
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="401f-cfc6-71c4-a415" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="9e0e-78bf-83d0-f5b4" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e7a6-fc75-961b-24f6" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+              <categoryLinks>
+                <categoryLink name="Filters" hidden="false" id="9442-b262-fea6-be9f" targetId="a614-eb85-43c8-7869" primary="true"/>
+              </categoryLinks>
+              <costs>
+                <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="unit" import="true" name="Restrict to Consequences" hidden="false" id="9e0e-78bf-83d0-f5b4" collective="false">
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="2a7c-a7b6-55b7-a6ed" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="a745-0548-80c8-ece4" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c782-74ac-df4b-0117" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+              <categoryLinks>
+                <categoryLink name="Filters" hidden="false" id="e87a-3ba1-6d34-3bd5" targetId="a614-eb85-43c8-7869" primary="true"/>
+              </categoryLinks>
+              <costs>
+                <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="is Consequences" hidden="true" id="491f-cd5f-10f4-5b9e">
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="401f-cfc6-71c4-a415" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="2a7c-a7b6-55b7-a6ed" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="is YotRS" hidden="true" id="54a7-f18e-17b1-c83a">
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="9e0e-78bf-83d0-f5b4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="2a7c-a7b6-55b7-a6ed" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="is Weeping Sky" hidden="true" id="1a47-36c9-2b3d-af17">
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="401f-cfc6-71c4-a415" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="9e0e-78bf-83d0-f5b4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
   </selectionEntries>
 </gameSystem>

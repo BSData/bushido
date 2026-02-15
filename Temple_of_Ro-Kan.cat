@@ -4341,10 +4341,15 @@ If it does, it loses the Monk type and gains an ability based on the type of Kam
             <condition type="lessThan" value="1" field="selections" scope="roster" childId="1a12-f47f-8f23-0777" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="true"/>
           </conditions>
         </modifier>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="6da0-b320-b958-dc82" type="atLeast"/>
-          </conditions>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="9e0e-78bf-83d0-f5b4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="2a7c-a7b6-55b7-a6ed" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <constraints>
@@ -4369,6 +4374,7 @@ Requirement [Bastions of the Mountain]</characteristic>
         <categoryLink id="592e-208a-5139-6672" name="Faction Event Cards" hidden="false" targetId="d360-71aa-ca22-ba3c" primary="true"/>
         <categoryLink id="fbcc-8898-ff71-76ed" name="Cycle: Year of the Risen Sun" hidden="false" targetId="a745-0548-80c8-ece4" primary="false"/>
         <categoryLink id="d915-2096-7a95-d82a" name="Trap" hidden="false" targetId="d190-d7ff-d350-6425" primary="false"/>
+        <categoryLink targetId="ecbb-5575-0b01-70a9" id="3e37-7cd4-036f-860a" primary="false" name="Cycle"/>
       </categoryLinks>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1"/>
@@ -6408,10 +6414,15 @@ It loses an Activation Counter and its Action is considered resolved.</character
     </selectionEntry>
     <selectionEntry id="8671-c3da-e2dc-a8e1" name="Gathering for Inari" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="a745-0548-80c8-ece4" type="atLeast"/>
-          </conditions>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="401f-cfc6-71c4-a415" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="9e0e-78bf-83d0-f5b4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <constraints>
@@ -6428,6 +6439,7 @@ Until the End Phase, whenever an Opponent spends a Pass Token; a Friendly, non-A
       <categoryLinks>
         <categoryLink id="7a48-1956-0f77-e248" name="Faction Event Cards" hidden="false" targetId="d360-71aa-ca22-ba3c" primary="true"/>
         <categoryLink id="3d66-0bc5-a168-0515" name="Cycle: Weeping Sky" hidden="false" targetId="6da0-b320-b958-dc82" primary="false"/>
+        <categoryLink targetId="ecbb-5575-0b01-70a9" id="d8cb-1116-767d-eceb" primary="false" name="Cycle"/>
       </categoryLinks>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1"/>
@@ -8752,10 +8764,15 @@ Requirement [Monk, Element: Void]</characteristic>
             </conditionGroup>
           </conditionGroups>
         </modifier>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="a745-0548-80c8-ece4" type="atLeast"/>
-          </conditions>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="401f-cfc6-71c4-a415" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="9e0e-78bf-83d0-f5b4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <constraints>
@@ -8778,6 +8795,7 @@ Exclusion [Master, Unsui]</characteristic>
       <categoryLinks>
         <categoryLink id="4bf1-f618-8eeb-5f01" name="Faction Enhancement Cards" hidden="false" targetId="17cf-d9a9-c7c1-bcb6" primary="true"/>
         <categoryLink id="f11d-09c0-179b-7e4c" name="Cycle: Weeping Sky" hidden="false" targetId="6da0-b320-b958-dc82" primary="false"/>
+        <categoryLink targetId="ecbb-5575-0b01-70a9" id="d059-3337-bb8c-e4d4" primary="false" name="Cycle"/>
       </categoryLinks>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2"/>
@@ -8795,10 +8813,15 @@ Exclusion [Master, Unsui]</characteristic>
             </conditionGroup>
           </conditionGroups>
         </modifier>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="a745-0548-80c8-ece4" type="atLeast"/>
-          </conditions>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="401f-cfc6-71c4-a415" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="9e0e-78bf-83d0-f5b4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <constraints>
@@ -8817,6 +8840,7 @@ Requirement [Element[Void]]</characteristic>
       <categoryLinks>
         <categoryLink id="49d9-cfb2-e734-0a9d" name="Faction Enhancement Cards" hidden="false" targetId="17cf-d9a9-c7c1-bcb6" primary="true"/>
         <categoryLink id="35f0-c60c-37da-3335" name="Cycle: Weeping Sky" hidden="false" targetId="6da0-b320-b958-dc82" primary="false"/>
+        <categoryLink targetId="ecbb-5575-0b01-70a9" id="ac2d-a7a0-ac63-cb37" primary="false" name="Cycle"/>
       </categoryLinks>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1"/>
@@ -9044,6 +9068,53 @@ Koji’s Pack models may be included in any Themed Warband that permits Koji.</c
       </entryLinks>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="4"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="36ff-a85a-7e98-9c9e" name="Follower of the Summer Storm" hidden="true" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="parent" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3184-d389-7218-d304" type="instanceOf"/>
+                <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e95f-bea1-b57e-6656" type="equalTo"/>
+                <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="54e8-2b73-88a3-e1b7" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="401f-cfc6-71c4-a415" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="2a7c-a7b6-55b7-a6ed" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0f27-3978-a537-3f28" type="max"/>
+        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="09ba-8b99-507b-7a34" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="516f-55fe-2d55-c634" name="Follower of the Summer Storm" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
+          <characteristics>
+            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">Attached model gains the following Unique Effect:
+When this model makes a successful Melee Attack, after the Melee Exchange has been completed, you may place the Enemy model anywhere within 1&quot; of its current location.
+
+Requirement [Wind Element]</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="6739-d33f-dcc7-4f46" name="Faction Enhancement Cards" hidden="false" targetId="17cf-d9a9-c7c1-bcb6" primary="true"/>
+        <categoryLink targetId="c13c-a06d-22fe-e254" id="8259-742a-f320-13a6" primary="false" name="Cycle: Consequences"/>
+        <categoryLink targetId="ecbb-5575-0b01-70a9" id="ed5a-4835-a04a-a6b6" primary="false" name="Cycle"/>
+      </categoryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2"/>
       </costs>
     </selectionEntry>
   </sharedSelectionEntries>
@@ -9411,10 +9482,15 @@ When this model performs a Focus Action it gains Channel (6/6&quot;) until the e
                 <condition field="selections" scope="parent" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3a29-622e-c421-b114" type="notInstanceOf"/>
               </conditions>
             </modifier>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="6da0-b320-b958-dc82" type="atLeast"/>
-              </conditions>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="9e0e-78bf-83d0-f5b4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="2a7c-a7b6-55b7-a6ed" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
           <constraints>
@@ -9434,6 +9510,7 @@ When this model performs a Focus Action it gains Channel (6/6&quot;) until the e
           <categoryLinks>
             <categoryLink id="cd82-aa47-9018-0ce2" name="Faction Enhancement Cards" hidden="false" targetId="17cf-d9a9-c7c1-bcb6" primary="true"/>
             <categoryLink id="1452-e459-6a2b-c73e" name="Cycle: Year of the Risen Sun" hidden="false" targetId="a745-0548-80c8-ece4" primary="false"/>
+            <categoryLink targetId="ecbb-5575-0b01-70a9" id="1572-54c3-e159-b7dd" primary="false" name="Cycle"/>
           </categoryLinks>
           <costs>
             <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1"/>
@@ -9502,10 +9579,15 @@ Requirement [Followers of Inari Theme]</characteristic>
                 <condition field="selections" scope="parent" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="57a9-2b8a-3729-1ad8" type="notInstanceOf"/>
               </conditions>
             </modifier>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="a745-0548-80c8-ece4" type="atLeast"/>
-              </conditions>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="401f-cfc6-71c4-a415" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="9e0e-78bf-83d0-f5b4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
           <constraints>
@@ -9527,6 +9609,7 @@ Requirement [Monk]</characteristic>
           <categoryLinks>
             <categoryLink id="1385-b077-ffaf-cadb" name="Faction Enhancement Cards" hidden="false" targetId="17cf-d9a9-c7c1-bcb6" primary="true"/>
             <categoryLink id="735e-0d2e-3f76-482c" name="Cycle: Weeping Sky" hidden="false" targetId="6da0-b320-b958-dc82" primary="false"/>
+            <categoryLink targetId="ecbb-5575-0b01-70a9" id="49f5-2ae1-94f7-f4ff" primary="false" name="Cycle"/>
           </categoryLinks>
           <costs>
             <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2"/>
@@ -9624,6 +9707,104 @@ Attached model gains Fearless.</characteristic>
               </modifiers>
             </modifierGroup>
           </modifierGroups>
+        </selectionEntry>
+        <selectionEntry id="6adb-a039-d22c-52c5" name="Power Chord" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="ce2b-1311-58ef-960d" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="57a9-2b8a-3729-1ad8" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="401f-cfc6-71c4-a415" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="2a7c-a7b6-55b7-a6ed" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1588-61b8-ac8b-fe5b" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ef6d-5542-5103-e494" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="c72f-336a-b523-d0f7" name="Power Chord" hidden="false" typeId="814b-7c22-0b45-9acc" typeName="Special Card (Ranged Weapon)">
+              <characteristics>
+                <characteristic name="Ranged Weapon Strength" typeId="a0cf-2be6-a776-363b">Special</characteristic>
+                <characteristic name="Range Bands" typeId="ea30-733c-e9dd-5c75">-/8/-</characteristic>
+                <characteristic name="Traits" typeId="a28d-cbd1-005e-e623">Lightweight</characteristic>
+                <characteristic name="Specials" typeId="55e0-9b2f-ad58-9c57">Sweep Attack (0)</characteristic>
+                <characteristic name="Unique Effects" typeId="76c8-d87b-83b3-3e58">Requirement [Juko &amp; Warband with no Monk models]</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <categoryLinks>
+            <categoryLink id="6519-e2c6-52bc-760a" name="Faction Enhancement Cards" hidden="false" targetId="17cf-d9a9-c7c1-bcb6" primary="false"/>
+            <categoryLink targetId="c13c-a06d-22fe-e254" id="e443-4ef8-6749-b8b1" primary="false" name="Cycle: Consequences"/>
+            <categoryLink targetId="ecbb-5575-0b01-70a9" id="5ca9-0eda-0224-d603" primary="false" name="Cycle"/>
+          </categoryLinks>
+          <costs>
+            <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1"/>
+          </costs>
+          <infoLinks>
+            <infoLink name="Lightweight" id="4a50-be09-e768-e033" hidden="false" type="rule" targetId="c75c-7124-2b1f-a4d9"/>
+            <infoLink name="Sweep Attack" id="06d7-553d-3ac2-f5cd" hidden="false" type="rule" targetId="bcbd-fab2-c8e2-6ff7"/>
+          </infoLinks>
+        </selectionEntry>
+        <selectionEntry id="74bc-22c8-0af1-7404" name="Teachings of the Old Man" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="8d5d-d6a8-235d-c281" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="401f-cfc6-71c4-a415" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="2a7c-a7b6-55b7-a6ed" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f12f-6b53-de07-9ace" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="3a9a-d74c-b77d-5303" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="8a3f-5b10-134e-a90c" name="Teachings of the Old Man" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
+              <characteristics>
+                <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">When this model spends a Virtue Token you may choose one of the following effects:
+- This model does not suffer any Melee Pool penalties for using Split Attack this activation.
+- For this Action, before a Melee Exchange with another small based Enemy model, swap positions with the Enemy model. Both models must remain in BtB.
+- Declare before Dice allocation. For this Action, this model is not required to allocate at least as many dice to Defence as Attack due to a Disengage Action.
+
+Requirement [Kosuke]</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <categoryLinks>
+            <categoryLink id="71e5-c57b-a2ae-105f" name="Faction Enhancement Cards" hidden="false" targetId="17cf-d9a9-c7c1-bcb6" primary="false"/>
+            <categoryLink targetId="c13c-a06d-22fe-e254" id="eab6-8646-e8f7-cbd8" primary="false" name="Cycle: Consequences"/>
+            <categoryLink targetId="ecbb-5575-0b01-70a9" id="25c3-7891-2c9e-223b" primary="false" name="Cycle"/>
+          </categoryLinks>
+          <costs>
+            <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2"/>
+          </costs>
+          <infoLinks>
+            <infoLink name="Lightweight" id="909c-5f99-b6e8-1fdd" hidden="false" type="rule" targetId="c75c-7124-2b1f-a4d9"/>
+            <infoLink name="Sweep Attack" id="14e3-f780-19b7-74e6" hidden="false" type="rule" targetId="bcbd-fab2-c8e2-6ff7"/>
+          </infoLinks>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
@@ -9761,6 +9942,54 @@ If it fails, its Activation ends and it loses one Activation Counter.</character
                 <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2"/>
               </costs>
             </selectionEntry>
+            <selectionEntry id="1368-33a7-a33a-1e96" name="Prodigious Martial Skill" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition type="notInstanceOf" value="0" field="selections" scope="parent" childId="57a9-2b8a-3729-1ad8" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                  </conditions>
+                </modifier>
+                <modifier type="set" value="true" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="401f-cfc6-71c4-a415" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="2a7c-a7b6-55b7-a6ed" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2a5f-29d1-12ea-67e5" type="max"/>
+                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9559-9dca-39ee-22e4" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="63e4-e8ce-e31e-2aa6" name="Prodigious Martial Skill" hidden="false" typeId="bd15-7ead-9268-3576" typeName="Special Card (Ki Feat)">
+                  <characteristics>
+                    <characteristic name="Description" typeId="17eb-17e2-4df4-5c5d">Attached model gains the following Ki Feat.
+
+
+Requirement [Monk]</characteristic>
+                    <characteristic name="Name" typeId="27c7-1649-f16e-8eaa">Reputation</characteristic>
+                    <characteristic name="Cost" typeId="e410-b220-64e5-7953">2</characteristic>
+                    <characteristic name="Timing" typeId="b9bf-562a-fe26-cb29">Instant</characteristic>
+                    <characteristic name="Subject" typeId="47b8-f739-9d50-2e45">Target BtB</characteristic>
+                    <characteristic name="Limitation" typeId="870e-79e4-80ee-c0cc"/>
+                    <characteristic name="Ki Feat Description" typeId="3886-242b-fb70-5c88">During an Enemy model&apos;s activation in which it enters BtB with this model, that Enemy model gains a Stunned Marker.
+This Ki Feat may only be used once per model in any activation.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <categoryLinks>
+                <categoryLink id="988b-6a83-f429-98f7" name="Faction Equipment Cards" hidden="false" targetId="5bcd-fe93-a8ea-0164" primary="true"/>
+                <categoryLink targetId="c13c-a06d-22fe-e254" id="b7c9-5484-e9e1-88a6" primary="false" name="Cycle: Consequences"/>
+                <categoryLink targetId="ecbb-5575-0b01-70a9" id="22ca-364b-cc96-0417" primary="false" name="Cycle"/>
+              </categoryLinks>
+              <costs>
+                <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2"/>
+              </costs>
+            </selectionEntry>
           </selectionEntries>
           <entryLinks>
             <entryLink id="a15a-ebc5-fa53-eff5" name="Vial of Raijin&apos;s Breath" hidden="false" collective="false" import="true" targetId="9b29-1f89-46d2-0329" type="selectionEntry"/>
@@ -9829,6 +10058,7 @@ If it fails, its Activation ends and it loses one Activation Counter.</character
         <entryLink id="b51c-09ec-fe6f-5d41" name="Professional" hidden="false" collective="false" import="true" targetId="a795-4dac-6489-ce72" type="selectionEntry"/>
         <entryLink id="e1c9-6668-b4d6-f93f" name="Dark Nurture" hidden="false" collective="false" import="true" targetId="9077-4def-6328-8ac2" type="selectionEntry"/>
         <entryLink import="true" name="Mosh Pit" hidden="false" id="e870-740f-5975-9438" type="selectionEntry" targetId="a4b8-d258-053b-0f1d"/>
+        <entryLink id="1e53-1ec4-826e-9063" name="Followers of the Summer Storm" hidden="false" collective="false" import="true" targetId="36ff-a85a-7e98-9c9e" type="selectionEntry"/>
       </entryLinks>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
