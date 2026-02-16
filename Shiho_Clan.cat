@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="2276-2df6-78a7-841d" name="Shiho Clan" revision="53" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="19" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="2276-2df6-78a7-841d" name="Shiho Clan" revision="54" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="19" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <categoryEntries>
     <categoryEntry id="7fa5-7ef0-59c5-f657" name="Tanaka" hidden="false"/>
+    <categoryEntry name="Booted" id="6f67-dc86-f693-96ee" hidden="false"/>
   </categoryEntries>
   <selectionEntries>
     <selectionEntry id="aee3-32e3-790c-827d" name="Full Moon" hidden="false" collective="false" import="true" type="upgrade">
@@ -806,6 +807,9 @@ This model gains Fearless when declaring actions Targeting or Selecting a model 
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="19"/>
       </costs>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="2a6d-ac77-b4de-99f5" includeChildSelections="true"/>
+      </constraints>
     </selectionEntry>
     <selectionEntry id="8aaf-af86-c973-e728" name="Tanaka Kazuo &amp; Heir" hidden="false" collective="false" import="true" type="model">
       <modifiers>
@@ -1060,6 +1064,7 @@ This model gains Fearless when declaring actions Targeting or Selecting a model 
         <categoryLink id="5d64-3f5a-e672-a23f" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
         <categoryLink id="fc93-b2f4-6371-5ceb" name="Eagle" hidden="false" targetId="52d1-8aa3-4c32-0c50" primary="false"/>
         <categoryLink id="acde-4ca4-b33f-7a7b" name="Daimyo" hidden="false" targetId="2cdb-fdab-f18e-229b" primary="false"/>
+        <categoryLink name="Booted" hidden="false" id="1dc2-a4ae-ce0e-250c" targetId="6f67-dc86-f693-96ee" primary="false"/>
       </categoryLinks>
       <entryLinks>
         <entryLink id="9818-1bfb-9130-96e8" name="Enhancements" hidden="false" collective="false" import="true" targetId="8a7c-6251-523e-a67c" type="selectionEntryGroup"/>
@@ -1067,6 +1072,9 @@ This model gains Fearless when declaring actions Targeting or Selecting a model 
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="27"/>
       </costs>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="8aec-40bc-12f1-09fd" includeChildSelections="true"/>
+      </constraints>
     </selectionEntry>
     <selectionEntry id="966b-fc6b-359e-5c30" name="Guerilla Warfare" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
@@ -1327,6 +1335,9 @@ When a model performs a Wait Action to Destroy this Terrain, it need not spend 2
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0"/>
       </costs>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="bed2-065e-2e1b-ba23" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+      </constraints>
     </selectionEntry>
     <selectionEntry id="ac09-c9fd-13fd-0cb9" name="Kazuki" hidden="false" collective="false" import="true" type="model">
       <modifiers>
@@ -1447,6 +1458,9 @@ When a model performs a Wait Action to Destroy this Terrain, it need not spend 2
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="15"/>
       </costs>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="bdc7-22b2-d92d-5154" includeChildSelections="true"/>
+      </constraints>
     </selectionEntry>
     <selectionEntry id="8fc5-b5bf-a2bf-d168" name="Loyal Yarimen" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
@@ -1556,6 +1570,9 @@ When a model performs a Wait Action to Destroy this Terrain, it need not spend 2
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0"/>
       </costs>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="cbe8-4a3b-e2dc-540d" includeChildSelections="true"/>
+      </constraints>
     </selectionEntry>
     <selectionEntry id="8f58-014f-71e6-a64c" name="Maki" hidden="false" collective="false" import="true" type="model">
       <modifiers>
@@ -1670,6 +1687,9 @@ When a model performs a Wait Action to Destroy this Terrain, it need not spend 2
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="14"/>
       </costs>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="ea8e-a45d-4e66-c589" includeChildSelections="true"/>
+      </constraints>
     </selectionEntry>
     <selectionEntry id="c7de-19d4-64dd-911f" name="The Shiho Return" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
@@ -1762,7 +1782,17 @@ Permitted [Shiho Faction Models, Ronin Models]</characteristic>
               <conditions>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="fb4a-18a7-5b40-74ec" type="atLeast"/>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9402-edcc-93a2-aef1" type="atLeast"/>
-                <condition type="atLeast" value="1" field="selections" scope="roster" childId="a7ef-7094-95e5-577c" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" field="a3e7-8561-8780-4a44" value="0">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="a7ef-7094-95e5-577c" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="parent" childId="cee4-c744-a4b4-a0ac" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+                <condition type="lessThan" value="1" field="selections" scope="parent" childId="8d10-1241-e146-afd6" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -1847,6 +1877,7 @@ While this model is in play, when a Friendly Loyal model spends a Virtue Token y
         <categoryLink id="da74-20f3-f3fd-cb6e" name="Samurai" hidden="false" targetId="e12a-f782-3281-7444" primary="false"/>
         <categoryLink id="c088-d1c6-1c49-77cc" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
         <categoryLink id="1fca-2960-40e6-936c" name="Loyal" hidden="false" targetId="f476-156e-8599-9253" primary="false"/>
+        <categoryLink name="Booted" hidden="false" id="3b58-3848-ed86-47e2" targetId="6f67-dc86-f693-96ee" primary="false"/>
       </categoryLinks>
       <entryLinks>
         <entryLink id="f9f5-6342-ace6-c745" name="Enhancements" hidden="false" collective="false" import="true" targetId="8a7c-6251-523e-a67c" type="selectionEntryGroup"/>
@@ -1854,6 +1885,9 @@ While this model is in play, when a Friendly Loyal model spends a Virtue Token y
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="14"/>
       </costs>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="a3e7-8561-8780-4a44" includeChildSelections="false"/>
+      </constraints>
     </selectionEntry>
     <selectionEntry id="be97-b12a-746b-9f91" name="Shiho Sayaka" hidden="false" collective="false" import="true" type="model">
       <modifiers>
@@ -1863,7 +1897,17 @@ While this model is in play, when a Friendly Loyal model spends a Virtue Token y
               <conditions>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="fb4a-18a7-5b40-74ec" type="atLeast"/>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9402-edcc-93a2-aef1" type="atLeast"/>
-                <condition type="atLeast" value="1" field="selections" scope="roster" childId="a7ef-7094-95e5-577c" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" value="0" field="f954-aa22-2af7-529d">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="a7ef-7094-95e5-577c" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="parent" childId="cee4-c744-a4b4-a0ac" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+                <condition type="lessThan" value="1" field="selections" scope="parent" childId="8d10-1241-e146-afd6" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -1934,6 +1978,7 @@ While this model is in play, when a Friendly Loyal model spends a Virtue Token y
         <categoryLink id="048f-860f-0f5f-2625" name="Samurai" hidden="false" targetId="e12a-f782-3281-7444" primary="false"/>
         <categoryLink id="044d-59d6-01cf-bde6" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
         <categoryLink id="3b17-69d5-db7c-d32a" name="Loyal" hidden="false" targetId="f476-156e-8599-9253" primary="false"/>
+        <categoryLink name="Booted" hidden="false" id="34f0-0972-0657-6e54" targetId="6f67-dc86-f693-96ee" primary="false"/>
       </categoryLinks>
       <entryLinks>
         <entryLink id="228f-6375-139e-4398" name="Enhancements" hidden="false" collective="false" import="true" targetId="8a7c-6251-523e-a67c" type="selectionEntryGroup"/>
@@ -1941,6 +1986,9 @@ While this model is in play, when a Friendly Loyal model spends a Virtue Token y
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="10"/>
       </costs>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="f954-aa22-2af7-529d" includeChildSelections="true"/>
+      </constraints>
     </selectionEntry>
     <selectionEntry id="13d6-396f-9a32-4d0d" name="Shiho Takuya" hidden="false" collective="false" import="true" type="model">
       <modifiers>
@@ -2027,6 +2075,9 @@ While this model is in play, when a Friendly Loyal model spends a Virtue Token y
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="12"/>
       </costs>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="7f9c-783d-63fb-1664" includeChildSelections="true"/>
+      </constraints>
     </selectionEntry>
     <selectionEntry id="7135-8fcb-cc8b-59fd" name="Shiho Wimpie" hidden="false" collective="false" import="true" type="model">
       <modifiers>
@@ -2036,7 +2087,17 @@ While this model is in play, when a Friendly Loyal model spends a Virtue Token y
               <conditions>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="fb4a-18a7-5b40-74ec" type="atLeast"/>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9402-edcc-93a2-aef1" type="atLeast"/>
-                <condition type="atLeast" value="1" field="selections" scope="roster" childId="a7ef-7094-95e5-577c" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" value="0" field="e6fa-39a5-d9f8-ecd6">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="a7ef-7094-95e5-577c" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="parent" childId="cee4-c744-a4b4-a0ac" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+                <condition type="lessThan" value="1" field="selections" scope="parent" childId="8d10-1241-e146-afd6" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -2115,6 +2176,7 @@ While this model is in play, when a Friendly Loyal model spends a Virtue Token y
         <categoryLink id="aa30-177d-9628-efe5" name="Samurai" hidden="false" targetId="e12a-f782-3281-7444" primary="false"/>
         <categoryLink id="2401-25cb-8fda-a0b0" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
         <categoryLink id="f4e1-7dfe-7603-bedd" name="Loyal" hidden="false" targetId="f476-156e-8599-9253" primary="false"/>
+        <categoryLink name="Booted" hidden="false" id="5004-eb6b-8192-2af9" targetId="6f67-dc86-f693-96ee" primary="false"/>
       </categoryLinks>
       <entryLinks>
         <entryLink id="7229-3dc6-06cb-663e" name="Enhancements" hidden="false" collective="false" import="true" targetId="8a7c-6251-523e-a67c" type="selectionEntryGroup"/>
@@ -2122,6 +2184,9 @@ While this model is in play, when a Friendly Loyal model spends a Virtue Token y
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="12"/>
       </costs>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="e6fa-39a5-d9f8-ecd6" includeChildSelections="true"/>
+      </constraints>
     </selectionEntry>
     <selectionEntry id="e588-63b5-5d97-41c5" name="Shiho Yusuke" hidden="false" collective="false" import="true" type="model">
       <modifiers>
@@ -2131,7 +2196,17 @@ While this model is in play, when a Friendly Loyal model spends a Virtue Token y
               <conditions>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="fb4a-18a7-5b40-74ec" type="atLeast"/>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9402-edcc-93a2-aef1" type="atLeast"/>
-                <condition type="atLeast" value="1" field="selections" scope="roster" childId="a7ef-7094-95e5-577c" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" value="0" field="2f91-1cc4-9014-a8bf">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="a7ef-7094-95e5-577c" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="parent" childId="cee4-c744-a4b4-a0ac" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+                <condition type="lessThan" value="1" field="selections" scope="parent" childId="8d10-1241-e146-afd6" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -2223,6 +2298,7 @@ While this model is in play, when a Friendly Loyal model spends a Virtue Token y
         <categoryLink id="3e56-eb23-2a39-c68a" name="Samurai" hidden="false" targetId="e12a-f782-3281-7444" primary="false"/>
         <categoryLink id="cfc4-dc18-e643-0f7c" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
         <categoryLink id="be4f-f1a6-fab6-e415" name="Loyal" hidden="false" targetId="f476-156e-8599-9253" primary="false"/>
+        <categoryLink name="Booted" hidden="false" id="dc48-4af4-1a66-4623" targetId="6f67-dc86-f693-96ee" primary="false"/>
       </categoryLinks>
       <entryLinks>
         <entryLink id="35d9-a886-9c76-d6c8" name="Enhancements" hidden="false" collective="false" import="true" targetId="8a7c-6251-523e-a67c" type="selectionEntryGroup"/>
@@ -2230,6 +2306,9 @@ While this model is in play, when a Friendly Loyal model spends a Virtue Token y
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="11"/>
       </costs>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="2f91-1cc4-9014-a8bf" includeChildSelections="true"/>
+      </constraints>
     </selectionEntry>
     <selectionEntry id="5904-e3f6-d2f3-f43e" name="Inevitable Arrival" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -2322,7 +2401,17 @@ Requirement [Warband must contain a model with Tactician]</characteristic>
               <conditions>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="fb4a-18a7-5b40-74ec" type="atLeast"/>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9402-edcc-93a2-aef1" type="atLeast"/>
-                <condition type="atLeast" value="1" field="selections" scope="roster" childId="a7ef-7094-95e5-577c" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" value="0" field="7e06-0962-ff53-d56f">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="a7ef-7094-95e5-577c" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="parent" childId="cee4-c744-a4b4-a0ac" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+                <condition type="lessThan" value="1" field="selections" scope="parent" childId="8d10-1241-e146-afd6" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -2439,6 +2528,7 @@ When This model declares a Wait Action to remove a Reload Marker, they may immed
         <categoryLink id="926e-675d-9fd5-c940" name="Samurai" hidden="false" targetId="e12a-f782-3281-7444" primary="false"/>
         <categoryLink id="4276-9be3-a8eb-72c8" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
         <categoryLink id="4ad0-6b4c-9ee6-19f4" name="Loyal" hidden="false" targetId="f476-156e-8599-9253" primary="false"/>
+        <categoryLink name="Booted" hidden="false" id="cff8-bb86-3c43-abf5" targetId="6f67-dc86-f693-96ee" primary="false"/>
       </categoryLinks>
       <entryLinks>
         <entryLink id="ec7d-038d-db47-6fe2" name="Enhancements" hidden="false" collective="false" import="true" targetId="8a7c-6251-523e-a67c" type="selectionEntryGroup"/>
@@ -2446,6 +2536,9 @@ When This model declares a Wait Action to remove a Reload Marker, they may immed
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="18"/>
       </costs>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="7e06-0962-ff53-d56f" includeChildSelections="true"/>
+      </constraints>
     </selectionEntry>
     <selectionEntry id="f4ce-3dba-2968-72b0" name="Loyal Kyudoka" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
@@ -2582,6 +2675,9 @@ When This model declares a Wait Action to remove a Reload Marker, they may immed
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0"/>
       </costs>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="366c-713b-f5f2-2138" includeChildSelections="true"/>
+      </constraints>
     </selectionEntry>
     <selectionEntry id="c53e-1786-db5e-306c" name="Shiho Misaki" hidden="false" collective="false" import="true" type="model">
       <modifiers>
@@ -2591,7 +2687,17 @@ When This model declares a Wait Action to remove a Reload Marker, they may immed
               <conditions>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="fb4a-18a7-5b40-74ec" type="atLeast"/>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9402-edcc-93a2-aef1" type="atLeast"/>
-                <condition type="atLeast" value="1" field="selections" scope="roster" childId="a7ef-7094-95e5-577c" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" value="0" field="e216-2c60-4fd3-f360">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="a7ef-7094-95e5-577c" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="parent" childId="cee4-c744-a4b4-a0ac" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+                <condition type="lessThan" value="1" field="selections" scope="parent" childId="8d10-1241-e146-afd6" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -2690,6 +2796,7 @@ When This model declares a Wait Action to remove a Reload Marker, they may immed
         <categoryLink id="cebe-ff57-00dd-ba69" name="Samurai" hidden="false" targetId="e12a-f782-3281-7444" primary="false"/>
         <categoryLink id="ade1-4a7e-7839-39ad" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
         <categoryLink id="0a56-8753-8b8c-ebd2" name="Loyal" hidden="false" targetId="f476-156e-8599-9253" primary="false"/>
+        <categoryLink name="Booted" hidden="false" id="ffdd-0f1c-50c6-0a70" targetId="6f67-dc86-f693-96ee" primary="false"/>
       </categoryLinks>
       <entryLinks>
         <entryLink id="c576-b8ba-20eb-c17f" name="Enhancements" hidden="false" collective="false" import="true" targetId="8a7c-6251-523e-a67c" type="selectionEntryGroup"/>
@@ -2697,6 +2804,9 @@ When This model declares a Wait Action to remove a Reload Marker, they may immed
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="12"/>
       </costs>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="e216-2c60-4fd3-f360" includeChildSelections="true"/>
+      </constraints>
     </selectionEntry>
     <selectionEntry id="fe10-60e1-26fa-1ec2" name="Yoshitaka" hidden="false" collective="false" import="true" type="model">
       <modifiers>
@@ -2790,6 +2900,9 @@ When This model declares a Wait Action to remove a Reload Marker, they may immed
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="13"/>
       </costs>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="b1ab-0a1d-d62b-73ae" includeChildSelections="true"/>
+      </constraints>
     </selectionEntry>
     <selectionEntry id="01b1-3329-b0a4-9881" name="Lay of the Land" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
@@ -2972,7 +3085,6 @@ You may decide the order recruited terrain (Friendly and Enemy) is Deployed.</ch
             <conditionGroup type="or">
               <conditions>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="fb4a-18a7-5b40-74ec" type="atLeast"/>
-                <condition type="atLeast" value="1" field="selections" scope="roster" childId="a7ef-7094-95e5-577c" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -2983,6 +3095,17 @@ You may decide the order recruited terrain (Friendly and Enemy) is Deployed.</ch
               <conditions>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9126-f480-c2df-fbaf" type="atLeast"/>
                 <condition type="atLeast" value="1" field="selections" scope="roster" childId="9402-edcc-93a2-aef1" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" value="0" field="33bf-a4b0-7274-8448">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="a7ef-7094-95e5-577c" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="parent" childId="cee4-c744-a4b4-a0ac" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+                <condition type="lessThan" value="1" field="selections" scope="parent" childId="8d10-1241-e146-afd6" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -3069,6 +3192,7 @@ Whenever a Friendly model within 6&quot; of a model with a Luck Token makes a Fe
         <categoryLink id="f5d1-2cd0-3bf8-c096" name="Samurai" hidden="false" targetId="e12a-f782-3281-7444" primary="false"/>
         <categoryLink id="6082-c4c7-1ae6-6d12" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
         <categoryLink id="157c-e6aa-1384-229d" name="Loyal" hidden="false" targetId="f476-156e-8599-9253" primary="false"/>
+        <categoryLink name="Booted" hidden="false" id="01cd-7409-d7d2-a740" targetId="6f67-dc86-f693-96ee" primary="false"/>
       </categoryLinks>
       <entryLinks>
         <entryLink id="d797-2de7-74ff-dcb7" name="Enhancements" hidden="false" collective="false" import="true" targetId="8a7c-6251-523e-a67c" type="selectionEntryGroup"/>
@@ -3086,6 +3210,9 @@ Whenever a Friendly model within 6&quot; of a model with a Luck Token makes a Fe
           </modifiers>
         </modifierGroup>
       </modifierGroups>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="33bf-a4b0-7274-8448" includeChildSelections="true"/>
+      </constraints>
     </selectionEntry>
     <selectionEntry id="442b-4e2d-64c9-b479" name="Wolf Spears" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
@@ -3225,7 +3352,17 @@ Whenever a Friendly model within 6&quot; of a model with a Luck Token makes a Fe
               <conditions>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="fb4a-18a7-5b40-74ec" type="atLeast"/>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9402-edcc-93a2-aef1" type="atLeast"/>
-                <condition type="atLeast" value="1" field="selections" scope="roster" childId="a7ef-7094-95e5-577c" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" value="0" field="1bef-cec5-7ffe-e213">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="a7ef-7094-95e5-577c" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="parent" childId="cee4-c744-a4b4-a0ac" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+                <condition type="lessThan" value="1" field="selections" scope="parent" childId="8d10-1241-e146-afd6" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -3314,6 +3451,7 @@ Whenever a Friendly model within 6&quot; of a model with a Luck Token makes a Fe
         <categoryLink id="4646-4d54-4b46-7fc1" name="Samurai" hidden="false" targetId="e12a-f782-3281-7444" primary="false"/>
         <categoryLink id="28c2-f18a-ddc3-ad46" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
         <categoryLink id="6ae6-f121-8374-55bf" name="Loyal" hidden="false" targetId="f476-156e-8599-9253" primary="false"/>
+        <categoryLink name="Booted" hidden="false" id="dca4-5758-dbc9-044c" targetId="6f67-dc86-f693-96ee" primary="false"/>
       </categoryLinks>
       <entryLinks>
         <entryLink id="f390-ece9-68d9-bb8a" name="Enhancements" hidden="false" collective="false" import="true" targetId="8a7c-6251-523e-a67c" type="selectionEntryGroup"/>
@@ -3321,6 +3459,9 @@ Whenever a Friendly model within 6&quot; of a model with a Luck Token makes a Fe
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="13"/>
       </costs>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="1bef-cec5-7ffe-e213" includeChildSelections="true"/>
+      </constraints>
     </selectionEntry>
     <selectionEntry id="a7ef-7094-95e5-577c" name="New Eagle Army" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
@@ -4674,7 +4815,6 @@ Requirement [Wolf &amp; Samurai]</characteristic>
                 <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">The Attached model loses Flank and Booted and may not gain these traits. 
 This model always Deploys before other models, regardless of normal player order.
 Deploy this model, then continue with Deploying Warbands following player order.
-
 
 Before the first turn, you may remove one Pool Terrain element within 3&quot; of a neutral table edge.
 

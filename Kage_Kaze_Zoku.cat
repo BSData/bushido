@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="b4d7-0e2a-728f-20cf" name="Kage Kaze Zoku" revision="47" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="19" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="b4d7-0e2a-728f-20cf" name="Kage Kaze Zoku" revision="48" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="19" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <selectionEntries>
     <selectionEntry id="33d5-3364-f1d4-a94c" name="Lockdown" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -5313,6 +5313,58 @@ Requirement [House Long Shadow Theme]</characteristic>
                 <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1"/>
               </costs>
             </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Noshinto Bomb" hidden="false" id="484d-d5b5-c07f-2164" collective="false">
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="401f-cfc6-71c4-a415" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="2a7c-a7b6-55b7-a6ed" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier type="set" value="true" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="instanceOf" value="0" field="selections" scope="parent" childId="c382-9ab3-9924-e30a" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                        <condition type="instanceOf" value="0" field="selections" scope="parent" childId="d7c5-a2b9-4696-fd33" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                        <condition type="instanceOf" value="0" field="selections" scope="parent" childId="6639-615e-f1ab-bc64" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                        <condition type="instanceOf" value="0" field="selections" scope="parent" childId="7435-856f-ece2-fe58" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                        <condition type="lessThan" value="1" field="selections" scope="roster" childId="4e1c-43c9-596d-ef16" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint type="max" value="2" field="selections" scope="roster" shared="true" id="209b-3f15-73c4-2b2b" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="db2a-b98a-1bfa-5b90" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+              <profiles>
+                <profile name="Noshinto Bomb" typeId="814b-7c22-0b45-9acc" typeName="Special Card (Ranged Weapon)" hidden="false" id="802b-0f97-98b0-9b34">
+                  <characteristics>
+                    <characteristic name="Ranged Weapon Strength" typeId="a0cf-2be6-a776-363b">Special</characteristic>
+                    <characteristic name="Range Bands" typeId="ea30-733c-e9dd-5c75">-/3/-</characteristic>
+                    <characteristic name="Traits" typeId="a28d-cbd1-005e-e623">Lightweight</characteristic>
+                    <characteristic name="Specials" typeId="55e0-9b2f-ad58-9c57"/>
+                    <characteristic name="Unique Effects" typeId="76c8-d87b-83b3-3e58">Ona successful attack with this weapon, instead of a Damage Roll, centre a 1&quot; Pulse on the Target and all models in the Pulse gain a Stunned Marker.
+After an attack with this weapon, discard this card unless it is attached to a North Star model.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <categoryLinks>
+                <categoryLink name="Faction Enhancement Cards" hidden="false" id="ea5f-5296-5a69-1004" targetId="17cf-d9a9-c7c1-bcb6" primary="false"/>
+                <categoryLink name="Faction Equipment Cards" hidden="false" id="b576-988c-34b8-4456" targetId="5bcd-fe93-a8ea-0164" primary="true"/>
+                <categoryLink name="Cycle" hidden="false" id="1da8-2921-fe43-c90b" targetId="ecbb-5575-0b01-70a9" primary="false"/>
+                <categoryLink name="Consequences" hidden="false" id="b0c1-1d3b-d323-7528" targetId="c13c-a06d-22fe-e254" primary="false"/>
+              </categoryLinks>
+              <costs>
+                <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1"/>
+              </costs>
+            </selectionEntry>
           </selectionEntries>
           <entryLinks>
             <entryLink id="c3e1-0cc7-a6da-aaec" name="Arashi&apos;s Fan" hidden="false" collective="false" import="true" targetId="fbe4-1c24-7fea-0247" type="selectionEntry"/>
@@ -5792,6 +5844,26 @@ Requirement [House Long Shadow Theme]</characteristic>
                         <condition type="atLeast" value="1" field="selections" scope="roster" childId="401f-cfc6-71c4-a415" shared="true" includeChildSelections="true" includeChildForces="true"/>
                         <condition type="atLeast" value="1" field="selections" scope="roster" childId="2a7c-a7b6-55b7-a6ed" shared="true" includeChildSelections="true" includeChildForces="true"/>
                       </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier type="set" value="true" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="instanceOf" value="0" field="selections" scope="parent" childId="c382-9ab3-9924-e30a" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                        <condition type="instanceOf" value="0" field="selections" scope="parent" childId="d7c5-a2b9-4696-fd33" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                        <condition type="instanceOf" value="0" field="selections" scope="parent" childId="6639-615e-f1ab-bc64" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                        <condition type="instanceOf" value="0" field="selections" scope="parent" childId="7435-856f-ece2-fe58" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition type="lessThan" value="1" field="selections" scope="roster" childId="4e1c-43c9-596d-ef16" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                            <condition type="instanceOf" value="0" field="selections" scope="parent" childId="9fba-f50b-c8f7-8396" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
                     </conditionGroup>
                   </conditionGroups>
                 </modifier>
