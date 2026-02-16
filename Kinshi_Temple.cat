@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="67f3-e3c0-9b54-71fa" name="Kinshi Temple" revision="24" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="19" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="67f3-e3c0-9b54-71fa" name="Kinshi Temple" revision="25" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="19" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <selectionEntries>
     <selectionEntry id="096c-e1e9-7274-9439" name="Master Shi" hidden="false" collective="false" import="true" type="model">
       <constraints>
@@ -1187,10 +1187,15 @@ Models may not end any Movement or be Placed on top of these Terrain elements.</
             </conditionGroup>
           </conditionGroups>
         </modifier>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="a745-0548-80c8-ece4" type="atLeast"/>
-          </conditions>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="401f-cfc6-71c4-a415" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="9e0e-78bf-83d0-f5b4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <profiles>
@@ -1207,7 +1212,8 @@ Permitted [Kinshi Temple models, Ronin models]</characteristic>
       <categoryLinks>
         <categoryLink id="dae6-a14e-b9c5-1749" name="Faction Theme Cards" hidden="false" targetId="477a-e693-0888-08f7" primary="true"/>
         <categoryLink id="dd13-fc10-590d-f4af" name="Faction: Kinshi Temple" hidden="false" targetId="943d-6b70-d85b-fb7b" primary="false"/>
-        <categoryLink id="5fc9-e9f6-b446-82f1" name="Cycle: Weeping Sky" hidden="false" targetId="6da0-b320-b958-dc82" primary="false"/>
+        <categoryLink id="5fc9-e9f6-b446-82f1" name="Weeping Sky" hidden="false" targetId="6da0-b320-b958-dc82" primary="false"/>
+        <categoryLink targetId="ecbb-5575-0b01-70a9" id="4fdf-437a-6448-e17c" primary="false" name="Cycle"/>
       </categoryLinks>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0"/>
@@ -1317,6 +1323,74 @@ Whenever a Friendly Monk would be required to spend or transfer Ki for an effec
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="10"/>
       </costs>
+    </selectionEntry>
+    <selectionEntry id="4017-b590-2e8e-e7b7" name="Stable Void Portal" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c056-91b4-2a52-949a" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="3b2b-60f4-3316-0b8c" name="Stable Void Portal" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
+          <characteristics>
+            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">Play during Deployment.
+No Void Counters are added to the Blessings of the Void Communal Card in the Starting Phase of Turn 1 by this Warband.
+Select one Void Portal, that Void Portal loses Destructible for the rest of the Game.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="a196-cb11-f4b1-a0d6" name="Faction Event Cards" hidden="false" targetId="d360-71aa-ca22-ba3c" primary="true"/>
+        <categoryLink targetId="ecbb-5575-0b01-70a9" id="94c2-b7dd-b247-0f06" primary="false" name="Cycle"/>
+        <categoryLink targetId="c13c-a06d-22fe-e254" id="b341-2dfa-7e8b-6e06" primary="false" name="Consequences"/>
+      </categoryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1"/>
+      </costs>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="401f-cfc6-71c4-a415" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="2a7c-a7b6-55b7-a6ed" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+    </selectionEntry>
+    <selectionEntry id="1013-d48b-be7e-d03c" name="Harness Power" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7529-d4da-2f34-fab2" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="60d5-26ae-9766-8330" name="Harness Power" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
+          <characteristics>
+            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">Play this in the Starting Phase of turn 1, 2 or 3.
+Remove a Void Counter from your Blessings of the Void Communal Card.
+If you do, add as many Voice of the Void Event Cards to the Warband until you have the cards Max number.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="56c2-ac4f-fdf3-a914" name="Faction Event Cards" hidden="false" targetId="d360-71aa-ca22-ba3c" primary="true"/>
+        <categoryLink targetId="ecbb-5575-0b01-70a9" id="ec56-c11f-0b72-6e12" primary="false" name="Cycle"/>
+        <categoryLink targetId="c13c-a06d-22fe-e254" id="fcbb-e3ce-aa56-2019" primary="false" name="Consequences"/>
+      </categoryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1"/>
+      </costs>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="401f-cfc6-71c4-a415" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="2a7c-a7b6-55b7-a6ed" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
   </selectionEntries>
   <entryLinks>
@@ -1641,12 +1715,22 @@ Requirement [Monk, Void Element]</characteristic>
             <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="4202-776f-8dfd-2386" name="Disrupt Harmony" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="4202-776f-8dfd-2386" name="Remembrance of Harmony" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditions>
-                <condition field="selections" scope="parent" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="096c-e1e9-7274-9439" type="notInstanceOf"/>
+                <condition field="selections" scope="parent" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="57a9-2b8a-3729-1ad8" type="notInstanceOf"/>
               </conditions>
+            </modifier>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="401f-cfc6-71c4-a415" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="2a7c-a7b6-55b7-a6ed" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
           <constraints>
@@ -1654,21 +1738,23 @@ Requirement [Monk, Void Element]</characteristic>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="807b-5761-70f3-1a86" type="max"/>
           </constraints>
           <profiles>
-            <profile id="d2d9-d1e3-7e39-05ac" name="Disrupt Harmony" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
+            <profile id="d2d9-d1e3-7e39-05ac" name="Remembrance of Harmony" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
               <characteristics>
-                <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">When this model makes a successful attack, you may choose a Ki Feat on the Enemy non-Satsui model&apos;s card.
-That Ki Feat may not be used for the rest of the game.
-Once used, discard this card.
+                <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">Whenever the Attached model would be required to spend or transfer Ki for an effect, you may mark one Wound Box on the Attached model for each Ki Token that would be required to resolve the effect.
+This may not be used if it would reduce the model to zero Wounds.
 
-Requirement [Master Shi]</characteristic>
+
+Requirement [Monk]</characteristic>
               </characteristics>
             </profile>
           </profiles>
           <categoryLinks>
             <categoryLink id="9c58-fed6-8f1b-82d4" name="Faction Enhancement Cards" hidden="false" targetId="17cf-d9a9-c7c1-bcb6" primary="false"/>
+            <categoryLink targetId="ecbb-5575-0b01-70a9" id="4bb9-f54e-be98-d17e" primary="false" name="Cycle"/>
+            <categoryLink targetId="c13c-a06d-22fe-e254" id="0104-6596-f133-2537" primary="false" name="Consequences"/>
           </categoryLinks>
           <costs>
-            <cost name=" Rice" typeId="a111-8656-5c05-7415" value="4"/>
+            <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="c76c-812b-43c9-d144" name="Eclipse of Hate" hidden="false" collective="false" import="true" type="upgrade">
@@ -1811,6 +1897,84 @@ Exclusion [Master]</characteristic>
           </categoryLinks>
           <costs>
             <cost name=" Rice" typeId="a111-8656-5c05-7415" value="3"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="7ab6-f4d6-dde4-d787" name="Disrupt Harmony" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="096c-e1e9-7274-9439" type="notInstanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cfeb-a8d8-124d-b043" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="297a-6c8b-e14d-e546" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="f663-29fe-e7e3-65ec" name="Disrupt Harmony" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
+              <characteristics>
+                <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">When this model makes a successful attack, you may choose a Ki Feat on the Enemy non-Satsui model&apos;s card.
+That Ki Feat may not be used for the rest of the game.
+Once used, discard this card.
+
+Requirement [Master Shi]</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <categoryLinks>
+            <categoryLink id="549f-9604-0ed9-69f5" name="Faction Enhancement Cards" hidden="false" targetId="17cf-d9a9-c7c1-bcb6" primary="false"/>
+          </categoryLinks>
+          <costs>
+            <cost name=" Rice" typeId="a111-8656-5c05-7415" value="4"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="a5eb-25f0-52f8-6d51" name="Rend Reality" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="57a9-2b8a-3729-1ad8" type="notInstanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="401f-cfc6-71c4-a415" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="2a7c-a7b6-55b7-a6ed" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="269a-57bf-db8d-ed2a" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="70a8-f231-396a-4e5d" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="63b0-85c3-0cbb-9f5e" name="Rend Reality" hidden="false" typeId="bd15-7ead-9268-3576" typeName="Special Card (Ki Feat)">
+              <characteristics>
+                <characteristic name="Description" typeId="17eb-17e2-4df4-5c5d">Attached model gains the &apos;Rend Reality&apos; Ki Feat.
+
+Requirement [Monk]</characteristic>
+                <characteristic name="Name" typeId="27c7-1649-f16e-8eaa">Rend Reality</characteristic>
+                <characteristic name="Cost" typeId="e410-b220-64e5-7953">Rank 1</characteristic>
+                <characteristic name="Timing" typeId="b9bf-562a-fe26-cb29">Active</characteristic>
+                <characteristic name="Subject" typeId="47b8-f739-9d50-2e45">Target 6&quot;</characteristic>
+                <characteristic name="Limitation" typeId="870e-79e4-80ee-c0cc">no BtB</characteristic>
+                <characteristic name="Ki Feat Description" typeId="3886-242b-fb70-5c88">Remove a Void Counter from your Blessings of the Void Communal Card.
+If you do, perform an Opposed Ki Test with the Target.
+If Successful, place a Void Rift in BtB with the Target (ignoring the usual restrictions on terrain placement).</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <categoryLinks>
+            <categoryLink id="228a-d902-3fa9-a18c" name="Faction Enhancement Cards" hidden="false" targetId="17cf-d9a9-c7c1-bcb6" primary="false"/>
+            <categoryLink targetId="ecbb-5575-0b01-70a9" id="95bb-100e-2525-c064" primary="false" name="Cycle"/>
+            <categoryLink targetId="c13c-a06d-22fe-e254" id="a1bc-d655-ba58-e6a6" primary="false" name="Consequences"/>
+          </categoryLinks>
+          <costs>
+            <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2"/>
           </costs>
         </selectionEntry>
       </selectionEntries>

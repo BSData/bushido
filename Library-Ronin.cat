@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="b489-b304-948d-52d0" name="Library-Ronin" revision="59" battleScribeVersion="2.03" library="true" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="18" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="b489-b304-948d-52d0" name="Library-Ronin" revision="60" battleScribeVersion="2.03" library="true" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="18" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <selectionEntries>
     <selectionEntry id="4e24-3a7e-77bc-dfed" name="Balance" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -217,10 +217,15 @@ In a timed event, both Players have 5 minutes to choose which Warband to use.</c
             </conditionGroup>
           </conditionGroups>
         </modifier>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="6da0-b320-b958-dc82" type="atLeast"/>
-          </conditions>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="9e0e-78bf-83d0-f5b4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="2a7c-a7b6-55b7-a6ed" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <constraints>
@@ -239,8 +244,9 @@ In a timed event, both Players have 5 minutes to choose which Warband to use.</c
         </profile>
       </profiles>
       <categoryLinks>
-        <categoryLink id="b30c-063e-888e-2f10" name="Cycle: Year of the Risen Sun" hidden="false" targetId="a745-0548-80c8-ece4" primary="false"/>
+        <categoryLink id="b30c-063e-888e-2f10" name="Year of the Risen Sun" hidden="false" targetId="a745-0548-80c8-ece4" primary="false"/>
         <categoryLink id="61a0-59e8-1a9a-974b" name="Ronin Terrain Cards" hidden="false" targetId="3df8-0340-a4a1-a8be" primary="true"/>
+        <categoryLink name="Cycle" hidden="false" id="a725-be52-a1d2-eba0" targetId="ecbb-5575-0b01-70a9" primary="false"/>
       </categoryLinks>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2"/>
@@ -248,10 +254,15 @@ In a timed event, both Players have 5 minutes to choose which Warband to use.</c
     </selectionEntry>
     <selectionEntry id="cc6d-8cd9-247f-8fa7" name="War Weary" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="6da0-b320-b958-dc82" type="atLeast"/>
-          </conditions>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="9e0e-78bf-83d0-f5b4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="2a7c-a7b6-55b7-a6ed" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <constraints>
@@ -265,8 +276,9 @@ In a timed event, both Players have 5 minutes to choose which Warband to use.</c
         </profile>
       </profiles>
       <categoryLinks>
-        <categoryLink id="62d8-8353-5210-a336" name="Cycle: Year of the Risen Sun" hidden="false" targetId="a745-0548-80c8-ece4" primary="false"/>
+        <categoryLink id="62d8-8353-5210-a336" name="Year of the Risen Sun" hidden="false" targetId="a745-0548-80c8-ece4" primary="false"/>
         <categoryLink id="11a9-04c3-b764-1e8e" name="Ronin Event Cards" hidden="false" targetId="7638-6ad1-8829-91db" primary="true"/>
+        <categoryLink name="Cycle" hidden="false" id="c162-3699-557c-0c54" targetId="ecbb-5575-0b01-70a9" primary="false"/>
       </categoryLinks>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="3"/>
@@ -274,10 +286,15 @@ In a timed event, both Players have 5 minutes to choose which Warband to use.</c
     </selectionEntry>
     <selectionEntry id="7a9b-1573-3535-e6d8" name="Year of the Risen Sun" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="6da0-b320-b958-dc82" type="atLeast"/>
-          </conditions>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="9e0e-78bf-83d0-f5b4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="2a7c-a7b6-55b7-a6ed" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <constraints>
@@ -292,8 +309,9 @@ All models gain a Ki Token.</characteristic>
         </profile>
       </profiles>
       <categoryLinks>
-        <categoryLink id="da48-0f04-af4a-9efc" name="Cycle: Year of the Risen Sun" hidden="false" targetId="a745-0548-80c8-ece4" primary="false"/>
+        <categoryLink id="da48-0f04-af4a-9efc" name="Year of the Risen Sun" hidden="false" targetId="a745-0548-80c8-ece4" primary="false"/>
         <categoryLink id="c8fe-e673-eee3-22d0" name="Ronin Event Cards" hidden="false" targetId="7638-6ad1-8829-91db" primary="true"/>
+        <categoryLink name="Cycle" hidden="false" id="6de5-3bbf-7fd9-3e2c" targetId="ecbb-5575-0b01-70a9" primary="false"/>
       </categoryLinks>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1"/>
@@ -301,10 +319,15 @@ All models gain a Ki Token.</characteristic>
     </selectionEntry>
     <selectionEntry id="360a-f381-1b04-1c77" name="Ganbatte" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="6da0-b320-b958-dc82" type="atLeast"/>
-          </conditions>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="9e0e-78bf-83d0-f5b4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="2a7c-a7b6-55b7-a6ed" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <constraints>
@@ -318,8 +341,9 @@ All models gain a Ki Token.</characteristic>
         </profile>
       </profiles>
       <categoryLinks>
-        <categoryLink id="89f6-5362-7b68-d5de" name="Cycle: Year of the Risen Sun" hidden="false" targetId="a745-0548-80c8-ece4" primary="false"/>
+        <categoryLink id="89f6-5362-7b68-d5de" name="Year of the Risen Sun" hidden="false" targetId="a745-0548-80c8-ece4" primary="false"/>
         <categoryLink id="bd89-be53-df23-293f" name="Ronin Event Cards" hidden="false" targetId="7638-6ad1-8829-91db" primary="true"/>
+        <categoryLink name="Cycle" hidden="false" id="3134-e61b-58e3-e34f" targetId="ecbb-5575-0b01-70a9" primary="false"/>
       </categoryLinks>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1"/>
@@ -327,10 +351,15 @@ All models gain a Ki Token.</characteristic>
     </selectionEntry>
     <selectionEntry id="8261-e13c-b4bb-2e9a" name="Blessing of Kah&apos;Non" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="6da0-b320-b958-dc82" type="atLeast"/>
-          </conditions>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="9e0e-78bf-83d0-f5b4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="2a7c-a7b6-55b7-a6ed" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <constraints>
@@ -344,8 +373,9 @@ All models gain a Ki Token.</characteristic>
         </profile>
       </profiles>
       <categoryLinks>
-        <categoryLink id="af8b-cdeb-0c71-5330" name="Cycle: Year of the Risen Sun" hidden="false" targetId="a745-0548-80c8-ece4" primary="false"/>
+        <categoryLink id="af8b-cdeb-0c71-5330" name="Year of the Risen Sun" hidden="false" targetId="a745-0548-80c8-ece4" primary="false"/>
         <categoryLink id="0e52-b655-b9d8-fdaf" name="Ronin Event Cards" hidden="false" targetId="7638-6ad1-8829-91db" primary="true"/>
+        <categoryLink name="Cycle" hidden="false" id="c489-8d59-05a4-a64f" targetId="ecbb-5575-0b01-70a9" primary="false"/>
       </categoryLinks>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1"/>
@@ -353,10 +383,15 @@ All models gain a Ki Token.</characteristic>
     </selectionEntry>
     <selectionEntry id="8626-5ed3-1ffd-ce1c" name="Celebration of Life" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="6da0-b320-b958-dc82" type="atLeast"/>
-          </conditions>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="9e0e-78bf-83d0-f5b4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="2a7c-a7b6-55b7-a6ed" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <constraints>
@@ -374,8 +409,9 @@ All Soulless models gain Insignificant until the End Phase.</characteristic>
         <infoLink id="baf0-4c75-c439-a483" name="Insignificant" hidden="false" targetId="1614-d86c-ef8a-c095" type="rule"/>
       </infoLinks>
       <categoryLinks>
-        <categoryLink id="b8ce-00ab-5d27-f424" name="Cycle: Year of the Risen Sun" hidden="false" targetId="a745-0548-80c8-ece4" primary="false"/>
+        <categoryLink id="b8ce-00ab-5d27-f424" name="Year of the Risen Sun" hidden="false" targetId="a745-0548-80c8-ece4" primary="false"/>
         <categoryLink id="f626-0d10-9c36-dc78" name="Ronin Event Cards" hidden="false" targetId="7638-6ad1-8829-91db" primary="true"/>
+        <categoryLink name="Cycle" hidden="false" id="fb93-dcf3-ef81-7907" targetId="ecbb-5575-0b01-70a9" primary="false"/>
       </categoryLinks>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1"/>
@@ -755,10 +791,15 @@ Requirement [ The Kiyozumi Family Theme]</characteristic>
     </selectionEntry>
     <selectionEntry id="8190-7f85-01fa-26b6" name="Dharmic Path" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="a745-0548-80c8-ece4" type="atLeast"/>
-          </conditions>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="401f-cfc6-71c4-a415" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="9e0e-78bf-83d0-f5b4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <constraints>
@@ -774,7 +815,8 @@ Gain a Scenario Point for each Event Card played by your Opponent for the rest o
       </profiles>
       <categoryLinks>
         <categoryLink id="76fd-321c-4f7f-091e" name="Ronin Event Cards" hidden="false" targetId="7638-6ad1-8829-91db" primary="true"/>
-        <categoryLink id="d8e5-440f-3c62-1002" name="Cycle: Weeping Sky" hidden="false" targetId="6da0-b320-b958-dc82" primary="false"/>
+        <categoryLink id="d8e5-440f-3c62-1002" name="Weeping Sky" hidden="false" targetId="6da0-b320-b958-dc82" primary="false"/>
+        <categoryLink name="Cycle" hidden="false" id="d9b1-0282-642e-b19f" targetId="ecbb-5575-0b01-70a9" primary="false"/>
       </categoryLinks>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2"/>
@@ -782,10 +824,15 @@ Gain a Scenario Point for each Event Card played by your Opponent for the rest o
     </selectionEntry>
     <selectionEntry id="f864-f08d-d75d-6c42" name="Disputed Ancestry" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="a745-0548-80c8-ece4" type="atLeast"/>
-          </conditions>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="401f-cfc6-71c4-a415" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="9e0e-78bf-83d0-f5b4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <constraints>
@@ -801,7 +848,8 @@ Choose a model, that model replaces a Type of your choice with the Unknown Type 
       </profiles>
       <categoryLinks>
         <categoryLink id="63a9-3490-c33d-fefd" name="Ronin Event Cards" hidden="false" targetId="7638-6ad1-8829-91db" primary="true"/>
-        <categoryLink id="e656-1e1a-8617-1a71" name="Cycle: Weeping Sky" hidden="false" targetId="6da0-b320-b958-dc82" primary="false"/>
+        <categoryLink id="e656-1e1a-8617-1a71" name="Weeping Sky" hidden="false" targetId="6da0-b320-b958-dc82" primary="false"/>
+        <categoryLink name="Cycle" hidden="false" id="c4c7-b5ab-329e-8a10" targetId="ecbb-5575-0b01-70a9" primary="false"/>
       </categoryLinks>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="3"/>
@@ -814,10 +862,15 @@ Choose a model, that model replaces a Type of your choice with the Unknown Type 
             <condition field="selections" scope="primary-catalogue" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0b85-0901-eb64-b84b" type="instanceOf"/>
           </conditions>
         </modifier>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="a745-0548-80c8-ece4" type="atLeast"/>
-          </conditions>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="401f-cfc6-71c4-a415" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="9e0e-78bf-83d0-f5b4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <constraints>
@@ -835,7 +888,8 @@ Exclusion [Savage Wave]</characteristic>
       </profiles>
       <categoryLinks>
         <categoryLink id="f982-e6fb-cf9e-b926" name="Ronin Event Cards" hidden="false" targetId="7638-6ad1-8829-91db" primary="true"/>
-        <categoryLink id="ea1f-8a79-de23-e79a" name="Cycle: Weeping Sky" hidden="false" targetId="6da0-b320-b958-dc82" primary="false"/>
+        <categoryLink id="ea1f-8a79-de23-e79a" name="Weeping Sky" hidden="false" targetId="6da0-b320-b958-dc82" primary="false"/>
+        <categoryLink name="Cycle" hidden="false" id="ead1-a356-99e4-f4a9" targetId="ecbb-5575-0b01-70a9" primary="false"/>
       </categoryLinks>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1"/>
@@ -853,10 +907,15 @@ Exclusion [Savage Wave]</characteristic>
             </conditionGroup>
           </conditionGroups>
         </modifier>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="a745-0548-80c8-ece4" type="atLeast"/>
-          </conditions>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="401f-cfc6-71c4-a415" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="9e0e-78bf-83d0-f5b4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <constraints>
@@ -874,7 +933,8 @@ Requirement [Warband containing an Imperial &amp; Teishin model]</characteristic
       </profiles>
       <categoryLinks>
         <categoryLink id="d18b-bda8-7988-da05" name="Ronin Event Cards" hidden="false" targetId="7638-6ad1-8829-91db" primary="true"/>
-        <categoryLink id="a4af-98e3-2573-d214" name="Cycle: Weeping Sky" hidden="false" targetId="6da0-b320-b958-dc82" primary="false"/>
+        <categoryLink id="a4af-98e3-2573-d214" name="Weeping Sky" hidden="false" targetId="6da0-b320-b958-dc82" primary="false"/>
+        <categoryLink name="Cycle" hidden="false" id="bc4b-18ba-9bff-1078" targetId="ecbb-5575-0b01-70a9" primary="false"/>
       </categoryLinks>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2"/>
@@ -882,10 +942,15 @@ Requirement [Warband containing an Imperial &amp; Teishin model]</characteristic
     </selectionEntry>
     <selectionEntry id="b05f-8c6f-d240-2cac" name="Opportune Uprising" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="a745-0548-80c8-ece4" type="atLeast"/>
-          </conditions>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="401f-cfc6-71c4-a415" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="9e0e-78bf-83d0-f5b4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <constraints>
@@ -902,7 +967,8 @@ You may play only one Opportune Uprising card per turn.</characteristic>
       </profiles>
       <categoryLinks>
         <categoryLink id="e108-35b7-4b7b-3b7d" name="Ronin Event Cards" hidden="false" targetId="7638-6ad1-8829-91db" primary="true"/>
-        <categoryLink id="590c-c63f-2118-625a" name="Cycle: Weeping Sky" hidden="false" targetId="6da0-b320-b958-dc82" primary="false"/>
+        <categoryLink id="590c-c63f-2118-625a" name="Weeping Sky" hidden="false" targetId="6da0-b320-b958-dc82" primary="false"/>
+        <categoryLink name="Cycle" hidden="false" id="7d65-ef83-d070-c5b0" targetId="ecbb-5575-0b01-70a9" primary="false"/>
       </categoryLinks>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1"/>
@@ -910,10 +976,15 @@ You may play only one Opportune Uprising card per turn.</characteristic>
     </selectionEntry>
     <selectionEntry id="51ed-d876-72eb-0060" name="Predatory Scent" hidden="false" collective="false" import="true" type="model">
       <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="a745-0548-80c8-ece4" type="atLeast"/>
-          </conditions>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="401f-cfc6-71c4-a415" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="9e0e-78bf-83d0-f5b4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <constraints>
@@ -935,7 +1006,8 @@ If the Animal model cannot do so, it gains a Frightened Marker.</characteristic>
       </profiles>
       <categoryLinks>
         <categoryLink id="9dcb-bbfb-1a3d-92c1" name="Ronin Terrain Cards" hidden="false" targetId="3df8-0340-a4a1-a8be" primary="true"/>
-        <categoryLink id="3183-dda4-95fb-130a" name="Cycle: Weeping Sky" hidden="false" targetId="6da0-b320-b958-dc82" primary="false"/>
+        <categoryLink id="3183-dda4-95fb-130a" name="Weeping Sky" hidden="false" targetId="6da0-b320-b958-dc82" primary="false"/>
+        <categoryLink name="Cycle" hidden="false" id="a6c3-4d1e-bf5c-a93c" targetId="ecbb-5575-0b01-70a9" primary="false"/>
       </categoryLinks>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2"/>
@@ -953,10 +1025,15 @@ If the Animal model cannot do so, it gains a Frightened Marker.</characteristic>
             </conditionGroup>
           </conditionGroups>
         </modifier>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="a745-0548-80c8-ece4" type="atLeast"/>
-          </conditions>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="401f-cfc6-71c4-a415" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="9e0e-78bf-83d0-f5b4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <constraints>
@@ -975,7 +1052,8 @@ Exclusion [Jung, Minimoto]</characteristic>
       </profiles>
       <categoryLinks>
         <categoryLink id="d923-897e-9df9-5142" name="Ronin Event Cards" hidden="false" targetId="7638-6ad1-8829-91db" primary="true"/>
-        <categoryLink id="de94-5cde-6340-415f" name="Cycle: Weeping Sky" hidden="false" targetId="6da0-b320-b958-dc82" primary="false"/>
+        <categoryLink id="de94-5cde-6340-415f" name="Weeping Sky" hidden="false" targetId="6da0-b320-b958-dc82" primary="false"/>
+        <categoryLink name="Cycle" hidden="false" id="5c89-a56a-074a-930c" targetId="ecbb-5575-0b01-70a9" primary="false"/>
       </categoryLinks>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2"/>
@@ -983,10 +1061,15 @@ Exclusion [Jung, Minimoto]</characteristic>
     </selectionEntry>
     <selectionEntry id="7071-e0d5-31c8-b1fe" name="Unforeseen Outcome" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="a745-0548-80c8-ece4" type="atLeast"/>
-          </conditions>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="401f-cfc6-71c4-a415" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="9e0e-78bf-83d0-f5b4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <constraints>
@@ -1002,7 +1085,8 @@ Until the End Phase, each time either player’s model is Damaged, their opponen
       </profiles>
       <categoryLinks>
         <categoryLink id="c069-af20-34ae-c8be" name="Ronin Event Cards" hidden="false" targetId="7638-6ad1-8829-91db" primary="true"/>
-        <categoryLink id="4c86-12f5-69bd-8013" name="Cycle: Weeping Sky" hidden="false" targetId="6da0-b320-b958-dc82" primary="false"/>
+        <categoryLink id="4c86-12f5-69bd-8013" name="Weeping Sky" hidden="false" targetId="6da0-b320-b958-dc82" primary="false"/>
+        <categoryLink name="Cycle" hidden="false" id="d527-ac0e-6ab2-a20a" targetId="ecbb-5575-0b01-70a9" primary="false"/>
       </categoryLinks>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1"/>
@@ -1010,10 +1094,15 @@ Until the End Phase, each time either player’s model is Damaged, their opponen
     </selectionEntry>
     <selectionEntry id="1cdd-40cb-ef70-ac40" name="Weeping Sky" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="a745-0548-80c8-ece4" type="atLeast"/>
-          </conditions>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="401f-cfc6-71c4-a415" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="9e0e-78bf-83d0-f5b4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <constraints>
@@ -1029,7 +1118,8 @@ For the first turn of the game, all models lose Cloudwalk and Lightfooted and ma
       </profiles>
       <categoryLinks>
         <categoryLink id="47da-b1dd-4c03-f4e4" name="Ronin Event Cards" hidden="false" targetId="7638-6ad1-8829-91db" primary="true"/>
-        <categoryLink id="8625-ef44-0ca7-233e" name="Cycle: Weeping Sky" hidden="false" targetId="6da0-b320-b958-dc82" primary="false"/>
+        <categoryLink id="8625-ef44-0ca7-233e" name="Weeping Sky" hidden="false" targetId="6da0-b320-b958-dc82" primary="false"/>
+        <categoryLink name="Cycle" hidden="false" id="597e-26ef-143b-c54c" targetId="ecbb-5575-0b01-70a9" primary="false"/>
       </categoryLinks>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1"/>
@@ -1038,7 +1128,8 @@ For the first turn of the game, all models lose Cloudwalk and Lightfooted and ma
     <selectionEntry type="upgrade" import="true" name="Bleeding Moon&apos;s Influence" hidden="false" id="cf7f-cd0c-1bd8-caa6">
       <categoryLinks>
         <categoryLink name="Ronin Event Cards" hidden="false" id="39fa-488b-f8b3-8027" targetId="7638-6ad1-8829-91db" primary="true"/>
-        <categoryLink targetId="c13c-a06d-22fe-e254" id="b398-8ae7-2083-f9c9" primary="false" name="Cycle: Consequences"/>
+        <categoryLink targetId="c13c-a06d-22fe-e254" id="b398-8ae7-2083-f9c9" primary="false" name="Consequences"/>
+        <categoryLink name="Cycle" hidden="false" id="7b64-c308-adcc-0a6c" targetId="ecbb-5575-0b01-70a9" primary="false"/>
       </categoryLinks>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1"/>
@@ -1054,11 +1145,24 @@ Bleed Markers cannot be removed this Main Phase.</characteristic>
           </characteristics>
         </profile>
       </profiles>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="401f-cfc6-71c4-a415" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="2a7c-a7b6-55b7-a6ed" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Weeping Sky&apos;s Influence" hidden="false" id="e7ee-4871-1a35-885e">
       <categoryLinks>
         <categoryLink name="Ronin Event Cards" hidden="false" id="2d00-c18a-1172-7b6d" targetId="7638-6ad1-8829-91db" primary="true"/>
-        <categoryLink targetId="c13c-a06d-22fe-e254" id="e3c4-ce81-7560-a67f" primary="false" name="Cycle: Consequences"/>
+        <categoryLink targetId="c13c-a06d-22fe-e254" id="e3c4-ce81-7560-a67f" primary="false" name="Consequences"/>
+        <categoryLink name="Cycle" hidden="false" id="abc0-9352-f286-568d" targetId="ecbb-5575-0b01-70a9" primary="false"/>
       </categoryLinks>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1"/>
@@ -1075,11 +1179,24 @@ The battlefield is a Quagmire effect this turn.</characteristic>
           </characteristics>
         </profile>
       </profiles>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="401f-cfc6-71c4-a415" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="2a7c-a7b6-55b7-a6ed" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Horoscope" hidden="false" id="b503-5963-e33c-e965">
       <categoryLinks>
         <categoryLink name="Ronin Event Cards" hidden="false" id="2455-3cfa-b090-19ce" targetId="7638-6ad1-8829-91db" primary="true"/>
-        <categoryLink targetId="c13c-a06d-22fe-e254" id="4677-c004-2cc4-5f70" primary="false" name="Cycle: Consequences"/>
+        <categoryLink targetId="c13c-a06d-22fe-e254" id="4677-c004-2cc4-5f70" primary="false" name="Consequences"/>
+        <categoryLink name="Cycle" hidden="false" id="6948-bc0f-a5d3-2cf0" targetId="ecbb-5575-0b01-70a9" primary="false"/>
       </categoryLinks>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="3"/>
@@ -1095,6 +1212,18 @@ If you do, those dice may not be re-rolled, substituted, or have their value ch
           </characteristics>
         </profile>
       </profiles>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="401f-cfc6-71c4-a415" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="2a7c-a7b6-55b7-a6ed" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
   </selectionEntries>
   <sharedSelectionEntries>
@@ -5727,6 +5856,16 @@ Permitted [Imperial Models]</characteristic>
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="9e0e-78bf-83d0-f5b4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="2a7c-a7b6-55b7-a6ed" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0d25-97e9-dad7-4f23" type="max"/>
@@ -5740,8 +5879,9 @@ Permitted [Imperial Models]</characteristic>
         </profile>
       </profiles>
       <categoryLinks>
-        <categoryLink id="759d-0b52-e12b-cd77" name="Cycle: Year of the Risen Sun" hidden="false" targetId="a745-0548-80c8-ece4" primary="false"/>
+        <categoryLink id="759d-0b52-e12b-cd77" name="Year of the Risen Sun" hidden="false" targetId="a745-0548-80c8-ece4" primary="false"/>
         <categoryLink id="19fd-16a9-dedf-d0d2" name="Ronin Equipment Cards" hidden="false" targetId="278f-9379-320a-1a7a" primary="true"/>
+        <categoryLink name="Cycle" hidden="false" id="b22a-8069-137d-bfd3" targetId="ecbb-5575-0b01-70a9" primary="false"/>
       </categoryLinks>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2"/>
@@ -5761,10 +5901,15 @@ Permitted [Imperial Models]</characteristic>
             </conditionGroup>
           </conditionGroups>
         </modifier>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="6da0-b320-b958-dc82" type="atLeast"/>
-          </conditions>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="9e0e-78bf-83d0-f5b4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="2a7c-a7b6-55b7-a6ed" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <constraints>
@@ -5783,8 +5928,9 @@ Note: there is currently no simple way to automatically check for this.</charact
         </profile>
       </profiles>
       <categoryLinks>
-        <categoryLink id="a5b0-66f6-6541-1374" name="Cycle: Year of the Risen Sun" hidden="false" targetId="a745-0548-80c8-ece4" primary="false"/>
+        <categoryLink id="a5b0-66f6-6541-1374" name="Year of the Risen Sun" hidden="false" targetId="a745-0548-80c8-ece4" primary="false"/>
         <categoryLink id="913c-58d2-44d2-844c" name="Ronin Enhancement Cards" hidden="false" targetId="2758-69ad-6e26-c737" primary="true"/>
+        <categoryLink name="Cycle" hidden="false" id="6106-58a8-687d-a985" targetId="ecbb-5575-0b01-70a9" primary="false"/>
       </categoryLinks>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="3"/>
@@ -5809,10 +5955,15 @@ Note: there is currently no simple way to automatically check for this.</charact
             </conditionGroup>
           </conditionGroups>
         </modifier>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="6da0-b320-b958-dc82" type="atLeast"/>
-          </conditions>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="9e0e-78bf-83d0-f5b4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="2a7c-a7b6-55b7-a6ed" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <constraints>
@@ -5830,8 +5981,9 @@ Note: there is currently no simple way to automatically check for this.</charact
         <infoLink id="f3c9-d599-a6b9-5454" name="Immune" hidden="false" targetId="ea08-b25e-0ea8-af73" type="rule"/>
       </infoLinks>
       <categoryLinks>
-        <categoryLink id="598a-88b4-302b-25de" name="Cycle: Year of the Risen Sun" hidden="false" targetId="a745-0548-80c8-ece4" primary="false"/>
+        <categoryLink id="598a-88b4-302b-25de" name="Year of the Risen Sun" hidden="false" targetId="a745-0548-80c8-ece4" primary="false"/>
         <categoryLink id="a474-4863-1d74-67fe" name="Ronin Enhancement Cards" hidden="false" targetId="2758-69ad-6e26-c737" primary="true"/>
+        <categoryLink name="Cycle" hidden="false" id="f31b-5cbd-abb6-efa5" targetId="ecbb-5575-0b01-70a9" primary="false"/>
       </categoryLinks>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2"/>
@@ -5851,10 +6003,15 @@ Note: there is currently no simple way to automatically check for this.</charact
             </conditionGroup>
           </conditionGroups>
         </modifier>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="6da0-b320-b958-dc82" type="atLeast"/>
-          </conditions>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="9e0e-78bf-83d0-f5b4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="2a7c-a7b6-55b7-a6ed" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <constraints>
@@ -5874,8 +6031,9 @@ Max: 3</characteristic>
         <infoLink id="4f6d-188c-2d91-28d0" name="Bravery" hidden="false" targetId="f9b2-38d2-7cda-de6e" type="rule"/>
       </infoLinks>
       <categoryLinks>
-        <categoryLink id="9a74-a267-d4d6-19dd" name="Cycle: Year of the Risen Sun" hidden="false" targetId="a745-0548-80c8-ece4" primary="false"/>
+        <categoryLink id="9a74-a267-d4d6-19dd" name="Year of the Risen Sun" hidden="false" targetId="a745-0548-80c8-ece4" primary="false"/>
         <categoryLink id="660b-3546-988b-d7a0" name="Ronin Equipment Cards" hidden="false" targetId="278f-9379-320a-1a7a" primary="true"/>
+        <categoryLink name="Cycle" hidden="false" id="9e36-d959-bfb7-f808" targetId="ecbb-5575-0b01-70a9" primary="false"/>
       </categoryLinks>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1"/>
@@ -11314,6 +11472,16 @@ On a successful ranged attack instead of a Damage Roll, the Target gains a Blee
             <condition type="equalTo" value="3" field="selections" scope="roster" childId="a4b8-d258-053b-0f1d" shared="true" includeChildSelections="true"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="401f-cfc6-71c4-a415" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="2a7c-a7b6-55b7-a6ed" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="3" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="cb30-450e-9321-c1ba" type="max"/>
@@ -11328,6 +11496,8 @@ On a successful ranged attack instead of a Damage Roll, the Target gains a Blee
       </profiles>
       <categoryLinks>
         <categoryLink id="fed8-6de8-9676-40bc" name="Ronin Enhancement Cards" hidden="false" targetId="2758-69ad-6e26-c737" primary="true"/>
+        <categoryLink targetId="ecbb-5575-0b01-70a9" id="3e53-c6e7-df1a-268b" primary="false" name="Cycle"/>
+        <categoryLink targetId="c13c-a06d-22fe-e254" id="2355-38c6-7d08-c829" primary="false" name="Consequences"/>
       </categoryLinks>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1"/>
@@ -11350,6 +11520,16 @@ On a successful ranged attack instead of a Damage Roll, the Target gains a Blee
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="401f-cfc6-71c4-a415" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="2a7c-a7b6-55b7-a6ed" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="3" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c1e8-6455-d8df-181d" type="max"/>
@@ -11364,12 +11544,14 @@ On a successful ranged attack instead of a Damage Roll, the Target gains a Blee
       </profiles>
       <categoryLinks>
         <categoryLink targetId="278f-9379-320a-1a7a" id="f1e1-7de0-f840-48da" primary="true" name="Ronin Equipment Cards"/>
+        <categoryLink name="Cycle" hidden="false" id="66b8-3f63-0b50-dfea" targetId="ecbb-5575-0b01-70a9" primary="false"/>
+        <categoryLink name="Consequences" hidden="false" id="d616-6d35-53d2-8ad1" targetId="c13c-a06d-22fe-e254" primary="false"/>
       </categoryLinks>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1"/>
       </costs>
       <infoLinks>
-        <infoLink name="" id="a236-f51e-2fb6-d28e" hidden="false" type="rule" targetId="ea08-b25e-0ea8-af73"/>
+        <infoLink id="a236-f51e-2fb6-d28e" hidden="false" type="rule" targetId="ea08-b25e-0ea8-af73" name="Immune"/>
       </infoLinks>
     </selectionEntry>
   </sharedSelectionEntries>
@@ -11458,6 +11640,16 @@ On a successful ranged attack instead of a Damage Roll, the Target gains a Blee
                 <condition type="notInstanceOf" value="0" field="selections" scope="parent" childId="e78b-1ae8-1f5c-2eec" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </modifier>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="401f-cfc6-71c4-a415" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="2a7c-a7b6-55b7-a6ed" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
           </modifiers>
           <constraints>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="0812-2777-fa64-f63c" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
@@ -11478,7 +11670,8 @@ Requirement [Sojobo]</characteristic>
           </profiles>
           <categoryLinks>
             <categoryLink name="Ronin Enhancement Cards" hidden="false" id="83f7-1120-37ad-d533" targetId="2758-69ad-6e26-c737" primary="true"/>
-            <categoryLink targetId="c13c-a06d-22fe-e254" id="4b19-83ae-6efd-ed61" primary="false" name="Cycle: Consequences"/>
+            <categoryLink targetId="c13c-a06d-22fe-e254" id="4b19-83ae-6efd-ed61" primary="false" name="Consequences"/>
+            <categoryLink name="Cycle" hidden="false" id="a497-eca3-841a-95d1" targetId="ecbb-5575-0b01-70a9" primary="false"/>
           </categoryLinks>
           <costs>
             <cost name=" Rice" typeId="a111-8656-5c05-7415" value="-5"/>
@@ -11490,6 +11683,16 @@ Requirement [Sojobo]</characteristic>
               <conditions>
                 <condition type="notInstanceOf" value="0" field="selections" scope="parent" childId="f97b-84fa-27d7-b73b" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
+            </modifier>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="401f-cfc6-71c4-a415" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="2a7c-a7b6-55b7-a6ed" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
           <constraints>
@@ -11509,7 +11712,8 @@ Requirement [Ryokeen]</characteristic>
           </profiles>
           <categoryLinks>
             <categoryLink name="Ronin Enhancement Cards" hidden="false" id="10de-b32f-96a4-40f2" targetId="2758-69ad-6e26-c737" primary="true"/>
-            <categoryLink targetId="c13c-a06d-22fe-e254" id="2ccc-5331-5889-017a" primary="false" name="Cycle: Consequences"/>
+            <categoryLink targetId="c13c-a06d-22fe-e254" id="2ccc-5331-5889-017a" primary="false" name="Consequences"/>
+            <categoryLink name="Cycle" hidden="false" id="3574-0a80-6757-c9ef" targetId="ecbb-5575-0b01-70a9" primary="false"/>
           </categoryLinks>
           <costs>
             <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0"/>
