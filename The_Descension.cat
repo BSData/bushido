@@ -665,6 +665,53 @@ Each Friendly Suzume model may be placed within 1&quot; of its current location 
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="10"/>
       </costs>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Enhancements" id="5af4-60c5-dd3f-b95c" hidden="false">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Scatter" hidden="false" id="7ef2-2837-945b-3e98" collective="false">
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="401f-cfc6-71c4-a415" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="2a7c-a7b6-55b7-a6ed" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="42ce-e259-dd01-8699" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3898-fa2f-8833-6e28" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+              <profiles>
+                <profile name="Scatter" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card" hidden="false" id="d7a0-415f-371c-4a8d">
+                  <characteristics>
+                    <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">When Attached Convocation of Eagles model is Killed, one Enemy model within 8&quot; gains a Stunned Marker.
+Choose one Eagles of the Jwar Isles, not recruited into this Warband, Recruit that model and place it Elsewhere.
+That model gains Flank and enters the Battlefield using those rules.
+This Enhancement may be given to Animal, Swarm and Insignificant models.
+
+Requirement [Convocation of Eagles]</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <infoLinks>
+                <infoLink name="Flank" id="5813-ae2d-9e8d-2029" hidden="false" targetId="a847-f02d-7e99-8a66" type="rule"/>
+              </infoLinks>
+              <categoryLinks>
+                <categoryLink name="Faction Enhancement Cards" hidden="false" id="02d1-12c8-ec2b-7068" targetId="17cf-d9a9-c7c1-bcb6" primary="true"/>
+                <categoryLink name="Cycle" hidden="false" id="2073-57bc-fa51-827f" targetId="ecbb-5575-0b01-70a9" primary="false"/>
+                <categoryLink name="Consequences" hidden="false" id="af08-39bc-245a-5cd1" targetId="c13c-a06d-22fe-e254" primary="false"/>
+              </categoryLinks>
+              <costs>
+                <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntry>
     <selectionEntry id="dd40-17f4-38f3-e8cb" name="Hazkabo" hidden="false" collective="false" import="true" type="model">
       <modifiers>
@@ -3403,10 +3450,15 @@ This cannot be played on the first turn of the game.</characteristic>
     </selectionEntry>
     <selectionEntry id="91ff-898f-8fc3-01dd" name="Royal Mandate" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="6da0-b320-b958-dc82" type="atLeast"/>
-          </conditions>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="9e0e-78bf-83d0-f5b4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="2a7c-a7b6-55b7-a6ed" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <constraints>
@@ -3426,6 +3478,7 @@ Until the End Phase, Enemy models gain Weak when making Size Tests.</characteris
       <categoryLinks>
         <categoryLink id="3d26-3e72-4452-ca5e" name="Faction Event Cards" hidden="false" targetId="d360-71aa-ca22-ba3c" primary="true"/>
         <categoryLink id="bbc5-5bc0-5550-bc9e" name="Cycle: Year of the Risen Sun" hidden="false" targetId="a745-0548-80c8-ece4" primary="false"/>
+        <categoryLink targetId="ecbb-5575-0b01-70a9" id="6185-cccb-01a2-b81c" primary="false" name="Cycle"/>
       </categoryLinks>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1"/>
@@ -3736,10 +3789,15 @@ Until the End Phase, Enemy models gain Weak when making Size Tests.</characteris
     </selectionEntry>
     <selectionEntry id="d3df-f2c3-1a47-6c66" name="Sacred Hunt" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="a745-0548-80c8-ece4" type="atLeast"/>
-          </conditions>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="401f-cfc6-71c4-a415" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="9e0e-78bf-83d0-f5b4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <constraints>
@@ -3762,6 +3820,7 @@ If a non-lnsignificant Enemy Animal model is Killed, Friendly Tribesmen models g
       <categoryLinks>
         <categoryLink id="f1ce-b609-8678-6d05" name="Faction Event Cards" hidden="false" targetId="d360-71aa-ca22-ba3c" primary="true"/>
         <categoryLink id="0869-7bb8-0148-8a2d" name="Cycle: Weeping Sky" hidden="false" targetId="6da0-b320-b958-dc82" primary="false"/>
+        <categoryLink targetId="ecbb-5575-0b01-70a9" id="1e22-82db-27f5-e081" primary="false" name="Cycle"/>
       </categoryLinks>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2"/>
@@ -3769,10 +3828,15 @@ If a non-lnsignificant Enemy Animal model is Killed, Friendly Tribesmen models g
     </selectionEntry>
     <selectionEntry id="2599-64cf-ad52-ea14" name="Wardens of the Eyrie" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="a745-0548-80c8-ece4" type="atLeast"/>
-          </conditions>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="401f-cfc6-71c4-a415" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="9e0e-78bf-83d0-f5b4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <constraints>
@@ -3789,6 +3853,7 @@ Until the End Phase, reduce the cost of Friendly Haiatake models&apos; Special A
       <categoryLinks>
         <categoryLink id="7e14-d4a6-ebe0-2517" name="Faction Event Cards" hidden="false" targetId="d360-71aa-ca22-ba3c" primary="true"/>
         <categoryLink id="06ea-f804-660f-66f7" name="Cycle: Weeping Sky" hidden="false" targetId="6da0-b320-b958-dc82" primary="false"/>
+        <categoryLink targetId="ecbb-5575-0b01-70a9" id="a783-9618-fb30-6564" primary="false" name="Cycle"/>
       </categoryLinks>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2"/>
@@ -3806,10 +3871,15 @@ Until the End Phase, reduce the cost of Friendly Haiatake models&apos; Special A
             </conditionGroup>
           </conditionGroups>
         </modifier>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="a745-0548-80c8-ece4" type="atLeast"/>
-          </conditions>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="401f-cfc6-71c4-a415" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="9e0e-78bf-83d0-f5b4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <profiles>
@@ -3827,6 +3897,7 @@ Permitted [Tribesman, Ronin Tribesman, Unknown Ronin]</characteristic>
       <categoryLinks>
         <categoryLink id="b144-c18d-a429-6249" name="Faction Theme Cards" hidden="false" targetId="477a-e693-0888-08f7" primary="true"/>
         <categoryLink id="d11c-bcab-d2e1-312a" name="Cycle: Weeping Sky" hidden="false" targetId="6da0-b320-b958-dc82" primary="false"/>
+        <categoryLink targetId="ecbb-5575-0b01-70a9" id="2d3c-91a4-6a82-7c77" primary="false" name="Cycle"/>
       </categoryLinks>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0"/>
@@ -4439,6 +4510,79 @@ When this model performs a Scenario Action, remove one fewer Activation Counters
         <categoryLink targetId="ecfc-6a77-10bd-4ae4" id="ebb0-b92e-90a3-fb0b" primary="false" name="Mole"/>
       </categoryLinks>
     </selectionEntry>
+    <selectionEntry id="de97-d08a-8eba-6fff" name="Sudden Migration" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="roster" value="3" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6e6b-8e40-2dc7-9d20" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="ca7c-a4e5-84b7-32d5" name="Sudden Migration" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
+          <characteristics>
+            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">Play in the End Phase, choose a Friendly Suzume model that you own.
+Place that model Elsewhere.
+The Suzume model gains Flank and returns to play using those rules.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="ad3c-2b54-5ce7-9ff8" name="Faction Event Cards" hidden="false" targetId="d360-71aa-ca22-ba3c" primary="true"/>
+        <categoryLink targetId="ecbb-5575-0b01-70a9" id="8c01-a2e5-db2d-6d14" primary="false" name="Cycle"/>
+        <categoryLink targetId="c13c-a06d-22fe-e254" id="0c31-aed9-da6a-b754" primary="false" name="Consequences"/>
+      </categoryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1"/>
+      </costs>
+      <infoLinks>
+        <infoLink name="Flank" id="8ee3-b79c-d4a9-dcb2" hidden="false" type="rule" targetId="a847-f02d-7e99-8a66"/>
+      </infoLinks>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="401f-cfc6-71c4-a415" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="2a7c-a7b6-55b7-a6ed" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+    </selectionEntry>
+    <selectionEntry id="9c43-b8a8-427f-a929" name="The Eagle&apos;s Call" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="roster" value="2" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1973-30f4-b03c-f726" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="1b16-5c18-ca92-7bf4" name="The Eagle&apos;s Call" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
+          <characteristics>
+            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">Choose a Friendly Haiatake or Kurama model, that model gains Fear (5) and Terror until the current activation is resolved.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="8442-258e-7146-8f74" name="Faction Event Cards" hidden="false" targetId="d360-71aa-ca22-ba3c" primary="true"/>
+        <categoryLink targetId="ecbb-5575-0b01-70a9" id="a6d6-0005-8f1b-08d1" primary="false" name="Cycle"/>
+        <categoryLink targetId="c13c-a06d-22fe-e254" id="7bd3-5636-60f3-29fe" primary="false" name="Consequences"/>
+      </categoryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1"/>
+      </costs>
+      <infoLinks>
+        <infoLink name="Fear" id="073b-186c-6845-6233" hidden="false" type="rule" targetId="3586-4583-7f10-1f31"/>
+        <infoLink name="Terror" id="4273-9ce4-ba15-0b4a" hidden="false" type="rule" targetId="ad7a-5dea-fee4-fb49"/>
+      </infoLinks>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="401f-cfc6-71c4-a415" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="2a7c-a7b6-55b7-a6ed" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+    </selectionEntry>
   </selectionEntries>
   <entryLinks>
     <entryLink id="415c-af65-0e36-4768" name="Giant Eagle" hidden="false" collective="false" import="true" targetId="f25f-493d-4123-b0ee" type="selectionEntry">
@@ -4998,10 +5142,15 @@ Requirement [Kurama Tengu, Washi Tengu]</characteristic>
                 <condition field="selections" scope="parent" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="607a-a497-e3f1-edfe" type="notInstanceOf"/>
               </conditions>
             </modifier>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="6da0-b320-b958-dc82" type="atLeast"/>
-              </conditions>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="9e0e-78bf-83d0-f5b4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="2a7c-a7b6-55b7-a6ed" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
           <constraints>
@@ -5023,6 +5172,7 @@ Requirement |Tribesman]</characteristic>
           <categoryLinks>
             <categoryLink id="d241-71ae-b07f-978b" name="Faction Enhancement Cards" hidden="false" targetId="17cf-d9a9-c7c1-bcb6" primary="true"/>
             <categoryLink id="01e8-a44b-74b9-068b" name="Cycle: Year of the Risen Sun" hidden="false" targetId="a745-0548-80c8-ece4" primary="false"/>
+            <categoryLink targetId="ecbb-5575-0b01-70a9" id="ce94-5c56-cd40-9318" primary="false" name="Cycle"/>
           </categoryLinks>
           <costs>
             <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2"/>
@@ -5040,10 +5190,15 @@ Requirement |Tribesman]</characteristic>
                 </conditionGroup>
               </conditionGroups>
             </modifier>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="a745-0548-80c8-ece4" type="atLeast"/>
-              </conditions>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="401f-cfc6-71c4-a415" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="9e0e-78bf-83d0-f5b4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
           <constraints>
@@ -5064,6 +5219,51 @@ Requirement [Tengu with Cloudwalk]</characteristic>
           <categoryLinks>
             <categoryLink id="5cab-39c9-08e7-b947" name="Faction Enhancement Cards" hidden="false" targetId="17cf-d9a9-c7c1-bcb6" primary="true"/>
             <categoryLink id="acc2-f4b6-1b47-4f9b" name="Cycle: Weeping Sky" hidden="false" targetId="6da0-b320-b958-dc82" primary="false"/>
+            <categoryLink targetId="ecbb-5575-0b01-70a9" id="c5d3-e227-b817-ce90" primary="false" name="Cycle"/>
+          </categoryLinks>
+          <costs>
+            <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="6871-45e2-615b-e1ca" name="Fujin&apos;s Thunder" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0411-16ed-43d9-962c" type="notInstanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="401f-cfc6-71c4-a415" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="2a7c-a7b6-55b7-a6ed" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2412-f6ac-f920-5bdb" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b073-97e5-2746-0313" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="1061-b6ab-2d25-2780" name="Fujin&apos;s Thunder" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
+              <characteristics>
+                <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">Models damaged by this model&apos;s Call Lightning attacks suffer -2 Move Statistic until the End Phase.
+The penalty is not cumulative.
+
+Requirement [Karasu]</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="bf68-2c05-a28e-55a6" name="Powerful Attack" hidden="false" targetId="d56a-058d-95d9-5b60" type="rule"/>
+          </infoLinks>
+          <categoryLinks>
+            <categoryLink id="3b85-1033-1cec-89e3" name="Faction Enhancement Cards" hidden="false" targetId="17cf-d9a9-c7c1-bcb6" primary="true"/>
+            <categoryLink targetId="ecbb-5575-0b01-70a9" id="808b-47af-a01c-7849" primary="false" name="Cycle"/>
+            <categoryLink targetId="c13c-a06d-22fe-e254" id="611b-55d2-1414-d74f" primary="false" name="Consequences"/>
           </categoryLinks>
           <costs>
             <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1"/>

@@ -3349,10 +3349,15 @@ Exclusion [Oda]</characteristic>
     </selectionEntry>
     <selectionEntry id="aa04-73dc-ade6-fa06" name="Food Monopoly" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="6da0-b320-b958-dc82" type="atLeast"/>
-          </conditions>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="9e0e-78bf-83d0-f5b4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="2a7c-a7b6-55b7-a6ed" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <constraints>
@@ -3372,6 +3377,7 @@ Exclusion [Oda]</characteristic>
       <categoryLinks>
         <categoryLink id="8fb2-4a48-33b6-ccea" name="Faction Event Cards" hidden="false" targetId="d360-71aa-ca22-ba3c" primary="true"/>
         <categoryLink id="15e9-74e5-a37d-0632" name="Cycle: Year of the Risen Sun" hidden="false" targetId="a745-0548-80c8-ece4" primary="false"/>
+        <categoryLink targetId="ecbb-5575-0b01-70a9" id="f52c-3afc-15b1-d457" primary="false" name="Cycle"/>
       </categoryLinks>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2"/>
@@ -3379,10 +3385,15 @@ Exclusion [Oda]</characteristic>
     </selectionEntry>
     <selectionEntry id="1abe-3a57-0622-2719" name="In the Hands of the Kami" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="6da0-b320-b958-dc82" type="atLeast"/>
-          </conditions>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="9e0e-78bf-83d0-f5b4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="2a7c-a7b6-55b7-a6ed" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <constraints>
@@ -3398,6 +3409,7 @@ Exclusion [Oda]</characteristic>
       <categoryLinks>
         <categoryLink id="1f98-a23c-0078-282e" name="Faction Event Cards" hidden="false" targetId="d360-71aa-ca22-ba3c" primary="true"/>
         <categoryLink id="4227-8428-201b-ea5b" name="Cycle: Year of the Risen Sun" hidden="false" targetId="a745-0548-80c8-ece4" primary="false"/>
+        <categoryLink targetId="ecbb-5575-0b01-70a9" id="8b8a-bad6-f42b-272e" primary="false" name="Cycle"/>
       </categoryLinks>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0"/>
@@ -3922,10 +3934,15 @@ Whenever an Effect causes dice to be re-rolled, this model gains 1 Ki Token.</ch
     </selectionEntry>
     <selectionEntry id="fb86-d2c0-5918-4c9a" name="Underhanded Ploy" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="a745-0548-80c8-ece4" type="atLeast"/>
-          </conditions>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="401f-cfc6-71c4-a415" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="9e0e-78bf-83d0-f5b4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <constraints>
@@ -3942,6 +3959,7 @@ That model must retake that test.</characteristic>
       <categoryLinks>
         <categoryLink id="bfc4-041c-d7cd-cb64" name="Faction Event Cards" hidden="false" targetId="d360-71aa-ca22-ba3c" primary="true"/>
         <categoryLink id="04d5-1c8c-0fc8-b264" name="Cycle: Weeping Sky" hidden="false" targetId="6da0-b320-b958-dc82" primary="false"/>
+        <categoryLink targetId="ecbb-5575-0b01-70a9" id="87b7-cc14-0615-1ed6" primary="false" name="Cycle"/>
       </categoryLinks>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2"/>
@@ -6227,6 +6245,114 @@ While the number of Investment Counters shown below is reached, Friendly Shatei
         </modifierGroup>
       </modifierGroups>
     </selectionEntry>
+    <selectionEntry id="2006-2bfd-30d3-66eb" name="Exchange of the Sake Cups" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="531a-dbfa-9b57-d06a" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="9e36-847b-6165-1683" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="401f-cfc6-71c4-a415" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="2a7c-a7b6-55b7-a6ed" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="7ab3-675f-6b37-8eb5" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="3132-3864-a869-98f3" name="Exchange of the Sake Cups" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
+          <characteristics>
+            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">Play in the Starting Phase before Ki Generation, Friendly models with Fortune must use it this turn.
+If the Fortune call is successful, in addition to usual effects, the model gains an Activation Counter.
+If the Fortune call is unsuccessful, in addition to usual effects, remove an Activation Counter from the model.
+
+Requirement [Warband with no Kabuki or Shadow Master models]</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="f805-92d6-46dd-4c9a" name="Faction Event Cards" hidden="false" targetId="d360-71aa-ca22-ba3c" primary="true"/>
+        <categoryLink targetId="ecbb-5575-0b01-70a9" id="5206-137c-7f9c-0a7b" primary="false" name="Cycle"/>
+        <categoryLink targetId="c13c-a06d-22fe-e254" id="fef1-19e4-788e-c01f" primary="false" name="Consequences"/>
+      </categoryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="3"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="130c-94cf-52b1-da0b" name="Curse of Yoshimuri" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="401f-cfc6-71c4-a415" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="2a7c-a7b6-55b7-a6ed" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="1e85-0cae-935d-1e38" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="9b5b-a01c-fc9b-2e42" name="Curse of Yoshimuri" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
+          <characteristics>
+            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">After Deployment, attach the Curse of Yoshimuri Enhancement to an Enemy model.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="bfb3-9692-c009-f70c" name="Faction Event Cards" hidden="false" targetId="d360-71aa-ca22-ba3c" primary="true"/>
+        <categoryLink targetId="ecbb-5575-0b01-70a9" id="9d3c-0cb2-c527-28bf" primary="false" name="Cycle"/>
+        <categoryLink targetId="c13c-a06d-22fe-e254" id="4d50-9b66-872c-47b7" primary="false" name="Consequences"/>
+      </categoryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="78d6-dec3-327b-2dbc" name="Curse of Yoshimuri" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="lessThan" value="1" field="selections" scope="roster" childId="130c-94cf-52b1-da0b" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="73f6-53ef-3b73-7dca" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="6369-75b3-ffc0-0caa" name="Curse of Yoshimuri" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
+          <characteristics>
+            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">When attached model makes a test, it must re-roll any 6s.
+If the re-rolled dice is also a 6, after all re-rolls, then the attached model&apos;s owner chooses one of their opponent&apos;s models other than Fuku, to transfer this attachment to.
+If there are no legal targets, discard Curse of Yoshimuri instead.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink targetId="ecbb-5575-0b01-70a9" id="a245-8be3-8673-4cff" primary="false" name="Cycle"/>
+        <categoryLink targetId="c13c-a06d-22fe-e254" id="ef4f-4777-673f-ba85" primary="false" name="Consequences"/>
+        <categoryLink targetId="5073-f00b-a8f6-5e3b" id="f6b0-3897-44e8-2901" primary="true" name="Reference Cards"/>
+        <categoryLink targetId="17cf-d9a9-c7c1-bcb6" id="587f-ee9c-3986-aa21" primary="false" name="Faction Enhancement Cards"/>
+      </categoryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1"/>
+      </costs>
+    </selectionEntry>
   </selectionEntries>
   <entryLinks>
     <entryLink id="7ae5-b29d-c5eb-c5c7" name="Kappa" hidden="false" collective="false" import="true" targetId="34f2-cc79-8047-6138" type="selectionEntry">
@@ -6861,10 +6987,15 @@ Requirement [Rose, Shatei]</characteristic>
                 </conditionGroup>
               </conditionGroups>
             </modifier>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="a745-0548-80c8-ece4" type="atLeast"/>
-              </conditions>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="401f-cfc6-71c4-a415" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="9e0e-78bf-83d0-f5b4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
           <constraints>
@@ -6894,6 +7025,7 @@ Exclusion [Rose]</characteristic>
           <categoryLinks>
             <categoryLink id="220e-cb27-6abc-43ea" name="Faction Enhancement Cards" hidden="false" targetId="17cf-d9a9-c7c1-bcb6" primary="true"/>
             <categoryLink id="ffca-c782-1117-14bb" name="Cycle: Weeping Sky" hidden="false" targetId="6da0-b320-b958-dc82" primary="false"/>
+            <categoryLink targetId="ecbb-5575-0b01-70a9" id="17a5-6c43-29c5-c383" primary="false" name="Cycle"/>
           </categoryLinks>
           <costs>
             <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2"/>
@@ -6906,10 +7038,15 @@ Exclusion [Rose]</characteristic>
                 <condition field="selections" scope="parent" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a7de-f4b9-3cad-e3a6" type="notInstanceOf"/>
               </conditions>
             </modifier>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="a745-0548-80c8-ece4" type="atLeast"/>
-              </conditions>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="401f-cfc6-71c4-a415" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="9e0e-78bf-83d0-f5b4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
           <constraints>
@@ -6928,6 +7065,7 @@ Requirement [Urchin]</characteristic>
           <categoryLinks>
             <categoryLink id="e3ba-fe6a-cd3a-7427" name="Faction Enhancement Cards" hidden="false" targetId="17cf-d9a9-c7c1-bcb6" primary="true"/>
             <categoryLink id="058d-93ee-2a09-594a" name="Cycle: Weeping Sky" hidden="false" targetId="6da0-b320-b958-dc82" primary="false"/>
+            <categoryLink targetId="ecbb-5575-0b01-70a9" id="200f-23c4-8f30-9462" primary="false" name="Cycle"/>
           </categoryLinks>
           <costs>
             <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1"/>
@@ -6940,10 +7078,15 @@ Requirement [Urchin]</characteristic>
                 <condition field="selections" scope="parent" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="48d9-12ca-aeef-7295" type="notInstanceOf"/>
               </conditions>
             </modifier>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="a745-0548-80c8-ece4" type="atLeast"/>
-              </conditions>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="401f-cfc6-71c4-a415" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="9e0e-78bf-83d0-f5b4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
           <constraints>
@@ -6965,6 +7108,7 @@ Requirement [Buto]</characteristic>
           <categoryLinks>
             <categoryLink id="a137-cd0b-97ce-ee9c" name="Faction Enhancement Cards" hidden="false" targetId="17cf-d9a9-c7c1-bcb6" primary="true"/>
             <categoryLink id="9fc2-5478-35ed-53cc" name="Cycle: Weeping Sky" hidden="false" targetId="6da0-b320-b958-dc82" primary="false"/>
+            <categoryLink targetId="ecbb-5575-0b01-70a9" id="0d0a-f64e-31b7-2781" primary="false" name="Cycle"/>
           </categoryLinks>
           <costs>
             <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1"/>
@@ -7072,6 +7216,42 @@ Requirement [Kabuki model with the Flank Trait in Path of a Thousand Names Theme
           <costs>
             <cost name=" Rice" typeId="a111-8656-5c05-7415" value="-2"/>
           </costs>
+        </selectionEntry>
+        <selectionEntry id="8578-cf59-2762-fb86" name="Fell Haka" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="401f-cfc6-71c4-a415" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="2a7c-a7b6-55b7-a6ed" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="df43-9374-efe3-3792" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ec8f-4d9b-cee9-3c8f" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="9309-6360-9684-9550" name="Fell Haka" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
+              <characteristics>
+                <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">Once per game, during the Starting Phase, if the Attached model is on the Battlefield, Friendly Buto models gain Dread (0) until the End Phase.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <categoryLinks>
+            <categoryLink id="8842-978e-a951-16cd" name="Faction Enhancement Cards" hidden="false" targetId="17cf-d9a9-c7c1-bcb6" primary="true"/>
+            <categoryLink targetId="ecbb-5575-0b01-70a9" id="5fc5-856c-b34c-eb9c" primary="false" name="Cycle"/>
+            <categoryLink targetId="c13c-a06d-22fe-e254" id="027b-8c1f-4153-23b0" primary="false" name="Consequences"/>
+          </categoryLinks>
+          <costs>
+            <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1"/>
+          </costs>
+          <infoLinks>
+            <infoLink name="Dread" id="0fbb-cdb2-1f8d-159b" hidden="false" type="rule" targetId="53bf-4091-3aec-d5ec"/>
+          </infoLinks>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
@@ -7287,6 +7467,51 @@ Requirement [Rose]</characteristic>
               </infoLinks>
               <categoryLinks>
                 <categoryLink id="3298-7fc5-aca4-d374" name="Faction Equipment Cards" hidden="false" targetId="5bcd-fe93-a8ea-0164" primary="true"/>
+              </categoryLinks>
+              <costs>
+                <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="002f-34f3-b540-336e" name="Yokozuna&apos;s Hammer" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="parent" childId="b13a-d0c9-81dd-c789" shared="true"/>
+                  </conditions>
+                </modifier>
+                <modifier type="set" value="true" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="401f-cfc6-71c4-a415" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="2a7c-a7b6-55b7-a6ed" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="6782-165b-0dfa-87e2" type="max"/>
+                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a1b9-4040-0541-e926" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="4014-d335-416c-084a" name="Hikawera&apos;s Gavel" hidden="false" typeId="e3e5-fd2b-c549-aa9f" typeName="Special Card (Melee Weapon)">
+                  <characteristics>
+                    <characteristic name="Melee Weapon Strength" typeId="6ea7-0195-5369-2e8f">+3</characteristic>
+                    <characteristic name="Traits" typeId="5aef-50d8-65f8-28c7">Reach</characteristic>
+                    <characteristic name="Specials" typeId="11a1-1998-fe0a-3211">Powerful Attack (1), Stun Attack (0)</characteristic>
+                    <characteristic name="Unique Effects" typeId="a97f-eed7-2b8b-2e6b"/>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <infoLinks>
+                <infoLink id="7784-08bc-1e4d-d6cc" name="Command" hidden="false" targetId="1b83-5421-f050-365a" type="rule"/>
+                <infoLink id="8415-8cd4-f6b0-4c66" name="Leadership" hidden="false" targetId="8ec4-bfdc-8c03-f631" type="rule"/>
+              </infoLinks>
+              <categoryLinks>
+                <categoryLink id="363f-53a1-0fbd-166f" name="Faction Equipment Cards" hidden="false" targetId="5bcd-fe93-a8ea-0164" primary="true"/>
+                <categoryLink targetId="ecbb-5575-0b01-70a9" id="e4ce-f30a-9884-50b0" primary="false" name="Cycle"/>
+                <categoryLink targetId="c13c-a06d-22fe-e254" id="db41-449e-f3e4-9b5a" primary="false" name="Consequences"/>
               </categoryLinks>
               <costs>
                 <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2"/>

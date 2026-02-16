@@ -1780,10 +1780,15 @@ Permitted: [Ninja, Ronin Ninja, Karapan, Ronin Karapan]</characteristic>
     </selectionEntry>
     <selectionEntry id="25c4-5b2e-8362-641e" name="Espionage" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="6da0-b320-b958-dc82" type="atLeast"/>
-          </conditions>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="9e0e-78bf-83d0-f5b4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="2a7c-a7b6-55b7-a6ed" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <constraints>
@@ -1799,7 +1804,8 @@ Choose 1 Enemy model using the Flank trait. Its owner must reveal which table ed
       </profiles>
       <categoryLinks>
         <categoryLink id="7210-4c6d-845b-8d74" name="Faction Event Cards" hidden="false" targetId="d360-71aa-ca22-ba3c" primary="true"/>
-        <categoryLink id="bab9-5fb0-fb86-9f0f" name="Cycle: Year of the Risen Sun" hidden="false" targetId="a745-0548-80c8-ece4" primary="false"/>
+        <categoryLink id="bab9-5fb0-fb86-9f0f" name="Year of the Risen Sun" hidden="false" targetId="a745-0548-80c8-ece4" primary="false"/>
+        <categoryLink targetId="ecbb-5575-0b01-70a9" id="d042-74d4-7bcf-e8c4" primary="false" name="Cycle"/>
       </categoryLinks>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1"/>
@@ -2510,6 +2516,16 @@ Friendly Bleeding Moon models gain Sixth Sense until the End Phase.</characteris
             <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="a745-0548-80c8-ece4" type="atLeast"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="401f-cfc6-71c4-a415" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="9e0e-78bf-83d0-f5b4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2f11-9e07-69f6-41de" type="max"/>
@@ -2532,7 +2548,8 @@ Remove the Ninja from play when the current activation is complete.</characteris
       </infoLinks>
       <categoryLinks>
         <categoryLink id="609a-02af-49e0-d3e0" name="Faction Event Cards" hidden="false" targetId="d360-71aa-ca22-ba3c" primary="true"/>
-        <categoryLink id="d68c-5402-50a7-4569" name="Cycle: Weeping Sky" hidden="false" targetId="6da0-b320-b958-dc82" primary="false"/>
+        <categoryLink id="d68c-5402-50a7-4569" name="Weeping Sky" hidden="false" targetId="6da0-b320-b958-dc82" primary="false"/>
+        <categoryLink targetId="ecbb-5575-0b01-70a9" id="97ee-f7b2-8b9b-7b05" primary="false" name="Cycle"/>
       </categoryLinks>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2"/>
@@ -2545,10 +2562,15 @@ Remove the Ninja from play when the current activation is complete.</characteris
             <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="f423-abc7-6e32-6e8c" type="lessThan"/>
           </conditions>
         </modifier>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="a745-0548-80c8-ece4" type="atLeast"/>
-          </conditions>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="401f-cfc6-71c4-a415" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="9e0e-78bf-83d0-f5b4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <constraints>
@@ -2565,7 +2587,8 @@ Requirement [Scouting Mission theme]</characteristic>
       </profiles>
       <categoryLinks>
         <categoryLink id="db4b-f27a-1ad9-d704" name="Faction Event Cards" hidden="false" targetId="d360-71aa-ca22-ba3c" primary="true"/>
-        <categoryLink id="a7c7-ef66-407b-4f74" name="Cycle: Weeping Sky" hidden="false" targetId="6da0-b320-b958-dc82" primary="false"/>
+        <categoryLink id="a7c7-ef66-407b-4f74" name="Weeping Sky" hidden="false" targetId="6da0-b320-b958-dc82" primary="false"/>
+        <categoryLink targetId="ecbb-5575-0b01-70a9" id="f360-733e-46ee-f0a6" primary="false" name="Cycle"/>
       </categoryLinks>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2"/>
@@ -2573,10 +2596,15 @@ Requirement [Scouting Mission theme]</characteristic>
     </selectionEntry>
     <selectionEntry id="af60-bbcf-fcc6-c114" name="Shinigami&apos;s Due" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="a745-0548-80c8-ece4" type="atLeast"/>
-          </conditions>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="401f-cfc6-71c4-a415" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="9e0e-78bf-83d0-f5b4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <constraints>
@@ -2592,7 +2620,8 @@ Models may not Heal this turn.</characteristic>
       </profiles>
       <categoryLinks>
         <categoryLink id="1f36-48e7-dc28-850f" name="Faction Event Cards" hidden="false" targetId="d360-71aa-ca22-ba3c" primary="true"/>
-        <categoryLink id="8d27-1036-cb81-ac61" name="Cycle: Weeping Sky" hidden="false" targetId="6da0-b320-b958-dc82" primary="false"/>
+        <categoryLink id="8d27-1036-cb81-ac61" name="Weeping Sky" hidden="false" targetId="6da0-b320-b958-dc82" primary="false"/>
+        <categoryLink targetId="ecbb-5575-0b01-70a9" id="8e51-d7c3-9eb1-4955" primary="false" name="Cycle"/>
       </categoryLinks>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2"/>
@@ -2605,10 +2634,15 @@ Models may not Heal this turn.</characteristic>
             <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="70cc-ef54-f1d8-9837" type="lessThan"/>
           </conditions>
         </modifier>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="a745-0548-80c8-ece4" type="atLeast"/>
-          </conditions>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="401f-cfc6-71c4-a415" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="9e0e-78bf-83d0-f5b4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <constraints>
@@ -2630,7 +2664,8 @@ Requirement [Assassination Mission theme]</characteristic>
       </profiles>
       <categoryLinks>
         <categoryLink id="1df6-0032-e233-001c" name="Faction Event Cards" hidden="false" targetId="d360-71aa-ca22-ba3c" primary="true"/>
-        <categoryLink id="2c2a-8bea-6f03-55d5" name="Cycle: Weeping Sky" hidden="false" targetId="6da0-b320-b958-dc82" primary="false"/>
+        <categoryLink id="2c2a-8bea-6f03-55d5" name="Weeping Sky" hidden="false" targetId="6da0-b320-b958-dc82" primary="false"/>
+        <categoryLink targetId="ecbb-5575-0b01-70a9" id="d066-5bcf-9554-0e93" primary="false" name="Cycle"/>
       </categoryLinks>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="3"/>
@@ -4410,6 +4445,49 @@ This model may only make 1 Ranged Attack with the Kusari per activation.
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="18"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="b12f-c873-b398-64f7" name="Opposition Preparation" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="roster" value="2" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dcb6-d939-7530-a655" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="118c-c7e4-a7c9-55ef" name="Opposition Preparation" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
+          <characteristics>
+            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">Play during Deployment.
+Gain a number of Preparation Tokens equal to the number of models Recruited into the opposing Warband with the Sixth Sense trait.
+Distribute those tokens amongst any Enemy models except Shiho Hiroto.
+
+Models with Preparation Tokens cannot benefit from the Ranged Defence trait while a North Star model is performing a Ranged Attack.
+
+Models with Preparation Tokens cannot benefit from Prowess, Kata, Dodge, Parry, Impenetrable Defence, Reach or Lightning Reflexes while in Melee Exchanges with North Star models.
+
+When a model with a Preparation Token is involved in a Melee Exchange with a North Star model or Targeted by a Ranged Attack from a North Star model, remove the Preparation Token at the end of the current activation.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="ac17-0725-f70c-2e90" name="Sixth Sense" hidden="false" targetId="ec49-3908-f1d1-8de2" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="60e0-ebf3-84de-db20" name="Faction Event Cards" hidden="false" targetId="d360-71aa-ca22-ba3c" primary="true"/>
+        <categoryLink targetId="ecbb-5575-0b01-70a9" id="8ba0-a66a-19a9-3add" primary="false" name="Cycle"/>
+        <categoryLink targetId="c13c-a06d-22fe-e254" id="cd32-5bec-a892-2eeb" primary="false" name="Consequences"/>
+      </categoryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1"/>
+      </costs>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="401f-cfc6-71c4-a415" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="2a7c-a7b6-55b7-a6ed" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+    </selectionEntry>
   </selectionEntries>
   <entryLinks>
     <entryLink id="0225-d3c7-eee7-c723" name="Hiretsuna" hidden="false" collective="false" import="true" targetId="fee6-a48b-db82-74e7" type="selectionEntry">
@@ -4737,6 +4815,16 @@ This model may only make 1 Ranged Attack with the Kusari per activation.
                 </conditionGroup>
               </conditionGroups>
             </modifier>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="9e0e-78bf-83d0-f5b4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="2a7c-a7b6-55b7-a6ed" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
           </modifiers>
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ff80-fe2f-0b74-413e" type="max"/>
@@ -4754,7 +4842,8 @@ This model may only make 1 Ranged Attack with the Kusari per activation.
           </infoLinks>
           <categoryLinks>
             <categoryLink id="cda4-91f9-079b-33fa" name="Faction Enhancement Cards" hidden="false" targetId="17cf-d9a9-c7c1-bcb6" primary="true"/>
-            <categoryLink id="71de-d83d-e4f5-a33f" name="Cycle: Year of the Risen Sun" hidden="false" targetId="a745-0548-80c8-ece4" primary="false"/>
+            <categoryLink id="71de-d83d-e4f5-a33f" name="Year of the Risen Sun" hidden="false" targetId="a745-0548-80c8-ece4" primary="false"/>
+            <categoryLink targetId="ecbb-5575-0b01-70a9" id="2f60-c89c-eace-f953" primary="false" name="Cycle"/>
           </categoryLinks>
           <costs>
             <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2"/>
@@ -4799,6 +4888,47 @@ Requirement [House Long Shadow Theme]</characteristic>
           </categoryLinks>
           <costs>
             <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="4c64-d12e-9508-1ad0" name="Shadows That Walk" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition type="notInstanceOf" value="0" field="selections" scope="parent" childId="98f2-abd5-77f9-3667" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="401f-cfc6-71c4-a415" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="2a7c-a7b6-55b7-a6ed" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1aff-1c47-ffb2-021b" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6c12-55be-7e17-905a" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="9203-4170-8b04-5088" name="Shadows That Walk" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
+              <characteristics>
+                <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">Other Friendly Unknown Ninjas gain the following Unique Effect:
+While attempting to Target this model, Enemy models lose Sixth Sense.
+
+Requirement [Ghost]</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <categoryLinks>
+            <categoryLink id="ed08-73d0-df12-f772" name="Faction Enhancement Cards" hidden="false" targetId="17cf-d9a9-c7c1-bcb6" primary="true"/>
+            <categoryLink targetId="ecbb-5575-0b01-70a9" id="8653-0c3d-1f00-5bd5" primary="false" name="Cycle"/>
+            <categoryLink targetId="c13c-a06d-22fe-e254" id="53ef-d89b-48f0-a549" primary="false" name="Consequences"/>
+          </categoryLinks>
+          <costs>
+            <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -5648,6 +5778,45 @@ Requirement [House Long Shadow Theme]</characteristic>
               <categoryLinks>
                 <categoryLink id="1017-36f4-0e8f-e043" name="Faction Equipment Cards" hidden="false" targetId="5bcd-fe93-a8ea-0164" primary="true"/>
                 <categoryLink id="a20b-cc8f-6370-3ef5" name="Faction Enhancement Cards" hidden="false" targetId="17cf-d9a9-c7c1-bcb6" primary="false"/>
+              </categoryLinks>
+              <costs>
+                <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="2949-0ff9-3e64-7c24" name="Noshinto Bomb" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="401f-cfc6-71c4-a415" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="2a7c-a7b6-55b7-a6ed" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="2" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="6645-43bb-f953-bdfb" type="max"/>
+                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1730-2faf-75e8-6d95" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="3410-7d96-e34c-4ba5" name="Noshinto Bomb" hidden="false" typeId="814b-7c22-0b45-9acc" typeName="Special Card (Ranged Weapon)">
+                  <characteristics>
+                    <characteristic name="Ranged Weapon Strength" typeId="a0cf-2be6-a776-363b">Special</characteristic>
+                    <characteristic name="Range Bands" typeId="ea30-733c-e9dd-5c75">-/3/-</characteristic>
+                    <characteristic name="Traits" typeId="a28d-cbd1-005e-e623">Lightweight</characteristic>
+                    <characteristic name="Specials" typeId="55e0-9b2f-ad58-9c57"/>
+                    <characteristic name="Unique Effects" typeId="76c8-d87b-83b3-3e58">Ona successful attack with this weapon, instead of a Damage Roll, centre a 1&quot; Pulse on the Target and all models in the Pulse gain a Stunned Marker.
+After an attack with this weapon, discard this card unless it is attached to a North Star model.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <categoryLinks>
+                <categoryLink id="be7e-9e96-31ac-4f96" name="Faction Enhancement Cards" hidden="false" targetId="17cf-d9a9-c7c1-bcb6" primary="false"/>
+                <categoryLink id="76e8-d484-79ab-245c" name="Faction Equipment Cards" hidden="false" targetId="5bcd-fe93-a8ea-0164" primary="true"/>
+                <categoryLink targetId="ecbb-5575-0b01-70a9" id="5ac9-3a98-9c2a-757f" primary="false" name="Cycle"/>
+                <categoryLink targetId="c13c-a06d-22fe-e254" id="8cf8-7d2b-1733-7d75" primary="false" name="Consequences"/>
               </categoryLinks>
               <costs>
                 <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1"/>

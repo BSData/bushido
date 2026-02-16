@@ -2325,10 +2325,15 @@ This model may be recruited into any Minimoto Theme that does not restrict it.</
     </selectionEntry>
     <selectionEntry id="c4af-b07d-f76f-c8b6" name="Implacable Advance" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="a745-0548-80c8-ece4" type="atLeast"/>
-          </conditions>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="401f-cfc6-71c4-a415" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="9e0e-78bf-83d0-f5b4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <constraints>
@@ -2344,7 +2349,8 @@ All Friendly Minimoto models remove all Prone Markers and until the End Phase, r
       </profiles>
       <categoryLinks>
         <categoryLink id="7975-a12c-8cc2-c81a" name="Faction Event Cards" hidden="false" targetId="d360-71aa-ca22-ba3c" primary="true"/>
-        <categoryLink id="f23b-6cba-52b9-4d6d" name="Cycle: Weeping Sky" hidden="false" targetId="6da0-b320-b958-dc82" primary="false"/>
+        <categoryLink id="f23b-6cba-52b9-4d6d" name="Weeping Sky" hidden="false" targetId="6da0-b320-b958-dc82" primary="false"/>
+        <categoryLink targetId="ecbb-5575-0b01-70a9" id="3179-0c23-390a-5d9b" primary="false" name="Cycle"/>
       </categoryLinks>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2"/>
@@ -2352,10 +2358,15 @@ All Friendly Minimoto models remove all Prone Markers and until the End Phase, r
     </selectionEntry>
     <selectionEntry id="3cf0-919e-4071-58c8" name="Into the Darkness" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="a745-0548-80c8-ece4" type="atLeast"/>
-          </conditions>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="401f-cfc6-71c4-a415" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="9e0e-78bf-83d0-f5b4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <constraints>
@@ -2371,7 +2382,8 @@ Until the End Phase, all Ki Feats from Communal cards cost one additional Ki Tok
       </profiles>
       <categoryLinks>
         <categoryLink id="9ed1-457f-188a-3d09" name="Faction Event Cards" hidden="false" targetId="d360-71aa-ca22-ba3c" primary="true"/>
-        <categoryLink id="637b-e925-a71b-6210" name="Cycle: Weeping Sky" hidden="false" targetId="6da0-b320-b958-dc82" primary="false"/>
+        <categoryLink id="637b-e925-a71b-6210" name="Weeping Sky" hidden="false" targetId="6da0-b320-b958-dc82" primary="false"/>
+        <categoryLink targetId="ecbb-5575-0b01-70a9" id="8867-2045-cb62-61d4" primary="false" name="Cycle"/>
       </categoryLinks>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1"/>
@@ -3247,6 +3259,82 @@ When this model is Damaged by an Enemy model in a Melee Exchange, until the End
         </modifierGroup>
       </modifierGroups>
     </selectionEntry>
+    <selectionEntry id="deb9-d224-3749-aa4e" name="Reflection of Suijin&apos;s Tear" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="roster" value="2" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3a24-cd1e-986f-4e1e" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="fc16-6e4a-92a3-10fa" name="Reflection of Suijin&apos;s Tear" hidden="false" typeId="6fa2-988d-fc04-c751" typeName="Special Card (Terrain)">
+          <characteristics>
+            <characteristic name="Base" typeId="c40b-3106-986d-4db5">30mm</characteristic>
+            <characteristic name="Passage" typeId="3df8-6a47-0c4d-73e7">Impassable</characteristic>
+            <characteristic name="Visibility" typeId="9858-c2c1-b6fc-b75c">Blocking</characteristic>
+            <characteristic name="Size" typeId="000a-cf92-4d1e-c934">Small</characteristic>
+            <characteristic name="Traits" typeId="eaef-482b-c5d3-866e">Destructible</characteristic>
+            <characteristic name="Description" typeId="9cfa-9bd0-0b1b-9c06">Friendly Shugenja models may Target this Terrain Element with the Icy Veins or Cold Shatter Ki Feats.
+When Targeted by Icy Veins, all models within 2&quot; gain Cover and the Slow Trait as a Blizzard effect, and this Terrain Element loses Destructible until the End Phase.
+When Targeted by Cold Shatter, make a Success Level 2 Damage Roll against all models within 2&quot; and then remove this Terrain Element from the Battlefield.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="7eeb-9f80-d693-0a4f" name="Slow" hidden="false" targetId="f1c3-4a84-c616-23cd" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink targetId="bbd2-e0c8-797a-3f03" id="18b5-80cb-7f1e-7f3c" primary="true" name="Faction Terrain Cards"/>
+        <categoryLink targetId="ecbb-5575-0b01-70a9" id="a7ff-f140-623a-c71b" primary="false" name="Cycle"/>
+        <categoryLink targetId="c13c-a06d-22fe-e254" id="9207-7f82-169a-09e5" primary="false" name="Consequences"/>
+      </categoryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2"/>
+      </costs>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="401f-cfc6-71c4-a415" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="2a7c-a7b6-55b7-a6ed" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+    </selectionEntry>
+    <selectionEntry id="09fe-12b9-35b6-0102" name="Yama&apos;s Rage" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a7b3-2139-51d6-6a5e" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="970b-1673-8deb-a6e3" name="Yama&apos;s Rage" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
+          <characteristics>
+            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">Play when a Friendly Minimoto model declares a Charge Action.
+That model gains Endurance until the End Phase.
+After any Melee Exchanges are resolved, remain the Active Player, the Friendly Minimoto model remains the Active model and performs another Melee Exchange with the Charge Target.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink targetId="ecbb-5575-0b01-70a9" id="5bc8-c496-6cc7-c140" primary="false" name="Cycle"/>
+        <categoryLink targetId="c13c-a06d-22fe-e254" id="f156-2832-e93f-1f17" primary="false" name="Consequences"/>
+        <categoryLink targetId="d360-71aa-ca22-ba3c" id="7b09-b773-9f6f-74bb" primary="true" name="Faction Event Cards"/>
+      </categoryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="3"/>
+      </costs>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="401f-cfc6-71c4-a415" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="2a7c-a7b6-55b7-a6ed" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+    </selectionEntry>
   </selectionEntries>
   <entryLinks>
     <entryLink id="7750-2ede-a509-e6c0" name="Golden Sentinel" hidden="false" collective="false" import="true" targetId="49fb-d207-3a25-9327" type="selectionEntry">
@@ -3719,10 +3807,15 @@ After a Damage Roll, the Attached model suffers Damage equal to the value of the
         </selectionEntry>
         <selectionEntry id="3421-0f55-f559-7455" name="Avalanche" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="6da0-b320-b958-dc82" type="atLeast"/>
-              </conditions>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="9e0e-78bf-83d0-f5b4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="2a7c-a7b6-55b7-a6ed" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
           <constraints>
@@ -3739,7 +3832,8 @@ Use any relevant traits the model has or Weapon traits the chosen Melee Weapon h
           </profiles>
           <categoryLinks>
             <categoryLink id="9740-0c34-58b2-2a92" name="Faction Enhancement Cards" hidden="false" targetId="17cf-d9a9-c7c1-bcb6" primary="true"/>
-            <categoryLink id="e8fd-5aa1-731b-2ebe" name="Cycle: Year of the Risen Sun" hidden="false" targetId="a745-0548-80c8-ece4" primary="false"/>
+            <categoryLink id="e8fd-5aa1-731b-2ebe" name="Year of the Risen Sun" hidden="false" targetId="a745-0548-80c8-ece4" primary="false"/>
+            <categoryLink targetId="ecbb-5575-0b01-70a9" id="8cc8-b1ca-ec49-d426" primary="false" name="Cycle"/>
           </categoryLinks>
           <costs>
             <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1"/>
@@ -3747,10 +3841,15 @@ Use any relevant traits the model has or Weapon traits the chosen Melee Weapon h
         </selectionEntry>
         <selectionEntry id="2477-62b0-33e1-c675" name="The Mountain Moves" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="6da0-b320-b958-dc82" type="atLeast"/>
-              </conditions>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="9e0e-78bf-83d0-f5b4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="2a7c-a7b6-55b7-a6ed" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
           <constraints>
@@ -3771,7 +3870,8 @@ Requirement [Ashigaru]</characteristic>
           </infoLinks>
           <categoryLinks>
             <categoryLink id="f537-4d5e-027a-891b" name="Faction Enhancement Cards" hidden="false" targetId="17cf-d9a9-c7c1-bcb6" primary="false"/>
-            <categoryLink id="cc80-af48-c55b-7338" name="Cycle: Year of the Risen Sun" hidden="false" targetId="a745-0548-80c8-ece4" primary="false"/>
+            <categoryLink id="cc80-af48-c55b-7338" name="Year of the Risen Sun" hidden="false" targetId="a745-0548-80c8-ece4" primary="false"/>
+            <categoryLink targetId="ecbb-5575-0b01-70a9" id="56cd-4033-0992-5bc7" primary="false" name="Cycle"/>
           </categoryLinks>
           <costs>
             <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1"/>
@@ -3779,10 +3879,15 @@ Requirement [Ashigaru]</characteristic>
         </selectionEntry>
         <selectionEntry id="a20c-ea74-396a-21a3" name="Aspect of the Bear" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="a745-0548-80c8-ece4" type="atLeast"/>
-              </conditions>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="401f-cfc6-71c4-a415" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="9e0e-78bf-83d0-f5b4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
           <constraints>
@@ -3800,7 +3905,8 @@ In a Melee Exchange with this model, the Enemy, model is considered to be in BtB
           </profiles>
           <categoryLinks>
             <categoryLink id="88de-4289-0496-0c7f" name="Faction Enhancement Cards" hidden="false" targetId="17cf-d9a9-c7c1-bcb6" primary="true"/>
-            <categoryLink id="32b7-5120-97cd-3082" name="Cycle: Weeping Sky" hidden="false" targetId="6da0-b320-b958-dc82" primary="false"/>
+            <categoryLink id="32b7-5120-97cd-3082" name="Weeping Sky" hidden="false" targetId="6da0-b320-b958-dc82" primary="false"/>
+            <categoryLink targetId="ecbb-5575-0b01-70a9" id="d6d6-2dbe-5ab9-6726" primary="false" name="Cycle"/>
           </categoryLinks>
           <costs>
             <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2"/>
@@ -3813,10 +3919,15 @@ In a Melee Exchange with this model, the Enemy, model is considered to be in BtB
                 <condition field="selections" scope="parent" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0c22-e9ca-a3de-e706" type="notInstanceOf"/>
               </conditions>
             </modifier>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="a745-0548-80c8-ece4" type="atLeast"/>
-              </conditions>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="401f-cfc6-71c4-a415" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="9e0e-78bf-83d0-f5b4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
           <constraints>
@@ -3834,7 +3945,8 @@ Requirement [Shugenja]</characteristic>
           </profiles>
           <categoryLinks>
             <categoryLink id="7db0-e32c-9748-fe1a" name="Faction Enhancement Cards" hidden="false" targetId="17cf-d9a9-c7c1-bcb6" primary="true"/>
-            <categoryLink id="1a5b-48f3-2a4e-7b82" name="Cycle: Weeping Sky" hidden="false" targetId="6da0-b320-b958-dc82" primary="false"/>
+            <categoryLink id="1a5b-48f3-2a4e-7b82" name="Weeping Sky" hidden="false" targetId="6da0-b320-b958-dc82" primary="false"/>
+            <categoryLink targetId="ecbb-5575-0b01-70a9" id="39c6-4886-f7e2-1cc1" primary="false" name="Cycle"/>
           </categoryLinks>
           <costs>
             <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1"/>
@@ -3887,6 +3999,89 @@ Requirement [Hoshi Machiko]</characteristic>
             <infoLink name="Sharp " id="507f-23d4-8b31-9dee" hidden="false" type="rule" targetId="6092-9fb5-5196-d1eb"/>
             <infoLink name="Rapid Fire" id="3c83-7804-5c55-a91a" hidden="false" type="rule" targetId="129c-7864-4cc1-f7bc"/>
           </infoLinks>
+        </selectionEntry>
+        <selectionEntry id="d191-01bb-9f4b-492c" name="Perseverance" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="401f-cfc6-71c4-a415" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="2a7c-a7b6-55b7-a6ed" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="dd55-49da-1546-1650" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dec9-cda9-2367-8081" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="934b-4487-28d1-54e5" name="Perseverance" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
+              <characteristics>
+                <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">While the Attached model is in a Scenario Zone or contacting a Scenario Objective, that model gains Tireless while a Blizzard Effect is active.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <categoryLinks>
+            <categoryLink id="f1db-9bea-aa99-6f4f" name="Faction Enhancement Cards" hidden="false" targetId="17cf-d9a9-c7c1-bcb6" primary="true"/>
+            <categoryLink targetId="ecbb-5575-0b01-70a9" id="f088-4664-6dbe-9145" primary="false" name="Cycle"/>
+            <categoryLink targetId="c13c-a06d-22fe-e254" id="782f-2e69-05fe-e7ae" primary="false" name="Consequences"/>
+          </categoryLinks>
+          <costs>
+            <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1"/>
+          </costs>
+          <infoLinks>
+            <infoLink name="Tireless" id="1bcb-36db-7572-39e0" hidden="false" type="rule" targetId="5829-35f3-dd19-1290"/>
+          </infoLinks>
+        </selectionEntry>
+        <selectionEntry id="7079-08ee-2734-63c7" name="Quicksilver" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="notInstanceOf" value="1" field="selections" scope="parent" childId="bb3d-e5b0-7590-5b14" shared="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="401f-cfc6-71c4-a415" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="2a7c-a7b6-55b7-a6ed" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2139-fc98-cc22-ee67" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5066-a4bd-6372-f56e" type="max"/>
+          </constraints>
+          <profiles>
+            <profile name="Quicksilver" typeId="bd15-7ead-9268-3576" typeName="Special Card (Ki Feat)" hidden="false" id="d7e7-46d7-4334-1048">
+              <characteristics>
+                <characteristic name="Description" typeId="17eb-17e2-4df4-5c5d">While the Attached model is in play, Friendly [Element: Metal] Kami and other Friendly models in BtB with a Friendly [Element: Metal] Kami lose the Slow Trait and cannot gain it.
+Attached model gains the &apos;Quicksilver&apos; Ki Feat.
+
+Requirement [Blacksmith]</characteristic>
+                <characteristic name="Name" typeId="27c7-1649-f16e-8eaa">Quicksilver</characteristic>
+                <characteristic name="Cost" typeId="e410-b220-64e5-7953">1</characteristic>
+                <characteristic name="Timing" typeId="b9bf-562a-fe26-cb29">Active</characteristic>
+                <characteristic name="Subject" typeId="47b8-f739-9d50-2e45">Special</characteristic>
+                <characteristic name="Limitation" typeId="870e-79e4-80ee-c0cc"/>
+                <characteristic name="Ki Feat Description" typeId="3886-242b-fb70-5c88">Friendly [Element: Metal] Kami lose Insignificant until the End Phase.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <categoryLinks>
+            <categoryLink id="55d8-fc22-b06c-70fe" name="Faction Enhancement Cards" hidden="false" targetId="17cf-d9a9-c7c1-bcb6" primary="true"/>
+            <categoryLink targetId="ecbb-5575-0b01-70a9" id="4b1c-a8c0-94c2-525d" primary="false" name="Cycle"/>
+            <categoryLink targetId="c13c-a06d-22fe-e254" id="8173-faa9-2a80-f9cb" primary="false" name="Consequences"/>
+          </categoryLinks>
+          <costs>
+            <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1"/>
+          </costs>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>

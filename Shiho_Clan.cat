@@ -962,6 +962,7 @@ This model gains Fearless when declaring actions Targeting or Selecting a model 
               <conditions>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="fb4a-18a7-5b40-74ec" type="atLeast"/>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="f616-46d8-5907-fafd" type="atLeast"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="a7ef-7094-95e5-577c" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -1340,6 +1341,11 @@ When a model performs a Wait Action to Destroy this Terrain, it need not spend 2
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="decrement" value="-1" field="a111-8656-5c05-7415">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="a7ef-7094-95e5-577c" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <profiles>
         <profile id="8120-1b8c-22a4-9f1e" name="Kazuki" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
@@ -1564,6 +1570,11 @@ When a model performs a Wait Action to Destroy this Terrain, it need not spend 2
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="decrement" value="-1" field="a111-8656-5c05-7415">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="a7ef-7094-95e5-577c" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <profiles>
         <profile id="68cf-1e9b-a092-833c" name="Maki" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
@@ -1751,6 +1762,7 @@ Permitted [Shiho Faction Models, Ronin Models]</characteristic>
               <conditions>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="fb4a-18a7-5b40-74ec" type="atLeast"/>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9402-edcc-93a2-aef1" type="atLeast"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="a7ef-7094-95e5-577c" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -1851,6 +1863,7 @@ While this model is in play, when a Friendly Loyal model spends a Virtue Token y
               <conditions>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="fb4a-18a7-5b40-74ec" type="atLeast"/>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9402-edcc-93a2-aef1" type="atLeast"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="a7ef-7094-95e5-577c" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -2023,6 +2036,7 @@ While this model is in play, when a Friendly Loyal model spends a Virtue Token y
               <conditions>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="fb4a-18a7-5b40-74ec" type="atLeast"/>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9402-edcc-93a2-aef1" type="atLeast"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="a7ef-7094-95e5-577c" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -2117,6 +2131,7 @@ While this model is in play, when a Friendly Loyal model spends a Virtue Token y
               <conditions>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="fb4a-18a7-5b40-74ec" type="atLeast"/>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9402-edcc-93a2-aef1" type="atLeast"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="a7ef-7094-95e5-577c" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -2307,6 +2322,7 @@ Requirement [Warband must contain a model with Tactician]</characteristic>
               <conditions>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="fb4a-18a7-5b40-74ec" type="atLeast"/>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9402-edcc-93a2-aef1" type="atLeast"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="a7ef-7094-95e5-577c" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -2575,6 +2591,7 @@ When This model declares a Wait Action to remove a Reload Marker, they may immed
               <conditions>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="fb4a-18a7-5b40-74ec" type="atLeast"/>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9402-edcc-93a2-aef1" type="atLeast"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="a7ef-7094-95e5-577c" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -2694,6 +2711,11 @@ When This model declares a Wait Action to remove a Reload Marker, they may immed
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="decrement" value="-1" field="a111-8656-5c05-7415">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="a7ef-7094-95e5-577c" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <profiles>
         <profile id="a014-9d52-8cc2-c68a" name="Yoshitaka" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
@@ -2771,10 +2793,15 @@ When This model declares a Wait Action to remove a Reload Marker, they may immed
     </selectionEntry>
     <selectionEntry id="01b1-3329-b0a4-9881" name="Lay of the Land" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="a745-0548-80c8-ece4" type="atLeast"/>
-          </conditions>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="401f-cfc6-71c4-a415" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="9e0e-78bf-83d0-f5b4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <constraints>
@@ -2790,7 +2817,8 @@ You may decide the order recruited terrain (Friendly and Enemy) is Deployed.</ch
       </profiles>
       <categoryLinks>
         <categoryLink id="ba9c-50a8-7ebb-6a9e" name="Faction Event Cards" hidden="false" targetId="d360-71aa-ca22-ba3c" primary="true"/>
-        <categoryLink id="4071-a55e-821c-43cd" name="Cycle: Weeping Sky" hidden="false" targetId="6da0-b320-b958-dc82" primary="false"/>
+        <categoryLink id="4071-a55e-821c-43cd" name="Weeping Sky" hidden="false" targetId="6da0-b320-b958-dc82" primary="false"/>
+        <categoryLink targetId="ecbb-5575-0b01-70a9" id="6676-427e-3115-93a5" primary="false" name="Cycle"/>
       </categoryLinks>
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1"/>
@@ -2808,6 +2836,11 @@ You may decide the order recruited terrain (Friendly and Enemy) is Deployed.</ch
               </conditions>
             </conditionGroup>
           </conditionGroups>
+        </modifier>
+        <modifier type="decrement" value="-1" field="a111-8656-5c05-7415">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="a7ef-7094-95e5-577c" shared="true" includeChildSelections="true"/>
+          </conditions>
         </modifier>
       </modifiers>
       <constraints>
@@ -2939,6 +2972,7 @@ You may decide the order recruited terrain (Friendly and Enemy) is Deployed.</ch
             <conditionGroup type="or">
               <conditions>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="fb4a-18a7-5b40-74ec" type="atLeast"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="a7ef-7094-95e5-577c" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -3066,6 +3100,11 @@ Whenever a Friendly model within 6&quot; of a model with a Luck Token makes a Fe
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="decrement" value="-1" field="a111-8656-5c05-7415">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="a7ef-7094-95e5-577c" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8e4f-33f5-5e1b-189f" type="max"/>
@@ -3186,6 +3225,7 @@ Whenever a Friendly model within 6&quot; of a model with a Luck Token makes a Fe
               <conditions>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="fb4a-18a7-5b40-74ec" type="atLeast"/>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9402-edcc-93a2-aef1" type="atLeast"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="a7ef-7094-95e5-577c" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -3282,6 +3322,130 @@ Whenever a Friendly model within 6&quot; of a model with a Luck Token makes a Fe
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="13"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="a7ef-7094-95e5-577c" name="New Eagle Army" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="477a-e693-0888-08f7" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a7ef-7094-95e5-577c" type="lessThan"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="401f-cfc6-71c4-a415" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="2a7c-a7b6-55b7-a6ed" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="db10-3162-9da8-b42a" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="e6ab-5a49-bb4a-5c02" name="New Eagle Army" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
+          <characteristics>
+            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">- During deployment add up to two permitted Shiho Clan or Ronin,  Enhancements or Terrain cards that were not Recruited into the Warband to the Warband for free. You may not exceed the max value for these cards.
+- While a Friendly Ashigaru model has a Virtue Token they gain Prowess [Defence, Ranged] (1) and do not suffer Melee Dice Penalties due to States.
+- Friendly Loyal &amp; Samurai models gain Reach on Katana Melee Weapons.
+- Ashigaru cost -1RC to recruit into this Warband.
+
+
+Permitted [Ashigaru, Loyal, Ronin]
+Exclusion [Models with Booted trait]</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="9c49-ad88-b1a1-743b" name="Faction Theme Cards" hidden="false" targetId="477a-e693-0888-08f7" primary="true"/>
+        <categoryLink targetId="ecbb-5575-0b01-70a9" id="5dcf-a54d-14fd-4125" primary="false" name="Cycle"/>
+        <categoryLink targetId="c13c-a06d-22fe-e254" id="0758-5b9d-04d3-5f19" primary="false" name="Consequences"/>
+      </categoryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0"/>
+      </costs>
+      <infoLinks>
+        <infoLink name="Reach" id="d9e5-6c99-daab-b440" hidden="false" type="rule" targetId="e28e-d5dd-a262-1101"/>
+        <infoLink name="Prowess " id="a57a-7500-b89a-c1bb" hidden="false" type="rule" targetId="75ef-327a-cd08-a248"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry id="741e-29d3-e656-5da5" name="Insurgency" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a614-8806-4c4e-7395" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="ac49-f69a-98e7-cda7" name="Mune Tsuki" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
+          <characteristics>
+            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">Play in the Starting Phase.
+Friendly Shiho Samurai gain Lightning Reflexes until the End Phase.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="2581-9afb-64aa-02f4" name="Faction Event Cards" hidden="false" targetId="d360-71aa-ca22-ba3c" primary="true"/>
+        <categoryLink targetId="ecbb-5575-0b01-70a9" id="bb35-67f8-6c88-2dfb" primary="false" name="Cycle"/>
+        <categoryLink targetId="c13c-a06d-22fe-e254" id="53d0-a9c6-7411-f8bf" primary="false" name="Consequences"/>
+      </categoryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="3"/>
+      </costs>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="401f-cfc6-71c4-a415" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="2a7c-a7b6-55b7-a6ed" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <infoLinks>
+        <infoLink name="Lightning Reflexes" id="6be5-f107-3935-a261" hidden="false" type="rule" targetId="efd4-dc31-6523-9c79"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry id="5ad5-42c8-e97d-145d" name="Mune Tsuki" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="282c-f383-2485-f734" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="04a4-db27-2e20-a6e1" name="Insurgency" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
+          <characteristics>
+            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">Play after Deployment.
+Choose an Enemy model using the Flank Trait.
+It may not choose to Flank on turn 2 if this was the chosen turn, it must be re-chosen immediately.
+The new turn chosen is Hidden Information.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="722f-cb73-aa18-cd8d" name="Faction Event Cards" hidden="false" targetId="d360-71aa-ca22-ba3c" primary="true"/>
+        <categoryLink targetId="ecbb-5575-0b01-70a9" id="9e0a-88c4-a0b7-1336" primary="false" name="Cycle"/>
+        <categoryLink targetId="c13c-a06d-22fe-e254" id="1147-2387-d265-4c27" primary="false" name="Consequences"/>
+      </categoryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2"/>
+      </costs>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="401f-cfc6-71c4-a415" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="2a7c-a7b6-55b7-a6ed" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+    </selectionEntry>
   </selectionEntries>
   <entryLinks>
     <entryLink id="5cd8-ec39-5a8f-a160" name="Giant Eagle" hidden="false" collective="false" import="true" targetId="f25f-493d-4123-b0ee" type="selectionEntry">
@@ -3292,6 +3456,7 @@ Whenever a Friendly model within 6&quot; of a model with a Luck Token makes a Fe
               <conditions>
                 <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="7ef8-7f43-f951-237e" type="atLeast"/>
                 <condition type="atLeast" value="1" field="selections" scope="roster" childId="c699-276a-757d-71c8" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="a7ef-7094-95e5-577c" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
               <conditionGroups>
                 <conditionGroup type="and">
@@ -3318,6 +3483,7 @@ Whenever a Friendly model within 6&quot; of a model with a Luck Token makes a Fe
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c7de-19d4-64dd-911f" type="atLeast"/>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="fb4a-18a7-5b40-74ec" type="atLeast"/>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f5-1986-098c-0729" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a7ef-7094-95e5-577c" type="atLeast"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -3334,6 +3500,7 @@ Whenever a Friendly model within 6&quot; of a model with a Luck Token makes a Fe
             <conditionGroup type="or">
               <conditions>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f5-1986-098c-0729" type="atLeast"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="a7ef-7094-95e5-577c" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -3350,6 +3517,7 @@ Whenever a Friendly model within 6&quot; of a model with a Luck Token makes a Fe
             <conditionGroup type="or">
               <conditions>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f5-1986-098c-0729" type="atLeast"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="a7ef-7094-95e5-577c" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -3366,6 +3534,7 @@ Whenever a Friendly model within 6&quot; of a model with a Luck Token makes a Fe
             <conditionGroup type="or">
               <conditions>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f5-1986-098c-0729" type="atLeast"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="a7ef-7094-95e5-577c" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -3382,6 +3551,7 @@ Whenever a Friendly model within 6&quot; of a model with a Luck Token makes a Fe
             <conditionGroup type="or">
               <conditions>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f5-1986-098c-0729" type="atLeast"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="a7ef-7094-95e5-577c" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -3398,6 +3568,7 @@ Whenever a Friendly model within 6&quot; of a model with a Luck Token makes a Fe
             <conditionGroup type="or">
               <conditions>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f5-1986-098c-0729" type="atLeast"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="a7ef-7094-95e5-577c" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -3414,6 +3585,7 @@ Whenever a Friendly model within 6&quot; of a model with a Luck Token makes a Fe
             <conditionGroup type="or">
               <conditions>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f5-1986-098c-0729" type="atLeast"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="a7ef-7094-95e5-577c" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -3430,6 +3602,7 @@ Whenever a Friendly model within 6&quot; of a model with a Luck Token makes a Fe
             <conditionGroup type="or">
               <conditions>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f5-1986-098c-0729" type="atLeast"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="a7ef-7094-95e5-577c" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -3446,6 +3619,7 @@ Whenever a Friendly model within 6&quot; of a model with a Luck Token makes a Fe
             <conditionGroup type="or">
               <conditions>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f5-1986-098c-0729" type="atLeast"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="a7ef-7094-95e5-577c" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -3462,6 +3636,7 @@ Whenever a Friendly model within 6&quot; of a model with a Luck Token makes a Fe
             <conditionGroup type="or">
               <conditions>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f5-1986-098c-0729" type="atLeast"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="a7ef-7094-95e5-577c" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -3478,6 +3653,7 @@ Whenever a Friendly model within 6&quot; of a model with a Luck Token makes a Fe
             <conditionGroup type="or">
               <conditions>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f5-1986-098c-0729" type="atLeast"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="a7ef-7094-95e5-577c" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -3494,6 +3670,7 @@ Whenever a Friendly model within 6&quot; of a model with a Luck Token makes a Fe
             <conditionGroup type="or">
               <conditions>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f5-1986-098c-0729" type="atLeast"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="a7ef-7094-95e5-577c" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -3510,6 +3687,7 @@ Whenever a Friendly model within 6&quot; of a model with a Luck Token makes a Fe
             <conditionGroup type="or">
               <conditions>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f5-1986-098c-0729" type="atLeast"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="a7ef-7094-95e5-577c" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -3527,6 +3705,7 @@ Whenever a Friendly model within 6&quot; of a model with a Luck Token makes a Fe
             <conditionGroup type="or">
               <conditions>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f5-1986-098c-0729" type="atLeast"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="a7ef-7094-95e5-577c" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -3540,6 +3719,7 @@ Whenever a Friendly model within 6&quot; of a model with a Luck Token makes a Fe
             <conditionGroup type="or">
               <conditions>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f5-1986-098c-0729" type="atLeast"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="a7ef-7094-95e5-577c" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -3556,6 +3736,7 @@ Whenever a Friendly model within 6&quot; of a model with a Luck Token makes a Fe
             <conditionGroup type="or">
               <conditions>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f5-1986-098c-0729" type="atLeast"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="a7ef-7094-95e5-577c" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -3573,6 +3754,7 @@ Whenever a Friendly model within 6&quot; of a model with a Luck Token makes a Fe
               <conditions>
                 <condition type="atLeast" value="1" field="selections" scope="roster" childId="88f5-1986-098c-0729" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                 <condition type="atLeast" value="1" field="selections" scope="roster" childId="9126-f480-c2df-fbaf" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="a7ef-7094-95e5-577c" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -3587,6 +3769,7 @@ Whenever a Friendly model within 6&quot; of a model with a Luck Token makes a Fe
               <conditions>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f5-1986-098c-0729" type="atLeast"/>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9126-f480-c2df-fbaf" type="atLeast"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="a7ef-7094-95e5-577c" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -3601,6 +3784,7 @@ Whenever a Friendly model within 6&quot; of a model with a Luck Token makes a Fe
               <conditions>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f5-1986-098c-0729" type="atLeast"/>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9126-f480-c2df-fbaf" type="atLeast"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="a7ef-7094-95e5-577c" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -3615,6 +3799,7 @@ Whenever a Friendly model within 6&quot; of a model with a Luck Token makes a Fe
               <conditions>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f5-1986-098c-0729" type="atLeast"/>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9126-f480-c2df-fbaf" type="atLeast"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="a7ef-7094-95e5-577c" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -3630,6 +3815,7 @@ Whenever a Friendly model within 6&quot; of a model with a Luck Token makes a Fe
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9126-f480-c2df-fbaf" type="atLeast"/>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f5-1986-098c-0729" type="atLeast"/>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="966b-fc6b-359e-5c30" type="atLeast"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="a7ef-7094-95e5-577c" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -3648,6 +3834,11 @@ Whenever a Friendly model within 6&quot; of a model with a Luck Token makes a Fe
               </conditions>
             </conditionGroup>
           </conditionGroups>
+        </modifier>
+        <modifier type="decrement" value="-1" field="a111-8656-5c05-7415">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="a7ef-7094-95e5-577c" shared="true" includeChildSelections="true"/>
+          </conditions>
         </modifier>
       </modifiers>
       <modifierGroups>
@@ -3683,6 +3874,7 @@ Whenever a Friendly model within 6&quot; of a model with a Luck Token makes a Fe
             <conditionGroup type="or">
               <conditions>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f5-1986-098c-0729" type="atLeast"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="a7ef-7094-95e5-577c" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -3699,6 +3891,7 @@ Whenever a Friendly model within 6&quot; of a model with a Luck Token makes a Fe
                 <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="7ef8-7f43-f951-237e" type="atLeast"/>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c7de-19d4-64dd-911f" type="atLeast"/>
                 <condition type="atLeast" value="1" field="selections" scope="roster" childId="c699-276a-757d-71c8" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="a7ef-7094-95e5-577c" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -3714,6 +3907,7 @@ Whenever a Friendly model within 6&quot; of a model with a Luck Token makes a Fe
             <conditionGroup type="or">
               <conditions>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f5-1986-098c-0729" type="atLeast"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="a7ef-7094-95e5-577c" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -3730,6 +3924,7 @@ Whenever a Friendly model within 6&quot; of a model with a Luck Token makes a Fe
             <conditionGroup type="or">
               <conditions>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f5-1986-098c-0729" type="atLeast"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="a7ef-7094-95e5-577c" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -3748,6 +3943,7 @@ Whenever a Friendly model within 6&quot; of a model with a Luck Token makes a Fe
             <conditionGroup type="or">
               <conditions>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f5-1986-098c-0729" type="atLeast"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="a7ef-7094-95e5-577c" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -3761,6 +3957,7 @@ Whenever a Friendly model within 6&quot; of a model with a Luck Token makes a Fe
             <conditionGroup type="or">
               <conditions>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f5-1986-098c-0729" type="atLeast"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="a7ef-7094-95e5-577c" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -3774,6 +3971,7 @@ Whenever a Friendly model within 6&quot; of a model with a Luck Token makes a Fe
             <conditionGroup type="or">
               <conditions>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f5-1986-098c-0729" type="atLeast"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="a7ef-7094-95e5-577c" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -3787,6 +3985,7 @@ Whenever a Friendly model within 6&quot; of a model with a Luck Token makes a Fe
             <conditionGroup type="or">
               <conditions>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f5-1986-098c-0729" type="atLeast"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="a7ef-7094-95e5-577c" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -3832,6 +4031,7 @@ Whenever a Friendly model within 6&quot; of a model with a Luck Token makes a Fe
             <conditionGroup type="or">
               <conditions>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f5-1986-098c-0729" type="atLeast"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="a7ef-7094-95e5-577c" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -3845,6 +4045,7 @@ Whenever a Friendly model within 6&quot; of a model with a Luck Token makes a Fe
             <conditionGroup type="or">
               <conditions>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f5-1986-098c-0729" type="atLeast"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="a7ef-7094-95e5-577c" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -3857,9 +4058,14 @@ Whenever a Friendly model within 6&quot; of a model with a Luck Token makes a Fe
     <entryLink import="true" name="Lord Toad" hidden="false" id="a4d7-41ec-3fdf-ff32" type="selectionEntry" targetId="0f7e-4984-e178-e212">
       <modifiers>
         <modifier type="set" value="false" field="hidden">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="roster" childId="ec59-5e92-0626-3540" shared="true" includeChildSelections="true" includeChildForces="true"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="a7ef-7094-95e5-577c" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="ec59-5e92-0626-3540" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
     </entryLink>
@@ -3872,6 +4078,7 @@ Whenever a Friendly model within 6&quot; of a model with a Luck Token makes a Fe
                 <condition type="atLeast" value="1" field="selections" scope="roster" childId="4750-f234-49e4-79c1" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                 <condition type="atLeast" value="1" field="selections" scope="roster" childId="0e4a-a40c-14eb-2f4f" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                 <condition type="atLeast" value="1" field="selections" scope="roster" childId="ec59-5e92-0626-3540" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="a7ef-7094-95e5-577c" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -3886,6 +4093,7 @@ Whenever a Friendly model within 6&quot; of a model with a Luck Token makes a Fe
               <conditions>
                 <condition type="atLeast" value="1" field="selections" scope="roster" childId="c7de-19d4-64dd-911f" shared="true" includeChildSelections="true" includeChildForces="true"/>
                 <condition type="atLeast" value="1" field="selections" scope="roster" childId="88f5-1986-098c-0729" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="a7ef-7094-95e5-577c" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -3901,6 +4109,7 @@ Whenever a Friendly model within 6&quot; of a model with a Luck Token makes a Fe
             <conditionGroup type="or">
               <conditions>
                 <condition type="atLeast" value="1" field="selections" scope="roster" childId="88f5-1986-098c-0729" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="a7ef-7094-95e5-577c" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -3915,6 +4124,11 @@ Whenever a Friendly model within 6&quot; of a model with a Luck Token makes a Fe
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="decrement" value="-1" field="a111-8656-5c05-7415">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="a7ef-7094-95e5-577c" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
       </modifiers>
     </entryLink>
     <entryLink import="true" name="Gocho" hidden="false" id="9224-5edd-ff13-74ef" type="selectionEntry" targetId="34cb-ec1a-36a2-e41c">
@@ -3924,9 +4138,15 @@ Whenever a Friendly model within 6&quot; of a model with a Luck Token makes a Fe
             <conditionGroup type="or">
               <conditions>
                 <condition type="atLeast" value="1" field="selections" scope="roster" childId="88f5-1986-098c-0729" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="a7ef-7094-95e5-577c" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
+        </modifier>
+        <modifier type="decrement" value="-1" field="a111-8656-5c05-7415">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="a7ef-7094-95e5-577c" shared="true" includeChildSelections="true"/>
+          </conditions>
         </modifier>
       </modifiers>
     </entryLink>
@@ -3947,6 +4167,7 @@ Whenever a Friendly model within 6&quot; of a model with a Luck Token makes a Fe
               <conditions>
                 <condition type="atLeast" value="1" field="selections" scope="roster" childId="966b-fc6b-359e-5c30" shared="true" includeChildSelections="true"/>
                 <condition type="atLeast" value="1" field="selections" scope="roster" childId="ec59-5e92-0626-3540" shared="true" includeChildSelections="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="a7ef-7094-95e5-577c" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -3974,6 +4195,7 @@ Whenever a Friendly model within 6&quot; of a model with a Luck Token makes a Fe
             <conditionGroup type="or">
               <conditions>
                 <condition type="atLeast" value="1" field="selections" scope="roster" childId="88f5-1986-098c-0729" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="a7ef-7094-95e5-577c" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -4385,10 +4607,15 @@ Requirement [Ashigaru]</characteristic>
                 </conditionGroup>
               </conditionGroups>
             </modifier>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="a745-0548-80c8-ece4" type="atLeast"/>
-              </conditions>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="401f-cfc6-71c4-a415" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="9e0e-78bf-83d0-f5b4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
           <constraints>
@@ -4407,10 +4634,61 @@ Requirement [Wolf &amp; Samurai]</characteristic>
           </profiles>
           <categoryLinks>
             <categoryLink id="b636-c32b-2605-9cd1" name="Faction Enhancement Cards" hidden="false" targetId="17cf-d9a9-c7c1-bcb6" primary="false"/>
-            <categoryLink id="74c8-f3b2-6214-0219" name="Cycle: Weeping Sky" hidden="false" targetId="6da0-b320-b958-dc82" primary="false"/>
+            <categoryLink id="74c8-f3b2-6214-0219" name="Weeping Sky" hidden="false" targetId="6da0-b320-b958-dc82" primary="false"/>
+            <categoryLink targetId="ecbb-5575-0b01-70a9" id="1542-2ab6-c7a9-d97e" primary="false" name="Cycle"/>
           </categoryLinks>
           <costs>
             <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="8d10-1241-e146-afd6" name="Final Gambit" hidden="true" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f476-156e-8599-9253" type="instanceOf"/>
+                    <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e12a-f782-3281-7444" type="instanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="401f-cfc6-71c4-a415" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="2a7c-a7b6-55b7-a6ed" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9ea0-d3d7-d408-b157" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ed6d-18cc-2be3-87ff" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="8d76-fd1f-8597-ecba" name="Final Gambit" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
+              <characteristics>
+                <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">The Attached model loses Flank and Booted and may not gain these traits. 
+This model always Deploys before other models, regardless of normal player order.
+Deploy this model, then continue with Deploying Warbands following player order.
+
+
+Before the first turn, you may remove one Pool Terrain element within 3&quot; of a neutral table edge.
+
+Requirement [Loyal &amp; Samurai]</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <categoryLinks>
+            <categoryLink id="8a9a-7881-5a42-b1dc" name="Faction Enhancement Cards" hidden="false" targetId="17cf-d9a9-c7c1-bcb6" primary="true"/>
+            <categoryLink targetId="ecbb-5575-0b01-70a9" id="1b00-8d31-b122-efdc" primary="false" name="Cycle"/>
+            <categoryLink targetId="c13c-a06d-22fe-e254" id="bf1c-f182-0740-69fa" primary="false" name="Consequences"/>
+          </categoryLinks>
+          <costs>
+            <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -4921,10 +5199,15 @@ Requirement [Loyal &amp; Samurai]</characteristic>
                     </conditionGroup>
                   </conditionGroups>
                 </modifier>
-                <modifier type="set" field="hidden" value="true">
-                  <conditions>
-                    <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="a745-0548-80c8-ece4" type="atLeast"/>
-                  </conditions>
+                <modifier type="set" value="true" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="401f-cfc6-71c4-a415" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="9e0e-78bf-83d0-f5b4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
                 </modifier>
               </modifiers>
               <constraints>
@@ -4943,7 +5226,8 @@ Requirement [Falconer, Hiroto, Ronin Falconer]</characteristic>
               </profiles>
               <categoryLinks>
                 <categoryLink id="282f-f665-7ff7-3db5" name="Faction Equipment Cards" hidden="false" targetId="5bcd-fe93-a8ea-0164" primary="false"/>
-                <categoryLink id="4864-8fde-eb2f-c1c1" name="Cycle: Weeping Sky" hidden="false" targetId="6da0-b320-b958-dc82" primary="false"/>
+                <categoryLink id="4864-8fde-eb2f-c1c1" name="Weeping Sky" hidden="false" targetId="6da0-b320-b958-dc82" primary="false"/>
+                <categoryLink targetId="ecbb-5575-0b01-70a9" id="c3cf-f1be-8b98-3929" primary="false" name="Cycle"/>
               </categoryLinks>
               <costs>
                 <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1"/>
@@ -4963,13 +5247,18 @@ Requirement [Falconer, Hiroto, Ronin Falconer]</characteristic>
                 </modifier>
                 <modifier type="set" field="hidden" value="true">
                   <conditions>
-                    <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="a745-0548-80c8-ece4" type="atLeast"/>
-                  </conditions>
-                </modifier>
-                <modifier type="set" field="hidden" value="true">
-                  <conditions>
                     <condition field="selections" scope="parent" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9126-f480-c2df-fbaf" type="instanceOf"/>
                   </conditions>
+                </modifier>
+                <modifier type="set" value="true" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="401f-cfc6-71c4-a415" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="9e0e-78bf-83d0-f5b4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
                 </modifier>
               </modifiers>
               <constraints>
@@ -4991,7 +5280,8 @@ Exclusion [Hiroto]</characteristic>
               </infoLinks>
               <categoryLinks>
                 <categoryLink id="1603-92ce-79b8-5a03" name="Faction Equipment Cards" hidden="false" targetId="5bcd-fe93-a8ea-0164" primary="false"/>
-                <categoryLink id="2b8c-9c21-81dc-b821" name="Cycle: Weeping Sky" hidden="false" targetId="6da0-b320-b958-dc82" primary="false"/>
+                <categoryLink id="2b8c-9c21-81dc-b821" name="Weeping Sky" hidden="false" targetId="6da0-b320-b958-dc82" primary="false"/>
+                <categoryLink targetId="ecbb-5575-0b01-70a9" id="fc53-cab0-2743-27ef" primary="false" name="Cycle"/>
               </categoryLinks>
               <costs>
                 <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1"/>
