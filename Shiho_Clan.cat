@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="2276-2df6-78a7-841d" name="Shiho Clan" revision="54" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="19" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="2276-2df6-78a7-841d" name="Shiho Clan" revision="55" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="19" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <categoryEntries>
     <categoryEntry id="7fa5-7ef0-59c5-f657" name="Tanaka" hidden="false"/>
     <categoryEntry name="Booted" id="6f67-dc86-f693-96ee" hidden="false"/>
@@ -1475,6 +1475,11 @@ When a model performs a Wait Action to Destroy this Terrain, it need not spend 2
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="decrement" value="1" field="a111-8656-5c05-7415">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="a7ef-7094-95e5-577c" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <infoGroups>
         <infoGroup id="d80b-7770-aee2-b026" name="Traits" hidden="false">
@@ -1516,7 +1521,7 @@ When a model performs a Wait Action to Destroy this Terrain, it need not spend 2
         <categoryLink id="082f-5485-1012-7a57" name="Faction Profile Cards" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
         <categoryLink id="7ea3-cde2-b3c5-dae9" name="Non-Unique" hidden="false" targetId="d181-219d-3add-d47b" primary="false"/>
         <categoryLink id="6f65-654d-697a-c1e7" name="Loyal" hidden="false" targetId="f476-156e-8599-9253" primary="false"/>
-        <categoryLink id="dfff-1158-abde-3fb5" name="Peasant" hidden="false" targetId="78b4-4485-a93e-754c" primary="false"/>
+        <categoryLink name="Ashigaru" hidden="false" id="081e-02b9-f190-66ed" targetId="f434-17e6-174c-b4f6" primary="false"/>
       </categoryLinks>
       <entryLinks>
         <entryLink id="cf69-e787-4682-73cb" name="Loyal Yariman" hidden="false" collective="false" import="true" targetId="f505-2b97-757b-b006" type="selectionEntry">
@@ -2553,6 +2558,11 @@ When This model declares a Wait Action to remove a Reload Marker, they may immed
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="decrement" value="1" field="a111-8656-5c05-7415">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="a7ef-7094-95e5-577c" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <infoGroups>
         <infoGroup id="60a5-024a-292a-ae4a" name="Traits" hidden="false">
@@ -2621,7 +2631,7 @@ When This model declares a Wait Action to remove a Reload Marker, they may immed
         <categoryLink id="2f5d-0a43-0db4-620a" name="Faction Profile Cards" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
         <categoryLink id="35cd-591b-0739-1bfa" name="Non-Unique" hidden="false" targetId="d181-219d-3add-d47b" primary="false"/>
         <categoryLink id="827a-050d-c341-b68c" name="Loyal" hidden="false" targetId="f476-156e-8599-9253" primary="false"/>
-        <categoryLink id="5a31-dd81-057c-c4f6" name="Peasant" hidden="false" targetId="78b4-4485-a93e-754c" primary="false"/>
+        <categoryLink name="Ashigaru" hidden="false" id="6b96-4ba8-2ae0-d9ca" targetId="f434-17e6-174c-b4f6" primary="false"/>
       </categoryLinks>
       <entryLinks>
         <entryLink id="f07a-8935-155e-7839" name="Loyal Kyudoka" hidden="false" collective="false" import="true" targetId="dd57-5a6d-ddb8-4f1e" type="selectionEntry">
