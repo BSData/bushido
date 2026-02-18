@@ -6353,6 +6353,133 @@ If there are no legal targets, discard Curse of Yoshimuri instead.</characterist
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="b35a-ea84-9318-a7a7" name="Kawaii" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="60d5-9a39-f05d-dced" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="98a6-e76a-f99b-a1d3" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3431-049f-a403-5b30" type="atLeast"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" field="c826-e49b-79d0-f4cc" value="0">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="fec8-1e97-72ee-d649" type="lessThan"/>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="891a-f24c-5343-8e6a" type="lessThan"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="891a-f24c-5343-8e6a" type="atLeast"/>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="fec8-1e97-72ee-d649" type="atLeast"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="true" id="c826-e49b-79d0-f4cc" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="582c-e48d-4f7f-2293" name="Kawaii" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277"/>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">-</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">5</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">1</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">0</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">5 OOOOO</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Medium 40mm</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="2943-f04d-ba89-123a" name="Traits" hidden="false">
+          <profiles>
+            <profile id="f6fa-6912-eb59-b2c6" name="Kawaii" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Aloof, Cowardly, Ranged Defence (1)</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="fbac-820d-8f7b-ef55" name="Aloof" hidden="false" targetId="5101-70fc-eca4-d99b" type="rule"/>
+            <infoLink id="4f98-7685-7132-b5df" name="Cowardly" hidden="false" targetId="c8d8-d1c7-905b-f971" type="rule"/>
+            <infoLink id="fd7f-a561-d0e4-2a00" name="Ranged Defence " hidden="false" targetId="9b8d-9ca9-e25d-3988" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="43fc-4d74-e3cb-1c08" name="Melee Weapon" hidden="false">
+          <profiles>
+            <profile id="fd55-f891-0144-c5ae" name="Bite" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+1</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Brutal (1), Sharp (1)</characteristic>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Grapple Attack (1), Powerful Attack (1)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="5e2e-50d8-b205-b2c8" name="Powerful Attack" hidden="false" targetId="d56a-058d-95d9-5b60" type="rule"/>
+            <infoLink id="6a4e-0327-7557-fd38" name="Grapple Attack" hidden="false" targetId="1b9a-c71d-0a30-8d0d" type="rule"/>
+            <infoLink id="4bf1-48f7-8c4e-3623" name="Brutal" hidden="false" targetId="5d95-975e-a72c-25f3" type="rule"/>
+            <infoLink id="ff5c-ad85-7257-7a62" name="Sharp " hidden="false" targetId="6092-9fb5-5196-d1eb" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup name="Unique Effects" id="53b9-f981-1133-136e" hidden="false">
+          <profiles>
+            <profile name="Cackling Hunter" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects" hidden="false" id="ad4a-c8e1-2363-7344">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">This model gains Fearless if the source of Fear is in BtB with a Friendly Tadamori.
+</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Insane Laughter" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects" hidden="false" id="e4bf-6bee-14b8-c304">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">Enemy models in BtB with this model increase the cost of all Ki Feats and Special rAttacks and Defences by 1.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Natural Order" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects" hidden="false" id="5a23-fc63-d333-6e1b">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">This model automatically loses Intimidate Opposed Ki Tests.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Master" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects" hidden="false" id="cbe3-00cd-749f-8ffb">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">This model can only be recruited into a Warband containing Tadamori or a model with Command [Animal].</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </infoGroup>
+      </infoGroups>
+      <categoryLinks>
+        <categoryLink id="e9ab-4ac7-75a7-f6dc" name="Animal" hidden="false" targetId="c382-9ab3-9924-e30a" primary="false"/>
+        <categoryLink id="1518-05f0-1fce-06cc" name="Faction: Silvermoon Trade Syndicate" hidden="false" targetId="875a-48b1-3c9f-0a14" primary="false"/>
+        <categoryLink id="1248-b8a2-e963-a9ee" name="Faction Profile Cards" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
+        <categoryLink id="6c83-7d20-a1b2-f3db" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
+        <categoryLink name="Hyena" hidden="false" id="4edc-2fbb-d1cc-de4e" targetId="ca6b-eebe-a3cb-9b4a" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="6904-256a-d47a-dc63" name="Enhancements" hidden="false" collective="false" import="true" targetId="37a1-1d53-ef45-026d" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="10"/>
+      </costs>
+    </selectionEntry>
   </selectionEntries>
   <entryLinks>
     <entryLink id="7ae5-b29d-c5eb-c5c7" name="Kappa" hidden="false" collective="false" import="true" targetId="34f2-cc79-8047-6138" type="selectionEntry">
@@ -7229,6 +7356,19 @@ Requirement [Kabuki model with the Flank Trait in Path of a Thousand Names Theme
                 </conditionGroup>
               </conditionGroups>
             </modifier>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="instanceOf" value="0" field="selections" scope="parent" childId="c382-9ab3-9924-e30a" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                    <condition type="instanceOf" value="0" field="selections" scope="parent" childId="d7c5-a2b9-4696-fd33" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                    <condition type="instanceOf" value="0" field="selections" scope="parent" childId="6639-615e-f1ab-bc64" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                    <condition type="instanceOf" value="0" field="selections" scope="parent" childId="7435-856f-ece2-fe58" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                    <condition type="instanceOf" value="0" field="selections" scope="parent" childId="0b0f-53a8-7e80-f525" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
           </modifiers>
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="df43-9374-efe3-3792" type="max"/>
@@ -7515,6 +7655,35 @@ Requirement [Rose]</characteristic>
               </categoryLinks>
               <costs>
                 <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="8f25-f96e-5994-496e" name="Coin String" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="parent" childId="b35a-ea84-9318-a7a7" shared="true" includeChildSelections="false"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2a54-d58a-b5a5-bdf4" type="max"/>
+                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="10b1-1b9c-8d61-ede1" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="9f05-3c33-e53a-4d49" name="Coin String" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
+                  <characteristics>
+                    <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">If the Attached model is in BtB with Friendly Tadamori, that model generates 1 additional Ki Token during Ki Generation.
+This Enhancement may be Attached to an Animal model.
+
+Requirement [Kawai]</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <categoryLinks>
+                <categoryLink id="5dfc-a381-5b14-181a" name="Faction Equipment Cards" hidden="false" targetId="5bcd-fe93-a8ea-0164" primary="true"/>
+              </categoryLinks>
+              <costs>
+                <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1"/>
               </costs>
             </selectionEntry>
           </selectionEntries>

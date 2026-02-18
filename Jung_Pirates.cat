@@ -5608,6 +5608,117 @@ All Quagmire and Incoming Tide area of effect distances are doubled this turn.
         </modifier>
       </modifiers>
     </selectionEntry>
+    <selectionEntry id="5d3c-a654-d96a-0c47" name="Chiko" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4e07-8c38-7f78-6e5d" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="843d-db96-732e-cf8c" type="atLeast"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="f5c7-8d06-f14e-171d" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1bd5-7a7e-8e30-00fe" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="101c-2694-f0c3-73e2" name="Chiko" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">3</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">2</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">8</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">6 OOOOO O</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="7706-1318-e824-fd69" name="Unique Effects" hidden="false">
+          <infoLinks>
+            <infoLink id="56bb-b415-2466-8cb8" name="Goblin" hidden="false" targetId="c1d9-c677-c399-7b98" type="infoGroup"/>
+            <infoLink name="Courage" id="0f2b-793a-a94a-64c5" hidden="false" targetId="2c5f-d52f-24ba-7927" type="rule"/>
+            <infoLink name="Willpower" id="c2ca-6f29-5b69-118c" hidden="false" targetId="f980-8d03-ad19-afe3" type="rule"/>
+            <infoLink name="Endurance" id="c019-1353-002f-7c71" hidden="false" targetId="7fdc-d150-9641-1235" type="rule"/>
+          </infoLinks>
+          <profiles>
+            <profile name="Unique Effects" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects" hidden="false" id="559e-3508-0227-4206">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">Friendly Samemiman models gain the Deep type and the Endurance Trait and when making a Fear Test gain Courage (X) where X is equal to the number of Bleed Markers on the Enemy model.
+
+While making an opposed Ki Test, this model gains Willpower (X) where X is equal to the number of Bleed Markers on the Target Enemy model.
+</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </infoGroup>
+        <infoGroup id="bc5c-6d07-da8e-bbb3" name="Traits" hidden="false">
+          <profiles>
+            <profile id="4b7a-01c1-b08c-b63e" name="Chiko" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Aggressive, Fear (5), Fearless, Impetuous (0), Lightfooted, Sixth Sense</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="a48e-6b73-214f-cebc" name="Sixth Sense" hidden="false" targetId="ec49-3908-f1d1-8de2" type="rule"/>
+            <infoLink id="b2fb-aaf1-3475-5f80" name="Fear" hidden="false" targetId="3586-4583-7f10-1f31" type="rule"/>
+            <infoLink id="7d48-9c31-572e-a774" name="Lightfooted" hidden="false" targetId="57d2-cd57-07f9-addf" type="rule"/>
+            <infoLink id="ab91-96b7-5e61-abdd" name="Fearless" hidden="false" targetId="5d6f-1746-9080-aca5" type="rule"/>
+            <infoLink id="17ab-6f6f-f0fb-2a5e" name="Aggressive" hidden="false" targetId="a445-e041-8d5f-aa28" type="rule"/>
+            <infoLink id="3fa1-3c1d-cfa8-168a" name="Impetuous" hidden="false" targetId="4b80-3180-0b04-fb11" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="9417-8cc5-c495-7ecc" name="Ki Feats" hidden="false">
+          <infoLinks>
+            <infoLink id="a3ec-b213-c689-d3e6" name="Rupture" hidden="false" targetId="7ff6-555a-a811-2868" type="infoGroup"/>
+            <infoLink id="8cf9-46b7-6d5a-2e1a" name="Impatient" hidden="false" targetId="4f9e-bd3b-c09f-5be1" type="infoGroup"/>
+            <infoLink id="2b89-fdc1-3329-d6af" name="Focus Frenzy" hidden="false" targetId="7edf-2673-5cf3-5795" type="infoGroup"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="d72d-1788-c514-eb56" name="Melee Weapons" hidden="false">
+          <profiles>
+            <profile id="2ab8-9958-139c-6039" name="Bite" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+1</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Bleed (1/1), Reach</characteristic>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Push Defence (0), Sidestep Attack (0)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="581e-95f6-8fde-a3de" name="Push Defence" hidden="false" targetId="74fc-a971-d9c2-278c" type="rule"/>
+            <infoLink id="d056-3648-010e-afa1" name="Reach" hidden="false" targetId="e28e-d5dd-a262-1101" type="rule"/>
+            <infoLink id="ff55-4763-4cfe-f2b8" name="Sidestep Attack " hidden="false" targetId="070d-a69d-0b46-27dc" type="rule"/>
+            <infoLink id="eed2-9303-5b62-ac6b" name="Bleed" hidden="false" targetId="ac4a-e540-4fe3-126a" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+      </infoGroups>
+      <categoryLinks>
+        <categoryLink id="4b68-0a27-cc35-dbc0" name="Faction: Jung Pirates" hidden="false" targetId="76df-04fb-ea1f-77ab" primary="false"/>
+        <categoryLink id="7678-b69e-2308-aa35" name="Samemiman" hidden="false" targetId="1426-55d7-3b7a-c515" primary="false"/>
+        <categoryLink id="bfdd-5e5a-6b00-5ffb" name="Faction Profile Cards" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
+        <categoryLink id="c01f-1d14-fbd1-9818" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
+        <categoryLink name="Deep" hidden="false" id="ad70-bc35-e48d-f717" targetId="cf26-f911-0ae1-74d2" primary="false"/>
+        <categoryLink name="Shisai" hidden="false" id="2226-8aba-31e6-0b60" targetId="a485-b6b0-b58e-a3a1" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="60a7-ae9a-7252-bb24" name="Enhancements" hidden="false" collective="false" import="true" targetId="2327-1257-a4b4-df32" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="14"/>
+      </costs>
+    </selectionEntry>
   </selectionEntries>
   <entryLinks>
     <entryLink id="7c58-4740-ab52-3330" name="Koshimori Yukio" hidden="false" collective="false" import="true" targetId="de1e-de2d-1044-bf56" type="selectionEntry">
@@ -6846,4 +6957,66 @@ Requirement [Miyakomo]</characteristic>
   <catalogueLinks>
     <catalogueLink id="1479-8a5b-5a0e-128e" name="Library_Ronin" targetId="b489-b304-948d-52d0" type="catalogue" importRootEntries="true"/>
   </catalogueLinks>
+  <sharedInfoGroups>
+    <infoGroup name="Tiger" id="02bd-7ef5-4472-d9ba" hidden="false">
+      <profiles>
+        <profile name="Tiger" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects" hidden="false" id="f95b-1d39-4eb8-b6be">
+          <characteristics>
+            <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">This Model cannot declare Wait and Focus actions.
+When this model causes Wounds to a model during a Melee Exchange it may Heal 1 Wound.
+When targeting a model with a Bleed Marker on its card with a Charge Action this model gains Charging Bonus [+1 Move, Banzai!].</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Banzai!" id="a3ba-4454-82a1-079a" hidden="false" targetId="99b0-606c-1640-3d93" type="rule"/>
+        <infoLink name="Charging Bonus" id="8057-e5df-7ec3-303c" hidden="false" targetId="d747-f7f2-ea6f-5ceb" type="rule"/>
+      </infoLinks>
+    </infoGroup>
+    <infoGroup name="Hammerhead" id="7b65-9ab7-966e-a4f0" hidden="false">
+      <profiles>
+        <profile name="Hammerhead" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects" hidden="false" id="db01-8476-8c9e-88b0">
+          <characteristics>
+            <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">This Model cannot declare Wait and Focus actions.
+When this model causes Wounds to a non-Soulless model during a Melee Exchange it may Heal 1 Wound.
+When targeting a model with a Bleed Marker on its card with a Charge Action this model gains Charging Bonus [+1 Move, Banzai!].</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Banzai!" id="b7be-bc7e-211d-5ea5" hidden="false" targetId="99b0-606c-1640-3d93" type="rule"/>
+        <infoLink name="Charging Bonus" id="795a-c280-479d-a4d0" hidden="false" targetId="d747-f7f2-ea6f-5ceb" type="rule"/>
+      </infoLinks>
+    </infoGroup>
+    <infoGroup name="Great White" id="bdbb-3347-928d-2c21" hidden="false">
+      <profiles>
+        <profile name="Great White" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects" hidden="false" id="4307-7216-aa4c-ecfd">
+          <characteristics>
+            <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">This Model cannot declare Wait and Focus actions.
+When this model causes Wounds to a non-Soulless model during a Melee Exchange it may Heal 1 Wound.
+When targeting a model with a Bleed Marker on its card with a Charge Action this model gains Charging Bonus [+1 Move, Banzai!].</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Banzai!" id="9d55-610f-2d88-c9d3" hidden="false" targetId="99b0-606c-1640-3d93" type="rule"/>
+        <infoLink name="Charging Bonus" id="f213-4b10-83bf-68ba" hidden="false" targetId="d747-f7f2-ea6f-5ceb" type="rule"/>
+      </infoLinks>
+    </infoGroup>
+    <infoGroup name="Goblin" id="c1d9-c677-c399-7b98" hidden="false">
+      <profiles>
+        <profile name="Goblin" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects" hidden="false" id="1133-7095-126b-88f2">
+          <characteristics>
+            <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">This Model cannot declare Wait and Focus actions.
+When this model causes Wounds to a non-Soulless model during a Melee Exchange it may Heal 1 Wound.
+When targeting a model with a Bleed Marker on its card with a Charge Action this model gains Charging Bonus [+1 Move, Banzai!].</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Banzai!" id="f086-7be4-a43f-3817" hidden="false" targetId="99b0-606c-1640-3d93" type="rule"/>
+        <infoLink name="Charging Bonus" id="238f-7ece-36d7-1a91" hidden="false" targetId="d747-f7f2-ea6f-5ceb" type="rule"/>
+      </infoLinks>
+    </infoGroup>
+  </sharedInfoGroups>
 </catalogue>

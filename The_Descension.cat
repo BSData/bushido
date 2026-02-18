@@ -3983,11 +3983,6 @@ Permitted [Tribesman, Ronin Tribesman, Unknown Ronin]</characteristic>
         </infoGroup>
         <infoGroup id="b664-9905-6f5d-bd1f" name="Unique Effects" hidden="false">
           <profiles>
-            <profile id="2f4a-570d-98b4-5492" name="Cliff Tribe" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
-              <characteristics>
-                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">When a Tengu model within 4&quot; is Killed this model gains a Virtue Token.</characteristic>
-              </characteristics>
-            </profile>
             <profile id="0c74-160a-0c81-4bbd" name="Ekashiba" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
               <characteristics>
                 <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">While this model has a Virtue Token it gains Sixth Sense and Move Boost [2].</characteristic>
@@ -3996,6 +3991,7 @@ Permitted [Tribesman, Ronin Tribesman, Unknown Ronin]</characteristic>
           </profiles>
           <infoLinks>
             <infoLink id="7436-7a9e-b527-d7f5" name="Sixth Sense" hidden="false" targetId="ec49-3908-f1d1-8de2" type="rule"/>
+            <infoLink name="Cliff Tribe" id="6665-0a0e-30b4-b77a" hidden="false" type="profile" targetId="6f0d-ce02-0b1e-4cb5"/>
           </infoLinks>
         </infoGroup>
       </infoGroups>
@@ -4093,11 +4089,6 @@ Permitted [Tribesman, Ronin Tribesman, Unknown Ronin]</characteristic>
         </infoGroup>
         <infoGroup id="71c3-05c5-9ea9-33f6" name="Unique Effects" hidden="false">
           <profiles>
-            <profile id="3962-b84c-31ec-c165" name="Cliff Tribe" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
-              <characteristics>
-                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">When a Tengu model within 4&quot; is Killed this model gains a Virtue Token.</characteristic>
-              </characteristics>
-            </profile>
             <profile id="69d2-a8c1-b11e-8338" name="Hotene" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
               <characteristics>
                 <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">While this model has a Virtue Token it gains Bravery and Sixth Sense.</characteristic>
@@ -4107,6 +4098,7 @@ Permitted [Tribesman, Ronin Tribesman, Unknown Ronin]</characteristic>
           <infoLinks>
             <infoLink id="d399-42ad-8b7f-10ee" name="Bravery" hidden="false" targetId="f9b2-38d2-7cda-de6e" type="rule"/>
             <infoLink id="07d2-b6a0-0b21-333a" name="Sixth Sense" hidden="false" targetId="ec49-3908-f1d1-8de2" type="rule"/>
+            <infoLink name="Cliff Tribe" id="0c1c-fcc9-5cbe-c20d" hidden="false" type="profile" targetId="6f0d-ce02-0b1e-4cb5"/>
           </infoLinks>
         </infoGroup>
       </infoGroups>
@@ -4582,6 +4574,129 @@ The Suzume model gains Flank and returns to play using those rules.</characteri
           </conditionGroups>
         </modifier>
       </modifiers>
+    </selectionEntry>
+    <selectionEntry id="91dc-e7d5-f8b2-54e9" name="Wuzan" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9704-9d38-8681-8266" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="118b-3406-56d9-05d2" type="atLeast"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="decrement" value="1" field="a111-8656-5c05-7415">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="9592-a8de-7eb6-461b" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fe15-e461-2682-3ba6" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="067d-4abc-1885-b4a8" name="Wuzan" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">3</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">2</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">6</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">7 OOOOO OO</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="8f37-63c7-ffc3-4a3a" name="Traits" hidden="false">
+          <profiles>
+            <profile id="621b-134d-a803-fd0d" name="Wuzan" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Armour (1), Bravery, Camouflage (6&quot;), Endurance, Fear (3), Immune [Bleed, Prone, Stunned], Indomitable (1), Spirit (1), Split Attack</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="a46f-52f2-c72d-0d5b" name="Armour" hidden="false" targetId="8615-1c63-2242-5746" type="rule"/>
+            <infoLink id="92a1-57c8-0797-8b1f" name="Endurance" hidden="false" targetId="7fdc-d150-9641-1235" type="rule"/>
+            <infoLink id="6dc9-9a03-3b63-8221" name="Fear" hidden="false" targetId="3586-4583-7f10-1f31" type="rule"/>
+            <infoLink id="7f1f-0598-388e-d8c6" name="Lightfooted" hidden="false" targetId="57d2-cd57-07f9-addf" type="rule"/>
+            <infoLink id="4b04-146c-3ede-9ad4" name="Split Attack" hidden="false" targetId="92d0-d4fe-e58e-7535" type="rule"/>
+            <infoLink id="54c1-43e2-b284-ea54" name="Bravery" hidden="false" targetId="f9b2-38d2-7cda-de6e" type="rule"/>
+            <infoLink id="c7fa-f88c-c660-0d62" name="Immune" hidden="false" targetId="ea08-b25e-0ea8-af73" type="rule"/>
+            <infoLink id="5ad2-2acc-854c-48cc" name="Spirit" hidden="false" targetId="a9ba-9904-7d29-7bcb" type="rule"/>
+            <infoLink id="ec92-8efb-d615-666c" name="Indomitable " hidden="false" targetId="3beb-6f28-e7c4-a236" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="b785-bc14-8bc0-9fa1" name="Ki Feats" hidden="false">
+          <infoLinks>
+            <infoLink id="b1af-8caf-d521-c4eb" name="Inspiration" hidden="false" targetId="99a3-5be0-b64d-ab99" type="infoGroup"/>
+            <infoLink id="7d9d-2f57-c07b-f288" name="Cleave" hidden="false" targetId="7641-b66f-5fc4-0add" type="infoGroup"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="009d-8cb0-529a-7238" name="Melee Weapon" hidden="false">
+          <profiles>
+            <profile id="f338-2c1d-0617-f307" name="Claws" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+1</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Pierce (1), Sharp (1)</characteristic>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Combo Attack (0), Counterstrike Defence (0), Push Defence (0)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="eb0c-fa57-7f63-6da8" name="Push Defence" hidden="false" targetId="74fc-a971-d9c2-278c" type="rule"/>
+            <infoLink id="ccc8-557f-8247-dfd0" name="Pierce " hidden="false" targetId="39e4-14d7-5533-6e67" type="rule"/>
+            <infoLink id="4ece-8626-93a9-e5d6" name="Sharp " hidden="false" targetId="6092-9fb5-5196-d1eb" type="rule"/>
+            <infoLink id="6bdb-35a5-4b48-7b04" name="Counterstrike Defence " hidden="false" targetId="136e-4c77-dc59-4c6e" type="rule"/>
+            <infoLink id="6078-8870-fc21-379a" name="Combo Attack " hidden="false" targetId="78ab-6a94-be24-8f74" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="9acd-a8fd-f60e-c27b" name="Unique Effects" hidden="false">
+          <profiles>
+            <profile id="e30f-79cb-3a1c-e06e" name="Wuzan" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">While this model has a Virtue Token it gains Sixth Sense and Strong.
+
+This model may only Target Tribesman models with its Inspiration Feat.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Virtue" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects" hidden="false" id="b17c-4a99-e823-1c19">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">While this model is in play, when a Friendly model spends a Virtue Token you may choose the following effects for that model:
+- Enemy models may not declare Special Abilities while in a Melee Exchange with this model until the current activation is complete.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="a5d7-249a-7082-860a" name="Strong" hidden="false" targetId="00b5-3637-d48a-807e" type="rule"/>
+            <infoLink name="Cliff Tribe" id="d103-379f-0da9-8449" hidden="false" type="profile" targetId="6f0d-ce02-0b1e-4cb5"/>
+            <infoLink id="e202-9a9b-d0cb-66a4" name="Sixth Sense" hidden="false" targetId="ec49-3908-f1d1-8de2" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+      </infoGroups>
+      <categoryLinks>
+        <categoryLink id="1fb6-437d-93c2-200a" name="Tribesman" hidden="false" targetId="607a-a497-e3f1-edfe" primary="false"/>
+        <categoryLink id="29bb-9c68-32f4-3f97" name="Faction Profile Cards" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
+        <categoryLink id="59c1-e607-4359-c425" name="Faction: The Descension" hidden="false" targetId="daaa-d0d2-e66e-0672" primary="false"/>
+        <categoryLink id="61a2-6353-e7e7-122e" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
+        <categoryLink id="8b88-878d-9b6b-b616" name="Brutal" hidden="false" targetId="f62f-dd0b-4f06-06a6" primary="false"/>
+        <categoryLink id="e024-7e8d-39b9-95df" name="Armour" hidden="false" targetId="f322-702a-ff62-b37e" primary="false"/>
+        <categoryLink id="2b75-48a5-dfde-15e0" name="Cliff Tribe" hidden="false" targetId="020f-7723-5e32-6ed0" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="464e-fa3a-cae4-e5df" name="Enhancements" hidden="false" collective="false" import="true" targetId="f513-13e0-08f2-0d67" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="18"/>
+      </costs>
     </selectionEntry>
   </selectionEntries>
   <entryLinks>
@@ -5447,6 +5562,11 @@ This model does not suffer Melee penalties for having Run.</characteristic>
       <characteristics>
         <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">While this model is within 3” of another Haiatake Guard model, Enemy models that are not Intangible may not move through any line between the 2 Haitake Guards’ bases.
 This model provides Cover to Friendly models as if it were a terrain element.</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Cliff Tribe" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects" hidden="false" id="6f0d-ce02-0b1e-4cb5">
+      <characteristics>
+        <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">When a Tengu model within 4&quot; is Killed this model gains a Virtue Token.</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>

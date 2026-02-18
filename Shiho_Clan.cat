@@ -2045,7 +2045,7 @@ While this model is in play, when a Friendly Loyal model spends a Virtue Token y
         <infoGroup id="1fb1-03ed-67f2-1d01" name="Ki Feats" hidden="false">
           <infoLinks>
             <infoLink id="edc1-fda0-7d10-c499" name="Awe" hidden="false" targetId="9a81-8763-ea17-abbe" type="infoGroup"/>
-            <infoLink id="0c75-5329-86d9-9bd1" name="Move It!" hidden="false" targetId="de77-6a18-6e31-7d33" type="infoGroup"/>
+            <infoLink id="0c75-5329-86d9-9bd1" name="Move It!" hidden="false" targetId="ee1f-cc72-f809-88e8" type="infoGroup"/>
           </infoLinks>
         </infoGroup>
         <infoGroup id="6e26-5f54-97b8-3d3c" name="Melee Weapon" hidden="false">
@@ -3596,6 +3596,124 @@ The new turn chosen is Hidden Information.</characteristic>
           </conditionGroups>
         </modifier>
       </modifiers>
+    </selectionEntry>
+    <selectionEntry id="0199-4359-f14e-9c55" name="Shiho Eishin" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="fb4a-18a7-5b40-74ec" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9402-edcc-93a2-aef1" type="atLeast"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" value="0" field="fce1-6b55-a7d1-b4c2">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="a7ef-7094-95e5-577c" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="parent" childId="cee4-c744-a4b4-a0ac" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+                <condition type="lessThan" value="1" field="selections" scope="parent" childId="8d10-1241-e146-afd6" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <profiles>
+        <profile id="1de2-7f4c-d054-9be0" name="Shiho Eishin" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">2</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">0</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac">3</characteristic>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">2</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">8</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">5 OOOOO</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="697a-4e26-03f2-de2f" name="Traits" hidden="false">
+          <profiles>
+            <profile id="ac22-34b3-5a71-32eb" name="Shiho Eishin" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Aware, Booted, Fearless, Flank, Immune [Blind], Prowess [Melee](1), Spirit (1), Vengeance [Prefecture]</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="b8c3-53a1-d116-51fd" name="Prowess " hidden="false" targetId="75ef-327a-cd08-a248" type="rule"/>
+            <infoLink id="34e0-1f96-7ebc-bfff" name="Spirit" hidden="false" targetId="a9ba-9904-7d29-7bcb" type="rule"/>
+            <infoLink id="4e02-b2b0-0eeb-2708" name="Bravery" hidden="false" targetId="f9b2-38d2-7cda-de6e" type="rule"/>
+            <infoLink id="d022-da51-f8b0-ebe9" name="Aware" hidden="false" targetId="ff4a-6b14-09dd-2343" type="rule"/>
+            <infoLink id="bc52-1867-0f4b-c683" name="Flank" hidden="false" targetId="a847-f02d-7e99-8a66" type="rule"/>
+            <infoLink id="11d5-a311-ae15-f2e2" name="Booted" hidden="false" targetId="90ff-48db-c79d-251c" type="rule"/>
+            <infoLink id="a48d-b5a8-a32a-52a0" name="Fearless" hidden="false" targetId="5d6f-1746-9080-aca5" type="rule"/>
+            <infoLink id="7ff5-07aa-a8a2-37b8" name="Immune" hidden="false" targetId="ea08-b25e-0ea8-af73" type="rule"/>
+            <infoLink id="a4f8-94b7-4bbd-270d" name="Vengeance" hidden="false" targetId="6779-0aac-2f51-f67e" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="c442-a6af-9810-48b2" name="Ki Feats" hidden="false">
+          <infoLinks>
+            <infoLink id="692c-7a46-930d-2d01" name="Men Kote" hidden="false" targetId="149a-33cf-30c0-a7d1" type="infoGroup"/>
+            <infoLink id="7f77-dccf-0a5c-43e6" name="Reputation" hidden="false" targetId="9cf7-7bc5-9f76-8e23" type="infoGroup"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="8698-514f-9d0c-e630" name="Melee Weapon" hidden="false">
+          <profiles>
+            <profile id="6f48-5cf8-b238-82a0" name="Spear" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+1</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Pierce (1), Reach</characteristic>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Push Attack (0), Counterstrike Defence (0)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="4fde-2660-e42a-eaec" name="Counterstrike Defence " hidden="false" targetId="136e-4c77-dc59-4c6e" type="rule"/>
+            <infoLink id="1df3-245d-c990-897a" name="Push Attack" hidden="false" targetId="6c26-94ba-6b96-9e1b" type="rule"/>
+            <infoLink id="abc7-4444-a0c7-d5f2" name="Pierce " hidden="false" targetId="39e4-14d7-5533-6e67" type="rule"/>
+            <infoLink id="5299-1414-a746-0a93" name="Reach" hidden="false" targetId="e28e-d5dd-a262-1101" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="4bb2-c317-a3ad-9f2b" name="Unique Effects" hidden="false">
+          <profiles>
+            <profile id="6108-9eec-a918-97c7" name="Unique Effects" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">This model&apos;s Melee Pool is not limited to Double its base value and this model&apos;s Melee Pool cannot be reduced; those dice cannot be removed, substituted or replaced, and so can never pay for Special Abilities with a cost greater than zero (re-rolls are allowed as usual).
+This model cannot draw LoS outside of BtB.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink name="Kurouma Koryu" id="5f19-9842-a8e7-5f07" hidden="false" type="infoGroup" targetId="3ba5-1837-b036-ca3d"/>
+          </infoLinks>
+        </infoGroup>
+      </infoGroups>
+      <categoryLinks>
+        <categoryLink id="a4fc-bdad-09e2-bf8f" name="Faction: Shiho Clan" hidden="false" targetId="53b4-db5e-0527-0759" primary="false"/>
+        <categoryLink id="ab1d-d5e6-3a7a-4daa" name="Faction Profile Cards" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
+        <categoryLink id="8061-97a3-8b3b-abc4" name="Samurai" hidden="false" targetId="e12a-f782-3281-7444" primary="false"/>
+        <categoryLink id="9e1f-227b-a37f-aa5e" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
+        <categoryLink id="aaea-5130-cb91-d337" name="Loyal" hidden="false" targetId="f476-156e-8599-9253" primary="false"/>
+        <categoryLink name="Booted" hidden="false" id="525a-f8b8-5cbd-3731" targetId="6f67-dc86-f693-96ee" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="eedf-cace-fc32-b5c4" name="Enhancements" hidden="false" collective="false" import="true" targetId="8a7c-6251-523e-a67c" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="12"/>
+      </costs>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="fce1-6b55-a7d1-b4c2" includeChildSelections="true"/>
+      </constraints>
     </selectionEntry>
   </selectionEntries>
   <entryLinks>

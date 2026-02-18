@@ -4822,6 +4822,108 @@ If the chosen model does not Kill an Enemy model this turn, remove the chosen mo
         </modifier>
       </modifiers>
     </selectionEntry>
+    <selectionEntry id="9f17-5d9e-0f62-345f" name="Ito Konomi" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f0-9b34-3c84-dbc2" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7f75-6cc9-4a88-697d" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="415d-abcf-5025-c8f2" name="Ito Konomi" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">4</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">2</characteristic>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">4</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">5</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">2</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c">3</characteristic>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">8</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">5 OOOOO</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="af6b-05e3-026e-b903" name="Melee Weapon" hidden="false">
+          <profiles>
+            <profile id="444e-4c45-6ac5-e332" name="Naginata" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+1</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Reach</characteristic>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Powerful Attack (1), Push Attack (0), Sidestep Defence (0)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="ed19-bc93-5f52-450a" name="Sidestep Defence " hidden="false" targetId="753c-6c3b-64d7-203c" type="rule"/>
+            <infoLink id="6614-9e0c-04a5-8dd7" name="Push Attack" hidden="false" targetId="6c26-94ba-6b96-9e1b" type="rule"/>
+            <infoLink id="c058-4986-0eea-8989" name="Powerful Attack" hidden="false" targetId="d56a-058d-95d9-5b60" type="rule"/>
+            <infoLink id="9cd2-2c92-340c-9344" name="Reach" hidden="false" targetId="e28e-d5dd-a262-1101" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="df27-052b-d210-b83d" name="Ki Feats" hidden="false">
+          <infoLinks>
+            <infoLink id="f7a4-368c-6f59-e9a9" name="Move It!" hidden="false" targetId="ee1f-cc72-f809-88e8" type="infoGroup"/>
+            <infoLink id="1276-357e-30f8-ffce" name="Move It!" hidden="true" targetId="de77-6a18-6e31-7d33" type="infoGroup"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="34a9-9abd-5bbb-3f34" name="Unique Effects" hidden="false">
+          <profiles>
+            <profile id="630d-3158-4cd8-a5e2" name="Deployment" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">This model may not be Targeted by Enemy models while it is in BtB with another Friendly Ito Clan Acolyte, Ashigaru model.
+Friendly Ito Clan Ashigaru models gain Push Attack (0) on their Naginata weapons.
+Models affected by this model&apos;s Move it! Ki Feat gain Spirit (+1) until the End Phase.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink name="Push Attack" id="53ec-a827-eb56-1807" hidden="false" type="rule" targetId="6c26-94ba-6b96-9e1b"/>
+            <infoLink name="Spirit" id="d459-4321-4f54-bebc" hidden="false" type="rule" targetId="a9ba-9904-7d29-7bcb"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="3cb9-7e5e-4bf3-1376" name="Traits" hidden="false">
+          <profiles>
+            <profile id="5fd9-5d39-deeb-37d6" name="Ito Konomi" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Armour (1), Bravery, Prowess [Melee](1), Protected [Ashigaru](2&quot;)</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="617a-424c-cc51-c3b1" name="Armour" hidden="false" targetId="8615-1c63-2242-5746" type="rule"/>
+            <infoLink id="765e-b1c7-5fe0-52bd" name="Protected" hidden="false" targetId="f2a3-87f0-7f8b-9ebd" type="rule"/>
+            <infoLink id="f8db-d9ed-68d4-427b" name="Prowess " hidden="false" targetId="75ef-327a-cd08-a248" type="rule"/>
+            <infoLink id="e27d-1cb3-7f44-4433" name="Bravery" hidden="false" targetId="f9b2-38d2-7cda-de6e" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+      </infoGroups>
+      <categoryLinks>
+        <categoryLink id="c0f7-aa16-769d-2869" name="Faction Profile Cards" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
+        <categoryLink id="82b6-42b4-f2ca-0221" name="Samurai" hidden="false" targetId="e12a-f782-3281-7444" primary="false"/>
+        <categoryLink id="23a6-d3c0-5212-e869" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
+        <categoryLink name="Acolyte" hidden="false" id="369e-3b05-bb7b-1b13" targetId="3134-f1cd-dcfc-649f" primary="false"/>
+        <categoryLink name="Armour" hidden="false" id="0726-4cf0-e257-a1f0" targetId="f322-702a-ff62-b37e" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="4c39-65b8-7b93-e168" name="Enhancements" hidden="false" collective="false" import="true" targetId="c1b7-60f5-a313-5345" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="13"/>
+      </costs>
+    </selectionEntry>
   </selectionEntries>
   <entryLinks>
     <entryLink id="a128-3c72-cd19-3719" name="Ancestor Spirit" hidden="false" collective="false" import="true" targetId="a8a8-fc30-a7e2-2913" type="selectionEntry">

@@ -4488,6 +4488,134 @@ When a model with a Preparation Token is involved in a Melee Exchange with a Nor
         </modifier>
       </modifiers>
     </selectionEntry>
+    <selectionEntry id="7d97-3f38-af06-66d3" name="Obaachan" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4e1c-43c9-596d-ef16" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="cfa1-27b2-4dc3-ce16" type="atLeast"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="54e3-1291-ef63-cbdd" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="047b-cc10-1b86-3465" name="Obaachan" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">5</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">5</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33">3</characteristic>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac">3</characteristic>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">2</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c">3</characteristic>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">8</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">5 OOOOO</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="47fd-942f-35ab-c9e3" name="Traits" hidden="false">
+          <profiles>
+            <profile id="a1d7-ba5a-11dd-7021" name="Obaachan" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Aloof, Assassin, Camouflage (2), Courage (2), Evasive, Indomitable (1), Kata, Lightfooted, Tireless</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="16b6-d432-1130-c83e" name="Assassin" hidden="false" targetId="ef59-928b-2550-f0a3" type="rule"/>
+            <infoLink id="980c-626f-e451-ef66" name="Courage" hidden="false" targetId="2c5f-d52f-24ba-7927" type="rule"/>
+            <infoLink id="ebe1-ae68-1bf1-a1fe" name="Camouflage" hidden="false" targetId="9010-4983-c98c-1751" type="rule"/>
+            <infoLink id="42b3-2842-7e3b-f1d6" name="Aloof" hidden="false" targetId="5101-70fc-eca4-d99b" type="rule"/>
+            <infoLink id="721e-8bdb-c313-bffb" name="Indomitable " hidden="false" targetId="3beb-6f28-e7c4-a236" type="rule"/>
+            <infoLink id="8059-3d53-b030-b4b0" name="Lightfooted" hidden="false" targetId="57d2-cd57-07f9-addf" type="rule"/>
+            <infoLink id="f262-ec49-395d-9153" name="Tireless" hidden="false" targetId="5829-35f3-dd19-1290" type="rule"/>
+            <infoLink id="5a99-b755-472d-af85" name="Evasive" hidden="false" targetId="b0f8-d197-536b-c8fc" type="rule"/>
+            <infoLink id="925f-ed0e-2a5f-7e31" name="Kata" hidden="false" targetId="7283-1e6d-cb9c-f1c8" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="cd62-fa05-2284-b305" name="Melee Weapons" hidden="false">
+          <profiles>
+            <profile id="42ba-def7-2731-c316" name="Sword" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+1</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e"/>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Counterstrike Defence (0), Powerful Attack (0), Sidestep Defence (0)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+            <profile id="2833-a031-006a-686a" name="No-Shadow Kick" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+0</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Ki Block</characteristic>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d"/>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289">While in a Melee Exchange with this Weapon, Enemy models cannot use Instant or Active Effects and this model may not use Special Abilities.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="5e43-0f5c-0ef2-4c3d" name="Powerful Attack" hidden="false" targetId="d56a-058d-95d9-5b60" type="rule"/>
+            <infoLink id="1f10-6b1d-fe12-315f" name="Sidestep Defence " hidden="false" targetId="753c-6c3b-64d7-203c" type="rule"/>
+            <infoLink id="56d7-c95f-177c-a509" name="Counterstrike Defence " hidden="false" targetId="136e-4c77-dc59-4c6e" type="rule"/>
+            <infoLink id="b693-76a9-7cce-3df2" name="Ki Block" hidden="false" targetId="d134-7fba-38f0-8896" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="8fa7-1ea4-ed17-765a" name="Ki Feats" hidden="false">
+          <infoLinks>
+            <infoLink id="2cb6-bcc1-1af9-fbb3" name="Hamaki" hidden="false" targetId="8cc0-035a-5e5d-83fb" type="infoGroup"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="c6bb-2fa0-5ffe-13c0" name="Unique Effects" hidden="false">
+          <profiles>
+            <profile id="e1ee-4dca-781a-8c6a" name="Sempai" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">This model may use the Ki Feats of any Friendly, Bleeding Moon &amp; Ninja model currently on the Battlefield.
+It is assumed that the Ki Feat is written on this model&apos;s card.</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="7097-2761-1c9b-7aee" name="Start of Activation" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">At the start of this model&apos;s activation choose 1 of the following:
+- This model gains Melee Boost (2) until the end of this activation.
+- Choose a Special Attack or Defence on any Friendly Bleeding Moon &amp; Ninja model currently on the Battlefield. This model&apos;s Sword Melee Weapon gains that Special Ability until the end of this activation at Cost (1).
+- This model&apos;s Sword Melee Weapon gains Pierce (2) and Sharp (2) until the end of this activation.</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="636d-cc65-fb12-be8e" name="Unique Effects" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">While undamaged, this model gains an additional Activation Counter in the Starting Phase.
+</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink name="Sharp " id="1cf9-98ac-3f18-367f" hidden="false" targetId="6092-9fb5-5196-d1eb" type="rule"/>
+            <infoLink name="Pierce " id="44ed-7925-c296-ae68" hidden="false" targetId="39e4-14d7-5533-6e67" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+      </infoGroups>
+      <categoryLinks>
+        <categoryLink id="6599-4b39-57a4-1628" name="Faction Profile Cards" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
+        <categoryLink id="1b0e-f8e4-59d3-d00c" name="Ninja" hidden="false" targetId="dc64-e668-4aac-8ec9" primary="false"/>
+        <categoryLink id="61e6-d53a-4248-a567" name="Jonin" hidden="false" targetId="cadc-d0af-7aa3-8d26" primary="false"/>
+        <categoryLink id="7d41-6e3e-1d8d-9236" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
+        <categoryLink name="Bleeding Moon" hidden="false" id="0364-ecb2-fb2e-7054" targetId="6ac4-d054-eb7e-e75d" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="6202-6bee-fa95-d0e7" name="Enhancements" hidden="false" collective="false" import="true" targetId="b18f-16ea-bed1-4709" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="25"/>
+      </costs>
+    </selectionEntry>
   </selectionEntries>
   <entryLinks>
     <entryLink id="0225-d3c7-eee7-c723" name="Hiretsuna" hidden="false" collective="false" import="true" targetId="fee6-a48b-db82-74e7" type="selectionEntry">
