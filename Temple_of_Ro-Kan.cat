@@ -2858,12 +2858,12 @@ When Deploying this model you must choose to Deploy either the Kota - Fox Form m
         </modifier>
         <modifier type="set" value="0" field="4731-113f-3fcb-c42c">
           <conditions>
-            <condition type="atLeast" value="0" field="selections" scope="roster" childId="1a12-f47f-8f23-0777" shared="true" includeChildSelections="true" includeChildForces="true"/>
+            <condition type="lessThan" value="1" field="selections" scope="roster" childId="1a12-f47f-8f23-0777" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifier>
       </modifiers>
       <constraints>
-        <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="true" id="4731-113f-3fcb-c42c" type="max"/>
+        <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="4731-113f-3fcb-c42c" type="max"/>
       </constraints>
       <infoGroups>
         <infoGroup id="eba0-ef17-dbc9-86ff" name="Melee Weapon" hidden="false">
