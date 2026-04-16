@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="0cac-b8ad-fb7f-ef84" name="Prefecture of Ryu" revision="50" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="19" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="0cac-b8ad-fb7f-ef84" name="Prefecture of Ryu" revision="51" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="19" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <categoryEntries>
     <categoryEntry id="8688-cd6e-bcbe-2cbb" name="Ima" hidden="false"/>
     <categoryEntry id="65a8-4392-a95b-115b" name="Takashi" hidden="false"/>
@@ -1729,11 +1729,6 @@ Permitted [Samurai, Ashigaru]</characteristic>
             <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Medium 40mm</characteristic>
           </characteristics>
         </profile>
-        <profile id="f213-9815-1ece-00f2" name="Dragon" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
-          <characteristics>
-            <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">This model cannot be Healed.</characteristic>
-          </characteristics>
-        </profile>
       </profiles>
       <infoGroups>
         <infoGroup id="812e-9a37-fdef-c4f1" name="Ki Feats" hidden="false">
@@ -1807,7 +1802,9 @@ Permitted [Samurai, Ashigaru]</characteristic>
           <profiles>
             <profile id="254e-8d66-cd37-7f78" name="Unique Effects" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
               <characteristics>
-                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">This model can be recruited into any Prefecture Theme that does not specifically restrict it.</characteristic>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">This model cannot be Healed.
+
+This model can be recruited into any Prefecture Theme that does not specifically restrict it.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -6152,6 +6149,380 @@ For each unmarked Damage Box on this model, remove a Shame Token from another Fr
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1"/>
       </costs>
+    </selectionEntry>
+    <selectionEntry id="862f-a783-a461-a837" name="Mizuko &amp; Shōgo-Ryu" hidden="false" collective="false" import="true" type="model">
+      <constraints>
+        <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b387-7176-7bbb-b99a" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="5844-a8fc-c691-7d17" name="Mizuko &amp; Shōgo-Ryu" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">3</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33">3</characteristic>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">3</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">*</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">10 OOOOO OOOOO</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Large 50mm</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="603e-fc49-5e55-d505" name="Ki Feats" hidden="false">
+          <infoLinks>
+            <infoLink id="cd37-cb09-403a-244a" name="Dragon Manipulation" hidden="false" targetId="1c58-1ae6-2259-9b35" type="infoGroup"/>
+            <infoLink id="6e93-b774-8d2b-364f" name="Fly High" hidden="false" targetId="e30a-b7ab-f16b-7ad2" type="infoGroup"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="6a23-4a06-a107-73ed" name="Traits" hidden="false">
+          <profiles>
+            <profile id="80bf-d362-d1bd-2341" name="Mizuko &amp; Shōgo-Ryu" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Aware, Cloudwalk, Fear (5), Fearless, Immune [Fire, Prone], Indomitable (1), Mettle (1), Ranged Defence (2), Sixth Sense</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="5757-a689-345e-1e28" name="Aware" hidden="false" targetId="ff4a-6b14-09dd-2343" type="rule"/>
+            <infoLink id="cec2-0747-171d-4dd9" name="Cloudwalk" hidden="false" targetId="538c-1266-626b-fcc9" type="rule"/>
+            <infoLink id="7bce-7f95-09b7-33a9" name="Fear" hidden="false" targetId="3586-4583-7f10-1f31" type="rule"/>
+            <infoLink id="f0d4-f727-a8fc-7747" name="Fearless" hidden="false" targetId="5d6f-1746-9080-aca5" type="rule"/>
+            <infoLink id="1103-21a2-ebcf-fa0c" name="Immune" hidden="false" targetId="ea08-b25e-0ea8-af73" type="rule"/>
+            <infoLink id="b7f7-c756-93e0-b730" name="Mettle" hidden="false" targetId="9598-efc3-51c7-5811" type="rule"/>
+            <infoLink id="3d43-3cf4-ec54-fd1d" name="Sixth Sense" hidden="false" targetId="ec49-3908-f1d1-8de2" type="rule"/>
+            <infoLink id="10fe-535a-fb02-3ad5" name="Indomitable " hidden="false" targetId="3beb-6f28-e7c4-a236" type="rule"/>
+            <infoLink id="030c-09c7-8eda-3b4a" name="Ranged Defence " hidden="false" targetId="9b8d-9ca9-e25d-3988" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="ab78-3afc-6750-4548" name="Melee Weapon" hidden="false">
+          <profiles>
+            <profile id="8831-9aa8-b667-b734" name="Fire Magic" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+2</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Fire (1/1)</characteristic>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Push Defence (0), Dual Attack (1), Throw Attack (1)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="33ca-3a8f-2047-45b5" name="Fire" hidden="false" targetId="2422-40b7-254f-f6f1" type="rule"/>
+            <infoLink id="8ac3-c567-358a-3a86" name="Dual Attack" hidden="false" targetId="86ff-08dc-dfd1-bce9" type="rule"/>
+            <infoLink id="8b06-495b-4346-498a" name="Throw Attack" hidden="false" targetId="e4a9-1967-fb91-ce07" type="rule"/>
+            <infoLink id="8655-975f-9817-b423" name="Push Defence" hidden="false" targetId="74fc-a971-d9c2-278c" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="fc7d-9d29-292c-2b62" name="Ranged Weapon" hidden="false">
+          <profiles>
+            <profile id="c549-508d-9a0b-5c79" name="Fire Breath" hidden="false" typeId="7e20-258e-bf92-18f9" typeName="Ranged Weapon">
+              <characteristics>
+                <characteristic name="Ranged Weapon Strength" typeId="15aa-b6bd-6923-271f">+2</characteristic>
+                <characteristic name="Range Bands" typeId="be6a-50c6-d691-e2e9">2/4/6</characteristic>
+                <characteristic name="Traits" typeId="3410-4428-ef91-eb61">Fire (1/1)</characteristic>
+                <characteristic name="Specials" typeId="cdaf-b6ac-89d4-39ef"/>
+                <characteristic name="Unique Effects" typeId="3bf8-6525-f003-4990"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink name="Fire" id="6b53-57a0-7cd0-63eb" hidden="false" type="rule" targetId="2422-40b7-254f-f6f1"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="a047-94de-922a-34f2" name="Unique Effects" hidden="false">
+          <profiles>
+            <profile id="f9ed-55f2-97c3-8fd3" name="Unique Effects" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">Mizuko, Shogo-Ryu and Mizuko &amp; Shdgo-Ryu profiles are considered the same model when creating a Warband.
+
+If this model is removed from play, replace this model and profile card with Mizuko, they are considered the same model for non-Wound box transfer effects.
+
+If this model is included in your Warband you may also include Ronin [Fire Element] Kami.
+
+This model may not be Placed and may not have Enhancements attached to it.
+</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </infoGroup>
+      </infoGroups>
+      <categoryLinks>
+        <categoryLink id="c4e3-d052-0162-3732" name="Faction: Prefecture of Ryu" hidden="false" targetId="7532-4f60-381d-2941" primary="false"/>
+        <categoryLink id="be24-4cea-7bb7-a617" name="Faction Profile Cards" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
+        <categoryLink id="c3f0-95e6-ae2b-1f16" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
+        <categoryLink id="40a3-bdb5-3dcc-a11b" name="Dragon" hidden="false" targetId="6101-8a8b-fc84-7582" primary="false"/>
+        <categoryLink name="Okami" hidden="false" id="e177-82f2-7139-377a" targetId="9b5c-5a83-6542-3e28" primary="false"/>
+        <categoryLink name="Shisai" hidden="false" id="0f88-ff8c-fd2a-b152" targetId="a485-b6b0-b58e-a3a1" primary="false"/>
+      </categoryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="23"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="7f07-a4b2-abc5-4eee" name="Mizuko" hidden="true" collective="false" import="true" type="model">
+      <constraints>
+        <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="207b-335a-69b3-183b" type="max"/>
+        <constraint type="min" value="0" field="selections" scope="roster" shared="true" id="8238-0f05-4ec3-4cd1" includeChildSelections="true"/>
+      </constraints>
+      <profiles>
+        <profile id="6970-0f33-92c6-fcca" name="Mizuko" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">2</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">3</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">3</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">*</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">5 OOOOO</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="0860-fb0f-16d0-d7e9" name="Ki Feats" hidden="false">
+          <infoLinks>
+            <infoLink id="42a1-58d0-2dc0-7db3" name="Fire Shield" hidden="false" targetId="e803-32f8-cdfe-c826" type="infoGroup"/>
+            <infoLink id="2436-6123-a107-17cb" name="Idolise" hidden="false" targetId="1fc9-1c80-6504-6e24" type="infoGroup"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="6b82-780f-072e-f546" name="Traits" hidden="false">
+          <profiles>
+            <profile id="cd7e-32b8-dccf-cca4" name="Mizuko" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Bravery, Dodge (1), Immune [Fire], Ranged Defence (2)</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="5294-3a5d-3385-17e7" name="Bravery" hidden="false" targetId="f9b2-38d2-7cda-de6e" type="rule"/>
+            <infoLink id="beaf-8a64-0079-c8aa" name="Dodge " hidden="false" targetId="14d5-d459-5d8a-c73e" type="rule"/>
+            <infoLink id="4259-d2c8-900d-f016" name="Immune" hidden="false" targetId="ea08-b25e-0ea8-af73" type="rule"/>
+            <infoLink id="5bed-00cf-6c11-43ed" name="Ranged Defence " hidden="false" targetId="9b8d-9ca9-e25d-3988" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="dc7e-b919-0e88-5c57" name="Melee Weapon" hidden="false">
+          <profiles>
+            <profile id="6c28-9ed2-9d98-06b0" name="Fire Magic" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+2</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Fire (1/1)</characteristic>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Push Defence (0)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="001e-510f-ec81-3a28" name="Fire" hidden="false" targetId="2422-40b7-254f-f6f1" type="rule"/>
+            <infoLink id="4811-0a4a-b863-8be0" name="Push Defence" hidden="false" targetId="74fc-a971-d9c2-278c" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="fec6-f561-d3c9-ce4c" name="Ranged Weapon" hidden="false">
+          <profiles>
+            <profile id="9a9e-e210-7368-861b" name="Fire Magic" hidden="false" typeId="7e20-258e-bf92-18f9" typeName="Ranged Weapon">
+              <characteristics>
+                <characteristic name="Ranged Weapon Strength" typeId="15aa-b6bd-6923-271f">+1</characteristic>
+                <characteristic name="Range Bands" typeId="be6a-50c6-d691-e2e9">2/4/6</characteristic>
+                <characteristic name="Traits" typeId="3410-4428-ef91-eb61">Fire (1/1)</characteristic>
+                <characteristic name="Specials" typeId="cdaf-b6ac-89d4-39ef"/>
+                <characteristic name="Unique Effects" typeId="3bf8-6525-f003-4990"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink name="Fire" id="ba13-6eb9-3fe3-fcc4" hidden="false" type="rule" targetId="2422-40b7-254f-f6f1"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="1553-5343-06fd-03b7" name="Unique Effects" hidden="false">
+          <profiles>
+            <profile id="f284-980f-f7bc-8c6e" name="Unique Effects" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">This model may only Target Dragon models with its Idolise Feat, this includes &quot;Su&quot; cost Dragon models.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </infoGroup>
+      </infoGroups>
+      <categoryLinks>
+        <categoryLink id="39c1-a7d6-d2bd-2651" name="Faction: Prefecture of Ryu" hidden="false" targetId="7532-4f60-381d-2941" primary="false"/>
+        <categoryLink id="e238-37a5-c176-c047" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
+        <categoryLink name="Okami" hidden="false" id="649b-f790-db29-492f" targetId="9b5c-5a83-6542-3e28" primary="false"/>
+        <categoryLink name="Shisai" hidden="false" id="155d-1c5a-5e3c-759f" targetId="a485-b6b0-b58e-a3a1" primary="false"/>
+        <categoryLink name="Reference Cards" hidden="false" id="6936-8358-5667-79b9" targetId="5073-f00b-a8f6-5e3b" primary="true"/>
+      </categoryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0"/>
+      </costs>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set" value="1" field="8238-0f05-4ec3-4cd1"/>
+            <modifier type="set" value="false" field="hidden"/>
+          </modifiers>
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="862f-a783-a461-a837" shared="true" includeChildSelections="true" childName="Mizuko &amp; Shōgo-Ryu"/>
+          </conditions>
+        </modifierGroup>
+      </modifierGroups>
+    </selectionEntry>
+    <selectionEntry id="5553-1b32-bccb-0ec7" name="Shōgo-Ryu" hidden="true" collective="false" import="true" type="model">
+      <constraints>
+        <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fbd9-f778-5059-85f1" type="max"/>
+        <constraint type="min" value="0" field="selections" scope="roster" shared="true" id="e151-b9ff-43c5-7548" includeChildSelections="true"/>
+      </constraints>
+      <profiles>
+        <profile id="11ee-9551-dc7d-9753" name="Shōgo-Ryu" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">3</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33">3</characteristic>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">5</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac">3</characteristic>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">0</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c">3</characteristic>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">*</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">10 OOOOO OOOOO</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Large 50mm</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="712f-6ae2-df95-9a74" name="Ki Feats" hidden="false">
+          <infoLinks>
+            <infoLink id="98be-3d40-aa58-7582" name="Eight Petal Comet" hidden="false" targetId="85e7-1c65-00e8-3a3b" type="infoGroup"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="f04e-6fb3-a755-845a" name="Traits" hidden="false">
+          <profiles>
+            <profile id="510f-d42f-6a90-148b" name="Shōgo-Ryu" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Cloudwalk, Fear (5), Fearless, Immune [Fire, Prone], Mettle (1), Ranged Defence (2), Sixth Sense, Spirit (3)</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="111b-7b7d-be3e-067a" name="Spirit" hidden="false" targetId="a9ba-9904-7d29-7bcb" type="rule"/>
+            <infoLink id="4dfc-fdc4-4dca-dd9b" name="Cloudwalk" hidden="false" targetId="538c-1266-626b-fcc9" type="rule"/>
+            <infoLink id="7598-67da-0ddd-d0df" name="Fear" hidden="false" targetId="3586-4583-7f10-1f31" type="rule"/>
+            <infoLink id="3cc8-d141-5edc-a146" name="Fearless" hidden="false" targetId="5d6f-1746-9080-aca5" type="rule"/>
+            <infoLink id="350b-fd09-ae61-4294" name="Immune" hidden="false" targetId="ea08-b25e-0ea8-af73" type="rule"/>
+            <infoLink id="7f4d-503e-c5d8-57da" name="Mettle" hidden="false" targetId="9598-efc3-51c7-5811" type="rule"/>
+            <infoLink id="d30b-2608-6fe8-8687" name="Sixth Sense" hidden="false" targetId="ec49-3908-f1d1-8de2" type="rule"/>
+            <infoLink id="1293-b4ee-7fbb-20b4" name="Ranged Defence " hidden="false" targetId="9b8d-9ca9-e25d-3988" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="fe0a-3c8f-172f-ac53" name="Melee Weapon" hidden="false">
+          <profiles>
+            <profile id="e1e5-10ea-8009-d640" name="Bite" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+2</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Fire (1/1), Pierce (1), Sharp (1)</characteristic>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Push Defence (0), Throw Attack (1)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="c333-2526-a284-7a5a" name="Fire" hidden="false" targetId="2422-40b7-254f-f6f1" type="rule"/>
+            <infoLink id="bd05-d88f-8df7-810f" name="Sharp " hidden="false" targetId="6092-9fb5-5196-d1eb" type="rule"/>
+            <infoLink id="b5db-7b9c-5e66-b299" name="Throw Attack" hidden="false" targetId="e4a9-1967-fb91-ce07" type="rule"/>
+            <infoLink id="d14c-e96a-ba98-7eb0" name="Push Defence" hidden="false" targetId="74fc-a971-d9c2-278c" type="rule"/>
+            <infoLink id="8b1c-f73c-d2f8-0859" name="Pierce " hidden="false" targetId="39e4-14d7-5533-6e67" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="252c-6baf-ac2b-33fd" name="Ranged Weapon" hidden="false">
+          <profiles>
+            <profile id="add4-092d-d62a-2bc0" name="Fire Breath" hidden="false" typeId="7e20-258e-bf92-18f9" typeName="Ranged Weapon">
+              <characteristics>
+                <characteristic name="Ranged Weapon Strength" typeId="15aa-b6bd-6923-271f">+2</characteristic>
+                <characteristic name="Range Bands" typeId="be6a-50c6-d691-e2e9">2/4/6</characteristic>
+                <characteristic name="Traits" typeId="3410-4428-ef91-eb61">Fire (1/1)</characteristic>
+                <characteristic name="Specials" typeId="cdaf-b6ac-89d4-39ef"/>
+                <characteristic name="Unique Effects" typeId="3bf8-6525-f003-4990"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink name="Fire" id="c970-760c-8cc3-8faf" hidden="false" type="rule" targetId="2422-40b7-254f-f6f1"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="6fe8-7d1c-af03-ccf6" name="Unique Effects" hidden="false">
+          <profiles>
+            <profile id="20a9-d789-144c-eb98" name="Inhale" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">This model may perform a Wait Action to gain Range 4/8/12 and Strong on its Fire Breath weapon.</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="7863-e24d-b670-f744" name="Unique Effects" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">If a Mizuko that you own is removed from play, also remove this model from play.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink name="Strong" id="8e73-3d38-4b0e-6a1e" hidden="false" type="rule" targetId="00b5-3637-d48a-807e"/>
+          </infoLinks>
+        </infoGroup>
+      </infoGroups>
+      <categoryLinks>
+        <categoryLink id="21e8-9b1f-d487-5f5c" name="Faction: Prefecture of Ryu" hidden="false" targetId="7532-4f60-381d-2941" primary="false"/>
+        <categoryLink id="e621-b7a1-2dbc-c03d" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
+        <categoryLink id="e508-f6e6-f314-82dc" name="Dragon" hidden="false" targetId="6101-8a8b-fc84-7582" primary="false"/>
+        <categoryLink name="Okami" hidden="false" id="4ae8-ba8f-9456-b0c8" targetId="9b5c-5a83-6542-3e28" primary="false"/>
+        <categoryLink name="Reference Cards" hidden="false" id="34cb-3b6f-cd89-3cf1" targetId="5073-f00b-a8f6-5e3b" primary="true"/>
+      </categoryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0"/>
+      </costs>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set" value="1" field="e151-b9ff-43c5-7548"/>
+            <modifier type="set" value="false" field="hidden"/>
+          </modifiers>
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="862f-a783-a461-a837" shared="true" includeChildSelections="true" childName="Mizuko &amp; Shōgo-Ryu"/>
+          </conditions>
+        </modifierGroup>
+      </modifierGroups>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Communion with the Dragon" hidden="true" id="87f5-c518-0d8c-afdb">
+      <categoryLinks>
+        <categoryLink name="Communal Cards" hidden="false" id="5437-ca3e-198e-384c" targetId="69a2-397e-9d7b-a47d" primary="true"/>
+      </categoryLinks>
+      <profiles>
+        <profile name="Communion with the Dragon" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card" hidden="false" id="a603-80ba-6400-858e">
+          <characteristics>
+            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">When an Okami model would generate Ki Tokens (or otherwise gain Ki Tokens) instead place those Ki Tokens on this card.
+Whenever an Okami model would spend Ki Tokens you may spend them from this card to pay for Ki Feats, Boosts or other effects.
+Friendly Okami may use feats listed on this card.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Object of Devotion" id="f0e9-190a-0765-1478" hidden="false" type="infoGroup" targetId="8a60-2ee7-29f0-b9ce"/>
+        <infoLink name="Awakening" id="a897-0dcc-7ba9-4d02" hidden="false" type="infoGroup" targetId="5ee5-ad92-9acd-ed15"/>
+      </infoLinks>
+      <constraints>
+        <constraint type="min" value="0" field="selections" scope="roster" shared="true" id="c374-25c2-c19c-53c9" includeChildSelections="true"/>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="95c3-e614-d5f5-fc35" includeChildSelections="true"/>
+      </constraints>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set" value="1" field="c374-25c2-c19c-53c9"/>
+            <modifier type="set" value="false" field="hidden"/>
+          </modifiers>
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="862f-a783-a461-a837" shared="true" includeChildSelections="true" childName="Mizuko &amp; Shōgo-Ryu"/>
+          </conditions>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
   </selectionEntries>
   <entryLinks>
