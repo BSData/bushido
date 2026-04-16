@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="b489-b304-948d-52d0" name="Library-Ronin" revision="61" battleScribeVersion="2.03" library="true" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="18" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="b489-b304-948d-52d0" name="Library-Ronin" revision="62" battleScribeVersion="2.03" library="true" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="18" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <selectionEntries>
     <selectionEntry id="4e24-3a7e-77bc-dfed" name="Balance" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -3136,7 +3136,7 @@ If this model becomes Prone, it loses all Ki tokens and gains a Spirit Block Mar
           <profiles>
             <profile id="09b9-0a66-6c20-85da" name="Nightwing Swarm" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
               <characteristics>
-                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Agile, Cloudwalk, Durable, Evasive, Flank, Immune [Prone], Insignificant, Ranged Defence (1), Regenerate (1), Sixth Sense, Swarm, Tiny, Tireless</characteristic>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Agile, Cloudwalk, Durable, Evasive, Flank, Immune [Prone], Insignificant, Ranged Defence (1), Sixth Sense, Swarm, Tiny, Tireless</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -3161,20 +3161,24 @@ If this model becomes Prone, it loses all Ki tokens and gains a Spirit Block Mar
             <profile id="ab63-f2ff-9d0f-9f84" name="Bats" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
               <characteristics>
                 <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">-2</characteristic>
-                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Poison (1/1)</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e"/>
                 <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d"/>
                 <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
               </characteristics>
             </profile>
           </profiles>
-          <infoLinks>
-            <infoLink id="72f9-a81a-bfcf-5b3d" name="Poison " hidden="false" targetId="7290-85f4-42cf-0b75" type="rule"/>
-          </infoLinks>
         </infoGroup>
         <infoGroup id="209f-ecdb-bdf4-c0fc" name="Unique Effects" hidden="false">
           <infoLinks>
             <infoLink id="2e8e-7adf-fc6b-34cb" name="Swarm" hidden="false" targetId="4fab-5586-e907-eed3" type="profile"/>
           </infoLinks>
+          <profiles>
+            <profile name="Unique Effects" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects" hidden="false" id="0da2-6bdf-ef78-d387">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">If this model deals any Damage in a Melee Exchange it heals one Wound. </characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
         </infoGroup>
       </infoGroups>
       <categoryLinks>
