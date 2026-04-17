@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="62e4-ab79-1c4c-9ffe" name="Bushido: Risen Sun" revision="27" battleScribeVersion="2.03" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem">
+<gameSystem id="62e4-ab79-1c4c-9ffe" name="Bushido: Risen Sun" revision="28" battleScribeVersion="2.03" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem">
   <costTypes>
     <costType id="a111-8656-5c05-7415" name=" Rice" defaultCostLimit="-1" hidden="false"/>
   </costTypes>
@@ -353,6 +353,12 @@
       </constraints>
     </categoryEntry>
     <categoryEntry name="Cycle" id="ecbb-5575-0b01-70a9" hidden="false"/>
+    <categoryEntry name="Faction Curse Cards" id="a74a-2619-ccf4-7198" hidden="false">
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="543e-66fc-dc13-58f1" includeChildSelections="true"/>
+      </constraints>
+    </categoryEntry>
+    <categoryEntry name="Faction: Horse Lords of Ataka" id="5ca2-c006-34e5-5aee" hidden="false"/>
   </categoryEntries>
   <forceEntries>
     <forceEntry id="2150-40b1-52f8-4a8a" name="Risen Sun" hidden="false">
@@ -361,13 +367,14 @@
         <categoryLink id="2870-03c0-ca95-7aea" name="Reference Cards" hidden="false" targetId="5073-f00b-a8f6-5e3b" primary="false"/>
         <categoryLink id="dadf-3cd4-8b66-0628" name="Faction Profile Cards" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="false"/>
         <categoryLink id="d48f-9d06-ae06-9b04" name="Faction Event Cards" hidden="false" targetId="d360-71aa-ca22-ba3c" primary="false"/>
-        <categoryLink id="1635-26df-8838-e312" name="Faction Terrain Cards" hidden="false" targetId="bbd2-e0c8-797a-3f03" primary="false"/>
-        <categoryLink id="c8ef-4997-14c3-a834" name="Faction Theme Cards" hidden="false" targetId="477a-e693-0888-08f7" primary="false"/>
-        <categoryLink id="24e1-914a-6b91-3f09" name="Ronin Profile Cards" hidden="false" targetId="9fba-f50b-c8f7-8396" primary="false"/>
-        <categoryLink id="2c00-5837-3405-ac71" name="Ronin Event Cards" hidden="false" targetId="7638-6ad1-8829-91db" primary="false"/>
-        <categoryLink id="ad2b-0eba-120b-5490" name="Ronin Terrain Cards" hidden="false" targetId="3df8-0340-a4a1-a8be" primary="false"/>
-        <categoryLink id="5877-1a83-38ae-468e" name="Ronin Theme Cards" hidden="false" targetId="ff27-a550-2dd1-e2e3" primary="false"/>
-        <categoryLink id="9a4c-7339-1ee3-5ae8" name="Filters" hidden="false" targetId="a614-eb85-43c8-7869" primary="false"/>
+        <categoryLink name="Curse" hidden="false" id="502b-1309-0d61-bfdc" targetId="a74a-2619-ccf4-7198"/>
+        <categoryLink name="Faction Terrain Cards" hidden="false" id="1635-26df-8838-e312" targetId="bbd2-e0c8-797a-3f03" primary="false"/>
+        <categoryLink name="Faction Theme Cards" hidden="false" id="c8ef-4997-14c3-a834" targetId="477a-e693-0888-08f7" primary="false"/>
+        <categoryLink name="Ronin Profile Cards" hidden="false" id="24e1-914a-6b91-3f09" targetId="9fba-f50b-c8f7-8396" primary="false"/>
+        <categoryLink name="Ronin Event Cards" hidden="false" id="2c00-5837-3405-ac71" targetId="7638-6ad1-8829-91db" primary="false"/>
+        <categoryLink name="Ronin Terrain Cards" hidden="false" id="ad2b-0eba-120b-5490" targetId="3df8-0340-a4a1-a8be" primary="false"/>
+        <categoryLink name="Ronin Theme Cards" hidden="false" id="5877-1a83-38ae-468e" targetId="ff27-a550-2dd1-e2e3" primary="false"/>
+        <categoryLink name="Filters" hidden="false" id="9a4c-7339-1ee3-5ae8" targetId="a614-eb85-43c8-7869" primary="false"/>
       </categoryLinks>
     </forceEntry>
   </forceEntries>
