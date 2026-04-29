@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="1ac7-2939-2874-7530" name="Cult of Yurei" revision="60" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="19" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="1ac7-2939-2874-7530" name="Cult of Yurei" revision="61" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="19" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <selectionEntries>
     <selectionEntry id="5048-3a52-5689-6d0b" name="Drain Spirit" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -9320,6 +9320,101 @@ Requirement [Infestation! Theme]</characteristic>
         </modifier>
       </modifiers>
     </selectionEntry>
+    <selectionEntry id="4569-2859-f4f6-9b2b" name="Gyō Tochi" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="abc1-93da-2f5a-dab4" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="538d-4d36-c07f-9024" type="atLeast"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="0f5f-ba99-db81-8d97" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="true" id="558f-afa6-aa47-5e52" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="7363-112c-cbb7-49c5" name="Gyō Tochi" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">2</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">2</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">2</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">6</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">5 OOOOO</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="beb5-4f3f-07eb-0270" name="Traits" hidden="false">
+          <profiles>
+            <profile id="2e8f-3566-2498-ebfc" name="Gyō Tochi" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Cowardly, Co-ordinated Attack [Rat], Lightfooted</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="739a-2e9b-bb50-72c6" name="Lightfooted" hidden="false" targetId="57d2-cd57-07f9-addf" type="rule"/>
+            <infoLink id="b857-9582-e45d-87a2" name="Cowardly" hidden="false" targetId="c8d8-d1c7-905b-f971" type="rule"/>
+            <infoLink id="6856-87d0-4ea0-c4a8" name="Co-ordinated Attack" hidden="false" targetId="2337-7bcc-c1f2-f2bd" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="2356-a43a-679f-f8d0" name="Ki Feats" hidden="false">
+          <infoLinks>
+            <infoLink id="68b4-9846-d80a-57db" name="Idolise" hidden="false" targetId="1fc9-1c80-6504-6e24" type="infoGroup"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="1de8-c4af-3d8b-f133" name="Melee Weapon" hidden="false">
+          <profiles>
+            <profile id="34af-5ea8-11f5-a420" name="Polearm" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+0</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Reach</characteristic>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Powerful Attack (1)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="a075-cf71-60f6-e559" name="Reach" hidden="false" targetId="e28e-d5dd-a262-1101" type="rule"/>
+            <infoLink id="5f17-e18c-f288-72a5" name="Powerful Attack" hidden="false" targetId="d56a-058d-95d9-5b60" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup name="Unique Effects" id="e1fd-ba07-57b6-2ae0" hidden="false">
+          <profiles>
+            <profile name="Unique Effects" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects" hidden="false" id="49a6-44fc-5207-53fa">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">This model may only Target Rat models with its Idolise Ki Feat.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </infoGroup>
+      </infoGroups>
+      <categoryLinks>
+        <categoryLink id="b92b-9022-d3ae-147a" name="Faction: Cult of Yurei" hidden="false" targetId="0d0a-4c02-8dce-676b" primary="false"/>
+        <categoryLink id="a8bf-1a45-11df-e2b4" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
+        <categoryLink id="f56d-7d99-1cbc-cd97" name="Yokai" hidden="false" targetId="8a19-8c2b-46a8-4086" primary="false"/>
+        <categoryLink id="f237-21b6-654b-b62b" name="Faction Profile Cards" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
+        <categoryLink id="4b6d-954a-934e-5d15" name="Nezumi" hidden="false" targetId="aac6-6a8a-d6d3-e074" primary="false"/>
+        <categoryLink id="5135-d197-4b1f-4621" name="Rat" hidden="false" targetId="1b63-9d2c-9724-21b5" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="5b6f-3574-5e0d-23b0" name="Enhancements" hidden="false" collective="false" import="true" targetId="ef93-ecd4-88c1-9224" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="9"/>
+      </costs>
+    </selectionEntry>
   </selectionEntries>
   <entryLinks>
     <entryLink id="5358-9c72-b23c-c2e3" name="Baichi" hidden="false" collective="false" import="true" targetId="d998-94b8-fd53-f8ce" type="selectionEntry">
@@ -9684,6 +9779,22 @@ Requirement [Infestation! Theme]</characteristic>
     <entryLink import="true" name="Somabo" hidden="true" id="b81a-84b5-baba-362a" type="selectionEntry" targetId="77b7-4d40-c62b-0a4b"/>
     <entryLink import="true" name="Tozoku" hidden="true" id="4154-7f50-a53b-6c61" type="selectionEntry" targetId="1659-29d3-dacb-8261"/>
     <entryLink import="true" name="Gocho" hidden="true" id="2c9d-170f-fd35-e462" type="selectionEntry" targetId="34cb-ec1a-36a2-e41c"/>
+    <entryLink id="751c-a040-ec18-f0dc" name="Numachi" hidden="false" collective="false" import="true" targetId="898d-4af2-2802-ee85" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="8a75-ceb1-bdf5-c64b" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="5434-3de1-1033-ca71" name="Ronin Profile Cards" hidden="false" targetId="9fba-f50b-c8f7-8396" primary="true"/>
+      </categoryLinks>
+    </entryLink>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="9449-ed36-7d0f-1eeb" name="Large Rat Swarm" hidden="false" collective="false" import="true" type="model">

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="b489-b304-948d-52d0" name="Library-Ronin" revision="62" battleScribeVersion="2.03" library="true" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="18" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="b489-b304-948d-52d0" name="Library-Ronin" revision="63" battleScribeVersion="2.03" library="true" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="18" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <selectionEntries>
     <selectionEntry id="4e24-3a7e-77bc-dfed" name="Balance" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -3175,7 +3175,7 @@ If this model becomes Prone, it loses all Ki tokens and gains a Spirit Block Mar
           <profiles>
             <profile name="Unique Effects" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects" hidden="false" id="0da2-6bdf-ef78-d387">
               <characteristics>
-                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">If this model deals any Damage in a Melee Exchange it heals one Wound. </characteristic>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">If this model deals any Damage in a Melee Exchange it heals one Wound.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -10153,11 +10153,11 @@ This model can make only one Bird Strike Ranged Attack per turn.</characteristic
           </profiles>
           <infoLinks>
             <infoLink name="Aloof" id="a0a2-d7a0-f546-4c81" hidden="false" type="rule" targetId="5101-70fc-eca4-d99b"/>
-            <infoLink name="Cloudwalk" id="a429-4984-88a9-961f" hidden="false" type="rule" targetId="538c-1266-626b-fcc9"/>
+            <infoLink name="Camouflage" id="a429-4984-88a9-961f" hidden="false" type="rule" targetId="9010-4983-c98c-1751"/>
             <infoLink name="Sixth Sense" id="34ec-b2fa-cfce-87fe" hidden="false" type="rule" targetId="ec49-3908-f1d1-8de2"/>
             <infoLink name="Aware" id="77cd-7d97-b773-6686" hidden="false" type="rule" targetId="ff4a-6b14-09dd-2343"/>
             <infoLink name="Soulless" id="e4cd-c9d6-8395-0a1c" hidden="false" type="rule" targetId="af31-aad0-fcea-9590"/>
-            <infoLink name="Aloof" id="8b71-0dbc-655b-0a53" hidden="false" type="rule" targetId="5101-70fc-eca4-d99b"/>
+            <infoLink name="Cloudwalk" id="8192-28fd-7a53-154a" hidden="false" type="rule" targetId="538c-1266-626b-fcc9"/>
           </infoLinks>
         </infoGroup>
         <infoGroup name="Melee Weapon" id="32fe-02cc-9b8f-d117" hidden="false">
@@ -11571,6 +11571,207 @@ On a successful ranged attack instead of a Damage Roll, the Target gains a Blee
       <infoLinks>
         <infoLink id="a236-f51e-2fb6-d28e" hidden="false" type="rule" targetId="ea08-b25e-0ea8-af73" name="Immune"/>
       </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="model" import="true" name="Yūkan&apos;na" hidden="false" id="0693-eee4-8171-595e">
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="16"/>
+      </costs>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="477a-e693-0888-08f7" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="9402-edcc-93a2-aef1" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <condition type="equalTo" value="1" field="selections" scope="roster" childId="b94d-f7cb-a84c-4077" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink name="Ronin Profile Cards" hidden="false" id="60e0-cd62-5d77-c77f" targetId="9fba-f50b-c8f7-8396" primary="true"/>
+        <categoryLink name="Unique" hidden="false" id="88c7-402c-a067-c1f2" targetId="afd4-8041-e359-223c" primary="false"/>
+        <categoryLink name="Imperial" hidden="false" id="2845-a1a3-b4e0-08de" targetId="1a5c-7165-4266-4fbc" primary="false"/>
+        <categoryLink name="Samurai" hidden="false" id="9251-082e-2fc2-5b66" targetId="e12a-f782-3281-7444" primary="false"/>
+        <categoryLink name="Prince" hidden="false" id="edf1-6554-067b-08d9" targetId="2724-c29b-02b4-8309" primary="false"/>
+      </categoryLinks>
+      <infoGroups>
+        <infoGroup name="Ki Feats" id="1a07-20a4-81f5-a1d7" hidden="false">
+          <infoLinks>
+            <infoLink name="Imperial Favour" id="f7db-d4fb-0a75-3998" hidden="false" type="infoGroup" targetId="f1f9-8cca-3eac-7509"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup name="Melee Weapons" id="733f-70e3-e366-2519" hidden="false">
+          <profiles>
+            <profile name="Katana" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon" hidden="false" id="4308-06c3-aa1d-bc45">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+1</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Parry (1)</characteristic>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Push Defence (0), Counterstrike Defence (1)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+            <profile name="Sword" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon" hidden="false" id="0ebf-88b9-4779-dabf">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+1</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Feint (1)</characteristic>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Powerful Attack (1), Combo Attack (1)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink name="Parry" id="9294-a059-6beb-2e0b" hidden="false" type="rule" targetId="c7c2-b36e-7952-c79b"/>
+            <infoLink name="Combo Attack " id="8065-d90e-f2bf-7c92" hidden="false" type="rule" targetId="78ab-6a94-be24-8f74"/>
+            <infoLink name="Powerful Attack" id="43c2-225f-3282-3b98" hidden="false" type="rule" targetId="d56a-058d-95d9-5b60"/>
+            <infoLink name="Push Defence" id="6f04-70fb-9803-0b77" hidden="false" type="rule" targetId="74fc-a971-d9c2-278c"/>
+            <infoLink name="Counterstrike Defence " id="8b72-8c76-22dc-a614" hidden="false" type="rule" targetId="136e-4c77-dc59-4c6e"/>
+            <infoLink name="Feint" id="9b49-f54e-c3c4-8f14" hidden="false" type="rule" targetId="38b0-4d97-3c4c-8d96"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup name="Traits" id="fdc2-da63-b644-f8ed" hidden="false">
+          <profiles>
+            <profile name="Traits" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits" hidden="false" id="a8d1-43b9-cfc2-551c">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Armour (1), Fearless, Intimidate, Prowess [Melee ](1)</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink name="Prowess " id="2993-88b6-588c-3855" hidden="false" type="rule" targetId="75ef-327a-cd08-a248"/>
+            <infoLink name="Fearless" id="86d9-d395-4b07-bc7f" hidden="false" type="rule" targetId="5d6f-1746-9080-aca5"/>
+            <infoLink name="Armour" id="5b75-b483-7b55-c9da" hidden="false" type="rule" targetId="8615-1c63-2242-5746"/>
+            <infoLink name="Intimidate" id="f433-4149-d1f4-46a9" hidden="false" type="rule" targetId="f57d-b137-75c8-7329"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup name="Unique Effects" id="98d1-cc6a-0b4a-20e4" hidden="false">
+          <profiles>
+            <profile name="Unique Effects" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects" hidden="false" id="f048-0553-39a6-b5f8">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">This model wins all tie breaks regardless of the usual rules for Conflict Resolution.
+If both models have this ability, resolve the tie break normally.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </infoGroup>
+      </infoGroups>
+      <profiles>
+        <profile name="Yūkan&apos;na" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile" hidden="false" id="d441-3b0a-79b2-07d1">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">2</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">2</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">6</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">6 OOOOO O</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 40mm</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <entryLinks>
+        <entryLink import="true" name="Enhancements" hidden="false" id="c646-1a34-3ffe-03cb" collective="false" targetId="f486-4498-03e3-c397" type="selectionEntryGroup"/>
+      </entryLinks>
+    </selectionEntry>
+    <selectionEntry type="model" import="true" name="Numachi" hidden="false" id="898d-4af2-2802-ee85">
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="10"/>
+      </costs>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="477a-e693-0888-08f7" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="9402-edcc-93a2-aef1" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <condition type="equalTo" value="1" field="selections" scope="roster" childId="b94d-f7cb-a84c-4077" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink name="Ronin Profile Cards" hidden="false" id="17a3-e6fe-3b30-e887" targetId="9fba-f50b-c8f7-8396" primary="true"/>
+        <categoryLink name="Unknown" hidden="false" id="e449-c369-00ee-d565" targetId="681b-423e-83dd-d9bd" primary="false"/>
+        <categoryLink name="Unique" hidden="false" id="1a4a-1aaf-8152-e34d" targetId="afd4-8041-e359-223c" primary="false"/>
+      </categoryLinks>
+      <infoGroups>
+        <infoGroup name="Ki Feats" id="3bbb-35c1-201d-3485" hidden="false">
+          <infoLinks>
+            <infoLink name="Mutation" id="313f-6d4c-0be3-02df" hidden="false" type="infoGroup" targetId="8179-8061-a013-cbab"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup name="Melee Weapon" id="68b0-5fd0-2579-4905" hidden="false">
+          <profiles>
+            <profile name="Claw" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon" hidden="false" id="37f1-f6eb-da59-86ca">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">X-2</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Chain Weapon (1)</characteristic>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Grapple Attack (1)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink name="Chain Weapon" id="ef25-4698-30a1-f84a" hidden="false" type="rule" targetId="84f9-d10e-0e9f-d79c"/>
+            <infoLink name="Grapple Attack" id="9145-f026-b516-8616" hidden="false" type="rule" targetId="1b9a-c71d-0a30-8d0d"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup name="Traits" id="e1c7-06a6-2a15-d736" hidden="false">
+          <profiles>
+            <profile name="Traits" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits" hidden="false" id="2dc1-ac7c-b386-573a">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Aware, Fear (X+2), Lightfooted, Steadfast</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink name="Lightfooted" id="b63a-ba1c-3f91-2989" hidden="false" type="rule" targetId="57d2-cd57-07f9-addf"/>
+            <infoLink name="Fear" id="af7a-b896-8182-3e76" hidden="false" type="rule" targetId="3586-4583-7f10-1f31"/>
+            <infoLink name="Aware" id="3874-3861-63e1-816e" hidden="false" type="rule" targetId="ff4a-6b14-09dd-2343"/>
+            <infoLink name="Steadfast" id="65f0-ad66-5f60-6561" hidden="false" type="rule" targetId="95e7-3178-c29b-013c"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup name="Unique Effects" id="4ac5-9285-a99f-0047" hidden="false">
+          <profiles>
+            <profile name="Unique Effects" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects" hidden="false" id="f8d9-eed6-d854-aaee">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">Whenever this model is required to roll a Ki Test you may choose to roll for this model as if for a Size Test instead.
+For this model&apos;s test; apply any modifiers, re-rolls, substitutions, bonuses or penalties as applies to Size Test.
+This does not change the Challenge Number and the Opponent rolls as normal if an Opposed test.
+
+Many of this model&apos;s Statistics and Traits values are variable. X is equal to the number of Ki Tokens on this model&apos;s profile card.
+
+This model cannot be Channeled to or Leeched from.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </infoGroup>
+      </infoGroups>
+      <profiles>
+        <profile name="Numachi" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile" hidden="false" id="9aea-5d46-aca0-52ab">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">2</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33">3</characteristic>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac">3</characteristic>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">1</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c">3</characteristic>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">4</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">6 OOOOO O</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Medium 40mm</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <entryLinks>
+        <entryLink import="true" name="Enhancements" hidden="false" id="1c93-d25f-823d-f134" collective="false" targetId="f486-4498-03e3-c397" type="selectionEntryGroup"/>
+      </entryLinks>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
