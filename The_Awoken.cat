@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="7615-d14e-1ab8-41ed" name="The Awoken" revision="23" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="19" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="7615-d14e-1ab8-41ed" name="The Awoken" revision="24" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="19" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <selectionEntries>
     <selectionEntry id="357b-ee70-73b0-9b34" name="Joyless Smiles and Dark Eyes" hidden="false" collective="false" import="true" type="upgrade">
       <profiles>
@@ -1350,7 +1350,6 @@ If this model is within a Webbed Ground Terrain feature then it does not lose a
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Endless Procession of Arachnid Presence" hidden="false" id="47d0-45bd-5094-30bc" collective="false">
       <constraints>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1484-007a-fb51-2015" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="1983-c7b1-29b5-b3fe" includeChildSelections="true"/>
       </constraints>
       <infoGroups>
@@ -1417,8 +1416,8 @@ This model may be included in any Awoken Theme Warbands.</characteristic>
       <categoryLinks>
         <categoryLink name="Faction Profile Cards" hidden="false" id="92a5-3ac4-2013-f3c1" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
         <categoryLink name="Animal" hidden="false" id="23a7-ae7c-fab3-b328" targetId="c382-9ab3-9924-e30a" primary="false"/>
-        <categoryLink name="Snake" hidden="false" id="477a-ee97-8771-97a7" targetId="5c9f-48df-87d2-af68" primary="false"/>
         <categoryLink name="Non-Unique" hidden="false" id="d212-22ea-7139-9287" targetId="d181-219d-3add-d47b" primary="false"/>
+        <categoryLink name="Yokai" hidden="false" id="52c3-39b4-00f8-42dc" targetId="8a19-8c2b-46a8-4086" primary="false"/>
       </categoryLinks>
       <entryLinks>
         <entryLink import="true" name="Procession" hidden="false" id="75c0-a6e6-76fa-385a" collective="false" targetId="c94b-258e-7583-8e43" type="selectionEntry">
@@ -2768,6 +2767,199 @@ This is a Trap Effect.</characteristic>
       <constraints>
         <constraint type="max" value="1" field="selections" scope="force" shared="true" id="5e08-938a-a998-ab11" includeChildSelections="true" includeChildForces="true"/>
       </constraints>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Frog Symbiosis" hidden="false" id="6105-d469-bb33-cf9b" collective="false">
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="e654-f0df-c2a0-b291" includeChildSelections="true"/>
+      </constraints>
+      <infoGroups>
+        <infoGroup name="Melee Weapon" id="4a95-08cd-2e76-0039" hidden="false">
+          <profiles>
+            <profile name="Unarmed" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon" hidden="false" id="c1fd-d351-3d00-460f">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">-2</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e"/>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d"/>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+        </infoGroup>
+        <infoGroup name="Unique Effects" id="7987-b0dc-dff8-8d27" hidden="false">
+          <profiles>
+            <profile name="Leap" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects" hidden="false" id="906e-d863-157c-1999">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">At the start of this model&apos;s activation, you may place it anywhere within 3&quot; of its current location but not into BtB or the ZoC of an Enemy model.
+During an Enemy model&apos;s activation, when that model moves into BtB with a Friendly Kimura model within 3&quot;, if this model is not in BtB with an Enemy model, this model can be placed into BtB with that Enemy model.
+This is a Trap effect.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Symbiosis" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects" hidden="false" id="45b0-42e9-ab84-5686">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">Frog Symbiosis may be recruited into any Warband that includes a Kimura model.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </infoGroup>
+      </infoGroups>
+      <categoryLinks>
+        <categoryLink name="Faction Profile Cards" hidden="false" id="63d7-be42-707a-57ca" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
+        <categoryLink name="Animal" hidden="false" id="7f70-07ea-e16e-ec61" targetId="c382-9ab3-9924-e30a" primary="false"/>
+        <categoryLink name="Non-Unique" hidden="false" id="3438-e48c-1310-a3cb" targetId="d181-219d-3add-d47b" primary="false"/>
+        <categoryLink name="Frog" hidden="false" id="408e-d1ce-c46c-1269" targetId="975f-505e-3d70-def2" primary="false"/>
+      </categoryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0"/>
+      </costs>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Jumping Frog" hidden="false" id="9e61-0bae-c400-6f3b">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1448-b932-9309-6873" includeChildSelections="false"/>
+          </constraints>
+          <costs>
+            <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2"/>
+          </costs>
+          <profiles>
+            <profile name="Jumping Frog" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile" hidden="false" id="bf56-fe33-3330-9684">
+              <characteristics>
+                <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">1</characteristic>
+                <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277"/>
+                <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">-</characteristic>
+                <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+                <characteristic name="Move" typeId="91b7-833e-fd8e-a620">3</characteristic>
+                <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+                <characteristic name="Ki" typeId="3969-9568-a914-6854">1</characteristic>
+                <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+                <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">0</characteristic>
+                <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">2 OO</characteristic>
+                <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoGroups>
+            <infoGroup name="Traits" id="2fd6-bca1-10f3-75da" hidden="false">
+              <profiles>
+                <profile name="Jumping Frog" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits" hidden="false" id="4926-a5d9-298c-ffc7">
+                  <characteristics>
+                    <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Aloof, Cloudwalk, Group, Tiny, Weak,Vengeance [Swarm]</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <infoLinks>
+                <infoLink name="Group" id="c431-f311-a6df-6f1f" hidden="false" targetId="4c02-03a1-ae7b-7821" type="rule"/>
+                <infoLink name="Aloof" id="1df7-4076-bc7e-3760" hidden="false" targetId="5101-70fc-eca4-d99b" type="rule"/>
+                <infoLink name="Vengeance" id="d721-0b53-2c48-1bd8" hidden="false" targetId="6779-0aac-2f51-f67e" type="rule"/>
+                <infoLink name="Cloudwalk" id="5915-f9d0-4d92-b3f1" hidden="false" targetId="538c-1266-626b-fcc9" type="rule"/>
+                <infoLink name="Weak" id="baad-01c9-632f-803e" hidden="false" targetId="6a0c-59fb-ff0e-aced" type="rule"/>
+                <infoLink name="Tiny" id="daf1-81cb-0377-6eea" hidden="false" targetId="335c-7f6f-9ca0-cb93" type="rule"/>
+              </infoLinks>
+            </infoGroup>
+          </infoGroups>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Lake Frog" hidden="false" id="51fb-2d63-4729-a015">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ce2e-2002-e53a-dd59" includeChildSelections="false"/>
+          </constraints>
+          <costs>
+            <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2"/>
+          </costs>
+          <profiles>
+            <profile name="Lake Frog" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile" hidden="false" id="c776-e065-2fbf-2771">
+              <characteristics>
+                <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">1</characteristic>
+                <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277"/>
+                <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">-</characteristic>
+                <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+                <characteristic name="Move" typeId="91b7-833e-fd8e-a620">3</characteristic>
+                <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+                <characteristic name="Ki" typeId="3969-9568-a914-6854">1</characteristic>
+                <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+                <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">0</characteristic>
+                <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">2 OO</characteristic>
+                <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Unique Effects" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects" hidden="false" id="ea4e-c8da-bf60-79d1">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">If this model is within Webbed Ground Terrain in the End Phase, you may remove one Webbed Ground Terrain Element from the battlefield.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoGroups>
+            <infoGroup name="Traits" id="0b63-cd32-eb37-42a8" hidden="false">
+              <profiles>
+                <profile name="Jumping Frog" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits" hidden="false" id="3362-0ba2-d251-ffcc">
+                  <characteristics>
+                    <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Aloof, Group, Tiny, Weak,Vengeance [Swarm]</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <infoLinks>
+                <infoLink name="Group" id="3822-acec-d112-5a9c" hidden="false" targetId="4c02-03a1-ae7b-7821" type="rule"/>
+                <infoLink name="Aloof" id="2e87-a679-7d3b-f8bf" hidden="false" targetId="5101-70fc-eca4-d99b" type="rule"/>
+                <infoLink name="Vengeance" id="7cd5-c7d4-8497-5353" hidden="false" targetId="6779-0aac-2f51-f67e" type="rule"/>
+                <infoLink name="Tiny" id="08bc-c059-68af-9cf0" hidden="false" targetId="335c-7f6f-9ca0-cb93" type="rule"/>
+                <infoLink name="Weak" id="a5c6-59dc-b496-e5ed" hidden="false" targetId="6a0c-59fb-ff0e-aced" type="rule"/>
+              </infoLinks>
+            </infoGroup>
+          </infoGroups>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Kyushu Spice Frog" hidden="false" id="d75e-eec5-1b95-93e6">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6b50-67e9-610f-825d" includeChildSelections="false"/>
+          </constraints>
+          <costs>
+            <cost name=" Rice" typeId="a111-8656-5c05-7415" value="2"/>
+          </costs>
+          <profiles>
+            <profile name="Kyushu Spice Frog" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile" hidden="false" id="4a2c-b081-ec04-5447">
+              <characteristics>
+                <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">1</characteristic>
+                <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277"/>
+                <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">-</characteristic>
+                <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+                <characteristic name="Move" typeId="91b7-833e-fd8e-a620">3</characteristic>
+                <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+                <characteristic name="Ki" typeId="3969-9568-a914-6854">1</characteristic>
+                <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+                <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">0</characteristic>
+                <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">2 OO</characteristic>
+                <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Unique Effects" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects" hidden="false" id="0118-347d-750f-82c8">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">When a Kimura model in BtB with this model in Webbed Ground Terrain performs a Focus Action it gains two Ki Tokens.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoGroups>
+            <infoGroup name="Traits" id="8bec-1036-62a1-37a8" hidden="false">
+              <profiles>
+                <profile name="Jumping Frog" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits" hidden="false" id="64db-20bc-31ed-f7c5">
+                  <characteristics>
+                    <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Aloof, Group, Tiny, Weak,Vengeance [Swarm]</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <infoLinks>
+                <infoLink name="Group" id="c277-1f97-aa3c-ec2b" hidden="false" targetId="4c02-03a1-ae7b-7821" type="rule"/>
+                <infoLink name="Aloof" id="6a89-29b1-6798-46db" hidden="false" targetId="5101-70fc-eca4-d99b" type="rule"/>
+                <infoLink name="Vengeance" id="3cea-8bfa-8691-ee6e" hidden="false" targetId="6779-0aac-2f51-f67e" type="rule"/>
+                <infoLink name="Tiny" id="d97f-6517-d0fe-608b" hidden="false" targetId="335c-7f6f-9ca0-cb93" type="rule"/>
+                <infoLink name="Weak" id="6f9b-8faa-064a-881a" hidden="false" targetId="6a0c-59fb-ff0e-aced" type="rule"/>
+              </infoLinks>
+            </infoGroup>
+          </infoGroups>
+        </selectionEntry>
+      </selectionEntries>
+      <modifiers>
+        <modifier type="set" value="0" field="e654-f0df-c2a0-b291">
+          <conditions>
+            <condition type="lessThan" value="1" field="selections" scope="roster" childId="a04d-f396-77a2-68a3" shared="true" includeChildSelections="true" childName="Kimura"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </selectionEntry>
   </selectionEntries>
   <entryLinks>
