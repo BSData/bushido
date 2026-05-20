@@ -1475,11 +1475,6 @@ When a model performs a Wait Action to Destroy this Terrain, it need not spend 2
             </conditionGroup>
           </conditionGroups>
         </modifier>
-        <modifier type="decrement" value="1" field="a111-8656-5c05-7415">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="roster" childId="a7ef-7094-95e5-577c" shared="true" includeChildSelections="true"/>
-          </conditions>
-        </modifier>
       </modifiers>
       <infoGroups>
         <infoGroup id="d80b-7770-aee2-b026" name="Traits" hidden="false">
@@ -2558,11 +2553,6 @@ When This model declares a Wait Action to remove a Reload Marker, they may immed
             </conditionGroup>
           </conditionGroups>
         </modifier>
-        <modifier type="decrement" value="1" field="a111-8656-5c05-7415">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="roster" childId="a7ef-7094-95e5-577c" shared="true" includeChildSelections="true"/>
-          </conditions>
-        </modifier>
       </modifiers>
       <infoGroups>
         <infoGroup id="60a5-024a-292a-ae4a" name="Traits" hidden="false">
@@ -2960,11 +2950,6 @@ You may decide the order recruited terrain (Friendly and Enemy) is Deployed.</ch
             </conditionGroup>
           </conditionGroups>
         </modifier>
-        <modifier type="decrement" value="1" field="a111-8656-5c05-7415">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="roster" childId="a7ef-7094-95e5-577c" shared="true" includeChildSelections="true"/>
-          </conditions>
-        </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5296-667d-835d-fbdb" type="max"/>
@@ -3236,11 +3221,6 @@ Whenever a Friendly model within 6&quot; of a model with a Luck Token makes a Fe
               </conditions>
             </conditionGroup>
           </conditionGroups>
-        </modifier>
-        <modifier type="decrement" value="1" field="a111-8656-5c05-7415">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="roster" childId="a7ef-7094-95e5-577c" shared="true" includeChildSelections="true"/>
-          </conditions>
         </modifier>
       </modifiers>
       <constraints>
@@ -4531,6 +4511,13 @@ This model cannot draw LoS outside of BtB.</characteristic>
       <constraints>
         <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="afea-f086-f192-f42c" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
       </constraints>
+      <modifiers>
+        <modifier type="decrement" value="1" field="a111-8656-5c05-7415">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="a7ef-7094-95e5-577c" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry id="dd57-5a6d-ddb8-4f1e" name="Loyal Kyudoka" hidden="false" collective="false" import="true" type="model">
       <categoryLinks>
@@ -4546,10 +4533,18 @@ This model cannot draw LoS outside of BtB.</characteristic>
       <constraints>
         <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="3491-fde4-4c82-d4ac" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
       </constraints>
+      <modifiers>
+        <modifier type="decrement" value="1" field="a111-8656-5c05-7415">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="a7ef-7094-95e5-577c" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry id="fa72-334d-dcd9-f1b2" name="Wolf Ryoshi" hidden="false" collective="false" import="true" type="model">
       <categoryLinks>
         <categoryLink id="2f1b-519a-4a56-7db2" name="Ashigaru" hidden="false" targetId="f434-17e6-174c-b4f6" primary="false"/>
+        <categoryLink targetId="4e48-1ed5-3567-b991" id="ad10-4506-cfbc-1b60" primary="false" name="Wolf"/>
       </categoryLinks>
       <entryLinks>
         <entryLink id="8f37-6d1c-336c-9158" name="Enhancements" hidden="false" collective="false" import="true" targetId="8a7c-6251-523e-a67c" type="selectionEntryGroup"/>
@@ -4560,10 +4555,18 @@ This model cannot draw LoS outside of BtB.</characteristic>
       <constraints>
         <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="6be4-20c5-e6d9-bd9b" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
       </constraints>
+      <modifiers>
+        <modifier type="decrement" value="1" field="a111-8656-5c05-7415">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="a7ef-7094-95e5-577c" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry id="a3fa-5f2a-10af-5f69" name="Wolf Spear" hidden="false" collective="false" import="true" type="model">
       <categoryLinks>
         <categoryLink id="9a73-ba95-c3ad-1b89" name="Ashigaru" hidden="false" targetId="f434-17e6-174c-b4f6" primary="false"/>
+        <categoryLink targetId="4e48-1ed5-3567-b991" id="d0c8-4a8b-949b-402a" primary="false" name="Wolf"/>
       </categoryLinks>
       <entryLinks>
         <entryLink id="3fa9-3240-d5fa-d591" name="Enhancements" hidden="false" collective="false" import="true" targetId="8a7c-6251-523e-a67c" type="selectionEntryGroup"/>
@@ -4574,6 +4577,13 @@ This model cannot draw LoS outside of BtB.</characteristic>
       <constraints>
         <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="81de-d820-1e7f-d72c" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
       </constraints>
+      <modifiers>
+        <modifier type="decrement" value="1" field="a111-8656-5c05-7415">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="a7ef-7094-95e5-577c" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
