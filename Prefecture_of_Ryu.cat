@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="0cac-b8ad-fb7f-ef84" name="Prefecture of Ryu" revision="53" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="19" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="0cac-b8ad-fb7f-ef84" name="Prefecture of Ryu" revision="54" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="19" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <categoryEntries>
     <categoryEntry id="8688-cd6e-bcbe-2cbb" name="Ima" hidden="false"/>
     <categoryEntry id="65a8-4392-a95b-115b" name="Takashi" hidden="false"/>
@@ -6666,6 +6666,23 @@ Friendly Okami may use feats listed on this card.</characteristic>
     <entryLink import="true" name="Tahei" hidden="true" id="f1e0-69c0-f618-f05b" type="selectionEntry" targetId="bd9c-9e6c-b20e-b121"/>
     <entryLink import="true" name="Matashichi" hidden="true" id="d410-e3ca-b158-4b39" type="selectionEntry" targetId="2b6a-3f3d-a351-4010"/>
     <entryLink id="b4b7-96c2-9170-3b48" name="Yūkan&apos;na" hidden="false" collective="false" import="true" targetId="0693-eee4-8171-595e" type="selectionEntry"/>
+    <entryLink import="true" name="Kami of Evening Flame" hidden="false" id="c700-b479-df83-cef1" collective="false" targetId="c4fd-a8c6-2b3d-e5a4" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" value="0" field="9df8-a67b-feaf-2822">
+          <conditions>
+            <condition type="lessThan" value="1" field="selections" scope="force" childId="862f-a783-a461-a837" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false" childName="Mizuko &amp; Shōgo-Ryu"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="force" childId="862f-a783-a461-a837" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false" childName="Mizuko &amp; Shōgo-Ryu"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink name="Ronin Profile Cards" hidden="false" id="5de8-dbc3-f38b-dc3b" targetId="9fba-f50b-c8f7-8396" primary="true"/>
+      </categoryLinks>
+    </entryLink>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="7bcc-0d8c-21be-efd3" name="Goshi" hidden="false" collective="false" import="true" type="model">
@@ -8116,6 +8133,7 @@ Requirement [Shisai]</characteristic>
               <categoryLinks>
                 <categoryLink id="944c-71b9-9d53-5afa" name="Faction Equipment Cards" hidden="false" targetId="5bcd-fe93-a8ea-0164" primary="true"/>
                 <categoryLink targetId="ecbb-5575-0b01-70a9" id="1ac0-34fb-2694-b87f" primary="false" name="Cycle"/>
+                <categoryLink name="Consequences" hidden="false" id="d919-2c64-151a-64c3" targetId="c13c-a06d-22fe-e254" primary="false"/>
               </categoryLinks>
               <costs>
                 <cost name=" Rice" typeId="a111-8656-5c05-7415" value="1"/>

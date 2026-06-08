@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="2276-2df6-78a7-841d" name="Shiho Clan" revision="58" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="19" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="2276-2df6-78a7-841d" name="Shiho Clan" revision="59" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="19" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <categoryEntries>
     <categoryEntry id="7fa5-7ef0-59c5-f657" name="Tanaka" hidden="false"/>
     <categoryEntry name="Booted" id="6f67-dc86-f693-96ee" hidden="false"/>
@@ -2073,7 +2073,7 @@ While this model is in play, when a Friendly Loyal model spends a Virtue Token y
         <entryLink id="fd04-eb70-4b0c-91c5" name="Enhancements" hidden="false" collective="false" import="true" targetId="8a7c-6251-523e-a67c" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
-        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="20"/>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="12"/>
       </costs>
       <constraints>
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="7f9c-783d-63fb-1664" includeChildSelections="true"/>
@@ -2950,6 +2950,11 @@ You may decide the order recruited terrain (Friendly and Enemy) is Deployed.</ch
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="decrement" value="1" field="a111-8656-5c05-7415">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="a7ef-7094-95e5-577c" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5296-667d-835d-fbdb" type="max"/>
@@ -3221,6 +3226,11 @@ Whenever a Friendly model within 6&quot; of a model with a Luck Token makes a Fe
               </conditions>
             </conditionGroup>
           </conditionGroups>
+        </modifier>
+        <modifier type="decrement" value="1" field="a111-8656-5c05-7415">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="a7ef-7094-95e5-577c" shared="true" includeChildSelections="true"/>
+          </conditions>
         </modifier>
       </modifiers>
       <constraints>
@@ -4155,8 +4165,10 @@ This model cannot draw LoS outside of BtB.</characteristic>
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f5-1986-098c-0729" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="966b-fc6b-359e-5c30" type="atLeast" childName="Guerilla Warfare"/>
                 <condition type="atLeast" value="1" field="selections" scope="roster" childId="a7ef-7094-95e5-577c" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="fb4a-18a7-5b40-74ec" type="atLeast" childName="Open Rebellion"/>
+                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88f5-1986-098c-0729" type="atLeast"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -4555,13 +4567,6 @@ This model cannot draw LoS outside of BtB.</characteristic>
       <constraints>
         <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="6be4-20c5-e6d9-bd9b" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
       </constraints>
-      <modifiers>
-        <modifier type="decrement" value="1" field="a111-8656-5c05-7415">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="roster" childId="a7ef-7094-95e5-577c" shared="true" includeChildSelections="true"/>
-          </conditions>
-        </modifier>
-      </modifiers>
     </selectionEntry>
     <selectionEntry id="a3fa-5f2a-10af-5f69" name="Wolf Spear" hidden="false" collective="false" import="true" type="model">
       <categoryLinks>
@@ -4577,13 +4582,6 @@ This model cannot draw LoS outside of BtB.</characteristic>
       <constraints>
         <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="81de-d820-1e7f-d72c" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
       </constraints>
-      <modifiers>
-        <modifier type="decrement" value="1" field="a111-8656-5c05-7415">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="roster" childId="a7ef-7094-95e5-577c" shared="true" includeChildSelections="true"/>
-          </conditions>
-        </modifier>
-      </modifiers>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="b489-b304-948d-52d0" name="Library-Ronin" revision="63" battleScribeVersion="2.03" library="true" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="18" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="b489-b304-948d-52d0" name="Library-Ronin" revision="64" battleScribeVersion="2.03" library="true" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="18" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <selectionEntries>
     <selectionEntry id="4e24-3a7e-77bc-dfed" name="Balance" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -11773,6 +11773,120 @@ This model cannot be Channeled to or Leeched from.</characteristic>
       </profiles>
       <entryLinks>
         <entryLink import="true" name="Enhancements" hidden="false" id="1c93-d25f-823d-f134" collective="false" targetId="f486-4498-03e3-c397" type="selectionEntryGroup"/>
+      </entryLinks>
+    </selectionEntry>
+    <selectionEntry type="model" import="true" name="Lady Fox" hidden="false" id="79bb-f855-6502-8ffa">
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="17"/>
+      </costs>
+      <categoryLinks>
+        <categoryLink name="Asura" hidden="false" id="fbfd-5a56-2aeb-b462" targetId="c48e-5e32-f0b0-1cfe" primary="false"/>
+        <categoryLink name="Celestial" hidden="false" id="feca-15a3-bfd5-f3c6" targetId="b9c7-baf3-6795-acf7" primary="false"/>
+        <categoryLink targetId="9fba-f50b-c8f7-8396" id="ae82-8126-2a42-7351" primary="true" name="Ronin Profile Cards"/>
+        <categoryLink targetId="afd4-8041-e359-223c" id="3757-1270-f1e6-063e" primary="false" name="Unique"/>
+      </categoryLinks>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="264d-f262-617e-027b" includeChildSelections="true"/>
+      </constraints>
+      <profiles>
+        <profile name="Lady Fox" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile" hidden="false" id="1427-a7e7-612a-ad29">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">3</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">3</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">9</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">6 OOOOO O</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup name="Traits" id="4dd8-7024-3e0e-c026" hidden="false">
+          <profiles>
+            <profile name="Traits" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits" hidden="false" id="dee8-90b7-0e9f-348d">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Agile, Dodge (1), Evasive, Lightfooted, Soulless</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink name="Dodge " id="f343-520a-8a13-26b5" hidden="false" type="rule" targetId="14d5-d459-5d8a-c73e"/>
+            <infoLink name="Agile" id="e487-bc6b-185a-6e4d" hidden="false" type="rule" targetId="6a46-2f07-1725-11b2"/>
+            <infoLink name="Soulless" id="b361-653f-f58c-7d76" hidden="false" type="rule" targetId="af31-aad0-fcea-9590"/>
+            <infoLink name="Lightfooted" id="8093-1d59-8fa6-5d10" hidden="false" type="rule" targetId="57d2-cd57-07f9-addf"/>
+            <infoLink name="Evasive" id="bb73-47f8-0f0c-dd00" hidden="false" type="rule" targetId="b0f8-d197-536b-c8fc"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup name="Melee Weapon" id="f2e1-6f09-8115-9388" hidden="false">
+          <profiles>
+            <profile name="Paired Wakizashi" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon" hidden="false" id="039f-12c3-6def-f321">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+1</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e"/>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Dual Attack (0), Sidestep Defence (0)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink name="Dual Attack" id="f22f-64e5-0951-6047" hidden="false" type="rule" targetId="86ff-08dc-dfd1-bce9"/>
+            <infoLink name="Sidestep Defence " id="9ed9-1209-e448-3773" hidden="false" type="rule" targetId="753c-6c3b-64d7-203c"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup name="Ki Feats" id="32c3-ba4e-fa2e-3ab7" hidden="false">
+          <infoLinks>
+            <infoLink name="White Out" id="af21-051c-7bd6-458f" hidden="false" type="infoGroup" targetId="7edb-6e57-0837-a722"/>
+            <infoLink name="Fresh Fallen Snow" id="1491-5a68-d8aa-a4ec" hidden="false" type="infoGroup" targetId="3a5d-32f2-0d23-8f11"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup name="Unique Effects" id="62ca-8b5b-3666-5765" hidden="false">
+          <profiles>
+            <profile name="Winter Hunter" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects" hidden="false" id="b7b4-a7a2-3cd6-8578">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">While this model is affected by a Blizzard effect, it gains Sixth Sense, Camouflage (4&quot;) and ignores Slow.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Kin of Inari" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects" hidden="false" id="ccf7-b4f9-839b-f075">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">This model may be recruited into the Followers of Inari and Minkan Densho themes.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink name="Celestial Convergence" id="0286-de90-3b7b-d02a" hidden="false" type="profile" targetId="b4b5-15e7-f283-7470"/>
+            <infoLink name="Camouflage" id="1833-0123-6cd9-f6e0" hidden="false" type="rule" targetId="9010-4983-c98c-1751"/>
+            <infoLink name="Sixth Sense" id="6c3b-88e8-e05b-853c" hidden="false" type="rule" targetId="ec49-3908-f1d1-8de2"/>
+          </infoLinks>
+        </infoGroup>
+      </infoGroups>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="477a-e693-0888-08f7" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="9402-edcc-93a2-aef1" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <condition type="equalTo" value="1" field="selections" scope="roster" childId="b94d-f7cb-a84c-4077" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="increment" value="1" field="a111-8656-5c05-7415">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="b9c7-baf3-6795-acf7" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+          <repeats>
+            <repeat value="1" repeats="1" field="selections" scope="roster" childId="b9c7-baf3-6795-acf7" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
+          </repeats>
+        </modifier>
+      </modifiers>
+      <entryLinks>
+        <entryLink import="true" name="Enhancements" hidden="false" id="d2e9-6848-9cbb-a0cb" collective="false" targetId="f486-4498-03e3-c397" type="selectionEntryGroup"/>
       </entryLinks>
     </selectionEntry>
   </sharedSelectionEntries>
