@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="d615-aef7-31d5-367d" name="Jung Pirates" revision="60" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="19" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="d615-aef7-31d5-367d" name="Jung Pirates" revision="61" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="19" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <categoryEntries>
     <categoryEntry id="258a-e1a8-8db1-9635" name="Ki&lt;2" hidden="true"/>
     <categoryEntry id="f6c9-50fa-a9d3-e9f3" name="Ranged Weapon" hidden="true"/>
@@ -5718,6 +5718,94 @@ While making an opposed Ki Test, this model gains Willpower (X) where X is equal
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="14"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="d55b-b16d-4e51-7e52" name="Narumi" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c2b6-0a48-94a3-1c8b" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c0d2-f3cb-e3b1-ffaf" type="atLeast"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8e77-4784-fd72-f12f" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="b33c-5aa4-35aa-6d59" name="Narumi" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">3</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac">3</characteristic>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">1</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">6</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">6 OOOOO O</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="3cda-a13f-22ce-c78e" name="Traits" hidden="false">
+          <profiles>
+            <profile id="2716-626b-b500-8cb6" name="Narumi" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Courage (1), Endurance, Jump Up, Lightfooted, Ranged Defence (1)</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="d382-2191-47a8-4901" name="Ranged Defence " hidden="false" targetId="9b8d-9ca9-e25d-3988" type="rule"/>
+            <infoLink id="2d4f-b820-ef5e-9712" name="Courage" hidden="false" targetId="2c5f-d52f-24ba-7927" type="rule"/>
+            <infoLink id="3618-8c8d-20f2-7a26" name="Lightfooted" hidden="false" targetId="57d2-cd57-07f9-addf" type="rule"/>
+            <infoLink id="a0ff-a0e4-24b1-6ab1" name="Endurance" hidden="false" targetId="7fdc-d150-9641-1235" type="rule"/>
+            <infoLink id="e1e0-04a1-c6cd-8075" name="Jump Up" hidden="false" targetId="1575-e12f-4ca3-c557" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="b78c-5a84-d242-138f" name="Ki Feats" hidden="false">
+          <infoLinks>
+            <infoLink id="5e52-b780-aea6-d1de" name="Batter" hidden="false" targetId="b8c0-1f29-3c48-4b3a" type="infoGroup"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="f62f-f634-0619-8c5f" name="Melee Weapon" hidden="false">
+          <profiles>
+            <profile id="e496-74da-8aeb-a161" name="Sharktooth Oar" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+2</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Bleed (1/1), Sharp (1)</characteristic>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Push Attack (0)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289">Models damaged in a Melee Exchange using this Weapon cannot be Healed until the End Phase.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="7b72-e2e2-3e85-a665" name="Bleed" hidden="false" targetId="ac4a-e540-4fe3-126a" type="rule"/>
+            <infoLink id="0717-c25d-1017-3dc0" name="Push Attack" hidden="false" targetId="6c26-94ba-6b96-9e1b" type="rule"/>
+            <infoLink id="cf37-839d-87bf-aed9" name="Sharp " hidden="false" targetId="6092-9fb5-5196-d1eb" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+      </infoGroups>
+      <categoryLinks>
+        <categoryLink id="7ad5-b7db-7d79-6240" name="Faction: Jung Pirates" hidden="false" targetId="76df-04fb-ea1f-77ab" primary="false"/>
+        <categoryLink id="982b-0715-4356-9ba6" name="Kaizoku" hidden="false" targetId="5bf8-7b73-412a-f654" primary="false"/>
+        <categoryLink id="9a6f-c968-c1b7-efe6" name="Ki&lt;2" hidden="false" targetId="258a-e1a8-8db1-9635" primary="false"/>
+        <categoryLink id="7adf-cf1b-aea5-916f" name="Faction Profile Cards" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
+        <categoryLink id="6634-b8cd-ab1d-4d26" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
+        <categoryLink name="Kaiheidan" hidden="false" id="c2d8-147a-7e19-55c8" targetId="f026-a50f-0af3-4611" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="4eef-492a-00e0-7fd3" name="Enhancements" hidden="false" collective="false" import="true" targetId="2327-1257-a4b4-df32" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="13"/>
+      </costs>
+    </selectionEntry>
   </selectionEntries>
   <entryLinks>
     <entryLink id="7c58-4740-ab52-3330" name="Koshimori Yukio" hidden="false" collective="false" import="true" targetId="de1e-de2d-1044-bf56" type="selectionEntry">
@@ -6154,6 +6242,7 @@ While making an opposed Ki Test, this model gains Willpower (X) where X is equal
         <categoryLink id="9e0b-23a3-5454-b2ce" name="Ronin Profile Cards" hidden="false" targetId="9fba-f50b-c8f7-8396" primary="true"/>
       </categoryLinks>
     </entryLink>
+    <entryLink import="true" name="Taisa Tatsunōtoshigo" hidden="false" id="72b0-cb4a-82f9-750e" type="selectionEntry" targetId="1b03-7b66-80a9-a41f"/>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="a382-7e2d-9df9-d700" name="Korusea" hidden="false" collective="false" import="true" type="model">

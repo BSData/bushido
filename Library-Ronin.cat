@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="b489-b304-948d-52d0" name="Library-Ronin" revision="64" battleScribeVersion="2.03" library="true" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="18" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="b489-b304-948d-52d0" name="Library-Ronin" revision="65" battleScribeVersion="2.03" library="true" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="18" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <selectionEntries>
     <selectionEntry id="4e24-3a7e-77bc-dfed" name="Balance" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -9500,8 +9500,7 @@ If this model is Elsewhere, it may use this feat. Replace a Friendly Ronin Lesse
       <profiles>
         <profile id="6cf5-bfee-d2aa-1259" name="Spark of Life" hidden="false" typeId="bd15-7ead-9268-3576" typeName="Special Card (Ki Feat)">
           <characteristics>
-            <characteristic name="Description" typeId="17eb-17e2-4df4-5c5d">- The Attached model gains one additional Ki Token during Ki generation.
-- If a Friendly model is Killed while within 6&quot;, you may return it to play with one wound box unmarked in BtB with the Attached model and discard this card.
+            <characteristic name="Description" typeId="17eb-17e2-4df4-5c5d">- If a Friendly model is Killed while within 6&quot;, you may return it to play with one wound box unmarked in BtB with the Attached model and discard this card.
 - Attached model can be recruited into the Descension faction.
 Requirement [Grey Pilgrim]
 - Attached model gains the following Ki Feat:</characteristic>
@@ -10190,7 +10189,6 @@ This model can make only one Bird Strike Ranged Attack per turn.</characteristic
             <profile name="Unique Effects" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects" hidden="false" id="d2cb-5296-582b-6ace">
               <characteristics>
                 <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">This model may be included in the House Bleeding Moon theme.
-
 
 When this model inflicts Wounds through a successful Melee Attack, it gains a number of Ki Tokens equal to the Wounded model&apos;s Ki Statistic.</characteristic>
               </characteristics>
@@ -11585,7 +11583,7 @@ On a successful ranged attack instead of a Damage Roll, the Target gains a Blee
               <conditions>
                 <condition type="atLeast" value="1" field="selections" scope="roster" childId="477a-e693-0888-08f7" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                 <condition type="atLeast" value="1" field="selections" scope="roster" childId="9402-edcc-93a2-aef1" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                <condition type="equalTo" value="1" field="selections" scope="roster" childId="b94d-f7cb-a84c-4077" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="0f84-8e23-429c-d5c4" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -11887,6 +11885,124 @@ This model cannot be Channeled to or Leeched from.</characteristic>
       </modifiers>
       <entryLinks>
         <entryLink import="true" name="Enhancements" hidden="false" id="d2e9-6848-9cbb-a0cb" collective="false" targetId="f486-4498-03e3-c397" type="selectionEntryGroup"/>
+      </entryLinks>
+    </selectionEntry>
+    <selectionEntry type="model" import="true" name="Taisa Tatsunōtoshigo" hidden="false" id="1b03-7b66-80a9-a41f">
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="17"/>
+      </costs>
+      <categoryLinks>
+        <categoryLink name="Asura" hidden="false" id="45f0-d4df-47d6-b629" targetId="c48e-5e32-f0b0-1cfe" primary="false"/>
+        <categoryLink name="Celestial" hidden="false" id="f284-b4c5-acf6-5f40" targetId="b9c7-baf3-6795-acf7" primary="false"/>
+        <categoryLink targetId="9fba-f50b-c8f7-8396" id="38aa-1d82-046e-e506" primary="true" name="Ronin Profile Cards"/>
+        <categoryLink targetId="afd4-8041-e359-223c" id="df44-c4e5-3bb9-b260" primary="false" name="Unique"/>
+        <categoryLink name="Unknown" hidden="false" id="c32f-7754-3ab1-34f1" targetId="681b-423e-83dd-d9bd" primary="false"/>
+        <categoryLink name="Seahorse" hidden="false" id="0e4f-b877-5117-01ff" targetId="9216-c049-66c2-4bac" primary="false"/>
+      </categoryLinks>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="c60c-8f85-c965-1dc9" includeChildSelections="true"/>
+      </constraints>
+      <profiles>
+        <profile name="Taisa Tatsunōtoshigo" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile" hidden="false" id="d60e-99ef-ba64-43c3">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">3</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac">3</characteristic>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">2</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c">3</characteristic>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">10</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">7 OOOOO OO</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Medium 40mm</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup name="Traits" id="fdf1-f7f1-22da-28ee" hidden="false">
+          <profiles>
+            <profile name="Traits" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits" hidden="false" id="aa7a-cbf6-b499-cfe0">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Bodyguard [Friendly ](3&quot;), Camouflage (3&quot;), Evasive, Heal (1), Jump Up, Lightfooted, Soulless</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink name="Bodyguard" id="e291-db0a-6e5c-106f" hidden="false" type="rule" targetId="0286-6d10-a236-e0c3"/>
+            <infoLink name="Camouflage" id="d842-d72c-7649-f5d8" hidden="false" type="rule" targetId="9010-4983-c98c-1751"/>
+            <infoLink name="Heal" id="9b96-6a42-0512-941e" hidden="false" type="rule" targetId="bd98-52d2-3a66-08e7"/>
+            <infoLink name="Evasive" id="664c-7cf4-4301-4993" hidden="false" type="rule" targetId="b0f8-d197-536b-c8fc"/>
+            <infoLink name="Soulless" id="bfdb-319a-4988-a6ed" hidden="false" type="rule" targetId="af31-aad0-fcea-9590"/>
+            <infoLink name="Jump Up" id="f5ea-087a-0613-91d0" hidden="false" type="rule" targetId="1575-e12f-4ca3-c557"/>
+            <infoLink name="Lightfooted" id="38b2-ce99-2c13-e5d5" hidden="false" type="rule" targetId="57d2-cd57-07f9-addf"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup name="Melee Weapon" id="e102-8d41-1c24-cf10" hidden="false">
+          <profiles>
+            <profile name="Spear" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon" hidden="false" id="b02e-779b-18c9-140a">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+1</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Reach</characteristic>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Drag Attack (0), Forceback Attack (0), Push Defence (0)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink name="Reach" id="c312-64b6-5e10-17ef" hidden="false" type="rule" targetId="e28e-d5dd-a262-1101"/>
+            <infoLink name="Drag Attack" id="37de-fecd-fa16-faeb" hidden="false" type="rule" targetId="9902-026d-4637-cc7d"/>
+            <infoLink name="Push Defence" id="8b41-cc7a-2968-f89e" hidden="false" type="rule" targetId="74fc-a971-d9c2-278c"/>
+            <infoLink name="Forceback Attack" id="a75c-4c89-74b4-4610" hidden="false" type="rule" targetId="2682-7c66-4163-28f2"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup name="Ki Feats" id="e288-80cd-69de-5da9" hidden="false">
+          <infoLinks>
+            <infoLink name="Shadow" id="450b-f23d-c5d2-b79b" hidden="false" type="infoGroup" targetId="0221-63c7-3e02-bbfc"/>
+            <infoLink name="Celestial Blessing" id="f723-d44d-f2c9-8227" hidden="false" type="infoGroup" targetId="fbcf-8d4f-a0bf-f8a1"/>
+            <infoLink name="Prehensile Tail" id="4c3b-c1a5-03a4-8a5a" hidden="false" type="infoGroup" targetId="7e41-4c99-7968-8bf1"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup name="Unique Effects" id="d2f2-9d27-574c-f841" hidden="false">
+          <profiles>
+            <profile name="Unique Effects" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects" hidden="false" id="198f-3658-dde5-f417">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">This model gains cover from Friendly models as if they were terrain.  
+
+While this model is in play, once per turn you may re-roll any failed non-opposed test for any Friendly model for any Ki, Size or Move Challenge test.  
+
+During the Starting Phase, this model may become Exhausted. If it does, unmark the OpG icon on this model&apos;s Celestial Blessing Ki Feat.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink name="Celestial Convergence" id="c1e5-45fd-63ff-f29c" hidden="false" type="profile" targetId="b4b5-15e7-f283-7470"/>
+          </infoLinks>
+        </infoGroup>
+      </infoGroups>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="477a-e693-0888-08f7" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="9402-edcc-93a2-aef1" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <condition type="equalTo" value="1" field="selections" scope="roster" childId="b94d-f7cb-a84c-4077" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="increment" value="1" field="a111-8656-5c05-7415">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="b9c7-baf3-6795-acf7" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+          <repeats>
+            <repeat value="1" repeats="1" field="selections" scope="roster" childId="b9c7-baf3-6795-acf7" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
+          </repeats>
+        </modifier>
+      </modifiers>
+      <entryLinks>
+        <entryLink import="true" name="Enhancements" hidden="false" id="5e25-eddf-ef83-ccf2" collective="false" targetId="f486-4498-03e3-c397" type="selectionEntryGroup"/>
       </entryLinks>
     </selectionEntry>
   </sharedSelectionEntries>

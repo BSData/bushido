@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="0cac-b8ad-fb7f-ef84" name="Prefecture of Ryu" revision="54" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="19" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="0cac-b8ad-fb7f-ef84" name="Prefecture of Ryu" revision="55" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="19" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <categoryEntries>
     <categoryEntry id="8688-cd6e-bcbe-2cbb" name="Ima" hidden="false"/>
     <categoryEntry id="65a8-4392-a95b-115b" name="Takashi" hidden="false"/>
@@ -6259,6 +6259,18 @@ This model may not be Placed and may not have Enhancements attached to it.</cha
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="23"/>
       </costs>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="07e0-41f1-b800-70ad" shared="true" includeChildSelections="true" includeChildForces="true" childName="Prefecture Patrol"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1c4e-2aa6-2d32-f0d4" shared="true" includeChildSelections="true" includeChildForces="true" childName="Blood of the Dragon"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry id="7f07-a4b2-abc5-4eee" name="Mizuko" hidden="true" collective="false" import="true" type="model">
       <constraints>
@@ -6523,6 +6535,118 @@ Friendly Okami may use feats listed on this card.</characteristic>
         </modifierGroup>
       </modifierGroups>
     </selectionEntry>
+    <selectionEntry id="5fc6-0f70-ca49-84c8" name="Kazuha" hidden="true" collective="false" import="true" type="model">
+      <constraints>
+        <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3fb8-b899-992c-242f" type="max"/>
+        <constraint type="min" value="0" field="selections" scope="roster" shared="true" id="78d7-3b42-741b-19bc" includeChildSelections="true"/>
+      </constraints>
+      <profiles>
+        <profile id="0054-c29c-86a8-1ffb" name="Kazuha" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">4</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">4</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33">3</characteristic>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">5</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac">3</characteristic>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">2</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c">3</characteristic>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">10</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">12 OOOOO OOOOO OO</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Huge 60mm</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="9f85-6948-19cb-32a9" name="Ki Feats" hidden="false">
+          <infoLinks>
+            <infoLink id="2128-0089-2778-4a84" name="Tail Whip" hidden="false" targetId="22ee-abf4-17a0-a33f" type="infoGroup"/>
+            <infoLink id="cc29-21fc-49eb-0fe0" name="Spirit Guardian" hidden="false" targetId="028a-ece3-4866-4aec" type="infoGroup"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="39f4-5110-0e1e-2fc9" name="Traits" hidden="false">
+          <profiles>
+            <profile id="3c58-2333-d8ba-c071" name="Kazuha" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Armour (2), Cloudwalk, Fear (6), Fearless, Huge, Immune [Prone], Mettle (1), Ranged Defence (2), Sixth Sense</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="2bf2-37a4-0000-f99d" name="Huge" hidden="false" targetId="baca-f5d8-c383-49d2" type="rule"/>
+            <infoLink id="7528-3970-ff56-3f2b" name="Armour" hidden="false" targetId="8615-1c63-2242-5746" type="rule"/>
+            <infoLink id="b9b0-102e-fb47-5141" name="Fear" hidden="false" targetId="3586-4583-7f10-1f31" type="rule"/>
+            <infoLink id="d762-7b95-7687-9cd0" name="Fearless" hidden="false" targetId="5d6f-1746-9080-aca5" type="rule"/>
+            <infoLink id="3e2f-0ade-fce0-7355" name="Immune" hidden="false" targetId="ea08-b25e-0ea8-af73" type="rule"/>
+            <infoLink id="e812-1161-3342-e8c1" name="Mettle" hidden="false" targetId="9598-efc3-51c7-5811" type="rule"/>
+            <infoLink id="5952-2653-b065-e80d" name="Sixth Sense" hidden="false" targetId="ec49-3908-f1d1-8de2" type="rule"/>
+            <infoLink id="c5db-59f4-d09c-0d07" name="Ranged Defence " hidden="false" targetId="9b8d-9ca9-e25d-3988" type="rule"/>
+            <infoLink id="dd70-09c4-3f5b-6335" name="Cloudwalk" hidden="false" targetId="538c-1266-626b-fcc9" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="a5c0-92b2-6a09-0e39" name="Melee Weapon" hidden="false">
+          <profiles>
+            <profile id="bc56-6a5d-b1c1-ebcb" name="Tail" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+0</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Reach</characteristic>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Powerful Attack (1), Push Attack (0), Sweep Defence (0)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="93a6-4c68-12fb-a45f" name="Reach" hidden="false" targetId="e28e-d5dd-a262-1101" type="rule"/>
+            <infoLink id="7a66-9cab-6302-89df" name="Sweep Defence" hidden="false" targetId="5338-2d8f-f189-062d" type="rule"/>
+            <infoLink id="8a5a-3160-f507-c06a" name="Push Attack" hidden="false" targetId="6c26-94ba-6b96-9e1b" type="rule"/>
+            <infoLink id="5719-8f01-cfea-cf4b" name="Powerful Attack" hidden="false" targetId="d56a-058d-95d9-5b60" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="6968-d5a5-e57b-d8b6" name="Ranged Weapon" hidden="false">
+          <profiles>
+            <profile id="8d2f-7555-a4d4-a894" name="Call Lightning" hidden="false" typeId="7e20-258e-bf92-18f9" typeName="Ranged Weapon">
+              <characteristics>
+                <characteristic name="Ranged Weapon Strength" typeId="15aa-b6bd-6923-271f">+X</characteristic>
+                <characteristic name="Range Bands" typeId="be6a-50c6-d691-e2e9">2/4/6</characteristic>
+                <characteristic name="Traits" typeId="3410-4428-ef91-eb61">Pierce (X), Rapid Fire (X)</characteristic>
+                <characteristic name="Specials" typeId="cdaf-b6ac-89d4-39ef"/>
+                <characteristic name="Unique Effects" typeId="3bf8-6525-f003-4990"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink name="Pierce " id="9bcf-e342-b2cc-8751" hidden="false" type="rule" targetId="39e4-14d7-5533-6e67"/>
+            <infoLink name="Rapid Fire" id="4e27-553f-3429-88f5" hidden="false" type="rule" targetId="129c-7864-4cc1-f7bc"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="7a20-0631-5975-a2db" name="Unique Effects" hidden="false">
+          <profiles>
+            <profile id="2654-8bae-7f98-042c" name="Unique Effects" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">This model may be recruited into any Prefecture of Ryu Theme that does not specifically restrict it.
+
+This model may not have Enhancement Cards Attached to them and cannot be Placed.
+
+Some of this model&apos;s traits are variable. The X is equal to the number of Twin &amp; Dragon models in the Warband currently on the Battlefield.
+
+For each Twin &amp; Dragon model recruited into this warband choose one Friendly Shisai model to gain a Virtue Token during Deployment.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </infoGroup>
+      </infoGroups>
+      <categoryLinks>
+        <categoryLink id="c3f8-faab-28dd-cdaf" name="Faction: Prefecture of Ryu" hidden="false" targetId="7532-4f60-381d-2941" primary="false"/>
+        <categoryLink id="1c45-c758-86c8-e776" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
+        <categoryLink id="84e5-e171-1f20-e0c0" name="Dragon" hidden="false" targetId="6101-8a8b-fc84-7582" primary="false"/>
+        <categoryLink name="Twin" hidden="false" id="df10-cef3-f0d6-3a6a" targetId="7750-fa66-9dd7-14f1" primary="false"/>
+        <categoryLink name="Faction Profile Cards" hidden="false" id="36df-20bf-1c8a-836c" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
+        <categoryLink name="Armour" hidden="false" id="3441-50ac-05b7-e23b" targetId="f322-702a-ff62-b37e" primary="false"/>
+      </categoryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="25"/>
+      </costs>
+    </selectionEntry>
   </selectionEntries>
   <entryLinks>
     <entryLink id="d149-3ea0-90df-a450" name="Ancestor Spirit" hidden="false" collective="false" import="true" targetId="a8a8-fc30-a7e2-2913" type="selectionEntry">
@@ -6683,6 +6807,7 @@ Friendly Okami may use feats listed on this card.</characteristic>
         <categoryLink name="Ronin Profile Cards" hidden="false" id="5de8-dbc3-f38b-dc3b" targetId="9fba-f50b-c8f7-8396" primary="true"/>
       </categoryLinks>
     </entryLink>
+    <entryLink import="true" name="Taisa Tatsunōtoshigo" hidden="false" id="618b-4aa6-f5cb-8f24" type="selectionEntry" targetId="1b03-7b66-80a9-a41f"/>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="7bcc-0d8c-21be-efd3" name="Goshi" hidden="false" collective="false" import="true" type="model">
@@ -6928,14 +7053,6 @@ Friendly Okami may use feats listed on this card.</characteristic>
                   <conditions>
                     <condition field="selections" scope="parent" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e12a-f782-3281-7444" type="notInstanceOf"/>
                     <condition field="selections" scope="parent" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="216a-c1c3-66df-b497" type="notInstanceOf"/>
-                  </conditions>
-                </conditionGroup>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="parent" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c382-9ab3-9924-e30a" type="instanceOf"/>
-                    <condition field="selections" scope="parent" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d7c5-a2b9-4696-fd33" type="instanceOf"/>
-                    <condition field="selections" scope="parent" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7435-856f-ece2-fe58" type="instanceOf"/>
-                    <condition field="selections" scope="parent" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6639-615e-f1ab-bc64" type="instanceOf"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>

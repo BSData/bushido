@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="4213-717c-2228-e731" name="Temple of Ro-Kan" revision="67" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="19" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="4213-717c-2228-e731" name="Temple of Ro-Kan" revision="68" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="19" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <selectionEntries>
     <selectionEntry id="5048-3a52-5689-6d0b" name="Spiritual Harmony" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -7962,6 +7962,126 @@ If Masaru model that you own is Killed or Removed from Play, Remove this model 
       <costs>
         <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0"/>
       </costs>
+    </selectionEntry>
+    <selectionEntry id="e596-1d0d-509e-12da" name="Chōwa and Jundo" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="33ea-e647-b8c5-2267" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="44e6-4155-6b9b-2521" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ffd8-72ee-dab5-a006" type="atLeast"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="c81b-cb45-9579-b5dd" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="109b-1a9f-2d4b-3ea6" shared="true" includeChildSelections="true" includeChildForces="true" childName="Master Po"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="true" id="da43-6715-5b64-a85b" type="max"/>
+      </constraints>
+      <infoGroups>
+        <infoGroup id="29a2-b09b-ae72-d149" name="Traits" hidden="false">
+          <profiles>
+            <profile id="dcf4-5a5f-13fb-e619" name="Chōwa and Jundo" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Aloof, Aware, Indomitable (1), Lightfooted, Tiny</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="feb0-872f-e96e-25a1" name="Aloof" hidden="false" targetId="5101-70fc-eca4-d99b" type="rule"/>
+            <infoLink id="3378-b513-b3fc-cd10" name="Aware" hidden="false" targetId="ff4a-6b14-09dd-2343" type="rule"/>
+            <infoLink id="9c02-b37a-e9e5-a3a6" name="Indomitable " hidden="false" targetId="3beb-6f28-e7c4-a236" type="rule"/>
+            <infoLink id="b90d-e741-2bbd-b527" name="Lightfooted" hidden="false" targetId="57d2-cd57-07f9-addf" type="rule"/>
+            <infoLink id="55c4-a0d7-54e7-b6be" name="Tiny" hidden="false" targetId="335c-7f6f-9ca0-cb93" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="e1d4-97b8-ed58-7832" name="Melee Weapon" hidden="false">
+          <profiles>
+            <profile id="ea42-2b1c-9d0f-f77e" name="Bite" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+0</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e"/>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Dual Attack (0), Sidestep Defence (0)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="e56b-4e5f-b951-f18d" name="Sidestep Defence " hidden="false" targetId="753c-6c3b-64d7-203c" type="rule"/>
+            <infoLink id="3123-dc96-1cc9-300e" name="Dual Attack" hidden="false" targetId="86ff-08dc-dfd1-bce9" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup id="86ed-9fcb-f5b6-10ce" name="Unique Effects" hidden="false">
+          <profiles>
+            <profile id="db8d-66e7-8fb8-ebfa" name="Belly Rubs" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">A Friendly model in BtB with this model may perform a Wait Action, ignoring the usual Berserk rule, to remove all Berserk, Blind, Death Sentence, Diseased, Frightened, Spirit Block and Stunned Markers from both models.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Scritches" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects" hidden="false" id="769e-718c-f6a1-ead5">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">A Friendly Monk model in BtB with this model may perform a Wait Action to gain a Virtue Token.
+</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Chew Toy" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects" hidden="false" id="a835-dd70-a1d9-7cb1">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">If this model is within 4&quot; of any Friendly Earth Kami models in the End Phase, the Kami loses one Ki Token.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Selection" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects" hidden="false" id="beed-8a21-c87b-d073">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">This model may be recruited into any Warband that has recruited Master Po.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Play" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects" hidden="false" id="e973-e515-c8fa-5804">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">If this model is within 4&quot; of any other Friendly Ra mels in the Starting Phase, this model and those animals gain one fewer Activation Counters.
+Friendly models within 4&quot; of this model treat the Stand Up Action as Complex instead of Simple.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="17ce-5c6f-2a2f-68ee" name="Heal" hidden="false" targetId="bd98-52d2-3a66-08e7" type="rule"/>
+            <infoLink id="6ed7-73e5-55a6-ca68" name="Virtue" hidden="false" targetId="57d7-cc96-ce93-9258" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+      </infoGroups>
+      <categoryLinks>
+        <categoryLink id="c6f9-d23f-49ce-c7de" name="Faction: Temple of Rokan" hidden="false" targetId="3186-3d3a-a105-887b" primary="false"/>
+        <categoryLink id="b897-9b38-0b11-b9c6" name="Faction Profile Cards" hidden="false" targetId="0ca8-2040-37f2-a1e0" primary="true"/>
+        <categoryLink id="080f-434b-2031-ec25" name="Unique" hidden="false" targetId="afd4-8041-e359-223c" primary="false"/>
+        <categoryLink name="Animal" hidden="false" id="a27e-b884-34e0-7086" targetId="c382-9ab3-9924-e30a" primary="false"/>
+        <categoryLink name="Dog" hidden="false" id="7eb4-97e5-3f8a-329d" targetId="e966-5aa5-b165-496d" primary="false"/>
+      </categoryLinks>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="10"/>
+      </costs>
+      <profiles>
+        <profile name="Chōwa and Jundo" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile" hidden="false" id="f057-cb14-af91-07d3">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">2</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277"/>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">-</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33"/>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac"/>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">1</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">0</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">3 OOO</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Tiny 30mm</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
     </selectionEntry>
   </selectionEntries>
   <entryLinks>
