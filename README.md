@@ -1,14 +1,6 @@
 Bushido
 =======
 
-[![GitHub release]:(https://img.shields.io/github/release/BSData/bushido.svg?style=flat-square)]:(https://github.com/BSData/bushido/releases/latest)
-![Github commits (since latest release)]:(https://img.shields.io/github/commits-since/BSData/bushido/latest.svg?style=flat-square)
-[![Open Bug issues]:(https://img.shields.io/github/issues/bsdata/bushido/bug.svg?style=flat-square&label=bugs)]:(https://github.com/BSData/bushido/issues?q=is%3Aissue+is%3Aopen+label%3Abug)
-[![GitHub contributors]:(https://img.shields.io/github/contributors/BSData/bushido.svg?style=flat-square)]:(https://github.com/BSData/bushido/graphs/contributors)
-![GitHub commit activity the past year]:(https://img.shields.io/github/commit-activity/y/BSData/bushido.svg?style=flat-square)
-
-[![Chat on Discord]:(https://img.shields.io/discord/558412685981777922.svg?logo=discord&style=popout-square)]:(https://discord.gg/KqPVhds)
-
 ## Overview ##
 [Overview]: #overview
 BSData organisation created this project. It's a GitHub repository of datafiles.
