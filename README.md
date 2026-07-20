@@ -8,7 +8,7 @@ Maintained by community, in no way endorsed by BattleScribe, NewRecruit, or any 
 If you want to help develop, take a look at [their homepage](https://BSData.net).
 
 These datafiles contain all the profile information publicly available for [GCT Studios'](https://gctstudios.com/) Bushido tabletop miniatures skirmish game.
-Check out the (sometimes updated) development roadmap on [Trello](https://trello.com/b/lCoAntEk/bushido-battlescribe-repository), or use the battlescribe-data channel in the [Bushido Discord]:(https://discord.gg/SbSBDhK) server to discuss the catalogue development.
+Check out the (sometimes updated) development roadmap on [Trello](https://trello.com/b/lCoAntEk/bushido-battlescribe-repository), or use the battlescribe-data channel in the [Bushido Discord](https://discord.gg/SbSBDhK) server to discuss the catalogue development.
 
 <img src="https://gctstudios.com/sites/default/files/styles/uc_product_full/public/products/bushido_risen_sun_rulebook_promo.jpg?itok=9PW8lkWe" />
 
