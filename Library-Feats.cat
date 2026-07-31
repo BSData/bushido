@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="b586-d588-5153-3d1d" name="Library-Feats" revision="59" battleScribeVersion="2.03" library="true" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="19" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="b586-d588-5153-3d1d" name="Library-Feats" revision="60" battleScribeVersion="2.03" library="true" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="19" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <sharedInfoGroups>
     <infoGroup id="57e7-9fb3-3c54-8ea8" name="Blessing of the Kami" hidden="false">
       <profiles>
@@ -9430,6 +9430,130 @@ Friendly Imperial models in the Aura gain Bodyguard [Imperial ](3&quot;).</chara
             <characteristic name="Subject" typeId="4ac8-2bb1-0c84-f088">Special</characteristic>
             <characteristic name="Limitation" typeId="6fc9-5d13-2687-b2a5"/>
             <characteristic name="Description" typeId="f804-b969-00da-2123">This model gains Immovable while in BtB with an Impassable Terrain Element until the End Phase.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </infoGroup>
+    <infoGroup name="Vicious Imitation" id="807f-aa97-7afb-093d" hidden="false">
+      <profiles>
+        <profile name="Vicious Imitation" typeId="993a-e62a-7922-0ccb" typeName="Ki Feat" hidden="false" id="a704-82aa-0cf0-1891">
+          <characteristics>
+            <characteristic name="Cost" typeId="a126-54d9-0a27-f4b6">4</characteristic>
+            <characteristic name="Timing" typeId="f8a8-8a3e-ef58-4c61">Active</characteristic>
+            <characteristic name="Subject" typeId="4ac8-2bb1-0c84-f088">Personal</characteristic>
+            <characteristic name="Limitation" typeId="6fc9-5d13-2687-b2a5"/>
+            <characteristic name="Description" typeId="f804-b969-00da-2123">In a Melee Exchange, the Enemy model (and its Melee Weapons) lose Kata, Feint, Brutal, Parry, Dodge, Unblockable and Impenetrable Defence.  
+This model gains any Traits the Enemy model loses with the same values.  
+This Ki Feat ends at the end of the current Activation.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Feint" id="7a23-77aa-5fc2-7606" hidden="false" type="rule" targetId="38b0-4d97-3c4c-8d96"/>
+        <infoLink name="Brutal" id="cdd6-d935-d963-31ef" hidden="false" type="rule" targetId="5d95-975e-a72c-25f3"/>
+        <infoLink name="Kata" id="bb29-acc8-415f-79e3" hidden="false" type="rule" targetId="7283-1e6d-cb9c-f1c8"/>
+        <infoLink name="Parry" id="2cde-96cc-cf7b-22e6" hidden="false" type="rule" targetId="c7c2-b36e-7952-c79b"/>
+        <infoLink name="Unblockable" id="52f7-65dc-2805-14a9" hidden="false" type="rule" targetId="964b-62c9-4f94-bed7"/>
+        <infoLink name="Impenetrable Defence" id="570e-aabc-1fb8-7f37" hidden="false" type="rule" targetId="6659-a776-d836-a2fb"/>
+        <infoLink name="Dodge " id="65d6-dffb-d444-d3d7" hidden="false" type="rule" targetId="14d5-d459-5d8a-c73e"/>
+      </infoLinks>
+    </infoGroup>
+    <infoGroup name="Spite" id="faf1-beac-d918-2f2a" hidden="false">
+      <profiles>
+        <profile name="Spite" typeId="993a-e62a-7922-0ccb" typeName="Ki Feat" hidden="false" id="b713-dbfc-5668-6f5d">
+          <characteristics>
+            <characteristic name="Cost" typeId="a126-54d9-0a27-f4b6">1</characteristic>
+            <characteristic name="Timing" typeId="f8a8-8a3e-ef58-4c61">Active</characteristic>
+            <characteristic name="Subject" typeId="4ac8-2bb1-0c84-f088">Target 6&quot;, Opp. Ki</characteristic>
+            <characteristic name="Limitation" typeId="6fc9-5d13-2687-b2a5"/>
+            <characteristic name="Description" typeId="f804-b969-00da-2123">Target Enemy model loses Cloudwalk and gains Slow until the End Phase.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Slow" id="4989-c3d3-ce12-1620" hidden="false" type="rule" targetId="f1c3-4a84-c616-23cd"/>
+      </infoLinks>
+    </infoGroup>
+    <infoGroup name="Necromancy" id="7511-6d18-d2fa-5886" hidden="false">
+      <profiles>
+        <profile name="Necromancy" typeId="993a-e62a-7922-0ccb" typeName="Ki Feat" hidden="false" id="573f-4850-32b7-b101">
+          <characteristics>
+            <characteristic name="Cost" typeId="a126-54d9-0a27-f4b6">3</characteristic>
+            <characteristic name="Timing" typeId="f8a8-8a3e-ef58-4c61">Instant</characteristic>
+            <characteristic name="Subject" typeId="4ac8-2bb1-0c84-f088">Target 6&quot;</characteristic>
+            <characteristic name="Limitation" typeId="6fc9-5d13-2687-b2a5">noBtB</characteristic>
+            <characteristic name="Description" typeId="f804-b969-00da-2123">Target other Friendly Outcast model gains Rise (3) until the end of the current activation.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Rise" id="050c-1a9a-e8de-1e26" hidden="false" type="rule" targetId="f774-9156-2996-f5c6"/>
+      </infoLinks>
+    </infoGroup>
+    <infoGroup name="Hateful Curses" id="1f41-9d3a-1c46-2f9b" hidden="false">
+      <profiles>
+        <profile name="Hateful Curses" typeId="993a-e62a-7922-0ccb" typeName="Ki Feat" hidden="false" id="3bdb-5b45-882d-ed0e">
+          <characteristics>
+            <characteristic name="Cost" typeId="a126-54d9-0a27-f4b6">2</characteristic>
+            <characteristic name="Timing" typeId="f8a8-8a3e-ef58-4c61">Active</characteristic>
+            <characteristic name="Subject" typeId="4ac8-2bb1-0c84-f088">Taarget 6&quot;</characteristic>
+            <characteristic name="Limitation" typeId="6fc9-5d13-2687-b2a5">noBtB</characteristic>
+            <characteristic name="Description" typeId="f804-b969-00da-2123">This model and Target Enemy model gain a Blind Marker.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </infoGroup>
+    <infoGroup name="Dark Absolution" id="dcd4-268e-4cf3-e39f" hidden="false">
+      <profiles>
+        <profile name="Dark Absolution" typeId="993a-e62a-7922-0ccb" typeName="Ki Feat" hidden="false" id="7682-312f-5c12-d78d">
+          <characteristics>
+            <characteristic name="Cost" typeId="a126-54d9-0a27-f4b6">2</characteristic>
+            <characteristic name="Timing" typeId="f8a8-8a3e-ef58-4c61">Simple</characteristic>
+            <characteristic name="Subject" typeId="4ac8-2bb1-0c84-f088">Target 4&quot;, Opp. Ki</characteristic>
+            <characteristic name="Limitation" typeId="6fc9-5d13-2687-b2a5">OpT</characteristic>
+            <characteristic name="Description" typeId="f804-b969-00da-2123">Target Enemy model suffers one Wound and loses one Ki Token. This model gains a Ki Token.  
+If Targeting a Kami model, this Ki Feat is no longer an Opposed Ki Feat.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </infoGroup>
+    <infoGroup name="Cruel Swipe" id="3f7e-a040-2cdc-4671" hidden="false">
+      <profiles>
+        <profile name="Cruel Swipe" typeId="993a-e62a-7922-0ccb" typeName="Ki Feat" hidden="false" id="6d15-9a0c-c25a-ddb6">
+          <characteristics>
+            <characteristic name="Cost" typeId="a126-54d9-0a27-f4b6">1</characteristic>
+            <characteristic name="Timing" typeId="f8a8-8a3e-ef58-4c61">Instant</characteristic>
+            <characteristic name="Subject" typeId="4ac8-2bb1-0c84-f088">Pulse 3&quot;</characteristic>
+            <characteristic name="Limitation" typeId="6fc9-5d13-2687-b2a5"/>
+            <characteristic name="Description" typeId="f804-b969-00da-2123">When another Friendly Faction model in the Pulse fails a Fear Test; instead it passes that Test and suffers one Wound.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </infoGroup>
+    <infoGroup name="Bully" id="29e7-4eaa-3659-78b2" hidden="false">
+      <profiles>
+        <profile name="Bully" typeId="993a-e62a-7922-0ccb" typeName="Ki Feat" hidden="false" id="bd55-9967-f473-6561">
+          <characteristics>
+            <characteristic name="Cost" typeId="a126-54d9-0a27-f4b6">3</characteristic>
+            <characteristic name="Timing" typeId="f8a8-8a3e-ef58-4c61">Simple</characteristic>
+            <characteristic name="Subject" typeId="4ac8-2bb1-0c84-f088">Personal</characteristic>
+            <characteristic name="Limitation" typeId="6fc9-5d13-2687-b2a5">noBtB, noWalk, OpT</characteristic>
+            <characteristic name="Description" typeId="f804-b969-00da-2123">Select and activate up to 3 other Friendly Hagewashi models within 6&quot;.  
+Those models gain one Activation Counter each and each model performs a Standard, Simple action. The order the models activate in is chosen by this model&apos;s Controller, after each action is resolved remove an activation counter from the activating model.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </infoGroup>
+    <infoGroup name="Arrow Selection" id="327b-150a-b26c-f992" hidden="false">
+      <profiles>
+        <profile name="Arrow Selection" typeId="993a-e62a-7922-0ccb" typeName="Ki Feat" hidden="false" id="23db-4081-8ec6-a24c">
+          <characteristics>
+            <characteristic name="Cost" typeId="a126-54d9-0a27-f4b6">3</characteristic>
+            <characteristic name="Timing" typeId="f8a8-8a3e-ef58-4c61">Active</characteristic>
+            <characteristic name="Subject" typeId="4ac8-2bb1-0c84-f088">Personal</characteristic>
+            <characteristic name="Limitation" typeId="6fc9-5d13-2687-b2a5">OpT</characteristic>
+            <characteristic name="Description" typeId="f804-b969-00da-2123">For the next Damage roll, this model&apos;s Recurve Bow weapon gains +X Weapon Strength where X is the number of marked Wound Boxes on the Target&apos;s card.  
+After the Damage roll, you may have the Target lose Y Ki Tokens or gain Y Bleed (1) Markers where Y is equal to the final Damage (ignoring Durable if a Kami model) that would have been inflicted. If you do, this Ranged Attack causes no Damage.</characteristic>
           </characteristics>
         </profile>
       </profiles>
