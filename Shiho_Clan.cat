@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="2276-2df6-78a7-841d" name="Shiho Clan" revision="61" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="19" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="2276-2df6-78a7-841d" name="Shiho Clan" revision="62" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="19" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <categoryEntries>
     <categoryEntry id="7fa5-7ef0-59c5-f657" name="Tanaka" hidden="false"/>
     <categoryEntry name="Booted" id="6f67-dc86-f693-96ee" hidden="false"/>
@@ -3519,10 +3519,12 @@ Exclusion [Models with Booted trait]</characteristic>
         <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a614-8806-4c4e-7395" type="max"/>
       </constraints>
       <profiles>
-        <profile id="ac49-f69a-98e7-cda7" name="Mune Tsuki" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
+        <profile name="Insurgency" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card" hidden="false" id="04a4-db27-2e20-a6e1">
           <characteristics>
-            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">Play in the Starting Phase.
-Friendly Shiho Samurai gain Lightning Reflexes until the End Phase.</characteristic>
+            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">Play after Deployment.
+Choose an Enemy model using the Flank Trait.
+It may not choose to Flank on turn 2 if this was the chosen turn, it must be re-chosen immediately.
+The new turn chosen is Hidden Information.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -3555,12 +3557,10 @@ Friendly Shiho Samurai gain Lightning Reflexes until the End Phase.</characteri
         <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="282c-f383-2485-f734" type="max"/>
       </constraints>
       <profiles>
-        <profile id="04a4-db27-2e20-a6e1" name="Insurgency" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
+        <profile name="Mune Tsuki" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card" hidden="false" id="ac49-f69a-98e7-cda7">
           <characteristics>
-            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">Play after Deployment.
-Choose an Enemy model using the Flank Trait.
-It may not choose to Flank on turn 2 if this was the chosen turn, it must be re-chosen immediately.
-The new turn chosen is Hidden Information.</characteristic>
+            <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">Play in the Starting Phase.
+Friendly Shiho Samurai gain Lightning Reflexes until the End Phase.</characteristic>
           </characteristics>
         </profile>
       </profiles>
