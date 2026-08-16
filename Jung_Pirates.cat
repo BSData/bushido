@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="d615-aef7-31d5-367d" name="Jung Pirates" revision="61" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="19" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="d615-aef7-31d5-367d" name="Jung Pirates" revision="62" battleScribeVersion="2.03" library="false" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="19" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <categoryEntries>
     <categoryEntry id="258a-e1a8-8db1-9635" name="Ki&lt;2" hidden="true"/>
     <categoryEntry id="f6c9-50fa-a9d3-e9f3" name="Ranged Weapon" hidden="true"/>
@@ -6242,7 +6242,15 @@ While making an opposed Ki Test, this model gains Willpower (X) where X is equal
         <categoryLink id="9e0b-23a3-5454-b2ce" name="Ronin Profile Cards" hidden="false" targetId="9fba-f50b-c8f7-8396" primary="true"/>
       </categoryLinks>
     </entryLink>
-    <entryLink import="true" name="Taisa Tatsunōtoshigo" hidden="false" id="72b0-cb4a-82f9-750e" type="selectionEntry" targetId="1b03-7b66-80a9-a41f"/>
+    <entryLink import="true" name="Taisa Tatsunōtoshigo" hidden="false" id="72b0-cb4a-82f9-750e" type="selectionEntry" targetId="1b03-7b66-80a9-a41f">
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="c0d2-f3cb-e3b1-ffaf" shared="true" includeChildSelections="true" childName="The Deep"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="a382-7e2d-9df9-d700" name="Korusea" hidden="false" collective="false" import="true" type="model">
