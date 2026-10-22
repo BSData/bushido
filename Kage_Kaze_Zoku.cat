@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue name="Kage Kaze Zoku" id="b4d7-0e2a-728f-20cf" battleScribeVersion="2.03" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="19" library="false" revision="53" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue name="Kage Kaze Zoku" id="b4d7-0e2a-728f-20cf" battleScribeVersion="2.03" gameSystemId="62e4-ab79-1c4c-9ffe" gameSystemRevision="19" library="false" revision="54" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <catalogueLinks>
     <catalogueLink name="Library_Ronin" id="33fc-165a-e38d-1082" importRootEntries="true" targetId="b489-b304-948d-52d0" type="catalogue"/>
   </catalogueLinks>
@@ -4875,6 +4875,246 @@ It is assumed that the Ki Feat is written on this model&apos;s card.</characteri
             <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c">3</characteristic>
             <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">8</characteristic>
             <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">5 OOOOO</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry name="Eclipse" id="a9dd-7645-fc77-5507" collective="false" hidden="false" import="true" type="model">
+      <categoryLinks>
+        <categoryLink name="Ninja" id="1811-75a1-2708-6101" hidden="false" primary="false" targetId="dc64-e668-4aac-8ec9"/>
+        <categoryLink name="Faction Profile Cards" id="8f7b-6371-53ac-dbf0" hidden="false" primary="true" targetId="0ca8-2040-37f2-a1e0"/>
+        <categoryLink name="Faction: Kage Kaze Zoku" id="4f43-7e14-41e5-eef7" hidden="false" primary="false" targetId="3aa4-cadb-b4be-0dc6"/>
+        <categoryLink name="Unique" id="9cce-d54d-0edc-5dc8" hidden="false" primary="false" targetId="afd4-8041-e359-223c"/>
+        <categoryLink name="Armour" id="65c7-283f-675d-03e2" hidden="false" primary="false" targetId="f322-702a-ff62-b37e"/>
+        <categoryLink name="Unknown" id="1cba-026b-6cc2-4d53" hidden="false" primary="false" targetId="681b-423e-83dd-d9bd"/>
+      </categoryLinks>
+      <constraints>
+        <constraint id="1261-1c93-6c7c-f60d" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="roster" shared="true" type="max" value="1"/>
+      </constraints>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="25"/>
+      </costs>
+      <entryLinks>
+        <entryLink name="Enhancements" id="3812-8633-26ca-1c9c" collective="false" hidden="false" import="true" targetId="b18f-16ea-bed1-4709" type="selectionEntryGroup"/>
+      </entryLinks>
+      <infoGroups>
+        <infoGroup name="Ki Feats" id="0ef5-f172-23b8-b25c" hidden="false">
+          <infoLinks>
+            <infoLink name="Soulsplit" id="8fb2-b857-f077-91bb" hidden="false" targetId="cd6e-b410-4562-4a16" type="infoGroup"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup name="Melee Weapon" id="ae8b-1613-5684-1ba3" hidden="false">
+          <infoLinks>
+            <infoLink name="Kageshoku Attack" id="8fcb-f28a-dfa4-9a9a" hidden="false" targetId="d7e4-845a-ad43-7e4c" type="rule"/>
+            <infoLink name="Pierce " id="6685-6b06-0e8d-2a47" hidden="false" targetId="39e4-14d7-5533-6e67" type="rule"/>
+            <infoLink name="Sidestep Defence " id="a32e-07e6-4246-df93" hidden="false" targetId="753c-6c3b-64d7-203c" type="rule"/>
+          </infoLinks>
+          <profiles>
+            <profile name="Black-Edged Kunai" id="749c-bd4f-20ba-da03" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+0</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Pierce (3)</characteristic>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Kageshoku Attack (0), Sidestep Defence (0)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+        </infoGroup>
+        <infoGroup name="Unique Effects" id="3191-01f0-41d6-713e" hidden="false">
+          <infoLinks>
+            <infoLink name="Flank" id="d264-8b4b-7e94-16c0" hidden="false" targetId="a847-f02d-7e99-8a66" type="rule"/>
+            <infoLink name="Intangible" id="6b6e-263a-98b7-bae4" hidden="false" targetId="7f5c-c63d-f96f-65af" type="rule"/>
+          </infoLinks>
+          <profiles>
+            <profile name="Start of Activation" id="a5bd-96e1-b9ae-fff5" hidden="false" typeId="d2bb-86b4-edf3-c4e5" typeName="Special Card">
+              <characteristics>
+                <characteristic name="Description" typeId="b4b7-5338-e8e2-41fd">At the start of this model&apos;s activation choose one of the following:
+- If this model enters BtB with an Enemy model through a Replace effect, the Enemy model is Surprised until the end of the activation regardless of the usual requirements.
+- Choose a listed Special Attack or Defence on any Friendly Unknown &amp; Ninja model currently on the Battlefield. This model&apos;s Black Edged Kunai Melee Weapon gains that Special Ability until the end of this activation at Cost (0).
+</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Eclipse" id="8227-dcc7-2e60-1615" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">This model may use the listed Ki Feats of any Friendly Unknown &amp; Ninja model currently in play and Reikon from Jigoku&apos;s Kagenori Vo Koto Ki Feat even if not recruited into this Warband.
+It is assumed that the Kagenori No Koto Feat is listed and written on this model&apos;s card.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </infoGroup>
+        <infoGroup name="Traits" id="f45e-f25f-eb75-e039" hidden="false">
+          <infoLinks>
+            <infoLink name="Assassin" id="0135-8ddf-3dd3-4f8d" hidden="false" targetId="ef59-928b-2550-f0a3" type="rule"/>
+            <infoLink name="Armour" id="3026-a1ed-46a1-07b1" hidden="false" targetId="8615-1c63-2242-5746" type="rule"/>
+            <infoLink name="Camouflage" id="de17-72ae-c587-f7fd" hidden="false" targetId="9010-4983-c98c-1751" type="rule"/>
+            <infoLink name="Immune" id="12f3-55f3-3ff4-d374" hidden="false" targetId="ea08-b25e-0ea8-af73" type="rule"/>
+            <infoLink name="Dodge " id="60f5-eaa5-6278-dc4c" hidden="false" targetId="14d5-d459-5d8a-c73e" type="rule"/>
+            <infoLink name="Flank" id="fe47-49e1-8f52-fcc0" hidden="false" targetId="a847-f02d-7e99-8a66" type="rule"/>
+            <infoLink name="Intangible" id="6c6a-209f-12e5-9c68" hidden="false" targetId="7f5c-c63d-f96f-65af" type="rule"/>
+          </infoLinks>
+          <profiles>
+            <profile name="Eclipse" id="a37b-cf0a-de21-1d6f" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Armour (1), Assassin, Camouflage (2&quot;), Dodge (1), Flank, Immune [Control], Intangible</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </infoGroup>
+        <infoGroup name="Ranged Weapon" id="8410-807d-1488-f0a0" hidden="false">
+          <infoLinks>
+            <infoLink name="Pierce " id="d43d-e5e7-0855-03b7" hidden="false" targetId="39e4-14d7-5533-6e67" type="rule"/>
+            <infoLink name="Ammo" id="f5a6-c2bd-c5c1-73ec" hidden="false" targetId="765d-18a5-7170-9b56" type="rule"/>
+            <infoLink name="Lightweight" id="4a95-c08c-ae6b-ca85" hidden="false" targetId="c75c-7124-2b1f-a4d9" type="rule"/>
+          </infoLinks>
+          <profiles>
+            <profile name="Void Kunai" id="5277-5f1c-45f7-6183" hidden="false" typeId="7e20-258e-bf92-18f9" typeName="Ranged Weapon">
+              <characteristics>
+                <characteristic name="Ranged Weapon Strength" typeId="15aa-b6bd-6923-271f">+0</characteristic>
+                <characteristic name="Range Bands" typeId="be6a-50c6-d691-e2e9">3/5/7</characteristic>
+                <characteristic name="Traits" typeId="3410-4428-ef91-eb61">Ammo (2), Lightweight, Pierce (3)</characteristic>
+                <characteristic name="Specials" typeId="cdaf-b6ac-89d4-39ef"/>
+                <characteristic name="Unique Effects" typeId="3bf8-6525-f003-4990">
+</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </infoGroup>
+      </infoGroups>
+      <modifiers>
+        <modifier field="hidden" type="set" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition childId="4e1c-43c9-596d-ef16" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="roster" shared="true" type="atLeast" value="1"/>
+                <condition childId="4c67-f393-7598-a82d" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="roster" shared="true" type="atLeast" value="1"/>
+                <condition childId="cfa1-27b2-4dc3-ce16" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="roster" shared="true" type="atLeast" value="1"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <profiles>
+        <profile name="Eclipse" id="4772-308d-17c5-b9fa" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">3</characteristic>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">3</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33">3</characteristic>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">4</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac">3</characteristic>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">2</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">8</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">6 OOOOO O</characteristic>
+            <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry name="Reikon from Jigoku" id="49ce-85b6-f969-1052" collective="false" hidden="true" import="true" type="model">
+      <categoryLinks>
+        <categoryLink name="Ninja" id="a872-2d93-3eef-e732" hidden="false" primary="false" targetId="dc64-e668-4aac-8ec9"/>
+        <categoryLink name="Faction Profile Cards" id="1541-9287-0602-3608" hidden="false" primary="false" targetId="0ca8-2040-37f2-a1e0"/>
+        <categoryLink name="Faction: Kage Kaze Zoku" id="dfbb-c112-b497-f385" hidden="false" primary="false" targetId="3aa4-cadb-b4be-0dc6"/>
+        <categoryLink name="Unique" id="3b22-4516-5c6b-35b3" hidden="false" primary="false" targetId="afd4-8041-e359-223c"/>
+        <categoryLink name="Unknown" id="9c51-3fd5-943e-462c" hidden="false" primary="false" targetId="681b-423e-83dd-d9bd"/>
+        <categoryLink name="Reference Cards" id="5176-a903-3dbc-13cf" hidden="false" primary="true" targetId="5073-f00b-a8f6-5e3b"/>
+        <categoryLink name="Soul" id="f6e5-9802-0ea3-c7bd" hidden="false" primary="false" targetId="849c-6abf-87e0-3cab"/>
+        <categoryLink name="Shadow" id="330f-772c-d949-1ee4" hidden="false" primary="false" targetId="f4e8-1fc3-8bd3-00dc"/>
+        <categoryLink name="Kami" id="0f51-806c-c334-a186" hidden="false" primary="false" targetId="6639-615e-f1ab-bc64"/>
+      </categoryLinks>
+      <constraints>
+        <constraint id="d709-cf25-ce77-a8e4" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="roster" shared="true" type="max" value="1"/>
+        <constraint id="a20e-ab54-dc24-c8e0" field="selections" includeChildSelections="true" scope="roster" shared="true" type="min" value="0"/>
+      </constraints>
+      <costs>
+        <cost name=" Rice" typeId="a111-8656-5c05-7415" value="0"/>
+      </costs>
+      <infoGroups>
+        <infoGroup name="Ki Feats" id="baf5-d4f9-586e-a4d8" hidden="false">
+          <infoLinks>
+            <infoLink name="Reunite" id="1bcb-b0ed-b44e-335a" hidden="false" targetId="e301-1283-43e6-f896" type="infoGroup"/>
+            <infoLink name="Aspect of Jigoku" id="9fad-7bb5-31a9-53a2" hidden="false" targetId="28b1-3dc9-0be6-587b" type="infoGroup"/>
+            <infoLink name="Kagenori no Koto" id="ce97-737c-de7f-bc21" hidden="false" targetId="915b-0e71-4c41-1a51" type="infoGroup"/>
+          </infoLinks>
+        </infoGroup>
+        <infoGroup name="Melee Weapon" id="c51b-e2ab-0723-c223" hidden="false">
+          <infoLinks>
+            <infoLink name="Kageshoku Attack" id="8e01-0177-d495-7095" hidden="false" targetId="d7e4-845a-ad43-7e4c" type="rule"/>
+            <infoLink name="Sharp " id="8744-5e13-e210-1f27" hidden="false" targetId="6092-9fb5-5196-d1eb" type="rule"/>
+            <infoLink name="Pierce " id="beb5-ac71-9db2-207a" hidden="false" targetId="39e4-14d7-5533-6e67" type="rule"/>
+          </infoLinks>
+          <profiles>
+            <profile name="Spectral Kunai" id="aded-45a3-7685-8f30" hidden="false" typeId="2b50-015d-0ea9-d9aa" typeName="Melee Weapon">
+              <characteristics>
+                <characteristic name="Melee Weapon Strength" typeId="98e7-55ef-7ced-d4ba">+0</characteristic>
+                <characteristic name="Traits" typeId="39e3-f945-7956-ad4e">Pierce (2), Sharp (2)</characteristic>
+                <characteristic name="Specials" typeId="85a9-0a2b-f966-0c8d">Kageshoku Attack (0)</characteristic>
+                <characteristic name="Unique Effects" typeId="2561-7ce8-3a17-1289"/>
+              </characteristics>
+            </profile>
+          </profiles>
+        </infoGroup>
+        <infoGroup name="Unique Effects" id="0562-57d4-6157-9c8d" hidden="false">
+          <infoLinks>
+            <infoLink name="Soulless" id="85af-8ed5-3fe7-10c0" hidden="false" targetId="af31-aad0-fcea-9590" type="rule"/>
+          </infoLinks>
+          <profiles>
+            <profile name="Reikon from Jigoku" id="fd4c-50cb-d3c4-80d2" hidden="false" typeId="2f00-4eb0-a8cb-7022" typeName="Unique Effects">
+              <characteristics>
+                <characteristic name="Description" typeId="6de4-d067-c2aa-0dc2">If this model is Killed or removed from play, the Eclipse model you own suffers two Wounds.
+While this model is in play, the Eclipse you own has Soulless and Ki Stat of 0/8.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </infoGroup>
+        <infoGroup name="Traits" id="cab3-5190-3162-27ba" hidden="false">
+          <infoLinks>
+            <infoLink name="Assassin" id="17f7-c99d-8041-4710" hidden="false" targetId="ef59-928b-2550-f0a3" type="rule"/>
+            <infoLink name="Camouflage" id="8991-bd1c-3b85-7f64" hidden="false" targetId="9010-4983-c98c-1751" type="rule"/>
+            <infoLink name="Immune" id="ebee-c4c3-ef58-add4" hidden="false" targetId="ea08-b25e-0ea8-af73" type="rule"/>
+            <infoLink name="Durable" id="f9bd-4865-959f-9cfa" hidden="false" targetId="3612-7e19-3cb9-72d0" type="rule"/>
+            <infoLink name="Kami" id="23a0-fba4-eea4-1825" hidden="false" targetId="50d4-ec7a-9763-1b4d" type="rule"/>
+            <infoLink name="Intangible" id="b660-1347-3d43-4f41" hidden="false" targetId="7f5c-c63d-f96f-65af" type="rule"/>
+          </infoLinks>
+          <profiles>
+            <profile name="Reikon from Jigoku" id="3ccd-9ffe-baf9-4485" hidden="false" typeId="b175-cf39-0ab9-4d58" typeName="Character Traits">
+              <characteristics>
+                <characteristic name="Traits" typeId="6fb8-4540-ed80-9332">Assassin, Camouflage (2&quot;), Durable, Immune [Control], Intangible, Kami</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </infoGroup>
+      </infoGroups>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <conditions>
+            <condition childId="a9dd-7645-fc77-5507" childName="Eclipse" field="selections" includeChildForces="false" includeChildSelections="true" scope="roster" shared="true" type="atLeast" value="1"/>
+          </conditions>
+          <modifiers>
+            <modifier field="hidden" type="set" value="false"/>
+            <modifier field="a20e-ab54-dc24-c8e0" type="set" value="1"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
+      <profiles>
+        <profile name="Reikon from Jigoku" id="9fa9-e934-40cd-0179" hidden="false" typeId="08e8-3cf2-6d1d-b8f0" typeName="Character Profile">
+          <characteristics>
+            <characteristic name="Melee Pool" typeId="eea0-d5a3-2540-a974">3</characteristic>
+            <characteristic name="Melee Boost" typeId="4d43-9498-6fa0-8277">
+</characteristic>
+            <characteristic name="Ranged Pool" typeId="54f1-7472-e609-b4eb">0</characteristic>
+            <characteristic name="Ranged Boost" typeId="5454-b765-a65d-8a33">
+</characteristic>
+            <characteristic name="Move" typeId="91b7-833e-fd8e-a620">5</characteristic>
+            <characteristic name="Move Boost" typeId="f168-6d2b-e60e-28ac">
+</characteristic>
+            <characteristic name="Ki" typeId="3969-9568-a914-6854">2</characteristic>
+            <characteristic name="Ki Boost" typeId="5b71-1ed7-9aa7-039c"/>
+            <characteristic name="Ki Cap" typeId="9a7e-38d3-92c5-a672">2</characteristic>
+            <characteristic name="Wounds" typeId="2ee5-ab93-4a78-ea29">
+</characteristic>
             <characteristic name="Size &amp; Base" typeId="6cf9-c5fd-3e3c-b35b">Small 30mm</characteristic>
           </characteristics>
         </profile>
